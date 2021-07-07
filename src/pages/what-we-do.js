@@ -76,7 +76,7 @@ const NamedDefault = ({ data }) => (
         a <a href="https://www.ccl.org/articles/leading-effectively-articles/are-you-facing-a-problem-or-a-polarity/">
         polarity</a> which, at least in the West, has been culturally tilted towards doing since the 
         dominance of <a href="https://en.wikipedia.org/wiki/Modernity">modernity</a>. Intentional Society 
-        focuses on the inner work of being, currenlty - and we keep a watchful eye on what kinds of 
+        focuses on the inner work of being, currently - and we keep a watchful eye on what kinds of 
         doing may be calling to us.</p>
 
       <p>A lot of theory and thought has gone into what we do together.

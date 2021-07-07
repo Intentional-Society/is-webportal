@@ -25,12 +25,12 @@ const NamedDefault = ({ data }) => <>
       <p>Intentional Society is a community for people who want to grow.</p>
       <IsHr />
       <p>We meet together to become our best and biggest selves - to practice being 
-        the people we want to be, in more contexts and with more ease and freedom. In  
+        the people we want to be, more consistently, with more ease and freedom. In  
         doing so, we also then increase our capacity to love and serve both ourselves and humanity.</p>
 
-      <p>At least, that's the idea. Intentional Society is simply people in process, 
+      <p>At least, that's the idea. Intentional Society is simply people, in process, 
         being and doing together&#8230; 
-         though there's more to the complete picture, which is itself still in the 
+         though the complete picture is still in the 
          process of being discovered. Read on to learn more about <Link to="/who-we-are">who we 
         are</Link> and <Link to="/what-we-do">what we do</Link>, and how 
         to <Link to="/get-involved">get involved</Link> if and when you feel so called.
