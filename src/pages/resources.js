@@ -13,7 +13,7 @@ const NamedDefault = ({ data }) => (
       <p>We have tried and enjoyed the following practices:</p>
       <Typography variant="h5">Authentic Relating</Typography>
       <ul>
-        <li>This is a large collection of "game" practices, best represented by the manual assembled 
+        <li>This is a large collection of games/practices, best represented by the manual assembled 
           by Sara Ness. We've used the Noticing game (closely related to Circling), Hotseat, and others 
           as building blocks of culture and communication.</li>
         <li><a href="https://www.authrev.org/what-is-authentic-relating">Authentic Revolution's</a> <a 
@@ -58,12 +58,12 @@ const NamedDefault = ({ data }) => (
       </ul>
       <Typography variant="h5">Peer Coaching</Typography>
       <ul>
-        <li>Taken as a general concept, this practice is "pure" coaching, defined by the stance that 
+        <li>Taken as a general concept, this practice is “pure” coaching, defined by the stance that 
           the coachee already holds in themselves everything that's necessary to resolve their own challenge(s). 
           The act of coaching, rather than advising or consulting, is to ask questions that merely help 
           direct the coachee's awareness to notice possible blind spots or unrealized connections - sparking 
-          the "click" of insight or integration that's waiting there for them. This can be done with a 
-          "question bank" of clean questions, or we've used a fixed script of a question sequence.
+          the click of insight or integration that's waiting there for them. This can be done with a 
+          question bank of “clean” questions, or we've used a fixed script of a question sequence.
         </li>
         <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-looking-towards-what-we-avoid/">
           Our experience report</a></li>
@@ -90,10 +90,11 @@ const NamedDefault = ({ data }) => (
       </ul>
       <Typography variant="h5">Agile Retrospectives</Typography>
       <ul>
-        <li>Widespread in agile software development and elsewhere, literally "learning from looking back" 
-          as a group. This can take many forms, from simple rubrics like "start stop continue" or "rose thorn bud" 
-          to timeline reconstruction to structural tension analysis. It's a fundamental learning move to "go meta" 
-          and many books and guides have been written exploring the domain.
+        <li>Widespread in agile software development and elsewhere, literally “learning from looking 
+          back” as a group. This can take many forms, from simple rubrics like “start stop continue” 
+          or "rose thorn bud” to timeline reconstruction to structural tension analysis. It's a 
+          fundamental learning move to "go meta" and many books and guides have been written 
+          exploring the domain.
         </li>
         <li><a href="https://pragprog.com/titles/dlret/agile-retrospectives/">Book by Esther Derby and Diana Larsen</a></li>
       </ul>
@@ -107,9 +108,10 @@ const NamedDefault = ({ data }) => (
       </ul>
       <Typography variant="h5">Microsolidarity</Typography>
       <ul>
-        <li>Rich Bartlett assembled this framework and vocabulary for decentralized organizing, 
-          from which we reference the "fractal of belonging" and other labels like "crews" and "caller".</li>
-        <li><a href="https://www.microsolidarity.cc/">Website</a> <a 
+        <li><a href="http://richdecibels.com">Rich Bartlett</a> assembled this framework and 
+          vocabulary for decentralized organizing, from which we reference the “fractal of 
+          belonging” and other labels like “crews” and “caller”.</li>
+        <li><a href="https://www.microsolidarity.cc/">Microsolidarity website</a> <a 
         href="https://www.thehum.org/microsolidarity">Training</a></li>
       </ul>
       <Typography variant="h5">The Bridge Community</Typography>
@@ -128,13 +130,13 @@ const NamedDefault = ({ data }) => (
       </ul>
       <Typography variant="h5">Sacred Ground</Typography>
       <ul>
-       <li>A "We-Space community on the evolving edge of Mutuality" organized by Stephen Marcus 
+       <li>A “We-Space community on the evolving edge of Mutuality” organized by Stephen Marcus 
           that also serves as a base for the Collective Presencing community.</li>
           <li>Mighty Networks <a href="https://community.sacredground.us/landing">Website</a></li>
       </ul>
       <Typography variant="h5">Building Belonging</Typography>
       <ul>
-        <li>A "home for people committed to building a world where everyone belongs" sourced by Brian Stout, 
+        <li>A “home for people committed to building a world where everyone belongs” sourced by Brian Stout, 
           which has some community overlap with Starter Cultures and Microsolidarity fans.
         </li>
         <li><a href="https://www.buildingbelonging.us/">Website</a> <a 
