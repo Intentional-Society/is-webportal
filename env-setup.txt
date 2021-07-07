@@ -14,9 +14,17 @@ cd is-webportal
 edit LICENSE, edit README, add this env-setup.txt file, add local repository to GitHub
 yarn add gatsby-plugin-gtag //V4 replacement for google analytics plugin
 yarn add gatsby-source-filesystem
-yarn add gatsby-image gatsby-transformer-sharp gatsby-plugin-sharp
+yarn add gatsby-plugin-image gatsby-transformer-sharp gatsby-plugin-sharp
 yarn add gatsby-transformer-remark
 yarn add gatsby-plugin-react-helmet react-helmet
 yarn add gatsby-plugin-manifest
 yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
-yarn add fontsource-open-sans //https://github.com/fontsource/fontsource
+
+upgrading:
+yarn upgrade gatsby --latest
+yarn upgrade-interactive --latest
+
+yarn add @material-ui/core
+yarn add gatsby-plugin-material-ui
+yarn add @material-ui/icons
+yarn add gatsby-theme-material-ui

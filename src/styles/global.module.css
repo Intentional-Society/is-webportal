@@ -12,3 +12,9 @@ blockquote {
   border-left: 3px solid #4f98ff;
   background-color: #ecf4fa;
 }
+
+.nostyle-link, .nostyle-link:focus, .nostyle-link:focus:hover,
+.nostyle-link:focus:visited, .nostyle-link:focus:link, .nostyle-link:focus:active {
+  color: inherit;
+  text-decoration: inherit;
+}

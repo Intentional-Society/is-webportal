@@ -5,35 +5,12 @@
 }
 
 body {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Ovo", 'Times New Roman', Times, serif;
   font-size: 120%;
-  color: #333;
-
-  /*from https://www.gradient-animator.com/ */
-  background: linear-gradient(225deg, #b3dff3, #d9e8f0);
-  background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 20s ease infinite;
-  -moz-animation: AnimationName 20s ease infinite;
-  animation: AnimationName 20s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-  0%{background-position:0% 100%}
-  50%{background-position:100% 0%}
-  100%{background-position:0% 100%}
-}
-@-moz-keyframes AnimationName {
-  0%{background-position:0% 100%}
-  50%{background-position:100% 0%}
-  100%{background-position:0% 100%}
-}
-@keyframes AnimationName {
-  0%{background-position:0% 100%}
-  50%{background-position:100% 0%}
-  100%{background-position:0% 100%}
+  color: #08080F;
+  background-color: #E8F0EC;
 }
 
 li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
