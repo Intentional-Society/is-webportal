@@ -102,8 +102,11 @@ const NamedDefault = ({ data }) => (
       <p>We consider these entities, organizations, or people to be allied, aligned, or inspiring to us:</p>
       <Typography variant="h5">Starter Cultures</Typography>
       <ul>
-        <li>We picked up T-group from 
-          their <a href="https://www.startercultures.us/creative-offerings/communication-dojo">Communication Dojo</a></li>
+        <li>A lovely group of humans exploring community-building, better work, and new economic 
+          models for livelihoods and co-ops. We picked up T-group from 
+          their <a href="https://www.startercultures.us/creative-offerings/communication-dojo">Communication 
+          Dojo</a>.
+          </li>
         <li><a href="https://www.startercultures.us/">Website</a></li>
       </ul>
       <Typography variant="h5">Microsolidarity</Typography>
@@ -117,6 +120,7 @@ const NamedDefault = ({ data }) => (
       <Typography variant="h5">The Bridge Community</Typography>
       <ul>
         <li>This is a Discord community organized around Evan McMullen's Stoa talks by the same name.</li>
+        <li>If you dig the talks, we can get you an invite.</li>
         <li>Original Youtube <a href="https://www.youtube.com/watch?v=ss2_PIzl9ik">video</a></li>
       </ul>
       <Typography variant="h5">Enspiral</Typography>
