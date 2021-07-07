@@ -36,7 +36,7 @@ const NamedDefault = ({ data }) => (
       <p>Then, don't forget to click on the confirmation email!</p>
 
       <Typography variant="h3">Membership</Typography>
-      <p>Right now membership means "regular particpant" - we're not formal about it. 
+      <p>Right now membership means "regular participant" - we're not formal about it. 
         People who have attended an orientation call and a general session receive 
         access to our internal mailing list and our community Discord server.
       </p>
