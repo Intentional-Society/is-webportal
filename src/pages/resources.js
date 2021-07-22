@@ -11,7 +11,7 @@ const NamedDefault = ({ data }) => (
       <p></p>
       <Typography variant="h4">Relational Practices</Typography>
       <p>We have tried and enjoyed the following practices:</p>
-      <Typography variant="h5">Authentic Relating</Typography>
+      <Typography variant="h5" id="authentic-relating">Authentic Relating</Typography>
       <ul>
         <li>This is a large collection of games/practices, best represented by the manual assembled 
           by Sara Ness. We've used the Noticing game (closely related to Circling), Hotseat, and others 
@@ -51,8 +51,8 @@ const NamedDefault = ({ data }) => (
           The sweet spot is a balance of maintaining accuracy and fidelity to their original expression 
           while also using one's own representations (rather than parroting back word-for-word).
         </li>
-        <li><a href="http://www.empathycircle.com/">Website</a>
-          <a href="https://944144c2-a-62cb3a1a-s-sites.googlegroups.com/site/empathycircleswebsite/how-to-empathy-circle/520_n.jpg">Instructions</a></li>
+        <li><a href="http://www.empathycircle.com/">Website
+          </a> <a href="https://944144c2-a-62cb3a1a-s-sites.googlegroups.com/site/empathycircleswebsite/how-to-empathy-circle/520_n.jpg">Instructions</a></li>
         <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-reflecting-and-empathy/">
           Our experience report</a></li>
       </ul>
