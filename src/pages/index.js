@@ -36,8 +36,8 @@ const NamedDefault = ({ data }) => <>
         to <Link to="/get-involved">get involved</Link> if and when you feel so called.
       </p>
       <IsHr />
-      <p>Our third season launched on July 11th! The next few weeks are a good opportunity to join in 
-        as we do some community formation and topical learning.<br />
+      <p>Our third season launched on July 11th, runs through September 19th, and remains <i>open</i> to
+         join at any point.<br />
       <ZoomlinkOrientation /></p>
       <IsHr />
       <p>Want to follow along with what we're doing and learning? 
