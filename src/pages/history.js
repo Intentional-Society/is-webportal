@@ -40,8 +40,13 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h4">Timeline of past meetings</Typography>
       <ul>
+        <li><div>2021-08-09 Meta Meeting #12</div></li>
+        <li><div>2021-08-08 General Session 3.5 - Exploring edge-finding</div></li>
+        <li><div>2021-08-07 Orientation Session</div></li>
+        <li><div>2021-08-02 Meta Meeting #11</div></li>
+        <li><div>2021-08-01 General Session 3.4 - Edge Case practice again</div></li>
         <li><div>2021-07-26 Meta Meeting #10</div></li>
-        <li><div>2021-07-25 General Session 3.3 - Developmental practice prototype</div></li>
+        <li><div>2021-07-25 General Session 3.3 - Prototyping new practice: Edge Case</div></li>
         <li><div>2021-07-24 Orientation Session</div></li>
         <li><div>2021-07-19 Meta Meeting #9</div></li>
         <li><div>2021-07-18 General Session 3.2 - Why grow?</div></li>
