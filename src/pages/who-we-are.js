@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import Typography from '@material-ui/core/Typography';
 import Layout from "../components/layout"
 import CenteredColumn from "../components/centered-column"
@@ -11,12 +12,10 @@ const NamedDefault = ({ data }) => (
     <CenteredColumn>
     <Typography variant="h3">Who we are</Typography>
 
-      <div style={{textAlign: "right"}}>
-        <div style={{maxWidth: "320px", margin: "0 0 0 auto"}}>
-        (TODO: Take one of those fun/silly group photos next week to put here.)
-        </div>
-      </div>
-
+      <StaticImage src="../../static/images/wave-to-internet.jpg"
+        loading="eager" alt="Us waving to the internet"
+        style={{float:"right", maxWidth: "50%", margin: "40px 0px 10px 15px"}}/>
+      
       <p>We are a community of seekers and friends. We are a geographically distributed
         community, connecting face-to-face via video calls. Connecting and 
         reflecting each other in relationship is our primary gateway to self-development 
