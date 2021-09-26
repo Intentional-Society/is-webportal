@@ -16,9 +16,9 @@ const NamedDefault = ({ data }) => <>
     <div style={{  minWidth: "350px", maxWidth: "400px", width: "fit-content", margin: "0 auto" }}>
       <Typography variant="h5" style={{ color: "#FFFFFF"}}>
         <p style={{marginLeft:"1vw"}}>become your biggest self</p>
-        <p style={{marginLeft:"5vw"}}>grow with like-minded friends</p>
-        <p style={{marginLeft:"-1vw"}}>self-awareness, system perspective</p>
-        <p style={{marginLeft:"3vw"}}>integrating being and doing</p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
+        <p style={{marginLeft:"4vw"}}>grow with like-minded friends</p>
+        <p style={{marginLeft:"-1vw"}}>awareness and perspective</p>
+        <p style={{marginLeft:"2vw"}}>accepting and integrating</p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
       </Typography>
     </div>
     <div style={{margin: "-12vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
