@@ -29,13 +29,14 @@ const NamedDefault = ({ data }) => (
         December, and started weekly meetings of Intentional Society in January 2021.
       </p>
 
-      <p>The first series ended up naturally being about three months long, focused on forming up using 
+      <p>The first theme ended up being about three months long, exploring connection using 
         whole-group relational practices. That was great - and then we wanted to go deeper. Thus in 
         Q2 the <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-launch-the-boats/">voyages
         </a> model emerged, where we made a few crews and went on a five-week sailing expedition in small 
-        groups. That was great - but then we missed the wider community a bit too. Thus, our third 
-        season integrates both ends of that pendulum into an intentional arc of collective 
-        relationship, divergent exploration, and reconvergence.
+        groups. That was great - but then we missed the wider community a bit too. Our third 
+        season wove more deliberately towards developmental practices, even 
+        synthesizing <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">our own
+        </a> with some success while gradually growing our party and cultural cohesion.
       </p>
 
       <Typography variant="h4">Timeline of past meetings</Typography>
