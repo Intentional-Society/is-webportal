@@ -18,14 +18,17 @@ const NamedDefault = ({ data }) => (
         and check out with our takeaways.
       </p>
       
-      <p>Some weeks, our main activity is metaphorically assembling “around the campfire” 
-        to learn and play collectively, to make sense of the world and our part in it. 
-        Other times, we “voyage” in multi-week small group “boats” to explore and expand our edges. 
-        Our current (third) season runs July through September 2021. 
-        In it, we will start together on the beach with some culture-building and collective learning 
-        before crewing up our sailing flotilla for some deeper exploration. We'll wrap up the cycle 
-        by returning to the campfire and telling stories of what we've learned - and then look at 
-        the meta level to iterate on the outer loop structure itself.
+      <p>Most weeks, our main activity is metaphorically assembling “around the campfire” 
+        to learn and play collectively, to make sense of ourselves and our relationships to others 
+        and to the world. 
+        Other times, we voyage in multi-week small group “boats” to explore and expand our edges. 
+        Our current 4th season runs October through December 2021. 
+        Thematically, this looks to be a season in which we will continue:
+        <ul>
+          <li>raising and cultivating our level of mutual trust and commitment</li>
+          <li>deliberately developing our awareness and perspective</li>
+          <li>growing our organizational structure towards sustainability</li>
+        </ul>
       </p>
 
       <IsHr />
