@@ -14,17 +14,21 @@ const NamedDefault = ({ data }) => (
 
       <StaticImage src="../../static/images/wave-to-internet.jpg"
         loading="eager" alt="Us waving to the internet"
-        style={{float:"right", maxWidth: "50%", margin: "40px 0px 10px 15px"}}/>
+        style={{float:"right", maxWidth: "50%", margin: "40px 0px 10px 4vw"}}/>
       
-      <p>We are a community of seekers and friends. We are a geographically distributed
-        community, connecting face-to-face via video calls. Connecting and 
-        reflecting each other in relationship is our primary gateway to self-development 
-        and greater awareness. Some of us have been active in Adult Development circles, 
-        some of us have Authentic Relating &amp; Collective Presencing experience, and 
-        others have been seeking with the "Sensemaking" or Game B scenes.
+      <p>We are a geographically distributed community of seekers and friends, connecting 
+        face-to-face via video calls. We connect and reflect together in relationship 
+        as a catalyst to self-development, increased awareness, greater integrity. 
+        We relish our diversity across gender, generation, nation, ethnicity, 
+        religious (or non-) background, socioeconomic status, and other perspectives increasingly. 
+        Some of us bring backgrounds in various related fields or scenes: 
+        adult development psychology, 
+        relational practices (e.g. Authentic Relating, Circling, Collective Presencing), 
+        and the "sensemaking web" (e.g. Game B, Integral, Metamodernism).
+        Regardless, all of us are united in one thing above all else: seeking to grow.
       </p>
 
-      <p>Our values orient around awareness and acceptance as the big themes. 
+      <p>Our values orient around <i>awareness</i> and <i>acceptance</i> as the big themes. 
         Awareness means consciousness and attention: taking the "balcony view" 
         perspective on ourselves and on the people and systems we're intereacting with. 
         Acceptance means facing reality - being able to be with what is, as it is, without 
