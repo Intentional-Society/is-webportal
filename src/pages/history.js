@@ -35,64 +35,66 @@ const NamedDefault = ({ data }) => (
         </a> model emerged, where we made a few crews and went on a five-week sailing expedition in small 
         groups. That was great - but then we missed the wider community a bit too. Our third 
         season wove more deliberately towards developmental practices, even 
-        synthesizing <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">our own
-        </a> with some success while gradually growing our party and cultural cohesion.
+        synthesizing <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">our
+        own</a> with some success while gradually growing our party and cultural cohesion.
       </p>
 
       <Typography variant="h4">Timeline of past meetings</Typography>
       <ul>
-        <li><div>2021-10-03 Kick off Season 4!</div></li>
+        <li><div>2021-10-04 Meta Meeting 4.1</div></li>
+        <li><div>2021-10-03 General Session 4.1 - Kick off Season 4!</div></li>
         <li><div>2021-10-02 Orientation Session</div></li>
         <li><div>2021-09-26 Rest week</div></li>
-        <li><div>2021-09-20 Meta Meeting #18</div></li>
+        <li><div>2021-09-20 Meta Meeting 3.11</div></li>
         <li><div>2021-09-19 General Session 3.11 - CP-style desire sharing for I/you/we/world</div></li> 
-        <li><div>2021-09-13 Meta Meeting #17</div></li>
+        <li><div>2021-09-13 Meta Meeting 3.10</div></li>
         <li><div>2021-09-12 General Session 3.10 - Eye-gazing + Transformation sensemaking</div></li>
         <li><div>2021-09-11 Orientation Session</div></li>
-        <li><div>2021-09-06 Meta Meeting #16</div></li>
+        <li><div>2021-09-06 Meta Meeting 3.9</div></li>
         <li><div>2021-09-05 General Session 3.9 - Stories cont. - responding in resonance</div></li>
-        <li><div>2021-08-30 Meta Meeting #15</div></li>
+        <li><div>2021-08-30 Meta Meeting 3.8</div></li>
         <li><div>2021-08-29 General Session 3.8 - Stories of perspective transformation</div></li>
         <li><div>2021-08-28 Orientation Session</div></li>
-        <li><div>2021-08-23 Meta Meeting #14</div></li>
+        <li><div>2021-08-23 Meta Meeting 3.7</div></li>
         <li><div>2021-08-22 General Session 3.7 - Curiosity Game + Transformations intro</div></li>
         <li><div>2021-08-21 Orientation Session</div></li>
-        <li><div>2021-08-16 Meta Meeting #13</div></li>
+        <li><div>2021-08-16 Meta Meeting 3.6</div></li>
         <li><div>2021-08-15 General Session 3.6 - SD stage role-playing</div></li>
         <li><div>2021-08-14 Orientation Session</div></li>
-        <li><div>2021-08-09 Meta Meeting #12</div></li>
+        <li><div>2021-08-09 Meta Meeting 3.5</div></li>
         <li><div>2021-08-08 General Session 3.5 - Exploring edge-finding</div></li>
         <li><div>2021-08-07 Orientation Session</div></li>
-        <li><div>2021-08-02 Meta Meeting #11</div></li>
+        <li><div>2021-08-02 Meta Meeting 3.4</div></li>
         <li><div>2021-08-01 General Session 3.4 - Edge Case practice again</div></li>
-        <li><div>2021-07-26 Meta Meeting #10</div></li>
+        <li><div>2021-07-26 Meta Meeting 3.3</div></li>
         <li><div>2021-07-25 General Session 3.3 - Prototyping new practice: Edge Case</div></li>
         <li><div>2021-07-24 Orientation Session</div></li>
-        <li><div>2021-07-19 Meta Meeting #9</div></li>
+        <li><div>2021-07-19 Meta Meeting 3.2</div></li>
         <li><div>2021-07-18 General Session 3.2 - Why grow?</div></li>
         <li><div>2021-07-17 Orientation Session</div></li>
+        <li><div>2021-07-12 Meta Meeting 3.1</div></li>
         <li><div>2021-07-11 General Session 3.1 - Welcoming, Noticing Game, Sharing</div></li>
         <li><div>2021-07-10 Orientation Session</div></li>
         <li><div>2021-07-04 Rest week</div></li>
         <li><div>2021-06-27 General Session 2.12 - T-Group</div></li>
-        <li><div>2021-06-21 Meta Meeting #8</div></li>
+        <li><div>2021-06-21 Meta Meeting 2.11</div></li>
         <li><div>2021-06-20 General Session 2.11 - T-Group</div></li>
-        <li><div>2021-06-14 Meta Meeting #7</div></li>
+        <li><div>2021-06-14 Meta Meeting 2.10</div></li>
         <li><div>2021-06-13 General Session 2.10 - Redesign + Planning + The Wave</div></li>
         <li><div>2021-06-12 Informational Session</div></li>
-        <li><div>2021-06-07 Meta Meeting #6</div></li>
+        <li><div>2021-06-07 Meta Meeting 2.9</div></li>
         <li><div>2021-06-06 General Session 2.9 - Voyage Retrospective</div></li>
-        <li><div>2021-05-31 Meta Meeting #5</div></li>
+        <li><div>2021-05-31 Meta Meeting 2.8</div></li>
         <li><div>2021-05-30 General Session 2.8 - Inquiry Spiraling</div></li>
-        <li><div>2021-05-24 Meta Meeting #4</div></li>
+        <li><div>2021-05-24 Meta Meeting 2.7</div></li>
         <li><div>2021-05-23 General Session 2.7 - One Word Turns + Voyaging 4/4</div></li>
-        <li><div>2021-05-17 Meta Meeting #3</div></li>
+        <li><div>2021-05-17 Meta Meeting 2.6</div></li>
         <li><div>2021-05-16 General Session 2.6 - Voyaging 3/4</div></li>
         <li><div>2021-05-15 Informational Session</div></li>
-        <li><div>2021-05-10 Meta Meeting #2</div></li>
+        <li><div>2021-05-10 Meta Meeting 2.5</div></li>
         <li><div>2021-05-09 General Session 2.5 - Voyaging 2/4 + Noticing Game</div></li>
         <li><div>2021-05-08 Informational Session</div></li>
-        <li><div>2021-05-03 Meta Meeting #1</div></li>
+        <li><div>2021-05-03 Meta Meeting 2.4 (first MM)</div></li>
         <li><div>2021-05-02 General Session 2.4 - Voyaging 1/4 + Empathy Circling</div></li>
         <li><div>2021-05-01 Informational Session</div></li>
         <li><div>2021-04-25 General Session 2.3 - Boat-building part 2</div></li>
