@@ -41,6 +41,8 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h4">Timeline of past meetings</Typography>
       <ul>
+        <li><div>2021-10-25 Meta Meeting 4.4</div></li>
+        <li><div>2021-10-24 General Session 4.4 - Polarities Introduction</div></li>
         <li><div>2021-10-18 Meta Meeting 4.3</div></li>
         <li><div>2021-10-17 General Session 4.3 - Meta-aware Group Reflection</div></li>
         <li><div>2021-10-16 Orientation Session</div></li>
