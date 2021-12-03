@@ -146,7 +146,7 @@ const NamedDefault = ({ data }) => (
         <li><div>2021-01-17 Informational Session</div></li>
         <li><div>2021-01-10 Informational Session</div></li>
         <li><div>2020-12-27 Informational Session</div></li>
-        <li><div>2020-12-19 <Link to="thecall/">Call</Link> text revised</div></li>
+        <li><div>2020-12-19 <Link to="/thecall">Call</Link> text revised</div></li>
         <li><div>2020-12-05 Website deployed</div></li>
         <li><div>2020-11-10 Domain name registered</div></li>
       </ul>
