@@ -36,13 +36,18 @@ const NamedDefault = ({ data }) => (
         groups. That was great - but then we missed the wider community a bit too. Our third 
         season wove more deliberately towards developmental practices, even 
         synthesizing <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">our
-        own</a> with some success while gradually growing our party and cultural cohesion.
+        own</a> with some success while gradually growing our size and cultural cohesion. Our fourth 
+        season has seen a connective theme emerge - deepening our knowledge of each other, doing some 
+        1-to-1 calls, and enjoying the richness of meaning in relational present-moment practices together.
       </p>
 
       <Typography variant="h4">Timeline of past meetings</Typography>
       <ul>
+        <li><div>2021-12-06 Meta Meeting 4.10</div></li>
+        <li><div>2021-12-05 General Session 4.10 - Developmental Circling</div></li>
+        <li><div>2021-12-04 Orientation Session</div></li>
         <li><div>2021-11-29 Meta Meeting 4.9</div></li>
-        <li><div>2021-11-28 General Session 4.9 - More Circling</div></li>
+        <li><div>2021-11-28 General Session 4.9 - Free-flowing Circling</div></li>
         <li><div>2021-11-22 Meta Meeting 4.8</div></li>
         <li><div>2021-11-21 General Session 4.8 - Circling Intro</div></li>
         <li><div>2021-11-15 Meta Meeting 4.7</div></li>
