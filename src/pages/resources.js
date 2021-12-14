@@ -11,10 +11,21 @@ const NamedDefault = ({ data }) => (
       <p></p>
       <Typography variant="h4">Relational Practices</Typography>
       <p>We have tried and enjoyed the following practices:</p>
+      <Typography variant="h5">Empathy Circling</Typography>
+      <ul>
+        <li>This practice is, very simply, listening to someone and reflecting back their thoughts. 
+          The sweet spot is a balance of maintaining accuracy and fidelity to their original expression 
+          while also using one's own representations (rather than parroting back word-for-word).
+        </li>
+        <li><a href="http://www.empathycircle.com/">Website
+          </a> <a href="https://lh5.googleusercontent.com/iGTQYwV0fEVn2cprYqsLV9S0CQwnBexcEkDPKEQIvY-AuBSWBa3DSMsdVJz-a7K384qXYo6PAkuarxKHyCFfUctCqu8q8DaCbQK9IxCLoUknQaaB19sEH-ciD7CbaKZa7A=w1280">Instructions</a></li>
+        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-reflecting-and-empathy/">
+          Our experience report</a></li>
+      </ul>
       <Typography variant="h5" id="authentic-relating">Authentic Relating</Typography>
       <ul>
         <li>This is a large collection of games/practices, best represented by the manual assembled 
-          by Sara Ness. We've used the Noticing game (closely related to Circling), Hotseat, and others 
+          by Sara Ness. We've used the Noticing game, Hotseat, and others 
           as building blocks of culture and communication.</li>
         <li><a href="https://www.authrev.org/what-is-authentic-relating">Authentic Revolution's</a> <a 
           href="https://authrev.gumroad.com/l/AR-Games">Games Manual</a></li>
@@ -23,10 +34,21 @@ const NamedDefault = ({ data }) => (
         <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-i-notice-you-seem/">
           Our experience report</a></li>
       </ul>
+      <Typography variant="h5" id="circling">Circling</Typography>
+      <ul>
+        <li>Circling is a present-moment practice of noticing our sensations in relationship with one another
+          and being curious about another's experience. It has grown rather popular and 
+          has <a href="https://integralcentered.com/3-schools-circling/">three major schools</a> of practice, 
+          plus stylistic variations that fix (birthday) or flow (organic) the focus of attention.
+        </li>
+        <li><a href="https://tasshin.com/blog/what-is-circling/">What is Circling?</a></li>
+        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-circling-experience-report/">
+          Our experience report</a></li>
+      </ul>
       <Typography variant="h5">Collective Presencing</Typography>
       <ul>
         <li>A circle practice of group sense-making, developed by Ria Baeck. Exploring the space of 
-          a preselected open question, participants bring their observations "to the center" of the 
+          a preselected open question, participants bring their observations “to the center” of the 
           circle, where deep listening weaves reflections together in a super-mind-ish phenomenon.
 
         </li>
@@ -45,15 +67,16 @@ const NamedDefault = ({ data }) => (
         <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-staying-in-curiosity-with-inquiry-spiraling/">
           Our experience report</a></li>
       </ul>
-      <Typography variant="h5">Empathy Circling</Typography>
+      <Typography variant="h5">Case Work</Typography>
       <ul>
-        <li>This practice is, very simply, listening to someone and reflecting back their thoughts. 
-          The sweet spot is a balance of maintaining accuracy and fidelity to their original expression 
-          while also using one's own representations (rather than parroting back word-for-word).
+        <li>By case work, we mean the examination of developmental challenges that are working us. A case giver 
+          shares the story of their situation, and is supported by a small group in taking perspective on that 
+          thing and their relationship to it. The word “case” comes from Presencing Institute‘s (a.k.a. Theory U) 
+          Case Clinic practice, and we have developed our own combination practice called Edge Case.
         </li>
-        <li><a href="http://www.empathycircle.com/">Website
-          </a> <a href="https://944144c2-a-62cb3a1a-s-sites.googlegroups.com/site/empathycircleswebsite/how-to-empathy-circle/520_n.jpg">Instructions</a></li>
-        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-reflecting-and-empathy/">
+        <li><a href="https://www.intentionalsociety.org/practices/EdgeCasePractice.pdf">Edge Case Instructions</a></li>
+        <li><a href="https://www.presencing.org/files/tools/PI_Tool_CaseClinic.pdf">Case Clinic Instructions</a></li>
+        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">
           Our experience report</a></li>
       </ul>
       <Typography variant="h5">Peer Coaching</Typography>
@@ -72,7 +95,8 @@ const NamedDefault = ({ data }) => (
       <ul>
         <li>Adopted via our friends 
           at <a href="https://www.startercultures.us/creative-offerings/communication-dojo">Communication Dojo</a>, 
-          this is the granddaddy practice of expressing one's present moment experience in a group setting.</li>
+          this is the granddaddy (dating back to the 1950s) practice of expressing one's present moment 
+          experience in a group setting.</li>
         <li><a href="https://en.wikipedia.org/wiki/T-groups">
           reference</a> <a href="https://infed.org/kurt-lewin-groups-experiential-learning-and-action-research/#tgroups">
           links</a> (TODO: can instructions doc be publicly posted?)</li>

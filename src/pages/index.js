@@ -21,27 +21,29 @@ const NamedDefault = ({ data }) => <>
         <p style={{marginLeft:"2vw"}}>accepting and integrating</p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
       </Typography>
     </div>
-    <div style={{margin: "-12vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
+    <div style={{margin: "-10vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
       <p>Intentional Society is a community for people who want to grow.</p>
       <IsHr />
       <p>We meet together to become our best and biggest selves - to practice being 
         the people we want to be, more consistently, with more ease and freedom. In  
         doing so, we also then increase our capacity to love and serve both ourselves and humanity.</p>
 
-      <p>At least, that's the idea. Intentional Society is simply people, in process, 
-        being and doing together&#8230; 
-         though the complete picture is still in the 
-         process of being discovered. Read on to learn more about <Link to="/who-we-are">who we 
+      <p>At least, that's the intention we hold. Intentional Society is simply people, in process, 
+        being and doing together&#8230; and its fullness is in the 
+         process of being both created and discovered. Read on to learn more about <Link to="/who-we-are">who we 
         are</Link> and <Link to="/what-we-do">what we do</Link>, and how 
         to <Link to="/get-involved">get involved</Link> if and when you feel so called.
       </p>
       <IsHr />
-      <p>Our fourth quarterly season launches on October 3rd and runs through December 19th.<br />
+      <p>Launched in January 2021, we met on 46 Sunday sessions this year, and held 33 
+        introduction/orientation calls for curious newcomers. Our fifth (quarterly) season 
+        begins January 2022!<br />
       <ZoomlinkOrientation /></p>
       <IsHr />
       <p>Want to follow along with what we're doing and learning? 
       Enter your email here to subscribe to our weekly update newsletter:</p>
       <ButtondownSignup></ButtondownSignup>
+      <p>You can now also follow us <a href="https://twitter.com/IntentionalSoc">on Twitter</a>.</p>
       <div style={{textAlign: "right", marginBottom: "-25px"}}>
         Next page: <Link to="/who-we-are">Who We Are</Link>
       </div>

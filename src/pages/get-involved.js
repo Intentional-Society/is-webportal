@@ -42,15 +42,12 @@ const NamedDefault = ({ data }) => (
       </p>
 
       <Typography variant="h4">General Sessions</Typography>
-      <p>These meetings are the main heartbeat of Intentional Society. 
-        Our third season runs July through September, and <b>kicks off on July 
-        11th!</b> We'll have a few weeks of community-building practices, do some whole-group 
-        learning, self-organize into small groups for some deeper exploratory voyages, 
-        then return to the campfire to tell stories and integrate what we've learned. 
-        Don't worry if you miss the kick-off - we're mindful to build easy on-ramps throughout 
+      <p>These meetings are the main heartbeat of <Link to="/what-we-do">what we do</Link> in Intentional Society. 
+        These run three-month "seasons" with one quarterly week off.
+        Don't worry if you miss the kick-off - we have easy on-ramps throughout 
         the whole cycle, so you can join in at the right time for you.
       </p>
-      <p>General sessions happen on Sundays, 1:00-2:45pm Pacific Daylight Time (4pm Eastern, 8pm UTC).
+      <p>General sessions happen on Sundays, 1:00-2:45pm Pacific Standard Time (4pm Eastern, 9pm UTC).
         (Once again, the meeting link is private and provided after an orientation call.)
       </p>
 
@@ -60,13 +57,12 @@ const NamedDefault = ({ data }) => (
       <p>We include "meta time" in some of our general sessions, but this is where 
         further behind-the-scenes steering, strategy, and governance support happen. 
         Attendence is open to any member, as we work "with the garage door open".
-        These currently happen on Mondays, 9am Pacific Daylight Time (Noon Eastern, 4pm UTC) 
+        These currently happen on Mondays, 1pm Pacific Standard Time (4pm Eastern, 9pm UTC) 
         but occasionally bounce around to different times.
       </p>
 
-      <Typography variant="h4">Connection Shuffle</Typography>
-      <p>This is a new opt-in activity piloting in Q3: Periodic pairings with other 
-        Intentional Society members for casual one-on-one calls. Get to know 
+      <Typography variant="h4">One-to-one Connections</Typography>
+      <p>Opt-in self-led contacts and calls between Intentional Society members outside of our sessions. Get to know 
         some folks better and hear the stories behind the faces.
       </p>
 
