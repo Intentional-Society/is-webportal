@@ -41,8 +41,19 @@ const NamedDefault = ({ data }) => (
         1-to-1 calls, and enjoying the richness of meaning in relational present-moment practices together.
       </p>
 
-      <Typography variant="h4">Timeline of past meetings</Typography>
+      <Typography variant="h4">Running log of recent meetings</Typography>
       <ul>
+        <li><div>2022-01-02 General Session 5.1 - Welcoming House Party</div></li>
+        <li><div>2022-01-01 Orientation Session</div></li>
+      </ul>
+      
+      <Typography variant="h4">Timeline of 2021 meetings</Typography>
+      <ul>
+        <li><div>2021-12-29 Open social hangout time</div></li>
+        <li><div>2021-12-28 Planning meeting</div></li>
+        <li><div>2021-12-26 Self-organizing crewing discussion</div></li>
+        <li><div>2021-12-20 Meta Meeting 4.12</div></li>
+        <li><div>2021-12-19 General Session 4.12 - Relating to Wanting</div></li>
         <li><div>2021-12-13 Meta Meeting 4.11</div></li>
         <li><div>2021-12-12 General Session 4.11 - Sensing and Remembering</div></li>
         <li><div>2021-12-11 Orientation Session</div></li>
