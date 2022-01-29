@@ -1,8 +1,8 @@
 import React from "react"
 
 const NamedDefault = ({ data }) => <>
-  <a href="https://us02web.zoom.us/meeting/register/tZIkd-CrrDwoH9etEUbl9IXH6KeDgxBgTuka">
+  <a href="https://us02web.zoom.us/meeting/register/tZwuf-CvqzIuHdYwNWa4s2YdyOm5h-jBxt4v">
   Click here to sign up</a> for our next orientation video call 
-  on <b>Saturday, January 29<sup>th</sup> at 1:00-1:55pm Pacific Standard Time (4pm Eastern, 9pm UTC)</b>.
+  on <b>Saturday, February 5<sup>th</sup> at 1:00-1:55pm Pacific Standard Time (4pm Eastern, 9pm UTC)</b>.
 </>
 export default NamedDefault;
