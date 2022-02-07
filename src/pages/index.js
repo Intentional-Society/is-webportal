@@ -35,12 +35,12 @@ const NamedDefault = ({ data }) => <>
         to <Link to="/get-involved">get involved</Link> if and when you feel so called.
       </p>
       <IsHr />
-      <p>Launched one year ago, we <Link to="/history">held 46 community gatherings</Link> in 2021. 
-       Our 5<sup>th</sup> season and 2<sup>year</sup> are beginning now!<br />
+      <p>Launched a year ago, we <Link to="/history">held 46 community gatherings</Link> in 2021. 
+       We're currently in our 5<sup>th</sup> season, corresponding to the first quarter of 2022.<br />
       <ZoomlinkOrientation /></p>
       <IsHr />
       <p>Want to follow along with what we're doing and learning? 
-      Enter your email here to subscribe to our weekly update newsletter:</p>
+      Enter your email here to subscribe to our Intentional Society Weekly Updates newsletter:</p>
       <ButtondownSignup></ButtondownSignup>
       <p>You can now also follow us <a href="https://twitter.com/IntentionalSoc">on Twitter</a>.</p>
       <div style={{textAlign: "right", marginBottom: "-25px"}}>
