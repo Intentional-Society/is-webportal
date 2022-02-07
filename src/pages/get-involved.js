@@ -29,11 +29,20 @@ const NamedDefault = ({ data }) => (
         whether particiating in Intentional Society is a fit for you and your 
         life circumstances, you're welcome to stay informed and learn vicariously. 
         Each week (usually on Wednesday or Thursday) you'll receive one update 
-        sharing about our experience the prior Sunday and what's coming next. 
-        Enter your email here to subscribe to our weekly update newsletter:
+        sharing about our experience the prior Sunday and what's coming next.
+      </p>
+      <p>
+        You can <a href="https://buttondown.email/intentionalsociety/archive/">browse 
+        the archives here</a>. Enter your email to subscribe to Intentional Society Weekly Updates:
       </p>
       <ButtondownSignup/>
-      <p>Then, don't forget to click on the confirmation email!</p>
+      <p>Then, don't forget to go click on the confirmation email! You won't be subscribed if you don't.</p>
+
+      <Typography variant="h4">Twitter</Typography>
+      <p>Follow <a href="https://twitter.com/IntentionalSoc">@IntentionalSoc</a> on 
+        Twitter if that's your thing. Shares some newsletter content in tweet form, 
+        and asks some philosophical questions. Not a nag/reminder stream. Also a handy 
+        way to simply refer to Intentional Society in tweets, even if you don't follow the account.</p>
 
       <Typography variant="h3">Membership</Typography>
       <p>Right now membership means "regular participant" - we're not formal about it. 
