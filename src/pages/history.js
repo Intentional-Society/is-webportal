@@ -33,12 +33,14 @@ const NamedDefault = ({ data }) => (
         whole-group relational practices. That was great - and then we wanted to go deeper. Thus in 
         Q2 the <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-launch-the-boats/">voyages
         </a> model emerged, where we made a few crews and went on a five-week sailing expedition in small 
-        groups. That was great - but then we missed the wider community a bit too. Our third 
+        groups. That was great — but then we missed the wider community a bit too. Our third 
         season wove more deliberately towards developmental practices, even 
         synthesizing <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">our
         own</a> with some success while gradually growing our size and cultural cohesion. Our fourth 
-        season has seen a connective theme emerge - deepening our knowledge of each other, doing some 
+        season saw emerge a theme of connection — deepening our knowledge of each other, doing some 
         1-to-1 calls, and enjoying the richness of meaning in relational present-moment practices together.
+
+        We're currently in our 5th season, mapping to the first quarter of 2022.
       </p>
 
       <Typography variant="h4">Running log of recent meetings</Typography>
