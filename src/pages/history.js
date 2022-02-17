@@ -45,6 +45,9 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h4">Running log of recent meetings</Typography>
       <ul>
+        <li><div>2022-02-19 Orientation Session</div></li>
+        <li><div>2022-02-14 Meta Meeting 5.7</div></li>
+        <li><div>2022-02-13 General Session 5.7 - Small+Combined Circling</div></li>
         <li><div>2022-02-07 Meta Meeting 5.6</div></li>
         <li><div>2022-02-06 General Session 5.6 - Themed Empathy Circling</div></li>
         <li><div>2022-01-31 Meta Meeting 5.5</div></li>
