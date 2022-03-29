@@ -40,11 +40,15 @@ const NamedDefault = ({ data }) => (
         season saw emerge a theme of connection — deepening our knowledge of each other, doing some 
         1-to-1 calls, and enjoying the richness of meaning in relational present-moment practices together.
 
-        We're currently in our 5th season, mapping to the first quarter of 2022.
+        We're currently in our 5th season, mapping approximately to the first quarter of 2022.
       </p>
 
       <Typography variant="h4">Running log of recent meetings</Typography>
       <ul>
+        <li><div>2022-03-28 Meta Meeting 5.13</div></li>
+        <li><div>2022-03-27 General Session 5.13 - Contemplating Un-knowing</div></li>
+        <li><div>2022-03-26 Orientation Session</div></li>
+        <li><div>2022-03-25 Event: Wardley Mapping</div></li>
         <li><div>2022-03-21 Meta Meeting 5.12</div></li>
         <li><div>2022-03-20 General Session 5.12 - Case Clinic</div></li>
         <li><div>2022-03-19 Orientation Session</div></li>
