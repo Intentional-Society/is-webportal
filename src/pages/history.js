@@ -40,11 +40,12 @@ const NamedDefault = ({ data }) => (
         season saw emerge a theme of connection — deepening our knowledge of each other, doing some 
         1-to-1 calls, and enjoying the richness of meaning in relational present-moment practices together.
 
-        We're currently in our 5th season, mapping approximately to the first quarter of 2022.
+        We're currently beginning our 6th season, mapping approximately to the second quarter of 2022.
       </p>
 
       <Typography variant="h4">Running log of recent meetings</Typography>
       <ul>
+        <li><div>2022-04-10 General Session 5.15 - Heavenly Glory</div></li>
         <li><div>2022-04-09 Orientation Session</div></li>
         <li><div>2022-04-04 Meta Meeting 5.14</div></li>
         <li><div>2022-04-03 General Session 5.14 - Relating Games</div></li>

@@ -36,7 +36,7 @@ const NamedDefault = ({ data }) => <>
       </p>
       <IsHr />
       <p>Launched a year ago, we <Link to="/history">held 46 community gatherings</Link> in 2021. 
-       We're currently in our 5<sup>th</sup> season, corresponding to the first quarter of 2022.<br />
+       We're currently beginning our 6<sup>th</sup> season, corresponding to the second quarter of 2022.<br />
       <ZoomlinkOrientation /></p>
       <IsHr />
       <p>Want to follow along with what we're doing and learning? 
