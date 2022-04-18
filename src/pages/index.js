@@ -28,21 +28,21 @@ const NamedDefault = ({ data }) => <>
         the people we want to be, more consistently, with more ease and freedom. In  
         doing so, we also then increase our capacity to love and serve both ourselves and humanity.</p>
 
-      <p>At least, that's the intention we hold. Intentional Society is simply people, in process, 
-        being and doing together&#8230; and its fullness is in the 
-         process of being both created and discovered. Read on to learn more about <Link to="/who-we-are">who we 
+      <p>At least, that's the intention we hold for ourselves. Intentional Society is simply people, in process, 
+        being and doing together, as we continue to both create and discover the fullness of what it will become. 
+        Read on to learn more about <Link to="/who-we-are">who we 
         are</Link> and <Link to="/what-we-do">what we do</Link>, and how 
         to <Link to="/get-involved">get involved</Link> if and when you feel so called.
       </p>
       <IsHr />
-      <p>Launched a year ago, we <Link to="/history">held 46 community gatherings</Link> in 2021. 
+      <p>Launched January 2021, we <Link to="/history">held 46 community gatherings</Link> our first calendar year. 
        We're currently beginning our 6<sup>th</sup> season, corresponding to the second quarter of 2022.<br />
       <ZoomlinkOrientation /></p>
       <IsHr />
       <p>Want to follow along with what we're doing and learning? 
       Enter your email here to subscribe to our Intentional Society Weekly Updates newsletter:</p>
       <ButtondownSignup></ButtondownSignup>
-      <p>You can now also follow us <a href="https://twitter.com/IntentionalSoc">on Twitter</a>.</p>
+      <p>You can also follow us <a href="https://twitter.com/IntentionalSoc">on Twitter</a>.</p>
       <div style={{textAlign: "right", marginBottom: "-25px"}}>
         Next page: <Link to="/who-we-are">Who We Are</Link>
       </div>

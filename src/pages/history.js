@@ -29,22 +29,26 @@ const NamedDefault = ({ data }) => (
         December, and started weekly meetings of Intentional Society in January 2021.
       </p>
 
-      <p>The first theme ended up being about three months long, exploring connection using 
-        whole-group relational practices. That was great - and then we wanted to go deeper. Thus in 
-        Q2 the <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-launch-the-boats/">voyages
-        </a> model emerged, where we made a few crews and went on a five-week sailing expedition in small 
-        groups. That was great — but then we missed the wider community a bit too. Our third 
-        season wove more deliberately towards developmental practices, even 
-        synthesizing <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">our
-        own</a> with some success while gradually growing our size and cultural cohesion. Our fourth 
-        season saw emerge a theme of connection — deepening our knowledge of each other, doing some 
-        1-to-1 calls, and enjoying the richness of meaning in relational present-moment practices together.
-
-        We're currently beginning our 6th season, mapping approximately to the second quarter of 2022.
+      <p>The first theme ended up being about three months long, starting a tradition of “season” units 
+        for our community calendar. Themes emerge as we go, like the
+        small-crew <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-launch-the-boats/">voyages
+        </a> model in season 2, deliberately
+        developmental <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">practice
+        design</a> in season 3, connection in season 4, and relational-developmental integration in season 5.
+        We're currently beginning our 6<sup>th</sup> season, mapping approximately to the second quarter of 2022. Below you can find 
+        more granular records of weekly topics.
       </p>
 
-      <Typography variant="h4">Running log of recent meetings</Typography>
+      <Typography variant="h4">Historical Event Log</Typography>
+
+      <Typography variant="h5">Season 6 - Q2 2022</Typography>
       <ul>
+        <li><div>2022-04-24 General Session 6.1 - Kickoff</div></li>
+        <li><div>2022-04-23 Orientation Session</div></li>
+      </ul>
+      <Typography variant="h5">Season 5 - Q1 2022</Typography>
+      <ul>
+        <li><div>2021-04-17 Rest week</div></li>
         <li><div>2022-04-10 General Session 5.15 - Heavenly Glory</div></li>
         <li><div>2022-04-09 Orientation Session</div></li>
         <li><div>2022-04-04 Meta Meeting 5.14</div></li>
@@ -91,8 +95,7 @@ const NamedDefault = ({ data }) => (
         <li><div>2022-01-02 General Session 5.1 - Welcoming House Party</div></li>
         <li><div>2022-01-01 Orientation Session</div></li>
       </ul>
-      
-      <Typography variant="h4">Timeline of 2021 meetings</Typography>
+      <Typography variant="h5">Season 4 - Q4 2021</Typography>
       <ul>
         <li><div>2021-12-29 Open social hangout time</div></li>
         <li><div>2021-12-28 Planning meeting</div></li>
@@ -129,6 +132,9 @@ const NamedDefault = ({ data }) => (
         <li><div>2021-10-04 Meta Meeting 4.1</div></li>
         <li><div>2021-10-03 General Session 4.1 - Kick off Season 4!</div></li>
         <li><div>2021-10-02 Orientation Session</div></li>
+      </ul>
+      <Typography variant="h5">Season 3 - Q3 2021</Typography>
+      <ul>
         <li><div>2021-09-26 Rest week</div></li>
         <li><div>2021-09-20 Meta Meeting 3.11</div></li>
         <li><div>2021-09-19 General Session 3.11 - CP-style desire sharing for I/you/we/world</div></li> 
@@ -160,6 +166,9 @@ const NamedDefault = ({ data }) => (
         <li><div>2021-07-12 Meta Meeting 3.1</div></li>
         <li><div>2021-07-11 General Session 3.1 - Welcoming, Noticing Game, Sharing</div></li>
         <li><div>2021-07-10 Orientation Session</div></li>
+      </ul>
+      <Typography variant="h5">Season 2 - Q2 2021</Typography>
+      <ul>
         <li><div>2021-07-04 Rest week</div></li>
         <li><div>2021-06-27 General Session 2.12 - T-Group</div></li>
         <li><div>2021-06-21 Meta Meeting 2.11</div></li>
@@ -187,6 +196,9 @@ const NamedDefault = ({ data }) => (
         <li><div>2021-04-18 General Session 2.2 - Boat-building part 1</div></li>
         <li><div>2021-04-11 General Session 2.1 - Structural redesign</div></li>
         <li><div>2021-04-10 Informational Session</div></li>
+      </ul>
+      <Typography variant="h5">Season 1 - Q1 2021</Typography>
+      <ul>
         <li><div>2021-04-04 Rest week</div></li>
         <li><div>2021-03-28 General Session 1.11 - Adult Development intro part 2</div></li>
         <li><div>2021-03-27 Informational Session</div></li>
