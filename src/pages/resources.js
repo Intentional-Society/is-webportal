@@ -212,9 +212,11 @@ const NamedDefault = ({ data }) => (
       <a className={GlobalCSS.anchorOffset} id="sacred-ground"></a>
       <Typography variant="h5">Sacred Ground</Typography>
       <ul>
-       <li>A “We-Space community on the evolving edge of Mutuality” organized by Stephen Marcus 
-          that also serves as a base for the Collective Presencing community.</li>
-          <li>Mighty Networks <a href="https://community.sacredground.us/landing">Website</a></li>
+       <li>A “We-Space community on the evolving edge of Mutuality” organized by Stephen Marcus, providing 
+         several weekly Sacred Ground Experience sessions of interbeing presence and connection. 
+         This network also serves as a base for the Collective Presencing community, and a few other 
+         we-space oriented groups.</li>
+         <li>Mighty Networks <a href="https://community.sacredground.us/landing">Website</a></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="building-belonging"></a>
       <Typography variant="h5">Building Belonging</Typography>
