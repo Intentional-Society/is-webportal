@@ -43,11 +43,14 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 6 - Q2 2022</Typography>
       <ul>
+        <li><div>2022-05-23 Meta Meeting 6.5</div></li>
+        <li><div>2022-05-22 General Session 6.5 - Nominations and Circling</div></li>
+        <li><div>2022-05-21 Event: WBfST 2</div></li>
         <li><div>2022-05-16 Meta Meeting 6.4</div></li>
         <li><div>2022-05-15 General Session 6.4 - Circling and Membership Design</div></li>
         <li><div>2022-05-09 Meta Meeting 6.3</div></li>
         <li><div>2022-05-08 General Session 6.3 - House Party</div></li>
-        <li><div>2022-05-05 Event: Working Backwards from a Star Trek Future</div></li>
+        <li><div>2022-05-05 Event: Working Backwards from a Star Trek Future 1</div></li>
         <li><div>2022-05-02 Meta Meeting 6.2</div></li>
         <li><div>2022-05-01 General Session 6.2 - T-Group and Doing∞Being</div></li>
         <li><div>2022-04-30 Orientation Session</div></li>
