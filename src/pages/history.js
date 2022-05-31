@@ -35,7 +35,7 @@ const NamedDefault = ({ data }) => (
         </a> model in season 2, deliberately
         developmental <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">practice
         design</a> in season 3, connection in season 4, and relational-developmental integration in season 5.
-        We're currently beginning our 6<sup>th</sup> season, mapping approximately to the second quarter of 2022. Below you can find 
+        We're currently in our 6<sup>th</sup> season, mapping approximately to the second quarter of 2022. Below you can find 
         more granular records of weekly topics.
       </p>
 
@@ -43,6 +43,9 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 6 - Q2 2022</Typography>
       <ul>
+        <li><div>2022-05-30 Meta Meeting 6.6</div></li>
+        <li><div>2022-05-29 General Session 6.6 - The Field and Slow Proposal</div></li>
+        <li><div>2022-05-28 Orientation Session</div></li>
         <li><div>2022-05-23 Meta Meeting 6.5</div></li>
         <li><div>2022-05-22 General Session 6.5 - Nominations and Circling</div></li>
         <li><div>2022-05-21 Event: WBfST 2</div></li>
