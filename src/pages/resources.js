@@ -31,7 +31,7 @@ const NamedDefault = ({ data }) => (
           while also using one's own representations (rather than parroting back word-for-word).
         </li>
         <li><a href="http://www.empathycircle.com/">Website
-          </a> <a href="https://lh5.googleusercontent.com/iGTQYwV0fEVn2cprYqsLV9S0CQwnBexcEkDPKEQIvY-AuBSWBa3DSMsdVJz-a7K384qXYo6PAkuarxKHyCFfUctCqu8q8DaCbQK9IxCLoUknQaaB19sEH-ciD7CbaKZa7A=w1280">Instructions</a></li>
+          </a> <a href="http://bit.ly/EmpathyCirclePDFv2">How-To</a></li>
         <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-reflecting-and-empathy/">
           Our experience report</a></li>
       </ul>
