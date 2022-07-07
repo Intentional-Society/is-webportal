@@ -41,8 +41,19 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h4">Historical Event Log</Typography>
 
+      <Typography variant="h5">Season 7 - Q3 2022</Typography>
+      <ul>
+        <li><div>2022-07-10 General Session 7.1 - Kickoff</div></li>
+        <li><div>2022-07-09 Orientation Session</div></li>
+      </ul>
+
       <Typography variant="h5">Season 6 - Q2 2022</Typography>
       <ul>
+        <li><div>2022-07-03 Rest week</div></li>
+        <li><div>2022-06-27 Meta Meeting 6.10</div></li>
+        <li><div>2022-06-26 General Session 6.10 - Community Day</div></li>
+        <li><div>2022-06-20 Meta Meeting 6.9</div></li>
+        <li><div>2022-06-19 General Session 6.9 - CYOA Practices: Edge Case &amp; Circling</div></li>
         <li><div>2022-06-17 Work Party</div></li>
         <li><div>2022-06-13 Meta Meeting 6.8</div></li>
         <li><div>2022-06-12 General Session 6.8 - You Can Just...</div></li>
