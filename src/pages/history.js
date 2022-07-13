@@ -36,15 +36,17 @@ const NamedDefault = ({ data }) => (
         developmental <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">practice
         design</a> in season 3, connection in season 4, and relational-developmental integration in season 5.
         Recently our 6<sup>th</sup> season ended with a community-facilitated session, as we begin 
-        to distribute leadership. Below you can find 
-        more granular records of weekly topics and events.
+        to distribute leadership. Below you can find more granular records of weekly topics and events.
       </p>
 
       <Typography variant="h4">Historical Event Log</Typography>
 
       <Typography variant="h5">Season 7 - Q3 2022</Typography>
       <ul>
-        <li><div>2022-07-10 General Session 7.1 - Kickoff</div></li>
+        <li><div>2022-07-16 Orientation Session</div></li>
+        <li><div>2022-07-15 Governance Working Session</div></li>
+        <li><div>2022-07-11 Meta Meeting 7.1</div></li>
+        <li><div>2022-07-10 General Session 7.1 - Kickoff: The Relational Field and Loveseat</div></li>
         <li><div>2022-07-09 Orientation Session</div></li>
       </ul>
 
