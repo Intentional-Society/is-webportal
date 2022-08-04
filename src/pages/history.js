@@ -43,6 +43,13 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 7 - Q3 2022</Typography>
       <ul>
+        <li><div>2022-08-01 Meta Meeting 7.4</div></li>
+        <li><div>2022-07-31 General Session 7.4 - Layered Awareness</div></li>
+        <li><div>2022-07-30 Orientation Session</div></li>
+        <li><div>2022-07-25 Meta Meeting 7.3</div></li>
+        <li><div>2022-07-24 General Session 7.3 - Giving &amp; Receiving w/ Mary</div></li>
+        <li><div>2022-07-18 Meta Meeting 7.2</div></li>
+        <li><div>2022-07-17 General Session 7.2 - Structured and Structureless</div></li>
         <li><div>2022-07-15 Governance Working Session</div></li>
         <li><div>2022-07-11 Meta Meeting 7.1</div></li>
         <li><div>2022-07-10 General Session 7.1 - Kickoff: The Relational Field and Loveseat</div></li>
