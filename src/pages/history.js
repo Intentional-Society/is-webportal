@@ -30,44 +30,49 @@ const NamedDefault = ({ data }) => (
       </p>
 
       <p>The first theme ended up being about three months long, starting a tradition of “season” units 
-        for our community calendar. Themes emerge as we go, like the
-        small-crew <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-launch-the-boats/">voyages
-        </a> model in season 2, deliberately
-        developmental <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">practice
-        design</a> in season 3, connection in season 4, and relational-developmental integration in season 5.
-        Recently our 6<sup>th</sup> season ended with a community-facilitated session, as we begin 
-        to distribute leadership. Below you can find more granular records of weekly topics and events.
+        for our community calendar. Below you can find records of weekly topics and events.
       </p>
 
       <Typography variant="h4">Historical Event Log</Typography>
 
+      <Typography variant="h5">Season 8 - Q4 2022</Typography>
+      <ul>
+        <li><div>2022-10-2 Community Practice Session 8.1 - Kickoff</div></li>
+      </ul>
+
       <Typography variant="h5">Season 7 - Q3 2022</Typography>
       <ul>
+        <li><div>2022-09-21 Event: Circling</div></li>
+        <li><div>2022-09-19 Meta Meeting 7.11</div></li>
+        <li><div>2022-09-18 Community Practice Session 7.11 - Retrospection</div></li>
+        <li><div>2022-09-14 Event: Circling</div></li>
+        <li><div>2022-09-12 Meta Meeting 7.10</div></li>
+        <li><div>2022-09-11 Community Practice Session 7.10 - (Not) Cases</div></li>
         <li><div>2022-09-05 Meta Meeting 7.9</div></li>
-        <li><div>2022-09-04 General Session 7.9 - Dancing with Scissors</div></li>
+        <li><div>2022-09-04 Community Practice Session 7.9 - Dancing with Scissors</div></li>
         <li><div>2022-09-03 Orientation Session</div></li>
         <li><div>2022-08-31 Event: Circling</div></li>
         <li><div>2022-08-29 Meta Meeting 7.8</div></li>
-        <li><div>2022-08-28 General Session 7.8 - Desire and Agency Games</div></li>
+        <li><div>2022-08-28 Community Practice Session 7.8 - Desire and Agency Games</div></li>
         <li><div>2022-08-27 Orientation Session</div></li>
         <li><div>2022-08-24 Event: Circling</div></li>
         <li><div>2022-08-22 Meta Meeting 7.7</div></li>
-        <li><div>2022-08-21 General Session 7.7 - Parts-oriented Circling</div></li>
+        <li><div>2022-08-21 Community Practice Session 7.7 - Parts-oriented Circling</div></li>
         <li><div>2022-08-15 Meta Meeting 7.6</div></li>
-        <li><div>2022-08-14 General Session 7.6 - Internal Family Systems</div></li>
+        <li><div>2022-08-14 Community Practice Session 7.6 - Internal Family Systems</div></li>
         <li><div>2022-08-13 Orientation Session</div></li>
         <li><div>2022-08-08 Meta Meeting 7.5</div></li>
-        <li><div>2022-08-07 General Session 7.5 - Open Session w/ Seishin</div></li>
+        <li><div>2022-08-07 Community Practice Session 7.5 - Open Session w/ Seishin</div></li>
         <li><div>2022-08-01 Meta Meeting 7.4</div></li>
-        <li><div>2022-07-31 General Session 7.4 - Layered Awareness</div></li>
+        <li><div>2022-07-31 Community Practice Session 7.4 - Layered Awareness</div></li>
         <li><div>2022-07-30 Orientation Session</div></li>
         <li><div>2022-07-25 Meta Meeting 7.3</div></li>
-        <li><div>2022-07-24 General Session 7.3 - Giving &amp; Receiving w/ Mary</div></li>
+        <li><div>2022-07-24 Community Practice Session 7.3 - Giving &amp; Receiving w/ Mary</div></li>
         <li><div>2022-07-18 Meta Meeting 7.2</div></li>
-        <li><div>2022-07-17 General Session 7.2 - Structured and Structureless</div></li>
+        <li><div>2022-07-17 Community Practice Session 7.2 - Structured and Structureless</div></li>
         <li><div>2022-07-15 Governance Working Session</div></li>
         <li><div>2022-07-11 Meta Meeting 7.1</div></li>
-        <li><div>2022-07-10 General Session 7.1 - Kickoff: The Relational Field and Loveseat</div></li>
+        <li><div>2022-07-10 Community Practice Session 7.1 - Kickoff: The Relational Field and Loveseat</div></li>
         <li><div>2022-07-09 Orientation Session</div></li>
       </ul>
 
