@@ -37,25 +37,28 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 8 - Q4 2022</Typography>
       <ul>
-        <li><div>2022-10-2 Community Practice Session 8.1 - Kickoff</div></li>
+        <li><div>2022-10-08 Event: House Party Social</div></li>
+        <li><div>2022-10-05 Practice: Circling</div></li>
+        <li><div>2022-10-04 Meta Meeting 8.1</div></li>
+        <li><div>2022-10-02 Community Practice Session 8.1 - Kickoff</div></li>
       </ul>
 
       <Typography variant="h5">Season 7 - Q3 2022</Typography>
       <ul>
-        <li><div>2022-09-21 Event: Circling</div></li>
+        <li><div>2022-09-21 Practice: Circling</div></li>
         <li><div>2022-09-19 Meta Meeting 7.11</div></li>
         <li><div>2022-09-18 Community Practice Session 7.11 - Retrospection</div></li>
-        <li><div>2022-09-14 Event: Circling</div></li>
+        <li><div>2022-09-14 Practice: Circling</div></li>
         <li><div>2022-09-12 Meta Meeting 7.10</div></li>
         <li><div>2022-09-11 Community Practice Session 7.10 - (Not) Cases</div></li>
         <li><div>2022-09-05 Meta Meeting 7.9</div></li>
         <li><div>2022-09-04 Community Practice Session 7.9 - Dancing with Scissors</div></li>
         <li><div>2022-09-03 Orientation Session</div></li>
-        <li><div>2022-08-31 Event: Circling</div></li>
+        <li><div>2022-08-31 Practice: Circling</div></li>
         <li><div>2022-08-29 Meta Meeting 7.8</div></li>
         <li><div>2022-08-28 Community Practice Session 7.8 - Desire and Agency Games</div></li>
         <li><div>2022-08-27 Orientation Session</div></li>
-        <li><div>2022-08-24 Event: Circling</div></li>
+        <li><div>2022-08-24 Practice: Circling</div></li>
         <li><div>2022-08-22 Meta Meeting 7.7</div></li>
         <li><div>2022-08-21 Community Practice Session 7.7 - Parts-oriented Circling</div></li>
         <li><div>2022-08-15 Meta Meeting 7.6</div></li>
