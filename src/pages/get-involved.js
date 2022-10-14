@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import CenteredColumn from "../components/centered-column"
 import ButtondownSignup from "../components/buttondownsignup"
 import ZoomlinkOrientation from "../components/zoomlink-orientation"
+import * as GlobalCSS from "../styles/global.module.css"
 
 const NamedDefault = ({ data }) => (
   <Layout>
@@ -24,6 +25,7 @@ const NamedDefault = ({ data }) => (
 
       <p><ZoomlinkOrientation /></p>
 
+      <a className={GlobalCSS.anchorOffset} id="newsletter"></a>
       <Typography variant="h4">Newsletter</Typography>
       <p>Want to follow along with what we're doing and learning? Regardless of 
         whether particiating in Intentional Society is a fit for you and your 
