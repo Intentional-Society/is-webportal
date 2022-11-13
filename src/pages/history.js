@@ -37,6 +37,11 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 8 - Q4 2022</Typography>
       <ul>
+        <li><div>2022-11-12 Orientation Session</div></li>
+        <li><div>2022-11-09 Practice: Circling</div></li>
+        <li><div>2022-11-07 Meta Meeting 8.6</div></li>
+        <li><div>2022-11-06 Community Practice Session 8.6 - Giving and Receiving Prototype</div></li>
+        <li><div>2022-11-05 Practice Design Session</div></li>
         <li><div>2022-10-31 Meta Meeting 8.5</div></li>
         <li><div>2022-10-30 Community Practice Session 8.5 - Landscapes of Care</div></li>
         <li><div>2022-10-29 Orientation Session</div></li>
