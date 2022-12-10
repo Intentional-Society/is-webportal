@@ -37,6 +37,9 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 8 - Q4 2022</Typography>
       <ul>
+        <li><div>2022-12-10 Orientation Session</div></li>
+        <li><div>2022-12-05 Meta Meeting 8.10</div></li>
+        <li><div>2022-12-04 Community Practice Session 8.10 - Relating to Choice</div></li>
         <li><div>2022-11-30 Practice: Circling</div></li>
         <li><div>2022-11-28 Meta Meeting 8.9</div></li>
         <li><div>2022-11-27 Community Practice Session 8.9 - Mini-circles</div></li>
@@ -59,7 +62,7 @@ const NamedDefault = ({ data }) => (
         <li><div>2022-10-16 Community Practice Session 8.3 - Exploring Doing</div></li>
         <li><div>2022-10-15 Orientation Session</div></li>
         <li><div>2022-10-10 Meta Meeting 8.2</div></li>
-        <li><div>2022-10-09 Community Practice Session 8.2 - Collective Pres-Tensioning</div></li>
+        <li><div>2022-10-09 Community Practice Session 8.2 - Collective Pres-Tension-ing</div></li>
         <li><div>2022-10-08 Event: House Party Social</div></li>
         <li><div>2022-10-05 Practice: Circling</div></li>
         <li><div>2022-10-04 Meta Meeting 8.1</div></li>
