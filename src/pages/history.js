@@ -35,8 +35,21 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h4">Historical Event Log</Typography>
 
+      <Typography variant="h5">Season 9 - Q1 2022</Typography>
+      <ul>
+        <li><div>2023-01-08 Community Practice Session 9.1 - Kickoff</div></li>
+        <li><div>2023-01-07 Orientation Session</div></li>
+        <li><div>2023-01-01 New Year's Party</div></li>
+      </ul>
+
       <Typography variant="h5">Season 8 - Q4 2022</Typography>
       <ul>
+        <li><div>2022-12-31 Orientation Session</div></li>
+        <li><div>2022-12-19 Meta Meeting 8.12</div></li>
+        <li><div>2022-12-18 Community Practice Session 8.12 - Improv Future-casting</div></li>
+        <li><div>2022-12-14 Practice: Circling</div></li>
+        <li><div>2022-12-12 Meta Meeting 8.11</div></li>
+        <li><div>2022-12-11 Community Practice Session 8.11 - Relating to Stories</div></li>
         <li><div>2022-12-10 Orientation Session</div></li>
         <li><div>2022-12-05 Meta Meeting 8.10</div></li>
         <li><div>2022-12-04 Community Practice Session 8.10 - Relating to Choice</div></li>
