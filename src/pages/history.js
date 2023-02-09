@@ -37,6 +37,21 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 9 - Q1 2022</Typography>
       <ul>
+        <li><div>2023-02-08 Circling Practice</div></li>
+        <li><div>2023-02-06 Meta Meeting 9.1</div></li>
+        <li><div>2023-02-05 Community Practice Session 9.5 - Fishbowl T-Groups</div></li>
+        <li><div>2023-02-04 Orientation Session</div></li>
+        <li><div>2023-02-03 Design for Collab Jam</div></li>
+        <li><div>2023-01-30 Meta Meeting 9.4</div></li>
+        <li><div>2023-01-29 Community Practice Session 9.4 - Integrity in Connections</div></li>
+        <li><div>2023-01-25 Circling Practice</div></li>
+        <li><div>2023-01-23 Meta Meeting 9.3</div></li>
+        <li><div>2023-01-22 Community Practice Session 9.3 - Relating Languages w/ Sara N</div></li>
+        <li><div>2023-01-21 Orientation Session</div></li>
+        <li><div>2023-01-16 Meta Meeting 9.2</div></li>
+        <li><div>2023-01-15 Community Practice Session 9.2 - Empathic Resonance</div></li>
+        <li><div>2023-01-11 Circling Practice</div></li>
+        <li><div>2023-01-09 Meta Meeting 9.1</div></li>
         <li><div>2023-01-08 Community Practice Session 9.1 - Kickoff</div></li>
         <li><div>2023-01-07 Orientation Session</div></li>
         <li><div>2023-01-01 New Year's Party</div></li>
