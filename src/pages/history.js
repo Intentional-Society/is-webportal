@@ -37,8 +37,22 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 9 - Q1 2022</Typography>
       <ul>
+        <li><div>2023-03-13 Meta Meeting 9.10</div></li>
+        <li><div>2023-03-12 Community Practice Session 9.10 - What's missing?</div></li>
+        <li><div>2023-03-08 Circling Practice</div></li>
+        <li><div>2023-03-04 Watch Party - <a href="https://www.youtube.com/watch?v=hZpKdfbrd6o">Rebuilding Society on Meaning</a></div></li>
+        <li><div>2023-03-06 Meta Meeting 9.9</div></li>
+        <li><div>2023-03-05 Community Practice Session 9.9 - What's real?</div></li>
+        <li><div>2023-03-04 Possibility Engines Game</div></li>
+        <li><div>2023-02-27 Meta Meeting 9.8</div></li>
+        <li><div>2023-02-26 Community Practice Session 9.8 - Honesty &amp; Sensitivity Dials</div></li>
+        <li><div>2023-02-22 Circling Practice</div></li>
+        <li><div>2023-02-21 Meta Meeting 9.7</div></li>
+        <li><div>2023-02-19 Community Practice Session 9.7 - Exploring Feedback</div></li>
+        <li><div>2023-02-13 Meta Meeting 9.6</div></li>
+        <li><div>2023-02-12 Community Practice Session 9.6 - Fishbowl T-Groups 2</div></li>
         <li><div>2023-02-08 Circling Practice</div></li>
-        <li><div>2023-02-06 Meta Meeting 9.1</div></li>
+        <li><div>2023-02-06 Meta Meeting 9.5</div></li>
         <li><div>2023-02-05 Community Practice Session 9.5 - Fishbowl T-Groups</div></li>
         <li><div>2023-02-04 Orientation Session</div></li>
         <li><div>2023-02-03 Design for Collab Jam</div></li>
