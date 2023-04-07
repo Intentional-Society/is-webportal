@@ -28,15 +28,15 @@ const NamedDefault = ({ data }) => <>
         the people we want to be, more consistently, with more ease and freedom. In  
         doing so, we also then increase our capacity to love and serve both ourselves and humanity.</p>
 
-      <p>At least, that's the intention we hold for ourselves. Intentional Society is simply people, in process, 
+      <p>Intentional Society is also simply people, in process, 
         being and doing together, as we continue to both create and discover the fullness of what it will become. 
         Read on to learn more about <Link to="/who-we-are">who we 
         are</Link> and <Link to="/what-we-do">what we do</Link>, and how 
         to <Link to="/get-involved">get involved</Link> if and when you feel so called.
       </p>
       <IsHr />
-      <p>We've <Link to="/history">held 100+ gatherings</Link> in our first two years. 
-       Our 9<sup>th</sup> quarterly season spans Q1 of 2023.<br />
+      <p>We <Link to="/history">held 100+ gatherings</Link> in our first two years. 
+       Our 10<sup>th</sup> quarterly season starts on April 16<sup>th</sup>.<br />
       <ZoomlinkOrientation /></p>
       <IsHr />
       <p>Want to follow along with what we're doing and learning? 

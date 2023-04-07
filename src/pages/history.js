@@ -35,7 +35,13 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h4">Historical Event Log</Typography>
 
-      <Typography variant="h5">Season 9 - Q1 2022</Typography>
+      <Typography variant="h5">Season 10 - Q2 2023</Typography>
+      <ul>
+        <li><div>2023-04-16 Community Practice Session 10.1 - Kickoff</div></li>
+        <li><div>2023-04-15 Orientation Session</div></li>
+      </ul>
+
+      <Typography variant="h5">Season 9 - Q1 2023</Typography>
       <ul>
         <li><div>2023-04-06 S10 Design Session</div></li>
         <li><div>2023-04-03 Meta Meeting 9.13</div></li>
