@@ -37,6 +37,15 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 9 - Q1 2022</Typography>
       <ul>
+        <li><div>2023-04-06 S10 Design Session</div></li>
+        <li><div>2023-04-03 Meta Meeting 9.13</div></li>
+        <li><div>2023-04-02 Community Practice Session 9.13 - Retrospective &amp; Reunion</div></li>
+        <li><div>2023-04-01 Orientation Session</div></li>
+        <li><div>2023-03-27 Meta Meeting 9.12</div></li>
+        <li><div>2023-03-26 Community Practice Session 9.12 - Container Struggle</div></li>
+        <li><div>2023-03-22 Circling Practice</div></li>
+        <li><div>2023-03-20 Meta Meeting 9.11</div></li>
+        <li><div>2023-03-19 Community Practice Session 9.11 - Giving &amp; Receiving Practice</div></li>
         <li><div>2023-03-13 Meta Meeting 9.10</div></li>
         <li><div>2023-03-12 Community Practice Session 9.10 - What's missing?</div></li>
         <li><div>2023-03-08 Circling Practice</div></li>
@@ -93,7 +102,7 @@ const NamedDefault = ({ data }) => (
         <li><div>2022-11-12 Orientation Session</div></li>
         <li><div>2022-11-09 Practice: Circling</div></li>
         <li><div>2022-11-07 Meta Meeting 8.6</div></li>
-        <li><div>2022-11-06 Community Practice Session 8.6 - Giving and Receiving Prototype</div></li>
+        <li><div>2022-11-06 Community Practice Session 8.6 - Giving &amp; Receiving Prototype</div></li>
         <li><div>2022-11-05 Practice Design Session</div></li>
         <li><div>2022-10-31 Meta Meeting 8.5</div></li>
         <li><div>2022-10-30 Community Practice Session 8.5 - Landscapes of Care</div></li>
