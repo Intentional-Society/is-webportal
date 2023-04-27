@@ -37,9 +37,13 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 10 - Q2 2023</Typography>
       <ul>
+        <li><div>2023-04-24 Meta Meeting 10.2</div></li>
+        <li><div>2023-04-23 Community Practice Session 10.2 - Mini-Cases</div></li>
+        <li><div>2023-04-22 Orientation Session</div></li>
         <li><div>2023-04-17 Meta Meeting 10.1</div></li>
         <li><div>2023-04-16 Community Practice Session 10.1 - Kickoff</div></li>
         <li><div>2023-04-15 Orientation Session</div></li>
+        <li><div>(stopped tracking Circling Practice and other new crews here)</div></li>
       </ul>
 
       <Typography variant="h5">Season 9 - Q1 2023</Typography>
@@ -100,10 +104,10 @@ const NamedDefault = ({ data }) => (
         <li><div>2022-12-04 Community Practice Session 8.10 - Relating to Choice</div></li>
         <li><div>2022-11-30 Practice: Circling</div></li>
         <li><div>2022-11-28 Meta Meeting 8.9</div></li>
-        <li><div>2022-11-27 Community Practice Session 8.9 - Mini-circles</div></li>
+        <li><div>2022-11-27 Community Practice Session 8.9 - Mini-Circles</div></li>
         <li><div>2022-11-26 Orientation Session</div></li>
         <li><div>2022-11-21 Meta Meeting 8.8</div></li>
-        <li><div>2022-11-20 Community Practice Session 8.8 - Mini-cases</div></li>
+        <li><div>2022-11-20 Community Practice Session 8.8 - Mini-Cases</div></li>
         <li><div>2022-11-14 Meta Meeting 8.7</div></li>
         <li><div>2022-11-13 Community Practice Session 8.7 - Exploring Relational Giving and Trust</div></li>
         <li><div>2022-11-12 Orientation Session</div></li>
