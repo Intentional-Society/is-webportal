@@ -93,7 +93,7 @@ const NamedDefault = ({ data }) => (
           Case Clinic practice, and we have developed our own combination practice called Edge Case.
         </li>
         <li><a href="https://www.intentionalsociety.org/practices/EdgeCasePractice.pdf">Edge Case Instructions</a></li>
-        <li><a href="https://www.presencing.org/files/tools/PI_Tool_CaseClinic.pdf">Case Clinic Instructions</a></li>
+        <li><a href="https://irp.cdn-website.com/53007095/files/uploaded/pi_tool_caseclinic.pdf">Case Clinic Instructions</a></li>
         <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">
           Our experience report</a></li>
       </ul>
