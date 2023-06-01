@@ -37,6 +37,15 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 10 - Q2 2023</Typography>
       <ul>
+        <li><div>2023-05-29 Meta Meeting 10.7</div></li>
+        <li><div>2023-05-28 Community Practice Session 10.7 - Revealing Experience</div></li>
+        <li><div>2023-05-22 Meta Meeting 10.6</div></li>
+        <li><div>2023-05-21 Community Practice Session 10.6 - T-Group Fishbowl</div></li>
+        <li><div>2023-05-20 Orientation Session</div></li>
+        <li><div>2023-05-15 Meta Meeting 10.5</div></li>
+        <li><div>2023-05-14 Community Practice Session 10.5 - Simple Presence</div></li>
+        <li><div>2023-05-09 Meta Meeting 10.4</div></li>
+        <li><div>2023-05-07 Community Practice Session 10.4 - Social Tooling (decision-making, retros)</div></li>
         <li><div>2023-05-01 Meta Meeting 10.3</div></li>
         <li><div>2023-04-30 Community Practice Session 10.3 - Crew Formation</div></li>
         <li><div>2023-04-24 Meta Meeting 10.2</div></li>
