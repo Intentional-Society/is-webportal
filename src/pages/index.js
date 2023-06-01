@@ -36,7 +36,7 @@ const NamedDefault = ({ data }) => <>
       </p>
       <IsHr />
       <p>We <Link to="/history">held 100+ gatherings</Link> in our first two years. 
-       Our 10<sup>th</sup> quarterly season starts on April 16<sup>th</sup>.<br />
+       Our 10<sup>th</sup> quarterly season is running through the end of June.<br />
       <ZoomlinkOrientation /></p>
       <IsHr />
       <p>Want to follow along with what we're doing and learning? 
