@@ -35,8 +35,9 @@ const NamedDefault = ({ data }) => <>
         to <Link to="/get-involved">get involved</Link> if and when you feel so called.
       </p>
       <IsHr />
-      <p>We <Link to="/history">held 100+ gatherings</Link> in our first two years. 
-       Our 10<sup>th</sup> quarterly season is running through the end of June.<br />
+      <p>We <Link to="/history">held 100+ gatherings</Link> in our first two years, and continue our 
+        exploration and expansion week by week. 
+       Our 11<sup>th</sup> quarterly season begins on July 9<sup>th</sup>.<br />
       <ZoomlinkOrientation /></p>
       <IsHr />
       <p>Want to follow along with what we're doing and learning? 
