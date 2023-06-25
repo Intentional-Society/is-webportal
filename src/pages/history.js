@@ -37,6 +37,13 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 10 - Q2 2023</Typography>
       <ul>
+        <li><div>2023-06-26 Meta Meeting 10.11</div></li>
+        <li><div>2023-06-25 Community Practice Session 10.11 - Season Finale</div></li>
+        <li><div>2023-06-19 Meta Meeting 10.10</div></li>
+        <li><div>2023-06-18 Community Practice Session 10.10 - Giving &amp; Receiving Practice</div></li>
+        <li><div>2023-06-17 Orientation Session</div></li>
+        <li><div>2023-06-12 Meta Meeting 10.9</div></li>
+        <li><div>2023-06-11 Community Practice Session 10.9 - Doing Aliveness</div></li>
         <li><div>2023-06-05 Meta Meeting 10.8</div></li>
         <li><div>2023-06-04 Community Practice Session 10.8 - Alively Learning w/ Caroline A</div></li>
         <li><div>2023-05-29 Meta Meeting 10.7</div></li>
