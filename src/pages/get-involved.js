@@ -15,12 +15,15 @@ const NamedDefault = ({ data }) => (
       <p> </p>
 
       <Typography variant="h4">Orientation Calls</Typography>
-      <p>This is the place to dive in! These are a friendly, casual, low-pressure 
+      <p>Want to maybe get involved? Here is the place to start! 
+        This call is a friendly, casual, low-pressure 
         introduction to Intentional Society. We'll introduce ourselves, get some 
-        background on the design of IS, and share about what to expect in later 
-        meetings. Interested attendees can then get the private link to the next day's
-        general session. Bring your video camera (phone is okay), microphone, and 
-        any <Link to="/questions">questions</Link> you have.
+        details on what makes Intentional Society what it is, 
+        and see what resonates between us. 
+        Interested attendees can then get a guest pass to the next 
+        community session, on their way to membership. 
+        Bring your video camera (phone is okay), microphone, and 
+        any <Link to="/questions">questions</Link> you might have.
       </p>
 
       <p><ZoomlinkOrientation /></p>
@@ -28,10 +31,10 @@ const NamedDefault = ({ data }) => (
       <a className={GlobalCSS.anchorOffset} id="newsletter"></a>
       <Typography variant="h4">Newsletter</Typography>
       <p>Want to follow along with what we're doing and learning? Regardless of 
-        whether particiating in Intentional Society is a fit for you and your 
-        life circumstances, you're welcome to stay informed and learn vicariously. 
-        Each week (usually on Wednesday or Thursday) you'll receive one update 
-        sharing about our experience the prior Sunday and what's coming next.
+        whether active participation in Intentional Society is a fit for you, 
+        you're welcome to stay informed with this weekly newsletter. 
+        Once each week (usually Thursday) you'll receive a short update 
+        sharing about our recent experiences and pondering what's next for us.
       </p>
       <p>
         You can <a href="https://buttondown.email/intentionalsociety/archive/">browse 
