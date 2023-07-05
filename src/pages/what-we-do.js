@@ -18,17 +18,11 @@ const NamedDefault = ({ data }) => (
         and check out with our takeaways.
       </p>
       
-      <p>Most weeks, our main activity is metaphorically assembling “around the campfire” 
-        to learn and play collectively, to make sense of ourselves and our relationships to others 
-        and to the world. 
-        Other times, we voyage in multi-week small group “boats” to explore and expand our edges. 
-        Our current 4th season runs October through December 2021. 
-        Thematically, this looks to be a season in which we will continue:
-        <ul>
-          <li>raising and cultivating our level of mutual trust and commitment</li>
-          <li>deliberately developing our awareness and perspective</li>
-          <li>growing our organizational structure towards sustainability</li>
-        </ul>
+      <p>These community sessions are the heartbeat of our ecosystem. We also make small-group crews 
+        around shared interests, and encourage one-on-one calls as we grow our collective culture. 
+        We focus on face-to-face high-fidelity connection, as we explore and play with expanding 
+        our perspectives both interior and exterior. As of mid-2023 we've been gathering for 2.5 years, 
+        with well over 100 weekly sessions in our journey thus far.
       </p>
 
       <IsHr />
