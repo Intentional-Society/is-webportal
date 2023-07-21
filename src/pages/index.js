@@ -35,9 +35,9 @@ const NamedDefault = ({ data }) => <>
         to <Link to="/get-involved">get involved</Link> if and when you feel so called.
       </p>
       <IsHr />
-      <p>We <Link to="/history">held 100+ gatherings</Link> in our first two years, and continue our 
+      <p>We've <Link to="/history">held 100+ gatherings</Link> in our first few years, and continue our 
         exploration and expansion week by week. 
-       Our 11<sup>th</sup> quarterly season begins on July 9<sup>th</sup>.<br />
+       Our 11<sup>th</sup> quarterly season runs July through September (Q3) of 2023.<br />
       <ZoomlinkOrientation /></p>
       <IsHr />
       <p>Want to follow along with what we're doing and learning? 
