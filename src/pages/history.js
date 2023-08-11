@@ -37,6 +37,13 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 11 - Q3 2023</Typography>
       <ul>
+        <li><div>2023-08-07 Meta Meeting 11.5</div></li>
+        <li><div>2023-08-06 Community Session 11.5 - Clean kata</div></li>
+        <li><div>2023-08-05 Orientation Session</div></li>
+        <li><div>2023-07-31 Meta Meeting 11.4</div></li>
+        <li><div>2023-07-30 Community Session 11.4 - Clean Language w/ Gina C</div></li>
+        <li><div>2023-07-24 Meta Meeting 11.3</div></li>
+        <li><div>2023-07-23 Community Session 11.3 - Crewing &amp; Relaxing</div></li>
         <li><div>2023-07-17 Meta Meeting 11.2</div></li>
         <li><div>2023-07-16 Community Session 11.2 - Doing &amp; Crewing</div></li>
         <li><div>2023-07-10 Meta Meeting 11.1</div></li>
@@ -149,7 +156,7 @@ const NamedDefault = ({ data }) => (
         <li><div>2022-10-30 Community Practice Session 8.5 - Landscapes of Care</div></li>
         <li><div>2022-10-29 Orientation Session</div></li>
         <li><div>2022-10-24 Meta Meeting 8.4</div></li>
-        <li><div>2022-10-23 Community Practice Session 8.4 - Emergence and Purpose with DAVP</div></li>
+        <li><div>2022-10-23 Community Practice Session 8.4 - Emergence and Purpose w/ DAVP</div></li>
         <li><div>2022-10-17 Meta Meeting 8.3</div></li>
         <li><div>2022-10-16 Community Practice Session 8.3 - Exploring Doing</div></li>
         <li><div>2022-10-15 Orientation Session</div></li>
