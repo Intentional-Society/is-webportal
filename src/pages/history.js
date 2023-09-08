@@ -37,8 +37,12 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 11 - Q3 2023</Typography>
       <ul>
+        <li><div>2023-09-04 Meta Meeting 11.9</div></li>
+        <li><div>2023-09-03 Community Session 11.9 - Story debugging</div></li>
+        <li><div>2023-08-28 Meta Meeting 11.8</div></li>
+        <li><div>2023-08-27 Community Session 11.8 - Sphere of awareness</div></li>
         <li><div>2023-08-25 Meta Meeting 11.7</div></li>
-        <li><div>2023-08-20 Community Session 11.6 - I can't believe it's not Circling</div></li>
+        <li><div>2023-08-20 Community Session 11.7 - I can't believe it's not Circling</div></li>
         <li><div>2023-08-19 Orientation Session</div></li>
         <li><div>2023-08-14 Meta Meeting 11.6</div></li>
         <li><div>2023-08-13 Community Session 11.6 - Circling cleanly</div></li>
