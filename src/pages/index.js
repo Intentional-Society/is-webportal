@@ -17,15 +17,15 @@ const NamedDefault = ({ data }) => <>
       <Typography variant="h5" style={{ color: "#FFFFFF"}}>
         <p style={{marginLeft:"1vw"}}>become your biggest self</p>
         <p style={{marginLeft:"4vw"}}>awareness, acceptance, integrity</p>
-        <p style={{marginLeft:"-1vw"}}>growing a collective</p>
-        <p style={{marginLeft:"2vw"}}>in service of life</p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
+        <p style={{marginLeft:"-1vw"}}>grow a collective culture</p>
+        <p style={{marginLeft:"2vw"}}>intention in service of life</p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
       </Typography>
     </div>
     <div style={{margin: "-10vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
       <p>Intentional Society is people bringing awareness to intention in 
          becoming, belonging, and doing together.<br/>
-      It is a place to grow and develop oneself in a warm, supportive community.
-      It is a future society that supports the ways we want to inhabit our best selves.
+      It is a place to grow and develop oneself in a warm, supportive community.<br/>
+      It is a future society that supports the ways we want to inhabit our best selves.<br/>
       It is a living probe into self-transforming collective culture.</p>
       <IsHr />
       <p>We meet frequently over video to become our best and biggest selves — to practice being 
