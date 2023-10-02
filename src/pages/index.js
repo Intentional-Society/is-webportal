@@ -15,9 +15,9 @@ const NamedDefault = ({ data }) => <>
                 imgStyle={{objectFit: "fill"}}/>
     <div style={{  minWidth: "350px", maxWidth: "400px", width: "fit-content", margin: "0 auto" }}>
       <Typography variant="h5" style={{ color: "#FFFFFF"}}>
-        <p style={{marginLeft:"1vw"}}>become your biggest self</p>
+        <p style={{marginLeft:"1vw"}}>becoming your biggest self</p>
         <p style={{marginLeft:"4vw"}}>awareness, acceptance, integrity</p>
-        <p style={{marginLeft:"-1vw"}}>grow a collective culture</p>
+        <p style={{marginLeft:"-1vw"}}>growing a collective culture</p>
         <p style={{marginLeft:"2vw"}}>intention in service of life</p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
       </Typography>
     </div>
