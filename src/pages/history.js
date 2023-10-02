@@ -35,28 +35,40 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h4">Historical Event Log</Typography>
 
+      <Typography variant="h5">Season 12 - Q4 2023</Typography>
+      <ul>
+        <li><div>2023-10-08 Session 12.1 - Season of Change Kickoff</div></li>
+      </ul>
+
       <Typography variant="h5">Season 11 - Q3 2023</Typography>
       <ul>
+        <li><div>2023-09-30 Orientation Session</div></li>
+        <li><div>2023-09-25 Meta Meeting 11.12</div></li>
+        <li><div>2023-09-24 Community Practice Session 11.12 - Zones and Change</div></li>
+        <li><div>2023-09-18 Meta Meeting 11.11</div></li>
+        <li><div>2023-09-17 Community Practice Session 11.11 - Why(s)?</div></li>
+        <li><div>2023-09-11 Meta Meeting 11.10</div></li>
+        <li><div>2023-09-10 Community Practice Session 11.10 - Giving &amp; Receiving Practice</div></li>
         <li><div>2023-09-04 Meta Meeting 11.9</div></li>
-        <li><div>2023-09-03 Community Session 11.9 - Story debugging</div></li>
+        <li><div>2023-09-03 Community Practice Session 11.9 - Story debugging</div></li>
         <li><div>2023-08-28 Meta Meeting 11.8</div></li>
-        <li><div>2023-08-27 Community Session 11.8 - Sphere of awareness</div></li>
+        <li><div>2023-08-27 Community Practice Session 11.8 - Sphere of awareness</div></li>
         <li><div>2023-08-25 Meta Meeting 11.7</div></li>
-        <li><div>2023-08-20 Community Session 11.7 - I can't believe it's not Circling</div></li>
+        <li><div>2023-08-20 Community Practice Session 11.7 - I can't believe it's not Circling</div></li>
         <li><div>2023-08-19 Orientation Session</div></li>
         <li><div>2023-08-14 Meta Meeting 11.6</div></li>
-        <li><div>2023-08-13 Community Session 11.6 - Circling cleanly</div></li>
+        <li><div>2023-08-13 Community Practice Session 11.6 - Circling cleanly</div></li>
         <li><div>2023-08-07 Meta Meeting 11.5</div></li>
-        <li><div>2023-08-06 Community Session 11.5 - Clean kata</div></li>
+        <li><div>2023-08-06 Community Practice Session 11.5 - Clean kata</div></li>
         <li><div>2023-08-05 Orientation Session</div></li>
         <li><div>2023-07-31 Meta Meeting 11.4</div></li>
-        <li><div>2023-07-30 Community Session 11.4 - Clean Language w/ Gina C</div></li>
+        <li><div>2023-07-30 Community Practice Session 11.4 - Clean Language w/ Gina C</div></li>
         <li><div>2023-07-24 Meta Meeting 11.3</div></li>
-        <li><div>2023-07-23 Community Session 11.3 - Crewing &amp; Relaxing</div></li>
+        <li><div>2023-07-23 Community Practice Session 11.3 - Crewing &amp; Relaxing</div></li>
         <li><div>2023-07-17 Meta Meeting 11.2</div></li>
-        <li><div>2023-07-16 Community Session 11.2 - Doing &amp; Crewing</div></li>
+        <li><div>2023-07-16 Community Practice Session 11.2 - Doing &amp; Crewing</div></li>
         <li><div>2023-07-10 Meta Meeting 11.1</div></li>
-        <li><div>2023-07-09 Community Session 11.1 - Kickoff</div></li>
+        <li><div>2023-07-09 Community Practice Session 11.1 - Kickoff</div></li>
         <li><div>2023-07-08 Orientation Session</div></li>
         <li><div>2023-07-01 Orientation Session</div></li>
       </ul>
