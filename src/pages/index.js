@@ -22,11 +22,11 @@ const NamedDefault = ({ data }) => <>
       </Typography>
     </div>
     <div style={{margin: "-10vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
-      <p>Intentional Society is people bringing awareness to intention in 
-         becoming, belonging, and doing together.<br/>
-      It is a place to grow and develop oneself in a warm, supportive community.<br/>
-      It is a future society that supports the ways we want to inhabit our best selves.<br/>
-      It is a living probe into self-transforming collective culture.</p>
+      <p>Intentional Society consists of people together  
+         becoming, belonging, being, and doing together.<br/>
+      It's a place to grow and develop yourself in a warm, supportive community.<br/>
+      It's a future society that supports the ways we want to inhabit our best selves.<br/>
+      It's a living probe into self-transforming collective culture.</p>
       <IsHr />
       <p>We meet frequently over video to become our best and biggest selves — to practice being 
         the people we want to be, more consistently, with more ease and freedom. In  
