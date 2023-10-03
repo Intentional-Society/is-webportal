@@ -45,6 +45,16 @@ const NamedDefault = ({ data }) => <>
        Our 12<sup>th</sup> quarterly season runs October through December of 2023.<br />
       <ZoomlinkOrientation /></p>
       <IsHr />
+      <Typography variant="h4">Current Invitation!</Typography>
+      <p>Intentional Society has been a growth-oriented community full of relational practices, awareness-acceptance-integration loops, and culture cultivation. It remains that still, and also: Building atop our cultural foundation and practices, we’re expanding our scopes of activity to include externally-facing and/or economic work, as well as intentional social and personal support structures.
+      </p>
+      <p>There are huge challenges looming over humanity’s future, yet our capacity to be in relationship with them, and ourselves, and each other, seems to be our biggest blocker. I believe we’ve validated, in the last three years of Intentional Society, a large chunk of what it takes to practically grow our complexity-holding-capacity as individuals and as a collective. Our practices remain at the core of what makes our culture possible; and also, what else does our practice make possible? That’s what we’re bringing online now.
+      </p>
+      <p>As with all human/complex system dynamics, we can’t just snap our fingers to make it so. We’ll be assembling relational infrastructure, constructed out of people’s time and energy investments in resonance with like-minded others. The existing single-track congregational structure of Intentional Society has selected rather strongly for those who particularly enjoy finding their edges in practicing interpersonal awareness, communication, and perspective-taking skills and ways of being. To complement this, we’re open to welcoming more applied-focus energy and passions to enrich our doing-and-being spirals.
+      </p>
+      <p>So if you’ve ever thought to yourself either “Game B sounds great but it’s all talk ‘cause it’s missing some cultural wisdom to do it” or “Authentic Relating/etc has felt great but I wish it applied to more of my life” then you might want to take a look at this next phase of Intentional Society. To do so, start with the orientation call this Saturday the 7th then join our cohort kickoff on the 8th. Lots of decisions and experimentation await us!
+      </p>
+      <IsHr />
       <p>Want to follow along with what we're doing and learning? 
       Enter your email here to subscribe to our Intentional Society Weekly Updates newsletter:</p>
       <ButtondownSignup></ButtondownSignup>
