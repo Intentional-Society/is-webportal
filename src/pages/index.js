@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import ButtondownSignup from "../components/buttondownsignup"
 import IsHr from "../components/is-hr"
 import ZoomlinkOrientation from "../components/zoomlink-orientation"
+import * as GlobalCSS from "../styles/global.module.css"
 
 const NamedDefault = ({ data }) => <>
   <Layout>
@@ -45,6 +46,7 @@ const NamedDefault = ({ data }) => <>
        Our 12<sup>th</sup> quarterly season runs October through December of 2023.<br />
       <ZoomlinkOrientation /></p>
       <IsHr />
+      <a className={GlobalCSS.anchorOffset} id="invitation"></a>
       <Typography variant="h4">Current Invitation!</Typography>
       <p>Intentional Society has been a growth-oriented community full of relational practices, awareness-acceptance-integration loops, and culture cultivation. It remains that still, and also: Building atop our cultural foundation and practices, we’re expanding our scopes of activity to include externally-facing and/or economic work, as well as intentional social and personal support structures.
       </p>
