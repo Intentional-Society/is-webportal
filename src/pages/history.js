@@ -37,7 +37,36 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h5">Season 12 - Q4 2023</Typography>
       <ul>
+        <li><div>2023-12-31 End-of-Year Celebration</div></li>
+        <li><div>2023-12-20 Garage Time</div></li>
+        <li><div>2023-10-19 through 2023-12-19 IS Builder Squad weekly</div></li>
+        <li><div>2023-12-18 Meta Meeting 12.11</div></li>
+        <li><div>2023-12-17 Session 12.11 - Reflection, Direction, Appreciation</div></li>
+        <li><div>2023-12-11 Meta Meeting 12.10</div></li>
+        <li><div>2023-12-10 Session 12.10 - Nine Whys on Important Cares</div></li>
+        <li><div>2023-12-04 Meta Meeting 12.9</div></li>
+        <li><div>2023-12-03 Session 12.9 - Focusing, Colors &amp; Amplification</div></li>
+        <li><div>2023-12-02 Impact Practice Group</div></li>
+        <li><div>2023-11-27 Meta Meeting 12.8</div></li>
+        <li><div>2023-11-26 Session 12.8 - Relating to Desires</div></li>
+        <li><div>2023-11-25 Orientation Session</div></li>
+        <li><div>2023-11-20 Meta Meeting 12.7</div></li>
+        <li><div>2023-11-19 Session 12.7 - Desire, Telephone Game &amp; Processing</div></li>
+        <li><div>2023-11-13 Meta Meeting 12.6</div></li>
+        <li><div>2023-11-12 Session 12.6 - Circling</div></li>
+        <li><div>2023-11-06 Meta Meeting 12.5</div></li>
+        <li><div>2023-11-05 Session 12.5 - Tapping into Source</div></li>
+        <li><div>2023-11-04 Orientation Session</div></li>
+        <li><div>2023-10-30 Meta Meeting 12.4</div></li>
+        <li><div>2023-10-29 Session 12.4 - Impact Zone Exploration</div></li>
+        <li><div>2023-10-28 Core Project Exploration</div></li>
+        <li><div>2023-10-23 Meta Meeting 12.3</div></li>
+        <li><div>2023-10-22 Session 12.3 - Connection Zone Exploration</div></li>
+        <li><div>2023-10-16 Meta Meeting 12.2</div></li>
+        <li><div>2023-10-15 Session 12.2 - Support Zone Exploration</div></li>
+        <li><div>2023-10-09 Meta Meeting 12.1</div></li>
         <li><div>2023-10-08 Session 12.1 - Season of Change Kickoff</div></li>
+        <li><div>2023-10-07 Orientation Session</div></li>
       </ul>
 
       <Typography variant="h5">Season 11 - Q3 2023</Typography>
