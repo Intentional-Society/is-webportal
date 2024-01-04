@@ -28,12 +28,6 @@ const NamedDefault = ({ data }) => (
         and experimental explorations, practice omni-leadership, and support each other in 
         perspective-taking, projects, etc.
       </p>
-      <p>These community sessions are the heartbeat of our ecosystem. We also make small-group crews 
-        around shared interests, and encourage one-on-one calls as we grow our collective culture. 
-        We focus on face-to-face high-fidelity connection, as we explore and play with expanding 
-        our perspectives both interior and exterior. As of the start of 2024, we've been gathering for 
-        three years now, with over 140 weekly sessions evolving toward our current activities.
-      </p>
 
       <IsHr />
       <Typography variant="h5">Deliberately Developmental details for geeks</Typography>

@@ -23,28 +23,32 @@ const NamedDefault = ({ data }) => <>
       </Typography>
     </div>
     <div style={{margin: "-9vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
-      <p>Intentional Society consists of people, practices, and culture held  
+      <p>Intentional Society is made of people, practices, and culture held  
          in awareness and intention.<br/>
       It's a place to grow and develop yourself in a warm, supportive community.<br/>
-      It's a future society that supports the ways we want to inhabit our best selves.<br/>
-      It's a living probe into self-transforming collective culture.</p>
+      It's a living probe into stabilizing and spreading self-transforming collective culture.<br/>
+      It's a future society that better supports the thriving of humans and humanity.</p>
       <IsHr />
       <a className={GlobalCSS.anchorOffset} id="practice-program"></a>
       <Typography variant="h4">Practice Program Q1 2024</Typography>
 
-      <p>We practice together over video to become our best and biggest selves — to practice being 
-        the people we want to be, more consistently, with more ease and freedom. In  
-        doing so, we also then increase our capacity to love and serve both ourselves and humanity.</p>
+      <p>Liberation. Joy. Meaning. Adaptability. Equanimity.  
+        Not from logic, nor from magic, but freely available through 
+        interactive, relational, practical experience...</p>
 
-      <p>For the first time, Intentional Society has assembled all its best practices
-        into a public 9-week program designed to support post-conventional personal development. 
-        Every week utilizes a different relational practice, from the well-known (IFS, Circling, 
-        Case Clinic) to the home-grown.
+      <p>For the first time, Intentional Society has assembled its best practices
+        into a publicly-accessible 9-week program designed to support post-conventional personal development.
+        In plain words, we're building a bridge to "being who we want to be" 
+        beyond what society typically offers us. 
+        With nine practices in nine weeks, each week utilizes a different relational practice, 
+        from the well-known (IFS, Circling, Case Clinic) to the home-grown, assembled over 
+        hundreds of hours of participatory research across the last three years.
       </p>
-      <p>No membership required — if you resonate with this invitation, you may attend any 
+
+      <p>No membership commitment required — if you resonate with this invitation, you may attend any 
         and all weeks. Sessions will occur the first three weeks of each of 
         January (7/14/21st), February (4/11/18th), and March (3/10/17th) 2024, 
-        all starting 1pm Sunday Pacific Time.
+        all starting 1pm Sunday Pacific Time and 90 minutes in length.
       </p>
       <BlurbPractice />
 
@@ -52,10 +56,9 @@ const NamedDefault = ({ data }) => <>
       <p>We've been exploring and relating together for three years now, 
         with <Link to="/history">more than 140 weekly sessions</Link> under our belts.</p>
       <p>
-        TODO: Moderate updates of <Link to="/who-we-are">who we 
-        are</Link> and <Link to="/what-we-do">what we do</Link> pages.
-        TODO: Quick update  
-        to <Link to="/get-involved">get involved</Link> if and when you feel so called.
+        You can read more about <Link to="/who-we-are">who we 
+        are</Link> and <Link to="/what-we-do">what we do</Link>, and find a few 
+        different inroads to <Link to="/get-involved">get involved</Link> if and when you feel so called.
       </p>
       <p>Want to follow along with what we're doing and learning? 
       Enter your email here to subscribe to our Weekly Update newsletter:</p>
