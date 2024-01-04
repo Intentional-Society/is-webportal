@@ -4,7 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import Layout from "../components/layout"
 import CenteredColumn from "../components/centered-column"
 import ButtondownSignup from "../components/buttondownsignup"
-import ZoomlinkOrientation from "../components/zoomlink-orientation"
+import BlurbInformational from "../components/blurb-informational"
+import BlurbPractice from "../components/blurb-practice"
 import * as GlobalCSS from "../styles/global.module.css"
 
 const NamedDefault = ({ data }) => (
@@ -12,21 +13,23 @@ const NamedDefault = ({ data }) => (
     <div style={{ height: "5vh" }}></div>
     <CenteredColumn>
       <Typography variant="h3">Ways to get involved</Typography>
-      <p> </p>
+      
+      <Typography variant="h4">Practice Program</Typography>
+      <p>If you'd like to try our relational practices, we recommend diving right in! 
+        (Newcomers get a short welcome in a breakout room.) <BlurbPractice /></p>
 
-      <Typography variant="h4">Orientation Calls</Typography>
-      <p>Want to maybe get involved? Here is the place to start! 
-        This call is a friendly, casual, low-pressure 
-        introduction to Intentional Society. We'll introduce ourselves, get some 
+      <Typography variant="h4">Informational Calls</Typography>
+      <p>Want to more cautiously learn <i>about</i> Intentional Society before trying out 
+        a practice session? This call is a friendly, casual, low-pressure 
+        introduction. We'll introduce ourselves, get some 
         details on what makes Intentional Society what it is, 
-        and see what resonates between us. 
-        Interested attendees can then get a guest pass to the next 
-        community session, on their way to membership. 
+        and see what resonates between us.</p>
+      <p>
         Bring your video camera (phone is okay), microphone, and 
         any <Link to="/questions">questions</Link> you might have.
       </p>
 
-      <p><ZoomlinkOrientation /></p>
+      <p><BlurbInformational /></p>
 
       <a className={GlobalCSS.anchorOffset} id="newsletter"></a>
       <Typography variant="h4">Newsletter</Typography>

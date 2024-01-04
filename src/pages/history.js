@@ -14,23 +14,20 @@ const NamedDefault = ({ data }) => (
         the founder/<a href="https://workwithsource.com/what-is-source/how-initiatives-start/">source</a>/
         <a href="https://www.microsolidarity.cc/articles/2-update-2020#1-initiators">caller</a> of 
         Intentional Society, however you'd like to call it. 
-        When I retired from my corporate career at the onset of the pandemic in 2020, I'd been 
+        When I retired from my corporate career at the onset of the pandemic, I'd been 
         collecting thoughts and ideas for a decade about how organizations function and grow, 
         while looking for meaning, truth, and the “why?”s of life for a few decades before that. 
-        I'd had some transformational times in my personal develoment, and I wanted to<br/>
-        <ol>
-          <li>keep growing myself</li>
-          <li>make friends on that same journey</li>
-          <li>be of service to humanity in some way</li>
-        </ol>
-      </p>
-      <p>After some months of decompression and reflection, this possibility seemed more real than ever. 
-        And what did I have to lose? I wrote a <Link to="/thecall">calling manifesto</Link> of sorts in 
-        December, and started weekly meetings of Intentional Society in January 2021.
+        I'd had some transformational experiences in my personal develoment, and I wanted to 
+        keep growing, make friends on that same journey, and be of service to humanity.
+        I wrote a <Link to="/thecall">calling manifesto</Link> of sorts in 
+        December 2020, and began weekly meetings of Intentional Society in January 2021. 
+        Beginning with a relational practices tour and a healthy does of "but what is it really," we 
+        evolved into a seasonal cycle, exploring and optimizing for relational development, 
+        eventually adding membership, and now in 2024 reconfiguring 
+        our virtual spaces as we launch our first public practice program.
       </p>
 
-      <p>The first theme ended up being about three months long, starting a tradition of “season” units 
-        for our community calendar. Below you can find records of weekly topics and events.
+      <p>Below you can find records of weekly topics and events spanning our first twelve seasons.
       </p>
 
       <Typography variant="h4">Historical Event Log</Typography>

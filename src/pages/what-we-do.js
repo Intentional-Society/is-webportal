@@ -11,21 +11,32 @@ const NamedDefault = ({ data }) => (
     <CenteredColumn>
     <Typography variant="h3">What we do</Typography>
 
-      <p>On the surface, the simple story is that we <b>talk with each another on video calls</b>.
-        Our general sessions are on Sundays and run 1 hour 45 minutes long - about the length of 
-        an average feature film. We greet each other and check in, get set with the day's agenda, 
-        spend about an hour on our main event, spend a bit of time with “meta” perspective,
-        and check out with our takeaways.
+      <p>On the surface, the simple story is that we talk with each another on video calls.
+        Most of these take the form of our publicly-accessible <b>practice program</b>. 
+        These practice sessions are facilitated, structured calls that run 90 minutes 
+        (plus any casual hangout time afterwards). There is an ordered progression week-to-week, 
+        but every week is open to newcomers as new practices and skills are introduced each week.
+      </p>
+      <p>
+        These sessions start at "IS prime time": Anchored to US time zones, 1pm Pacific and 4pm Eastern,
+        mapping to 8 or 9pm UTC depending on Daylight Savings time shifts, or even two-hour shifts 
+        (e.g. 6am to 8am) for folks in AU and NZ.
       </p>
       
+      <p>There's a bunch more to Intentional Society beyond the practice program, inside 
+        the membership membrane. We form crews of various kinds, explore more collective-oriented 
+        and experimental explorations, practice omni-leadership, and support each other in 
+        perspective-taking, projects, etc.
+      </p>
       <p>These community sessions are the heartbeat of our ecosystem. We also make small-group crews 
         around shared interests, and encourage one-on-one calls as we grow our collective culture. 
         We focus on face-to-face high-fidelity connection, as we explore and play with expanding 
-        our perspectives both interior and exterior. As of mid-2023 we've been gathering for 2.5 years, 
-        with well over 100 weekly sessions in our journey thus far.
+        our perspectives both interior and exterior. As of the start of 2024, we've been gathering for 
+        three years now, with over 140 weekly sessions evolving toward our current activities.
       </p>
 
       <IsHr />
+      <Typography variant="h5">Deliberately Developmental details for geeks</Typography>
 
       <p>At the deeper conceptual layer, what we're doing together is <b>authoring a developmental 
         community of practice with a culture of expanded awareness</b>. There's a conventional script 
@@ -49,8 +60,6 @@ const NamedDefault = ({ data }) => (
         more meaningful connection. 
       </p>
 
-      <IsHr />
-
       <p>To go even deeper into the theoretical model, 
         developmental <a href="https://en.wikipedia.org/wiki/Constructivism_(philosophy_of_education)">
         constructivism</a> is a fancy way to say that we make meaning, inside ourselves, 
@@ -73,8 +82,8 @@ const NamedDefault = ({ data }) => (
         a <a href="https://www.ccl.org/articles/leading-effectively-articles/are-you-facing-a-problem-or-a-polarity/">
         polarity</a> which, at least in the West, has been culturally tilted towards doing since the 
         dominance of <a href="https://en.wikipedia.org/wiki/Modernity">modernity</a>. Intentional Society 
-        focuses on the inner work of being, currently - and we keep a watchful eye on what kinds of 
-        doing may be calling to us.</p>
+        assumes an adult level of doing-competence, starts with the inner work of being, 
+        and expands into the interdependent learning spiral of being-and-doing at multiple levels of scale.</p>
 
       <p>A lot of theory and thought has gone into what we do together.
         But it’s also what people everywhere have known and done for millenia, 
