@@ -163,6 +163,9 @@ const NamedDefault = ({ data }) => (
       <a className={GlobalCSS.anchorOffset} id="media"></a>
       <Typography variant="h4">Media Appearances</Typography>
       <ul>
+        <li><a href="https://www.youtube.com/watch?v=gVx8mAzcMDA">How to Handle 
+        Anything</a> w/ <a href="https://lifeitself.org/blog/how-to-handle-anything-in-life-and-community">Life 
+        Itself</a> 2023-11-23</li>
         <li><a href="https://www.youtube.com/watch?v=xaieyI-4TPo">Intentional Society @ The
           Stoa</a> 2022-02-28</li>
         <li><a href="https://www.youtube.com/watch?v=XWYgyjX3lZE">Reach 
