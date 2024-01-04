@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Layout from "../components/layout"
 import CenteredColumn from "../components/centered-column"
 import IsHr from "../components/is-hr"
+import * as GlobalCSS from "../styles/global.module.css"
 
 const NamedDefault = ({ data }) => (
   <Layout>
