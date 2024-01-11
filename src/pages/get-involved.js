@@ -38,6 +38,7 @@ const NamedDefault = ({ data }) => (
       <p><BlurbMemberOrientation /></p>
 
       <Typography variant="h3">Information streams</Typography>
+      <p> </p>
 
       <a className={GlobalCSS.anchorOffset} id="newsletter"></a>
       <Typography variant="h4">Weekly Updates Newsletter</Typography>

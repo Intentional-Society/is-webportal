@@ -30,7 +30,7 @@ const NamedDefault = ({ data }) => <>
       It's a future society that better supports the thriving of humans and humanity.</p>
       <IsHr />
       <a className={GlobalCSS.anchorOffset} id="practice-program"></a>
-      <Typography variant="h4">Practice Program Q1 2024</Typography>
+      <Typography variant="h4">Practice Series Q1 2024</Typography>
 
       <p>Liberation. Joy. Meaning. Adaptability. Equanimity.  
         Not from logic, nor from magic, but freely available through 
