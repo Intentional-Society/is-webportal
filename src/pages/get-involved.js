@@ -27,12 +27,12 @@ const NamedDefault = ({ data }) => (
         about the Practice Series and Intentional Society, 
         and explore your questions and curiosities.</p>
 
-      <p><BlurbInformational />Bring your video camera (phone is okay), microphone, and 
+      <p><BlurbInformational /> Bring your video camera (phone is okay), microphone, and 
         any <Link to="/questions">questions</Link> you might have.</p>
 
       <Typography variant="h4">Member Orientation Calls</Typography>
       <p>Want to get involved in more than the Practice Series? 
-        Come to this to learn about membership and about the activities inside the IS member community. 
+        Come to this to learn about membership and the activities inside the IS member community. 
         Membership is free - it's about seeing, trusting, and building relationships with each other over time.
         You may fill out the membership form (TODO: link) ahead-of-time. </p>
       <p><BlurbMemberOrientation /></p>
