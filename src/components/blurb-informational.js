@@ -3,7 +3,7 @@ import React from "react"
 const NamedDefault = ({ data }) => <>
   <a href="">
   Click here to register</a> for our next informational video call 
-  on &lt;currenlty unscheduled&gt;.
+  on &lt;currently unscheduled&gt;.
 </>
 export default NamedDefault;
 
