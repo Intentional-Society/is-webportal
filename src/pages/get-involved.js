@@ -22,9 +22,9 @@ const NamedDefault = ({ data }) => (
 
       <Typography variant="h4">Informational Calls</Typography>
       <p>Want to learn <i>about</i> Intentional Society, beyond trying out 
-        a practice session? This call is a friendly, casual, low-pressure 
+        a practice session? This call is a casual, optional 
         introduction. We'll introduce ourselves, share some descriptive details 
-        about the Practice Program and Intentional Society, 
+        about the Practice Series and Intentional Society, 
         and explore your questions and curiosities.</p>
 
       <p><BlurbInformational />Bring your video camera (phone is okay), microphone, and 
