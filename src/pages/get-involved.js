@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import CenteredColumn from "../components/centered-column"
 import ButtondownSignup from "../components/buttondownsignup"
 import BlurbInformational from "../components/blurb-informational"
+import BlurbMemberOrientation from "../components/blurb-memberorientation"
 import BlurbPractice from "../components/blurb-practice"
 import * as GlobalCSS from "../styles/global.module.css"
 
@@ -32,8 +33,9 @@ const NamedDefault = ({ data }) => (
       <Typography variant="h4">Member Orientation Calls</Typography>
       <p>Want to get involved in more than the Practice Series? 
         Come to this to learn about membership and about the activities inside the IS member community. 
-        Membership is free - it's about seeing, trusting, and building relationships each other over time.
-        You can fill out the membership form (TODO: link) ahead-of-time. </p>
+        Membership is free - it's about seeing, trusting, and building relationships with each other over time.
+        You may fill out the membership form (TODO: link) ahead-of-time. </p>
+      <p><BlurbMemberOrientation /></p>
 
       <Typography variant="h3">Information streams</Typography>
 
