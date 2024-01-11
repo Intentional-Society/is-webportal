@@ -1,5 +1,3 @@
-<h1 align="center">
-  www.intentionalsociety.org
-</h1>
+<h1 align="center">is-webportal</h1>
 
-TODO
+This repository deploys to <a href="https://www.intentionalsociety.org">www.intentionalsociety.org</a>.
