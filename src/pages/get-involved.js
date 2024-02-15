@@ -4,8 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Layout from "../components/layout"
 import CenteredColumn from "../components/centered-column"
 import ButtondownSignup from "../components/buttondownsignup"
-import BlurbInformational from "../components/blurb-informational"
-import BlurbMemberOrientation from "../components/blurb-memberorientation"
+import BlurbOfficeHours from "../components/blurb-officehours"
 import BlurbPractice from "../components/blurb-practice"
 import * as GlobalCSS from "../styles/global.module.css"
 
@@ -20,22 +19,14 @@ const NamedDefault = ({ data }) => (
       <p>If you'd like to try our relational practices, we recommend diving right in! 
         The practices differ week-by-week, and newcomers are welcome to join any session. <BlurbPractice /></p>
 
-      <Typography variant="h4">Informational Calls</Typography>
-      <p>Want to learn <i>about</i> Intentional Society, beyond trying out 
-        a practice session? This call is a casual, optional 
-        introduction. We'll introduce ourselves, share some descriptive details 
-        about the Practice Series and Intentional Society, 
-        and explore your questions and curiosities.</p>
+      <Typography variant="h4">Office Hours</Typography>
+      <p>Want to learn <i>about</i> Intentional Society, besides trying out 
+        a practice session? 
+        Want learn about membership and the activities inside the IS member community?
+        This call is a casual, flexible time to explore your questions and curiosities.</p>
 
-      <p><BlurbInformational /> Bring your video camera (phone is okay), microphone, and 
+      <p><BlurbOfficeHours /> Bring your video camera (phone is okay), microphone, and 
         any <Link to="/questions">questions</Link> you might have.</p>
-
-      <Typography variant="h4">Member Orientation Calls</Typography>
-      <p>Want to get involved in more than the Practice Series? 
-        Come to this to learn about membership and the activities inside the IS member community. 
-        Membership is free - it's about seeing, trusting, and building relationships with each other over time.
-        You may fill out the membership form (TODO: link) ahead-of-time. </p>
-      <p><BlurbMemberOrientation /></p>
 
       <Typography variant="h3">Information streams</Typography>
       <p> </p>
