@@ -40,7 +40,8 @@ const NamedDefault = ({ data }) => <>
         This season, we welcome six guest teachers to guide us in
         exploring new-to-us awareness, relating, and embodiment tools.</p>
 
-      <p>The Exploratory Practice Series meets on the 2nd and 4th Saturdays of April, May, and June.<br />
+      <p>The Exploratory Practice Series meets on the 2nd and 4th Saturdays of April, May, and June. 
+        All sessions start at 1pm Pacific Time (4pm Eastern, 8pm UTC), and usually last for 90 minutes.<br />
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScft8sEI3FuL-faqRU7w8Hp5gTrj0zePg6-bhKJM_gwXaVqVg/viewform">Sign 
         up for access here.</a></p>
 
@@ -60,28 +61,30 @@ const NamedDefault = ({ data }) => <>
       <p>C is for core, commons, communitas, collective, communion, culture — whatever it's called, 
         this is a space of relationship-building, belonging, acceptance, play, and exploration. 
         It is emergent, messy, and full of laughter and tenderness. We will once again 
-        be meeting consistently on Sundays: a clear consistent heartbeat of connection. Yes, we 
-        do practices here also, utilizing a living-room vibe of trust and safety to go deeper than the 
-        average Practice Dojo experience. We also do other events and small groups with a leaderful
-        collective playground spirit of open space leadership.</p>
+        be meeting weekly on <b>Sundays</b> (also starting 1pm Pacific): a clear consistent heartbeat 
+        of connection. Yes, we do practices here also, utilizing a living-room vibe of trust and 
+        safety to go deeper than the average Practice Dojo experience. Members also lead a variety of 
+        events and small in this leader-ful open-space playground collective.</p>
       
       <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSebSp8vQsfRINQhHGw83Z-AEL3CtDtdcB5Edyc4kdCAq03XEg/viewform">Read 
         more and apply here.</a> Membership is free (always has been), and the 
         light application-and-agreements membrane that defines membership exists to let us 
-        create openness and safety in our private cozyweb and manage our private data sharing.</p>
+        create openness and safety in our private cozyweb and manage our private data sharing. If you 
+        haven't been to at least one Practice Dojo session previously, please plan to attend 
+        an <Link to="/get-involved#office-hours">Office Hours</Link> call for orientation purposes.</p>
 
       <Typography variant="h4">Intentional Ventures</Typography>
-      <p>We intend to grow a thriving economic ecosystem that supports our material security,
+      <p>New! We intend to grow a thriving economic ecosystem that supports our material security,
         in ways that align with our values and purposes, leveraging a crucial foundation 
-        of professional, relational, and developmental skills.</p>
-
-      <p>Intentional Ventures is in early-stage formation with a founding team. Come 
-        inquire at <Link to="/get-involved#office-hours">Office Hours</Link> if you're curious.
+        of professional, relational, and developmental skills. Intentional Ventures is in 
+        early-stage formation with an invite-only founding team. Inquire
+        at <Link to="/get-involved#office-hours">Office Hours</Link> if you're curious.
       </p>
 
       <StaticImage src="../../static/images/s14-3spaces.png"
         alt="diagram of three parts labeled Practice Dojo, Core, and Ventures" loading="eager"/>
 
+      <br />
       <IsHr />
       <p>Since Jan 2021 we've been exploring and relating together weekly, 
         with <Link to="/history">more than 150 sessions</Link> under our belts.</p>
