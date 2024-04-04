@@ -32,26 +32,43 @@ const NamedDefault = ({ data }) => <>
       <a className={GlobalCSS.anchorOffset} id="s14"></a>
       <Typography variant="h3">Season 14 Update</Typography>
 
-      Our 14th quarterly/seasonal cycle runs April through June 2024.
+      <p>Our 14th quarterly/seasonal cycle runs April through June 2024.</p>
+
       <Typography variant="h4">Practice Dojo: Exploratory Practice Series</Typography>
       <p>With open front doors, the Practice Dojo welcomes novices and experts alike 
         to train in the varied arts of relational-developmental practices.
-        This season, we welcome six expert guest teachers to guide new-to-us 
-        explorations of awareness, relating, and embodiment tools.</p>
+        This season, we welcome six guest teachers to guide us in
+        exploring new-to-us awareness, relating, and embodiment tools.</p>
 
       <p>The Exploratory Practice Series meets on the 2nd and 4th Saturdays of April, May, and June.<br />
-        Specific dates: April 13, April 27, May 11, May 25, June 8, June 22<br />
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScft8sEI3FuL-faqRU7w8Hp5gTrj0zePg6-bhKJM_gwXaVqVg/viewform?usp=sf_link">Sign 
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScft8sEI3FuL-faqRU7w8Hp5gTrj0zePg6-bhKJM_gwXaVqVg/viewform">Sign 
         up for access here.</a></p>
 
-      <Typography variant="h4">Core Collective</Typography>
-      <p>Commons, community, communitas, communion, culture, core collective - something 
-        that starts with C!
+      <p>
+        The topic lineup is: 
+        <ul>
+          <li>April 13 — TBD</li>
+          <li>April 27 — TBD</li>
+          <li>May 11 — TBD</li>
+          <li>May 25 — TBD</li>
+          <li>June 8 — TBD</li>
+          <li>June 22 — TBD</li>
+        </ul>
       </p>
-      <p>This is a space of relationship, belonging, acceptance, play, and exploration. 
-        It is emergent, messy, and full of laughter and tenderness. The weekly meetings 
-        are once again consistent on Sundays, with smaller activities at various 
-        times. Read more and apply here.</p>
+
+      <Typography variant="h4">Core Collective</Typography>
+      <p>C is for core, commons, communitas, collective, communion, culture — whatever it's called, 
+        this is a space of relationship-building, belonging, acceptance, play, and exploration. 
+        It is emergent, messy, and full of laughter and tenderness. We will once again 
+        be meeting consistently on Sundays: a clear consistent heartbeat of connection. Yes, we 
+        do practices here also, utilizing a living-room vibe of trust and safety to go deeper than the 
+        average Practice Dojo experience. We also do other events and small groups with a leaderful
+        collective playground spirit of open space leadership.</p>
+      
+      <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSebSp8vQsfRINQhHGw83Z-AEL3CtDtdcB5Edyc4kdCAq03XEg/viewform">Read 
+        more and apply here.</a> Membership is free (always has been), and the 
+        light application-and-agreements membrane that defines membership exists to let us 
+        create openness and safety in our private cozyweb and manage our private data sharing.</p>
 
       <Typography variant="h4">Intentional Ventures</Typography>
       <p>We intend to grow a thriving economic ecosystem that supports our material security,
@@ -66,7 +83,7 @@ const NamedDefault = ({ data }) => <>
         alt="diagram of three parts labeled Practice Dojo, Core, and Ventures" loading="eager"/>
 
       <IsHr />
-      <p>Since Jan 2021, we've been exploring and relating together weekly for three years now, 
+      <p>Since Jan 2021 we've been exploring and relating together weekly, 
         with <Link to="/history">more than 150 sessions</Link> under our belts.</p>
       <p>
         You can read more about <Link to="/who-we-are">who we 
