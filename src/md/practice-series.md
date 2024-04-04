@@ -1,4 +1,13 @@
-## the IS Practice Series
+## The IS (developmental/core) Practice Series
+
+### Introduction January 2024
+Liberation. Joy. Meaning. Adaptability. Equanimity.  
+Not from logic, nor from magic, but freely available through interactive, relational, practical experience...
+
+For the first time, Intentional Society has assembled its best practices into a publicly-accessible 9-week program designed to support post-conventional personal development. In plain words, we're building a bridge to "being who we want to be" beyond what society typically offers us. With nine practices in nine weeks, each week utilizes a different relational practice, from the well-known (IFS, Circling, Case Clinic) to the home-grown, assembled over hundreds of hours of participatory research across the last three years.
+
+No membership commitment required — if you resonate with this invitation, you may attend any and all weeks. Sessions will occur the first three weeks of each of January (7/14/21st), February (4/11/18th), and March (3/10/17th) 2024, all starting 1pm Sunday Pacific Time and 90 minutes in length.
+
 
 TODO content documenting Practice Series
 

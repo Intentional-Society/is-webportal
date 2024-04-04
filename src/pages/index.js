@@ -29,32 +29,45 @@ const NamedDefault = ({ data }) => <>
       It's a living probe into stabilizing and spreading self-transforming collective culture.<br/>
       It's a future society that better supports the thriving of humans and humanity.</p>
       <IsHr />
-      <a className={GlobalCSS.anchorOffset} id="practice-program"></a>
-      <Typography variant="h4">Practice Series Q1 2024</Typography>
+      <a className={GlobalCSS.anchorOffset} id="s14"></a>
+      <Typography variant="h3">Season 14 Update</Typography>
 
-      <p>Liberation. Joy. Meaning. Adaptability. Equanimity.  
-        Not from logic, nor from magic, but freely available through 
-        interactive, relational, practical experience...</p>
+      Our 14th quarterly/seasonal cycle runs April through June 2024.
+      <Typography variant="h4">Practice Dojo: Exploratory Practice Series</Typography>
+      <p>With open front doors, the Practice Dojo welcomes novices and experts alike 
+        to train in the varied arts of relational-developmental practices.
+        This season, we welcome six expert guest teachers to guide new-to-us 
+        explorations of awareness, relating, and embodiment tools.</p>
 
-      <p>For the first time, Intentional Society has assembled its best practices
-        into a publicly-accessible 9-week program designed to support post-conventional personal development.
-        In plain words, we're building a bridge to "being who we want to be" 
-        beyond what society typically offers us. 
-        With nine practices in nine weeks, each week utilizes a different relational practice, 
-        from the well-known (IFS, Circling, Case Clinic) to the home-grown, assembled over 
-        hundreds of hours of participatory research across the last three years.
+      <p>The Exploratory Practice Series meets on the 2nd and 4th Saturdays of April, May, and June.<br />
+        Specific dates: April 13, April 27, May 11, May 25, June 8, June 22<br />
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScft8sEI3FuL-faqRU7w8Hp5gTrj0zePg6-bhKJM_gwXaVqVg/viewform?usp=sf_link">Sign 
+        up for access here.</a></p>
+
+      <Typography variant="h4">Core Collective</Typography>
+      <p>Commons, community, communitas, communion, culture, core collective - something 
+        that starts with C!
+      </p>
+      <p>This is a space of relationship, belonging, acceptance, play, and exploration. 
+        It is emergent, messy, and full of laughter and tenderness. The weekly meetings 
+        are once again consistent on Sundays, with smaller activities at various 
+        times. Read more and apply here.</p>
+
+      <Typography variant="h4">Intentional Ventures</Typography>
+      <p>We intend to grow a thriving economic ecosystem that supports our material security,
+        in ways that align with our values and purposes, leveraging a crucial foundation 
+        of professional, relational, and developmental skills.</p>
+
+      <p>Intentional Ventures is in early-stage formation with a founding team. Come 
+        inquire at <Link to="/get-involved#office-hours">Office Hours</Link> if you're curious.
       </p>
 
-      <p>No membership commitment required — if you resonate with this invitation, you may attend any 
-        and all weeks. Sessions will occur the first three weeks of each of 
-        January (7/14/21st), February (4/11/18th), and March (3/10/17th) 2024, 
-        all starting 1pm Sunday Pacific Time and 90 minutes in length.
-      </p>
-      <BlurbPractice />
+      <StaticImage src="../../static/images/s14-3spaces.png"
+        alt="diagram of three parts labeled Practice Dojo, Core, and Ventures" loading="eager"/>
 
       <IsHr />
-      <p>We've been exploring and relating together for three years now, 
-        with <Link to="/history">more than 140 weekly sessions</Link> under our belts.</p>
+      <p>Since Jan 2021, we've been exploring and relating together weekly for three years now, 
+        with <Link to="/history">more than 150 sessions</Link> under our belts.</p>
       <p>
         You can read more about <Link to="/who-we-are">who we 
         are</Link> and <Link to="/what-we-do">what we do</Link>, and find a few 

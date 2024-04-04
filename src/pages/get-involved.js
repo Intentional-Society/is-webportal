@@ -15,10 +15,11 @@ const NamedDefault = ({ data }) => (
       <Typography variant="h3">Open events</Typography>
       <p> </p>
       
-      <Typography variant="h4">Practice Series</Typography>
+      <Typography variant="h4">Practice Dojo</Typography>
       <p>If you'd like to try our relational practices, we recommend diving right in! 
         The practices differ week-by-week, and newcomers are welcome to join any session. <BlurbPractice /></p>
 
+      <a className={GlobalCSS.anchorOffset} id="office-hours"></a>
       <Typography variant="h4">Office Hours</Typography>
       <p>Want to learn <i>about</i> Intentional Society, besides trying out 
         a practice session? 
