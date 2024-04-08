@@ -46,14 +46,14 @@ const NamedDefault = ({ data }) => <>
         up for access here.</a></p>
 
       <p>
-        The topic lineup is: 
+        The practice/topic lineup is: 
         <ul>
-          <li>April 13 — TBD</li>
-          <li>April 27 — TBD</li>
-          <li>May 11 — TBD</li>
-          <li>May 25 — TBD</li>
-          <li>June 8 — TBD</li>
-          <li>June 22 — TBD</li>
+          <li>April 13 — <b>Growth as Object</b> with James Baker</li>
+          <li>April 27 — <b>Dialogos</b> with Romeck van Zeijl</li>
+          <li>May 11 — <b>Alexander Technique</b> with Michael Ashcroft</li>
+          <li>May 25 — <b>Feldenkrais Method - Awareness through Movement</b> with Seth Dellinger</li>
+          <li>June 8 — <b>Metta Meditation</b> with Tasshin Fogleman</li>
+          <li>June 22 — <b>Gendlin Focusing</b> with Jessica Fan</li>
         </ul>
       </p>
 
