@@ -52,7 +52,7 @@ const NamedDefault = ({ data }) => <>
           <li>April 27 — <b>Dia-Logos</b> with Romeck van Zeijl (2 hours)</li>
           <li>May 11 — <b>Alexander Technique</b> with Michael Ashcroft</li>
           <li>May 25 — <b>Feldenkrais Method - Awareness through Movement</b> with Seth Dellinger (2 hours)</li>
-          <li>June 8 — <b>Metta Meditation</b> with Tasshin Fogleman</li>
+          <li>June 8 — <b>Mettā Meditation</b> with Tasshin Fogleman</li>
           <li>June 22 — <b>Gendlin Focusing</b> with Jessica Fan</li>
         </ul>
       </p>
