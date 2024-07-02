@@ -7,7 +7,7 @@ const NamedDefault = ({ data }) => (
   <Layout>
     <div style={{ height: "10vh" }}></div>
     <CenteredColumn>
-      <div dangerouslySetInnerHTML={{__html: data.thecall.childMarkdownRemark.html}}></div>
+      <div dangerouslySetInnerHTML={{__html: data.mdfile.childMarkdownRemark.html}}></div>
       <div style={{ marginTop: "100px"}}>Published March 2024.</div>
       <p><Link to="/">Back to home page</Link>
       </p>
@@ -18,7 +18,7 @@ export default NamedDefault;
 
 export const query = graphql`
   query {
-    thecall: file(relativePath: { eq: "md/practice-series.md" }) {
+    mdfile: file(relativePath: { eq: "md/practice-series.md" }) {
       childMarkdownRemark {
         html
       }
