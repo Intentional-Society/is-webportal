@@ -30,41 +30,12 @@ const NamedDefault = ({ data }) => <>
       It's a future society that better supports the thriving of humans and humanity.</p>
       <IsHr />
       <a className={GlobalCSS.anchorOffset} id="s14"></a>
-      <Typography variant="h3">Season 14 Update</Typography>
+      <Typography variant="h3">Season 15 Status</Typography>
 
-      <p>Our 14th quarterly/seasonal cycle runs April through June 2024.</p>
+      <p>Our 15th seasonal/quarterly cycle runs July through September 2024.</p>
 
-      <Typography variant="h4">Practice Dojo: Exploratory Practice Series</Typography>
-      <p>With open front doors, the Practice Dojo welcomes novices and experts alike 
-        to train in the varied arts of relational-developmental practices.
-        This season, we welcome six guest teachers to guide us in
-        exploring new-to-us awareness, relating, and embodiment tools.</p>
-
-      <p>The Exploratory Practice Series meets on the 2nd and 4th Saturdays of April, May, and June. 
-        All sessions start at 1pm Pacific Time (4pm Eastern, 8pm UTC), and usually last for 90 minutes.<br />
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScft8sEI3FuL-faqRU7w8Hp5gTrj0zePg6-bhKJM_gwXaVqVg/viewform">Sign 
-        up for access here.</a></p>
-
-      <p>
-        The practice/topic lineup is: 
-        <ul>
-          <li>April 13 — <b>Growth as Object</b> with James Baker</li>
-          <li>April 27 — <b>Dia-Logos</b> with Romeck van Zeijl (2 hours)</li>
-          <li>May 11 — <b>Alexander Technique</b> with Michael Ashcroft</li>
-          <li>May 25 — <b>Feldenkrais Method - Awareness through Movement</b> with Seth Dellinger (2 hours)</li>
-          <li>June 8 — <b>Mettā Meditation</b> with Tasshin Fogleman</li>
-          <li>June 22 — <b>Gendlin Focusing</b> with Jessica Fan</li>
-        </ul>
-      </p>
-
-      <Typography variant="h4">Core Collective</Typography>
-      <p>C is for core, commons, communitas, collective, communion, culture — whatever it's called, 
-        this is a space of relationship-building, belonging, acceptance, play, and exploration. 
-        It is emergent, messy, and full of laughter and tenderness. We will once again 
-        be meeting weekly on <b>Sundays</b> (also starting 1pm Pacific): a clear consistent heartbeat 
-        of connection. Yes, we do practices here also, utilizing a living-room vibe of trust and 
-        safety to go deeper than the average Practice Dojo experience. Members also lead a variety of 
-        events and small in this leader-ful open-space playground collective.</p>
+      <Typography variant="h4">Core Community</Typography>
+      <p>Meets on Sundays. Season starts July 7th.</p>
       
       <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSebSp8vQsfRINQhHGw83Z-AEL3CtDtdcB5Edyc4kdCAq03XEg/viewform">Read 
         more and apply here.</a> Membership is free (always has been), and the 
@@ -72,14 +43,6 @@ const NamedDefault = ({ data }) => <>
         create openness and safety in our private cozyweb and manage our private data sharing. If you 
         haven't been to at least one Practice Dojo session previously, please plan to attend 
         an <Link to="/get-involved#office-hours">Office Hours</Link> call for orientation purposes.</p>
-
-      <Typography variant="h4">Intentional Ventures</Typography>
-      <p>New! We intend to grow a thriving economic ecosystem that supports our material security,
-        in ways that align with our values and purposes, leveraging a crucial foundation 
-        of professional, relational, and developmental skills. Intentional Ventures is in 
-        early-stage formation with an invite-only founding team. Inquire
-        at <Link to="/get-involved#office-hours">Office Hours</Link> if you're curious.
-      </p>
 
       <StaticImage src="../../static/images/s14-3spaces.png"
         alt="diagram of three parts labeled Practice Dojo, Core, and Ventures" loading="eager"/>
