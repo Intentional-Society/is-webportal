@@ -30,12 +30,21 @@ const NamedDefault = ({ data }) => <>
       It's a future society that better supports the thriving of humans and humanity.</p>
       <IsHr />
       <a className={GlobalCSS.anchorOffset} id="s14"></a>
-      <Typography variant="h3">Season 15 Status</Typography>
+      <Typography variant="h3">What's Happening Now</Typography>
 
       <p>Our 15th seasonal/quarterly cycle runs July through September 2024.</p>
 
-      <Typography variant="h4">Core Community</Typography>
-      <p>Meets on Sundays. Season starts July 7th.</p>
+      <Typography variant="h4">Practice Dojo — Connection Lab</Typography>
+      <p>Meets on Saturdays. Dates: <b>July 27th, August 17th, September 7th</b></p>
+      <p>We'll be using a "Connection Lab" theme to meet each other, 
+        human to human, and fine-tune our toolkit of practices for making connections and 
+        bridging differences. The goal is that you'll be able to add these to *your* toolkit 
+        of intentional relating, becoming more easily able to connect with anyone you choose to.</p>
+
+      <BlurbPractice></BlurbPractice>
+
+      <Typography variant="h4">Core Community Season 15</Typography>
+      <p>Meets on Sundays. Season started July 7th, and remains open to new entrants.</p>
       
       <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSebSp8vQsfRINQhHGw83Z-AEL3CtDtdcB5Edyc4kdCAq03XEg/viewform">Read 
         more and apply here.</a> Membership is free (always has been), and the 
@@ -43,9 +52,6 @@ const NamedDefault = ({ data }) => <>
         create openness and safety in our private cozyweb and manage our private data sharing. If you 
         haven't been to at least one Practice Dojo session previously, please plan to attend 
         an <Link to="/get-involved#office-hours">Office Hours</Link> call for orientation purposes.</p>
-
-      <StaticImage src="../../static/images/s14-3spaces.png"
-        alt="diagram of three parts labeled Practice Dojo, Core, and Ventures" loading="eager"/>
 
       <br />
       <IsHr />
