@@ -35,13 +35,17 @@ const NamedDefault = ({ data }) => <>
       <p>Our 15th seasonal/quarterly cycle runs July through September 2024.</p>
 
       <Typography variant="h4">Practice Dojo — Connection Lab</Typography>
-      <p>Meets on Saturdays. Dates: <b>July 27th, August 17th, September 7th</b></p>
-      <p>We'll be using a "Connection Lab" theme to meet each other, 
-        human to human, and fine-tune our toolkit of practices for making connections and 
-        bridging differences. The goal is that you'll be able to add these to *your* toolkit 
-        of intentional relating, becoming more easily able to connect with anyone you choose to.</p>
+      <p>Meets on Saturdays. Click a date to register and receive that call invitation: </p>
+      <Typography variant="h5"><a href="https://us02web.zoom.us/meeting/register/tZMkdOiuqjwsGde0BujmYnnSP48Lcqsg-RaK">July 27th</a></Typography>
+      <Typography variant="h5"><a href="https://us02web.zoom.us/meeting/register/tZMlfu2gqTsvE927JglIZKGqfJAZZORI_IBa">August 17th</a></Typography>
+      <Typography variant="h5"><a href="https://us02web.zoom.us/meeting/register/tZEvc-2qrDoqHNAFva8GMK_UTfaMrItyBsfB">September 7th</a></Typography>
 
-      <BlurbPractice></BlurbPractice>
+      <p>In the Connection Lab sessions we will practice making contact with each other, human to human, and 
+        refine our toolkit of practices for making connections and bridging differences. Success means that 
+        you'll be able to add these to *your* relational toolkit, becoming more easily able to connect 
+        with anyone you choose to.</p>
+
+      <p><BlurbPractice /></p>
 
       <Typography variant="h4">Core Community Season 15</Typography>
       <p>Meets on Sundays. Season started July 7th, and remains open to new entrants.</p>
