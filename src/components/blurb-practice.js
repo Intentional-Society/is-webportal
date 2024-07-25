@@ -8,7 +8,6 @@ const NamedDefault = ({ data }) => <>
   here to register and receive the meeting link.</a>
   <br /><br />
   You can also register for 
-  the <a href="https://us02web.zoom.us/meeting/register/tZMlfu2gqTsvE927JglIZKGqfJAZZORI_IBa">August 17th</a> and 
-  <a href="https://us02web.zoom.us/meeting/register/tZEvc-2qrDoqHNAFva8GMK_UTfaMrItyBsfB">September 7th</a> sessions.
+  the <a href="https://us02web.zoom.us/meeting/register/tZMlfu2gqTsvE927JglIZKGqfJAZZORI_IBa">August 17th</a> and <a href="https://us02web.zoom.us/meeting/register/tZEvc-2qrDoqHNAFva8GMK_UTfaMrItyBsfB">September 7th</a> sessions.
 </>
 export default NamedDefault;
