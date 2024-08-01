@@ -36,7 +36,7 @@ const NamedDefault = ({ data }) => <>
 
       <Typography variant="h4">Practice Dojo — Connection Lab</Typography>
       <p>Meets on Saturdays. Click a date to register and receive that call invitation: </p>
-      <Typography variant="h5"><a href="https://us02web.zoom.us/meeting/register/tZMkdOiuqjwsGde0BujmYnnSP48Lcqsg-RaK">July 27th</a></Typography>
+      <Typography variant="h5">July 27th</Typography>
       <Typography variant="h5"><a href="https://us02web.zoom.us/meeting/register/tZMlfu2gqTsvE927JglIZKGqfJAZZORI_IBa">August 17th</a></Typography>
       <Typography variant="h5"><a href="https://us02web.zoom.us/meeting/register/tZEvc-2qrDoqHNAFva8GMK_UTfaMrItyBsfB">September 7th</a></Typography>
 
