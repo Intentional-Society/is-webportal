@@ -35,12 +35,12 @@ const NamedDefault = ({ data }) => <>
       <p>Our 15th seasonal/quarterly cycle runs July through September 2024.</p>
 
       <Typography variant="h4">Practice Dojo — Connection Lab</Typography>
-      <p>Meets on Saturdays. Click a date to register and receive that call invitation: </p>
+      <p>Meets on Saturdays. Connectino Lab calls have now completed for the season. </p>
       <Typography variant="h5">July 27th</Typography>
-      <Typography variant="h5"><a href="https://us02web.zoom.us/meeting/register/tZMlfu2gqTsvE927JglIZKGqfJAZZORI_IBa">August 17th</a></Typography>
-      <Typography variant="h5"><a href="https://us02web.zoom.us/meeting/register/tZEvc-2qrDoqHNAFva8GMK_UTfaMrItyBsfB">September 7th</a></Typography>
+      <Typography variant="h5">August 17th</Typography>
+      <Typography variant="h5">September 7th</Typography>
 
-      <p>In the Connection Lab sessions we will practice making contact with each other, human to human, and 
+      <p>In the Connection Lab sessions we practice making contact with each other, human to human, and 
         refine our toolkit of practices for making connections and bridging differences. Success means that 
         you'll be able to add these to *your* relational toolkit, becoming more easily able to connect 
         with anyone you choose to.</p>
