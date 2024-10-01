@@ -16,9 +16,9 @@ const NamedDefault = ({ data }) => <>
                 imgStyle={{objectFit: "fill"}}/>
     <div style={{  minWidth: "350px", maxWidth: "400px", width: "fit-content", margin: "0 auto" }}>
       <Typography variant="h5" style={{ color: "#FFFFFF"}}>
-        <p style={{marginLeft:"1vw"}}>grow your better self</p>
-        <p style={{marginLeft:"4vw"}}>awareness, acceptance, integrity</p>
-        <p style={{marginLeft:"-1vw"}}>grow our next culture</p>
+        <p style={{marginLeft:"1vw"}}>become your best self,</p>
+        <p style={{marginLeft:"4vw"}}>awareness acceptance integrity</p>
+        <p style={{marginLeft:"-1vw"}}>cultivate next-level culture,</p>
         <p style={{marginLeft:"2vw"}}>thriving humans and humanity</p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
       </Typography>
     </div>
@@ -30,32 +30,41 @@ const NamedDefault = ({ data }) => <>
       It's a future society that better supports the thriving of humans and humanity.</p>
       <IsHr />
       <a className={GlobalCSS.anchorOffset} id="s14"></a>
-      <Typography variant="h3">What's Happening Now</Typography>
+      <Typography variant="h3">Season 16 — Q4 2024</Typography>
 
-      <p>Our 15th seasonal/quarterly cycle runs July through September 2024.</p>
+      <p>Our 16<sup>th</sup> seasonal cycle runs October through December 2024.</p>
 
-      <Typography variant="h4">Practice Dojo — Connection Lab</Typography>
-      <p>Meets on Saturdays. Connectino Lab calls have now completed for the season. </p>
-      <Typography variant="h5">July 27th</Typography>
-      <Typography variant="h5">August 17th</Typography>
-      <Typography variant="h5">September 7th</Typography>
-
-      <p>In the Connection Lab sessions we practice making contact with each other, human to human, and 
-        refine our toolkit of practices for making connections and bridging differences. Success means that 
-        you'll be able to add these to *your* relational toolkit, becoming more easily able to connect 
-        with anyone you choose to.</p>
+      <Typography variant="h4">Practice Dojo</Typography>
+      <p>Our public offering this season is entitled "Being with it all".</p>
+      <Typography variant="h5">October 19th</Typography>
+      <Typography variant="h5">November 2nd</Typography>
+      <Typography variant="h5">November 16th</Typography>
+      <Typography variant="h5">November 30th</Typography>
+      <Typography variant="h5">December 14th</Typography>
 
       <p><BlurbPractice /></p>
 
-      <Typography variant="h4">Core Community Season 15</Typography>
-      <p>Meets on Sundays. Season started July 7th, and remains open to new entrants.</p>
+      <Typography variant="h4">IS Community</Typography>
+      <p>Community members gather on Sundays for weekly calls, and/or support one another in relational "pods", 
+        while forming and deepening relationships with other community members. We play together in a relational 
+        sandbox of practices, explorations, creativity, and leadership development as we cultivate the kind of 
+        collective culture that supports us in our "being who we want to be" into the whole of our lives.</p>
       
       <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSebSp8vQsfRINQhHGw83Z-AEL3CtDtdcB5Edyc4kdCAq03XEg/viewform">Read 
         more and apply here.</a> Membership is free (always has been), and the 
         light application-and-agreements membrane that defines membership exists to let us 
-        create openness and safety in our private cozyweb and manage our private data sharing. If you 
-        haven't been to at least one Practice Dojo session previously, please plan to attend 
-        an <Link to="/get-involved#office-hours">Office Hours</Link> call for orientation purposes.</p>
+        create openness and safety in our private cozyweb and manage our private data sharing. 
+        You're invited to attend an <Link to="/get-involved#office-hours">Office Hours</Link> call 
+        for orientation purposes, yet if you've been to at least one Practice Dojo session previously, y
+        ou probably have enough of the vibe to dive in if you prefer.</p>
+
+      <Typography variant="h4">Intentional Ventures</Typography>
+
+      <p>We unlock successful economics for meaningful livelihoods through relational supports.</p>
+
+      <p>After two quarters in incubation with the founding team of 10, IV has established 
+        key structures and principles, and intends to invite new members from the waitlist in Q4. 
+        To be added to the waitlist, come chat about it at <Link to="/get-involved#office-hours">Office Hours</Link>.</p>
 
       <br />
       <IsHr />
