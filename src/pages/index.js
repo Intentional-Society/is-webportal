@@ -23,18 +23,30 @@ const NamedDefault = ({ data }) => <>
       </Typography>
     </div>
     <div style={{margin: "-9vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
+      <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "600px", padding: "0"}}>
+        <p>We are Those who together are becoming
+          the people we want to be
+          and doing what we value
+          in growing integrity relating to 
+          each other, ourselves, and the world</p>
+      </div>
+          
       <p>Intentional Society is made of people, practices, and culture held  
-         in awareness and intention.<br/>
-      It's a place to grow and develop yourself in a warm, supportive community.<br/>
-      It's a living probe into stabilizing and spreading self-transforming collective culture.<br/>
-      It's a future society that better supports the thriving of humans and humanity.</p>
+         in awareness and intention. We are&hellip;<br/>
+      (I:) &hellip;a place to grow and develop yourself in a warm, supportive community.<br/>
+      (We:) &hellip;a living probe into stabilizing and spreading self-transforming collective culture.<br/>
+      (World:) &hellip;a future society that better supports the thriving of humans and humanity.</p>
+      
       <IsHr />
       <a className={GlobalCSS.anchorOffset} id="s14"></a>
-      <Typography variant="h3">Season 16 — Q4 2024</Typography>
+      <Typography variant="h3">Happening now: IS Season 16 (Q4 2024)</Typography>
 
-      <p>Our 16<sup>th</sup> seasonal cycle runs October through December 2024.</p>
+      <p>Our 16<sup>th</sup> seasonal/quarterly cycle runs October through December 2024. Intentional 
+        Society currently has three main spaces/places with varying levels of openness and commitment. 
+        Whoever and wherever you are, you are invited to draw closer in connection with the people 
+        and purposes of IS.</p>
 
-      <Typography variant="h4">Practice Dojo</Typography>
+      <Typography variant="h4">Practice Dojo (public offerings)</Typography>
       <p>Our public offering this season is entitled "Being with it all".</p>
       <Typography variant="h5">October 19th</Typography>
       <Typography variant="h5">November 2nd</Typography>
@@ -44,7 +56,7 @@ const NamedDefault = ({ data }) => <>
 
       <p><BlurbPractice /></p>
 
-      <Typography variant="h4">IS Community</Typography>
+      <Typography variant="h4">IS Community (members collective)</Typography>
       <p>Community members gather on Sundays for weekly calls, and/or support one another in relational "pods", 
         while forming and deepening relationships with other community members. We play together in a relational 
         sandbox of practices, explorations, creativity, and leadership development as we cultivate the kind of 
@@ -58,7 +70,7 @@ const NamedDefault = ({ data }) => <>
         for orientation purposes, yet if you've been to at least one Practice Dojo session previously, y
         ou probably have enough of the vibe to dive in if you prefer.</p>
 
-      <Typography variant="h4">Intentional Ventures</Typography>
+      <Typography variant="h4">Intentional Ventures (private experiment)</Typography>
 
       <p>We unlock successful economics for meaningful livelihoods through relational supports.</p>
 
