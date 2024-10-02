@@ -23,7 +23,7 @@ const NamedDefault = ({ data }) => <>
       </Typography>
     </div>
     <div style={{margin: "-9vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
-      <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "500px", padding: "0"}}>
+      <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "max-content", padding: "0"}}>
         <p>We are:<br/>
           Those who together are becoming<br/>
           the people we want to be<br/>
