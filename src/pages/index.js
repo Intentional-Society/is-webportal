@@ -23,11 +23,12 @@ const NamedDefault = ({ data }) => <>
       </Typography>
     </div>
     <div style={{margin: "-9vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
-      <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "600px", padding: "0"}}>
-        <p>We are Those who together are becoming
-          the people we want to be
-          and doing what we value
-          in growing integrity relating to 
+      <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "500px", padding: "0"}}>
+        <p>We are:<br/>
+          Those who together are becoming<br/>
+          the people we want to be<br/>
+          and doing what we value<br/>
+          in growing integrity relating to<br/>
           each other, ourselves, and the world</p>
       </div>
           
