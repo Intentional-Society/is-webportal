@@ -48,7 +48,11 @@ const NamedDefault = ({ data }) => <>
         and purposes of IS.</p>
 
       <Typography variant="h4">Practice Dojo (public offerings)</Typography>
+
+      <Typography variant="h5">Being With It All</Typography>
+
       <p>There's a lot going on in the world and in our lives! How do you want to be, when tough news surprises you?</p>
+
       <p>We can find choice and freedom in the space between stimulus and response. In this series, 
         we will practice a way-of-being that welcomes reality as it is without giving up our care or 
         agency. We'll face some challenging topics like war/violence, elections/politics, relationship 
@@ -57,7 +61,7 @@ const NamedDefault = ({ data }) => <>
         losing ourselves in the torrent of stimulus in modern life.</p>
 
       <p><a href="https://us02web.zoom.us/meeting/register/tZIvdOCtpj4qG9XxuaHMOq_7eGs_6dPCwhae">Register 
-        here</a> to receive the meeting link (and then remember to click "Add to Calendar") for any of these dates:</p>
+        here to receive the meeting link</a> (and then remember to click "Add to Calendar"!) for any of these dates:</p>
       <ul>
         <li>October 19th</li>
         <li>November 2nd</li>
@@ -70,6 +74,7 @@ const NamedDefault = ({ data }) => <>
       <p><BlurbPractice /></p>
 
       <Typography variant="h4">IS Community (members collective)</Typography>
+
       <p>Community members gather on Sundays for weekly calls, and/or support one another in relational "pods", 
         while forming and deepening relationships with other community members. We play together in a relational 
         sandbox of practices, explorations, creativity, and leadership development as we cultivate the kind of 
@@ -85,9 +90,9 @@ const NamedDefault = ({ data }) => <>
 
       <Typography variant="h4">Intentional Ventures (private experiment)</Typography>
 
-      <p>We unlock successful economics for meaningful livelihoods through relational supports.</p>
+      <p>We unlock successful economics for meaningful livelihoods through relational support.</p>
 
-      <p>After two quarters in incubation with the founding team of 10, IV has established 
+      <p>After two quarters in incubation with the founding team of ten, IV has established 
         key structures and principles, and intends to invite new members from the waitlist in Q4. 
         To be added to the waitlist, come chat about it at <Link to="/get-involved#office-hours">Office Hours</Link>.</p>
 
