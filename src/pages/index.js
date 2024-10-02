@@ -48,12 +48,24 @@ const NamedDefault = ({ data }) => <>
         and purposes of IS.</p>
 
       <Typography variant="h4">Practice Dojo (public offerings)</Typography>
-      <p>Our public offering this season is entitled "Being with it all".</p>
-      <Typography variant="h5">October 19th</Typography>
-      <Typography variant="h5">November 2nd</Typography>
-      <Typography variant="h5">November 16th</Typography>
-      <Typography variant="h5">November 30th</Typography>
-      <Typography variant="h5">December 14th</Typography>
+      <p>There's a lot going on in the world and in our lives! How do you want to be, when tough news surprises you?</p>
+      <p>We can find choice and freedom in the space between stimulus and response. In this series, 
+        we will practice a way-of-being that welcomes reality as it is without giving up our care or 
+        agency. We'll face some challenging topics like war/violence, elections/politics, relationship 
+        stress, etc and support each other in becoming better able to Be With It All - expanding our 
+        capacity to hold grief and gratitude, acceptance and desire, powerlessness and agency, without 
+        losing ourselves in the torrent of stimulus in modern life.</p>
+
+      <p><a href="https://us02web.zoom.us/meeting/register/tZIvdOCtpj4qG9XxuaHMOq_7eGs_6dPCwhae">Register 
+        here</a> to receive the meeting link (and then remember to click "Add to Calendar") for any of these dates:</p>
+      <ul>
+        <li>October 19th</li>
+        <li>November 2nd</li>
+        <li>November 16th</li>
+        <li>November 30th</li>
+        <li>December 14th</li>
+      </ul>
+      <p>All sessions are on Saturdays starting at 1pm Pacific for 90 minutes. </p>
 
       <p><BlurbPractice /></p>
 
