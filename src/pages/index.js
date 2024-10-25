@@ -61,9 +61,9 @@ const NamedDefault = ({ data }) => <>
         losing ourselves in the torrent of stimulus in modern life.</p>
 
       <p><a href="https://us02web.zoom.us/meeting/register/tZIvdOCtpj4qG9XxuaHMOq_7eGs_6dPCwhae">Register 
-        here to receive the meeting link</a> (and then remember to click "Add to Calendar"!) for any of these dates:</p>
+        here to receive the meeting link</a> (and then remember to click "Add to Calendar"!) for any/all of these dates:</p>
       <ul>
-        <li>October 19th</li>
+        <li><s>October 19th</s></li>
         <li>November 2nd</li>
         <li>November 16th</li>
         <li>November 30th</li>
