@@ -64,10 +64,10 @@ const NamedDefault = ({ data }) => <>
         here to receive the meeting link</a> (and then remember to click "Add to Calendar"!) for any/all of these dates:</p>
       <ul>
         <li><s>October 19th</s></li>
-        <li>November 2nd</li>
-        <li>November 16th</li>
-        <li>November 30th</li>
-        <li>December 14th</li>
+        <li><s>November 2nd</s></li>
+        <li><s>November 16th</s></li>
+        <li><s>November 30th</s></li>
+        <li>December 14th - final session!</li>
       </ul>
       <p>All sessions are on Saturdays starting at 1pm Pacific for 90 minutes. </p>
 
