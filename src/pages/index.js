@@ -60,14 +60,14 @@ const NamedDefault = ({ data }) => <>
         capacity to hold grief and gratitude, acceptance and desire, powerlessness and agency, without 
         losing ourselves in the torrent of stimulus in modern life.</p>
 
-      <p><a href="https://us02web.zoom.us/meeting/register/tZIvdOCtpj4qG9XxuaHMOq_7eGs_6dPCwhae">Register 
-        here to receive the meeting link</a> (and then remember to click "Add to Calendar"!) for any/all of these dates:</p>
+      <p>The series is now complete!</p>
+      
       <ul>
         <li><s>October 19th</s></li>
         <li><s>November 2nd</s></li>
         <li><s>November 16th</s></li>
         <li><s>November 30th</s></li>
-        <li>December 14th - final session!</li>
+        <li><s>December 14th</s></li>
       </ul>
       <p>All sessions are on Saturdays starting at 1pm Pacific for 90 minutes. </p>
 
