@@ -19,12 +19,12 @@ const NamedDefault = ({ data }) => (
       <p>If you'd like to try our relational practices, we recommend diving right in! 
         The practices differ week-by-week, and newcomers are welcome to join any session. <BlurbPractice /></p>
 
-      <a className={GlobalCSS.anchorOffset} id="office-hours"></a>
-      <Typography variant="h4">Office Hours</Typography>
-      <p>Want to learn <i>about</i> Intentional Society, besides trying out 
-        a practice session? 
-        Want learn about membership and the activities inside the IS member community?
-        This call is a casual, flexible time to explore your questions and curiosities.</p>
+      <a className={GlobalCSS.anchorOffset} id="connection-calls"></a>
+      <Typography variant="h4">Connection Calls</Typography>
+      <p>Want to learn about Intentional Society, its history, values, and core practices? 
+         Want to connect with one-or-more people of IS? This is a great entry point for new folks, 
+         and can also satisfy the personal-connection prerequisite for community membership. 
+         Open to all, new and familiar, with flexible agenda.</p>
 
       <p><BlurbOfficeHours /> Bring your video camera (phone is okay), microphone, and 
         any <Link to="/questions">questions</Link> you might have.</p>
