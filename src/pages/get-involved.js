@@ -17,7 +17,8 @@ const NamedDefault = ({ data }) => (
       
       <Typography variant="h4">Practice Dojo</Typography>
       <p>If you'd like to try our relational practices, we recommend diving right in! 
-        The practices differ week-by-week, and newcomers are welcome to join any session. <BlurbPractice /></p>
+        The practices differ week-by-week, and newcomers are welcome to join any session.</p>
+      <p><BlurbPractice /></p>
 
       <a className={GlobalCSS.anchorOffset} id="connection-calls"></a>
       <Typography variant="h4">Connection Calls</Typography>
