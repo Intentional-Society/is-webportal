@@ -14,15 +14,14 @@ const NamedDefault = ({ data }) => <>
                 style={{ height: "60vh", zIndex: -1, position: "absolute", 
                         top: "0px", left: "0px", right: "0px"}}
                 imgStyle={{objectFit: "fill"}}/>
-    <div style={{  minWidth: "350px", maxWidth: "400px", width: "fit-content", margin: "0 auto" }}>
+    <div style={{  minWidth: "350px", maxWidth: "400px", width: "fit-content", margin: "0 auto", height: "280px" }}>
       <Typography variant="h5" style={{ color: "#FFFFFF"}}>
         <p style={{marginLeft:"1vw"}}>being and becoming</p>
         <p style={{marginLeft:"4vw"}}>who we want to be</p>
         <p style={{marginLeft:"-1vw"}}>everything flows from there</p>
-        <p style={{marginLeft:"2vw"}}></p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
       </Typography>
     </div>
-    <div style={{margin: "-9vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
+    <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
       <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "max-content", padding: "0"}}>
         <p>We are:<br/>
           Those who together are becoming<br/>
