@@ -16,10 +16,10 @@ const NamedDefault = ({ data }) => <>
                 imgStyle={{objectFit: "fill"}}/>
     <div style={{  minWidth: "350px", maxWidth: "400px", width: "fit-content", margin: "0 auto" }}>
       <Typography variant="h5" style={{ color: "#FFFFFF"}}>
-        <p style={{marginLeft:"1vw"}}>become your best self,</p>
-        <p style={{marginLeft:"4vw"}}>awareness acceptance integrity</p>
-        <p style={{marginLeft:"-1vw"}}>cultivate next-level culture,</p>
-        <p style={{marginLeft:"2vw"}}>thriving humans and humanity</p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
+        <p style={{marginLeft:"1vw"}}>being and becoming</p>
+        <p style={{marginLeft:"4vw"}}>who we want to be</p>
+        <p style={{marginLeft:"-1vw"}}>everything flows from there</p>
+        <p style={{marginLeft:"2vw"}}></p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
       </Typography>
     </div>
     <div style={{margin: "-9vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
