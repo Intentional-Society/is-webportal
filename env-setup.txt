@@ -4,8 +4,9 @@ install VS Code
   configure VSCode install bungcip.better-toml
 install git: https://www.atlassian.com/git/tutorials/install-git#windows
 in admin PowerShell: Set-ExecutionPolicy -ExecutionPolicy Unrestricted
-install node: https://nodejs.org
+install node: https://nodejs.org OR via NVM
 install gatsby CLI: npm -install -g gatsby-cli
+install yarn: npm install -g yarn
 
 Project specific setup:
 fresh root dir> gatsby new is-webportal https://github.com/gatsbyjs/gatsby-starter-hello-world
@@ -31,3 +32,6 @@ yarn add gatsby-theme-material-ui
 
 working around ERR_OSSL_EVP_UNSUPPORTED: (node > 17)
 NODE_OPTIONS=--openssl-legacy-provider yarn gatsby build
+
+nvm-windows: 1.1.12 because npm install broke in later versions
+nvm install 14.17.0
