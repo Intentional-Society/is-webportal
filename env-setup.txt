@@ -28,3 +28,6 @@ yarn add @material-ui/core
 yarn add gatsby-plugin-material-ui
 yarn add @material-ui/icons
 yarn add gatsby-theme-material-ui
+
+working around ERR_OSSL_EVP_UNSUPPORTED: (node > 17)
+NODE_OPTIONS=--openssl-legacy-provider yarn gatsby build
