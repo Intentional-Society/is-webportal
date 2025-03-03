@@ -16,20 +16,22 @@ const NamedDefault = ({ data }) => <>
                 imgStyle={{objectFit: "fill"}}/>
     <div style={{  minWidth: "350px", maxWidth: "400px", width: "fit-content", margin: "0 auto" }}>
       <Typography variant="h5" style={{ color: "#FFFFFF"}}>
-        <p style={{marginLeft:"1vw"}}>become your best self,</p>
-        <p style={{marginLeft:"4vw"}}>awareness acceptance integrity</p>
-        <p style={{marginLeft:"-1vw"}}>cultivate next-level culture,</p>
-        <p style={{marginLeft:"2vw"}}>thriving humans and humanity</p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
+        <p style={{marginLeft:"1vw"}}>starts with...</p>
+        <p style={{marginLeft:"4vw"}}>becoming who we want to be</p>
+        <p style={{marginLeft:"-1vw"}}></p>
+        <p style={{marginLeft:"2vw"}}></p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
       </Typography>
     </div>
     <div style={{margin: "-9vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
       <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "max-content", padding: "0"}}>
         <p>We are:<br/>
-          Those who together are becoming<br/>
+        a congregation of friends devoted to growing ourselves<br/>
+        and our society toward better futures.<br/>
+        The complexity of our world is calling us to become…<br/>
           the people we want to be<br/>
-          and doing what we value<br/>
-          in growing integrity relating to<br/>
-          each other, ourselves, and the world</p>
+          perceptive enough to see deeper<br/>
+          big enough to be with anything<br/>
+          wise enough to wield our power</p>
       </div>
           
       <p>Intentional Society is made of people, practices, and culture held  
