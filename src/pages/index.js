@@ -27,7 +27,7 @@ const NamedDefault = ({ data }) => <>
         <p>We are:<br/>
         a congregation of friends devoted to growing ourselves<br/>
         and our society toward better futures.<br/>
-          the people we want to be<br/>
+        The complexity of our world is calling us to become…<br/>
           perceptive enough to see deeper<br/>
           big enough to be with anything<br/>
           wise enough to wield our power</p>
