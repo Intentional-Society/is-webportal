@@ -8,6 +8,7 @@ import IsHr from "../components/is-hr"
 import BlurbPractice from "../components/blurb-practice"
 import * as GlobalCSS from "../styles/global.module.css"
 
+
 const NamedDefault = ({ data }) => <>
   <Layout>
     <StaticImage src="../../static/images/bg/E7EFEBbg.png" layout="fullWidth" alt="" loading="eager"
@@ -48,6 +49,10 @@ const NamedDefault = ({ data }) => <>
         Society currently has three main spaces/places with varying levels of openness and commitment. 
         Whoever and wherever you are, you are invited to draw closer in connection with the people 
         and purposes of IS.</p>
+
+        <img src="/images/s17-3spaces.jpg" alt="3spaces"
+  style={{ display: "block", margin: "40px auto 10px auto", maxWidth: "50%" }} />
+
 
       <Typography variant="h4">IS Practice Dojo (public offerings)</Typography>
 
