@@ -6,8 +6,8 @@ import Layout from "../components/layout"
 import ButtondownSignup from "../components/buttondownsignup"
 import IsHr from "../components/is-hr"
 import BlurbPractice from "../components/blurb-practice"
+import CenteredColumn from "../components/centered-column"
 import * as GlobalCSS from "../styles/global.module.css"
-
 
 const NamedDefault = ({ data }) => <>
   <Layout>
@@ -26,7 +26,7 @@ const NamedDefault = ({ data }) => <>
         <p style={{margin:"1vw auto 1vw 3vw"}}>being who we want to be</p>
       </Typography>
     </div>
-    <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
+    <CenteredColumn>
       <div style={{fontSize: "1.25em"}}>
         <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "max-content", padding: "0"}}>
           <p>We are a congregation of friends devoted to growing ourselves 
@@ -45,25 +45,24 @@ const NamedDefault = ({ data }) => <>
         <p>If you’ve been seeking the intersection of inner work and systems change, we 
           invite you to join us in the fractal dance of transformation and in the 
           friendship of collaborative service to life.</p>
+        <p>See how you can <Link to="/get-involved">get involved</Link>, or 
+          learn more <Link to="/who-we-are">about us</Link>.</p>
         </div>
 
       <IsHr />
-
+      <p>Deeper inside IS, you'll find three spaces.</p>
       <div style={{ width: "fit-content", margin: "0 auto"}}>
-        <StaticImage src="../../static/images/s17-3spaces.jpg"
-          loading="eager" alt="three spaces of IS: practice dojo, community hub, intentional ventures"
-          width="480" style={{margin: "40px auto 10px auto"}}/>
+        <StaticImage src="../../static/images/s17-3spaces.jpg" loading="eager" width="480"
+          alt="three spaces of IS: practice dojo, community hub, intentional ventures"/>
       </div>
-
-      <br />
+      <p>Our <Link to="/dojo">Practice Dojo</Link> is open to the public for developmental-relational skill-building.</p>
+      <p>Our <Link to="/hub">Community Hub</Link> is a supportive space of friendship and exploration.</p>
+      <p><Link to="/iv">Intentional Ventures</Link> is pioneering an ecosystem of aligned livelihood</p>
+      <p>We also have many <Link to="/friends">friends</Link>, and align ourselves with 
+        the <a href="https://secondrenaissance.net">Second Renaissance</a> movement.</p>
       <IsHr />
-      <p>For four years now we've been exploring and relating together weekly, 
-        with <Link to="/history">more than 200 sessions</Link> under our belts.</p>
-      <p>
-        You can read more about <Link to="/who-we-are">who we 
-        are</Link> and <Link to="/what-we-do">what we do</Link>, and find a few 
-        different inroads to <Link to="/get-involved">get involved</Link> if and when you feel so called.
-      </p>
+      <p>The heart of IS has been beating for four years now, 
+        with <Link to="/history">more than 200 community sessions</Link> under our belts.</p>
       <p>Want to follow along with what we're doing and learning? 
       Enter your email here to subscribe to our Weekly Update newsletter:</p>
       <ButtondownSignup></ButtondownSignup>
@@ -71,7 +70,7 @@ const NamedDefault = ({ data }) => <>
       <div style={{textAlign: "right", marginBottom: "-25px"}}>
         Next page: <Link to="/who-we-are">Who We Are</Link>
       </div>
-    </div>
+    </CenteredColumn>
   </Layout>
 </>
 export default NamedDefault;
