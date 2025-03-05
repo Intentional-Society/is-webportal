@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Card, CardContent } from "@mui/material";
-import { Accordion, AccordionSummary, AccordionDetails, Typography, List, ListItem, Button } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Card, CardContent } from "@material-ui/core";
+import { Accordion, AccordionSummary, AccordionDetails, Typography, List, ListItem, Button } from "@material-ui/core";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Layout from "../components/layout";
 import CenteredColumn from "../components/centered-column";
 
