@@ -15,48 +15,44 @@ const NamedDefault = ({ data }) => <>
                 style={{ height: "60vh", zIndex: -1, position: "absolute", 
                         top: "0px", left: "0px", right: "0px"}}
                 imgStyle={{objectFit: "fill"}}/>
-    <div style={{  minWidth: "350px", maxWidth: "400px", width: "fit-content", margin: "0 auto" }}>
+    <div style={{  minWidth: "350px", maxWidth: "500px", width: "fit-content", margin: "0 auto", height: "280px" }}>
+      <Typography variant="h2" style={{ color: "#FFFFFF"}}>
+        <p style={{margin:"1vw auto"}}>Intentional Society</p>
+      </Typography>
       <Typography variant="h5" style={{ color: "#FFFFFF"}}>
-        <p style={{marginLeft:"1vw"}}>starts with...</p>
-        <p style={{marginLeft:"4vw"}}>becoming who we want to be</p>
-        <p style={{marginLeft:"-1vw"}}></p>
-        <p style={{marginLeft:"2vw"}}></p><br/>&nbsp;<br/>&nbsp;<br/>&nbsp;<br/>&nbsp;
+        <p style={{marginLeft:"3vw"}}>starts with...</p>
+      </Typography>
+      <Typography variant="h4" style={{ color: "#FFFFFF"}}>
+        <p style={{margin:"1vw auto 1vw 3vw"}}>being who we want to be</p>
       </Typography>
     </div>
-    <div style={{margin: "-9vh auto 0", minWidth: "300px", maxWidth: "960px", padding: "0 50px"}}>
+    <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "960px", padding: "0 50px", fontSize: "1.25em"}}>
       <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "max-content", padding: "0"}}>
-        <p>We are:<br/>
-        a congregation of friends devoted to growing ourselves<br/>
-        and our society toward better futures.<br/>
-        The complexity of our world is calling us to become…<br/>
-          perceptive enough to see deeper<br/>
-          big enough to be with anything<br/>
-          wise enough to wield our power</p>
+        <p>We are a congregation of friends devoted to growing ourselves 
+        and our society toward better futures. The complexity of our world 
+        is calling us to become…</p>
+      </div>
+      <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "max-content", padding: "0"}}>
+        <p>perceptive enough to see deeper</p>
+        <p>big enough to be with anything</p>
+        <p>wise enough to wield our power</p>
       </div>
           
-      <p>Intentional Society is made of people, practices, and culture held  
-         in awareness and intention. We are&hellip;<br/>
-      (I:) &hellip;a place to grow and develop yourself in a warm, supportive community.<br/>
-      (We:) &hellip;a living probe into stabilizing and spreading self-transforming collective culture.<br/>
-      (World:) &hellip;a future society that better supports the thriving of humans and humanity.</p>
-      
-      <IsHr />
-      <a className={GlobalCSS.anchorOffset} id="s17"></a>
-      <Typography variant="h3">Happening now: IS Season 17</Typography>
 
-      <p>Year five of Intentional Society begins with our  17<sup>th</sup> seasonal/quarterly cycle,
-        running January through March of 2025. Intentional 
-        Society currently has three main spaces/places with varying levels of openness and commitment. 
-        Whoever and wherever you are, you are invited to draw closer in connection with the people 
-        and purposes of IS.</p>
+      <IsHr />
+      <p>Being who we want to be is an ever-unfolding process, and we do it by practicing together. 
+        We consciously cultivate a post-conventional culture among us that shifts our seeing, 
+        supports our becoming, flows into our doing.</p>
+
+      <p>If you’ve been seeking the intersection of inner work and systems change, we 
+        invite you to join us in the fractal dance of transformation and in the 
+        friendship of collaborative service to life.</p>
+
 
         <img src="/images/s17-3spaces.jpg" alt="3spaces"
   style={{ display: "block", margin: "40px auto 10px auto", maxWidth: "50%" }} />
 
 
-      <Typography variant="h4">IS Practice Dojo (public offerings)</Typography>
-
-      <p><BlurbPractice /></p>
 
       <Typography variant="h4">IS Community Hub (members collective)</Typography>
 
