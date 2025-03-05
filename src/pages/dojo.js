@@ -9,7 +9,7 @@ const NamedDefault = ({ data }) => (
     <div style={{ height: "5vh" }}></div>
     <CenteredColumn>
       <Typography variant="h2">Practice Dojo</Typography>
-      <p>We've run our <Link to="/flagship-practice-series">Flagship Practice Series</Link> and
+      <p>We've run our <Link to="/flagship-practice-series">Flagship Practice Series</Link> and&nbsp;
         <Link to="/exploratory-practice-series">Exploratory Practice Series</Link>.
       </p>
 
