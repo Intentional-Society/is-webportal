@@ -8,6 +8,18 @@ import IsHr from "../components/is-hr"
 import BlurbPractice from "../components/blurb-practice"
 import CenteredColumn from "../components/centered-column"
 import * as GlobalCSS from "../styles/global.module.css"
+import { Grid } from "@material-ui/core";
+
+const imageList = [
+  "/images/second-renaissance.jpg",
+  "/images/life-itself.jpg",
+  "/images/enspiral.png",
+  "/images/microsolidarity.jpg",
+  "/images/building-belonging.png",
+  "/images/starters-culture.png",
+  
+];
+
 
 const NamedDefault = ({ data }) => <>
   <Layout>
@@ -59,8 +71,15 @@ const NamedDefault = ({ data }) => <>
       <p>Our <Link to="/hub">Community Hub</Link> is a supportive space of friendship and exploration.</p>
       <p><Link to="/iv">Intentional Ventures</Link> is pioneering an ecosystem of aligned livelihood</p>
       <p>We also have many <Link to="/friends">friends</Link>, and align ourselves with 
-        the <a href="https://secondrenaissance.net">Second Renaissance</a> movement.</p>
-      <IsHr />
+        the <a href="https://secondrenaissance.net">Second Renaissance</a> movement:</p>
+      <Grid container spacing={0} justifyContent="center">
+  {imageList.map((image, index) => (
+    <Grid item xs={12} sm={6} md={4} key={index}>
+      <img src={image} alt={`Image ${index + 1}`} style={{ width: "40%", height: "auto", borderRadius: "10px" }} />
+    </Grid>
+  ))}
+</Grid>
+    <IsHr />
       <p>The heart of IS has been beating for four years now, 
         with <Link to="/history">more than 200 community sessions</Link> under our belts.</p>
       <p>Want to follow along with what we're doing and learning? 
