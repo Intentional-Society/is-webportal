@@ -8,91 +8,208 @@ import CenteredColumn from "../components/centered-column";
 const seasons = [
   {
     title: "Season 12 - Q4 2023",
-    events: [
-      "2023-12-31 End-of-Year Celebration",
-      "2023-12-20 Garage Time",
-      "2023-10-19 through 2023-12-19 IS Builder Squad weekly",
+    events: ["End-of-Year Celebration",
+"IS Builder Squad",
+  "Reflection, Direction, Appreciation",
+  "Nine Whys on Important Cares",
+  "Focusing, Colors & Amplification",
+  "Relating to Desires",
+  "Desire, Telephone Game & Processing",
+  "Circling",
+  "Tapping into Source",
+  "Impact Zone Exploration",
+"Core Project Exploration",
+  "Connection Zone Exploration",
+  "Support Zone Exploration",
+  "Season of Change Kickoff"
+
     ],
     link: "/season-12",
   },
   {
     title: "Season 11 - Q3 2023",
-    events: [
-      "2023-09-30 Orientation Session",
-      "2023-09-25 Meta Meeting 11.12",
-      "2023-09-24 Community Practice Session 11.12 - Zones and Change",
+    events: ["Zones and Change",
+  "Why(s)?",
+  "Giving & Receiving Practice",
+  "Story debugging",
+  "Sphere of awareness",
+  "I can't believe it's not Circling",
+  "Circling cleanly",
+  "Clean kata",
+  "Clean Language w/ Gina C",
+  "Crewing & Relaxing",
+  "Doing & Crewing",
+  "Kickoff"
     ],
     link: "/season-11",
   },
   {
     title: "Season 10 - Q2 2023",
-    events: [ "2023-06-26 Meta Meeting 10.11",
-      "2023-06-25 Community Practice Session 10.11 - Season Finale",
-      "2023-06-19 Meta Meeting 10.10",],
+    events: ["Season Finale",
+  "Giving & Receiving Practice",
+  "Doing Aliveness",
+  "Alively Learning w/ Caroline A",
+  "Revealing Experience",
+  "T-Group Fishbowl",
+  "Simple Presence",
+  "Social Tooling (decision-making, retros)",
+  "Crew Formation",
+  "Mini-Cases",
+  "Kickoff"],
     link: "/season-10",
   },
   {
     title: "Season 9 - Q1 2023",
-    events: ["2023-04-06 S10 Design Session",
-      "2023-04-03 Meta Meeting 9.13",
-      "2023-04-02 Community Practice Session 9.13 - Retrospective & Reunion",],
+    events: ["Retrospective & Reunion",
+"Container Struggle",
+"Giving & Receiving Practice",
+"What's missing?",
+"Watch Party - Rebuilding Society on Meaning",
+"What's real?",
+"Possibility Engines Game",
+"Honesty & Sensitivity Dials",
+"Exploring Feedback",
+"Fishbowl T-Groups 2",
+"Fishbowl T-Groups",
+"Design for Collab Jam",
+"Integrity in Connections",
+"Relating Languages w/ Sara N",
+"Empathic Resonance",],
     link: "/season-9",
   },
   {
     title: "Season 8 - Q4 2022",
-    events: ["2022-12-31 Orientation Session",
-      "2022-12-19 Meta Meeting 8.12",
-      "2022-12-18 Community Practice Session 8.12 - Improv Future-casting",
-      "2022-12-14 Practice: Circling",],
+    events: ["Improv Future-casting",
+"Relating to Stories",
+"Relating to Choice",
+"Mini-Circles",
+"Mini-Cases",
+"Exploring Relational Giving and Trust",
+"Giving & Receiving Prototype",
+"Landscapes of Care",
+"Emergence and Purpose w/ DAVP",
+"Exploring Doing",
+"Collective Pres-Tension-ing",],
     link: "/season-8",
   },
   {
     title: "Season 7 - Q3 2022",
-    events: ["2022-09-21 Practice: Circling",
-      "2022-09-19 Meta Meeting 7.11",
-      "2022-09-18 Community Practice Session 7.11 - Retrospection",],
+    events: ["Retrospection",
+"(Not) Cases",
+"Dancing with Scissors",
+"Desire and Agency Games",
+"Parts-oriented Circling",
+"Internal Family Systems",
+"Open Session w/ Seishin",
+"Layered Awareness",
+"Giving & Receiving w/ Mary",
+"Structured and Structureless",
+"Governance Working Session",
+"Kickoff: The Relational Field and Loveseat"],
     link: "/season-7",
   },
   {
     title: "Season 6 - Q2 2022",
-    events: ["2022-07-03 Rest week",
-      "2022-06-27 Meta Meeting 6.10",
-      "2022-06-26 General Session 6.10 - Community Day",],
+    events: ["Community Day",
+"CYOA Practices: Edge Case & Circling",
+"You Can Just...",
+"Yeses and Nos",
+"The Field and Slow Proposal",
+"Nominations and Circling",
+"Circling and Membership Design",
+"House Party",
+"Designing the (Working Backwards from a Star Trek) Future 1",
+"T-Group and Doing∞Being",
+"Kickoff: AR and Acceptance"],
     link: "/season-6",
   },
   {
     title: "Season 5 - Q1 2022",
-    events: ["2021-04-17 Rest week",
-        "2022-04-10 General Session 5.15 - Heavenly Glory",
-        "2022-04-09 Orientation Session",],
+    events: ["Heavenly Glory",
+"Relating Games",
+"Contemplating Un-knowing",
+"Wardley Mapping",
+"Case Clinic",
+"Build-your-own Case Practice",
+"Looking at Relational & Systemic Cases",
+"Relational Cases",
+"Safe to Say",
+"Small+Combined Circling",
+"Themed Empathy Circling",
+"Condensing Growth Themes/Headlines",
+"Fast-CP Reflection on IFS & Anniversary Celebration",
+"Deeper Parts",
+"IFS Parts Intro",
+"Welcoming House Party"],
     link: "/season-5",
   },
   {
     title: "Season 4 - Q4 2021",
-    events: ["2021-12-29 Open social hangout time",
-        "2021-12-28 Planning meeting",
-        "2021-12-26 Self-organizing crewing discussion",],
+    events: ["Open social hangout time",
+      "Self-organizing crewing discussion",
+      "Relating to Wanting",
+"Sensing and Remembering",
+"Developmental Circling",
+"Free-flowing Circling",
+"Circling Intro",
+"Empathy Circling + Questions",
+"Friendship & Connection Norms",
+"Polarities and Tensions in Community",
+"Polarities Introduction",
+"Meta-aware Group Reflection",
+"Intentional House Party",
+"Kick off Season 4!"
+,],
     link: "/season-4",
   },
   {
     title: "Season 3 - Q3 2021",
-    events: ["2021-09-26 Rest week",
-        "2021-09-20 Meta Meeting 3.11",
-        "2021-09-19 General Session 3.11 - CP-style desire sharing for I/you/we/world",],
+    events: ["CP-style desire sharing for I/you/we/world",
+"Eye-gazing + Transformation sensemaking",
+"Stories cont. - responding in resonance",
+"Stories of perspective transformation",
+"Curiosity Game + Transformations intro",
+"SD stage role-playing",
+"Exploring edge-finding",
+"Edge Case practice again",
+"Prototyping new practice: Edge Case",
+"Why grow?",
+"Welcoming, Noticing Game, Sharing"
+],
     link: "/season-3",
   },
   {
     title: "Season 2 - Q2 2021",
-    events: ["2021-07-04 Rest week",
-        "2021-06-27 General Session 2.12 \n\n\n\n\n\n-T-Group",
-        "2021-06-21 Meta Meeting 2.11",],
+    events: [
+"T-Group",
+"Redesign + Planning + The Wave",
+"Voyage Retrospective",
+"Inquiry Spiraling",
+"One Word Turns + Voyaging 4/4",
+"Voyaging 3/4",
+"Voyaging 2/4 + Noticing Game",
+"Voyaging 1/4 + Empathy Circling",
+"Boat-building part 2",
+"Boat-building part 1",
+"Structural redesign"
+],
     link: "/season-2",
   },
   {
     title: "Season 1 - Q1 2021",
-    events: ["2021-04-04 Rest week",
-        "2021-03-28 General Session 1.11 - Adult Development intro part 2",
-        "2021-03-27 Informational Session",
+    events: ["Adult Development intro part 2",
+"Adult Development intro part 1",
+"Authentic Relating, Hotseat",
+"Glass Bead Game",
+"Empathy Circling",
+"Examining avoidance",
+"I seem, we seem",
+"being with you, I notice",
+"Bensing and seeking",
+"Call text revised",
+"Website deployed",
+"Domain name registered"
+
       ],
     link: "/season-1",
   },
@@ -119,13 +236,13 @@ const HistoryPage = () => (
       </p>
       <p>Below you can find records of weekly topics and events spanning our first twelve seasons.</p>
       <Typography variant="h4">Historical Event Log</Typography>
-      <Grid container spacing={1} style={{ maxWidth: "1600px", margin: "0 auto" }}>
-        {seasons.map((season, index) => (
-          <Grid item xs={12} sm={6} md={6} lg={6} key={index} style={{ paddingBottom: "8px" }}>
-            <Accordion>
+      <Grid container spacing={1} direction="column" style={{ maxWidth: "800px", margin: "0 auto" }}>
+      {seasons.map((season, index) => (
+        <Grid item xs={12} sm={12} md={12} lg={12} key={index} style={{ paddingBottom: "8px" }}>
+        <Accordion>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                 <Typography variant="h5">{season.title}</Typography>
-              </AccordionSummary>
+                </AccordionSummary>
               <AccordionDetails>
                 <div style={{ width: "100%" }}>
                   <ul>
@@ -133,11 +250,6 @@ const HistoryPage = () => (
                       <li key={i}>{event}</li>
                     ))}
                   </ul>
-                  <div style={{ textAlign: "right", marginTop: "10px" }}>
-                    <Button variant="contained" color="primary" component={Link} to={season.link}>
-                      View More
-                    </Button>
-                  </div>
                 </div>
               </AccordionDetails>
             </Accordion>
@@ -149,3 +261,4 @@ const HistoryPage = () => (
 );
 
 export default HistoryPage;
+
