@@ -40,23 +40,23 @@ const NamedDefault = ({ data }) => <>
     </div>
     <CenteredColumn>
       <div style={{fontSize: "1.25em"}}>
-        <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "max-content", padding: "0"}}>
+
           <p>We are a congregation of friends devoted to growing ourselves 
           and our society toward better futures. The complexity of our world 
-          is calling us to become…</p>
-        </div>
-        <div style={{margin: "0 auto", minWidth: "300px", maxWidth: "max-content", padding: "0"}}>
-          <p>perceptive enough to see deeper</p>
-          <p>big enough to be with anything</p>
-          <p>wise enough to wield our power</p>
+          is calling us to become&hellip;</p>
+
+        <div style={{margin: "0 auto 0 100px"}}>
+          <p>&hellip;<b>sensitive</b> enough to <b>see</b> clearly</p>
+          <p>&hellip;<b>flexible</b> enough to <b>be with</b> anything</p>
+          <p>&hellip;and <b>wise</b> enough to wield our <b>power</b></p>
         </div>
         <IsHr />
         <p>Being who we want to be is an ever-unfolding process, and we do it by practicing together. 
           We consciously cultivate a post-conventional culture among us that shifts our seeing, 
           supports our becoming, flows into our doing.</p>
-        <p>If you’ve been seeking the intersection of inner work and systems change, we 
-          invite you to join us in the fractal dance of transformation and in the 
-          friendship of collaborative service to life.</p>
+        <p>If you’ve been seeking the intersection of inner development and systems change, we 
+          invite you to join us in growth and friendship as we
+          practice awareness, acceptance, and integrity in a dance of transformation and service to life.</p>
         <p>See how you can <Link to="/get-involved">get involved</Link>, or 
           learn more <Link to="/who-we-are">about us</Link>.</p>
         </div>
@@ -70,8 +70,8 @@ const NamedDefault = ({ data }) => <>
       <p>Our <Link to="/dojo">Practice Dojo</Link> is open to the public for developmental-relational skill-building.</p>
       <p>Our <Link to="/hub">Community Hub</Link> is a supportive space of friendship and exploration.</p>
       <p><Link to="/iv">Intentional Ventures</Link> is pioneering an ecosystem of aligned livelihood</p>
-      <p>We also have many <Link to="/friends">friends</Link>, and align ourselves with 
-        the <a href="https://secondrenaissance.net">Second Renaissance</a> movement:</p>
+      <p>We'd also love to introduce you to our <Link to="/friends">friends</Link>, and align ourselves with 
+        the <a href="https://secondrenaissance.net">Second Renaissance</a> movement.</p>
       <Grid container spacing={0} justifyContent="center">
   {imageList.map((image, index) => (
     <Grid item xs={12} sm={6} md={4} key={index}>

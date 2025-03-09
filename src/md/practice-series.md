@@ -1,4 +1,4 @@
-## The IS (developmental/core) Practice Series
+## The IS Developmental Practice Series
 
 ### Introduction January 2024
 Liberation. Joy. Meaning. Adaptability. Equanimity.  
