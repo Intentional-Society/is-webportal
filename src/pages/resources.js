@@ -173,66 +173,6 @@ const NamedDefault = ({ data }) => (
         <li><a href="https://www.youtube.com/watch?v=O5boJc88M9g">Microsolidarity 
           Youtube channel w/ Richard Bartlett</a> 2021-11-21</li>
       </ul>
-      <a className={GlobalCSS.anchorOffset} id="friends"></a>
-      <Typography variant="h4">Friends of Intentional Society</Typography>
-      <p>We consider these entities, organizations, or people to be allied, aligned, or inspiring to us:</p>
-      <a className={GlobalCSS.anchorOffset} id="starter-cultures"></a>
-      <Typography variant="h5">Starter Cultures</Typography>
-      <ul>
-        <li>A lovely group of humans exploring community-building, better work, and new economic 
-          models for livelihoods and co-ops. We picked up T-group from 
-          their <a href="https://www.startercultures.us/creative-offerings/communication-dojo">Communication 
-          Dojo</a>.
-          </li>
-        <li><a href="https://www.startercultures.us/">Website</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="microsolidarity"></a>
-      <Typography variant="h5">Microsolidarity</Typography>
-      <ul>
-        <li><a href="http://richdecibels.com">Rich Bartlett</a> assembled this framework and 
-          vocabulary for decentralized organizing, from which we reference the “fractal of 
-          belonging” and other labels like “crews” and “caller”.</li>
-        <li><a href="https://www.microsolidarity.cc/">Microsolidarity website</a> <a 
-        href="https://www.thehum.org/microsolidarity">Training</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="the-bridge-community"></a>
-      <Typography variant="h5">The Bridge Community</Typography>
-      <ul>
-        <li>This is a Discord community organized around Evan McMullen's Stoa talks by the same name.</li>
-        <li>If you dig the talks, we can get you an invite.</li>
-        <li>Original Youtube <a href="https://www.youtube.com/watch?v=ss2_PIzl9ik">video</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="enspiral"></a>
-      <Typography variant="h5">Enspiral</Typography>
-      <ul>
-        <li>Originally a collective of New Zealand-based freelancers, Enspiral has been hugely influential
-           in the domain of co-ops and self-managed organizations. We've taken wisdom from 
-           their <a href="https://handbook.enspiral.com/">handbook</a>, practices, and various ventures 
-          including Greaterthan, The Hum, and Loomio.
-        </li>
-        <li><a href="https://www.enspiral.com/">Website</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="sacred-ground"></a>
-      <Typography variant="h5">Sacred Ground</Typography>
-      <ul>
-       <li>A “We-Space community on the evolving edge of Mutuality” organized by Stephen Marcus, providing 
-         several weekly Sacred Ground Experience sessions of interbeing presence and connection. 
-         This network also serves as a base for the Collective Presencing community, and a few other 
-         we-space oriented groups.</li>
-         <li>Mighty Networks <a href="https://community.sacredground.us/landing">Website</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="building-belonging"></a>
-      <Typography variant="h5">Building Belonging</Typography>
-      <ul>
-        <li>A “home for people committed to building a world where everyone belongs” sourced by Brian Stout, 
-          which has some community overlap with Starter Cultures and Microsolidarity fans.
-        </li>
-        <li><a href="https://www.buildingbelonging.us/">Website</a> <a 
-          href="https://citizenstout.substack.com/">Newsletter</a></li>
-      </ul>
-      <ul>
-
-      </ul>
     </CenteredColumn>
   </Layout>
 );
