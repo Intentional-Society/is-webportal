@@ -7,6 +7,88 @@ import CenteredColumn from "../components/centered-column";
 
 const seasons = [
   {
+    "title": "Season 17 - Q1 2025",
+    "events": [
+      "Embodied Awakening",
+      "Appreciating Beauty",
+      "10x Agency in our faces",
+      "Relational Attunement",
+      "Death, remembrance, purpose",
+      "Intentionality in Wealth",
+      "Exploring Towardness",
+      "The edges of noticing",
+      "Bringing desires to life",
+      "North Stars 2025",
+      "IS Season 17 all-member update/invite"
+    ]
+  },
+  {
+    "title": "Season 16 - Q4 2024",
+    "events": [
+      "What if...?! Finale",
+      "The Good & People of IS V2",
+      "Vibes, Arts, BWIA",
+      "Being With What Could Be w/ Jochen",
+      "w/ Faith",
+      "BWIA + G&RP",
+      "Vows & Quests",
+      "??? (mystery)",
+      "Centering fig & Ed",
+      "Circling (& BWIA)",
+      "Mini-Cases",
+      "Maps & Pods",
+      "IS seasonal all-member update"
+    ]
+  },
+  {
+    "title": "Season 15 - Q3 2024",
+    "events": [
+      "Where we go next",
+      "Alien Invasion",
+      "Daydreams",
+      "Communal Reverie",
+      "EGP (on collective+imaginal) plus not-EGP",
+      "Mid-season Party",
+      "Final pods",
+      "Entanglement",
+      "Skydiving",
+      "Falling together anew",
+      "Forming Pods",
+      "Build-a-season",
+      "Beginning Season 15 of Intentional Society"
+    ]
+  },
+  {
+    "title": "Season 14 - Q2 2024",
+    "events": [
+      "Wrap & Party",
+      "EGP at IS (response requested)",
+      "Garden Mapping",
+      "Pods Casework #4",
+      "Giving & Receiving",
+      "Pods Casework #3",
+      "Somatic knowing",
+      "Pods Casework #2",
+      "Presence and horizons",
+      "Setting sail",
+      "Case exploration & Flotilla organizing",
+      "Restarting anew",
+      "IS Season 14 Member Letter/Invitation"
+    ]
+  },
+{
+  "title": "Season 13 - Q1 2024",
+  "events": [
+    "Season's End",
+    "5 things",
+    "The Arts in IS",
+    "March dates, GRP follow-up",
+    "Giving & Receiving",
+    "24w5 — mixer, 15m, practice",
+    "Invitation: Intentional Society membership kickoff"
+  ]
+},
+  {
     title: "Season 12 - Q4 2023",
     events: ["End-of-Year Celebration",
 "IS Builder Squad",

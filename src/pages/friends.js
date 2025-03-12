@@ -26,8 +26,8 @@ const friendsList = [
   },
   {
     name: "Microsolidarity",
-    description: `<a href="http://richdecibels.com/" target="_blank" rel="noopener noreferrer">Rich Bartlett</a> assembled this framework and vocabulary for decentralized organizing, from which we reference the “fractal of belonging” and other labels like “crews” and “caller”.<br/><br/> 
-    <a href="https://www.thehum.org/microsolidarity" target="_blank" rel="noopener noreferrer">Training</a>`,
+    description: `<a href="http://richdecibels.com/" target="_blank" rel="noopener noreferrer">Rich Bartlett</a> assembled this framework and vocabulary for decentralized organizing, from which we reference the “fractal of belonging” and other labels like “crews” and “caller. You can also check out their
+    <a href="https://www.thehum.org/microsolidarity" target="_blank" rel="noopener noreferrer">Training.</a>`,
     website: "https://www.microsolidarity.cc/",
     image: "/images/microsolidarity.jpg"
   },
