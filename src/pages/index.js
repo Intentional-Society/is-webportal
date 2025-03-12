@@ -8,17 +8,42 @@ import IsHr from "../components/is-hr"
 import BlurbPractice from "../components/blurb-practice"
 import CenteredColumn from "../components/centered-column"
 import * as GlobalCSS from "../styles/global.module.css"
+import "./styles.css"
 import { Grid } from "@material-ui/core";
 
 const imageList = [
-  "/images/second-renaissance.jpg",
-  "/images/life-itself.jpg",
-  "/images/enspiral.png",
-  "/images/microsolidarity.jpg",
-  "/images/building-belonging.png",
-  "/images/starters-culture.png",
-  
+  {
+    image: "/images/second-renaissance.jpg",
+    link: "https://secondrenaissance.net",
+    comment: "Exploring better futures through collective intelligence."
+  },
+  {
+    image: "/images/life-itself.jpg",
+    link: "https://lifeitself.us",
+    comment: "A community for philosophy, culture, and sustainable living."
+  },
+  {
+    image: "/images/enspiral.png",
+    link: "https://www.enspiral.com/",
+    comment: "A network of freelancers focused on self-managed organizations."
+  },
+  {
+    image: "/images/microsolidarity.jpg",
+    link: "https://www.microsolidarity.cc/",
+    comment: "A framework for decentralized organizing and community-building."
+  },
+  {
+    image: "/images/building-belonging.png",
+    link: "https://www.buildingbelonging.us/",
+    comment: "A movement for creating spaces where everyone belongs."
+  },
+  {
+    image: "/images/starters-culture.png",
+    link: "https://www.startercultures.us/",
+    comment: "Co-creating new economic models for livelihoods and co-ops."
+  }
 ];
+
 
 
 const NamedDefault = ({ data }) => <>
@@ -64,21 +89,35 @@ const NamedDefault = ({ data }) => <>
       <IsHr />
       <p>Deeper inside IS, you'll find three spaces.</p>
       <div style={{ width: "fit-content", margin: "0 auto"}}>
-        <StaticImage src="../../static/images/s17-3spaces.jpg" loading="eager" width="480"
-          alt="three spaces of IS: practice dojo, community hub, intentional ventures"/>
+      <img src="/images/s17-3spaces.jpg" loading="eager" width="480" alt="three spaces of IS: practice dojo, community hub, intentional ventures"/>
       </div>
       <p>Our <Link to="/dojo">Practice Dojo</Link> is open to the public for developmental-relational skill-building.</p>
       <p>Our <Link to="/hub">Community Hub</Link> is a supportive space of friendship and exploration.</p>
       <p><Link to="/iv">Intentional Ventures</Link> is pioneering an ecosystem of aligned livelihood</p>
       <p>We'd also love to introduce you to our <Link to="/friends">friends</Link>, and align ourselves with 
         the <a href="https://secondrenaissance.net">Second Renaissance</a> movement.</p>
-      <Grid container spacing={0} justifyContent="center">
-  {imageList.map((image, index) => (
-    <Grid item xs={12} sm={6} md={4} key={index}>
-      <img src={image} alt={`Image ${index + 1}`} style={{ width: "40%", height: "auto", borderRadius: "10px" }} />
+      <Grid container spacing={2} justifyContent="center">
+      {imageList.map((item, index) => (
+        <Grid item xs={12} sm={6} md={4} key={index}>
+          <a href={item.link} target="_blank" rel="noopener noreferrer">
+          <img src={item.image} alt={`Image ${index + 1}`} 
+        style={{ 
+          display: "block", 
+          margin: "0 auto", 
+          width: "50%", 
+          height: "auto", 
+          borderRadius: "10px" 
+        }} 
+        onMouseOver={(e) => e.target.style.opacity = "0.5"}
+        onMouseOut={(e) => e.target.style.opacity = "1"} 
+      />
+      </a>
+      <Typography align="center" variant="h6" style={{ marginTop: "10px", fontSize: "1.1rem", fontWeight: "500" }}>
+      {item.comment}
+    </Typography>
+        </Grid>
+      ))}
     </Grid>
-  ))}
-</Grid>
     <IsHr />
       <p>The heart of IS has been beating for four years now, 
         with <Link to="/history">more than 200 community sessions</Link> under our belts.</p>
