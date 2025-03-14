@@ -8,7 +8,6 @@ import IsHr from "../components/is-hr"
 import BlurbPractice from "../components/blurb-practice"
 import CenteredColumn from "../components/centered-column"
 import * as GlobalCSS from "../styles/global.module.css"
-import "./styles.css"
 import { Grid } from "@material-ui/core";
 
 const imageList = [
