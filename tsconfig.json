@@ -1,6 +1,0 @@
-{
-  /* reference: https://github.com/gatsbyjs/gatsby/blob/master/starters/gatsby-starter-minimal-ts/tsconfig.json */
-  "compilerOptions": {},
-  "include": ["src/**/*"],
-  "exclude": []
-}
