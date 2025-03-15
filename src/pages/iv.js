@@ -16,7 +16,7 @@ const NamedDefault = ({ data }) => (
       <p>After three quarters with its founding team, at the end of 2024 IV has made its first revenue, established 
         key structures and principles, and added its first new (non-founding) participants. 
         Entry is invitation-only, and we maintain an informal waitlist. 
-        To be added to the waitlist, come chat about it at <Link to="/get-involved#office-hours">Office Hours</Link> or 
+        To be added to the waitlist, come chat about it at a <Link to="/get-involved#connection-calls">Connection Call</Link> or 
         talk to any participant.</p>
       
       <p>The "space one" (exploration) of IV is being showcased in a four-part "Build-a-thon" 
