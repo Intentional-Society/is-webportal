@@ -18,7 +18,7 @@ const NamedDefault = ({ data }) => (
           <li><Link to="#authentic-relating">Authentic Relating</Link></li>
         </ul> */}
         <li><Link to="#media">Media Appearances</Link></li>
-        <li><Link to="#friends">Friends of Intentional Society</Link></li>
+        <li><Link to="/friends">Friends of Intentional Society</Link></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="relational-practices"></a>
       <Typography variant="h4">Relational Practices List</Typography>
