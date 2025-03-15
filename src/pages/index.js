@@ -12,32 +12,32 @@ import { Grid } from "@material-ui/core";
 
 const imageList = [
   {
-    image: "/images/second-renaissance.jpg",
+    image: "/images/logos/second-renaissance.jpg",
     link: "https://secondrenaissance.net",
     comment: "Exploring better futures through collective intelligence."
   },
   {
-    image: "/images/life-itself.jpg",
+    image: "/images/logos/life-itself.jpg",
     link: "https://lifeitself.us",
     comment: "A community for philosophy, culture, and sustainable living."
   },
   {
-    image: "/images/enspiral.png",
+    image: "/images/logos/enspiral.png",
     link: "https://www.enspiral.com/",
     comment: "A network of freelancers focused on self-managed organizations."
   },
   {
-    image: "/images/microsolidarity.jpg",
+    image: "/images/logos/microsolidarity.jpg",
     link: "https://www.microsolidarity.cc/",
     comment: "A framework for decentralized organizing and community-building."
   },
   {
-    image: "/images/building-belonging.png",
+    image: "/images/logos/building-belonging.png",
     link: "https://www.buildingbelonging.us/",
     comment: "A movement for creating spaces where everyone belongs."
   },
   {
-    image: "/images/starters-culture.png",
+    image: "/images/logos/starters-culture.png",
     link: "https://www.startercultures.us/",
     comment: "Co-creating new economic models for livelihoods and co-ops."
   }
