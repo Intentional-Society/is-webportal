@@ -95,6 +95,7 @@ const NamedDefault = ({ data }) => <>
       <p><Link to="/iv">Intentional Ventures</Link> is pioneering an ecosystem of aligned livelihood</p>
       <p>We'd also love to introduce you to our <Link to="/friends">friends</Link>, and align ourselves with 
         the <a href="https://secondrenaissance.net">Second Renaissance</a> movement.</p>
+      {/*
       <Grid container spacing={2} justifyContent="center">
       {imageList.map((item, index) => (
         <Grid item xs={12} sm={6} md={4} key={index}>
@@ -117,6 +118,7 @@ const NamedDefault = ({ data }) => <>
         </Grid>
       ))}
     </Grid>
+    */}
     <IsHr />
       <p>The heart of IS has been beating for four years now, 
         with <Link to="/history">more than 200 community sessions</Link> under our belts.</p>
