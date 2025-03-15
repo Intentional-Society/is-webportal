@@ -67,6 +67,7 @@ const NamedDefault = () => {
       <Button className={classes.navButtons3} component={Link} to="/what-we-do">What We Do</Button>
       <Button className={classes.navButtons3} component={Link} to="/get-involved">Get Involved!</Button>
       <Button className={classes.navButtons6} component={Link} to="/history">History</Button>
+      <Button className={classes.navButtons6} component={Link} to="/friends">Friends</Button>
       <Button className={classes.navButtons6} component={Link} to="/questions">Questions?</Button>
       <Button className={classes.navButtons6} component={Link} to="/resources">Resources</Button>
       <IconButton aria-controls="top-nav-menu" aria-haspopup="true" aria-label="menu"
@@ -87,6 +88,7 @@ const NamedDefault = () => {
         <MenuItem className={classes.navMenu3} component={Link} to="/what-we-do" onClick={handleClose}>What We Do</MenuItem>
         <MenuItem className={classes.navMenu3} component={Link} to="/get-involved" onClick={handleClose}>Get Involved!</MenuItem>
         <MenuItem component={Link} to="/history" onClick={handleClose}>History</MenuItem>
+        <MenuItem component={Link} to="/friends" onClick={handleClose}>Friends</MenuItem>
         <MenuItem component={Link} to="/questions" onClick={handleClose}>Questions?</MenuItem>
         <MenuItem component={Link} to="/resources" onClick={handleClose}>Resources</MenuItem>
       </Menu>
