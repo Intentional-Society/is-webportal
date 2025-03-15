@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Intentional Society',
-    description: "Growing our biggest selves together",
+    description: "Being who we want to be, together"
   },
   plugins: [
     {
