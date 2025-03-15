@@ -13,9 +13,8 @@ const NamedDefault = ({ data }) => (
     <CenteredColumn>
     <Typography variant="h3">Who we are</Typography>
 
-      <StaticImage src="../../static/images/wave-to-internet.jpg"
-        loading="eager" alt="Us waving to the internet"
-        style={{float:"right", maxWidth: "50%", margin: "40px 0px 10px 4vw"}}/>
+    <img src="/images/wave-to-internet.png" alt="Us waving to the internet"
+     style={{ float: "right", maxWidth: "50%", margin: "40px 0px 10px 4vw" }} />
       
       <p>We are a geographically distributed community of seekers and friends, connecting 
         face-to-face via video calls. We connect and reflect together in relationship 
