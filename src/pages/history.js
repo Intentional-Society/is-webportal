@@ -321,17 +321,16 @@ const HistoryPage = () => (
         Hi, James here. I'm the founder/
         <a href="https://workwithsource.com/what-is-source/how-initiatives-start/">source</a>/
         <a href="https://www.microsolidarity.cc/articles/2-update-2020#1-initiators">caller</a> of
-        Intentional Society, however you'd like to call it. When I retired from my corporate career at the
+        Intentional Society. When I retired from my corporate career at the
         onset of the pandemic, I'd been collecting thoughts and ideas for a decade about how organizations
         function and grow, while looking for meaning, truth, and the “why?”s of life for a few decades before
         that. I'd had some transformational experiences in my personal development, and I wanted to keep
-        growing, make friends on that same journey, and be of service to humanity. I wrote a <Link to="/thecall">calling manifesto</Link>  
-        of sorts in December 2020, and began weekly meetings of Intentional Society in January 2021. Beginning
-        with a relational practices tour and a healthy dose of "but what is it really," we evolved into a seasonal cycle,
-        exploring and optimizing for relational development, eventually adding membership, and now in 2024 reconfiguring
-        our virtual spaces as we launch our first public practice program.
+        growing, make friends on that same journey, and be of service to humanity. I wrote
+         a <Link to="/thecall"> calling manifesto</Link> of 
+        sorts in December 2020, and began weekly meetings of Intentional Society in January 2021.
       </p>
-      <p>Below you can find records of weekly topics and events spanning our first twelve seasons.</p>
+      <p>What followed has been a patient unfolding with many stories embedded in the journey. 
+        Below you can find title-based records of weekly sessions going all the way back to the beginning.</p>
       <Typography variant="h4">Historical Event Log</Typography>
       <Grid container spacing={1} direction="column" style={{ maxWidth: "800px", margin: "0 auto" }}>
       {seasons.map((season, index) => (
