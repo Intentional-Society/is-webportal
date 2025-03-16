@@ -63,8 +63,7 @@ const NamedDefault = () => {
       <Typography variant="h5" className={classes.title}>
         <Link to="/" className={GlobalCSS.nostyleLink}>Intentional Society</Link>
       </Typography>
-      <Button className={classes.navButtons3} component={Link} to="/who-we-are">Who We Are</Button>
-      <Button className={classes.navButtons3} component={Link} to="/what-we-do">What We Do</Button>
+      <Button className={classes.navButtons3} component={Link} to="/about">About</Button>
       <Button className={classes.navButtons3} component={Link} to="/get-involved">Get Involved!</Button>
       <Button className={classes.navButtons6} component={Link} to="/history">History</Button>
       <Button className={classes.navButtons6} component={Link} to="/friends">Friends</Button>
@@ -84,8 +83,7 @@ const NamedDefault = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem className={classes.navMenu3} component={Link} to="/who-we-are" onClick={handleClose}>Who We Are</MenuItem>
-        <MenuItem className={classes.navMenu3} component={Link} to="/what-we-do" onClick={handleClose}>What We Do</MenuItem>
+        <MenuItem className={classes.navMenu3} component={Link} to="/about" onClick={handleClose}>Who We Are</MenuItem>
         <MenuItem className={classes.navMenu3} component={Link} to="/get-involved" onClick={handleClose}>Get Involved!</MenuItem>
         <MenuItem component={Link} to="/history" onClick={handleClose}>History</MenuItem>
         <MenuItem component={Link} to="/friends" onClick={handleClose}>Friends</MenuItem>
