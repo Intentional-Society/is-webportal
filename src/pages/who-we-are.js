@@ -7,7 +7,8 @@ import CenteredColumn from "../components/centered-column"
 import IsHr from "../components/is-hr"
 import * as GlobalCSS from "../styles/global.module.css"
 
-const NamedDefault = ({ data }) => (
+const NamedDefault = ({ data }) => {
+  return null; 
   <Layout>
     <div style={{ height: "5vh" }}></div>
     <CenteredColumn>
@@ -81,5 +82,5 @@ const NamedDefault = ({ data }) => (
       </div>
     </CenteredColumn>
   </Layout>
-);
+};
 export default NamedDefault;
