@@ -76,23 +76,16 @@ const seasons = [
       "IS Season 14 Member Letter/Invitation"
     ]
   },
-{
-  "title": "Season 13 - Q1 2024",
-  "events": [
-    "Season's End",
-    "5 things",
-    "The Arts in IS",
-    "March dates, GRP follow-up",
-    "Giving & Receiving",
-    "24w5 — mixer, 15m, practice",
-    "Invitation: Intentional Society membership kickoff"
-  ]
-},
   {
     "title": "Season 13 - Q1 2024",
     "events": [
       "Season's End",
       "5 things",
+      "Noticing",
+      "Creative Practice",
+      "Hearing the Good",
+      "Holding Intentions",
+      "Sensing shadow’s edge (Edge Exploration)",
       "The Arts in IS",
       "March dates, GRP follow-up",
       "Giving & Receiving",

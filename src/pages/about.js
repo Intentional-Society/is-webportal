@@ -10,8 +10,6 @@ const NamedDefault = () => (
   <Layout>
     <div style={{ height: "5vh" }}></div>
     <CenteredColumn>
-      <Typography variant="h3">About Intentional Society</Typography>
-
       {/* Section: Who We Are */}
       <Typography variant="h4">Who We Are</Typography>
       <img
