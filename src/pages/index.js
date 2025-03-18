@@ -83,7 +83,7 @@ const NamedDefault = ({ data }) => <>
           invite you to join us in growth and friendship as we
           practice <i>awareness, acceptance, integrity</i> in a dance of transformation and service to life.</p>
         <p>See how you can <Link to="/get-involved">get involved</Link>, or 
-          learn more <Link to="/who-we-are">about us</Link>.</p>
+          learn more <Link to="/about">about us</Link>.</p>
 
       <IsHr />
       <p>Deeper inside IS, you'll find three spaces.</p>
@@ -130,7 +130,7 @@ const NamedDefault = ({ data }) => <>
       </div>
 
       <div style={{textAlign: "right", marginBottom: "-25px"}}>
-        Next page: <Link to="/who-we-are">Who We Are</Link>
+        Next page: <Link to="/about">Who We Are</Link>
       </div>
     </CenteredColumn>
   </Layout>
