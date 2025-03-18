@@ -83,7 +83,7 @@ const NamedDefault = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem className={classes.navMenu3} component={Link} to="/about" onClick={handleClose}>Who We Are</MenuItem>
+        <MenuItem className={classes.navMenu3} component={Link} to="/about" onClick={handleClose}>About</MenuItem>
         <MenuItem className={classes.navMenu3} component={Link} to="/get-involved" onClick={handleClose}>Get Involved!</MenuItem>
         <MenuItem component={Link} to="/history" onClick={handleClose}>History</MenuItem>
         <MenuItem component={Link} to="/friends" onClick={handleClose}>Friends</MenuItem>
