@@ -8,3 +8,11 @@
 
 [build.environment]
   NODE_VERSION =  "14.17.0" # previously used "12.16.1"
+
+[[redirects]]
+  from = "/who-we-are"
+  to = "/about"
+
+[[redirects]]
+  from = "/what-we-do"
+  to = "/about"
