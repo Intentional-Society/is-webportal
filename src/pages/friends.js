@@ -125,7 +125,7 @@ const friendsList = [
     name: "Denizen",
     description: "A platform for conversations and learning about systems change, governance, and future societies.",
     website: "https://www.becomingdenizen.com/",
-    image: "/images/logos/denizen.png"
+    image: "/images/logos/denizen.jpeg"
   }
 
 ];
