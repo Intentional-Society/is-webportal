@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/Menu';
+import { navigate } from "gatsby";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -48,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
 const NamedDefault = () => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [getInvolvedAnchor, setGetInvolvedAnchor] = React.useState(null);
+  const [historyAnchor, setHistoryAnchor] = React.useState(null); 
+
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -64,8 +68,42 @@ const NamedDefault = () => {
         <Link to="/" className={GlobalCSS.nostyleLink}>Intentional Society</Link>
       </Typography>
       <Button className={classes.navButtons3} component={Link} to="/about">About</Button>
-      <Button className={classes.navButtons3} component={Link} to="/get-involved">Get Involved!</Button>
-      <Button className={classes.navButtons6} component={Link} to="/history">History</Button>
+      <Button
+  className={classes.navButtons3}
+  onClick={(event) => setGetInvolvedAnchor(event.currentTarget)}
+>
+  Get Involved
+</Button>
+
+<Menu
+  anchorEl={getInvolvedAnchor}
+  open={Boolean(getInvolvedAnchor)}
+  onClose={() => setGetInvolvedAnchor(null)}
+  anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+  transformOrigin={{ vertical: "top", horizontal: "left" }}
+  getContentAnchorEl={null} // ✅ Ensures dropdown appears below button
+>
+  <MenuItem onClick={() => { setGetInvolvedAnchor(null); navigate("/dojo"); }}>Dojo</MenuItem>
+  <MenuItem onClick={() => { setGetInvolvedAnchor(null); navigate("/community"); }}>Community</MenuItem>
+  <MenuItem onClick={() => { setGetInvolvedAnchor(null); navigate("/iv"); }}>Ventures</MenuItem>
+</Menu>      
+<Button
+  className={classes.navButtons6}
+  onClick={(event) => setHistoryAnchor(event.currentTarget)}
+>
+  History
+</Button>
+
+<Menu
+  anchorEl={historyAnchor}
+  open={Boolean(historyAnchor)}
+  onClose={() => setHistoryAnchor(null)}
+  anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+  transformOrigin={{ vertical: "top", horizontal: "left" }}
+  getContentAnchorEl={null} // ✅ Ensures dropdown appears below button
+>
+  <MenuItem onClick={() => { setHistoryAnchor(null); navigate("/thecall"); }}>The Call</MenuItem>
+</Menu>
       <Button className={classes.navButtons6} component={Link} to="/friends">Friends</Button>
       <Button className={classes.navButtons6} component={Link} to="/questions">Questions?</Button>
       <Button className={classes.navButtons6} component={Link} to="/resources">Resources</Button>
