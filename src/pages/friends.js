@@ -105,7 +105,7 @@ const friendsList = [
   },
   {
     name: "The Stoa",
-    description: "A digital campfire for cohering, philosophical inquiry and dialogue on what matters most of the knife's edge. The Stoa is stewarded by Peter Limberg",
+    description: "A digital campfire for cohering, philosophical inquiry and dialogue on what matters most on the knife's edge. The Stoa is stewarded by Peter Limberg",
     website: "https://www.youtube.com/c/TheStoa",
     image: "/images/logos/the-stoa.png"
   },
@@ -138,9 +138,7 @@ const FriendsPage = () => (
       <div style={{ height: "1px", backgroundColor: "#ccc", width: "100%", margin: "10px 0" }}></div>
       <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
         {friendsList.sort((a,b)=>a.name.localeCompare(b.name)).map((friend, index) => (
-          <div key={index} style={{ display: "flex", alignItems: "center", gap: "15px" }}>
-            <img src={friend.image} alt={friend.name} style={{ width: "100px", height: "100px", borderRadius: "50%" }} />
-            <div>
+          <div key={index} style={{ display: "flex", alignItems: "center", gap: "15px" }}>            <div>
               <Typography variant="h5">
                 <a href={friend.website} target="_blank" rel="noopener noreferrer">{friend.name}</a>
               </Typography>
