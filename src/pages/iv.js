@@ -11,32 +11,40 @@ const NamedDefault = ({ data }) => (
     <CenteredColumn>
       <Typography variant="h2">Intentional Ventures</Typography>
 
-      <p>We unlock successful economics for meaningful livelihoods through relational support.</p>
+      <p>We unlock aligned livelihood through relational, perspectival, and technical support.</p>
 
-      <p>After three quarters with its founding team, at the end of 2024 IV has made its first revenue, established 
-        key structures and principles, and added its first new (non-founding) participants. 
-        Entry is invitation-only, and we maintain an informal waitlist. 
-        To be added to the waitlist, come chat about it at a <Link to="/get-involved#connection-calls">Connection Call</Link> or 
-        talk to any participant.</p>
-      
-      <p>The "space one" (exploration) of IV is being showcased in a four-part "Build-a-thon" 
-        series inside Limicon 2025. Its parts are:</p>
-      <ul>
-        <li>Generative ideation</li>
-        <li>Collaborative chemistry</li>
-        <li>Venture assembly</li>
-        <li>Storytelling practice</li>
-      </ul>
-
-      <p>Space two (execution) focuses on <a href="https://otherinter.net/research/squad-wealth/">Squad</a> support 
-        through awareness/perspectival support, technical expertise, and capital enablement.</p>
+      <p>As of May 2025, you can learn about and connect with Intentional Ventures (IV) by:
+        <ol>
+          <li>Attending the (in-construction) IV tent at <a href="https://secondrenaissance.net/oasis">The Oasis</a></li>
+          <li>Registering your interest 
+            using <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWtrt_DBkpKHgujWzlxQJJiiW466NNU28s9dAe__ujVwS9_g/viewform?usp=sharing">this 
+            form</a>.</li>
+          <li>Brigning questions to an <Link to="/get-involved#connection-calls">IS Connection Call</Link></li>
+        </ol>
+      </p>
 
       <p>IV's heartbeat calls happen Fridays at 9am Pacific / Noon Eastern.</p>
       
       <IsHr />
-      <Typography variant="h5">Design</Typography>
-      <p>Created April 2024 with a founding team of about a dozen.
+      <Typography variant="h5">The story so far</Typography>
+      <p>Intentional Ventures began April 2024 with a founding team of about a dozen.</p>
+
+      <p>After three quarters with its founding team, at the end of 2024 IV had experimentally generated revenue, established 
+        key design principles, evolved a two-space structure, and added its first new (non-founding) participants. </p>
+      
+      <p>Inside Limicon 2025 (throughout March), some IV "exploration space" activites 
+        were shared in a four-part "Build-a-thon" series:
+        <ul>
+          <li>Generative ideation</li>
+          <li>Collaborative chemistry</li>
+          <li>Venture assembly</li>
+          <li>Storytelling practice</li>
+        </ul>
       </p>
+
+      <p>The "execution space" focuses on <a href="https://otherinter.net/research/squad-wealth/">Squad</a>-shaped 
+         support with an "extended family" ecosystem of support 
+         via awareness/perspectival reflection, technical expertise, and catalyzing capital.</p>
 
       <p>The "three skills" held as a baseline of Intentional Ventures participants are:</p>
       <ul>
