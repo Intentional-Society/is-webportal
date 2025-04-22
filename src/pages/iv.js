@@ -15,7 +15,8 @@ const NamedDefault = ({ data }) => (
 
       <p>As of May 2025, you can learn about and connect with Intentional Ventures (IV) by:
         <ol>
-          <li>Attending the (in-construction) IV tent at <a href="https://secondrenaissance.net/oasis">The Oasis</a></li>
+          <li>Attending the open <a href="https://forum.secondrenaissance.net/t/about-the-intentional-ventures-tent/305">IV 
+          Tent</a> meetings at <a href="https://secondrenaissance.net/oasis">The Oasis</a></li>
           <li>Registering your interest 
             using <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWtrt_DBkpKHgujWzlxQJJiiW466NNU28s9dAe__ujVwS9_g/viewform?usp=sharing">this 
             form</a>.</li>
