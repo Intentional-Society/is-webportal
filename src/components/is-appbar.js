@@ -48,7 +48,6 @@ const NamedDefault = () => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const [spacesAnchor, setSpacesAnchor] = useState(null);
-  const [historyAnchor, setHistoryAnchor] = useState(null);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -85,24 +84,7 @@ const NamedDefault = () => {
           <MenuItem onClick={() => { setSpacesAnchor(null); navigate("/community"); }}>Community</MenuItem>
           <MenuItem onClick={() => { setSpacesAnchor(null); navigate("/iv"); }}>Ventures</MenuItem>
         </Menu>
-        <Button
-          className={classes.navButtons3}
-          onClick={(event) => setHistoryAnchor(event.currentTarget)}
-        >
-          History
-        </Button>
-
-        <Menu
-          anchorEl={historyAnchor}
-          open={Boolean(historyAnchor)}
-          onClose={() => setHistoryAnchor(null)}
-          anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-          transformOrigin={{ vertical: "top", horizontal: "left" }}
-          getContentAnchorEl={null}
-        >
-          <MenuItem component={Link} to="/history" onClick={() => setHistoryAnchor(null)}>History</MenuItem>
-          <MenuItem onClick={() => { setHistoryAnchor(null); navigate("/thecall"); }}>The Call</MenuItem>
-        </Menu>
+        <Button className={classes.navButtons3} component={Link} to="/history">History</Button>
         <Button className={classes.navButtons6} component={Link} to="/friends">Friends</Button>
         <Button className={classes.navButtons6} component={Link} to="/questions">Questions?</Button>
         <Button className={classes.navButtons6} component={Link} to="/resources">Resources</Button>
@@ -140,23 +122,7 @@ const NamedDefault = () => {
             <MenuItem onClick={() => { setSpacesAnchor(null); navigate("/community"); }}>Community</MenuItem>
             <MenuItem onClick={() => { setSpacesAnchor(null); navigate("/iv"); }}>Ventures</MenuItem>
           </Menu>
-          <MenuItem
-            className={classes.navMenu3}
-            onClick={(event) => setHistoryAnchor(event.currentTarget)}
-          >
-            History
-          </MenuItem>
-          <Menu
-            anchorEl={historyAnchor}
-            open={Boolean(historyAnchor)}
-            onClose={() => setHistoryAnchor(null)}
-            anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-            transformOrigin={{ vertical: "top", horizontal: "left" }}
-            getContentAnchorEl={null}
-          >
-            <MenuItem component={Link} to="/history" onClick={() => setHistoryAnchor(null)}>History</MenuItem>
-            <MenuItem onClick={() => { setHistoryAnchor(null); navigate("/thecall"); }}>The Call</MenuItem>
-          </Menu>
+          <MenuItem className={classes.navMenu3} component={Link} to="/history" onClick={handleClose}>History</MenuItem>
           <MenuItem component={Link} to="/friends" onClick={handleClose}>Friends</MenuItem>
           <MenuItem component={Link} to="/questions" onClick={handleClose}>Questions?</MenuItem>
           <MenuItem component={Link} to="/resources" onClick={handleClose}>Resources</MenuItem>
