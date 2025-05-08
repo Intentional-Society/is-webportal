@@ -13,15 +13,16 @@ const seasons = [
       "The Meaning Of Being",
       "Easter Transcendence",
       "Being with Volatility",
-      "Now What",
-      "IS Season 18 all-member update/invite"
+      "Now What"
     ]
   },
   {
     "title": "Season 17 - Q1 2025",
     "events": [
+      "Micro-leadership",
+      "Giving & Receiving",
       "Embodied Awakening",
-      "Appreciating Beauty",
+      "Integral Beauty",
       "10x Agency in our faces",
       "Relational Attunement",
       "Death, remembrance, purpose",
@@ -29,8 +30,7 @@ const seasons = [
       "Exploring Towardness",
       "The edges of noticing",
       "Bringing desires to life",
-      "North Stars 2025",
-      "IS Season 17 all-member update/invite"
+      "North Stars 2025"
     ]
   },
   {

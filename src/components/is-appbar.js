@@ -16,6 +16,8 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     color: theme.palette.secondary.main,
     opacity: "80%",
+    /* made with https://mycolor.space/gradient3?ori=circle&hex=%235C9D93&hex2=%2306A2C2&hex3=%232B70C3&submit=submit 
+    hand modifications informed by https://css-tricks.com/radial-gradient-recipes/ */
     backgroundImage: "radial-gradient(circle at 20% -150%, #5c9d93, #519f9a, #44a0a2, #36a1ab, #25a2b5, #109fbb, #009bc1, #0097c6, #008ec7, #0085c8, #0c7bc6, #2b70c3)",
   },
   menuButton: {

@@ -138,7 +138,9 @@ const FriendsPage = () => (
       <div style={{ height: "1px", backgroundColor: "#ccc", width: "100%", margin: "10px 0" }}></div>
       <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
         {friendsList.sort((a,b)=>a.name.localeCompare(b.name)).map((friend, index) => (
-          <div key={index} style={{ display: "flex", alignItems: "center", gap: "15px" }}>            <div>
+          <div key={index} style={{ display: "flex", alignItems: "center", gap: "15px" }}>
+            <img src={friend.image} alt={friend.name} style={{ width: "100px", height: "100px", borderRadius: "50%" }} />
+            <div>
               <Typography variant="h5">
                 <a href={friend.website} target="_blank" rel="noopener noreferrer">{friend.name}</a>
               </Typography>
