@@ -7,6 +7,17 @@ import CenteredColumn from "../components/centered-column";
 
 const seasons = [
   {
+    "title": "Season 18 - Q2 2025",
+    "events": [
+      "Practice Playground",
+      "The Meaning Of Being",
+      "Easter Transcendence",
+      "Being with Volatility",
+      "Now What",
+      "IS Season 18 all-member update/invite"
+    ]
+  },
+  {
     "title": "Season 17 - Q1 2025",
     "events": [
       "Embodied Awakening",

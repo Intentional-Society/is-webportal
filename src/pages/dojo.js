@@ -23,12 +23,6 @@ const NamedDefault = ({ data }) => (
       Practice Series</Link>, followed by an Exploratory 
       Practice Series tour and the heartfelt "Being With It All" series.
       </p>
-      <p>We're currently showing up inside <a href="https://www.limicon2025.com/">Limicon 2025</a> throughout March 2025.
-      After that, future series (including another iteration of our Developmental series) TBD.</p>
-
-      <Typography variant="h5">Next Dojo Session:</Typography>
-      <p><BlurbPractice /></p>
-
       <IsHr />
 
       <Typography variant="h5">Further geekery:</Typography>
