@@ -10,6 +10,7 @@ import * as GlobalCSS from "../styles/global.module.css";
 const NamedDefault = ({ data }) => {
   return (
     <Layout>
+      <div style={{ height: "5vh" }}></div>
       <CenteredColumn>
         <Typography variant="h3">Open events</Typography>
         <p> </p>
@@ -27,7 +28,7 @@ const NamedDefault = ({ data }) => {
            Open to all, new and familiar, with flexible agenda.</p>
 
         <p><BlurbOfficeHours /> Bring your video camera (phone is okay), microphone, and
-          <Link to="/questions">questions</Link> you might have.</p>
+          any <Link to="/questions">questions</Link> you might have.</p>
 
         <Typography variant="h3">Information streams</Typography>
         <p> </p>
