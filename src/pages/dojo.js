@@ -19,10 +19,22 @@ const NamedDefault = ({ data }) => (
           <li><b>practice</b> is participatory enactment of a way-of-being, shifting how/who  we are</li>
         </ul></p>
 
-      <p>The Practice Dojo became its own space in 2024 with the debut of the IS <Link to="/developmental-practice-series">Developmental 
-      Practice Series</Link>, followed by an Exploratory 
-      Practice Series tour and the heartfelt "Being With It All" series.
+        <p>The Practice Dojo became its own space in 2024 with the debut of the IS <Link to="/developmental-practice-series">
+      Developmental Practice Series</Link>, followed by an Exploratory Practice Series tour and the heartfelt 
+      "Being With It All" series..<br /><br />We were present at <Link to="https://www.limicon2025.com/">Limicon 2025</Link> throughout March 2025. Now, our upcoming series will be another iteration of our Developmental Series, with dates to be determined.
       </p>
+      <p><strong>History of Developmental Practices Series</strong></p>
+      <ul>
+        <li>Empathy Circle – reflective listening</li>
+        <li>Parts Work (IFS) – listening to self</li>
+        <li>Interpersonal Gap – perspectival hygiene</li>
+        <li>T-Group – naming feelings</li>
+        <li>Circling – welcoming everything</li>
+        <li>Inquiry Spiraling – perspective weaving</li>
+        <li>Nine Whys – (re)connecting to desire</li>
+        <li>Pure coaching + Clean language – coaching basics</li>
+        <li>Case Clinic – coaching in action</li>
+      </ul>
       <IsHr />
 
       <Typography variant="h5">Further geekery:</Typography>
