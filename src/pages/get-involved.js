@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import CenteredColumn from "../components/centered-column";
 import ButtondownSignup from "../components/buttondownsignup";
 import BlurbOfficeHours from "../components/blurb-officehours";
+import BlurbPractice from "../components/blurb-practice"
 import * as GlobalCSS from "../styles/global.module.css";
 
 const NamedDefault = ({ data }) => {
@@ -16,8 +17,7 @@ const NamedDefault = ({ data }) => {
         <p> </p>
 
         <Typography variant="h4">Practice Dojo</Typography>
-        <p>If you'd like to try our relational practices, we recommend diving right in!
-          The practices differ week-by-week, and newcomers are welcome to join any session.</p>
+        <p><BlurbPractice /></p>
 
 
         <a className={GlobalCSS.anchorOffset} id="connection-calls"></a>
