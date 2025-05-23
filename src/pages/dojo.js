@@ -19,13 +19,21 @@ const NamedDefault = ({ data }) => (
           <li><b>practice</b> is participatory enactment of a way-of-being, shifting how/who  we are</li>
         </ul></p>
 
-        <p>The Practice Dojo became its own space in 2024 with the debut of the IS <Link to="/developmental-practice-series">
-      Developmental Practice Series</Link>, followed by an Exploratory Practice Series tour and the heartfelt 
-      "Being With It All" series..<br /><br />We were present at <Link to="https://www.limicon2025.com/">Limicon 2025</Link> throughout March 2025. Now, our upcoming series will be another iteration of our Developmental Series, with dates to be determined.
-      </p>
       <IsHr />
+      <Typography variant="h5">What's happening now</Typography>
+      <BlurbPractice />
 
-      <Typography variant="h5">Further geekery:</Typography>
+      <IsHr />
+      <Typography variant="h5">History</Typography>
+      <p>The Practice Dojo became its own space in 2024 with the debut of the IS <Link to="/developmental-practice-series">
+      Developmental Practice Series</Link>, followed by an Exploratory Practice Series tour and the heartfelt 
+      "Being With It All" series..</p>
+      <p>We were present at <Link to="https://www.limicon2025.com/">Limicon 2025</Link> throughout March 2025. 
+      Now, our upcoming series will be another iteration of our Developmental Series, with dates to be determined.
+      </p>
+
+      <IsHr />
+      <Typography variant="h5">Further geekery</Typography>
       <p>Why dojo? The "<a href="https://en.wikipedia.org/wiki/Dojo">dojo</a>" metaphor helps transmit 
         the nature of this practice space: 
         it is a programmatic facilitated space of immersive experiential learning and transformative growth. 
