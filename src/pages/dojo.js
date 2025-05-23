@@ -21,7 +21,7 @@ const NamedDefault = ({ data }) => (
 
       <IsHr />
       <Typography variant="h5">What's happening now</Typography>
-      <BlurbPractice />
+      <p><BlurbPractice /></p>
 
       <IsHr />
       <Typography variant="h5">History</Typography>
