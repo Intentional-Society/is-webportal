@@ -86,6 +86,8 @@ const NamedDefault = ({ data }) => <>
           learn more <Link to="/about">about us</Link>.</p>
 
       <IsHr />
+      <p style={{fontSize: "1.2em"}}>New! <Link to="/developmental-practice-series">Developmental Practice Series</Link> starts July 10<sup>th</sup></p>
+      <IsHr />
       <p>Inside Intentional Society (IS), you'll find three spaces.</p>
       <div style={{ width: "fit-content", margin: "0 auto"}}>
       <img src="/images/s17-3spaces.jpg" loading="eager" width="480" alt="three spaces of IS: practice dojo, community hub, intentional ventures"/>
