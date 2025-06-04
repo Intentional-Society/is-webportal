@@ -1,7 +1,9 @@
+import { Link } from "gatsby";
 import React from "react"
 
 const NamedDefault = ({ data }) => <>
-  The next Practice Dojo series is brewing now, stay tuned for more info soon!
+  Coming up at the Practice Dojo: our <Link to="/developmental-practice-series">Developmental Practice Series</Link> 
+  starts Thursday, July 10!.
   
   {/* Sessions are usually on <b>Saturdays from 
   1:00 to 2:30pm Pacific Time (4pm Eastern, 9pm UTC)</b>. <a 
