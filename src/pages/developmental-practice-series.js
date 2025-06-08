@@ -9,6 +9,8 @@ const NamedDefault = ({ data }) => (
     <CenteredColumn>
       <div dangerouslySetInnerHTML={{__html: data.mdfile.childMarkdownRemark.html}}></div>
 
+      <p>&nbsp;</p>
+      
       <div style={{textAlign: "right", marginBottom: "-25px"}}>
         <Link to="/dojo">Back to Practice Dojo page</Link>
       </div>
