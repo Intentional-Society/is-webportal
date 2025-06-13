@@ -7,7 +7,7 @@ const NamedDefault = () => {
   return (
     <Layout>
       <CenteredColumn>
-        <Typography variant="h4" style={{ textAlign: "center", margin: "25px 0" }}>Being With It All</Typography>
+        <Typography variant="h4" style={{ textAlign: "left", margin: "25px 0" }}>Being With It All</Typography>
 
         <img
           src="/images/being-with-it-all.png"
