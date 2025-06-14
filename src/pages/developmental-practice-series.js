@@ -10,19 +10,16 @@ const NamedDefault = () => (
   <Layout>
     <div style={{ height: "5vh" }}></div>
     <CenteredColumn>
-      {/* Header Image */}
       <img
         src="/images/developmental/developmental-series-header.png"
         alt="IS Developmental Practice Series Header"
         style={{ width: "100%", marginBottom: "30px" }}
       />
 
-      {/* Title */}
       <Typography variant="h3" style={{ marginBottom: "20px" }}>
         IS Developmental Practice Series
       </Typography>
 
-      {/* Main Description */}
       <p>
         Skillful relating to inner and outer challenges. Liberation from stuckness and not-okay-ness. 
         Spacious ease and equanimity. These are learnable skills, freely available through interactive, 
@@ -44,7 +41,6 @@ const NamedDefault = () => (
         and are 90 minutes in length.
       </p>
 
-      {/* Sign Up Button */}
       <div style={{ textAlign: "center", margin: "30px 0" }}>
         <a 
           href="https://docs.google.com/forms/d/e/1FAIpQLSfTKFx1wlprZ3dLVWdcwmggvQzeSoAbqLOaYpKFjAf_9XSFoQ/viewform"
@@ -67,7 +63,6 @@ const NamedDefault = () => (
 
       <IsHr />
 
-      {/* Schedule and Practices */}
       <Typography variant="h4" style={{ marginBottom: "20px" }}>
         🗓️Schedule and Practices
       </Typography>
@@ -113,7 +108,6 @@ const NamedDefault = () => (
 
       <IsHr />
 
-      {/* Testimonials */}
       <Typography variant="h4" style={{ marginBottom: "20px" }}>
         Reflections from 2024 participants
       </Typography>
@@ -157,7 +151,6 @@ const NamedDefault = () => (
         />
       </div>
 
-      {/* Second Sign Up Button */}
       <div style={{ textAlign: "center", margin: "30px 0" }}>
         <a 
           href="https://docs.google.com/forms/d/e/1FAIpQLSfTKFx1wlprZ3dLVWdcwmggvQzeSoAbqLOaYpKFjAf_9XSFoQ/viewform"
@@ -180,7 +173,6 @@ const NamedDefault = () => (
 
       <IsHr />
 
-        {/* About the Facilitator */}
       <Typography variant="h4" style={{ marginBottom: "20px" }}>
         About the facilitator
       </Typography>
