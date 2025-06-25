@@ -133,7 +133,7 @@ const NamedDefault = () => (
         stage models of <a href="https://en.wikipedia.org/wiki/Robert_Kegan">Robert 
         Kegan</a>, <a href="https://www.gla.global/the-glp/leadership-in-action/">Bill 
         Torbert</a>, and <a href="http://www.cook-greuter.com/Cook-Greuter%209%20levels%20paper%20new%201.1'14%2097p%5B1%5D.pdf">Susanne 
-        Cook-Greuter</a> provide a coherent perspective on typical (Western-shaded) developmental proressions. 
+        Cook-Greuter</a> provide a coherent perspective on typical (Western-shaded) developmental progressions. 
         Off to the collective side of this domain is <a href="https://en.wikipedia.org/wiki/Spiral_Dynamics">Spiral 
         Dynamics</a>, in a lineage from Graves to Beck and Cowan to Wilber, which helps us to see and 
         make sense of the values of various political groups and social tribes in this polarized age.
