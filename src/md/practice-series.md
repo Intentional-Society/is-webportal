@@ -4,7 +4,7 @@ Skillful relating to inner and outer challenges. Liberation from stuckness and n
 
 The key mechanism of psychological adult development is (roughly) _perspective-expansion_ — our ability to move from "being caught up in it" to "seeing, welcoming, and working with it". Leveraging years of action-research experience from Intentional Society, the Developmental Practice Series assembles a powerful sequence of practices supporting post-conventional personal development.
 
-In plain words, we're building a bridge to "being who we want to be" beyond what society typically offers us. This series is being run as a nine-week course of Thursdays starting July 10<sup>th</sup>. Sessions are Thursdays, start at 9am Pacific (Noon Eastern, 4pm UTC, 6pm CEST), and are 90 minutes in length.
+In plain words, we're building a bridge to "being who we want to be" beyond what society typically offers us. This series is being run as a nine-week course on Thursdays starting July 10<sup>th</sup>, 9:00am to 10:30am Pacific (Noon Eastern, 4pm UTC, 6pm CEST).
 
 # [Sign up here](https://docs.google.com/forms/d/e/1FAIpQLSfTKFx1wlprZ3dLVWdcwmggvQzeSoAbqLOaYpKFjAf_9XSFoQ/viewform)
 
@@ -12,27 +12,27 @@ Schedule and Practices:
 
 ### Unit 1 (Awareness) July 10, July 17, July 24:
 
-* **Empathy Circle** – reflective listening
+* **Empathy Circle** – receptive listening and reflection
 
-* **Parts Work (IFS)** – listening to self
+* **Parts Work (IFS)** – listening to and being with parts-of-self
 
-* **Interpersonal Gap** – perspectival hygiene
+* **Interpersonal Gap** – perspectival awareness and frame hygiene
 
 ### Unit 2 (Acceptance) July 31, Aug 7, Aug 14:
 
-* **T-Group** – naming feelings
+* **T-Group** – noticing and naming our experiences
 
-* **Circling** – welcoming everything
+* **Circling** – welcoming everything in connection
 
-* **Inquiry Spiraling** – perspective weaving
+* **Inquiry Spiraling** – perspective weaving, collective dreaming
 
 ### Unit 3 (Integrity) Aug 21, Aug 28, Sept 4
 
-* **Nine Whys** – (re)connecting to desire
+* **Nine Whys** – (re)connecting to desire, motivations, and purpose
 
-* **Pure coaching + Clean language** – coaching basics
+* **Pure coaching + Clean language** – clean (space-holding, not self-injecting) coaching basics
 
-* **Case Clinic** – coaching in action
+* **Case Clinic** – developmental coaching in action
 
 Optional bonus session Sept 11 - wrap-up and retrospective
 
