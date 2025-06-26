@@ -36,9 +36,8 @@ const NamedDefault = () => (
 
       <p>
         In plain words, we're building a bridge to "being who we want to be" beyond what society 
-        typically offers us. This series is being run as a nine-week course of Thursdays starting 
-        July 10th. Sessions are Thursdays, start at 9am Pacific (Noon Eastern, 4pm UTC, 6pm CEST), 
-        and are 90 minutes in length.
+        typically offers us. This series is being run as a nine-week course on Thursdays starting 
+        July 10<sup>th</sup>, 9:00am to 10:30am Pacific (Noon Eastern, 4pm UTC, 6pm CEST).
       </p>
 
       <div style={{ textAlign: "center", margin: "30px 0" }}>
@@ -72,27 +71,27 @@ const NamedDefault = () => (
           Unit 1 (Awareness) July 10, July 17, July 24:
         </Typography>
         <ul>
-          <li><strong>Empathy Circle</strong> – reflective listening</li>
-          <li><strong>Parts Work (IFS)</strong> – listening to self</li>
-          <li><strong>Interpersonal Gap</strong> – perspectival hygiene</li>
+          <li><strong>Empathy Circle</strong> – receptive listening and reflection</li>
+          <li><strong>Parts Work (IFS)</strong> – listening to and being with parts-of-self</li>
+          <li><strong>Interpersonal Gap</strong> – perspectival awareness and frame hygiene</li>
         </ul>
 
         <Typography variant="h5" style={{ marginBottom: "10px", marginTop: "20px" }}>
           Unit 2 (Acceptance) July 31, Aug 7, Aug 14:
         </Typography>
         <ul>
-          <li><strong>T-Group</strong> – naming feelings</li>
-          <li><strong>Circling</strong> – welcoming everything</li>
-          <li><strong>Inquiry Spiraling</strong> – perspective weaving</li>
+          <li><strong>T-Group</strong> – noticing and naming our experiences</li>
+          <li><strong>Circling</strong> – welcoming everything in connection</li>
+          <li><strong>Inquiry Spiraling</strong> – perspective weaving, collective dreaming</li>
         </ul>
 
         <Typography variant="h5" style={{ marginBottom: "10px", marginTop: "20px" }}>
           Unit 3 (Integrity) Aug 21, Aug 28, Sept 4:
         </Typography>
         <ul>
-          <li><strong>Nine Whys</strong> – (re)connecting to desire</li>
-          <li><strong>Pure coaching + Clean language</strong> – coaching basics</li>
-          <li><strong>Case Clinic</strong> – coaching in action</li>
+          <li><strong>Nine Whys</strong> – (re)connecting to desire, motivations, and purpose</li>
+          <li><strong>Pure coaching + Clean language</strong> – clean (space-holding, not self-injecting) coaching basics</li>
+          <li><strong>Case Clinic</strong> – developmental coaching in action</li>
         </ul>
 
         <p style={{ marginTop: "20px", fontStyle: "italic" }}>
