@@ -13,7 +13,7 @@ const NamedDefault = ({ data }) => {
     <Layout>
       <div style={{ height: "5vh" }}></div>
       <CenteredColumn>
-        <Typography variant="h3">Open events</Typography>
+        <Typography variant="h3">Get Involved</Typography>
         <p> </p>
 
         <Typography variant="h4">Practice Dojo</Typography>
@@ -29,6 +29,9 @@ const NamedDefault = ({ data }) => {
 
         <p><BlurbOfficeHours /> Bring your video camera (phone is okay), microphone, and
           any <Link to="/questions">questions</Link> you might have.</p>
+
+        <Typography variant="h4">Community Membership</Typography>
+        <p>Join the <Link to="/community">Community</Link> for Sunday Hub calls and more.</p>
 
         <Typography variant="h3">Information streams</Typography>
         <p> </p>
@@ -49,7 +52,7 @@ const NamedDefault = ({ data }) => {
         <Typography variant="h4">Twitter</Typography>
         <p>Follow <a href="https://twitter.com/IntentionalSoc">@IntentionalSoc</a> on
           Twitter if that's your thing. Shares some newsletter content,
-          asks a few questions, tries not to be a nag/reminder stream. Also a handy
+          occasional announcements, not much of a nag/reminder stream. Also a handy
           way to simply refer to Intentional Society in tweets, even if you don't follow the account.</p>
 
         <div style={{textAlign: "right", marginBottom: "-25px"}}>
