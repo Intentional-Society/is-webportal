@@ -97,6 +97,12 @@ const friendsList = [
     website: "https://www.ouremergingfuture.com/",
     image: "/images/logos/our-emerging-future.png"
   },
+    {
+    name: "The Connection Project",
+    description: "The Connection Project is a new peer led practice community that is focused on the relational and collaborative development space. They offer free online AR practice sessions, and also an innovative free facilitation training program that is peer designed and delivered.",
+    website: "https://theconnectionproject.nz/",
+    image: ""
+  },
   {
     name: "Communication Dojo",
     description: "A structured practice space for improving relational and communication skills such as such as nonviolent communication, liberating structures, circling, microsolidarity, theory U, t-group, Bohm dialogue, and authentic relating.",
