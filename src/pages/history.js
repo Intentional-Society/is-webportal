@@ -6,9 +6,30 @@ import Layout from "../components/layout";
 import CenteredColumn from "../components/centered-column";
 
 const seasons = [
+    {
+    "title": "Season 19 - Q3 2025",
+    "events": [
+      "Leverage",
+      "Decision-making",
+      "Practicing IS-ness",
+      "Relational Circling",
+      "Coordination & Trust",
+      "Navigating by Appetite (2nd try)",
+      "Navigating by Appetite",
+      "fractal scopes of relating",
+      "Intentions and ISness",
+    ]
+  },
   {
     "title": "Season 18 - Q2 2025",
     "events": [
+      "IS Envisioning",
+      "Spring & Superpowers",
+      "Intention",
+      "Pleasure and TBD",
+      "Feelin' Good",
+      "Collaborative Culture",
+      "It's all loveable",
       "Practice Playground",
       "The Meaning Of Being",
       "Easter Transcendence",
