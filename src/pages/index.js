@@ -85,8 +85,8 @@ const NamedDefault = ({ data }) => <>
         <p>See how you can <Link to="/get-involved">get involved</Link>, or 
           learn more <Link to="/about">about us</Link>.</p>
 
-      <IsHr />
-      <p style={{fontSize: "1.2em"}}>New! <Link to="/developmental-practice-series">Developmental Practice Series</Link> starts July 10<sup>th</sup></p>
+      {/*<IsHr />*/}
+      {/*<p style={{fontSize: "1.2em"}}>New! <Link to="/developmental-practice-series">Developmental Practice Series</Link> starts July 10<sup>th</sup></p> */}
       <IsHr />
       <p>Inside Intentional Society (IS), you'll find three spaces.</p>
       <div style={{ width: "fit-content", margin: "0 auto"}}>
