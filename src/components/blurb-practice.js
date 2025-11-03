@@ -7,7 +7,7 @@ const NamedDefault = ({ data }) => <>
   <br />
   Our next session is <b>Saturday, November 15<sup>th</sup> from 
   1:00 to 2:30pm Pacific Time (4pm Eastern, 9pm UTC)</b>. <a 
-  href="https://us02web.zoom.us/meeting/register/tZIvdOCtpj4qG9XxuaHMOq_7eGs_6dPCwhae">Click 
+  href="https://us02web.zoom.us/meeting/register/wfE5iMIWQxGc7ob9qllcnQ">Click 
   here to register and receive the meeting link.</a>
 </>
 export default NamedDefault;
