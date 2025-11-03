@@ -56,10 +56,13 @@ const NamedDefault = ({ data }) => <>
         <p style={{margin:"1vw auto"}}>Intentional Society</p>
       </Typography>
       <Typography variant="h4" style={{ color: "#FFFFFF"}}>
-        <p style={{margin:"1vw auto 1vw 3vw"}}>starts with...</p>
+        <p style={{margin:"1vw auto 1vw 3vw"}}>being who we want to be</p>
       </Typography>
       <Typography variant="h4" style={{ color: "#FFFFFF"}}>
-        <p style={{margin:"1vw auto 1vw 3vw"}}>being who we want to be</p>
+        <p style={{margin:"1vw auto 1vw 3vw"}}>doing what we value</p>
+      </Typography>
+            <Typography variant="h4" style={{ color: "#FFFFFF"}}>
+        <p style={{margin:"1vw auto 1vw 3vw"}}>unfolding the future together</p>
       </Typography>
     </div>
     <CenteredColumn>
