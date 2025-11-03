@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby"
 import Typography from '@material-ui/core/Typography';
 import Layout from "../components/layout";
 import CenteredColumn from "../components/centered-column";
