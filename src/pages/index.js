@@ -68,7 +68,7 @@ const NamedDefault = ({ data }) => <>
     <CenteredColumn>
       <div style={{fontSize: "1.2em"}}>
 
-          <p>We are a congregation of friends devoted to growing ourselves 
+          <p>We are a collection of friends devoted to growing ourselves 
           and our society toward thriving futures. 
           In these complex and chaotic times, our world 
           is calling us to become&hellip;</p>
