@@ -26,8 +26,8 @@ const NamedDefault = ({ data }) => (
       <IsHr />
       <Typography variant="h5">History</Typography>
       <p>The Practice Dojo became its own space in 2024 with the debut of the IS <Link to="/developmental-practice-series">
-      Developmental Practice Series</Link>, followed by an Exploratory Practice Series tour and the heartfelt 
-      <Link to="/being-with-it-all">Being With It All</Link> series..</p>
+      Developmental Practice Series</Link>, followed by an Exploratory Practice Series tour and the
+       heartfelt <Link to="/being-with-it-all">Being With It All</Link> series..</p>
       <p>We were present at <a href="https://www.limicon2025.com/">Limicon 2025</a> throughout March 2025. 
       Refined iterations of the DPS course and <Link to="/being-with-it-all">Being With It All</Link>
       </p>
