@@ -37,11 +37,20 @@ const NamedDefault = () => {
         />
 
         <p>
-          Do you feel overwhelmed sometimes? Do you feel like you avoid bad news? Do you defend against being known and loved and rejected by keeping your distance? What would be different if you had more capacity to face it, and feel it without flinching away, and do what is right and good?
+          Life is a lot sometimes, isn't it? Everything happens so much. Everything everywhere all at once. 
+          Atrocities around the world, violence in our neighborhood, all the way to frailties of our bodies. 
+          Sacredness weaves its way through the suffering, and joy, yet we often find numbing and distraction 
+          to be easier than facing the extremes.
         </p>
-        
         <p>
-          Being with it all is where we stretch our perspective-taking and hold space of okayness for it all.
+          There's a secret to peace in the midst of everything: to let it be. To be with it all, we welcome 
+          the reality of what is, the is-ness of what is true — and we welcome our own experience, 
+          without pushing away or clinging. When we practice being, together, we find our capacity expanding. 
+          Fear recedes. Turbulence calms. Our hearts beat on, grounding our connection to life.
+        </p>
+        <p>
+          <i>Being With It All</i> is a simple radical practice of acceptence kindled in 
+          the shared space between our open hearts.
         </p>
 
       </CenteredColumn>
