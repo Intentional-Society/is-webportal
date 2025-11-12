@@ -1,10 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import Typography from '@material-ui/core/Typography';
-import IsHr from "../components/is-hr"
 import Layout from "../components/layout"
 import CenteredColumn from "../components/centered-column"
-import BlurbPractice from "../components/blurb-practice"
 import { StaticImage } from "gatsby-plugin-image"
 
 const NamedDefault = ({ data }) => (
@@ -18,4 +16,6 @@ const NamedDefault = ({ data }) => (
     </CenteredColumn>
     </Layout>
 );
+
+export default NamedDefault;
 
