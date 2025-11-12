@@ -49,7 +49,7 @@ const NamedDefault = () => {
           Fear recedes. Turbulence calms. Our hearts beat on, grounding our connection to life.
         </p>
         <p>
-          <i>Being With It All</i> is a simple radical practice of acceptence kindled in 
+          <i>Being With It All</i> is a simple radical practice of acceptance kindled in 
           the shared space between our open hearts.
         </p>
 
