@@ -14,12 +14,12 @@ const NamedDefault = () => {
         <p>This is a practice series within the IS <Link to="/dojo">Practice Dojo</Link>.</p>
 
         <p><b>November-December 2025:</b> Running now! <br />Our next session 
-        is <b>Saturday, November 15<sup>th</sup> from 
+        is <b>Saturday, November 29<sup>th</sup> from 
         1:00 to 2:30pm Pacific Time (4pm Eastern, 9pm UTC)</b>. <a 
-        href="https://us02web.zoom.us/meeting/register/wfE5iMIWQxGc7ob9qllcnQ">Click 
+        href="https://us02web.zoom.us/meeting/register/CLB3xUoISkiA0bK3pfltKg">Click 
         here to register and receive the meeting link.</a></p>
 
-        <p>Other sessions scheduled for November 29<sup>th</sup> and December 13<sup>th</sup>.</p>
+        <p>Anothe session will occur December 13<sup>th</sup>.</p>
 
         <img
           src="/images/being-with-it-all.png"
