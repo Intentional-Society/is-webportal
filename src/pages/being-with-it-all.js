@@ -19,8 +19,6 @@ const NamedDefault = () => {
         href="https://us02web.zoom.us/meeting/register/hBbSWtGnSKqmVHrUAnsq4g">Click 
         here to register and receive the meeting link.</a></p>
 
-        <p>Anothe session will occur December 13<sup>th</sup>.</p>
-
         <img
           src="/images/being-with-it-all.png"
           alt="Being With It All"
