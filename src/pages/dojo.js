@@ -27,9 +27,12 @@ const NamedDefault = ({ data }) => (
       <Typography variant="h5">History</Typography>
       <p>The Practice Dojo became its own space in 2024 with the debut of the IS <Link to="/developmental-practice-series">
       Developmental Practice Series</Link>, followed by an Exploratory Practice Series tour and the
-       heartfelt <Link to="/being-with-it-all">Being With It All</Link> series..</p>
-      <p>We were present at <a href="https://www.limicon2025.com/">Limicon 2025</a> throughout March 2025. 
-      Refined iterations of the DPS course and <Link to="/being-with-it-all">Being With It All</Link>
+       heartfelt <Link to="/being-with-it-all">Being With It All</Link> series.</p>
+      <p>We co-hosted some <a href="https://tasshin.com/blog/what-is-circling/">Circling</a> practice series with 
+      our friends at <a href="https://www.startercultures.us/creative-offerings/communication-dojo">Communication Dojo</a>.
+        We showed up at <a href="https://www.limicon2025.com/">Limicon 2025</a> throughout March 2025. 
+      Latter 2025 also brought refined iterations of the <Link to="/developmental-practice-series">DPS 
+      course</Link> and <Link to="/being-with-it-all">Being With It All</Link>
       </p>
 
       <IsHr />
