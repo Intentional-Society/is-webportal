@@ -18,11 +18,11 @@ const NamedDefault = ({ data }) => (
           <li><b>relational</b> is caring interactive presence with joint attention and reflection</li>
           <li><b>practice</b> is participatory enactment of a way-of-being, shifting how/who  we are</li>
         </ul></p>
-
+      {/*
        <IsHr />
        <Typography variant="h5">What's happening now</Typography>
        <p><BlurbPractice /></p>
-
+        */}
       <IsHr />
       <Typography variant="h5">History</Typography>
       <p>The Practice Dojo became its own space in 2024 with the debut of the IS <Link to="/developmental-practice-series">

@@ -15,9 +15,10 @@ const NamedDefault = ({ data }) => {
       <CenteredColumn>
         <Typography variant="h3">Get Involved</Typography>
         <p> </p>
-
+        {/*
         <Typography variant="h4">Practice Dojo</Typography>
         <p><BlurbPractice /></p>
+        */}
 
 
         <a className={GlobalCSS.anchorOffset} id="connection-calls"></a>
