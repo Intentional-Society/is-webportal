@@ -7,8 +7,29 @@ import CenteredColumn from "../components/centered-column";
 
 const seasons = [
     {
+    "title": "Season 20 - Q4 2025",
+    "events": [
+      
+      "Unknowing",
+      "Giving & Receiving",
+      "Blessings and Gratitude",
+      "Curiosity Games (& 2R Fair)",
+      "Circling the group",
+      "Archipelago",
+      "T-group stretching",
+      "Personal laminar flow",
+      "Fractal Truth and Love",
+      "IFS for truth and love",
+      "Reconnection and building",
+    ]
+  },
+    {
     "title": "Season 19 - Q3 2025",
     "events": [
+
+      "Political Activism",
+      "Changes for IS",
+      "Aspirations & Schemes",
       "Leverage",
       "Decision-making",
       "Practicing IS-ness",
