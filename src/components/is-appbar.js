@@ -106,24 +106,9 @@ const NamedDefault = () => {
         >
           <MenuItem className={classes.menuMedium} component={Link} to="/about" onClick={handleClose}>About</MenuItem>
           <MenuItem className={classes.menuMedium} component={Link} to="/get-involved" onClick={handleClose}>Get Involved!</MenuItem>
-          <MenuItem
-            className={classes.menuMedium}
-            onClick={(event) => setSpacesAnchor(event.currentTarget)}
-          >
-            Spaces
-          </MenuItem>
-          <Menu
-            anchorEl={spacesAnchor}
-            open={Boolean(spacesAnchor)}
-            onClose={() => setSpacesAnchor(null)}
-            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
-            transformOrigin={{ vertical: 'top', horizontal: 'left' }}
-            getContentAnchorEl={null}
-          >
-            <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/dojo'); }}>Dojo</MenuItem>
-            <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/community'); }}>Community</MenuItem>
-            <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/iv'); }}>Ventures</MenuItem>
-          </Menu>
+          <MenuItem className={classes.menuMedium} component={Link} to="/dojo" onClick={handleClose}>Dojo</MenuItem>
+          <MenuItem className={classes.menuMedium} component={Link} to="/community" onClick={handleClose}>Community</MenuItem>
+          <MenuItem className={classes.menuMedium} component={Link} to="/iv" onClick={handleClose}>Ventures</MenuItem>
           <MenuItem className={classes.menuMedium} component={Link} to="/history" onClick={handleClose}>History</MenuItem>
           <MenuItem component={Link} to="/friends" onClick={handleClose}>Friends</MenuItem>
           <MenuItem component={Link} to="/questions" onClick={handleClose}>Questions?</MenuItem>
