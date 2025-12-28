@@ -1,5 +1,5 @@
-import React from "react"
-import * as styles from "./buttondownsignup.module.css"
+import React from 'react'
+import * as styles from './buttondownsignup.module.css'
 
 const NamedDefault = () => <>
   <div style={{minWidth: "200px", maxWidth: "300px", marginBlock: "1em"}}>

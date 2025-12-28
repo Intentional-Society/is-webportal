@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
-import Typography from '@material-ui/core/Typography';
-import Layout from "../components/layout"
-import CenteredColumn from "../components/centered-column"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react'
+import { Link } from 'gatsby'
+import Typography from '@material-ui/core/Typography'
+import Layout from '../components/layout'
+import CenteredColumn from '../components/centered-column'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const NamedDefault = ({ data }) => (
   <Layout>

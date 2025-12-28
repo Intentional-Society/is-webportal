@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "gatsby";
-import { Accordion, AccordionSummary, AccordionDetails, Typography, Grid, Button } from "@material-ui/core";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import Layout from "../components/layout";
-import CenteredColumn from "../components/centered-column";
+import React from 'react'
+import { Link } from 'gatsby'
+import { Accordion, AccordionSummary, AccordionDetails, Typography, Grid, Button } from '@material-ui/core'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import Layout from '../components/layout'
+import CenteredColumn from '../components/centered-column'
 
 const seasons = [
     {

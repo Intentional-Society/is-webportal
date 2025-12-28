@@ -1,5 +1,5 @@
-import { Link } from "gatsby";
-import React from "react"
+import { Link } from 'gatsby'
+import React from 'react'
 
 const NamedDefault = ({ data }) => <>
   The current Practice Dojo series is <Link to="/being-with-it-all">Being With It All</Link>.

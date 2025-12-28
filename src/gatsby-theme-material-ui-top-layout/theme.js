@@ -1,7 +1,7 @@
 // as illustrated in https://github.com/mui-org/material-ui/tree/master/examples/gatsby-theme
 // ...this seems to get picked up automagically from the theme plugin
 
-import { createTheme } from "@material-ui/core";
+import { createTheme } from '@material-ui/core'
 
 const theme = createTheme({
   typography: {

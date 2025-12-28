@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 const NamedDefault = ({ data }) => <>
   <hr style={{border:"1px outset",

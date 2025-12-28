@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 const NamedDefault = ({ data }) => <>
   <a href="https://us02web.zoom.us/meeting/register/BXLAtIuWT_idRYHllRUbqg">
