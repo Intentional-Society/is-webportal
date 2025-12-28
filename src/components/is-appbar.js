@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "gatsby";
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
-import * as GlobalCSS from "../styles/global.module.css"
+import * as GlobalCSS from '../styles/global.module.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -10,32 +10,32 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/Menu';
-import { navigate } from "gatsby";
+import { navigate } from 'gatsby';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
     color: theme.palette.secondary.main,
-    opacity: "80%",
+    opacity: '80%',
     /* made with https://mycolor.space/gradient3?ori=circle&hex=%235C9D93&hex2=%2306A2C2&hex3=%232B70C3&submit=submit 
     hand modifications informed by https://css-tricks.com/radial-gradient-recipes/ */
-    backgroundImage: "radial-gradient(circle at 20% -150%, #5c9d93, #519f9a, #44a0a2, #36a1ab, #25a2b5, #109fbb, #009bc1, #0097c6, #008ec7, #0085c8, #0c7bc6, #2b70c3)",
+    backgroundImage: 'radial-gradient(circle at 20% -150%, #5c9d93, #519f9a, #44a0a2, #36a1ab, #25a2b5, #109fbb, #009bc1, #0097c6, #008ec7, #0085c8, #0c7bc6, #2b70c3)',
   },
   menuButton: {
-    color: "inherit",
+    color: 'inherit',
     [theme.breakpoints.up('lg')]: { display: 'none', },
   },
   title: {
     flexGrow: 1,
-    color: "inherit",
+    color: 'inherit',
   },
   navButtons3: {
-    textTransform: "inherit",
-    color: "inherit",
+    textTransform: 'inherit',
+    color: 'inherit',
     [theme.breakpoints.down('xs')]: { display: 'none', },
   },
   navButtons6: {
-    textTransform: "inherit",
-    color: "inherit",
+    textTransform: 'inherit',
+    color: 'inherit',
     [theme.breakpoints.down('md')]: { display: 'none', },
   },
   navMenu3: {
@@ -78,13 +78,13 @@ const NamedDefault = () => {
           anchorEl={spacesAnchor}
           open={Boolean(spacesAnchor)}
           onClose={() => setSpacesAnchor(null)}
-          anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-          transformOrigin={{ vertical: "top", horizontal: "left" }}
+          anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+          transformOrigin={{ vertical: 'top', horizontal: 'left' }}
           getContentAnchorEl={null}
         >
-          <MenuItem onClick={() => { setSpacesAnchor(null); navigate("/dojo"); }}>Dojo</MenuItem>
-          <MenuItem onClick={() => { setSpacesAnchor(null); navigate("/community"); }}>Community</MenuItem>
-          <MenuItem onClick={() => { setSpacesAnchor(null); navigate("/iv"); }}>Ventures</MenuItem>
+          <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/dojo'); }}>Dojo</MenuItem>
+          <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/community'); }}>Community</MenuItem>
+          <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/iv'); }}>Ventures</MenuItem>
         </Menu>
         <Button className={classes.navButtons3} component={Link} to="/history">History</Button>
         <Button className={classes.navButtons6} component={Link} to="/friends">Friends</Button>
@@ -116,13 +116,13 @@ const NamedDefault = () => {
             anchorEl={spacesAnchor}
             open={Boolean(spacesAnchor)}
             onClose={() => setSpacesAnchor(null)}
-            anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-            transformOrigin={{ vertical: "top", horizontal: "left" }}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+            transformOrigin={{ vertical: 'top', horizontal: 'left' }}
             getContentAnchorEl={null}
           >
-            <MenuItem onClick={() => { setSpacesAnchor(null); navigate("/dojo"); }}>Dojo</MenuItem>
-            <MenuItem onClick={() => { setSpacesAnchor(null); navigate("/community"); }}>Community</MenuItem>
-            <MenuItem onClick={() => { setSpacesAnchor(null); navigate("/iv"); }}>Ventures</MenuItem>
+            <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/dojo'); }}>Dojo</MenuItem>
+            <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/community'); }}>Community</MenuItem>
+            <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/iv'); }}>Ventures</MenuItem>
           </Menu>
           <MenuItem className={classes.navMenu3} component={Link} to="/history" onClick={handleClose}>History</MenuItem>
           <MenuItem component={Link} to="/friends" onClick={handleClose}>Friends</MenuItem>

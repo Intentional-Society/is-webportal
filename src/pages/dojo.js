@@ -1,14 +1,14 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
-import IsHr from "../components/is-hr"
-import Layout from "../components/layout"
-import CenteredColumn from "../components/centered-column"
-import BlurbPractice from "../components/blurb-practice"
+import IsHr from '../components/is-hr';
+import Layout from '../components/layout';
+import CenteredColumn from '../components/centered-column';
+import BlurbPractice from '../components/blurb-practice';
 
 const NamedDefault = ({ data }) => (
   <Layout>
-    <div style={{ height: "5vh" }}></div>
+    <div style={{ height: '5vh' }}></div>
     <CenteredColumn>
       <Typography variant="h2">Practice Dojo</Typography>
       <p>With open front doors, the Practice Dojo is a skill-building space welcoming novices and 
@@ -61,7 +61,7 @@ const NamedDefault = ({ data }) => (
         <ul><li>Clean/Pure Coaching, Parts Work (IFS), Ideal Parent Figure Protocol, Appreciative Inquiry, Death Cafe, Imaginal work, Shadow work, Open Stance circles, OANMarket/Gifting practice</li></ul>
         </p>
 
-      <div style={{textAlign: "right", marginBottom: "-25px"}}>
+      <div style={{textAlign: 'right', marginBottom: '-25px'}}>
         <Link to="/">Back to home page</Link>
       </div>
     </CenteredColumn>

@@ -1,45 +1,45 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
-import { StaticImage } from "gatsby-plugin-image"
-import Layout from "../components/layout"
-import ButtondownSignup from "../components/buttondownsignup"
-import IsHr from "../components/is-hr"
-import BlurbPractice from "../components/blurb-practice"
-import CenteredColumn from "../components/centered-column"
-import * as GlobalCSS from "../styles/global.module.css"
-import { Grid } from "@material-ui/core";
+import { StaticImage } from 'gatsby-plugin-image';
+import Layout from '../components/layout';
+import ButtondownSignup from '../components/buttondownsignup';
+import IsHr from '../components/is-hr';
+import BlurbPractice from '../components/blurb-practice';
+import CenteredColumn from '../components/centered-column';
+import * as GlobalCSS from '../styles/global.module.css';
+import { Grid } from '@material-ui/core';
 
 const imageList = [
   {
-    image: "/images/logos/second-renaissance.jpg",
-    link: "https://secondrenaissance.net",
-    comment: "Exploring better futures through collective intelligence."
+    image: '/images/logos/second-renaissance.jpg',
+    link: 'https://secondrenaissance.net',
+    comment: 'Exploring better futures through collective intelligence.'
   },
   {
-    image: "/images/logos/life-itself.jpg",
-    link: "https://lifeitself.us",
-    comment: "A community for philosophy, culture, and sustainable living."
+    image: '/images/logos/life-itself.jpg',
+    link: 'https://lifeitself.us',
+    comment: 'A community for philosophy, culture, and sustainable living.'
   },
   {
-    image: "/images/logos/enspiral.png",
-    link: "https://www.enspiral.com/",
-    comment: "A network of freelancers focused on self-managed organizations."
+    image: '/images/logos/enspiral.png',
+    link: 'https://www.enspiral.com/',
+    comment: 'A network of freelancers focused on self-managed organizations.'
   },
   {
-    image: "/images/logos/microsolidarity.jpg",
-    link: "https://www.microsolidarity.cc/",
-    comment: "A framework for decentralized organizing and community-building."
+    image: '/images/logos/microsolidarity.jpg',
+    link: 'https://www.microsolidarity.cc/',
+    comment: 'A framework for decentralized organizing and community-building.'
   },
   {
-    image: "/images/logos/building-belonging.png",
-    link: "https://www.buildingbelonging.us/",
-    comment: "A movement for creating spaces where everyone belongs."
+    image: '/images/logos/building-belonging.png',
+    link: 'https://www.buildingbelonging.us/',
+    comment: 'A movement for creating spaces where everyone belongs.'
   },
   {
-    image: "/images/logos/starters-culture.png",
-    link: "https://www.startercultures.us/",
-    comment: "Co-creating new economic models for livelihoods and co-ops."
+    image: '/images/logos/starters-culture.png',
+    link: 'https://www.startercultures.us/',
+    comment: 'Co-creating new economic models for livelihoods and co-ops.'
   }
 ];
 
@@ -48,32 +48,32 @@ const imageList = [
 const NamedDefault = ({ data }) => <>
   <Layout>
     <StaticImage src="../../static/images/bg/E7EFEBbg.png" layout="fullWidth" alt="" loading="eager"
-                style={{ height: "60vh", zIndex: -1, position: "absolute", 
-                        top: "0px", left: "0px", right: "0px"}}
-                imgStyle={{objectFit: "fill"}}/>
-    <div style={{  minWidth: "350px", maxWidth: "500px", width: "fit-content", margin: "0 auto", height: "280px" }}>
-      <Typography variant="h2" style={{ color: "#FFFFFF"}}>
-        <p style={{margin:"1vw auto"}}>Intentional Society</p>
+                style={{ height: '60vh', zIndex: -1, position: 'absolute', 
+                        top: '0px', left: '0px', right: '0px'}}
+                imgStyle={{objectFit: 'fill'}}/>
+    <div style={{  minWidth: '350px', maxWidth: '500px', width: 'fit-content', margin: '0 auto', height: '280px' }}>
+      <Typography variant="h2" style={{ color: '#FFFFFF'}}>
+        <p style={{margin:'1vw auto'}}>Intentional Society</p>
       </Typography>
-      <Typography variant="h4" style={{ color: "#FFFFFF"}}>
-        <p style={{margin:"1vw auto 1vw 3vw"}}>being who we want to be</p>
+      <Typography variant="h4" style={{ color: '#FFFFFF'}}>
+        <p style={{margin:'1vw auto 1vw 3vw'}}>being who we want to be</p>
       </Typography>
-      <Typography variant="h4" style={{ color: "#FFFFFF"}}>
-        <p style={{margin:"1vw auto 1vw 3vw"}}>doing what we value</p>
+      <Typography variant="h4" style={{ color: '#FFFFFF'}}>
+        <p style={{margin:'1vw auto 1vw 3vw'}}>doing what we value</p>
       </Typography>
-            <Typography variant="h4" style={{ color: "#FFFFFF"}}>
-        <p style={{margin:"1vw auto 1vw 3vw"}}>unfolding the future together</p>
+            <Typography variant="h4" style={{ color: '#FFFFFF'}}>
+        <p style={{margin:'1vw auto 1vw 3vw'}}>unfolding the future together</p>
       </Typography>
     </div>
     <CenteredColumn>
-      <div style={{fontSize: "1.2em"}}>
+      <div style={{fontSize: '1.2em'}}>
 
           <p>We are a collection of friends devoted to growing ourselves 
           and our society toward thriving futures. 
           In these complex and chaotic times, our world 
           is calling us to become&hellip;</p>
 
-        <div style={{margin: "0 auto 0 100px", fontSize: "1.5em"}}>
+        <div style={{margin: '0 auto 0 100px', fontSize: '1.5em'}}>
           <p>&hellip;<b>aware</b> enough to <b>see</b> clearly 👁‍🗨</p>
           <p>&hellip;<b>spacious</b> enough to <b>face</b> anything 💗</p>
           <p>&hellip;and <b>wise</b> enough to <b>wield</b> our power 👑</p>
@@ -89,11 +89,11 @@ const NamedDefault = ({ data }) => <>
           learn more <Link to="/about">about us</Link>.</p>
 
       <IsHr />
-      <p style={{fontSize: "1.2em"}}><Link to="/members">Community</Link> season 20 runs October through December.</p>
+      <p style={{fontSize: '1.2em'}}><Link to="/members">Community</Link> season 20 runs October through December.</p>
 
       <IsHr />
       <p>Inside Intentional Society (IS), you'll find three spaces.</p>
-      <div style={{ width: "fit-content", margin: "0 auto"}}>
+      <div style={{ width: 'fit-content', margin: '0 auto'}}>
       <img src="/images/s17-3spaces.jpg" loading="eager" width="480" alt="three spaces of IS: practice dojo, community hub, intentional ventures"/>
       </div>
       <p>The <Link to="/dojo">Practice Dojo</Link> is open to the public for developmental-relational skill-building.</p>
@@ -135,10 +135,10 @@ const NamedDefault = ({ data }) => <>
 
       </div>
 
-      <div style={{textAlign: "right", marginBottom: "-25px"}}>
+      <div style={{textAlign: 'right', marginBottom: '-25px'}}>
         Next page: <Link to="/about">Who We Are</Link>
       </div>
     </CenteredColumn>
   </Layout>
-</>
+</>;
 export default NamedDefault;

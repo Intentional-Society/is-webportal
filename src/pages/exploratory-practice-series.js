@@ -1,12 +1,12 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
-import Layout from "../components/layout"
-import CenteredColumn from "../components/centered-column"
+import Layout from '../components/layout';
+import CenteredColumn from '../components/centered-column';
 
 const NamedDefault = ({ data }) => (
   <Layout>
-    <div style={{ height: "10vh" }}></div>
+    <div style={{ height: '10vh' }}></div>
     <CenteredColumn>
     <Typography variant="h2">Exploratory Practice Series</Typography>
       <p>With open front doors, the Practice Dojo welcomes novices and experts alike 
@@ -35,5 +35,5 @@ const NamedDefault = ({ data }) => (
       </p>
     </CenteredColumn>
   </Layout>
-)
+);
 export default NamedDefault;

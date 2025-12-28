@@ -8,6 +8,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -22,9 +24,7 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/styles": "^4.11.5",
     "@types/react": "^19.0.10",
-    "babel-eslint": "^10.1.0",
-    "eslint": "4.12.1",
-    "gatsby": "^3.8.1",
+        "gatsby": "^3.8.1",
     "gatsby-plugin-gtag": "^1.0.13",
     "gatsby-plugin-image": "^1.8.0",
     "gatsby-plugin-manifest": "^3.8.0",
@@ -40,6 +40,8 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.0",
     "prettier": "2.3.2"
   },
   "repository": {
