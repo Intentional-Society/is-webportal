@@ -28,20 +28,20 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     color: 'inherit',
   },
-  navButtons3: {
+  navMedium: {
     textTransform: 'inherit',
     color: 'inherit',
     [theme.breakpoints.down('xs')]: { display: 'none', },
   },
-  navButtons6: {
+  navLarge: {
     textTransform: 'inherit',
     color: 'inherit',
     [theme.breakpoints.down('md')]: { display: 'none', },
   },
-  navMenu3: {
+  menuMedium: {
     [theme.breakpoints.up('sm')]: { display: 'none', },
   },
-  navMenu6: {
+  menuLarge: {
     [theme.breakpoints.up('lg')]: { display: 'none', },
   },
 }));
@@ -65,10 +65,10 @@ const NamedDefault = () => {
         <Typography variant="h5" className={classes.title}>
           <Link to="/" className={GlobalCSS.nostyleLink}>Intentional Society</Link>
         </Typography>
-        <Button className={classes.navButtons3} component={Link} to="/about">About</Button>
-        <Button className={classes.navButtons3} component={Link} to="/get-involved">Get Involved</Button>
+        <Button className={classes.navMedium} component={Link} to="/about">About</Button>
+        <Button className={classes.navMedium} component={Link} to="/get-involved">Get Involved</Button>
         <Button
-          className={classes.navButtons3}
+          className={classes.navMedium}
           onClick={(event) => setSpacesAnchor(event.currentTarget)}
         >
           Spaces
@@ -86,17 +86,17 @@ const NamedDefault = () => {
           <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/community'); }}>Community</MenuItem>
           <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/iv'); }}>Ventures</MenuItem>
         </Menu>
-        <Button className={classes.navButtons3} component={Link} to="/history">History</Button>
-        <Button className={classes.navButtons6} component={Link} to="/friends">Friends</Button>
-        <Button className={classes.navButtons6} component={Link} to="/questions">Questions?</Button>
-        <Button className={classes.navButtons6} component={Link} to="/resources">Resources</Button>
+        <Button className={classes.navMedium} component={Link} to="/history">History</Button>
+        <Button className={classes.navLarge} component={Link} to="/friends">Friends</Button>
+        <Button className={classes.navLarge} component={Link} to="/questions">Questions?</Button>
+        <Button className={classes.navLarge} component={Link} to="/resources">Resources</Button>
         <IconButton aria-controls="top-nav-menu" aria-haspopup="true" aria-label="menu"
                     className={classes.menuButton} onClick={handleClick}>
           <MenuIcon />
         </IconButton>
         <Menu
           id="top-nav-menu"
-          className={classes.navMenu6}
+          className={classes.menuLarge}
           anchorEl={anchorEl}
           anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
           transformOrigin={{ vertical: 'top', horizontal: 'right' }}
@@ -104,10 +104,10 @@ const NamedDefault = () => {
           open={Boolean(anchorEl)}
           onClose={handleClose}
         >
-          <MenuItem className={classes.navMenu3} component={Link} to="/about" onClick={handleClose}>About</MenuItem>
-          <MenuItem className={classes.navMenu3} component={Link} to="/get-involved" onClick={handleClose}>Get Involved!</MenuItem>
+          <MenuItem className={classes.menuMedium} component={Link} to="/about" onClick={handleClose}>About</MenuItem>
+          <MenuItem className={classes.menuMedium} component={Link} to="/get-involved" onClick={handleClose}>Get Involved!</MenuItem>
           <MenuItem
-            className={classes.navMenu3}
+            className={classes.menuMedium}
             onClick={(event) => setSpacesAnchor(event.currentTarget)}
           >
             Spaces
@@ -124,7 +124,7 @@ const NamedDefault = () => {
             <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/community'); }}>Community</MenuItem>
             <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/iv'); }}>Ventures</MenuItem>
           </Menu>
-          <MenuItem className={classes.navMenu3} component={Link} to="/history" onClick={handleClose}>History</MenuItem>
+          <MenuItem className={classes.menuMedium} component={Link} to="/history" onClick={handleClose}>History</MenuItem>
           <MenuItem component={Link} to="/friends" onClick={handleClose}>Friends</MenuItem>
           <MenuItem component={Link} to="/questions" onClick={handleClose}>Questions?</MenuItem>
           <MenuItem component={Link} to="/resources" onClick={handleClose}>Resources</MenuItem>
