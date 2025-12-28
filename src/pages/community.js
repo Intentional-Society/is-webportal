@@ -1,13 +1,13 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 import Typography from '@material-ui/core/Typography';
-import Layout from "../components/layout"
-import CenteredColumn from "../components/centered-column"
-import * as GlobalCSS from "../styles/global.module.css";
+import Layout from '../components/layout';
+import CenteredColumn from '../components/centered-column';
+import * as GlobalCSS from '../styles/global.module.css';
 
 const NamedDefault = ({ data }) => (
   <Layout>
-    <div style={{ height: "5vh" }}></div>
+    <div style={{ height: '5vh' }}></div>
     <CenteredColumn>
       <Typography variant="h2">Community</Typography>
 
@@ -46,7 +46,7 @@ const NamedDefault = ({ data }) => (
         self-organize for any shared purpose and duration.
       </p>
         
-      <div style={{textAlign: "right", marginBottom: "-25px"}}>
+      <div style={{textAlign: 'right', marginBottom: '-25px'}}>
         <Link to="/">Back to home page</Link>
       </div>
     </CenteredColumn>

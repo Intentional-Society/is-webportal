@@ -1,8 +1,8 @@
-import React from "react"
-import * as styles from "./buttondownsignup.module.css"
+import React from 'react';
+import * as styles from './buttondownsignup.module.css';
 
 const NamedDefault = () => <>
-  <div style={{minWidth: "200px", maxWidth: "300px", marginBlock: "1em"}}>
+  <div style={{minWidth: '200px', maxWidth: '300px', marginBlock: '1em'}}>
     <div className={styles.popout}>
       <form
         action="https://buttondown.email/api/emails/embed-subscribe/intentionalsociety"
@@ -16,5 +16,5 @@ const NamedDefault = () => <>
       </form>
     </div>
   </div>
-</>
+</>;
 export default NamedDefault;
