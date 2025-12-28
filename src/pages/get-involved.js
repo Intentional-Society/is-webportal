@@ -1,17 +1,17 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Typography from '@material-ui/core/Typography'
-import Layout from '../components/layout'
-import CenteredColumn from '../components/centered-column'
-import ButtondownSignup from '../components/buttondownsignup'
-import BlurbOfficeHours from '../components/blurb-officehours'
-import BlurbPractice from '../components/blurb-practice'
-import * as GlobalCSS from '../styles/global.module.css'
+import React from 'react';
+import { Link } from 'gatsby';
+import Typography from '@material-ui/core/Typography';
+import Layout from '../components/layout';
+import CenteredColumn from '../components/centered-column';
+import ButtondownSignup from '../components/buttondownsignup';
+import BlurbOfficeHours from '../components/blurb-officehours';
+import BlurbPractice from '../components/blurb-practice';
+import * as GlobalCSS from '../styles/global.module.css';
 
 const NamedDefault = ({ data }) => {
   return (
     <Layout>
-      <div style={{ height: "5vh" }}></div>
+      <div style={{ height: '5vh' }}></div>
       <CenteredColumn>
         <Typography variant="h3">Get Involved</Typography>
         <p> </p>
@@ -56,7 +56,7 @@ const NamedDefault = ({ data }) => {
           occasional announcements, not much of a nag/reminder stream. Also a handy
           way to simply refer to Intentional Society in tweets, even if you don't follow the account.</p>
 
-        <div style={{textAlign: "right", marginBottom: "-25px"}}>
+        <div style={{textAlign: 'right', marginBottom: '-25px'}}>
           Next page: <Link to="/history">History</Link>
         </div>
       </CenteredColumn>

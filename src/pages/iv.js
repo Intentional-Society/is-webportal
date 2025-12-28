@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Typography from '@material-ui/core/Typography'
-import Layout from '../components/layout'
-import CenteredColumn from '../components/centered-column'
-import IsHr from '../components/is-hr'
+import React from 'react';
+import { Link } from 'gatsby';
+import Typography from '@material-ui/core/Typography';
+import Layout from '../components/layout';
+import CenteredColumn from '../components/centered-column';
+import IsHr from '../components/is-hr';
 
 const NamedDefault = ({ data }) => (
   <Layout>
-    <div style={{ height: "5vh" }}></div>
+    <div style={{ height: '5vh' }}></div>
     <CenteredColumn>
       <Typography variant="h2">Intentional Ventures</Typography>
 
@@ -57,7 +57,7 @@ const NamedDefault = ({ data }) => (
       <p>Inspirations include <a href="https://www.enspiral.com/">Enspiral</a>, <a href="https://www.coralus.world/">Coralus</a>, and the 
         hypothetical <a href="https://laymanpascal.substack.com/p/the-metamodern-business-bureau-mmbb">Metamodern Business Bureau</a>.</p>
 
-      <div style={{textAlign: "right", marginBottom: "-25px"}}>
+      <div style={{textAlign: 'right', marginBottom: '-25px'}}>
         <Link to="/">Back to home page</Link>
       </div>
     </CenteredColumn>

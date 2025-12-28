@@ -1,21 +1,21 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Typography from '@material-ui/core/Typography'
-import Layout from '../components/layout'
-import CenteredColumn from '../components/centered-column'
-import IsHr from '../components/is-hr'
-import * as GlobalCSS from '../styles/global.module.css'
+import React from 'react';
+import { Link } from 'gatsby';
+import Typography from '@material-ui/core/Typography';
+import Layout from '../components/layout';
+import CenteredColumn from '../components/centered-column';
+import IsHr from '../components/is-hr';
+import * as GlobalCSS from '../styles/global.module.css';
 
 const NamedDefault = () => (
   <Layout>
-    <div style={{ height: "5vh" }}></div>
+    <div style={{ height: '5vh' }}></div>
     <CenteredColumn>
       {/* Section: Who We Are */}
       <Typography variant="h4">Who We Are</Typography>
       <img
         src="/images/wave-to-internet.png"
         alt="Us waving to the internet"
-        style={{ float: "right", maxWidth: "50%", margin: "40px 0px 10px 4vw" }}
+        style={{ float: 'right', maxWidth: '50%', margin: '40px 0px 10px 4vw' }}
       />
      <p>We are a geographically distributed community of seekers and friends, connecting 
         face-to-face via video calls. We connect and reflect together in relationship 
@@ -158,7 +158,7 @@ const NamedDefault = () => (
         we think that any future of global unity must emerge fractally
         outward from interpersonal trust and cooperation at local scale.
       </p>
-      <div style={{ textAlign: "right", marginBottom: "-25px" }}>
+      <div style={{ textAlign: 'right', marginBottom: '-25px' }}>
         Next page: <Link to="/get-involved">Get Involved!</Link>
       </div>
     </CenteredColumn>

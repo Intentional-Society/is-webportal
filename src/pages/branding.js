@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Typography from '@material-ui/core/Typography'
-import Layout from '../components/layout'
-import CenteredColumn from '../components/centered-column'
-import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react';
+import { Link } from 'gatsby';
+import Typography from '@material-ui/core/Typography';
+import Layout from '../components/layout';
+import CenteredColumn from '../components/centered-column';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const NamedDefault = ({ data }) => (
   <Layout>
-    <div style={{ height: "5vh" }}></div>
+    <div style={{ height: '5vh' }}></div>
     <CenteredColumn>
       <Typography variant="h2">Branding</Typography>
       <p>For press and partners including representations of Intentional Society in other media</p>

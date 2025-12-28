@@ -1,5 +1,5 @@
-import { Link } from 'gatsby'
-import React from 'react'
+import { Link } from 'gatsby';
+import React from 'react';
 
 const NamedDefault = ({ data }) => <>
   The current Practice Dojo series is <Link to="/being-with-it-all">Being With It All</Link>.
@@ -9,5 +9,5 @@ const NamedDefault = ({ data }) => <>
   1:00 to 2:30pm Pacific Time (4pm Eastern, 9pm UTC)</b>. <a 
   href="https://us02web.zoom.us/meeting/register/hBbSWtGnSKqmVHrUAnsq4g">Click 
   here to register and receive the meeting link.</a>
-</>
+</>;
 export default NamedDefault;

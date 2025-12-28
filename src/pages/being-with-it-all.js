@@ -1,13 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Typography from '@material-ui/core/Typography'
-import Layout from '../components/layout'
-import CenteredColumn from '../components/centered-column'
+import React from 'react';
+import { Link } from 'gatsby';
+import Typography from '@material-ui/core/Typography';
+import Layout from '../components/layout';
+import CenteredColumn from '../components/centered-column';
 
 const NamedDefault = () => {
   return (
     <Layout>
-      <div style={{ height: "5vh" }}></div>
+      <div style={{ height: '5vh' }}></div>
       <CenteredColumn>
         <Typography variant="h2">Being With It All</Typography>
 
@@ -23,14 +23,14 @@ const NamedDefault = () => {
           src="/images/being-with-it-all.png"
           alt="Being With It All"
           style={{
-            maxWidth: "700px",
-            width: "100%",
-            height: "auto",
-            display: "block",
-            margin: "0 auto 30px auto",
-            borderRadius: "12px",
-            boxShadow: "0 6px 15px rgba(0,0,0,0.2)",
-            border: "1px solid #e0e0e0"
+            maxWidth: '700px',
+            width: '100%',
+            height: 'auto',
+            display: 'block',
+            margin: '0 auto 30px auto',
+            borderRadius: '12px',
+            boxShadow: '0 6px 15px rgba(0,0,0,0.2)',
+            border: '1px solid #e0e0e0'
           }}
         />
 
