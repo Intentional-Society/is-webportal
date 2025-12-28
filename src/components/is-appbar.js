@@ -28,12 +28,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     color: 'inherit',
   },
-  navMedium: {
+  buttonsMedium: {
     textTransform: 'inherit',
     color: 'inherit',
     [theme.breakpoints.down('xs')]: { display: 'none', },
   },
-  navLarge: {
+  buttonsLarge: {
     textTransform: 'inherit',
     color: 'inherit',
     [theme.breakpoints.down('md')]: { display: 'none', },
@@ -65,10 +65,10 @@ const NamedDefault = () => {
         <Typography variant="h5" className={classes.title}>
           <Link to="/" className={GlobalCSS.nostyleLink}>Intentional Society</Link>
         </Typography>
-        <Button className={classes.navMedium} component={Link} to="/about">About</Button>
-        <Button className={classes.navMedium} component={Link} to="/get-involved">Get Involved</Button>
+        <Button className={classes.buttonsMedium} component={Link} to="/about">About</Button>
+        <Button className={classes.buttonsMedium} component={Link} to="/get-involved">Get Involved</Button>
         <Button
-          className={classes.navMedium}
+          className={classes.buttonsMedium}
           onClick={(event) => setSpacesAnchor(event.currentTarget)}
         >
           Spaces
@@ -86,10 +86,10 @@ const NamedDefault = () => {
           <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/community'); }}>Community</MenuItem>
           <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/iv'); }}>Ventures</MenuItem>
         </Menu>
-        <Button className={classes.navMedium} component={Link} to="/history">History</Button>
-        <Button className={classes.navLarge} component={Link} to="/friends">Friends</Button>
-        <Button className={classes.navLarge} component={Link} to="/questions">Questions?</Button>
-        <Button className={classes.navLarge} component={Link} to="/resources">Resources</Button>
+        <Button className={classes.buttonsMedium} component={Link} to="/history">History</Button>
+        <Button className={classes.buttonsLarge} component={Link} to="/friends">Friends</Button>
+        <Button className={classes.buttonsLarge} component={Link} to="/questions">Questions?</Button>
+        <Button className={classes.buttonsLarge} component={Link} to="/resources">Resources</Button>
         <IconButton aria-controls="top-nav-menu" aria-haspopup="true" aria-label="menu"
                     className={classes.menuButton} onClick={handleClick}>
           <MenuIcon />
