@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
 import * as GlobalCSS from '../styles/global.module.css';
@@ -50,35 +50,6 @@ const NamedDefault = () => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const [spacesAnchor, setSpacesAnchor] = useState(null);
-  const [canHover, setCanHover] = useState(false);
-  const closeTimeoutRef = useRef(null);
-
-  useEffect(() => {
-    setCanHover(window.matchMedia('(hover: hover)').matches);
-  }, []);
-
-  const openSpacesMenu = (event) => {
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-    }
-    setSpacesAnchor(event.currentTarget);
-  };
-
-  const closeSpacesMenu = () => {
-    setSpacesAnchor(null);
-  };
-
-  const handleSpacesButtonLeave = () => {
-    closeTimeoutRef.current = setTimeout(() => {
-      closeSpacesMenu();
-    }, 100);
-  };
-
-  const handleSpacesMenuEnter = () => {
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-    }
-  };
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -98,9 +69,7 @@ const NamedDefault = () => {
         <Button className={classes.buttonsMedium} component={Link} to="/get-involved">Get Involved</Button>
         <Button
           className={classes.buttonsMedium}
-          onClick={canHover ? undefined : openSpacesMenu}
-          onMouseEnter={canHover ? openSpacesMenu : undefined}
-          onMouseLeave={canHover ? handleSpacesButtonLeave : undefined}
+          onClick={(event) => setSpacesAnchor(event.currentTarget)}
         >
           Spaces
         </Button>
@@ -108,14 +77,10 @@ const NamedDefault = () => {
         <Menu
           anchorEl={spacesAnchor}
           open={Boolean(spacesAnchor)}
-          onClose={closeSpacesMenu}
+          onClose={() => setSpacesAnchor(null)}
           anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
           transformOrigin={{ vertical: 'top', horizontal: 'left' }}
           getContentAnchorEl={null}
-          MenuListProps={{
-            onMouseEnter: canHover ? handleSpacesMenuEnter : undefined,
-            onMouseLeave: canHover ? closeSpacesMenu : undefined,
-          }}
         >
           <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/dojo'); }}>Dojo</MenuItem>
           <MenuItem onClick={() => { setSpacesAnchor(null); navigate('/community'); }}>Community</MenuItem>
