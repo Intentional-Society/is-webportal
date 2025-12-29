@@ -1,3 +1,15 @@
+/* Shared IsHr styling variables */
+:root {
+  --is-hr-border: 1px outset;
+  --is-hr-bg-color: #08080F;
+  --is-hr-color: #08080F;
+  --is-hr-height: 2px;
+  --is-hr-width: 25%;
+  --is-hr-margin-left: 20px;
+  --is-hr-margin-top: 1em;
+  --is-hr-margin-bottom: 1em;
+}
+
 .center-children {
   text-align: center;
 }

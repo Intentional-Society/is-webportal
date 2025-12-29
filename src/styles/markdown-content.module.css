@@ -32,17 +32,17 @@
   margin-top: 0;
 }
 
-/* Style hr to match IsHr component */
+/* Style hr using shared IsHr variables from global.module.css */
 .markdownContent hr {
-  border: 1px outset;
-  background-color: #08080F;
-  color: #08080F;
-  height: 2px;
-  width: 25%;
+  border: var(--is-hr-border);
+  background-color: var(--is-hr-bg-color);
+  color: var(--is-hr-color);
+  height: var(--is-hr-height);
+  width: var(--is-hr-width);
   text-align: left;
-  margin-left: 20px;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-left: var(--is-hr-margin-left);
+  margin-top: var(--is-hr-margin-top);
+  margin-bottom: var(--is-hr-margin-bottom);
 }
 
 /* Ensure paragraphs have proper spacing */
