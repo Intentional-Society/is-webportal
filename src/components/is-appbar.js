@@ -10,6 +10,7 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/Menu';
+import ArrowDropDown from '@material-ui/icons/ArrowDropDown';
 import { navigate } from 'gatsby';
 
 const useStyles = makeStyles((theme) => ({
@@ -71,7 +72,7 @@ const NamedDefault = () => {
           className={classes.buttonsMedium}
           onClick={(event) => setSpacesAnchor(event.currentTarget)}
         >
-          Spaces
+          Spaces <ArrowDropDown fontSize="small" />
         </Button>
 
         <Menu
