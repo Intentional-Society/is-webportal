@@ -41,6 +41,7 @@ module.exports = {
       }
     },
     'gatsby-transformer-remark',
+    'gatsby-plugin-catch-links',
     'gatsby-transformer-sharp',
   ],
 }
