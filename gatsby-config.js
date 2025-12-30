@@ -18,7 +18,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-emotion', // handles Emotion SSR for MUI
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     {
