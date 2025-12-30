@@ -1,7 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import Helmet from 'react-helmet'
 import './layout.module.css'
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -13,24 +11,9 @@ import '@fontsource/gudea/400.css'
 import '@fontsource/ovo/400.css'
 
 const NamedDefault = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-          description
-        }
-      }
-    }
-  `)
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Helmet>
-        <title>{data.site.siteMetadata.title}</title>
-        <meta name="description" content={data.site.siteMetadata.description} />
-      </Helmet>
       <ISAppBar />
       <Toolbar /> {/* Spacer for fixed AppBar */}
       {children}
