@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
 import Layout from '../components/layout';
 import CenteredColumn from '../components/centered-column';
 import ButtondownSignup from '../components/buttondownsignup';

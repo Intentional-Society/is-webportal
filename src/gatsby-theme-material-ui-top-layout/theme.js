@@ -1,16 +1,22 @@
-// as illustrated in https://github.com/mui-org/material-ui/tree/master/examples/gatsby-theme
-// ...this seems to get picked up automagically from the theme plugin
+// Theme configuration for MUI v7
+// Now used via ThemeProvider in layout.js instead of gatsby-theme-material-ui
 
-import { createTheme } from '@material-ui/core';
+import { createTheme } from '@mui/material/styles'
+
+const gudeaFont = ['Gudea', 'Helvetica', 'Arial', 'sans-serif'].join(',')
+const ovoFont = ['Ovo', 'Georgia', 'Times New Roman', 'serif'].join(',')
 
 const theme = createTheme({
   typography: {
-    fontFamily: [
-        'Gudea',
-        'Helvetica',
-        'Arial',
-        'sans-serif'
-    ].join(','),
+    // Default body font is Ovo (serif)
+    fontFamily: ovoFont,
+    // Headings use Gudea (sans-serif)
+    h1: { fontFamily: gudeaFont },
+    h2: { fontFamily: gudeaFont },
+    h3: { fontFamily: gudeaFont },
+    h4: { fontFamily: gudeaFont },
+    h5: { fontFamily: gudeaFont },
+    h6: { fontFamily: gudeaFont },
   },
   palette: {
     primary: {
@@ -26,6 +32,6 @@ const theme = createTheme({
       default: '#E8F0EC',
     },
   },
-});
+})
 
-export default theme;
+export default theme

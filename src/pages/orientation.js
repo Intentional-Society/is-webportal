@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Layout from '../components/layout';
 import CenteredColumn from '../components/centered-column';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import IconButton from '@material-ui/core/IconButton';
 
 const slideTexts = [
   'Welcome to the Orientation!',
