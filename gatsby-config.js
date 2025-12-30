@@ -17,20 +17,7 @@ module.exports = {
         head: true,
       },
     },
-    {
-      resolve: 'gatsby-theme-material-ui', // pulls in gatsby-plugin-material-ui and gatsby-plugin-webfonts
-      options: {
-        webFontsConfig: {
-          fonts: {
-            google: [ //sigh: https://github.com/hupe1980/gatsby-plugin-webfonts/issues/14
-              { family: "Ovo", variants: [400] }, 
-              { family: "Gudea", variants: [400] }
-            ],
-          },
-        },
-      },
-    },
-    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-emotion', // handles Emotion SSR for MUI
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     {
