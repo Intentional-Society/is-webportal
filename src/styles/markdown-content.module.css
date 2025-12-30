@@ -1,0 +1,63 @@
+/* Styles for markdown-rendered content to match Material-UI Typography */
+
+.markdownContent h3 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.167;
+  letter-spacing: 0em;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.markdownContent h4 {
+  font-size: 2.125rem;
+  font-weight: 400;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.markdownContent h5 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.334;
+  letter-spacing: 0em;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* First h5 after h4 shouldn't have top margin */
+.markdownContent h4 + h5 {
+  margin-top: 0;
+}
+
+/* Style hr using shared IsHr variables from global.module.css */
+.markdownContent hr {
+  border: var(--is-hr-border);
+  background-color: var(--is-hr-bg-color);
+  color: var(--is-hr-color);
+  height: var(--is-hr-height);
+  width: var(--is-hr-width);
+  text-align: left;
+  margin-left: var(--is-hr-margin-left);
+  margin-top: var(--is-hr-margin-top);
+  margin-bottom: var(--is-hr-margin-bottom);
+}
+
+/* Ensure paragraphs have proper spacing */
+.markdownContent p {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+/* List styling */
+.markdownContent ul {
+  margin-top: 0;
+  margin-bottom: 1em;
+  padding-left: 40px;
+}
+
+.markdownContent li {
+  margin-bottom: 0.25em;
+}
