@@ -18,6 +18,15 @@ const theme = createTheme({
     h5: { fontFamily: gudeaFont },
     h6: { fontFamily: gudeaFont },
   },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          fontSize: '120%', // Match old layout.module.css body font-size: 120%
+        },
+      },
+    },
+  },
   palette: {
     primary: {
       main: '#24818E',
