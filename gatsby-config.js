@@ -9,6 +9,7 @@ module.exports = {
     title: 'Intentional Society',
     description: "Being who we want to be, together"
   },
+  trailingSlash: "never",
   plugins: [
     {
       resolve: 'gatsby-plugin-gtag',
