@@ -28,10 +28,7 @@ yarn format
 yarn clean
 ```
 
-**Node version requirement**: Pinned to Node 14.17.0. For Node > 17, use:
-```bash
-NODE_OPTIONS=--openssl-legacy-provider yarn gatsby build
-```
+**Node version requirement**: Node 22 LTS (configured in `netlify.toml`).
 
 ## Architecture
 
@@ -40,9 +37,10 @@ NODE_OPTIONS=--openssl-legacy-provider yarn gatsby build
 **Layout pattern**: All pages wrap content in `<Layout>` (header/footer) and typically `<CenteredColumn>` for consistent width.
 
 **Styling stack**:
-- Material-UI v4 components for UI (AppBar, Typography, Button, etc.)
+- MUI v5 components for UI (AppBar, Typography, Button, etc.)
+- Emotion for CSS-in-JS (via `gatsby-plugin-emotion`)
 - CSS Modules (`.module.css`) for scoped styles
-- Custom Material-UI theme in `src/gatsby-theme-material-ui-top-layout/theme.js` (primary: teal #24818E, background: #E8F0EC)
+- Custom MUI theme in `src/gatsby-theme-material-ui-top-layout/theme.js` (primary: teal #24818E, background: #E8F0EC)
 
 **Key components**:
 - `src/components/layout.js` - Root layout with navigation
