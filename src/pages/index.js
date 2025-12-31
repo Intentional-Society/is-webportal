@@ -89,7 +89,7 @@ const NamedDefault = ({ data }) => <>
           learn more <Link to="/about">about us</Link>.</p>
 
       <IsHr />
-      <p style={{fontSize: '1.2em'}}><Link to="/members">Community</Link> season 20 runs October through December.</p>
+      <p style={{fontSize: '1.2em'}}><Link to="/community">Community</Link> season 20 runs October through December.</p>
 
       <IsHr />
       <p>Inside Intentional Society (IS), you'll find three spaces.</p>
@@ -97,7 +97,7 @@ const NamedDefault = ({ data }) => <>
       <img src="/images/s17-3spaces.jpg" loading="eager" width="480" alt="three spaces of IS: practice dojo, community hub, intentional ventures"/>
       </div>
       <p>The <Link to="/dojo">Practice Dojo</Link> is open to the public for developmental-relational skill-building.</p>
-      <p>Our <Link to="/members">Members Community</Link> is a supportive space of friendship and exploration.</p>
+      <p>Our <Link to="/community">Members Community</Link> is a supportive space of friendship and exploration.</p>
       <p><Link to="/iv">Intentional Ventures</Link> is pioneering an ecosystem of aligned livelihood.</p>
       <p>We'd also love to introduce you to our <Link to="/friends">friends</Link> across  
         the <a href="https://secondrenaissance.net">Second Renaissance</a> movement 
