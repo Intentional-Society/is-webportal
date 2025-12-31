@@ -7,8 +7,7 @@
   publish = "public/"
 
 [build.environment]
-  PYTHON_VERSION = "3.10" #3.11 broke our old version of gyp (used by sharp)
-  NODE_VERSION =  "14.17.0" # previously used "12.16.1"
+  NODE_VERSION = "22"
 
 [[redirects]]
   from = "/who-we-are"
