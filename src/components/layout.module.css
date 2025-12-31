@@ -5,8 +5,7 @@
 }
 
 body {
-  font-family: "Ovo", 'Times New Roman', Times, serif;
-  font-size: 120%;
+  /* font-family and font-size now set in theme.js */
   color: #08080F;
   background-color: #E8F0EC;
 }
