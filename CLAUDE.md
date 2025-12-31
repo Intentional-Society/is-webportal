@@ -46,14 +46,13 @@ yarn clean
 - `src/components/layout.js` - Root layout with navigation
 - `src/components/is-appbar.js` - Responsive navigation bar
 - `src/components/centered-column.js` - Content width wrapper
-- `src/components/buttondownsignup.js` - Newsletter subscription form
 
 ## Code Style
 
-Prettier configured with:
+Prettier is configured with:
 - No semicolons
 - No arrow function parens when possible
-- Run `yarn format` before committing
+BUT Prettier also adds a lot of unwanted linebreaks into HTML, so we're currently not using it.
 
 ## Deployment
 

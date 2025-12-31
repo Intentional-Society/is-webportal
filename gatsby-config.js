@@ -12,10 +12,12 @@ module.exports = {
   trailingSlash: "never",
   plugins: [
     {
-      resolve: 'gatsby-plugin-gtag',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId: 'G-X9MTZGX7EF',
-        head: true,
+        trackingIds: ['G-VWKBH9QTW5'],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     'gatsby-plugin-emotion', // handles Emotion SSR for MUI
