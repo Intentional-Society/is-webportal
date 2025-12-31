@@ -39,9 +39,10 @@ const NamedDefault = ({ data }) => (
       <p>To join, <a href="https://docs.google.com/forms/d/e/1FAIpQLSebSp8vQsfRINQhHGw83Z-AEL3CtDtdcB5Edyc4kdCAq03XEg/viewform">read 
         more and apply here.</a> Membership is free (always has been), and the 
         light application-and-agreements membrane that defines membership exists to let us 
-        create openness and safety in our private cozyweb and manage our private data sharing. If you 
-        are a stranger to us, please plan to attend 
-        a <Link to="/get-involved#connection-calls">Connection Call</Link> first.</p>
+        create openness and safety in our private cozyweb and manage our private data sharing.
+        You're invited to attend a <Link to="/get-involved#connection-calls">Connection Call</Link> for 
+        orientation purposes, yet if you've been to at least one Practice Dojo session previously,
+        you probably have enough of the vibe to dive in if you prefer.</p>
         
       <div style={{textAlign: 'right', marginBottom: '-25px'}}>
         <Link to="/">Back to home page</Link>
