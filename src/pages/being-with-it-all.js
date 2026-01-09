@@ -11,13 +11,13 @@ const NamedDefault = () => {
       <CenteredColumn>
         <Typography variant="h2">Being With It All</Typography>
 
-        <p>This is a practice series within the IS <Link to="/dojo">Practice Dojo</Link>.</p>
-
-        <p><b>November-December 2025:</b> Running now! <br />Our next session 
-        is <b>Saturday, December 13<sup>th</sup> from 
+        <p><b>January 2026:</b> Relaunching at Relational Dojo! <br />Our next session 
+        is <b>Saturday, January 17<sup>th</sup> from 
         1:00 to 2:30pm Pacific Time (4pm Eastern, 9pm UTC)</b>. <a 
-        href="https://us02web.zoom.us/meeting/register/hBbSWtGnSKqmVHrUAnsq4g">Click 
-        here to register and receive the meeting link.</a></p>
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdsTSZGVw6vidkEieIbAzhjmmZuO8btB3g8Js4uYrkZKavkxQ/viewform">Click 
+        here to sign up for BWIA calendar invites.</a></p>
+
+        <p>(TODO: This page will point to Relational Dojo's website within a few days.)</p>
 
         <img
           src="/images/being-with-it-all.png"
