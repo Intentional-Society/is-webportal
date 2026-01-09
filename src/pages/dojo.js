@@ -10,7 +10,16 @@ const NamedDefault = ({ data }) => (
   <Layout>
     <div style={{ height: '5vh' }}></div>
     <CenteredColumn>
-      <Typography variant="h2">Practice Dojo</Typography>
+      <Typography variant="h2"><s>Practice</s> Relational Dojo</Typography>
+
+      <p>January 2026: Our "Practice Dojo" is in the process of 
+        merging into Relational Dojo, a larger community and platform for relational practices.
+        <a 
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdsTSZGVw6vidkEieIbAzhjmmZuO8btB3g8Js4uYrkZKavkxQ/viewform">Click 
+      here to sign up</a> for <a href="https://buttondown.com/intentionalsociety/archive/is-relational-dojo-practices-lineup-q1/">these 
+      practices</a>, and the website will be up shortly.
+      </p>
+
       <p>With open front doors, the Practice Dojo is a skill-building space welcoming novices and 
         experts alike to train in a variety of <i>developmental-relational practices</i>.
         <ul>
@@ -25,6 +34,7 @@ const NamedDefault = ({ data }) => (
         */}
       <IsHr />
       <Typography variant="h5">History</Typography>
+ 
       <p>The Practice Dojo became its own space in 2024 with the debut of the IS <Link to="/developmental-practice-series">
       Developmental Practice Series</Link>, followed by an Exploratory Practice Series tour and the
        heartfelt <Link to="/being-with-it-all">Being With It All</Link> series.</p>

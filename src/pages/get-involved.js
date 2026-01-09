@@ -15,11 +15,6 @@ const NamedDefault = ({ data }) => {
       <CenteredColumn>
         <Typography variant="h3">Get Involved</Typography>
         <p> </p>
-        {/*
-        <Typography variant="h4">Practice Dojo</Typography>
-        <p><BlurbPractice /></p>
-        */}
-
 
         <a className={GlobalCSS.anchorOffset} id="connection-calls"></a>
         <Typography variant="h4">Connection Calls</Typography>
@@ -30,6 +25,15 @@ const NamedDefault = ({ data }) => {
 
         <p><BlurbOfficeHours /> Bring your video camera (phone is okay), microphone, and
           any <Link to="/questions">questions</Link> you might have.</p>
+
+        <Typography variant="h4">Relational Dojo</Typography>
+        <p>Relational practices are how we help ourselves grow. Our "Practice Dojo" is in the process of 
+          merging into Relational Dojo, a larger community and platform for relational practices.
+          <a 
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdsTSZGVw6vidkEieIbAzhjmmZuO8btB3g8Js4uYrkZKavkxQ/viewform">Click 
+        here to sign up</a> for <a href="https://buttondown.com/intentionalsociety/archive/is-relational-dojo-practices-lineup-q1/">these 
+        practices</a>, and the website will be up shortly.
+        </p>
 
         <Typography variant="h4">Community Membership</Typography>
         <p>Join the <Link to="/community">Community</Link> for Sunday Hub calls and more.</p>
