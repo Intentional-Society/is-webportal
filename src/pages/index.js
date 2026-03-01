@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import ButtondownSignup from '../components/buttondownsignup';
-// import IsHr from '../components/is-hr';
+import IsHr from '../components/is-hr';
 // import BlurbPractice from '../components/blurb-practice';
 import CenteredColumn from '../components/centered-column';
 // import * as GlobalCSS from '../styles/global.module.css';
@@ -71,14 +71,12 @@ const NamedDefault = ({ data }) => <>
           <b>March 15, 2026 &middot; 1:00 PM Pacific &middot; 90 minutes</b>
         </p>
 
-        <p>Join us for a landmark gathering as we celebrate five years of Intentional Society!
-          Hear stories from our journey, learn about our evolving programs,
-          and be part of the launch of an expanded network.
-          Plus, we have a significant announcement to share.
-          Whether you've been with us from the start or are just discovering IS,
-          this is the event to attend.</p>
+        <p>Intentional Society is building a better world from the inside out. We've been meeting
+          for five years now, growing together and expanding our activities. We invite you to
+          celebrate with us, and to join us in launching an expanded relational web that supports
+          more of us in divergent coherence!</p>
 
-        <p style={{textAlign: 'center'}}>
+        <p style={{textAlign: 'center', padding: '12px 0'}}>
           <a href="https://us02web.zoom.us/meeting/register/8nzxXOk5Rzicpmo5mTMwlQ"
             style={{
               display: 'inline-block',
@@ -94,6 +92,42 @@ const NamedDefault = ({ data }) => <>
           </a>
         </p>
 
+        <div style={{fontSize: '0.85em'}}>
+          <p>For the last five years, Intentional Society has been a gathering of friends
+            "being who we want to be" — one which has unfolded from a single weekly video call into a
+            multi-faceted ecosystem of practices, relating, and entrepreneurial spaces. Having firmly
+            rooted our culture in developmental &amp; relational inner exploration, we're now marking an
+            ongoing phase shift: balancing doing and being by integrating outer action.</p>
+          <p>A more beautiful world already exists whenever-and-wherever our biggest selves touch each
+            other's humanity. As we look forward into our next era, we seek to anchor and grow bigger
+            islands of coherence amidst this chaotic and accelerating world. "Be the change" flows from
+            our hearts out into service of a thriving future guided by the question, "Can we humans
+            become wise enough to hold our great power?"</p>
+          <p>Come to hear stories from the history and breadth of Intentional Society, and to celebrate
+            what "awareness, acceptance, integrity" has meant to people over the last half-decade. Come
+            to hear about what we've learned, and about the latest developments of our relational and
+            entrepreneurial programs. Come for the literal million-dollar announcement, and to
+            collaborate in launching an expanding relational web.</p>
+          <p>We invite you to join us on March 15th to celebrate and to connect with this part of the
+            greater whole we're already becoming.</p>
+        </div>
+        <p style={{textAlign: 'center', padding: '12px 0'}}>
+          <a href="https://us02web.zoom.us/meeting/register/8nzxXOk5Rzicpmo5mTMwlQ"
+            style={{
+              display: 'inline-block',
+              backgroundColor: '#24818E',
+              color: '#FFFFFF',
+              padding: '12px 32px',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              fontSize: '1.2em',
+              fontWeight: 'bold'
+            }}>
+            Register on Zoom
+          </a>
+        </p>
+        <br /><br />
+        <IsHr />
         <p>Want to follow along with what we're doing and learning?
           Subscribe to our Weekly Update newsletter:</p>
         <ButtondownSignup></ButtondownSignup>
