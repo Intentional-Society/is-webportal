@@ -57,3 +57,16 @@ BUT Prettier also adds a lot of unwanted linebreaks into HTML, so we're currentl
 ## Deployment
 
 Deploys automatically to Netlify on push to master. Configuration in `netlify.toml`.
+
+## Current Status Notes
+
+### Home page (`src/pages/index.js`) — temporary event takeover
+As of 2026-02-28, the home page is taken over to promote the 5-Year Celebration event:
+- **Event**: "The 5-Year Celebration: Launching a New Era" — March 15, 2026, 1:00 PM Pacific, 90 min via Zoom
+- **Registration link**: `https://us02web.zoom.us/meeting/register/8nzxXOk5Rzicpmo5mTMwlQ`
+- Hero shows three white h2 lines with responsive `clamp(2rem, 8vw, 3.75rem)` font sizing
+- Body: teaser paragraph, first Register button, longer context section (4 paragraphs at 0.85em), second Register button, IsHr, newsletter signup
+- **Restore after event**: Unused imports (`Grid`, `BlurbPractice`, `GlobalCSS`) and `imageList` are commented out, not deleted — easy to restore the original page
+
+### New stub page: `/web`
+`src/pages/web.js` — "The Relational Web" placeholder page with lorem ipsum content. Not linked from the nav yet. Awaiting real content.
