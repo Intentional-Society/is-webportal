@@ -1,0 +1,165 @@
+.pageShell {
+  width: min(1180px, 92vw);
+  margin: 0 auto;
+  padding: 0 0 2.5rem;
+}
+
+.pageIntro {
+  margin-bottom: 1.8rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  color: #24818e;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.subtitle {
+  margin-top: 0.55rem;
+  color: #595959;
+}
+
+.statusBox {
+  padding: 2rem;
+  border: 1px solid #dfe7e2;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.memberGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.memberCard {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 1px solid #dfe7e2;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+  cursor: pointer;
+}
+
+.memberCard:hover,
+.memberCard:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
+  background-color: #fbfaf7;
+}
+
+.memberCard:focus-visible {
+  outline: 2px solid #24818e;
+  outline-offset: 2px;
+}
+
+.memberPhotoWrap {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.memberPhoto {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #dfe7e2;
+  display: block;
+}
+
+.memberCardContent p {
+  color: #595959;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pageIndicator {
+  min-width: 7.5rem;
+  text-align: center;
+  color: #595959;
+}
+
+.modalBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 78vw;
+  max-width: 78vw;
+  max-height: min(86vh, 920px);
+  overflow-y: auto;
+  border-radius: 16px;
+  border: 1px solid #dfe7e2;
+  background: #ffffff;
+  box-shadow: 0 28px 60px rgba(20, 20, 20, 0.25);
+  padding: 2rem;
+}
+
+.modalTopRow {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.modalImage {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #dfe7e2;
+}
+
+.closeButton {
+  position: absolute !important;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+.contactBlock {
+  margin-top: 1rem;
+}
+
+@media (max-width: 1080px) {
+  .memberGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 780px) {
+  .memberGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .modalTopRow {
+    grid-template-columns: 1fr;
+  }
+
+  .modalBox {
+    width: min(96vw, 700px);
+    max-width: min(96vw, 700px);
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .memberGrid {
+    grid-template-columns: 1fr;
+  }
+}
