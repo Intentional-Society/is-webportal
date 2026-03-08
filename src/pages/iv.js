@@ -27,7 +27,7 @@ const NamedDefault = ({ data }) => (
       <p>IV's heartbeat calls happen Fridays at 9am Pacific / Noon Eastern.</p>
       
       <IsHr />
-      <Typography variant="h5">The story so far</Typography>
+      <Typography variant="h4">The story so far</Typography>
       <p>Intentional Ventures began April 2024 with a founding team of about a dozen.</p>
 
       <p>After three quarters with its founding team, at the end of 2024 IV had experimentally generated revenue, established 

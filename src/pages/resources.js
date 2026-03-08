@@ -9,7 +9,7 @@ const NamedDefault = ({ data }) => (
   <Layout>
     <div style={{ height: '5vh' }}></div>
     <CenteredColumn>
-      <Typography variant="h3">Resources</Typography>
+      <Typography variant="h2">Resources</Typography>
       <p>Jump to:</p>
       <ul>
         <li><Link to="#relational-practices">Relational Practices List</Link></li>
@@ -21,10 +21,10 @@ const NamedDefault = ({ data }) => (
         <li><Link to="/friends">Friends of Intentional Society</Link></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="relational-practices"></a>
-      <Typography variant="h4">Relational Practices List</Typography>
+      <Typography variant="h3">Relational Practices List</Typography>
       <p>We have tried and enjoyed the following practices:</p>
       <a className={GlobalCSS.anchorOffset} id="empathy-circling"></a>
-      <Typography variant="h5">Empathy Circling</Typography>
+      <Typography variant="h4">Empathy Circling</Typography>
       <ul>
         <li>This practice is, very simply, listening to someone and reflecting back their thoughts. 
           The sweet spot is a balance of maintaining accuracy and fidelity to their original expression 
@@ -36,7 +36,7 @@ const NamedDefault = ({ data }) => (
           Our experience report</a></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="authentic-relating"></a>
-      <Typography variant="h5">Authentic Relating</Typography>
+      <Typography variant="h4">Authentic Relating</Typography>
       <ul>
         <li>This is a large collection of games/practices, best represented by the manual assembled 
           by Sara Ness. We've used the Noticing game, Hotseat, and others 
@@ -49,7 +49,7 @@ const NamedDefault = ({ data }) => (
           Our experience report</a></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="circling"></a>
-      <Typography variant="h5">Circling</Typography>
+      <Typography variant="h4">Circling</Typography>
       <ul>
         <li>Circling is a present-moment practice of noticing our sensations in relationship with one another
           and being curious about another's experience. It has grown rather popular and 
@@ -61,7 +61,7 @@ const NamedDefault = ({ data }) => (
           Our experience report</a></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="collective-presencing"></a>
-      <Typography variant="h5">Collective Presencing</Typography>
+      <Typography variant="h4">Collective Presencing</Typography>
       <ul>
         <li>A circle practice of group sense-making, developed by Ria Baeck. Exploring the space of 
           a preselected open question, participants bring their observations “to the center” of the 
@@ -73,7 +73,7 @@ const NamedDefault = ({ data }) => (
           Our experience report</a></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="inquiry-spiraling"></a>
-      <Typography variant="h5">Inquiry Spiraling</Typography>
+      <Typography variant="h4">Inquiry Spiraling</Typography>
       <ul>
         <li>Closely related to Collective Presencing, this practice circles around exploring the 
           question space itself, weaving together a simultaneous mix of diverging and converging questions 
@@ -85,7 +85,7 @@ const NamedDefault = ({ data }) => (
           Our experience report</a></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="case-work"></a>
-      <Typography variant="h5">Case Work</Typography>
+      <Typography variant="h4">Case Work</Typography>
       <ul>
         <li>By case work, we mean the examination of developmental challenges that are working us. A case giver 
           shares the story of their situation, and is supported by a small group in taking perspective on that 
@@ -98,7 +98,7 @@ const NamedDefault = ({ data }) => (
           Our experience report</a></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="peer-coaching"></a>
-      <Typography variant="h5">Peer Coaching</Typography>
+      <Typography variant="h4">Peer Coaching</Typography>
       <ul>
         <li>Taken as a general concept, this practice is “pure” coaching, defined by the stance that 
           the coachee already holds in themselves everything that's necessary to resolve their own challenge(s). 
@@ -111,7 +111,7 @@ const NamedDefault = ({ data }) => (
           Our experience report</a></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="t-group"></a>
-      <Typography variant="h5">T-group</Typography>
+      <Typography variant="h4">T-group</Typography>
       <ul>
         <li>Adopted via our friends 
           at <a href="https://www.startercultures.us/creative-offerings/communication-dojo">Communication Dojo</a>, 
@@ -124,7 +124,7 @@ const NamedDefault = ({ data }) => (
           Our experience report</a></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="glass-bead-game"></a>
-      <Typography variant="h5">Glass Bead Game</Typography>
+      <Typography variant="h4">Glass Bead Game</Typography>
       <ul>
         <li>Inspired by <a href="https://en.wikipedia.org/wiki/The_Glass_Bead_Game">a novel</a>, this is a 
         (usually) two-player game in which players take turns riffing off a concept and each other in a 
@@ -134,7 +134,7 @@ const NamedDefault = ({ data }) => (
           Our experience report</a></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="agile-retrospectives"></a>
-      <Typography variant="h5">Agile Retrospectives</Typography>
+      <Typography variant="h4">Agile Retrospectives</Typography>
       <ul>
         <li>Widespread in agile software development and elsewhere, literally “learning from looking 
           back” as a group. This can take many forms, from simple rubrics like “start stop continue” 
@@ -145,7 +145,7 @@ const NamedDefault = ({ data }) => (
         <li><a href="https://pragprog.com/titles/dlret/agile-retrospectives/">Book by Esther Derby and Diana Larsen</a></li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="ifs"></a>
-      <Typography variant="h5">Internal Family Systems (IFS)</Typography>
+      <Typography variant="h4">Internal Family Systems (IFS)</Typography>
       <ul>
         <li>
           Internal Family Systems (commonly abbreviated as IFS) is a (self-)theraputic model that 
@@ -161,7 +161,7 @@ const NamedDefault = ({ data }) => (
         </li>
       </ul>
       <a className={GlobalCSS.anchorOffset} id="media"></a>
-      <Typography variant="h4">Media Appearances</Typography>
+      <Typography variant="h3">Media Appearances</Typography>
       <ul>
         <li><a href="https://www.youtube.com/watch?v=gVx8mAzcMDA">How to Handle 
         Anything</a> w/ <a href="https://lifeitself.org/blog/how-to-handle-anything-in-life-and-community">Life 

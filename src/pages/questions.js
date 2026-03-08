@@ -104,7 +104,7 @@ const NamedDefault = ({ data }) => {
     <div style={{ height: '5vh' }}></div>
     <CenteredColumn>
       <p>TODO: This still needs a 2025 refresh!</p>
-      <Typography variant="h3">Common Questions</Typography>
+      <Typography variant="h2">Common Questions</Typography>
       {qas.map((qa) => <>
         <h4>Q: {qa[0]}</h4>
         <p>A: {qa[1]}</p>

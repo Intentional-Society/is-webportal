@@ -362,7 +362,7 @@ const HistoryPage = () => (
   <Layout>
     <div style={{ height: '5vh' }}></div>
     <CenteredColumn>
-      <Typography variant="h3">History</Typography>
+      <Typography variant="h2">History</Typography>
       <p>
         Hi, James here. I'm the founder/
         <a href="https://workwithsource.com/what-is-source/how-initiatives-start/">source</a>/
@@ -377,13 +377,13 @@ const HistoryPage = () => (
       </p>
       <p>What followed has been a patient unfolding with many stories embedded in the journey. 
         Below you can find title-based records of weekly sessions going all the way back to the beginning.</p>
-      <Typography variant="h4">Historical Event Log</Typography>
+      <Typography variant="h3">Historical Event Log</Typography>
       <Grid container spacing={1} direction="column" style={{ maxWidth: '800px', margin: '0 auto' }}>
       {seasons.map((season, index) => (
         <Grid item xs={12} sm={12} md={12} lg={12} key={index} style={{ paddingBottom: '8px' }}>
         <Accordion>
               <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography variant="h5">{season.title}</Typography>
+                <Typography variant="h4">{season.title}</Typography>
                 </AccordionSummary>
               <AccordionDetails>
                 <div style={{ width: '100%' }}>

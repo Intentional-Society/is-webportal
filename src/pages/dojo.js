@@ -29,11 +29,11 @@ const NamedDefault = ({ data }) => (
         </ul></p>
       {/*
        <IsHr />
-       <Typography variant="h5">What's happening now</Typography>
+       <Typography variant="h4">What's happening now</Typography>
        <p><BlurbPractice /></p>
         */}
       <IsHr />
-      <Typography variant="h5">History</Typography>
+      <Typography variant="h4">History</Typography>
  
       <p>The Practice Dojo became its own space in 2024 with the debut of the IS <Link to="/developmental-practice-series">
       Developmental Practice Series</Link>, followed by an Exploratory Practice Series tour and the
@@ -46,7 +46,7 @@ const NamedDefault = ({ data }) => (
       </p>
 
       <IsHr />
-      <Typography variant="h5">Further geekery</Typography>
+      <Typography variant="h4">Further geekery</Typography>
       <p>Why dojo? The "<a href="https://en.wikipedia.org/wiki/Dojo">dojo</a>" metaphor helps transmit 
         the nature of this practice space: 
         it is a programmatic facilitated space of immersive experiential learning and transformative growth. 
