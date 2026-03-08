@@ -22,7 +22,7 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: gudeaFont,
-      fontSize: '3rem',
+      fontSize: '3.5rem',
       fontWeight: 400,
       lineHeight: 1.167,
       letterSpacing: '0em',
