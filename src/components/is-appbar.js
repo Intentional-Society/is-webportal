@@ -35,11 +35,11 @@ const NamedDefault = () => {
       }}
     >
       <Toolbar>
-        <Typography variant="h4" sx={{ flexGrow: 1, color: 'inherit' }}>
+        <div className={GlobalCSS.appbarWordmark} style={{ flexGrow: 1, color: 'inherit' }}>
           <Link to="/" className={GlobalCSS.nostyleLink}>
             Intentional Society
           </Link>
-        </Typography>
+        </div>
         <Button
           component={Link}
           to="/about"

@@ -44,7 +44,7 @@ const theme = createTheme({
       fontWeight: 400,
       lineHeight: 1.334,
       letterSpacing: '0em',
-      marginTop: '20px',
+      marginTop: '10px',
       marginBottom: '10px',
     },
     h5: {
@@ -53,7 +53,7 @@ const theme = createTheme({
       fontWeight: 500,
       lineHeight: 1.6,
       letterSpacing: '0.0075em',
-      marginTop: '20px',
+      marginTop: '10px',
       marginBottom: '10px',
     },
     h6: {
@@ -62,7 +62,7 @@ const theme = createTheme({
       fontWeight: 500,
       lineHeight: 1.6,
       letterSpacing: '0.0075em',
-      marginTop: '20px',
+      marginTop: '10px',
       marginBottom: '10px',
     },
   },
