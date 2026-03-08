@@ -54,13 +54,13 @@ const NamedDefault = ({ data }) => <>
                         top: '0px', left: '0px', right: '0px'}}
                 imgStyle={{objectFit: 'fill'}}/>
     <div style={{ textAlign: 'center', margin: '0 auto', minHeight: '280px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-      <Typography variant="h2" style={{ color: '#FFFFFF', fontSize: 'clamp(2rem, 8vw, 3.75rem)' }}>
+      <Typography variant="h2" style={{ color: '#FFFFFF', fontSize: 'clamp(2rem, 8vw, 3.75rem)', margin: 0 }}>
         Intentional Society
       </Typography>
-      <Typography variant="h2" style={{ color: '#FFFFFF', fontSize: 'clamp(2rem, 8vw, 3.75rem)' }}>
+      <Typography variant="h2" style={{ color: '#FFFFFF', fontSize: 'clamp(2rem, 8vw, 3.75rem)', margin: 0 }}>
         The 5-Year Celebration
       </Typography>
-      <Typography variant="h2" style={{ color: '#FFFFFF', fontSize: 'clamp(2rem, 8vw, 3.75rem)' }}>
+      <Typography variant="h2" style={{ color: '#FFFFFF', fontSize: 'clamp(2rem, 8vw, 3.75rem)', margin: 0 }}>
         Launching a New Era
       </Typography>
     </div>
