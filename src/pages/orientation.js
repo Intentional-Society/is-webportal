@@ -28,7 +28,7 @@ const NamedDefault = ({ data }) => {
     <Layout>
       <div style={{ height: '5vh' }}></div>
       <CenteredColumn>
-        <Typography variant="h3" style={{ textAlign: 'center', marginBottom: '20px' }}>Orientation</Typography>
+        <Typography variant="h2" style={{ textAlign: 'center', marginBottom: '20px' }}>Orientation</Typography>
 
         {/* Image Carousel */}
         <div style={{ marginBottom: '40px', textAlign: 'center', position: 'relative' }}>

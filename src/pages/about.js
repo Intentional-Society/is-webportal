@@ -11,7 +11,7 @@ const NamedDefault = () => (
     <div style={{ height: '5vh' }}></div>
     <CenteredColumn>
       {/* Section: Who We Are */}
-      <Typography variant="h4">Who We Are</Typography>
+      <Typography variant="h3">Who We Are</Typography>
       <img
         src="/images/wave-to-internet.png"
         alt="Us waving to the internet"
@@ -45,7 +45,7 @@ const NamedDefault = () => (
 
       <IsHr />
       <a className={GlobalCSS.anchorOffset} id="membership"></a>
-      <Typography variant="h4">Regarding Membership</Typography>
+      <Typography variant="h3">Regarding Membership</Typography>
 
       <p>Who and what makes a good "fit" within Intentional Society? The cornerstone of our culture
         is first and foremost a desire to grow. It also takes an attitude of openness, 
@@ -80,7 +80,7 @@ const NamedDefault = () => (
       <IsHr />
 
       {/* Section: What We Do */}
-      <Typography variant="h4">What We Do</Typography>
+      <Typography variant="h3">What We Do</Typography>
       <p>On the surface, the simple story is that we talk with each another on video calls.
         Most of these take the form of our publicly-accessible <b>practice program</b>. 
         These practice sessions are facilitated, structured calls that run 90 minutes 
@@ -100,7 +100,7 @@ const NamedDefault = () => (
       </p>
 
       <IsHr />
-      <Typography variant="h5">Deliberately Developmental details for geeks</Typography>
+      <Typography variant="h4">Deliberately Developmental details for geeks</Typography>
 
       <p>At the deeper conceptual layer, what we're doing together is <b>authoring a developmental 
         community of practice with a culture of expanded awareness</b>. There's a conventional script 

@@ -25,6 +25,14 @@ blockquote {
   background-color: #ecf4fa;
 }
 
+.appbar-wordmark {
+  font-family: Gudea, Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.334;
+  margin: 0;
+}
+
 .nostyle-link, .nostyle-link:focus, .nostyle-link:focus:hover,
 .nostyle-link:focus:visited, .nostyle-link:focus:link, .nostyle-link:focus:active {
   color: inherit;

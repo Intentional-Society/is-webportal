@@ -13,11 +13,11 @@ const NamedDefault = ({ data }) => {
     <Layout>
       <div style={{ height: '5vh' }}></div>
       <CenteredColumn>
-        <Typography variant="h3">Get Involved</Typography>
+        <Typography variant="h2">Get Involved</Typography>
         <p> </p>
 
         <a className={GlobalCSS.anchorOffset} id="connection-calls"></a>
-        <Typography variant="h4">Connection Calls</Typography>
+        <Typography variant="h3">Connection Calls</Typography>
         <p>Want to learn about Intentional Society, its history, values, and core practices?
            Want to connect with one-or-more people of IS? This is a great entry point for new folks,
            and can also satisfy the personal-connection prerequisite for community membership.
@@ -26,7 +26,7 @@ const NamedDefault = ({ data }) => {
         <p><BlurbOfficeHours /> Bring your video camera (phone is okay), microphone, and
           any <Link to="/questions">questions</Link> you might have.</p>
 
-        <Typography variant="h4">Relational Dojo</Typography>
+        <Typography variant="h3">Relational Dojo</Typography>
         <p>Relational practices are how we help ourselves grow. Our "Practice Dojo" is in the process of 
           merging into Relational Dojo, a larger community and platform for relational practices.
           <a 
@@ -35,14 +35,14 @@ const NamedDefault = ({ data }) => {
         practices</a>, and the website will be up shortly.
         </p>
 
-        <Typography variant="h4">Community Membership</Typography>
+        <Typography variant="h3">Community Membership</Typography>
         <p>Join the <Link to="/community">Community</Link> for Sunday Hub calls and more.</p>
 
-        <Typography variant="h3">Information streams</Typography>
+        <Typography variant="h2">Information streams</Typography>
         <p> </p>
 
         <a className={GlobalCSS.anchorOffset} id="newsletter"></a>
-        <Typography variant="h4">Weekly Updates Newsletter</Typography>
+        <Typography variant="h3">Weekly Updates Newsletter</Typography>
         <p>Stay informed with this public weekly newsletter about what we're doing and learning.
           Once a week (usually Thursday) you'll receive a short update
           sharing about our recent learning and what's coming up soon.
@@ -54,7 +54,7 @@ const NamedDefault = ({ data }) => {
         <ButtondownSignup/>
         <p>Then, don't forget to go click on the confirmation email! You won't be subscribed if you don't.</p>
 
-        <Typography variant="h4">Twitter</Typography>
+        <Typography variant="h3">Twitter</Typography>
         <p>Follow <a href="https://twitter.com/IntentionalSoc">@IntentionalSoc</a> on
           Twitter if that's your thing. Shares some newsletter content,
           occasional announcements, not much of a nag/reminder stream. Also a handy

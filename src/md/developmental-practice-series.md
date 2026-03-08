@@ -4,7 +4,7 @@
   style="width: 100%; margin-bottom: 30px;"
 />
 
-### IS Developmental Practice Series
+## IS Developmental Practice Series
 
 Skillful relating to inner and outer challenges. Liberation from stuckness and not-okay-ness. Spacious ease and equanimity. These are learnable skills, freely available through interactive, relational, intentional practice in a supportive environment.
 
@@ -23,21 +23,21 @@ In plain words, we're building a bridge to "being who we want to be" beyond what
 
 ---
 
-#### 🗓️Schedule and Practices
+### 🗓️Schedule and Practices
 
-##### Unit 1 (Awareness) July 10, July 17, July 24:
+#### Unit 1 (Awareness) July 10, July 17, July 24:
 
 - **Empathy Circle** – receptive listening and reflection
 - **Parts Work (IFS)** – listening to and being with parts-of-self
 - **Interpersonal Gap** – perspectival awareness and frame hygiene
 
-##### Unit 2 (Acceptance) July 31, Aug 7, Aug 14:
+#### Unit 2 (Acceptance) July 31, Aug 7, Aug 14:
 
 - **T-Group** – noticing and naming our experiences
 - **Circling** – welcoming everything in connection
 - **Inquiry Spiraling** – perspective weaving, collective dreaming
 
-##### Unit 3 (Integrity) Aug 21, Aug 28, Sept 4:
+#### Unit 3 (Integrity) Aug 21, Aug 28, Sept 4:
 
 - **Nine Whys** – (re)connecting to desire, motivations, and purpose
 - **Pure coaching + Clean language** – clean (space-holding, not self-injecting) coaching basics
@@ -49,7 +49,7 @@ After signing up, you'll receive a recurring calendar invite for all sessions. T
 
 ---
 
-#### Reflections from 2024 participants
+### Reflections from 2024 participants
 
 <div style="display: flex; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; justify-content: center;">
   <img
@@ -80,7 +80,7 @@ After signing up, you'll receive a recurring calendar invite for all sessions. T
 
 ---
 
-#### About the facilitator
+### About the facilitator
 
 <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center;">
   <img
