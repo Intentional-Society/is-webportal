@@ -42,9 +42,19 @@ yarn clean
 - CSS Modules (`.module.css`) for scoped styles
 - Custom MUI theme in `src/gatsby-theme-material-ui-top-layout/theme.js` (primary: teal #24818E, background: #E8F0EC)
 
+**Heading scale** (defined in `theme.js`, single source of truth for both MUI Typography and raw HTML):
+- h1: 5rem (reserved, not currently used)
+- h2: 3.5rem (page titles)
+- h3: 2.125rem (section headings)
+- h4: 1.5rem (sub-section headings)
+- h5/h6: 1.25rem/1rem (minor headings)
+- All headings use Gudea font; CssBaseline applies these styles to raw HTML elements (for markdown content)
+
+**Markdown content pattern**: Pages can render content from `src/md/*.md` files via `gatsby-transformer-remark`. The page component queries the markdown file via GraphQL and renders with `dangerouslySetInnerHTML`. See `src/pages/web.js` or `src/pages/developmental-practice-series.js` for examples.
+
 **Key components**:
 - `src/components/layout.js` - Root layout with navigation
-- `src/components/is-appbar.js` - Responsive navigation bar
+- `src/components/is-appbar.js` - Responsive navigation bar (wordmark uses custom CSS class, not Typography)
 - `src/components/centered-column.js` - Content width wrapper
 
 ## Code Style
@@ -68,5 +78,5 @@ As of 2026-02-28, the home page is taken over to promote the 5-Year Celebration 
 - Body: teaser paragraph, first Register button, longer context section (4 paragraphs at 0.85em), second Register button, IsHr, newsletter signup
 - **Restore after event**: Unused imports (`Grid`, `BlurbPractice`, `GlobalCSS`) and `imageList` are commented out, not deleted — easy to restore the original page
 
-### New stub page: `/web`
-`src/pages/web.js` — "The Relational Web" placeholder page with lorem ipsum content. Not linked from the nav yet. Awaiting real content.
+### `/web` page
+`src/pages/web.js` renders content from `src/md/web.md` — "Join the relational web" page describing the IS relational web, programs, and membership requirements. Not linked from the nav yet.
