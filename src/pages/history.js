@@ -6,10 +6,25 @@ import Layout from '../components/layout';
 import CenteredColumn from '../components/centered-column';
 
 const seasons = [
+  {
+    'title': 'Season 21 - Q1 2026',
+    'events': [
+      'Relational Web',
+      'Chrysalis',
+      'Lovingkindness & its friends',
+      'Disruption Metabolism',
+      'Behind the Screens',
+      'Chaos Monkey',
+      'Playful Games',
+      'Listening into Us',
+      'Noticing',
+    ]
+  },
     {
     'title': 'Season 20 - Q4 2025',
     'events': [
       
+      'Ideal World',
       'Unknowing',
       'Giving & Receiving',
       'Blessings and Gratitude',
