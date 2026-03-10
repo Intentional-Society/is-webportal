@@ -67,8 +67,6 @@ const NamedDefault = ({ data }) => {
         <p>A: {qa[1]}</p>
       </>)}
 
-      <p>Have more questions? Bring them to an <Link to="/get-involved">orientation call</Link>!</p>
-
       <div style={{textAlign: 'right', marginBottom: '-25px'}}>
         Next page: <Link to="/resources">Resources</Link>
       </div>
