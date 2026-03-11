@@ -70,3 +70,6 @@ yarn-error.log
 
 # Claude Code
 .claude/
+
+# Local member directory data (do not commit real community data)
+static/data/members.csv

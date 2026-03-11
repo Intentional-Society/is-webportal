@@ -1,3 +1,5 @@
+// Members directory expects a local runtime CSV at:
+// static/data/members.csv -> served by Gatsby as /data/members.csv
 export const DIRECTORY_CONFIG = {
   pageSize: 20,
   csvPath: '/data/members.csv',
@@ -56,12 +58,46 @@ const toOpenToCalls = rawStatus => {
   return value ? 'Not specified' : '';
 };
 
+const extractDriveFileId = rawUrl => {
+  const value = String(rawUrl || '').trim();
+  if (!value) return null;
+
+  const openMatch = value.match(/[?&]id=([^&]+)/);
+  if (openMatch?.[1]) {
+    return openMatch[1];
+  }
+
+  const fileMatch = value.match(/\/file\/d\/([^/]+)/);
+  if (fileMatch?.[1]) {
+    return fileMatch[1];
+  }
+
+  const idLike = value.match(/^[a-zA-Z0-9_-]{20,}$/);
+  if (idLike) {
+    return value;
+  }
+
+  return null;
+};
+
+const toDirectGoogleDriveUrl = fileId => {
+  if (!fileId) return '';
+  return `https://drive.google.com/uc?export=view&id=${fileId}`;
+};
+
+const toDriveThumbnailUrl = fileId => {
+  if (!fileId) return '';
+  return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1200`;
+};
+
 const mapFromFormExport = row => {
   const fullName = String(row[1] || '').trim(); // Column B
   const email = String(row[2] || '').trim(); // Column C
   const shortBio = String(row[3] || '').trim(); // Column D
   const roughLocation = String(row[4] || '').trim(); // Column E
+  const picture = String(row[6] || '').trim(); // Column G
   const status = String(row[17] || '').trim(); // Column R
+  const fileId = extractDriveFileId(picture);
 
   return {
     fullName,
@@ -69,6 +105,8 @@ const mapFromFormExport = row => {
     shortBio,
     openToCalls: toOpenToCalls(status),
     contactInformation: email,
+    profilePicture: fileId ? toDirectGoogleDriveUrl(fileId) : picture,
+    profilePictureFallback: toDriveThumbnailUrl(fileId),
   };
 };
 
@@ -87,7 +125,11 @@ export const placeholder = name => {
 };
 
 export const getMemberImage = member => {
-  return placeholder(member.fullName);
+  return member?.profilePicture || placeholder(member?.fullName);
+};
+
+export const getMemberFallbackImage = member => {
+  return member?.profilePictureFallback || placeholder(member?.fullName);
 };
 
 export const loadDirectoryMembers = async () => {
@@ -98,7 +140,7 @@ export const loadDirectoryMembers = async () => {
     const csvText = await response.text();
     const rows = parseCsv(csvText);
     const members = rows
-      .slice(1) // header row
+      .slice(1)
       .map(mapFromFormExport)
       .filter(member => member.fullName);
 
@@ -113,7 +155,8 @@ export const loadDirectoryMembers = async () => {
   } catch (error) {
     return {
       members: [],
-      statusMessage: 'Could not load the local CSV.',
+      statusMessage:
+        'Could not load /data/members.csv. Add your local members.csv file to static/data/.',
     };
   }
 };

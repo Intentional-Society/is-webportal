@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import * as styles from './members-directory.module.css';
-import { getMemberImage } from '../data/members-directory';
+import {
+  getMemberFallbackImage,
+  getMemberImage,
+  placeholder,
+} from '../data/members-directory';
 
 const renderContact = contact => {
   if (!contact) return 'Not provided';
@@ -28,7 +32,18 @@ const renderContact = contact => {
 };
 
 const DirectoryModal = ({ member, open, onClose }) => {
-  const imageSrc = member ? getMemberImage(member) : '';
+  const defaultImage = useMemo(() => (member ? getMemberImage(member) : ''), [member]);
+  const fallbackImage = useMemo(
+    () => (member ? getMemberFallbackImage(member) : ''),
+    [member]
+  );
+  const [imageSrc, setImageSrc] = useState(defaultImage);
+  const [attemptedFallback, setAttemptedFallback] = useState(false);
+
+  useEffect(() => {
+    setImageSrc(defaultImage);
+    setAttemptedFallback(false);
+  }, [defaultImage]);
 
   return (
     <Modal open={open} onClose={onClose} aria-labelledby="member-profile-title">
@@ -44,7 +59,19 @@ const DirectoryModal = ({ member, open, onClose }) => {
 
         {member && (
           <div className={styles.modalTopRow}>
-            <img src={imageSrc} alt={member.fullName} className={styles.modalImage} />
+            <img
+              src={imageSrc}
+              alt={member.fullName}
+              className={styles.modalImage}
+              onError={() => {
+                if (!attemptedFallback && fallbackImage && fallbackImage !== imageSrc) {
+                  setAttemptedFallback(true);
+                  setImageSrc(fallbackImage);
+                  return;
+                }
+                setImageSrc(placeholder(member.fullName));
+              }}
+            />
             <div>
               <Typography id="member-profile-title" variant="h4" sx={{ marginBottom: '8px' }}>
                 {member.fullName}
