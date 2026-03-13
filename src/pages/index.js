@@ -8,7 +8,7 @@ import ButtondownSignup from '../components/buttondownsignup';
 import IsHr from '../components/is-hr';
 // import BlurbPractice from '../components/blurb-practice';
 import CenteredColumn from '../components/centered-column';
-// import * as GlobalCSS from '../styles/global.module.css';
+import * as GlobalCSS from '../styles/global.module.css';
 
 /* imageList commented out for 5-year celebration page takeover
 const imageList = [
@@ -78,16 +78,7 @@ const NamedDefault = ({ data }) => <>
 
         <p style={{textAlign: 'center', padding: '12px 0'}}>
           <a href="https://us02web.zoom.us/meeting/register/8nzxXOk5Rzicpmo5mTMwlQ"
-            style={{
-              display: 'inline-block',
-              backgroundColor: '#24818E',
-              color: '#FFFFFF',
-              padding: '12px 32px',
-              borderRadius: '6px',
-              textDecoration: 'none',
-              fontSize: '1.2em',
-              fontWeight: 'bold'
-            }}>
+            className={GlobalCSS.bigButton}>
             Register on Zoom
           </a>
         </p>
@@ -113,16 +104,7 @@ const NamedDefault = ({ data }) => <>
         </div>
         <p style={{textAlign: 'center', padding: '12px 0'}}>
           <a href="https://us02web.zoom.us/meeting/register/8nzxXOk5Rzicpmo5mTMwlQ"
-            style={{
-              display: 'inline-block',
-              backgroundColor: '#24818E',
-              color: '#FFFFFF',
-              padding: '12px 32px',
-              borderRadius: '6px',
-              textDecoration: 'none',
-              fontSize: '1.2em',
-              fontWeight: 'bold'
-            }}>
+            className={GlobalCSS.bigButton}>
             Register on Zoom
           </a>
         </p>

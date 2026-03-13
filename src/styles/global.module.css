@@ -39,6 +39,17 @@ blockquote {
   text-decoration: inherit;
 }
 
+.big-button {
+  display: inline-block;
+  background-color: #24818E;
+  color: #FFFFFF;
+  padding: 12px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
 /* Anchors that allow for AppBar space, based on ".makeStyles-offset-1" of 56, 48, 64 */
 .anchorOffset {
   display: block;
