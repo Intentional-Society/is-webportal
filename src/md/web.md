@@ -28,10 +28,11 @@ It's important that we can see each other and how we're connected. First, standa
 
 #### Relational Programs
 
-- **The Gumball Machine** - pull a lever and get matched with someone you don't know for an intro call!
-- **Presence Pods** - Four people, four calls, each person one turn to receive the empathic Circling-y curiosity empathetic reflection of the group.
-- **Casework Pods** - Four people, four calls, each person one turn to receive the empathic Circling-y curiosity empathetic reflection of the group.
-- **Thematic Crews** - Self-organized interest groups
+- **The Gumball Machine** - For those who want to meet new people but aren't sure where to start, pull a lever and get matched with a stranger for an intro call, and be surprised by who you meet.
+- **Presence Pods** - For those craving real connection and wanting to feel truly seen, join a small group of four rotating over four calls where each person gets a turn being held by the group's warm, Circling-style curiosity and reflection. Running Q2 of 2026.
+- **Casework Pods** - For those who want support with something real and to offer that same support to others, bring a live challenge into a group of four rotating over four calls where each person gets a turn being met with empathic reflection focused on what they're navigating. Running Q3 of 2026.
+- **Thematic Crews** - For those who want to do specific things with like-minded people, call or join a crew around a shared interest or practice in a self-organized group that forms around what lights you up.
+- **Arts in IS** - Monthly affinity group for those exploring visual, musical, kinesthetic arts and creative interests.
 
 #### Weekly Community Calls
 
