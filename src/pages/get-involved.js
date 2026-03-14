@@ -27,27 +27,23 @@ const NamedDefault = ({ data }) => {
           any <Link to="/questions">questions</Link> you might have.</p>
 
         <Typography variant="h3">Relational Dojo</Typography>
-        <p>Relational practices are how we help ourselves grow. Our "Practice Dojo" is in the process of 
-          merging into Relational Dojo, a larger community and platform for relational practices.
-          <a 
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdsTSZGVw6vidkEieIbAzhjmmZuO8btB3g8Js4uYrkZKavkxQ/viewform">Click 
-        here to sign up</a> for <a href="https://buttondown.com/intentionalsociety/archive/is-relational-dojo-practices-lineup-q1/">these 
-        practices</a>, and the website will be up shortly.
+        <p>Relational practices provide paths of personal development. Our former Practice Dojo has
+          now merged into Relational Dojo, an independent platform at <a href="https://relationaldojo.org">relationaldojo.org</a>.
+          
         </p>
 
-        <Typography variant="h3">Community Membership</Typography>
-        <p>Join the <Link to="/community">Community</Link> for Sunday Hub calls and more.</p>
+        <Typography variant="h3">Membership</Typography>
+        <p>You can join Intentional Society by weaving into our <Link to="/web">relational web</Link> network.</p>
 
         <Typography variant="h2">Information streams</Typography>
-        <p> </p>
 
         <a className={GlobalCSS.anchorOffset} id="newsletter"></a>
         <Typography variant="h3">Weekly Updates Newsletter</Typography>
         <p>Stay informed with this public weekly newsletter about what we're doing and learning.
-          Once a week (usually Thursday) you'll receive a short update
-          sharing about our recent learning and what's coming up soon.
-          You can <a href="https://buttondown.email/intentionalsociety/archive/">browse
-          the archive here</a>.
+          Every Thursday, you'll receive a short update
+          sharing what's coming up and what's alive from recent learning.
+          To see what to expect, you can browse
+          the 250+ email <a href="https://buttondown.email/intentionalsociety/archive/">newsletter archive</a>.
         </p>
         <p>Enter your email to subscribe to Intentional Society Weekly Updates:
         </p>
