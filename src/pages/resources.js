@@ -7,7 +7,7 @@ import * as GlobalCSS from '../styles/global.module.css';
 
 const NamedDefault = ({ data }) => (
   <Layout>
-    <div style={{ height: '5vh' }}></div>
+    <div style={{ height: '30px' }}></div>
     <CenteredColumn>
       <Typography variant="h2">Resources</Typography>
       <p>Jump to:</p>

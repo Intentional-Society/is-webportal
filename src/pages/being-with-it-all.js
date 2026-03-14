@@ -7,7 +7,7 @@ import CenteredColumn from '../components/centered-column';
 const NamedDefault = () => {
   return (
     <Layout>
-      <div style={{ height: '5vh' }}></div>
+      <div style={{ height: '30px' }}></div>
       <CenteredColumn>
         <Typography variant="h2">Being With It All</Typography>
 

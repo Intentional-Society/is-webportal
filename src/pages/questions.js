@@ -59,7 +59,7 @@ const NamedDefault = ({ data }) => {
   ];
 
   return <Layout>
-    <div style={{ height: '5vh' }}></div>
+    <div style={{ height: '30px' }}></div>
     <CenteredColumn>
       <Typography variant="h2">Common Questions</Typography>
       {qas.map((qa) => <>

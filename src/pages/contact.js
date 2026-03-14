@@ -21,7 +21,7 @@ const ContactPage = () => {
 
   return (
     <Layout>
-      <div style={{ height: '5vh' }}></div>
+      <div style={{ height: '30px' }}></div>
       <CenteredColumn>
         {submitted ? (
           <>

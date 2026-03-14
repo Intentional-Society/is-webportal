@@ -138,7 +138,7 @@ const friendsList = [
 
 const FriendsPage = () => (
   <Layout>
-    <div style={{ height: '5vh' }}></div>
+    <div style={{ height: '30px' }}></div>
     <CenteredColumn>
       <Typography variant="h2">Friends of Intentional Society</Typography>
       <div style={{ height: '1px', backgroundColor: '#ccc', width: '100%', margin: '10px 0' }}></div>

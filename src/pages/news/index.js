@@ -7,6 +7,7 @@ import FullHeightContent from '../../components/full-height-content';
 const NewsIndex = () => (
   <Layout>
     <FullHeightContent>
+      <div style={{ height: '30px' }}></div>
       <CenteredColumn>
         <h2>News Releases</h2>
         <ul>

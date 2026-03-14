@@ -8,7 +8,7 @@ import BlurbPractice from '../components/blurb-practice';
 
 const NamedDefault = ({ data }) => (
   <Layout>
-    <div style={{ height: '5vh' }}></div>
+    <div style={{ height: '30px' }}></div>
     <CenteredColumn>
       <Typography variant="h2"><s>Practice</s> Relational Dojo</Typography>
 
