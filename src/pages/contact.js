@@ -76,7 +76,7 @@ const ContactPage = () => {
                     variant="contained"
                     color="primary"
                     size="large"
-                    style={{ fontWeight: 'bold', padding: '10px 32px' }}
+                    style={{ fontWeight: 'bold', padding: '10px 32px', textTransform: 'none' }}
                   >
                     Send Message
                   </Button>
