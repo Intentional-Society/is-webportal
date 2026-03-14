@@ -9,7 +9,7 @@ import * as MarkdownStyles from '../styles/markdown-content.module.css';
 const tocStructure = [
   { name: 'introduction', tocTitle: 'Introduction' },
   { heading: "Part One: Inner-Shaded — The 'I'", practices: [
-    { name: 'interpersonal-gap-noticing', tocTitle: 'Interpersonal Gap Awareness (Noticing)' },
+    { name: 'noticing', tocTitle: 'Noticing (Interpersonal Gap Awareness)' },
     { name: 'parts-work', tocTitle: 'Parts Work (Internal Family Systems)' },
     { name: 'empathy-circling', tocTitle: 'Empathy Circling' },
     { name: 'social-noting', tocTitle: 'Social Noting' },

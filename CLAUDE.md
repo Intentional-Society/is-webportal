@@ -64,6 +64,17 @@ yarn clean
 - `src/components/is-appbar.js` - Responsive navigation bar (wordmark uses custom CSS class, not Typography)
 - `src/components/centered-column.js` - Content width wrapper
 
+**Practices catalog** (`src/pages/practices.js`): Assembles multiple md files from `src/md/practices/` into a single page. The `tocStructure` array in the JS file controls TOC grouping and body ordering. When pulling practice content from the Google Doc (published link), apply these formatting rules:
+- Google Doc "Heading 2" → h3 (`###`) for the practice title
+- "About This Practice", "The Practice", "Friends and References" → h4 (`####`)
+- Bold-text sub-headers within The Practice (e.g. "Opening — Framing the Gap") → h4 (`####`)
+- "Facilitator Overview" → h4; "Session length: ..." → plain text, not bold or heading
+- Bold-text lines that are just emphasis (not structural headers) → keep as `**bold**`
+- Epigraph quotes at the top → blockquote (`>`)
+- Zoom chat instruction blocks → blockquote (`>`)
+- Google redirect URLs (`google.com/url?q=...`) → extract the actual destination URL
+- Bullet lists → standard markdown (`-`)
+
 ## Code Style
 
 Prettier is configured with:
