@@ -28,7 +28,7 @@
     "@mui/material": "^7",
     "@types/react": "^19.0.10",
     "gatsby": "^5",
-    "gatsby-plugin-catch-links": "^5",
+    "gatsby-plugin-catch-links": "^5.16.0",
     "gatsby-plugin-emotion": "^8",
     "gatsby-plugin-google-gtag": "^5.15.0",
     "gatsby-plugin-image": "^3",
