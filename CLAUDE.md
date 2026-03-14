@@ -50,7 +50,14 @@ yarn clean
 - h5/h6: 1.25rem/1rem (minor headings)
 - All headings use Gudea font; CssBaseline applies these styles to raw HTML elements (for markdown content)
 
-**Markdown content pattern**: Pages can render content from `src/md/*.md` files via `gatsby-transformer-remark`. The page component queries the markdown file via GraphQL and renders with `dangerouslySetInnerHTML`. See `src/pages/web.js` or `src/pages/developmental-practice-series.js` for examples.
+**Markdown content pattern**: Pages can render content from `src/md/*.md` files via `gatsby-transformer-remark`. The page component queries the markdown file via GraphQL and renders with `dangerouslySetInnerHTML`. See `src/pages/web.js` or `src/pages/community.js` for examples. When converting an HTML page to markdown, do it in two commits: first the mechanical conversion (new `.md` file + rewired `.js`), then a separate commit for any copy rewrite, so content changes get a clean diff.
+
+**Markdown anchors**: CSS Module classes can't be used inside markdown content (they get scoped/mangled). For deep-link anchor offsets that clear the AppBar, use inline styles in the markdown:
+```html
+<a id="section-name" style="display:block;position:relative;top:-74px;visibility:hidden"></a>
+```
+
+**Shared styles in `global.module.css`**: Includes `.big-button` (teal CTA button used on homepage and /web page), `.anchorOffset` (AppBar-clearing anchors for use in JSX pages), and other utility classes.
 
 **Key components**:
 - `src/components/layout.js` - Root layout with navigation
@@ -79,4 +86,7 @@ As of 2026-02-28, the home page is taken over to promote the 5-Year Celebration 
 - **Restore after event**: Unused imports (`Grid`, `BlurbPractice`, `GlobalCSS`) and `imageList` are commented out, not deleted — easy to restore the original page
 
 ### `/web` page
-`src/pages/web.js` renders content from `src/md/web.md` — "Join the relational web" page describing the IS relational web, programs, and membership requirements. Not linked from the nav yet.
+`src/pages/web.js` renders content from `src/md/web.md` — "Join the relational web" page describing the IS relational web, programs, and membership requirements. Has a "Join the web" signup button at the bottom.
+
+### `/community` page
+`src/pages/community.js` renders content from `src/md/community.md` — community description, Sunday Hub calls, and how to join. Includes a "Back to home page" link in the JSX layer.
