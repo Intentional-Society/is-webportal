@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import CenteredColumn from '../components/centered-column';
 import IsHr from '../components/is-hr';
 import * as MarkdownStyles from '../styles/markdown-content.module.css';
+import * as PracticesStyles from '../styles/practices.module.css';
 
 // Table of contents structure — drives both TOC rendering and body ordering
 const tocStructure = [
@@ -44,10 +45,10 @@ const PracticesPage = ({ data }) => {
     <Layout>
       <div style={{ height: '30px' }}></div>
       <CenteredColumn>
-        <h2>Relational Practices Catalog</h2>
-        <nav>
-          <h4>Contents</h4>
-          <ul style={{listStyle: 'none', paddingLeft: 0}}>
+        <h2 style={{textAlign: 'center'}}>Relational Practices Catalog</h2>
+        <div className={PracticesStyles.bookLayout}>
+        <nav className={PracticesStyles.toc}>
+          <ul>
             {tocStructure.map((entry, i) =>
               entry.heading ? (
                 <li key={i}>{entry.heading}
@@ -68,12 +69,13 @@ const PracticesPage = ({ data }) => {
           <React.Fragment key={s.name}>
             <a id={s.name} style={{display:'block',position:'relative',top:'-74px',visibility:'hidden'}}></a>
             <div
-              className={MarkdownStyles.markdownContent}
+              className={`${MarkdownStyles.markdownContent}`}
               dangerouslySetInnerHTML={{__html: s.node.childMarkdownRemark.html}}
             />
             {i < sections.length - 1 && <IsHr />}
           </React.Fragment>
         ))}
+        </div>
         <div style={{textAlign: 'right', marginBottom: '-25px'}}>
           <Link to="/">Back to home page</Link>
         </div>

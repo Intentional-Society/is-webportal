@@ -45,7 +45,8 @@ Introduce: First, we're going to deliberately project as wildly as possible — 
 
 Chat instructions:
 
-> 🎭 Warmup — Projection Improv. Deliberately make wild assumptions! 'You [perception]... therefore you...' Claim everything you could possibly conclude from every tiny bit of evidence.
+> 🎭 Warmup — Projection Improv. Deliberately make wild assumptions! 'You [perception]... therefore you...'<br>
+> Claim everything you could possibly conclude from every tiny bit of evidence.
 
 #### Layer 1 — Physical Noticing (8 min)
 
@@ -57,8 +58,8 @@ Introduce to full group: We begin with noticing statements that attempt to be un
 
 Chat instructions:
 
-> 🧭 Layer 1 — Physical Noticing
-> Taking turns, "I notice… [physical/sensory]"
+> 🧭 Layer 1 — Physical Noticing<br>
+> Taking turns, "I notice… [physical/sensory]"<br>
 > Noticing physical observations and sensations, making your statements unarguable
 
 #### Layer 2 — Feeling Noticing (8 min)
@@ -71,8 +72,8 @@ Introduce: We're going to add another layer that's already arriving in your brai
 
 Chat instructions:
 
-> 💛 Layer 2 — Emotional Noticing
-> "I notice… [physical/sensory] and I notice I'm feeling… [feeling]"
+> 💛 Layer 2 — Emotional Noticing<br>
+> "I notice… [physical/sensory] and I notice I'm feeling… [feeling]"<br>
 > Noticing what is arising in our bodies, welcoming and observing our feelings
 
 #### Layer 3 — Story Noticing (9 min)
@@ -85,8 +86,8 @@ Introduce: Now the stories. After 30 seconds of silent eye contact on camera, ea
 
 Chat instructions:
 
-> 💭 Layer 3 — Story Noticing
-> 30 seconds silent eye contact, then:
+> 💭 Layer 3 — Story Noticing<br>
+> 30 seconds silent eye contact, then:<br>
 > "(Hearing that,) I notice… [physical/sensory] (or) I notice I'm feeling… [feeling] and my story about that is… [interpretation]"
 
 #### Putting It Together — Story Checking (11 min)
@@ -99,9 +100,9 @@ Introduce: Now we bring it all together. Notice, name your story, then check it 
 
 Chat instructions:
 
-> 🔄 Putting it together — Story Checking
-> "I notice…" plus "My story about that is…"
-> …and end it with "What's that like to hear?"
+> 🔄 Putting it together — Story Checking<br>
+> "I notice…" plus "My story about that is…"<br>
+> …and end it with "What's that like to hear?"<br>
 > Brief response, then take your own turn to notice + story + check
 
 #### Closing (10-15 min)

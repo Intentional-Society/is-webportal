@@ -74,6 +74,7 @@ yarn clean
 - Zoom chat instruction blocks → blockquote (`>`)
 - Google redirect URLs (`google.com/url?q=...`) → extract the actual destination URL
 - Bullet lists → standard markdown (`-`)
+- Multi-line blockquotes (chat instructions) → add `<br>` at end of each line (except the last) to preserve line breaks; trailing spaces get stripped by tooling so use `<br>` tags instead
 
 ## Code Style
 
