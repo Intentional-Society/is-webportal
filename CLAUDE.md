@@ -95,7 +95,7 @@ As of 2026-02-28, the home page is taken over to promote the 5-Year Celebration 
 - **Registration link**: `https://us02web.zoom.us/meeting/register/8nzxXOk5Rzicpmo5mTMwlQ`
 - Hero shows three white h2 lines with responsive `clamp(2rem, 8vw, 3.75rem)` font sizing
 - Body: teaser paragraph, first Register button, longer context section (4 paragraphs at 0.85em), second Register button, IsHr, newsletter signup
-- **Restore after event**: Unused imports (`Grid`, `BlurbPractice`, `GlobalCSS`) and `imageList` are commented out, not deleted — easy to restore the original page
+- **Restore after event**: Unused imports (`Grid`, `GlobalCSS`) and `imageList` are commented out, not deleted — easy to restore the original page
 
 ### `/web` page
 `src/pages/web.js` renders content from `src/md/web.md` — "Join the relational web" page describing the IS relational web, programs, and membership requirements. Has a "Join the web" signup button at the bottom.
