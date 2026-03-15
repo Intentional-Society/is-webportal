@@ -10,6 +10,7 @@ const NamedDefault = () => (
   <Layout>
     <div style={{ height: '30px' }}></div>
     <CenteredColumn>
+      <h3 style={{textAlign: 'center', color: '#cc0000'}}>🚧 Needs 2026 Rewrite 🚧</h3>
       {/* Section: Who We Are */}
       <Typography variant="h3">Who We Are</Typography>
       <img
