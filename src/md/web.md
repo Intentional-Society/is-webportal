@@ -2,25 +2,23 @@
 
 This is a web of *trust* and *collaboration*.
 
-Intentional Society, expressed as a relational web of humans — a network, a distributed village, an ecosystem of people and care.
-
-There are many networks in the world: What values brings together this web of human relationships? Inner development, wise action, and human connection. This web is for those who value:
+This is the network of humans associated with Intentional Society — a distributed village, an ecosystem of people and care. What brings this network together? This web is aligned around the intersection of Inner development, wise action, and human connection.
 
 - **Inner development:** We are those who practice awareness, acceptance, and integrity in growing toward being who we want to be.
 - **Wise action:** We are those whose lives form a living vow in service of what is good, true, and beautiful, integrated from personal to planetary.
 - **Human connection:** We are connected to, and caring for, *these particular humans* in this web, an island of coherence and support.
 
-Joining requires a referral from one existing member. If you have no connection to IS folks, come meet some at a [Connection Call](https://www.intentionalsociety.org/get-involved). We're happy to continue diversifying our web and/or introduce you to our friends across the field. We're part of a developmental collaborative culture "scenius" spanning the globe — and this is our little village, our collection of friends, in which we embody and advance this culture through all the activities of our web.
+Joining requires a referral from one existing member. If you have no connection to IS folks, come meet some at a [Connection Call](https://www.intentionalsociety.org/get-involved). We're happy to continue diversifying our web and/or introduce you to our friends across the field. We're part of a developmental collaborative culture "scenius" spanning the globe — and this is our little part, our collection of friends, which cultivates this culture and supports all its members.
 
 ### What's inside the web?
 
 #### Quarterly Convening
 
-Once a quarter, we gather the whole network for a full assembly. Every member contributes a "what's alive?" update, crews are coordinated, strategies are revisited. It's a party and a catalyst.
+Once a quarter, we gather the whole network for a full assembly. Hear "what's alive?" from folks across the web, call and coordinate crews, updated shared strategies. It's a party and a catalyst.
 
 #### Web Directory + Relational Mapping
 
-It's important that we can see each other and how we're connected. First, standard profiles and contact info go in a conventional directory. The relational layer will then roll out with a node-link diagram mapping our trust relationships and our collaborations.
+We want to see each other and how we're connected. Standard profiles and contact info fit in a conventional directory. The relational layer will then roll out with a node-link diagram mapping our trust relationships and our collaborations.
 
 #### Relational Programs
 
@@ -40,6 +38,6 @@ Around us in "liminal" space are other communities and entities with similar wor
 
 ### Requirements
 
-Membership is lightweight and non-exclusive - we encourage you to belong to other webs of mutual support both physically and virtually. But it does consist of intentionality - to grow your own perspective, to be in service to something greater than yourself, and to be in relationship with others as catalyst to both inner and outer development.
+Membership is lightweight and non-exclusive - we encourage you to belong to other webs of mutual support both physically and virtually. But it does consist of intentionality - to grow your own perspective, to be in service to something greater than yourself, and to be in relationship with others (not everyone!) as catalyst to both inner and outer development.
 
-Minimum activity expectations consist of a couple hours quarterly "for" the web: imagine 90 minutes presence and listening, 20 minutes clicking/updating, 10 minutes writing/sourcing. This can be satisfied by the quarterly convening and communication activities that form a seasonal rhythm for our full system. In smaller scopes, our congregations and crews have more frequent rhythms that fit a variety of depths.
+Minimum activity expectations consist of a couple hours per quarter: roughly imagine a 90 minute Convening, 20 minutes clicking/updating, maybe 10 minutes writing. That satisfies the light tough seasonal rhythm for our full-system awareness. In smaller scopes, our congregations, programs, and crews have more frequent rhythms that fit a variety of depths.
