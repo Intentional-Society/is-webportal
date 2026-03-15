@@ -42,7 +42,7 @@ const NamedDefault = () => {
           'radial-gradient(circle at 20% -150%, #5c9d93, #519f9a, #44a0a2, #36a1ab, #25a2b5, #109fbb, #009bc1, #0097c6, #008ec7, #0085c8, #0c7bc6, #2b70c3)',
       }}
     >
-      <Toolbar>
+      <Toolbar sx={{ paddingRight: '12px !important' }}>
         <div className={GlobalCSS.appbarWordmark} style={{ flexGrow: 1, color: 'inherit' }}>
           <Link to="/" className={GlobalCSS.nostyleLink}>
             Intentional Society
