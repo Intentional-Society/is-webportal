@@ -58,7 +58,7 @@ const NamedDefault = ({ data }) => (
         hypothetical <a href="https://laymanpascal.substack.com/p/the-metamodern-business-bureau-mmbb">Metamodern Business Bureau</a>.</p>
 
       <div style={{textAlign: 'right', marginBottom: '-25px'}}>
-        <Link to="/">Back to home page</Link>
+        Next page: <Link to="/friends">Friends</Link>
       </div>
     </CenteredColumn>
   </Layout>

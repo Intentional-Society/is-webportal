@@ -413,6 +413,9 @@ const HistoryPage = () => (
           </Grid>
         ))}
       </Grid>
+      <div style={{textAlign: 'right', marginBottom: '-25px'}}>
+        Next page: <Link to="/resources">Resources</Link>
+      </div>
     </CenteredColumn>
   </Layout>
 );

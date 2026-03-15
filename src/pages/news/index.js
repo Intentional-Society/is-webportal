@@ -22,7 +22,7 @@ const NewsIndex = () => (
       <div style={{ flex: 1 }}></div>
       <CenteredColumn>
         <div style={{textAlign: 'right', marginBottom: '-25px'}}>
-          <Link to="/">Back to home page</Link>
+          Next page: <Link to="/questions">Questions?</Link>
         </div>
       </CenteredColumn>
     </FullHeightContent>

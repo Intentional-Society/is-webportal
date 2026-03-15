@@ -42,7 +42,7 @@ const NamedDefault = ({ data }) => {
         <p>Within the web, meeting every Sunday, is our <Link to="/community">Community</Link>.</p>
 
         <div style={{textAlign: 'right', marginBottom: '-25px'}}>
-          Next page: <Link to="/history">History</Link>
+          Next page: <Link to="/web">Web</Link>
         </div>
       </CenteredColumn>
     </Layout>

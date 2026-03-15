@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import CenteredColumn from '../components/centered-column';
 import * as MarkdownStyles from '../styles/markdown-content.module.css';
@@ -19,6 +19,9 @@ const NamedDefault = ({ data }) => (
           Join the web
         </a>
       </p>
+      <div style={{textAlign: 'right', marginBottom: '-25px'}}>
+        Next page: <Link to="/community">Community</Link>
+      </div>
     </CenteredColumn>
   </Layout>
 );

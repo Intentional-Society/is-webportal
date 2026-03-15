@@ -155,6 +155,9 @@ const FriendsPage = () => (
           </div>
         ))}
       </div>
+      <div style={{textAlign: 'right', marginBottom: '-25px'}}>
+        Next page: <Link to="/news">News</Link>
+      </div>
     </CenteredColumn>
   </Layout>
 );

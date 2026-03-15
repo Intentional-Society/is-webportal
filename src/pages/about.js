@@ -159,7 +159,7 @@ const NamedDefault = () => (
         outward from interpersonal trust and cooperation at local scale.
       </p>
       <div style={{ textAlign: 'right', marginBottom: '-25px' }}>
-        Next page: <Link to="/get-involved">Get Involved!</Link>
+        Next page: <Link to="/contact">Contact</Link>
       </div>
     </CenteredColumn>
   </Layout>

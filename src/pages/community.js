@@ -13,7 +13,7 @@ const NamedDefault = ({ data }) => (
         dangerouslySetInnerHTML={{__html: data.content.childMarkdownRemark.html}}
       />
       <div style={{textAlign: 'right', marginBottom: '-25px'}}>
-        <Link to="/">Back to home page</Link>
+        Next page: <Link to="/dojo">Dojo</Link>
       </div>
     </CenteredColumn>
   </Layout>

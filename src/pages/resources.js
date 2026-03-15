@@ -173,6 +173,9 @@ const NamedDefault = ({ data }) => (
         <li><a href="https://www.youtube.com/watch?v=O5boJc88M9g">Microsolidarity 
           Youtube channel w/ Richard Bartlett</a> 2021-11-21</li>
       </ul>
+      <div style={{textAlign: 'right', marginBottom: '-25px'}}>
+        Next page: <Link to="/about">About</Link>
+      </div>
     </CenteredColumn>
   </Layout>
 );
