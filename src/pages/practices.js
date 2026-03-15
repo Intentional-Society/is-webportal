@@ -9,18 +9,18 @@ import * as PracticesStyles from '../styles/practices.module.css';
 // Table of contents structure — drives both TOC rendering and body ordering
 const tocStructure = [
   { name: 'introduction', tocTitle: 'Introduction' },
-  { heading: "Part One: Inner-Shaded — The 'I'", practices: [
+  { name: 'part-one', heading: "Part One: Inner-Shaded — The 'I'", practices: [
     { name: 'noticing', tocTitle: 'Noticing (Interpersonal Gap Awareness)' },
     { name: 'parts-work', tocTitle: 'Parts Work (Internal Family Systems)' },
     { name: 'empathy-circling', tocTitle: 'Empathy Circling' },
     { name: 'social-noting', tocTitle: 'Social Noting' },
   ]},
-  { heading: "Part Two: Interpersonal — The 'We'", practices: [
+  { name: 'part-two', heading: "Part Two: Interpersonal — The 'We'", practices: [
     { name: 't-group', tocTitle: 'T-Group' },
     { name: 'circling', tocTitle: 'Circling' },
     { name: 'authentic-relating-games', tocTitle: 'Authentic Relating Games' },
   ]},
-  { heading: "Part Three: Outer-Shaded — The 'World'", practices: [
+  { name: 'part-three', heading: "Part Three: Outer-Shaded — The 'World'", practices: [
     { name: 'inquiry-spiraling', tocTitle: 'Inquiry Spiraling' },
     { name: 'nine-whys', tocTitle: 'Nine Whys' },
     { name: 'clean-coaching', tocTitle: 'Clean Coaching' },
@@ -31,7 +31,7 @@ const tocStructure = [
 
 // Flatten tocStructure into ordered chapter list for body rendering
 const chapters = tocStructure.flatMap(entry =>
-  entry.practices ? entry.practices : [entry]
+  entry.practices ? [{ name: entry.name }, ...entry.practices] : [entry]
 );
 
 const PracticesPage = ({ data }) => {
@@ -51,7 +51,7 @@ const PracticesPage = ({ data }) => {
           <ul>
             {tocStructure.map((entry, i) =>
               entry.heading ? (
-                <li key={i}>{entry.heading}
+                <li key={entry.name}><a href={`#${entry.name}`}>{entry.heading}</a>
                   <ul>
                     {entry.practices.map(p => (
                       <li key={p.name}><a href={`#${p.name}`}>{p.tocTitle}</a></li>
