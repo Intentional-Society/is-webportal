@@ -1,19 +1,16 @@
 import React, { useState } from 'react'
-import { Link, navigate } from 'gatsby'
+import { Link } from 'gatsby'
 import * as GlobalCSS from '../styles/global.module.css'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import Button from '@mui/material/Button'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import MenuIcon from '@mui/icons-material/Menu'
-import ArrowDropDown from '@mui/icons-material/ArrowDropDown'
 
 const NamedDefault = () => {
   const [anchorEl, setAnchorEl] = useState(null)
-  const [spacesAnchor, setSpacesAnchor] = useState(null)
 
   const handleClick = event => {
     setAnchorEl(event.currentTarget)
@@ -42,17 +39,6 @@ const NamedDefault = () => {
         </div>
         <Button
           component={Link}
-          to="/about"
-          sx={{
-            textTransform: 'inherit',
-            color: 'inherit',
-            display: { xs: 'none', sm: 'inline-flex' },
-          }}
-        >
-          About
-        </Button>
-        <Button
-          component={Link}
           to="/get-involved"
           sx={{
             textTransform: 'inherit',
@@ -63,58 +49,48 @@ const NamedDefault = () => {
           Get Involved
         </Button>
         <Button
-          onClick={event => setSpacesAnchor(event.currentTarget)}
+          component={Link}
+          to="/web"
           sx={{
             textTransform: 'inherit',
             color: 'inherit',
             display: { xs: 'none', sm: 'inline-flex' },
           }}
         >
-          Spaces <ArrowDropDown fontSize="small" />
+          Web
         </Button>
-
-        <Menu
-          anchorEl={spacesAnchor}
-          open={Boolean(spacesAnchor)}
-          onClose={() => setSpacesAnchor(null)}
-          anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
-          transformOrigin={{ vertical: 'top', horizontal: 'left' }}
-        >
-          <MenuItem
-            onClick={() => {
-              setSpacesAnchor(null)
-              navigate('/dojo')
-            }}
-          >
-            Dojo
-          </MenuItem>
-          <MenuItem
-            onClick={() => {
-              setSpacesAnchor(null)
-              navigate('/community')
-            }}
-          >
-            Community
-          </MenuItem>
-          <MenuItem
-            onClick={() => {
-              setSpacesAnchor(null)
-              navigate('/iv')
-            }}
-          >
-            Ventures
-          </MenuItem>
-        </Menu>
         <Button
           component={Link}
-          to="/history"
+          to="/community"
           sx={{
             textTransform: 'inherit',
             color: 'inherit',
             display: { xs: 'none', sm: 'inline-flex' },
           }}
         >
-          History
+          Community
+        </Button>
+        <Button
+          component={Link}
+          to="/dojo"
+          sx={{
+            textTransform: 'inherit',
+            color: 'inherit',
+            display: { xs: 'none', sm: 'inline-flex' },
+          }}
+        >
+          Dojo
+        </Button>
+        <Button
+          component={Link}
+          to="/iv"
+          sx={{
+            textTransform: 'inherit',
+            color: 'inherit',
+            display: { xs: 'none', sm: 'inline-flex' },
+          }}
+        >
+          Ventures
         </Button>
         <Button
           component={Link}
@@ -129,6 +105,17 @@ const NamedDefault = () => {
         </Button>
         <Button
           component={Link}
+          to="/news"
+          sx={{
+            textTransform: 'inherit',
+            color: 'inherit',
+            display: { xs: 'none', lg: 'inline-flex' },
+          }}
+        >
+          News
+        </Button>
+        <Button
+          component={Link}
           to="/questions"
           sx={{
             textTransform: 'inherit',
@@ -138,26 +125,12 @@ const NamedDefault = () => {
         >
           Questions?
         </Button>
-        <Button
-          component={Link}
-          to="/resources"
-          sx={{
-            textTransform: 'inherit',
-            color: 'inherit',
-            display: { xs: 'none', lg: 'inline-flex' },
-          }}
-        >
-          Resources
-        </Button>
         <IconButton
           aria-controls="top-nav-menu"
           aria-haspopup="true"
           aria-label="menu"
           onClick={handleClick}
-          sx={{
-            color: 'inherit',
-            display: { xs: 'inline-flex', lg: 'none' },
-          }}
+          sx={{ color: 'inherit' }}
         >
           <MenuIcon />
         </IconButton>
@@ -169,31 +142,22 @@ const NamedDefault = () => {
           keepMounted
           open={Boolean(anchorEl)}
           onClose={handleClose}
-          sx={{ display: { lg: 'none' } }}
         >
-          <MenuItem
-            component={Link}
-            to="/about"
-            onClick={handleClose}
-            sx={{ display: { sm: 'none' } }}
-          >
-            About
-          </MenuItem>
           <MenuItem
             component={Link}
             to="/get-involved"
             onClick={handleClose}
             sx={{ display: { sm: 'none' } }}
           >
-            Get Involved!
+            Get Involved
           </MenuItem>
           <MenuItem
             component={Link}
-            to="/dojo"
+            to="/web"
             onClick={handleClose}
             sx={{ display: { sm: 'none' } }}
           >
-            Dojo
+            Web
           </MenuItem>
           <MenuItem
             component={Link}
@@ -205,6 +169,14 @@ const NamedDefault = () => {
           </MenuItem>
           <MenuItem
             component={Link}
+            to="/dojo"
+            onClick={handleClose}
+            sx={{ display: { sm: 'none' } }}
+          >
+            Dojo
+          </MenuItem>
+          <MenuItem
+            component={Link}
             to="/iv"
             onClick={handleClose}
             sx={{ display: { sm: 'none' } }}
@@ -213,20 +185,36 @@ const NamedDefault = () => {
           </MenuItem>
           <MenuItem
             component={Link}
-            to="/history"
+            to="/friends"
             onClick={handleClose}
-            sx={{ display: { sm: 'none' } }}
+            sx={{ display: { lg: 'none' } }}
           >
-            History
-          </MenuItem>
-          <MenuItem component={Link} to="/friends" onClick={handleClose}>
             Friends
           </MenuItem>
-          <MenuItem component={Link} to="/questions" onClick={handleClose}>
+          <MenuItem
+            component={Link}
+            to="/news"
+            onClick={handleClose}
+            sx={{ display: { lg: 'none' } }}
+          >
+            News
+          </MenuItem>
+          <MenuItem
+            component={Link}
+            to="/questions"
+            onClick={handleClose}
+            sx={{ display: { lg: 'none' } }}
+          >
             Questions?
+          </MenuItem>
+          <MenuItem component={Link} to="/history" onClick={handleClose}>
+            History
           </MenuItem>
           <MenuItem component={Link} to="/resources" onClick={handleClose}>
             Resources
+          </MenuItem>
+          <MenuItem component={Link} to="/about" onClick={handleClose}>
+            About
           </MenuItem>
         </Menu>
       </Toolbar>
