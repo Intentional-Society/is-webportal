@@ -68,7 +68,7 @@ const NamedDefault = ({ data }) => {
       </>)}
 
       <div style={{textAlign: 'right', marginBottom: '-25px'}}>
-        Next page: <Link to="/resources">Resources</Link>
+        Next page: <Link to="/news">News</Link>
       </div>
     </CenteredColumn>
   </Layout>;

@@ -156,7 +156,7 @@ const FriendsPage = () => (
         ))}
       </div>
       <div style={{textAlign: 'right', marginBottom: '-25px'}}>
-        Next page: <Link to="/news">News</Link>
+        Next page: <Link to="/questions">Questions?</Link>
       </div>
     </CenteredColumn>
   </Layout>

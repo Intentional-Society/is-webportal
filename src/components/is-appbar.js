@@ -92,17 +92,17 @@ const NamedDefault = () => {
         </Button>
         <Button
           component={Link}
-          to="/news"
-          sx={{ ...btnSx('/news'), display: { xs: 'none', lg: 'inline-flex' } }}
-        >
-          News
-        </Button>
-        <Button
-          component={Link}
           to="/questions"
           sx={{ ...btnSx('/questions'), display: { xs: 'none', lg: 'inline-flex' } }}
         >
           Questions?
+        </Button>
+        <Button
+          component={Link}
+          to="/news"
+          sx={{ ...btnSx('/news'), display: { xs: 'none', lg: 'inline-flex' } }}
+        >
+          News
         </Button>
         <IconButton
           aria-controls="top-nav-menu"
@@ -173,19 +173,19 @@ const NamedDefault = () => {
           </MenuItem>
           <MenuItem
             component={Link}
-            to="/news"
-            onClick={handleClose}
-            sx={{ display: { lg: 'none' } }}
-          >
-            News
-          </MenuItem>
-          <MenuItem
-            component={Link}
             to="/questions"
             onClick={handleClose}
             sx={{ display: { lg: 'none' } }}
           >
             Questions?
+          </MenuItem>
+          <MenuItem
+            component={Link}
+            to="/news"
+            onClick={handleClose}
+            sx={{ display: { lg: 'none' } }}
+          >
+            News
           </MenuItem>
           <MenuItem component={Link} to="/history" onClick={handleClose}>
             History
