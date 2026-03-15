@@ -9,26 +9,19 @@ const NamedDefault = ({ data }) => (
   <Layout>
     <div style={{ height: '30px' }}></div>
     <CenteredColumn>
-      <Typography variant="h2"><s>Practice</s> Relational Dojo</Typography>
+      <Typography variant="h2"><s style={{color: '#999'}}>Practice</s> Relational Dojo</Typography>
 
-      <p>January 2026: Our "Practice Dojo" is in the process of 
-        merging into Relational Dojo, a larger community and platform for relational practices.
-        <a 
-      href="https://docs.google.com/forms/d/e/1FAIpQLSdsTSZGVw6vidkEieIbAzhjmmZuO8btB3g8Js4uYrkZKavkxQ/viewform">Click 
-      here to sign up</a> for <a href="https://buttondown.com/intentionalsociety/archive/is-relational-dojo-practices-lineup-q1/">these 
-      practices</a>, and the website will be up shortly.
+      <p>Our Practice Dojo activities have merged into the new, independent 
+        platform of <a href="https://relationaldojo.org">Relational Dojo</a>! Please 
+        check out the Dojo website for current practice group offerings.
       </p>
 
-      <p>With open front doors, the Practice Dojo is a skill-building space welcoming novices and 
-        experts alike to train in a variety of <i>developmental-relational practices</i>.
-        <ul>
-          <li><b>developmental</b> grows and shifts your perspective-taking capacity</li>
-          <li><b>relational</b> is caring interactive presence with joint attention and reflection</li>
-          <li><b>practice</b> is participatory enactment of a way-of-being, shifting how/who  we are</li>
-        </ul></p>
-      <IsHr />
-      <Typography variant="h4">History</Typography>
- 
+      <Typography variant="h3"><a href="https://relationaldojo.org">Relational Dojo</a></Typography>
+
+      <br/><br/>
+
+      <Typography variant="h3">Practice Dojo History</Typography>
+
       <p>The Practice Dojo became its own space in 2024 with the debut of the IS <Link to="/developmental-practice-series">
       Developmental Practice Series</Link>, followed by an Exploratory Practice Series tour and the
        heartfelt <Link to="/being-with-it-all">Being With It All</Link> series.</p>
@@ -39,8 +32,16 @@ const NamedDefault = ({ data }) => (
       course</Link> and <Link to="/being-with-it-all">Being With It All</Link>
       </p>
 
+      <p>The Practice Dojo is a skill-building space welcoming novices and 
+        experts alike to train in a variety of <i>developmental-relational practices</i>.
+        <ul>
+          <li><b>developmental</b> grows and shifts your perspective-taking capacity</li>
+          <li><b>relational</b> is caring interactive presence with joint attention and reflection</li>
+          <li><b>practice</b> is participatory enactment of a way-of-being, shifting how/who we are</li>
+        </ul></p>
+
       <IsHr />
-      <Typography variant="h4">Further geekery</Typography>
+      <Typography variant="h3">Further geekery</Typography>
       <p>Why dojo? The "<a href="https://en.wikipedia.org/wiki/Dojo">dojo</a>" metaphor helps transmit 
         the nature of this practice space: 
         it is a programmatic facilitated space of immersive experiential learning and transformative growth. 
