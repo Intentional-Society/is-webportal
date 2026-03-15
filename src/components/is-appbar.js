@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
+import { useLocation } from '@reach/router'
 import * as GlobalCSS from '../styles/global.module.css'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
@@ -20,13 +21,23 @@ const NamedDefault = () => {
     setAnchorEl(null)
   }
 
+  const { pathname } = useLocation()
+  const wash = 'rgba(255,255,255,0.15)'
+  const btnSx = path => ({
+    textTransform: 'inherit',
+    color: 'inherit',
+    borderRadius: '7px',
+    '&:hover': { backgroundColor: wash },
+    ...(pathname.startsWith(path) && { backgroundColor: wash }),
+  })
+
   return (
     <AppBar
       position="fixed"
       elevation={0}
       sx={{
         color: 'secondary.main',
-        opacity: '80%',
+        opacity: '85%',
         backgroundImage:
           'radial-gradient(circle at 20% -150%, #5c9d93, #519f9a, #44a0a2, #36a1ab, #25a2b5, #109fbb, #009bc1, #0097c6, #008ec7, #0085c8, #0c7bc6, #2b70c3)',
       }}
@@ -40,88 +51,56 @@ const NamedDefault = () => {
         <Button
           component={Link}
           to="/get-involved"
-          sx={{
-            textTransform: 'inherit',
-            color: 'inherit',
-            display: { xs: 'none', sm: 'inline-flex' },
-          }}
+          sx={{ ...btnSx('/get-involved'), display: { xs: 'none', sm: 'inline-flex' } }}
         >
           Get Involved
         </Button>
         <Button
           component={Link}
           to="/web"
-          sx={{
-            textTransform: 'inherit',
-            color: 'inherit',
-            display: { xs: 'none', sm: 'inline-flex' },
-          }}
+          sx={{ ...btnSx('/web'), display: { xs: 'none', sm: 'inline-flex' } }}
         >
           Web
         </Button>
         <Button
           component={Link}
           to="/community"
-          sx={{
-            textTransform: 'inherit',
-            color: 'inherit',
-            display: { xs: 'none', sm: 'inline-flex' },
-          }}
+          sx={{ ...btnSx('/community'), display: { xs: 'none', sm: 'inline-flex' } }}
         >
           Community
         </Button>
         <Button
           component={Link}
           to="/dojo"
-          sx={{
-            textTransform: 'inherit',
-            color: 'inherit',
-            display: { xs: 'none', sm: 'inline-flex' },
-          }}
+          sx={{ ...btnSx('/dojo'), display: { xs: 'none', sm: 'inline-flex' } }}
         >
           Dojo
         </Button>
         <Button
           component={Link}
           to="/iv"
-          sx={{
-            textTransform: 'inherit',
-            color: 'inherit',
-            display: { xs: 'none', sm: 'inline-flex' },
-          }}
+          sx={{ ...btnSx('/iv'), display: { xs: 'none', sm: 'inline-flex' } }}
         >
           Ventures
         </Button>
         <Button
           component={Link}
           to="/friends"
-          sx={{
-            textTransform: 'inherit',
-            color: 'inherit',
-            display: { xs: 'none', lg: 'inline-flex' },
-          }}
+          sx={{ ...btnSx('/friends'), display: { xs: 'none', lg: 'inline-flex' } }}
         >
           Friends
         </Button>
         <Button
           component={Link}
           to="/news"
-          sx={{
-            textTransform: 'inherit',
-            color: 'inherit',
-            display: { xs: 'none', lg: 'inline-flex' },
-          }}
+          sx={{ ...btnSx('/news'), display: { xs: 'none', lg: 'inline-flex' } }}
         >
           News
         </Button>
         <Button
           component={Link}
           to="/questions"
-          sx={{
-            textTransform: 'inherit',
-            color: 'inherit',
-            display: { xs: 'none', lg: 'inline-flex' },
-          }}
+          sx={{ ...btnSx('/questions'), display: { xs: 'none', lg: 'inline-flex' } }}
         >
           Questions?
         </Button>
@@ -130,7 +109,7 @@ const NamedDefault = () => {
           aria-haspopup="true"
           aria-label="menu"
           onClick={handleClick}
-          sx={{ color: 'inherit' }}
+          sx={{ color: 'inherit', '&:hover': { backgroundColor: 'rgba(255,255,255,0.15)' } }}
         >
           <MenuIcon />
         </IconButton>
