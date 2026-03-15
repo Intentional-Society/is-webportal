@@ -11,29 +11,30 @@ const NamedDefault = ({ data }) => (
     <CenteredColumn>
       <Typography variant="h2">Intentional Ventures</Typography>
 
-      <p>We unlock aligned livelihood through relational, perspectival, and technical support.</p>
+      <p>The first goal of IV is to <b>catalyze aligned livelihoods</b> for individuals in 
+        service to human thriving. The second goal of IV is to create a <b>relational economic web</b> of 
+        abundance with clan / tribe / village-like bonds of support. These two goals are interdependent 
+        and equal in value. Livelihood is the more tangible individualized task, around which the 
+        more nebulous relational web layer hopes to cohere.</p>
 
-      <p>As of May 2025, you can learn about and connect with Intentional Ventures (IV) by:
-        <ol>
-          <li>Attending the open <a href="https://forum.secondrenaissance.net/t/about-the-intentional-ventures-tent/305">IV 
-          Tent</a> meetings at <a href="https://secondrenaissance.net/oasis">The Oasis</a></li>
-          <li>Registering your interest 
-            using <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWtrt_DBkpKHgujWzlxQJJiiW466NNU28s9dAe__ujVwS9_g/viewform?usp=sharing">this 
-            form</a>.</li>
-          <li>Brigning questions to an <Link to="/get-involved#connection-calls">IS Connection Call</Link></li>
-        </ol>
-      </p>
+      <p>Intentional Ventures is by invitation only. We onboarded a new cohort in early 2026, and do 
+        not anticipate adding more participants for the near-to-medium-term future.
+        However, we're still always interested in hearing from like-minded folks. You 
+        can <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWtrt_DBkpKHgujWzlxQJJiiW466NNU28s9dAe__ujVwS9_g/viewform?usp=sharing">register
+        your interest</a> or bring questions to an <Link to="/get-involved#connection-calls">IS Connection Call</Link>.</p>
 
-      <p>IV's heartbeat calls happen Fridays at 9am Pacific / Noon Eastern.</p>
+      <p>IV heartbeat calls happen Fridays at 9am Pacific / Noon Eastern.</p>
+
+      <p>The capital pool for IV investments intends to open to external donors in 2026.</p>
       
       <IsHr />
-      <Typography variant="h4">The story so far</Typography>
+      <Typography variant="h4">History: The story so far</Typography>
       <p>Intentional Ventures began April 2024 with a founding team of about a dozen.</p>
 
       <p>After three quarters with its founding team, at the end of 2024 IV had experimentally generated revenue, established 
         key design principles, evolved a two-space structure, and added its first new (non-founding) participants. </p>
       
-      <p>Inside Limicon 2025 (throughout March), some IV "exploration space" activites 
+      <p>Inside Limicon 2025 (throughout March), some IV "exploration space" activities 
         were shared in a four-part "Build-a-thon" series:
         <ul>
           <li>Generative ideation</li>
@@ -43,15 +44,18 @@ const NamedDefault = ({ data }) => (
         </ul>
       </p>
 
-      <p>The "execution space" focuses on <a href="https://otherinter.net/research/squad-wealth/">Squad</a>-shaped 
-         support with an "extended family" ecosystem of support 
-         via awareness/perspectival reflection, technical expertise, and catalyzing capital.</p>
+      <p>The functional alchemy of IV works via the management-and-integration of the polarity of 
+        inner work and outer work, all supported by relationality. In the inner dimension, IV provides 
+        psychological (inner) support via all members (via spotlights and other interactions), contributed 
+        from everyone’s self-led time and energy. Broad relationality (to parts/I, group/we, system/world) 
+        supports our “three skills” of the rational-professional, interpersonal, and perspectival-developmental capabilities 
+        needed to “win at Game A while living Game B”.</p>
 
-      <p>The "three skills" held as a baseline of Intentional Ventures participants are:</p>
+      <p>Those “three skills” held as a baseline of Intentional Ventures participants are:</p>
       <ul>
-        <li>Rationality - systematic thought and conventional professional skills</li>
-        <li>Relationality - robust emotional capacity and relational agility</li>
-        <li>Perspectivity - fluid perspective-taking, metasystematicity, complex systems lens</li>
+        <li>Rational-professional skill: systematic thought, self-management, conventional professional skills</li>
+        <li>Interpersonal skill: self-awareness, communication, robust emotional capacity and relational agility</li>
+        <li>Perspectival-developmental skill: fluid perspective-taking, complexity lens, metasystematicity</li>
       </ul>
       
       <p>Inspirations include <a href="https://www.enspiral.com/">Enspiral</a>, <a href="https://www.coralus.world/">Coralus</a>, and the 
