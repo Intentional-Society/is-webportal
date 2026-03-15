@@ -2,7 +2,7 @@
 
 This is a web of *trust* and *collaboration*.
 
-This is the network of humans associated with Intentional Society — a distributed village, an ecosystem of people and care. What brings this network together? This web is aligned around the intersection of Inner development, wise action, and human connection.
+This is the network of humans associated with Intentional Society — a distributed village, spanning an ecosystem of people and care. What brings this network together? This web is aligned around the intersection of Inner development, wise action, and human connection.
 
 - **Inner development:** We are those who practice awareness, acceptance, and integrity in growing toward being who we want to be.
 - **Wise action:** We are those whose lives form a living vow in service of what is good, true, and beautiful, integrated from personal to planetary.
