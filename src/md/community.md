@@ -18,10 +18,10 @@ So "being who we want to be" is the organizing task — one which is catalyzed b
 
 If you're looking for focused practice aimed at personal skill-building, you'll find [Relational Dojo](/dojo) groups more purposeful and easier to navigate.
 
-Other lightweight relational programs like Pods, Crews, and the Gumball Machine were incubated by this community but are now accessible to everyone inside the [IS web](/web).
+Other lightweight relational programs like Pods, Crews, and the Gumball Machine were incubated by this community but are now accessible (in parallel with this community, not conflated with community membership) to everyone inside the [IS web](/web).
 
 <a id="join" style="display:block;position:relative;top:-74px;visibility:hidden"></a>
 
 ### How to join
 
-Community membership has now been subsumed by our [relational web](/web) — joining at the (larger) network level grants access to participation in this community. 
+Community membership signup has become a component inside our [relational web](/web) signup form — joining at the (larger) network level grants access to Community Hub Calls as well as other programs.
