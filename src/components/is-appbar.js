@@ -108,8 +108,9 @@ const NamedDefault = () => {
           aria-controls="top-nav-menu"
           aria-haspopup="true"
           aria-label="menu"
+          disableRipple
           onClick={handleClick}
-          sx={{ color: 'inherit', '&:hover': { backgroundColor: 'rgba(255,255,255,0.15)' } }}
+          sx={{ color: 'inherit', '&:hover': { backgroundColor: wash }, ...(anchorEl && { backgroundColor: wash }) }}
         >
           <MenuIcon />
         </IconButton>
