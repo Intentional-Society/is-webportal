@@ -26,7 +26,7 @@ const NamedDefault = ({ data }) => {
 
   return (
     <Layout>
-      <div style={{ height: '5vh' }}></div>
+      <div style={{ height: '30px' }}></div>
       <CenteredColumn>
         <Typography variant="h2" style={{ textAlign: 'center', marginBottom: '20px' }}>Orientation</Typography>
 

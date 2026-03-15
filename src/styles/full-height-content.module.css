@@ -1,0 +1,23 @@
+/* MUI Toolbar heights (matches breakpoints in global.module.css .anchorOffset):
+   - default: 56px
+   - landscape on small screens: 48px
+   - sm (>=600px): 64px
+   Footer image height: 120px (StaticImage in layout.js) */
+
+.fullHeight {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 56px - 120px);
+}
+
+@media (min-width:0px) and (orientation: landscape) {
+  .fullHeight {
+    min-height: calc(100vh - 48px - 120px);
+  }
+}
+
+@media (min-width:600px) {
+  .fullHeight {
+    min-height: calc(100vh - 64px - 120px);
+  }
+}

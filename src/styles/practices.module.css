@@ -1,0 +1,80 @@
+/* Book-like styling for the practices catalog */
+
+.bookLayout {
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.05em;
+}
+
+.bookLayout p {
+  margin-bottom: 1.2em;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.bookLayout blockquote {
+  font-style: italic;
+  margin: 1.5em 2em;
+  padding: 0.5em 1.5em;
+  border-left: 3px solid #24818E;
+  background-color: #f4f8f6;
+}
+
+.bookLayout h3 {
+  margin-top: 2.5em;
+  margin-bottom: 0.8em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Remove top margin when h3 is the first element in a section div,
+   so anchor link offsets align correctly with the heading */
+.bookLayout h3:first-child {
+  margin-top: 0;
+}
+
+.bookLayout h4 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  color: #24818E;
+}
+
+.bookLayout ul, .bookLayout ol {
+  margin-bottom: 1.2em;
+}
+
+.bookLayout li {
+  margin-bottom: 0.4em;
+}
+
+/* Table of contents */
+.toc {
+  margin: 1.5em 0;
+  padding: 2em 3.5em;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f4f8f6;
+  border-radius: 4px;
+}
+
+.toc h4 {
+  margin-top: 0;
+  color: inherit;
+}
+
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.toc ul ul {
+  padding-left: 1.5em;
+}
+
+.toc li {
+  margin-bottom: 0.3em;
+  line-height: 1.5;
+}

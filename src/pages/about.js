@@ -8,8 +8,9 @@ import * as GlobalCSS from '../styles/global.module.css';
 
 const NamedDefault = () => (
   <Layout>
-    <div style={{ height: '5vh' }}></div>
+    <div style={{ height: '30px' }}></div>
     <CenteredColumn>
+      <h3 style={{textAlign: 'center', color: '#cc0000'}}>🚧 Needs 2026 Rewrite 🚧</h3>
       {/* Section: Who We Are */}
       <Typography variant="h3">Who We Are</Typography>
       <img
@@ -159,7 +160,7 @@ const NamedDefault = () => (
         outward from interpersonal trust and cooperation at local scale.
       </p>
       <div style={{ textAlign: 'right', marginBottom: '-25px' }}>
-        Next page: <Link to="/get-involved">Get Involved!</Link>
+        Next page: <Link to="/contact">Contact</Link>
       </div>
     </CenteredColumn>
   </Layout>

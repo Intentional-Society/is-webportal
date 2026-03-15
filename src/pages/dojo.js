@@ -4,11 +4,10 @@ import Typography from '@mui/material/Typography';
 import IsHr from '../components/is-hr';
 import Layout from '../components/layout';
 import CenteredColumn from '../components/centered-column';
-import BlurbPractice from '../components/blurb-practice';
 
 const NamedDefault = ({ data }) => (
   <Layout>
-    <div style={{ height: '5vh' }}></div>
+    <div style={{ height: '30px' }}></div>
     <CenteredColumn>
       <Typography variant="h2"><s>Practice</s> Relational Dojo</Typography>
 
@@ -27,11 +26,6 @@ const NamedDefault = ({ data }) => (
           <li><b>relational</b> is caring interactive presence with joint attention and reflection</li>
           <li><b>practice</b> is participatory enactment of a way-of-being, shifting how/who  we are</li>
         </ul></p>
-      {/*
-       <IsHr />
-       <Typography variant="h4">What's happening now</Typography>
-       <p><BlurbPractice /></p>
-        */}
       <IsHr />
       <Typography variant="h4">History</Typography>
  
@@ -72,7 +66,7 @@ const NamedDefault = ({ data }) => (
         </p>
 
       <div style={{textAlign: 'right', marginBottom: '-25px'}}>
-        <Link to="/">Back to home page</Link>
+        Next page: <Link to="/iv">Ventures</Link>
       </div>
     </CenteredColumn>
   </Layout>

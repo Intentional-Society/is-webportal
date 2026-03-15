@@ -6,7 +6,6 @@ import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import ButtondownSignup from '../components/buttondownsignup';
 import IsHr from '../components/is-hr';
-// import BlurbPractice from '../components/blurb-practice';
 import CenteredColumn from '../components/centered-column';
 import * as GlobalCSS from '../styles/global.module.css';
 

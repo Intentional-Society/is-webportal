@@ -375,7 +375,7 @@ const seasons = [
 
 const HistoryPage = () => (
   <Layout>
-    <div style={{ height: '5vh' }}></div>
+    <div style={{ height: '30px' }}></div>
     <CenteredColumn>
       <Typography variant="h2">History</Typography>
       <p>
@@ -413,6 +413,9 @@ const HistoryPage = () => (
           </Grid>
         ))}
       </Grid>
+      <div style={{textAlign: 'right', marginBottom: '-25px'}}>
+        Next page: <Link to="/resources">Resources</Link>
+      </div>
     </CenteredColumn>
   </Layout>
 );

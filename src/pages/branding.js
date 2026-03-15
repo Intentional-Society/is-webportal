@@ -7,7 +7,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 const NamedDefault = ({ data }) => (
   <Layout>
-    <div style={{ height: '5vh' }}></div>
+    <div style={{ height: '30px' }}></div>
     <CenteredColumn>
       <Typography variant="h2">Branding</Typography>
       <p>For press and partners including representations of Intentional Society in other media</p>
