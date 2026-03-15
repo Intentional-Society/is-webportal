@@ -46,6 +46,7 @@ const PracticesPage = ({ data }) => {
       <div style={{ height: '30px' }}></div>
       <CenteredColumn>
         <h2 style={{textAlign: 'center'}}>Relational Practices Catalog</h2>
+        <h3 style={{textAlign: 'center', color: '#cc0000'}}>🚧 Under Construction — Not Yet Published 🚧</h3>
         <div className={PracticesStyles.bookLayout}>
         <nav className={PracticesStyles.toc}>
           <ul>

@@ -28,6 +28,12 @@
   border-bottom: 1px solid #ccc;
 }
 
+/* Remove top margin when h3 is the first element in a section div,
+   so anchor link offsets align correctly with the heading */
+.bookLayout h3:first-child {
+  margin-top: 0;
+}
+
 .bookLayout h4 {
   margin-top: 2em;
   margin-bottom: 0.5em;
