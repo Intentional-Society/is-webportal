@@ -195,6 +195,9 @@ const NamedDefault = () => {
           <MenuItem component={Link} to="/about" onClick={handleClose}>
             About
           </MenuItem>
+          <MenuItem component={Link} to="/contact" onClick={handleClose}>
+            Contact
+          </MenuItem>
         </Menu>
       </Toolbar>
     </AppBar>
