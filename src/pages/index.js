@@ -1,120 +1,154 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import Typography from '@mui/material/Typography';
-// import Grid from '@mui/material/Grid';
 import { StaticImage } from 'gatsby-plugin-image';
 import Layout from '../components/layout';
 import ButtondownSignup from '../components/buttondownsignup';
 import IsHr from '../components/is-hr';
 import CenteredColumn from '../components/centered-column';
-import * as GlobalCSS from '../styles/global.module.css';
+import * as styles from '../styles/homepage.module.css';
 
-/* imageList commented out for 5-year celebration page takeover
-const imageList = [
+const intentionCards = [
   {
-    image: '/images/logos/second-renaissance.jpg',
-    link: 'https://secondrenaissance.net',
-    comment: 'Exploring better futures through collective intelligence.'
+    id: 'grow', label: '...grow myself',
+    links: [
+      { text: 'Relational Dojo', href: 'https://relationaldojo.org', external: true },
+      { text: 'Developmental Practice Series', to: '/developmental-practice-series' },
+    ],
   },
   {
-    image: '/images/logos/life-itself.jpg',
-    link: 'https://lifeitself.us',
-    comment: 'A community for philosophy, culture, and sustainable living.'
+    id: 'people', label: '...find the others',
+    links: [
+      { text: 'Community', to: '/community' },
+      { text: 'Relational Web', to: '/web' },
+      { text: 'Friends', to: '/friends' },
+      { text: 'Connection Call', to: '/get-involved#connection-calls' },
+    ],
   },
   {
-    image: '/images/logos/enspiral.png',
-    link: 'https://www.enspiral.com/',
-    comment: 'A network of freelancers focused on self-managed organizations.'
+    id: 'work', label: '...work with purpose',
+    links: [
+      { text: 'Relational Web', to: '/web' },
+      { text: 'Intentional Ventures', to: '/iv' },
+    ],
   },
   {
-    image: '/images/logos/microsolidarity.jpg',
-    link: 'https://www.microsolidarity.cc/',
-    comment: 'A framework for decentralized organizing and community-building.'
+    id: 'learn', label: '...learn about IS',
+    links: [
+      { text: 'Connection Call', to: '/get-involved#connection-calls' },
+      { text: 'Newsletter', href: '#newsletter' },
+      { text: 'News', to: '/news' },
+    ],
   },
-  {
-    image: '/images/logos/building-belonging.png',
-    link: 'https://www.buildingbelonging.us/',
-    comment: 'A movement for creating spaces where everyone belongs.'
-  },
-  {
-    image: '/images/logos/starters-culture.png',
-    link: 'https://www.startercultures.us/',
-    comment: 'Co-creating new economic models for livelihoods and co-ops.'
-  }
 ];
-*/
 
+const NamedDefault = () => {
+  const [activeCard, setActiveCard] = useState(null);
 
+  const toggle = id => setActiveCard(prev => (prev === id ? null : id));
 
-const NamedDefault = ({ data }) => <>
-  <Layout>
-    <StaticImage src="../../static/images/bg/E7EFEBbg.png" layout="fullWidth" alt="" loading="eager"
-                style={{ height: '60vh', zIndex: -1, position: 'absolute', 
-                        top: '0px', left: '0px', right: '0px'}}
-                imgStyle={{objectFit: 'fill'}}/>
-    <div style={{ textAlign: 'center', margin: '0 auto', minHeight: '280px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-      <Typography variant="h2" style={{ color: '#FFFFFF', fontSize: 'clamp(2rem, 8vw, 3.75rem)', margin: 0 }}>
-        Intentional Society
-      </Typography>
-      <Typography variant="h2" style={{ color: '#FFFFFF', fontSize: 'clamp(2rem, 8vw, 3.75rem)', margin: 0 }}>
-        The 5-Year Celebration
-      </Typography>
-      <Typography variant="h2" style={{ color: '#FFFFFF', fontSize: 'clamp(2rem, 8vw, 3.75rem)', margin: 0 }}>
-        Launching a New Era
-      </Typography>
-    </div>
-    <CenteredColumn>
-      <div style={{fontSize: '1.2em'}}>
+  return (
+    <Layout>
+      {/* Hero */}
+      <StaticImage src="../../static/images/bg/E7EFEBbg.png" layout="fullWidth" alt="" loading="eager"
+                  style={{ height: '60vh', zIndex: -1, position: 'absolute',
+                          top: '0px', left: '0px', right: '0px'}}
+                  imgStyle={{objectFit: 'fill'}}/>
+      <div style={{ textAlign: 'center', margin: '0 auto', minHeight: '280px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingTop: '1.5rem' }}>
+        {['inner development', 'wise action', 'human connection'].map(line => (
+          <Typography key={line} variant="h3" style={{
+            color: '#FFFFFF',
+            fontSize: 'clamp(1.8rem, 7vw, 3rem)',
+            fontWeight: 300,
+            letterSpacing: '0.04em',
+            lineHeight: 1.5,
+            margin: 0,
+          }}>
+            {line}
+          </Typography>
+        ))}
+      </div>
 
-        <p style={{textAlign: 'center', fontSize: '1.2em'}}>
-          <b>March 15, 2026 &middot; 1:00 PM Pacific &middot; 90 minutes</b>
+      <CenteredColumn>
+        {/* Identity paragraph */}
+        <p style={{fontSize: '1.15em', textAlign: 'center', marginTop: '1.5em'}}>
+          Intentional Society is an ecosystem of people and purposes —
+          being who we want to be, flowing into action with integrity, catalyzing with relational connection.
         </p>
 
-        <p>Intentional Society is building a better world from the inside out. We've been meeting
-          for five years now, growing together and expanding our activities. We invite you to
-          celebrate with us, and to join us in launching an expanded relational web that supports
-          more of us in divergent coherence!</p>
-
-        <p style={{textAlign: 'center', padding: '12px 0'}}>
-          <a href="https://us02web.zoom.us/meeting/register/8nzxXOk5Rzicpmo5mTMwlQ"
-            className={GlobalCSS.bigButton}>
-            Register on Zoom
-          </a>
+        {/* Embodied invitation */}
+        <Typography variant="h3" style={{textAlign: 'center', marginTop: '1.5em', marginBottom: '0.3em'}}>
+          What is <i>your</i> intention?
+        </Typography>
+        <p className={styles.invitation}>
+          Pause for a moment. Take one conscious breath.<br />
+          Check in with yourself — what matters to you?
         </p>
 
-        <div style={{fontSize: '0.85em'}}>
-          <p>For the last five years, Intentional Society has been a gathering of friends
-            "being who we want to be" — one which has unfolded from a single weekly video call into a
-            multi-faceted ecosystem of practices, relating, and entrepreneurial spaces. Having firmly
-            rooted our culture in developmental &amp; relational inner exploration, we're now marking an
-            ongoing phase shift: balancing doing and being by integrating outer action.</p>
-          <p>A more beautiful world already exists whenever-and-wherever our biggest selves touch each
-            other's humanity. As we look forward into our next era, we seek to anchor and grow bigger
-            islands of coherence amidst this chaotic and accelerating world. "Be the change" flows from
-            our hearts out into service of a thriving future guided by the question, "Can we humans
-            become wise enough to hold our great power?"</p>
-          <p>Come to hear stories from the history and breadth of Intentional Society, and to celebrate
-            what "awareness, acceptance, integrity" has meant to people over the last half-decade. Come
-            to hear about what we've learned, and about the latest developments of our relational and
-            entrepreneurial programs. Come for the literal million-dollar announcement, and to
-            collaborate in launching an expanding relational web.</p>
-          <p>We invite you to join us on March 15th to celebrate and to connect with this part of the
-            greater whole we're already becoming.</p>
+        <div className={styles.iWantTo}>I want to...</div>
+        <svg className={styles.arrows} viewBox="-5 -3 1010 56" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+              markerWidth="6" markerHeight="6" orient="auto-start-reverse" fill="#24818E">
+              <path d="M 0 0 L 10 5 L 0 10 z" />
+            </marker>
+          </defs>
+          <line x1="500" y1="0" x2="120" y2="48" stroke="#24818E" strokeWidth="1.5" markerEnd="url(#arrow)" />
+          <line x1="500" y1="0" x2="373" y2="48" stroke="#24818E" strokeWidth="1.5" markerEnd="url(#arrow)" />
+          <line x1="500" y1="0" x2="627" y2="48" stroke="#24818E" strokeWidth="1.5" markerEnd="url(#arrow)" />
+          <line x1="500" y1="0" x2="880" y2="48" stroke="#24818E" strokeWidth="1.5" markerEnd="url(#arrow)" />
+        </svg>
+
+        {/* Intention cards */}
+        <div className={styles.cardRow}>
+          {intentionCards.map(card => (
+            <div key={card.id} className={styles.cardWrap}>
+              <div
+                className={activeCard === card.id ? styles.cardActive : activeCard ? styles.cardDimmed : styles.card}
+                onClick={() => toggle(card.id)}
+                onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') toggle(card.id) }}
+                role="button"
+                tabIndex={0}
+                aria-pressed={activeCard === card.id}
+              >
+                {card.label}
+              </div>
+            </div>
+          ))}
         </div>
-        <p style={{textAlign: 'center', padding: '12px 0'}}>
-          <a href="https://us02web.zoom.us/meeting/register/8nzxXOk5Rzicpmo5mTMwlQ"
-            className={GlobalCSS.bigButton}>
-            Register on Zoom
-          </a>
-        </p>
-        <br /><br />
+
+        {/* Link panel — constant height, content appears when a card is active */}
+        <div className={styles.linkPanelWrap}>
+          {activeCard && (
+            <div className={styles.linkPanel}>
+              {intentionCards.find(c => c.id === activeCard).links.map((link, i) => (
+                <span key={i} className={styles.linkPanelItem}>
+                  {link.external
+                    ? <a href={link.href} target="_blank" rel="noopener noreferrer">{link.text}</a>
+                    : link.to
+                      ? <Link to={link.to}>{link.text}</Link>
+                      : <a href={link.href}>{link.text}</a>
+                  }
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+
         <IsHr />
+
+        {/* Newsletter signup */}
+        <a id="newsletter" style={{display: 'block', position: 'relative', top: '-74px', visibility: 'hidden'}}></a>
         <p>Want to follow along with what we're doing and learning?
           Subscribe to our Weekly Update newsletter:</p>
-        <ButtondownSignup></ButtondownSignup>
+        <ButtondownSignup />
 
-      </div>
-    </CenteredColumn>
-  </Layout>
-</>;
+        <br />
+        <div className={styles.footerNav}>
+          Next page: <Link to="/get-involved">Get Involved</Link>
+        </div>
+      </CenteredColumn>
+    </Layout>
+  );
+};
 export default NamedDefault;

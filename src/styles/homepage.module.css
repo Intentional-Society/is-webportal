@@ -1,0 +1,131 @@
+/* Intention Cards */
+.cardRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+
+.cardWrap {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+}
+
+.card {
+  border: 2px solid #24818E;
+  border-radius: 10px;
+  padding: 14px 20px;
+  cursor: pointer;
+  background: #fff;
+  color: #24818E;
+  font-size: 1.05em;
+  font-weight: 600;
+  font-family: Gudea, Helvetica, Arial, sans-serif;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s;
+  user-select: none;
+  text-align: center;
+  min-height: 3.4em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover {
+  box-shadow: 0 2px 8px rgba(36, 129, 142, 0.25);
+}
+
+.cardActive {
+  composes: card;
+  background: #24818E;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(36, 129, 142, 0.35);
+}
+
+/* Link panel below cards — fixed height for 4 lines */
+.linkPanelWrap {
+  min-height: 10em;
+  margin: 0 0 0.5em;
+}
+
+.linkPanel {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.linkPanelItem a {
+  color: #24818E;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.3em;
+}
+
+.linkPanelItem a:hover {
+  text-decoration: underline;
+}
+
+/* Dim unselected cards */
+.cardDimmed {
+  composes: card;
+  opacity: 0.45;
+}
+
+/* On small screens: 2x2 grid */
+@media (max-width: 679px) {
+  .cardRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+  }
+  .cardWrap {
+    display: flex;
+  }
+  .card, .cardActive, .cardDimmed {
+    min-width: unset;
+    min-height: unset;
+    width: 100%;
+  }
+}
+
+/* Invitation text */
+.invitation {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  font-size: 1.15em;
+  margin: 0 0 0.5em;
+  line-height: 1.6;
+}
+
+.iWantTo {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.6em;
+  font-family: Gudea, Helvetica, Arial, sans-serif;
+  color: #24818E;
+  margin: 0.5em 0 0;
+}
+
+.arrows {
+  display: block;
+  width: 100%;
+  height: 45px;
+  margin: 0 auto -4px;
+}
+
+@media (max-width: 679px) {
+  .arrows {
+    display: none;
+  }
+}
+
+/* Footer nav */
+.footerNav {
+  text-align: right;
+  margin-bottom: -25px;
+}
