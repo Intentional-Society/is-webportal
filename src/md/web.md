@@ -20,9 +20,9 @@ Once a quarter, we gather the whole network for a full assembly. Hear "what's al
 
 We want to see each other and how we're connected. Standard profiles and contact info fit in a conventional directory. The relational layer will then roll out with a node-link diagram mapping our trust relationships and our collaborations.
 
-#### [Relational Programs](/programs)
+#### Relational Programs
 
-Gumball Machine, Presence Pods, Casework Pods, Thematic Crews, Arts in IS, and more — see the full [Relational Programs](/programs) page.
+Gumball Machine, Presence Pods, Casework Pods, Thematic Crews, Arts in IS, and more. See the full [Relational Programs](/programs) page.
 
 #### Weekly Community Calls
 
