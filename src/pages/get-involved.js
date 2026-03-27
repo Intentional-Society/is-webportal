@@ -4,7 +4,7 @@ import Typography from '@mui/material/Typography';
 import Layout from '../components/layout';
 import CenteredColumn from '../components/centered-column';
 import ButtondownSignup from '../components/buttondownsignup';
-import BlurbOfficeHours from '../components/blurb-officehours';
+import BlurbConnectionCall from '../components/blurb-connectioncall';
 import * as GlobalCSS from '../styles/global.module.css';
 
 const NamedDefault = ({ data }) => {
@@ -28,7 +28,7 @@ const NamedDefault = ({ data }) => {
         <p>This call is like a picnic table out on our front lawn. 
            Open to all, new and familiar, with no agenda other than your curiosity!</p>
 
-        <p><BlurbOfficeHours /> Bring your video camera (phone is okay), microphone, and
+        <p><BlurbConnectionCall /> Bring your video camera (phone is okay), microphone, and
           your <Link to="/questions">questions</Link>.</p>
 
         <Typography variant="h3">Find Relational Practice Groups</Typography>
