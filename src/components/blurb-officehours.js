@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NamedDefault = ({ data }) => <>
-  Our next <a href="https://us02web.zoom.us/meeting/register/x1eSqvtVQpmssvT3GumT0w">
-  IS Connection Call</a> is on <b>Saturday, March 21<sup>st</sup> at 11:00-11:55am Pacific Time (2pm Eastern, 6pm UTC)</b>.
+  Our next <a href="https://us02web.zoom.us/meeting/register/39wahNZGTMCaB9zifpxYUA">
+  IS Connection Call</a> is on <b>Saturday, April 4<sup>th</sup> at 1:00-1:55pm Pacific Time (4pm Eastern, 8pm UTC)</b>.
 </>;
 export default NamedDefault;
