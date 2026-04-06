@@ -32,7 +32,7 @@ const friendsList = [
   },
   {
     name: 'Microsolidarity',
-    description: `<a href="http://richdecibels.com/" target="_blank" rel="noopener noreferrer">Rich Bartlett</a> assembled this framework and vocabulary for decentralized organizing, from which we reference the “fractal of belonging” and other labels like “crews” and “caller. You can also check out their
+    description: `<a href="http://richdecibels.com/" target="_blank" rel="noopener noreferrer">Rich Bartlett</a> assembled this framework and vocabulary for decentralized organizing, from which we reference the “fractal of belonging” and other labels like “crews” and “caller". You can also check out their
     <a href="https://www.thehum.org/microsolidarity" target="_blank" rel="noopener noreferrer">Training.</a>`,
     website: 'https://www.microsolidarity.cc/',
     image: '/images/logos/microsolidarity.jpg'
@@ -57,7 +57,7 @@ const friendsList = [
   },
   {
     name: 'Limicon',
-    description: 'Limicon is a four-week, mostly online,fan-made open space convention dedicated to strengthening the growing ecosystem of communities spawned from the liminal web.',
+    description: 'Limicon is a four-week, mostly online, fan-made open space convention dedicated to strengthening the growing ecosystem of communities spawned from the liminal web.',
     website: 'https://www.limicon2025.com/',
     image: '/images/logos/limicon.png'
   },
@@ -111,7 +111,7 @@ const friendsList = [
   },
   {
     name: 'The Stoa',
-    description: "A digital campfire for cohering, philosophical inquiry and dialogue on what matters most on the knife's edge. The Stoa is stewarded by Peter Limberg",
+    description: "A digital campfire for cohering, philosophical inquiry and dialogue on what matters most on the knife's edge. The Stoa is stewarded by Peter Limberg.",
     website: 'https://www.youtube.com/c/TheStoa',
     image: '/images/logos/the-stoa.png'
   },
