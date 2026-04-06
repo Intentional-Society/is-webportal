@@ -36,4 +36,4 @@ Around us in "liminal" space are other communities and entities with similar wor
 
 Membership is lightweight and non-exclusive - we encourage you to belong to other webs of mutual support both physically and virtually. But it does consist of intentionality - to grow your own perspective, to be in service to something greater than yourself, and to be in relationship with others (not everyone!) as catalyst to both inner and outer development.
 
-Minimum activity expectations consist of a couple hours per quarter: roughly imagine a 90 minute Convening, 20 minutes clicking/updating, maybe 10 minutes writing. That satisfies the light tough seasonal rhythm for our full-system awareness. In smaller scopes, our congregations, programs, and crews have more frequent rhythms that fit a variety of depths.
+Minimum activity expectations consist of a couple hours per quarter: roughly imagine a 90 minute Convening, 20 minutes clicking/updating, maybe 10 minutes writing. That satisfies the light touch seasonal rhythm for our full-system awareness. In smaller scopes, our congregations, programs, and crews have more frequent rhythms that fit a variety of depths.
