@@ -111,7 +111,7 @@ const friendsList = [
   },
   {
     name: 'The Stoa',
-    description: "A digital campfire for cohering, philosophical inquiry and dialogue on what matters most on the knife's edge. The Stoa is stewarded by Peter Limberg.",
+    description: "A digital campfire for cohering, philosophical inquiry and dialogue on what matters most on the knife's edge. The Stoa is stewarded by Peter Limberger.",
     website: 'https://www.youtube.com/c/TheStoa',
     image: '/images/logos/the-stoa.png'
   },
