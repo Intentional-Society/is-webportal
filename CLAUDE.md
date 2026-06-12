@@ -57,7 +57,7 @@ yarn clean
 <a id="section-name" style="display:block;position:relative;top:-74px;visibility:hidden"></a>
 ```
 
-**Shared styles in `global.module.css`**: Includes `.big-button` (teal CTA button used on homepage and /web page), `.anchorOffset` (AppBar-clearing anchors for use in JSX pages), and other utility classes.
+**Shared styles in `global.module.css`**: Includes `.big-button` (teal CTA button, currently unused — kept for future CTAs), `.anchorOffset` (AppBar-clearing anchors for use in JSX pages), and other utility classes.
 
 **Key components**:
 - `src/components/layout.js` - Root layout with navigation
@@ -98,7 +98,7 @@ As of 2026-02-28, the home page is taken over to promote the 5-Year Celebration 
 - **Restore after event**: Unused imports (`Grid`, `GlobalCSS`) and `imageList` are commented out, not deleted — easy to restore the original page
 
 ### `/web` page
-`src/pages/web.js` renders content from `src/md/web.md` — "Join the relational web" page describing the IS relational web, programs, and membership requirements. Has a "Join the web" signup button at the bottom.
+`src/pages/web.js` renders content from `src/md/web.md` — "Join the IS Web" page describing the IS relational web, programs, and membership requirements. No signup button; the member app at `https://app.intentionalsociety.org` is linked as a reference for existing members in the "IS Web App" section.
 
 ### `/community` page
 `src/pages/community.js` renders content from `src/md/community.md` — community description, Sunday Hub calls, and how to join. Includes a "Back to home page" link in the JSX layer.

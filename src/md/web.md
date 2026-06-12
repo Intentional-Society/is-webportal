@@ -1,6 +1,6 @@
-## Join the relational web
+## Join the IS Web
 
-This is a web of *trust* and *collaboration*.
+This is a relational web of *trust* and *collaboration*.
 
 This is the network of humans associated with Intentional Society — a distributed village, spanning an ecosystem of people and care. What brings this network together? This web is aligned around the intersection of Inner development, wise action, and human connection.
 
@@ -16,9 +16,9 @@ Joining requires a referral from one existing member. If you have no connection 
 
 Once a quarter, we gather the whole network for a full assembly. Hear "what's alive?" from folks across the web, call and coordinate crews, updated shared strategies. It's a party and a catalyst.
 
-#### Web Directory + Relational Mapping
+#### IS Web App
 
-We want to see each other and how we're connected. Standard profiles and contact info fit in a conventional directory. The relational layer will then roll out with a node-link diagram mapping our trust relationships and our collaborations.
+Members can sign in at [app.intentionalsociety.org](https://app.intentionalsociety.org). This app supports us in seeing each other and how we're connected: the member directory holds our profiles and contact info, and the relational map of the IS Web charts our trust relationships and our collaborations in a node-link diagram.
 
 #### Relational Programs
 
