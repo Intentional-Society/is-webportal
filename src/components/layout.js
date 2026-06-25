@@ -1,37 +1,33 @@
 import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
 import './layout.module.css'
 import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import Toolbar from '@mui/material/Toolbar'
 import theme from '../gatsby-theme-material-ui-top-layout/theme'
 import ISAppBar from './is-appbar'
-// Load fonts
-import '@fontsource/gudea/400.css'
-import '@fontsource/ovo/400.css'
+import IsFooter from './is-footer'
+// Load fonts — Cormorant Garamond (display) + DM Sans (body), per the 2026 design.
+// Gudea / Ovo are kept installed for any legacy usage.
+import '@fontsource/dm-sans/300.css'
+import '@fontsource/dm-sans/400.css'
+import '@fontsource/dm-sans/500.css'
+import '@fontsource/cormorant-garamond/300.css'
+import '@fontsource/cormorant-garamond/400.css'
+import '@fontsource/cormorant-garamond/500.css'
+import '@fontsource/cormorant-garamond/300-italic.css'
+import '@fontsource/cormorant-garamond/400-italic.css'
 
-const NamedDefault = ({ children }) => {
+// fullBleed: the homepage hero sits *under* the translucent fixed nav, so it
+// omits the Toolbar spacer. Content pages keep the spacer so their content
+// clears the AppBar.
+const NamedDefault = ({ children, fullBleed = false }) => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <ISAppBar />
-      <Toolbar /> {/* Spacer for fixed AppBar */}
+      {!fullBleed && <Toolbar /> /* Spacer for fixed AppBar */}
       {children}
-      <StaticImage
-        src="../../static/images/bg/E7EFEBbg.png"
-        layout="fullWidth"
-        alt=""
-        loading="eager"
-        style={{
-          height: '120px',
-          zIndex: -1,
-          position: 'relative',
-          bottom: '0',
-          left: '0',
-          right: '0',
-        }}
-        imgStyle={{ objectFit: 'fill', transform: 'scaleY(-1)' }}
-      />
+      <IsFooter />
     </ThemeProvider>
   )
 }

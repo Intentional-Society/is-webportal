@@ -19,6 +19,8 @@
     "@babel/core": "^7.12.3",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/dm-sans": "^5.2.8",
     "@fontsource/gudea": "^5.2.8",
     "@fontsource/ovo": "^5.2.8",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",

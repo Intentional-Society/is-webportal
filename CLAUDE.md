@@ -89,13 +89,33 @@ Deploys automatically to Netlify on push to master. Configuration in `netlify.to
 
 ## Current Status Notes
 
-### Home page (`src/pages/index.js`) — temporary event takeover
-As of 2026-02-28, the home page is taken over to promote the 5-Year Celebration event:
-- **Event**: "The 5-Year Celebration: Launching a New Era" — March 15, 2026, 1:00 PM Pacific, 90 min via Zoom
-- **Registration link**: `https://us02web.zoom.us/meeting/register/8nzxXOk5Rzicpmo5mTMwlQ`
-- Hero shows three white h2 lines with responsive `clamp(2rem, 8vw, 3.75rem)` font sizing
-- Body: teaser paragraph, first Register button, longer context section (4 paragraphs at 0.85em), second Register button, IsHr, newsletter signup
-- **Restore after event**: Unused imports (`Grid`, `GlobalCSS`) and `imageList` are commented out, not deleted — easy to restore the original page
+### 2026 design system (branch `2026-design`)
+A long-lived design branch that imports the look of Shaun's prototype
+(`profound-gumdrop-2790ec.netlify.app`) onto the live site's content. Key pieces:
+- **Fonts**: Cormorant Garamond (display headings h1–h3) + DM Sans (body, h4–h6),
+  self-hosted via `@fontsource`. Loaded in `layout.js`.
+- **Palette/tokens**: warm palette defined in `theme.js` (teal `#2E6B4F`, warm-white
+  `#F8F5EF` background) and as `--is-*` CSS variables in `global.module.css` for use
+  in CSS modules. Greener teal replaces the old `#24818E`.
+- **Grain texture**: `body::before` overlay in `layout.module.css`
+  (`/images/design2026/grain.png`, multiply blend) sits subtly over every page.
+- **Chrome**: `is-appbar.js` is a translucent blurred warm-white nav (round logo +
+  serif wordmark + teal "Get Involved" CTA). `is-footer.js` is a new 3-column footer
+  rendered site-wide by `layout.js` (which gained a `fullBleed` prop to let the
+  homepage hero sit under the fixed nav).
+- **Homepage** (`src/pages/index.js`): rebuilt section-for-section from the prototype
+  (hero / about / ice quote / breath / four photo-path cards / testimonials /
+  newsletter / stats / connection CTA) using real site content + internal links.
+  Section styles live in `src/styles/home2026.module.css`; torn-paper dividers come
+  from the reusable `src/components/torn-edge.js` (variants a–d).
+- **Photography**: `/static/images/design2026/` (downloaded from the prototype;
+  credits Bill + Karla). `squid.jpg` was absent on the prototype, so the connection
+  CTA uses the prototype's gradient fallback.
+- **Content still to confirm before production**: testimonial names (consent), the
+  stats figures (esp. "250+ members"), and the connection-call section deliberately
+  links to `/get-involved#connection-calls` rather than baking in a day/time.
+- Other content pages inherit the new theme automatically and have not yet been
+  individually restyled — that's the next iteration.
 
 ### `/web` page
 `src/pages/web.js` renders content from `src/md/web.md` — "Join the IS Web" page describing the IS relational web, programs, and membership requirements. No signup button; the member app at `https://app.intentionalsociety.org` is linked as a reference for existing members in the "IS Web App" section.

@@ -6,8 +6,29 @@
 
 body {
   /* font-family and font-size now set in theme.js */
-  color: #08080F;
-  background-color: #E8F0EC;
+  color: #2A2A24;
+  background-color: #F8F5EF; /* warm-white */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Grain texture overlay (from the 2026 prototype) ----
+   Real photographed paper grain, tiled at low opacity so flat color
+   never reads as "AI-smooth." Fixed, non-interactive, sits subtly
+   over the whole page. */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/design2026/grain.png");
+  background-size: 500px 500px;
+  background-repeat: repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
 }
 
 li {

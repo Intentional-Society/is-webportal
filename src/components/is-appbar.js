@@ -22,87 +22,116 @@ const NamedDefault = () => {
   }
 
   const { pathname } = useLocation()
-  const wash = 'rgba(255,255,255,0.15)'
-  const btnSx = path => ({
-    textTransform: 'inherit',
-    color: 'inherit',
-    borderRadius: '7px',
-    '&:hover': { backgroundColor: wash },
-    ...(pathname.startsWith(path) && { backgroundColor: wash }),
+
+  // Prototype nav links: muted, turn teal on hover / when active. No pill wash.
+  const linkSx = path => ({
+    textTransform: 'none',
+    color: 'text.secondary',
+    fontWeight: 400,
+    fontSize: '14px',
+    borderRadius: 0,
+    minWidth: 'auto',
+    '&:hover': { backgroundColor: 'transparent', color: 'primary.main' },
+    ...(pathname.startsWith(path) && { color: 'primary.main' }),
   })
+
+  // Filled teal call-to-action (prototype .nav-cta).
+  const ctaSx = {
+    textTransform: 'none',
+    color: '#fff',
+    backgroundColor: 'primary.main',
+    fontSize: '13px',
+    fontWeight: 500,
+    borderRadius: '4px',
+    px: 1.6,
+    py: 0.6,
+    '&:hover': { backgroundColor: 'primary.dark' },
+  }
 
   return (
     <AppBar
       position="fixed"
       elevation={0}
       sx={{
-        color: 'secondary.main',
-        opacity: '85%',
-        backgroundImage:
-          'radial-gradient(circle at 20% -150%, #5c9d93, #519f9a, #44a0a2, #36a1ab, #25a2b5, #109fbb, #009bc1, #0097c6, #008ec7, #0085c8, #0c7bc6, #2b70c3)',
+        color: 'text.primary',
+        backgroundColor: 'rgba(248,245,239,0.85)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        borderBottom: '1px solid rgba(42,42,36,0.06)',
       }}
     >
-      <Toolbar sx={{ paddingRight: '12px !important' }}>
-        <div className={GlobalCSS.appbarWordmark} style={{ flexGrow: 1, color: 'inherit' }}>
-          <Link to="/" className={GlobalCSS.nostyleLink}>
-            Intentional Society
-          </Link>
-        </div>
-        <Button
-          component={Link}
-          to="/get-involved"
-          sx={{ ...btnSx('/get-involved'), display: { xs: 'none', sm: 'inline-flex' } }}
+      <Toolbar sx={{ paddingRight: '12px !important', gap: { xs: 0.5, sm: 1 } }}>
+        <Link
+          to="/"
+          className={GlobalCSS.nostyleLink}
+          style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexGrow: 1 }}
         >
-          Get Involved
-        </Button>
+          <img
+            src="/images/design2026/logo.jpg"
+            alt=""
+            width={36}
+            height={36}
+            style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', display: 'block' }}
+          />
+          <span className={GlobalCSS.appbarWordmark}>Intentional Society</span>
+        </Link>
         <Button
           component={Link}
           to="/web"
-          sx={{ ...btnSx('/web'), display: { xs: 'none', sm: 'inline-flex' } }}
+          sx={{ ...linkSx('/web'), display: { xs: 'none', sm: 'inline-flex' } }}
         >
           Web
         </Button>
         <Button
           component={Link}
           to="/community"
-          sx={{ ...btnSx('/community'), display: { xs: 'none', sm: 'inline-flex' } }}
+          sx={{ ...linkSx('/community'), display: { xs: 'none', sm: 'inline-flex' } }}
         >
           Community
         </Button>
         <Button
           component={Link}
           to="/dojo"
-          sx={{ ...btnSx('/dojo'), display: { xs: 'none', sm: 'inline-flex' } }}
+          sx={{ ...linkSx('/dojo'), display: { xs: 'none', sm: 'inline-flex' } }}
         >
           Dojo
         </Button>
         <Button
           component={Link}
           to="/iv"
-          sx={{ ...btnSx('/iv'), display: { xs: 'none', sm: 'inline-flex' } }}
+          sx={{ ...linkSx('/iv'), display: { xs: 'none', sm: 'inline-flex' } }}
         >
           Ventures
         </Button>
         <Button
           component={Link}
           to="/friends"
-          sx={{ ...btnSx('/friends'), display: { xs: 'none', lg: 'inline-flex' } }}
+          sx={{ ...linkSx('/friends'), display: { xs: 'none', lg: 'inline-flex' } }}
         >
           Friends
         </Button>
         <Button
           component={Link}
           to="/questions"
-          sx={{ ...btnSx('/questions'), display: { xs: 'none', lg: 'inline-flex' } }}
+          sx={{ ...linkSx('/questions'), display: { xs: 'none', lg: 'inline-flex' } }}
         >
           Questions?
         </Button>
         <Button
           component={Link}
           to="/news"
-          sx={{ ...btnSx('/news'), display: { xs: 'none', lg: 'inline-flex' } }}
+          sx={{ ...linkSx('/news'), display: { xs: 'none', lg: 'inline-flex' } }}
         >
           News
+        </Button>
+        <Button
+          component={Link}
+          to="/get-involved"
+          disableElevation
+          variant="contained"
+          sx={{ ...ctaSx, display: { xs: 'none', sm: 'inline-flex' } }}
+        >
+          Get Involved
         </Button>
         <IconButton
           aria-controls="top-nav-menu"
@@ -110,7 +139,7 @@ const NamedDefault = () => {
           aria-label="menu"
           disableRipple
           onClick={handleClick}
-          sx={{ color: 'inherit', '&:hover': { backgroundColor: wash }, ...(anchorEl && { backgroundColor: wash }) }}
+          sx={{ color: 'text.secondary', '&:hover': { color: 'primary.main', backgroundColor: 'transparent' }, ...(anchorEl && { color: 'primary.main' }) }}
         >
           <MenuIcon />
         </IconButton>

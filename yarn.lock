@@ -1436,6 +1436,16 @@
   resolved "https://registry.yarnpkg.com/@expo/sudo-prompt/-/sudo-prompt-9.3.2.tgz#0fd2813402a42988e49145cab220e25bea74b308"
   integrity sha512-HHQigo3rQWKMDzYDLkubN5WQOYXJJE2eNqIQC2axC2iO3mHdwnIR7FgZVvHWtBwAdzBgAP0ECp8KqS8TiMKvgw==
 
+"@fontsource/cormorant-garamond@^5.2.11":
+  version "5.2.11"
+  resolved "https://registry.yarnpkg.com/@fontsource/cormorant-garamond/-/cormorant-garamond-5.2.11.tgz#7e2f4580b56346f710f0dd016578688138feaf1d"
+  integrity sha512-5JjpN023lhA5soijgVT0BdRGzmlijm402ppjccMd6h+vRE0mX2lJnE+41UPfnlidrkV9/rCo1mf58WZlHnB0CA==
+
+"@fontsource/dm-sans@^5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/dm-sans/-/dm-sans-5.2.8.tgz#762968f3aa4408b7886ead18fb3e82b6ce02ef41"
+  integrity sha512-tlovG42m9ESG28WiHpLq3F5umAlm64rv0RkqTbYowRn70e9OlRr5a3yTJhrhrY+k5lftR/OFJjPzOLQzk8EfCA==
+
 "@fontsource/gudea@^5.2.8":
   version "5.2.8"
   resolved "https://registry.yarnpkg.com/@fontsource/gudea/-/gudea-5.2.8.tgz#2cb1f9e3ee0013b6ac21865fcec9c7f5690785d9"
