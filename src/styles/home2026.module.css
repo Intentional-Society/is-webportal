@@ -1,0 +1,527 @@
+/* ============================================================
+   2026 homepage — section styles ported from Shaun's prototype.
+   Design direction: handcrafted, intentional, harmonious.
+   Photography lives in /images/design2026/.
+   ============================================================ */
+
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background-image: url("/images/design2026/hero-path.jpg");
+  background-size: cover;
+  background-position: center 60%;
+}
+
+/* Readability scrim — a soft warm wash so dark type stays crisp over sky. */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(248, 245, 239, 0.55) 0%, rgba(248, 245, 239, 0.15) 45%, transparent 70%),
+    linear-gradient(180deg, rgba(248, 245, 239, 0.1) 0%, transparent 35%, rgba(38, 50, 61, 0.12) 100%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  padding: 2rem;
+}
+
+.heroLabel {
+  color: var(--is-teal-dark);
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
+  color: var(--is-text);
+  margin: 0 0 1.5rem;
+  font-weight: 400;
+  text-shadow: 0 1px 18px rgba(248, 245, 239, 0.7);
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--is-teal);
+}
+
+.heroSub {
+  color: var(--is-text);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0 auto 2.5rem;
+  max-width: 520px;
+  text-shadow: 0 1px 12px rgba(248, 245, 239, 0.85);
+}
+
+.heroCta {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: var(--is-teal);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  border-radius: 3px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.heroCta:hover {
+  background: var(--is-sage);
+  transform: translateY(-1px);
+}
+
+/* ---- About ---- */
+.about {
+  position: relative;
+  background: var(--is-warm-white);
+  padding: 5rem 2rem;
+}
+
+.aboutInner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  color: var(--is-brown);
+  margin: 0 0 2rem;
+}
+
+.aboutLayout {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 3rem;
+  margin-top: 2.5rem;
+  align-items: center;
+}
+
+.aboutPhoto {
+  margin: 0;
+}
+
+.aboutPhoto img {
+  width: 100%;
+  display: block;
+  border-radius: 7px 4px 8px 3px; /* deliberately uneven */
+}
+
+.aboutPhoto figcaption {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--is-text-muted);
+  margin-top: 0.6rem;
+  opacity: 0.8;
+}
+
+.aboutColumns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.aboutCol h3 {
+  color: var(--is-teal-dark);
+  margin: 0 0 0.8rem;
+  font-style: italic;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.aboutCol p {
+  font-size: 15px;
+  color: var(--is-text-muted);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 700px) {
+  .aboutLayout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ---- Nature / quote break ---- */
+.natureBreak {
+  position: relative;
+  background: var(--is-ice-dark) url("/images/design2026/ice.jpg") center 60% / cover;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.natureBreak::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 28, 36, 0.45) 0%, rgba(20, 28, 36, 0.3) 50%, rgba(20, 28, 36, 0.55) 100%);
+  pointer-events: none;
+}
+
+.natureBreakInner {
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.natureBreakLabel {
+  color: var(--is-tan);
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.natureBreakQuote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--is-cream);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+  text-shadow: 0 2px 16px rgba(20, 28, 36, 0.5);
+}
+
+/* ---- Breath moment ---- */
+.breath {
+  background: var(--is-warm-white);
+  padding: 5rem 2rem 1rem;
+  text-align: center;
+}
+
+.breathInner {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.breath p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--is-text-muted);
+  line-height: 1.8;
+}
+
+.breathPrompt {
+  margin-top: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--is-brown);
+}
+
+/* ---- Four paths ---- */
+.paths {
+  background: var(--is-warm-white);
+  padding: 2.5rem 2rem 5rem;
+}
+
+.pathsInner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pathsLabel {
+  color: var(--is-teal);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.pathsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.pathCard {
+  background: var(--is-cream);
+  border: 1px solid rgba(42, 42, 36, 0.06);
+  padding: 0 0 1.8rem;
+  color: var(--is-text);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.pathCardImg {
+  height: 130px;
+  margin-bottom: 1.3rem;
+  overflow: hidden;
+}
+
+.pathCardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.pathCard:hover .pathCardImg img {
+  transform: scale(1.04);
+}
+
+.pathCard h3,
+.pathCard p {
+  padding: 0 1.5rem;
+}
+
+/* Slightly imperfect, non-uniform corners. */
+.pathCard:nth-child(1) { border-radius: 8px 4px 6px 3px; }
+.pathCard:nth-child(2) { border-radius: 3px 7px 4px 6px; }
+.pathCard:nth-child(3) { border-radius: 6px 3px 7px 4px; }
+.pathCard:nth-child(4) { border-radius: 4px 6px 3px 8px; }
+
+.pathCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(42, 42, 36, 0.08);
+}
+
+.pathCard h3 {
+  font-size: 1.3rem;
+  margin: 0 0 0.8rem;
+  color: var(--is-text);
+  font-weight: 400;
+}
+
+.pathCard p {
+  font-size: 14px;
+  color: var(--is-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.pathLinks {
+  padding: 0 1.5rem;
+  margin-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pathLinks a {
+  font-size: 14px;
+  color: var(--is-teal);
+  text-decoration: none;
+}
+
+.pathLinks a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .pathsGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 500px) {
+  .pathsGrid { grid-template-columns: 1fr; }
+}
+
+/* ---- Testimonials ---- */
+.testimonials {
+  background: var(--is-warm-white);
+  padding: 4rem 2rem 5rem;
+}
+
+.testimonialsInner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.testimonialFeatured {
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.testimonialFeatured::before {
+  content: '\201C';
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 6rem;
+  color: var(--is-sage);
+  opacity: 0.3;
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+}
+
+.testimonialFeatured blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--is-text);
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto 1rem;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.testimonialAttr {
+  font-size: 13px;
+  color: var(--is-text-muted);
+  font-weight: 400;
+}
+
+.testimonialPair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.testimonialSmall {
+  padding: 1.5rem;
+  background: var(--is-cream);
+  border-left: 2px solid var(--is-sage);
+}
+
+.testimonialSmall blockquote {
+  font-size: 14px;
+  color: var(--is-text-muted);
+  font-style: italic;
+  margin: 0 0 0.8rem;
+  line-height: 1.7;
+  background: none;
+  padding: 0;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .testimonialPair { grid-template-columns: 1fr; }
+}
+
+/* ---- Newsletter ---- */
+.newsletter {
+  background:
+    linear-gradient(rgba(248, 245, 239, 0.78), rgba(248, 245, 239, 0.78)),
+    url("/images/design2026/crystals-band.jpg") center / cover no-repeat,
+    var(--is-parchment);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.newsletterInner {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter h2 {
+  color: var(--is-teal-dark);
+  margin: 0 0 0.8rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.newsletter p {
+  color: var(--is-text-muted);
+  font-size: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.newsletterForm {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---- Stats ---- */
+.stats {
+  background: var(--is-cream);
+  padding: 3rem 2rem;
+}
+
+.statsInner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  text-align: center;
+}
+
+.statItem h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--is-teal-dark);
+  margin: 0;
+}
+
+.statItem p {
+  font-size: 13px;
+  color: var(--is-text-muted);
+  margin-top: 0.3rem;
+}
+
+/* ---- Connection Call CTA ---- */
+.connection {
+  position: relative;
+  padding: 5rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(16, 28, 30, 0.72) 0%, rgba(16, 28, 30, 0.6) 50%, rgba(16, 28, 30, 0.78) 100%),
+    radial-gradient(ellipse at 50% 80%, rgba(46, 107, 79, 0.2) 0%, transparent 60%),
+    linear-gradient(175deg, #1e2822 0%, #1a2420 50%, #1e2420 100%);
+}
+
+.connectionInner {
+  position: relative;
+  z-index: 2;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.connectionLabel {
+  color: var(--is-sage);
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.connection h2 {
+  color: var(--is-cream);
+  margin: 0 0 1rem;
+  font-style: italic;
+}
+
+.connection p {
+  color: rgba(232, 223, 208, 0.65);
+  font-size: 15px;
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.connectionCta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  border: 1px solid rgba(122, 158, 138, 0.4);
+  color: var(--is-sage);
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.connectionCta:hover {
+  background: rgba(122, 158, 138, 0.15);
+  border-color: var(--is-sage);
+}

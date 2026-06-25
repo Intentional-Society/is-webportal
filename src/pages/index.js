@@ -1,23 +1,30 @@
-import React, { useState } from 'react';
-import { Link } from 'gatsby';
-import Typography from '@mui/material/Typography';
-import { StaticImage } from 'gatsby-plugin-image';
-import Layout from '../components/layout';
-import ButtondownSignup from '../components/buttondownsignup';
-import IsHr from '../components/is-hr';
-import CenteredColumn from '../components/centered-column';
-import * as styles from '../styles/homepage.module.css';
+import React from 'react'
+import { Link } from 'gatsby'
+import Layout from '../components/layout'
+import TornEdge from '../components/torn-edge'
+import ButtondownSignup from '../components/buttondownsignup'
+import * as styles from '../styles/home2026.module.css'
+import * as GlobalCSS from '../styles/global.module.css'
 
-const intentionCards = [
+// Four "paths" — the site's existing intention cards, given the prototype's
+// photo-card treatment. Titles/descriptions set the visitor's intention;
+// the links are the real internal destinations.
+const paths = [
   {
-    id: 'grow', label: '...grow myself',
+    title: 'Grow myself',
+    img: 'macro-salvia.jpg',
+    alt: 'A blue salvia bud beginning to open',
+    desc: 'Inner development — awareness, acceptance, integrity — with companions to grow alongside.',
     links: [
       { text: 'Relational Dojo', href: 'https://relationaldojo.org', external: true },
       { text: 'Developmental Practice Series', to: '/developmental-practice-series' },
     ],
   },
   {
-    id: 'people', label: '...find the others',
+    title: 'Find the others',
+    img: 'macro-hibiscus.jpg',
+    alt: 'Hibiscus anthers gathered around a stigma',
+    desc: 'People who share your values — connection across distance and difference.',
     links: [
       { text: 'Community', to: '/community' },
       { text: 'Relational Web', to: '/web' },
@@ -26,129 +33,234 @@ const intentionCards = [
     ],
   },
   {
-    id: 'work', label: '...work with purpose',
+    title: 'Work with purpose',
+    img: 'macro-stamen.jpg',
+    alt: 'A frost-covered stamen against deep blue',
+    desc: 'Develop a project or venture within a values-aligned community.',
     links: [
       { text: 'Relational Web', to: '/web' },
       { text: 'Intentional Ventures', to: '/iv' },
     ],
   },
   {
-    id: 'learn', label: '...learn about IS',
+    title: 'Just curious',
+    img: 'macro-crystal.jpg',
+    alt: 'Crystals under polarized light, a kaleidoscope of colour',
+    desc: 'Something here caught your attention. That’s enough — look around and see what resonates.',
     links: [
       { text: 'Connection Call', to: '/get-involved#connection-calls' },
       { text: 'Newsletter', href: '#newsletter' },
       { text: 'News', to: '/news' },
     ],
   },
-];
+]
 
-const NamedDefault = () => {
-  const [activeCard, setActiveCard] = useState(null);
+const PathLink = ({ link }) =>
+  link.external ? (
+    <a href={link.href} target="_blank" rel="noopener noreferrer">{link.text}</a>
+  ) : link.to ? (
+    <Link to={link.to}>{link.text}</Link>
+  ) : (
+    <a href={link.href}>{link.text}</a>
+  )
 
-  const toggle = id => setActiveCard(prev => (prev === id ? null : id));
-
-  return (
-    <Layout>
-      {/* Hero */}
-      <StaticImage src="../../static/images/bg/E7EFEBbg.png" layout="fullWidth" alt="" loading="eager"
-                  style={{ height: '60vh', zIndex: -1, position: 'absolute',
-                          top: '0px', left: '0px', right: '0px'}}
-                  imgStyle={{objectFit: 'fill'}}/>
-      <div style={{ textAlign: 'center', margin: '0 auto', minHeight: '280px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingTop: '1.5rem' }}>
-        {['inner development', 'wise action', 'human connection'].map(line => (
-          <Typography key={line} variant="h3" style={{
-            color: '#FFFFFF',
-            fontSize: 'clamp(1.8rem, 7vw, 3rem)',
-            fontWeight: 300,
-            letterSpacing: '0.04em',
-            lineHeight: 1.5,
-            margin: 0,
-          }}>
-            {line}
-          </Typography>
-        ))}
+const NamedDefault = () => (
+  <Layout fullBleed>
+    {/* ======== Hero ======== */}
+    <section className={styles.hero}>
+      <div className={styles.heroContent}>
+        <span className={`${GlobalCSS.label} ${styles.heroLabel}`}>
+          inner development · wise action · human connection
+        </span>
+        <h1>What is <em>your</em> intention?</h1>
+        <p className={styles.heroSub}>
+          Intentional Society is an ecosystem of people and purposes — being who
+          we want to be, flowing into action with integrity, catalyzing with
+          relational connection.
+        </p>
+        <Link to="/get-involved" className={styles.heroCta}>Get Involved</Link>
       </div>
+    </section>
 
-      <CenteredColumn>
-        {/* Identity paragraph */}
-        <p style={{fontSize: '1.15em', textAlign: 'center', marginTop: '1.5em'}}>
-          Intentional Society is an ecosystem of people and purposes —
-          being who we want to be, flowing into action with integrity, catalyzing with relational connection.
+    <TornEdge variant="a" />
+
+    {/* ======== About ======== */}
+    <section className={styles.about}>
+      <div className={styles.aboutInner}>
+        <span className={`${GlobalCSS.label}`} style={{ color: 'var(--is-teal)', marginBottom: '1rem' }}>
+          Who we are
+        </span>
+        <h2>United in one thing above all else: seeking to grow</h2>
+        <div className={styles.aboutLayout}>
+          <figure className={styles.aboutPhoto}>
+            <img
+              src="/images/design2026/waterfall.jpg"
+              alt="A small waterfall over dark rock in a quiet forest"
+            />
+            <figcaption>Photograph by Bill</figcaption>
+          </figure>
+          <div className={styles.aboutColumns}>
+            <div className={styles.aboutCol}>
+              <h3>Who we are</h3>
+              <p>
+                We are a geographically distributed community of seekers and
+                friends, connecting face-to-face over video. We reflect together
+                in relationship as a catalyst to self-development, greater
+                awareness, and integrity — relishing our diversity across
+                generation, nation, and background.
+              </p>
+            </div>
+            <div className={styles.aboutCol}>
+              <h3>What we do</h3>
+              <p>
+                On the surface, we talk with one another on video calls — most
+                openly through our public practice program of facilitated,
+                90-minute sessions. Beyond that, inside the membership, the
+                deepest summary is simple: we practice being, together.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <TornEdge variant="b" />
+
+    {/* ======== Nature / quote break ======== */}
+    <section className={styles.natureBreak}>
+      <div className={styles.natureBreakInner}>
+        <span className={`${GlobalCSS.label} ${styles.natureBreakLabel}`}>A shared orientation</span>
+        <p className={styles.natureBreakQuote}>
+          We practice being, together — noticing and welcoming what is actually
+          present, in ourselves and in each other.
         </p>
+      </div>
+    </section>
 
-        {/* Embodied invitation */}
-        <Typography variant="h3" style={{textAlign: 'center', marginTop: '1.5em', marginBottom: '0.3em'}}>
-          What is <i>your</i> intention?
-        </Typography>
-        <p className={styles.invitation}>
-          Pause for a moment. Take one conscious breath.<br />
-          Check in with yourself — what matters to you?
-        </p>
+    <TornEdge variant="c" />
 
-        <div className={styles.iWantTo}>I want to...</div>
-        <svg className={styles.arrows} viewBox="-5 -3 1010 56" preserveAspectRatio="xMidYMid meet">
-          <defs>
-            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-              markerWidth="6" markerHeight="6" orient="auto-start-reverse" fill="#24818E">
-              <path d="M 0 0 L 10 5 L 0 10 z" />
-            </marker>
-          </defs>
-          <line x1="500" y1="0" x2="120" y2="48" stroke="#24818E" strokeWidth="1.5" markerEnd="url(#arrow)" />
-          <line x1="500" y1="0" x2="373" y2="48" stroke="#24818E" strokeWidth="1.5" markerEnd="url(#arrow)" />
-          <line x1="500" y1="0" x2="627" y2="48" stroke="#24818E" strokeWidth="1.5" markerEnd="url(#arrow)" />
-          <line x1="500" y1="0" x2="880" y2="48" stroke="#24818E" strokeWidth="1.5" markerEnd="url(#arrow)" />
-        </svg>
+    {/* ======== Breath moment ======== */}
+    <section className={styles.breath}>
+      <div className={styles.breathInner}>
+        <p>Pause.<br />Take one conscious breath.</p>
+        <div className={styles.breathPrompt}>What brings you here?</div>
+      </div>
+    </section>
 
-        {/* Intention cards */}
-        <div className={styles.cardRow}>
-          {intentionCards.map(card => (
-            <div key={card.id} className={styles.cardWrap}>
-              <div
-                className={activeCard === card.id ? styles.cardActive : activeCard ? styles.cardDimmed : styles.card}
-                onClick={() => toggle(card.id)}
-                onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') toggle(card.id) }}
-                role="button"
-                tabIndex={0}
-                aria-pressed={activeCard === card.id}
-              >
-                {card.label}
+    {/* ======== Four paths ======== */}
+    <section className={styles.paths}>
+      <div className={styles.pathsInner}>
+        <span className={`${GlobalCSS.label} ${styles.pathsLabel}`}>Where to begin</span>
+        <div className={styles.pathsGrid}>
+          {paths.map(path => (
+            <div key={path.title} className={styles.pathCard}>
+              <div className={styles.pathCardImg}>
+                <img src={`/images/design2026/${path.img}`} alt={path.alt} />
+              </div>
+              <h3>{path.title}</h3>
+              <p>{path.desc}</p>
+              <div className={styles.pathLinks}>
+                {path.links.map((link, i) => (
+                  <PathLink key={i} link={link} />
+                ))}
               </div>
             </div>
           ))}
         </div>
+      </div>
+    </section>
 
-        {/* Link panel — constant height, content appears when a card is active */}
-        <div className={styles.linkPanelWrap}>
-          {activeCard && (
-            <div className={styles.linkPanel}>
-              {intentionCards.find(c => c.id === activeCard).links.map((link, i) => (
-                <span key={i} className={styles.linkPanelItem}>
-                  {link.external
-                    ? <a href={link.href} target="_blank" rel="noopener noreferrer">{link.text}</a>
-                    : link.to
-                      ? <Link to={link.to}>{link.text}</Link>
-                      : <a href={link.href}>{link.text}</a>
-                  }
-                </span>
-              ))}
-            </div>
-          )}
+    {/* ======== Testimonials ========
+         Member voices from the "Listening Into Us" survey.
+         TODO: confirm consent to publish these names publicly before this
+         goes to production. */}
+    <section className={styles.testimonials}>
+      <div className={styles.testimonialsInner}>
+        <div className={styles.testimonialFeatured}>
+          <blockquote>
+            This space reminds me that there are other people living
+            unconventional lives… it reminds me to not give up on aspiring to
+            live fully.
+          </blockquote>
+          <div className={styles.testimonialAttr}>— fig</div>
         </div>
-
-        <IsHr />
-
-        {/* Newsletter signup */}
-        <a id="newsletter" style={{display: 'block', position: 'relative', top: '-74px', visibility: 'hidden'}}></a>
-        <p>Want to follow along with what we're doing and learning?
-          Subscribe to our Weekly Update newsletter:</p>
-        <ButtondownSignup />
-
-        <br />
-        <div className={styles.footerNav}>
-          Next page: <Link to="/get-involved">Get Involved</Link>
+        <div className={styles.testimonialPair}>
+          <div className={styles.testimonialSmall}>
+            <blockquote>
+              There is often a sense of “relaxation towards experimentation.” It
+              is OK to express myself freely… a familiar frame that creates a
+              sense of intimacy and openness.
+            </blockquote>
+            <div className={styles.testimonialAttr}>— Jochen</div>
+          </div>
+          <div className={styles.testimonialSmall}>
+            <blockquote>
+              People are joining to be challenged beyond the fabric of the
+              regular relationship… experimenting with relating differently and
+              growing into a version of myself I want to be.
+            </blockquote>
+            <div className={styles.testimonialAttr}>— Renee</div>
+          </div>
         </div>
-      </CenteredColumn>
-    </Layout>
-  );
-};
-export default NamedDefault;
+      </div>
+    </section>
+
+    {/* ======== Newsletter ======== */}
+    <a id="newsletter" className={GlobalCSS.anchorOffset}></a>
+    <section className={styles.newsletter}>
+      <div className={styles.newsletterInner}>
+        <h2>Follow along</h2>
+        <p>
+          Not ready to jump in? Our weekly update shares what we’re learning,
+          thinking, and building. No pressure, no spam.
+        </p>
+        <div className={styles.newsletterForm}>
+          <ButtondownSignup />
+        </div>
+      </div>
+    </section>
+
+    {/* ======== Stats ========
+         TODO: confirm current figures (member count especially). */}
+    <section className={styles.stats}>
+      <div className={styles.statsInner}>
+        <div className={styles.statItem}>
+          <h3>5 years</h3>
+          <p>of weekly practice</p>
+        </div>
+        <div className={styles.statItem}>
+          <h3>250+</h3>
+          <p>members worldwide</p>
+        </div>
+        <div className={styles.statItem}>
+          <h3>30</h3>
+          <p>countries represented</p>
+        </div>
+        <div className={styles.statItem}>
+          <h3>Free</h3>
+          <p>always has been</p>
+        </div>
+      </div>
+    </section>
+
+    <TornEdge variant="d" />
+
+    {/* ======== Connection Call CTA ======== */}
+    <section className={styles.connection}>
+      <div className={styles.connectionInner}>
+        <span className={`${GlobalCSS.label} ${styles.connectionLabel}`}>The best first step</span>
+        <h2>Come sit with us for an hour</h2>
+        <p>
+          Our Connection Call is an open door — a low-key, no-commitment way to
+          meet real people in the community and see if this is your kind of
+          place.
+        </p>
+        <Link to="/get-involved#connection-calls" className={styles.connectionCta}>
+          Join a Connection Call
+        </Link>
+      </div>
+    </section>
+  </Layout>
+)
+
+export default NamedDefault
