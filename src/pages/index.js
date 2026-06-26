@@ -70,15 +70,13 @@ const NamedDefault = () => (
     <section className={styles.hero}>
       <div className={styles.heroContent}>
         <span className={`${GlobalCSS.label} ${styles.heroLabel}`}>
-          inner development · wise action · human connection
+          An experiment in becoming together
         </span>
-        <h1>What is <em>your</em> intention?</h1>
+        <h1>Something is <em>already growing</em> here</h1>
         <p className={styles.heroSub}>
-          Intentional Society is an ecosystem of people and purposes — being who
-          we want to be, flowing into action with integrity, catalyzing with
-          relational connection.
+          An online community for inner development, wise action, and human connection — peer-led, free, and five years into the work.
         </p>
-        <Link to="/get-involved" className={styles.heroCta}>Get Involved</Link>
+        <Link to="/get-involved" className={styles.heroCta}>Enter the community</Link>
       </div>
     </section>
 
@@ -88,9 +86,9 @@ const NamedDefault = () => (
     <section className={styles.about}>
       <div className={styles.aboutInner}>
         <span className={`${GlobalCSS.label}`} style={{ color: 'var(--is-teal)', marginBottom: '1rem' }}>
-          Who we are
+          What is this place
         </span>
-        <h2>United in one thing above all else: seeking to grow</h2>
+        <h2>We began with a hunch about what people could become together</h2>
         <div className={styles.aboutLayout}>
           <figure className={styles.aboutPhoto}>
             <img
@@ -101,22 +99,21 @@ const NamedDefault = () => (
           </figure>
           <div className={styles.aboutColumns}>
             <div className={styles.aboutCol}>
-              <h3>Who we are</h3>
+              <h3>How it started</h3>
               <p>
-                We are a geographically distributed community of seekers and
-                friends, connecting face-to-face over video. We reflect together
-                in relationship as a catalyst to self-development, greater
-                awareness, and integrity — relishing our diversity across
-                generation, nation, and background.
+                In early 2020, a small group began meeting weekly on an intuition: that genuine human development — becoming more aware, more honest, more capable of real contact — was possible in a virtual circle, and that doing it together was better than alone.
+              </p>
+              <p>
+                Five years and hundreds of gatherings later, something real has accumulated. The circle has grown to include people from thirty countries who share a pull toward a more spacious way of being.
               </p>
             </div>
             <div className={styles.aboutCol}>
-              <h3>What we do</h3>
+              <h3>What we actually do</h3>
               <p>
-                On the surface, we talk with one another on video calls — most
-                openly through our public practice program of facilitated,
-                90-minute sessions. Beyond that, inside the membership, the
-                deepest summary is simple: we practice being, together.
+                Every Sunday we gather — not for a lecture, but for something closer to a living room with intention. Relational practices, peer-supported inner work, noticing exercises. Between calls, small pods of four meet to go deeper.
+              </p>
+              <p>
+                There is no teacher at the front of the room. We are peer-led, not expert-delivered. What makes it work is the regularity — depth requires continuity.
               </p>
             </div>
           </div>
@@ -131,8 +128,7 @@ const NamedDefault = () => (
       <div className={styles.natureBreakInner}>
         <span className={`${GlobalCSS.label} ${styles.natureBreakLabel}`}>A shared orientation</span>
         <p className={styles.natureBreakQuote}>
-          We practice being, together — noticing and welcoming what is actually
-          present, in ourselves and in each other.
+          Noticing and welcoming what is actually present — in ourselves and in each other — rather than what we think should be there.
         </p>
       </div>
     </section>
