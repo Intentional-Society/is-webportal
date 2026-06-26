@@ -11,32 +11,31 @@ import * as GlobalCSS from '../styles/global.module.css'
 // the links are the real internal destinations.
 const paths = [
   {
-    title: 'Grow myself',
+    title: 'Find others',
     img: 'macro-salvia.jpg',
     alt: 'A blue salvia bud beginning to open',
-    desc: 'Inner development — awareness, acceptance, integrity — with companions to grow alongside.',
+    desc: 'You’re drawn to inner development — awareness, acceptance, integrity — and want a community to grow alongside.',
+    links: [
+      { text: 'Community', to: '/community' },
+      { text: 'Friends', to: '/friends' },
+      { text: 'Connection Call', to: '/get-involved#connection-calls' },
+    ],
+  },
+  {
+    title: 'Intentional practice',
+    img: 'macro-hibiscus.jpg',
+    alt: 'Hibiscus anthers gathered around a stigma',
+    desc: 'You are interested in relational practices. Learn and practice with others in a peer-led developmental space.',
     links: [
       { text: 'Relational Dojo', href: 'https://relationaldojo.org', external: true },
       { text: 'Developmental Practice Series', to: '/developmental-practice-series' },
     ],
   },
   {
-    title: 'Find the others',
-    img: 'macro-hibiscus.jpg',
-    alt: 'Hibiscus anthers gathered around a stigma',
-    desc: 'People who share your values — connection across distance and difference.',
-    links: [
-      { text: 'Community', to: '/community' },
-      { text: 'Relational Web', to: '/web' },
-      { text: 'Friends', to: '/friends' },
-      { text: 'Connection Call', to: '/get-involved#connection-calls' },
-    ],
-  },
-  {
     title: 'Work with purpose',
     img: 'macro-stamen.jpg',
     alt: 'A frost-covered stamen against deep blue',
-    desc: 'Develop a project or venture within a values-aligned community.',
+    desc: 'You have a project or venture idea and want to develop it within a values-aligned community.',
     links: [
       { text: 'Relational Web', to: '/web' },
       { text: 'Intentional Ventures', to: '/iv' },
@@ -46,7 +45,7 @@ const paths = [
     title: 'Just curious',
     img: 'macro-crystal.jpg',
     alt: 'Crystals under polarized light, a kaleidoscope of colour',
-    desc: 'Something here caught your attention. That’s enough — look around and see what resonates.',
+    desc: 'Something about this caught your attention. That’s enough. Look around, read, and see if anything resonates.',
     links: [
       { text: 'Connection Call', to: '/get-involved#connection-calls' },
       { text: 'Newsletter', href: '#newsletter' },
@@ -138,7 +137,6 @@ const NamedDefault = () => (
     {/* ======== Breath moment ======== */}
     <section className={styles.breath}>
       <div className={styles.breathInner}>
-        <p>Pause.<br />Take one conscious breath.</p>
         <div className={styles.breathPrompt}>What brings you here?</div>
       </div>
     </section>

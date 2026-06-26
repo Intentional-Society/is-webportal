@@ -333,7 +333,7 @@
 
 /* ---- Testimonials ---- */
 .testimonials {
-  background: var(--is-warm-white);
+  background: #E5EDE6;
   padding: 4rem 2rem 5rem;
 }
 
@@ -395,9 +395,10 @@
 }
 
 .testimonialSmall blockquote {
-  font-size: 14px;
-  color: var(--is-text-muted);
+  font-size: 17px;
+  color: var(--is-text);
   font-style: italic;
+  font-weight: 500;
   margin: 0 0 0.8rem;
   line-height: 1.7;
   background: none;
