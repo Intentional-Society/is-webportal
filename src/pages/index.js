@@ -81,9 +81,6 @@ const NamedDefault = () => (
     {/* ======== About ======== */}
     <section className={styles.about}>
       <div className={styles.aboutInner}>
-        <span className={`${GlobalCSS.label}`} style={{ color: 'var(--is-teal)', marginBottom: '1rem' }}>
-          What is this place
-        </span>
         <h2>We began with a hunch about what people could become together</h2>
         <div className={styles.aboutLayout}>
           <figure className={styles.aboutPhoto}>
@@ -91,7 +88,7 @@ const NamedDefault = () => (
               src="/images/design2026/waterfall.jpg"
               alt="A small waterfall over dark rock in a quiet forest"
             />
-            <figcaption>Photograph by Bill</figcaption>
+            <figcaption>By Bill — community member and avid photographer.</figcaption>
           </figure>
           <div className={styles.aboutColumns}>
             <div className={styles.aboutCol}>
@@ -137,7 +134,6 @@ const NamedDefault = () => (
     {/* ======== Four paths ======== */}
     <section className={styles.paths}>
       <div className={styles.pathsInner}>
-        <span className={`${GlobalCSS.label} ${styles.pathsLabel}`}>Where to begin</span>
         <div className={styles.pathsGrid}>
           {paths.map(path => (
             <div key={path.title} className={styles.pathCard}>
@@ -165,28 +161,28 @@ const NamedDefault = () => (
       <div className={styles.testimonialsInner}>
         <div className={styles.testimonialFeatured}>
           <blockquote>
-            This space reminds me that there are other people living
-            unconventional lives… it reminds me to not give up on aspiring to
-            live fully.
+            People are joining to be challenged beyond that fabric of the
+            regular relationship… experimentation of relating differently and
+            growing into a version of myself I want to be.
           </blockquote>
-          <div className={styles.testimonialAttr}>— fig</div>
+          <div className={styles.testimonialAttr}>— Renee</div>
         </div>
         <div className={styles.testimonialPair}>
           <div className={styles.testimonialSmall}>
             <blockquote>
               There is often a sense of “relaxation towards experimentation.” It
-              is OK to express myself freely… a familiar frame that creates a
+              is OK to express myself freely… a “familiar frame” that does create a
               sense of intimacy and openness.
             </blockquote>
             <div className={styles.testimonialAttr}>— Jochen</div>
           </div>
           <div className={styles.testimonialSmall}>
             <blockquote>
-              People are joining to be challenged beyond the fabric of the
-              regular relationship… experimenting with relating differently and
-              growing into a version of myself I want to be.
+              This space reminds me that there are other people living
+              unconventional lives… it reminds me to not give up on aspiring to
+              live fully.
             </blockquote>
-            <div className={styles.testimonialAttr}>— Renee</div>
+            <div className={styles.testimonialAttr}>— fig</div>
           </div>
         </div>
       </div>
@@ -239,6 +235,9 @@ const NamedDefault = () => (
           Our Connection Call is an open door — a low-key, no-commitment way to
           meet real people in the community and see if this is your kind of
           place.
+        </p>
+        <p className={styles.connectionDetail}>
+          Every Saturday · 11am Pacific · Free · No preparation needed
         </p>
         <Link to="/get-involved#connection-calls" className={styles.connectionCta}>
           Join a Connection Call
