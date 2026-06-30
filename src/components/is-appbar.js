@@ -71,7 +71,7 @@ const NamedDefault = () => {
             alt=""
             width={36}
             height={36}
-            style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', display: 'block' }}
+            style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', display: 'block', mixBlendMode: 'multiply' }}
           />
           <span className={GlobalCSS.appbarWordmark}>Intentional Society</span>
         </Link>
