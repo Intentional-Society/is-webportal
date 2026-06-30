@@ -57,6 +57,20 @@
   color: var(--is-teal);
 }
 
+.heroTagline {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--is-text);
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
 .heroSub {
   color: var(--is-text);
   font-size: 1.1rem;

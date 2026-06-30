@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
+import TornEdge from '../components/torn-edge'
 import ButtondownSignup from '../components/buttondownsignup'
 import * as styles from '../styles/home2026.module.css'
 import * as GlobalCSS from '../styles/global.module.css'
@@ -76,7 +77,10 @@ const NamedDefault = () => (
         </p>
         <Link to="/get-involved" className={styles.heroCta}>Enter the community</Link>
       </div>
+      <div className={styles.heroTagline}>Awareness&nbsp;·&nbsp;Acceptance&nbsp;·&nbsp;Integrity</div>
     </section>
+
+    <TornEdge variant="a" />
 
     {/* ======== About ======== */}
     <section className={styles.about}>
@@ -114,6 +118,8 @@ const NamedDefault = () => (
       </div>
     </section>
 
+    <TornEdge variant="b" />
+
     {/* ======== Nature / quote break ======== */}
     <section className={styles.natureBreak}>
       <div className={styles.natureBreakInner}>
@@ -123,6 +129,8 @@ const NamedDefault = () => (
         </p>
       </div>
     </section>
+
+    <TornEdge variant="c" />
 
     {/* ======== Breath moment ======== */}
     <section className={styles.breath}>
@@ -225,6 +233,8 @@ const NamedDefault = () => (
         </div>
       </div>
     </section>
+
+    <TornEdge variant="d" />
 
     {/* ======== Connection Call CTA ======== */}
     <section className={styles.connection}>
