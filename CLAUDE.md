@@ -94,9 +94,14 @@ Self-contained page ported from a Claude Design mockup: own fixed nav and footer
 (does NOT use `<Layout>`/MUI theme), Cormorant Garamond + DM Sans via Google Fonts
 in the `Head` export, images in `static/design2026/`. Section rhythm alternates
 main content (light, informational) with interstitials (darker, atmospheric):
-Hero → three moves → About (links to /about) → mission → nav-to-spaces cards →
-testimonials → call to action → footer. Torn-paper edges between sections come
-from `src/components/torn-section.js` (SVG mask variants, no PNG masks needed).
+Hero → three moves → About (links to /about) → mission → nav-to-spaces cards
+(3, not 4) → testimonials → call to action → footer. Torn-paper edges are now
+baked into the section images themselves rather than a generic CSS mask:
+`wood-band.png` (three moves) and `ice-torn.png` (mission) carry transparent,
+ragged top/bottom edges in their own alpha channel — the wood band overlaps
+the hero via a negative margin, and ice-torn.png's edges just reveal the
+cream page background around it. No reusable torn-edge component exists
+anymore (the old SVG-mask `torn-section.js` was removed as unused).
 Newsletter signup and Connection Call sections were moved to `/get-involved`
 (styled blocks with anchors `#newsletter` and `#connection-calls`).
 

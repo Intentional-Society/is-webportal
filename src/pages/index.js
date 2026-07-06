@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import TornSection from '../components/torn-section';
 
 // 2026 homepage redesign — self-contained page (own nav/footer) ported from
 // the Claude Design mockup. Section rhythm: main content sections (light,
 // informational) alternating with interstitials (darker, atmospheric):
 // Hero / three moves / About / mission / spaces / testimonials / call to action.
+// Torn-edge transitions are baked into the section images themselves
+// (wood-band.png, ice-torn.png) rather than a generic CSS mask.
 
 const serif = "'Cormorant Garamond', Georgia, serif";
 const sans = "'DM Sans', 'Gudea', sans-serif";
@@ -50,15 +51,6 @@ const spaces = [
     fallback: 'linear-gradient(135deg,#cdd9e2 0%,#3A5A8A 100%)',
     text: 'You have a project or venture idea and want to develop it within a values-aligned community.',
     radius: '6px 3px 7px 4px',
-  },
-  {
-    title: 'Just curious',
-    to: '/about',
-    img: '/design2026/card-curious.jpg',
-    alt: 'Crystals under polarized light, a kaleidoscope of color',
-    fallback: 'linear-gradient(135deg,#7A9E8A 0%,#D4A88C 45%,#3A5A8A 100%)',
-    text: "Something about this caught your attention. That's enough. Look around, read, and see if anything resonates.",
-    radius: '4px 6px 3px 8px',
   },
 ]
 
@@ -138,28 +130,34 @@ const NamedDefault = () => (
     </section>
 
     {/* ======== Interstitial: the three moves ======== */}
-    <TornSection variant={0} height={40} style={{
-      background: 'linear-gradient(170deg,#4a4038 0%,#3c352e 55%,#332e28 100%)',
-      padding: '4.5rem 2rem 4rem', textAlign: 'center',
-    }}>
-      <div style={{ maxWidth: '600px', margin: '0 auto' }}>
-        <div style={{
-          fontFamily: serif, fontSize: 'clamp(1.5rem,3vw,2.2rem)', fontWeight: 300,
-          letterSpacing: '0.08em', color: '#E8DFD0',
-        }}>
-          Awareness&nbsp;&nbsp;·&nbsp;&nbsp;Acceptance&nbsp;&nbsp;·&nbsp;&nbsp;Integrity
+    {/* wood-band.png carries its own ragged top/bottom edges (transparent PNG); the
+        negative margin pulls it up to tear into the hero above. */}
+    <section style={{ position: 'relative', zIndex: 3, marginTop: '-150px', textAlign: 'center' }}>
+      <img src="/design2026/wood-band.png" alt="" aria-hidden="true"
+        style={{ display: 'block', width: '100%', height: 'auto', pointerEvents: 'none' }} />
+      <div style={{
+        position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+        display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2,
+      }}>
+        <div style={{ maxWidth: '900px', padding: '0 2rem', textAlign: 'center' }}>
+          <div style={{
+            fontFamily: serif, fontSize: 'clamp(1.3rem,2.6vw,2.2rem)', fontWeight: 300,
+            letterSpacing: '0.08em', color: '#E8DFD0', whiteSpace: 'nowrap',
+          }}>
+            Awareness&nbsp;&nbsp;·&nbsp;&nbsp;Acceptance&nbsp;&nbsp;·&nbsp;&nbsp;Integrity
+          </div>
+          <p style={{
+            fontFamily: serif, fontStyle: 'italic', color: 'rgba(232,223,208,0.75)',
+            fontSize: '1.05rem', lineHeight: 1.7, marginTop: '1.2rem', marginBottom: 0,
+          }}>
+            Three moves, practiced together, that add up to growing — as people and as a people.
+          </p>
         </div>
-        <p style={{
-          fontFamily: serif, fontStyle: 'italic', color: 'rgba(232,223,208,0.75)',
-          fontSize: '1.05rem', lineHeight: 1.7, marginTop: '1.2rem', marginBottom: 0,
-        }}>
-          Three moves, practiced together, that add up to growing — as people and as a people.
-        </p>
       </div>
-    </TornSection>
+    </section>
 
     {/* ======== About ======== */}
-    <TornSection variant={1} height={36} style={{ background: PAPER, padding: '5rem 2rem' }}>
+    <section style={{ background: PAPER, padding: '2rem 2rem 8.5rem' }}>
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
         <h2 style={{
           fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
@@ -216,12 +214,14 @@ const NamedDefault = () => (
           </div>
         </div>
       </div>
-    </TornSection>
+    </section>
 
     {/* ======== Interstitial: the mission ======== */}
-    <TornSection variant={2} height={30} style={{
-      background: 'url(/design2026/ice.jpg) center 60%/cover, linear-gradient(160deg,#3a4a57 0%,#26323d 60%,#1c2730 100%)',
-      minHeight: '420px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden',
+    {/* ice-torn.png already carries transparent, ragged top/bottom edges — no CSS mask needed. */}
+    <section style={{
+      position: 'relative', zIndex: 3,
+      background: 'url(/design2026/ice-torn.png) center/cover',
+      minHeight: '460px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden',
     }}>
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
@@ -238,17 +238,17 @@ const NamedDefault = () => (
           other — rather than what we think should be there.
         </p>
       </div>
-    </TornSection>
+    </section>
 
     {/* ======== Nav to spaces ======== */}
-    <TornSection variant={3} height={28} style={{ background: PAPER, padding: '4rem 2rem 5rem' }}>
+    <section style={{ background: PAPER, padding: '4rem 2rem 5rem' }}>
       <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
           <div style={{ fontFamily: serif, fontSize: '1.6rem', fontWeight: 400, color: '#5C4A3A' }}>
             What brings you here?
           </div>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '1.5rem' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
           {spaces.map(s => (
             <Link key={s.title} to={s.to} style={{
               background: '#FAF8F3', border: '1px solid rgba(42,42,36,0.06)', padding: '0 0 1.8rem',
@@ -269,11 +269,15 @@ const NamedDefault = () => (
           ))}
         </div>
       </div>
-    </TornSection>
+    </section>
 
     {/* ======== Interstitial: testimonials ======== */}
-    <TornSection variant={0} height={44} style={{ background: '#E5EDE6', padding: '4rem 2rem 5rem' }}>
-      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+    <section style={{
+      position: 'relative', background: 'url(/design2026/moss.jpg) center/cover',
+      padding: '4rem 2rem 5rem', overflow: 'hidden',
+    }}>
+      <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'rgba(237,241,233,0.92)' }} />
+      <div style={{ position: 'relative', zIndex: 2, maxWidth: '900px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', padding: '3rem 2rem', marginBottom: '2rem', position: 'relative' }}>
           <div style={{
             fontFamily: serif, fontSize: '6rem', color: '#7A9E8A', opacity: 0.3, position: 'absolute',
@@ -305,11 +309,11 @@ const NamedDefault = () => (
           </div>
         </div>
       </div>
-    </TornSection>
+    </section>
 
     {/* ======== Call to action ======== */}
-    <TornSection variant={1} height={36} style={{
-      padding: '5rem 2rem', textAlign: 'center', overflow: 'hidden',
+    <section style={{
+      position: 'relative', zIndex: 3, padding: '5rem 2rem', textAlign: 'center', overflow: 'hidden',
       background: 'radial-gradient(ellipse at 50% 80%, rgba(46,107,79,0.25) 0%, transparent 60%), linear-gradient(175deg,#1e2822 0%,#1a2420 50%,#1e2420 100%)',
     }}>
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '550px', margin: '0 auto' }}>
@@ -330,7 +334,7 @@ const NamedDefault = () => (
           fontSize: '14px', borderRadius: '3px',
         }}>Get involved</Link>
       </div>
-    </TornSection>
+    </section>
 
     {/* ======== Footer ======== */}
     <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem' }}>
