@@ -50,7 +50,7 @@ yarn clean
 - h5/h6: 1.25rem/1rem (minor headings)
 - All headings use Gudea font; CssBaseline applies these styles to raw HTML elements (for markdown content)
 
-**Markdown content pattern**: Pages can render content from `src/md/*.md` files via `gatsby-transformer-remark`. The page component queries the markdown file via GraphQL and renders with `dangerouslySetInnerHTML`. See `src/pages/web.js` or `src/pages/community.js` for examples. When converting an HTML page to markdown, do it in two commits: first the mechanical conversion (new `.md` file + rewired `.js`), then a separate commit for any copy rewrite, so content changes get a clean diff.
+**Markdown content pattern**: Pages can render content from `src/md/*.md` files via `gatsby-transformer-remark`. The page component queries the markdown file via GraphQL and renders with `dangerouslySetInnerHTML`. See `src/pages/web.js` for an example. When converting an HTML page to markdown, do it in two commits: first the mechanical conversion (new `.md` file + rewired `.js`), then a separate commit for any copy rewrite, so content changes get a clean diff.
 
 **Markdown anchors**: CSS Module classes can't be used inside markdown content (they get scoped/mangled). For deep-link anchor offsets that clear the AppBar, use inline styles in the markdown:
 ```html
@@ -108,5 +108,11 @@ Newsletter signup and Connection Call sections were moved to `/get-involved`
 ### `/web` page
 `src/pages/web.js` renders content from `src/md/web.md` — "Join the IS Web" page describing the IS relational web, programs, and membership requirements. No signup button; the member app at `https://app.intentionalsociety.org` is linked as a reference for existing members in the "IS Web App" section.
 
-### `/community` page
-`src/pages/community.js` renders content from `src/md/community.md` — community description, Sunday Hub calls, and how to join. Includes a "Back to home page" link in the JSX layer.
+### `/community` page — 2026 redesign
+Same self-contained pattern as `index.js`/`about.js` (own nav/footer, no
+Layout/MUI theme): dark crystals-photo header band ("A space full of
+relationships that matter"), then an article body with the purpose-statement
+blockquote, the community-members "tree" illustration, and How to Join /
+Belonging sections, closing with a "Get involved" button and the shared
+footer. No longer markdown-driven — `src/md/community.md` was removed and
+its copy ported directly into JSX.
