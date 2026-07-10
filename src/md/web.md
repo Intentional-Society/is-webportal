@@ -1,5 +1,7 @@
 ## Join the IS Web
 
+<p style="text-align:center;font-size:1.5em;color:#444;margin-bottom:1.5em">Already a member? Sign in at <a href="https://app.intentionalsociety.org">app.intentionalsociety.org</a></p>
+
 This is a relational web of *trust* and *collaboration*.
 
 This is the network of humans associated with Intentional Society — a distributed village, spanning an ecosystem of people and care. What brings this network together? This web is aligned around the intersection of Inner development, wise action, and human connection.
