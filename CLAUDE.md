@@ -116,3 +116,14 @@ blockquote, the community-members "tree" illustration, and How to Join /
 Belonging sections, closing with a "Get involved" button and the shared
 footer. No longer markdown-driven — `src/md/community.md` was removed and
 its copy ported directly into JSX.
+
+### `/dojo` and `/iv` pages — 2026 redesign
+Same self-contained pattern (own nav/footer). `dojo.js` drops the old
+strikethrough-"Practice" title in favor of a header-band kicker + blurb
+("A skill-building space for developmental-relational practice") over
+`dojo-header.webp` (a Japanese garden/dojo photo, credited in a small
+caption bottom-right of the header — keep the credit if the image
+changes). `iv.js` reuses `waterfall.jpg` as its header image. Both keep
+their existing copy and internal links (Developmental Practice Series,
+Being With It All, Connection Call, etc.) and end with a "Next page →"
+link, matching the old pages' structure.
