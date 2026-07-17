@@ -67,11 +67,11 @@ const NamedDefault = () => {
           style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexGrow: 1 }}
         >
           <img
-            src="/design2026/logo.jpg"
+            src="/design2026/logo.png"
             alt=""
             width={36}
             height={36}
-            style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover', display: 'block', mixBlendMode: 'multiply' }}
+            style={{ width: 36, height: 36, objectFit: 'contain', display: 'block' }}
           />
           <span className={GlobalCSS.appbarWordmark}>Intentional Society</span>
         </Link>

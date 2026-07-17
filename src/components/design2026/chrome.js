@@ -32,44 +32,67 @@ export const Grain2026 = () => (
 );
 
 // Fixed top nav. `active` is the path of the current page ('/about', '/dojo', …);
-// omit it on the homepage.
-export const Nav2026 = ({ active }) => (
-  <nav style={{
-    position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, padding: '0.8rem 2rem',
-    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-    background: PAPER, borderBottom: '1px solid rgba(42,42,36,0.06)',
-  }}>
-    <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none', color: INK, fontFamily: sans }}>
-      <img src="/design2026/logo.jpg" alt="" style={{ width: '40px', height: '40px', objectFit: 'cover', display: 'block', mixBlendMode: 'multiply' }} />
-      <span style={{ fontFamily: serif, fontSize: '18px' }}>Intentional Society</span>
-    </Link>
-    <ul style={{ display: 'flex', alignItems: 'center', gap: '1.6rem', listStyle: 'none', margin: 0, padding: 0, flexWrap: 'wrap', fontFamily: sans }}>
-      {navLinks.map(l => (
-        <li key={l.text}>
-          <Link to={l.to} style={{
-            textDecoration: 'none', fontSize: '14px',
-            color: l.to === active ? ACCENT_DARK : MUTED,
-            fontWeight: l.to === active ? 500 : 400,
-          }}>
-            {l.text}
-          </Link>
+// omit it on the homepage. Collapses to a hamburger below 820px.
+export const Nav2026 = ({ active }) => {
+  const [open, setOpen] = React.useState(false);
+  return (
+    <nav style={{
+      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, padding: '0.8rem 2rem',
+      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      background: PAPER, borderBottom: '1px solid rgba(42,42,36,0.06)',
+    }}>
+      <style>{`
+        .nav2026-links { display: flex; align-items: center; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
+        .nav2026-burger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+        @media (max-width: 820px) {
+          .nav2026-links { display: none; position: fixed; top: 57px; left: 0; right: 0;
+            flex-direction: column; align-items: flex-start; gap: 0; background: #F8F5EF;
+            border-bottom: 1px solid rgba(42,42,36,0.12); padding: 0.4rem 0 1rem; }
+          .nav2026-links.nav2026-open { display: flex; }
+          .nav2026-links li { padding: 0.55rem 2rem; }
+          .nav2026-burger { display: block; }
+        }
+      `}</style>
+      <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none', color: INK, fontFamily: sans }}>
+        <img src="/design2026/logo.png" alt="" style={{ width: '40px', height: '40px', objectFit: 'contain', display: 'block' }} />
+        <span style={{ fontFamily: serif, fontSize: '18px' }}>Intentional Society</span>
+      </Link>
+      <button className="nav2026-burger" aria-label={open ? 'Close menu' : 'Open menu'}
+        aria-expanded={open} onClick={() => setOpen(!open)}>
+        <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+          {open
+            ? <path d="M4 4 L18 18 M18 4 L4 18" stroke={INK} strokeWidth="2" strokeLinecap="round" />
+            : <path d="M3 5.5 H19 M3 11 H19 M3 16.5 H19" stroke={INK} strokeWidth="2" strokeLinecap="round" />}
+        </svg>
+      </button>
+      <ul className={`nav2026-links${open ? ' nav2026-open' : ''}`} style={{ fontFamily: sans }}>
+        {navLinks.map(l => (
+          <li key={l.text}>
+            <Link to={l.to} style={{
+              textDecoration: 'none', fontSize: '14px',
+              color: l.to === active ? ACCENT_DARK : MUTED,
+              fontWeight: l.to === active ? 500 : 400,
+            }}>
+              {l.text}
+            </Link>
+          </li>
+        ))}
+        <li>
+          <Link to="/get-involved" style={{
+            background: ACCENT, color: '#fff', padding: '0.5rem 1.2rem', borderRadius: '4px',
+            fontSize: '13px', fontWeight: 500, textDecoration: 'none',
+          }}>Get involved</Link>
         </li>
-      ))}
-      <li>
-        <Link to="/get-involved" style={{
-          background: ACCENT, color: '#fff', padding: '0.5rem 1.2rem', borderRadius: '4px',
-          fontSize: '13px', fontWeight: 500, textDecoration: 'none',
-        }}>Get involved</Link>
-      </li>
-    </ul>
-  </nav>
-);
+      </ul>
+    </nav>
+  );
+};
 
 export const Footer2026 = () => (
   <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans }}>
     <div style={{ maxWidth: '900px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem' }}>
       <div>
-        <img src="/design2026/logo.jpg" alt="" style={{ width: '52px', height: '52px', objectFit: 'cover', display: 'block', marginBottom: '0.9rem', mixBlendMode: 'multiply' }} />
+        <img src="/design2026/logo.png" alt="" style={{ width: '52px', height: '52px', objectFit: 'contain', display: 'block', marginBottom: '0.9rem' }} />
         <h3 style={{ fontFamily: serif, fontWeight: 300, fontSize: '1.1rem', color: INK, margin: '0 0 0.8rem' }}>Intentional Society</h3>
         <p style={{ fontSize: '13px', color: MUTED, lineHeight: 1.7, margin: 0 }}>
           An online community for inner development, wise action, and human connection.
