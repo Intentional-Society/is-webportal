@@ -1,86 +1,163 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Typography from '@mui/material/Typography';
-import Layout from '../components/layout';
-import CenteredColumn from '../components/centered-column';
 import ButtondownSignup from '../components/buttondownsignup';
 import BlurbConnectionCall from '../components/blurb-connectioncall';
-import * as GlobalCSS from '../styles/global.module.css';
+import {
+  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
+  Grain2026, Nav2026, Footer2026, Head2026,
+} from '../components/design2026/chrome';
 
-const NamedDefault = ({ data }) => {
-  return (
-    <Layout>
-      <div style={{ height: '30px' }}></div>
-      <CenteredColumn>
-        <Typography variant="h2">Get Involved</Typography>
-        <p>Intrigued? Here are your options:</p>
+// 2026 redesign of the Get Involved page — ported from the Claude Design
+// "Sign Up" mockup, using the shared 2026 chrome (components/design2026/).
+// Keeps the working pieces: the Zoom Connection Call registration link (via
+// BlurbConnectionCall, which carries the next call's date), the Buttondown
+// newsletter form, and the #connection-calls / #newsletter anchors that other
+// pages deep-link to.
 
-        <a className={GlobalCSS.anchorOffset} id="newsletter"></a>
-        <div style={{
-          position: 'relative', overflow: 'hidden', borderRadius: '6px 3px 7px 4px',
-          background: 'url(/design2026/newsletter-bg.jpg) center/cover no-repeat, linear-gradient(120deg,#d9c7e0 0%,#e8c9b0 50%,#cfe0d6 100%)',
-          padding: '3rem 2rem', textAlign: 'center', margin: '2rem 0',
-        }}>
-          <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'rgba(248,245,239,0.9)' }} />
-          <div style={{ position: 'relative', zIndex: 2, maxWidth: '500px', margin: '0 auto' }}>
-            <Typography variant="h3" style={{ color: '#1A4232', marginBottom: '0.8rem' }}>Follow along</Typography>
-            <p style={{ color: '#6B6860', fontSize: '15px', marginBottom: '1rem' }}>
-              Not ready to jump in? Our weekly newsletter shares what we're learning,
-              thinking, and building. No pressure, no spam.
-            </p>
-            <div style={{ display: 'inline-block', textAlign: 'left' }}>
-              <ButtondownSignup />
-            </div>
-            <p style={{ color: '#6B6860', fontSize: '13px', margin: 0 }}>
-              Every Thursday, a friendly update with public events and reflections.
-              Browse the <a href="https://buttondown.email/intentionalsociety/archive/">archive</a> for
-              samples. Watch for a confirmation email to finish signing up.
-            </p>
-          </div>
-        </div>
+const CONNECTION_CALL_REG = 'https://us02web.zoom.us/meeting/register/AwB68wZAT0WtW2xrYqWMUw';
 
-        <a className={GlobalCSS.anchorOffset} id="connection-calls"></a>
-        <div style={{
-          position: 'relative', overflow: 'hidden', borderRadius: '4px 7px 3px 6px',
-          padding: '3rem 2rem', textAlign: 'center', margin: '2rem 0',
-          background: 'radial-gradient(ellipse at 50% 80%, rgba(46,107,79,0.25) 0%, transparent 60%), linear-gradient(175deg,#1e2822 0%,#1a2420 50%,#1e2420 100%)',
-        }}>
-          <div style={{ position: 'relative', zIndex: 2, maxWidth: '550px', margin: '0 auto' }}>
-            <div style={{
-              fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-              fontWeight: 500, color: '#7A9E8A', marginBottom: '1rem', opacity: 0.85,
-            }}>The best first step</div>
-            <Typography variant="h3" style={{ color: '#FAF8F3', fontStyle: 'italic', marginBottom: '1rem' }}>
-              Come sit with us for an hour
-            </Typography>
-            <p style={{ color: 'rgba(232,223,208,0.75)', fontSize: '15px', lineHeight: 1.7, marginBottom: '0.5rem' }}>
-              This call is like a picnic table out on our front lawn. Open to all, new and
-              familiar, with no agenda other than your curiosity! Bring your video camera
-              (phone is okay), microphone, and
-              your <Link to="/questions" style={{ color: '#7A9E8A' }}>questions</Link>.
-            </p>
-            <p style={{ color: 'rgba(232,223,208,0.9)', fontSize: '14px', marginTop: '1.5rem' }}>
-              <BlurbConnectionCall />
-            </p>
-          </div>
-        </div>
+const linkStyle = { color: ACCENT_DARK };
 
-        <Typography variant="h3">Find Relational Practice Groups</Typography>
-        <p>We love relational practices for personal development! You can find several
-          at our sister site <a href="https://relationaldojo.org">Relational Dojo</a>.
-        </p>
-
-        <Typography variant="h3">Join the Relational Web</Typography>
-        <p>You can join Intentional Society in earnest by weaving into our membership network we 
-          call the <Link to="/web">relational web</Link>.</p>
-        <p>Within the web, meeting every Sunday, is our <Link to="/community">Community</Link>.</p>
-
-        <div style={{textAlign: 'right', marginBottom: '-25px'}}>
-          Next page: <Link to="/web">Web</Link>
-        </div>
-      </CenteredColumn>
-    </Layout>
-  );
+const sectionHeading = {
+  fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
+  fontSize: 'clamp(1.5rem,2.6vw,2rem)', color: '#5C4A3A', margin: '0 0 1.4rem',
 };
 
+const bodyP = { fontSize: '16px', color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
+
+const pillars = ['Inner development', 'Wise action', 'Human connection'];
+
+const features = [
+  { title: 'Quarterly Convening', desc: "The whole network gathers once a quarter — a party and a catalyst for hearing what's alive, coordinating crews, and updating shared strategy." },
+  { title: 'IS Web App', desc: 'Sign in to see the member directory and the relational map charting trust and collaboration across the web.' },
+  { title: 'Relational Programs', desc: 'Gumball Machine, Presence Pods, Casework Pods, Thematic Crews, Arts in IS, and more.' },
+  { title: 'Weekly Community Calls', desc: 'Running 5+ years as the heartbeat of mutual support — developmental-relational practice and growth-edge exploration every Sunday.' },
+  { title: '(Future) Mesh Access', desc: 'Growing trust-ramps into a wider mesh of allied communities across the field.' },
+];
+
+const divider = <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '2.5rem auto', width: '120px' }} />;
+
+const NamedDefault = () => (
+  <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
+
+    <Grain2026 />
+    <Nav2026 active="/get-involved" />
+
+    {/* ======== Hero: Connection Call primary CTA ======== */}
+    <a id="connection-calls" style={{ display: 'block', position: 'relative', top: '-20px', visibility: 'hidden' }}></a>
+    <header id="connection-calls-hero" style={{
+      position: 'relative', marginTop: '77px', minHeight: '460px', display: 'flex',
+      alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
+      padding: '4rem 2rem',
+      background: 'radial-gradient(ellipse at 50% 80%, rgba(46,107,79,0.25) 0%, transparent 60%), linear-gradient(175deg,#1e2822 0%,#1a2420 50%,#1e2420 100%)',
+    }}>
+      <style>{`#connection-calls-hero a { color: #7A9E8A; }`}</style>
+      <div style={{ position: 'relative', zIndex: 2, maxWidth: '560px' }}>
+        <div style={{
+          fontFamily: sans, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
+          fontWeight: 500, color: '#7A9E8A', marginBottom: '1rem', opacity: 0.85,
+        }}>Start here</div>
+        <h1 style={{
+          fontFamily: serif, fontWeight: 300, fontStyle: 'italic', lineHeight: 1.2,
+          fontSize: 'clamp(1.9rem,3.6vw,2.7rem)', color: '#FAF8F3', margin: '0 0 1rem',
+        }}>
+          Come to a Connection Call
+        </h1>
+        <p style={{ color: 'rgba(232,223,208,0.7)', fontSize: '15px', margin: '0 0 0.5rem', lineHeight: 1.7 }}>
+          Joining the IS Web requires a referral from an existing member — and the easiest way
+          to meet one is right here. It's a low-key, no-commitment hour to meet real people in
+          the community.
+        </p>
+        <p style={{ color: 'rgba(232,223,208,0.6)', fontSize: '14px', marginTop: '1.2rem', lineHeight: 1.7 }}>
+          <BlurbConnectionCall /> Free · No preparation needed — just your video camera
+          (phone is okay), microphone, and curiosity.
+        </p>
+        <a href={CONNECTION_CALL_REG} style={{
+          display: 'inline-block', marginTop: '1.6rem', padding: '0.9rem 2.2rem',
+          background: '#7A9E8A', textDecoration: 'none',
+          fontFamily: sans, fontSize: '15px', fontWeight: 500, borderRadius: '3px',
+        }}>
+          <span style={{ color: '#1a2420' }}>Join a Connection Call</span>
+        </a>
+        <p style={{ color: 'rgba(232,223,208,0.5)', fontSize: '13px', marginTop: '1rem' }}>
+          Already have a referral? <a href="https://app.intentionalsociety.org" target="_blank" rel="noopener noreferrer">Sign in at app.intentionalsociety.org</a>
+        </p>
+      </div>
+    </header>
+
+    {/* ======== Details ======== */}
+    <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
+      <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+
+        <h2 style={sectionHeading}>What is the IS Web?</h2>
+        <p style={bodyP}>
+          A relational web of trust and collaboration — the full network of humans associated
+          with Intentional Society, aligned around inner development, wise action, and human
+          connection. Membership is lightweight and non-exclusive; it asks for intentionality
+          more than any fixed commitment. Read more about how it
+          works <Link to="/web" style={linkStyle}>on the Web page</Link>.
+        </p>
+
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '2.5rem' }}>
+          {pillars.map(p => (
+            <span key={p} style={{
+              display: 'inline-block', padding: '0.4rem 0.9rem', border: '1px solid rgba(42,42,36,0.12)',
+              borderRadius: '20px', fontFamily: sans, fontSize: '13px', color: MUTED,
+            }}>{p}</span>
+          ))}
+        </div>
+
+        {divider}
+
+        <h2 style={sectionHeading}>What's inside</h2>
+        {features.map(f => (
+          <div key={f.title} style={{ marginBottom: '1.2rem' }}>
+            <h4 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.05rem', color: INK, margin: '0 0 0.3rem' }}>{f.title}</h4>
+            <p style={{ fontSize: '15px', color: MUTED, margin: 0, lineHeight: 1.7 }}>{f.desc}</p>
+          </div>
+        ))}
+
+        {divider}
+
+        <h2 style={sectionHeading}>Time commitment</h2>
+        <p style={{ ...bodyP, marginBottom: '2rem' }}>
+          A couple hours per quarter covers the light-touch web-level rhythm — roughly one
+          90-minute Convening plus a bit of updating your profile. Programs, congregations,
+          and crews inside the web run at whatever deeper rhythm fits you.
+        </p>
+
+        {divider}
+
+        {/* Newsletter — kept from the previous Get Involved page */}
+        <a id="newsletter" style={{ display: 'block', position: 'relative', top: '-90px', visibility: 'hidden' }}></a>
+        <h2 style={sectionHeading}>Not ready yet? Follow along</h2>
+        <p style={bodyP}>
+          Our weekly newsletter shares what we're learning, thinking, and building.
+          No pressure, no spam. Every Thursday, a friendly update with public events and
+          reflections — browse the <a href="https://buttondown.email/intentionalsociety/archive/" target="_blank" rel="noopener noreferrer" style={linkStyle}>archive</a> for
+          samples, and watch for a confirmation email to finish signing up.
+        </p>
+        <ButtondownSignup />
+
+        <div style={{ textAlign: 'right', marginTop: '2rem' }}>
+          <Link to="/community" style={{
+            fontFamily: sans, fontSize: '13px', color: ACCENT_DARK, textDecoration: 'none',
+            borderBottom: '1px solid rgba(26,66,50,0.3)',
+          }}>Next page: Community →</Link>
+        </div>
+
+      </article>
+    </main>
+
+    <Footer2026 />
+  </div>
+);
+
 export default NamedDefault;
+
+export const Head = () => (
+  <Head2026
+    title="Get Involved — Intentional Society"
+    description="Come to a Connection Call — the easiest first step into the Intentional Society web of trust and collaboration."
+  />
+);

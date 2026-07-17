@@ -29,7 +29,7 @@ const NamedDefault = () => (
     <header style={{
       position: 'relative', marginTop: '77px', minHeight: '340px', display: 'flex',
       alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-      background: 'url(/design2026/waterfall.jpg) center/cover, #1c2730',
+      background: 'url(/design2026/willow.jpg) center 40%/cover, #1c2730',
     }}>
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
