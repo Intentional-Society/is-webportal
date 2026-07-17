@@ -19,7 +19,12 @@ const navLinks = [
   { text: 'Community', to: '/community' },
   { text: 'Dojo', to: '/dojo' },
   { text: 'Ventures', to: '/iv' },
-  { text: 'More', to: '/resources' },
+];
+
+const moreLinks = [
+  { text: 'FAQ', to: '/questions' },
+  { text: 'Friends', to: '/friends' },
+  { text: 'News', to: '/news' },
 ];
 
 // Paper-grain overlay, applied once per page above all content.
@@ -32,9 +37,18 @@ export const Grain2026 = () => (
 );
 
 // Fixed top nav. `active` is the path of the current page ('/about', '/dojo', …);
-// omit it on the homepage. Collapses to a hamburger below 820px.
+// omit it on the homepage. Collapses to a hamburger below 820px. "More" opens
+// a dropdown with the secondary pages (FAQ, Friends, News).
 export const Nav2026 = ({ active }) => {
   const [open, setOpen] = React.useState(false);
+  const [moreOpen, setMoreOpen] = React.useState(false);
+  React.useEffect(() => {
+    if (!moreOpen) return undefined;
+    const close = e => { if (!e.target.closest('.nav2026-more')) setMoreOpen(false); };
+    document.addEventListener('click', close);
+    return () => document.removeEventListener('click', close);
+  }, [moreOpen]);
+  const moreActive = moreLinks.some(l => l.to === active);
   return (
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, padding: '0.8rem 2rem',
@@ -44,6 +58,13 @@ export const Nav2026 = ({ active }) => {
       <style>{`
         .nav2026-links { display: flex; align-items: center; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
         .nav2026-burger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+        .nav2026-more { position: relative; }
+        .nav2026-more-menu { position: absolute; top: calc(100% + 12px); right: -10px;
+          background: ${PAPER}; border: 1px solid rgba(42,42,36,0.1); border-radius: 4px;
+          box-shadow: 0 8px 24px rgba(42,42,36,0.12); list-style: none; margin: 0;
+          padding: 0.4rem 0; min-width: 130px; }
+        .nav2026-more-menu li { padding: 0; }
+        .nav2026-more-menu a { display: block; padding: 0.45rem 1.1rem; }
         @media (max-width: 820px) {
           .nav2026-links { display: none; position: fixed; top: 57px; left: 0; right: 0;
             flex-direction: column; align-items: flex-start; gap: 0; background: #F8F5EF;
@@ -51,6 +72,10 @@ export const Nav2026 = ({ active }) => {
           .nav2026-links.nav2026-open { display: flex; }
           .nav2026-links li { padding: 0.55rem 2rem; }
           .nav2026-burger { display: block; }
+          .nav2026-more-menu { position: static; border: none; box-shadow: none;
+            background: transparent; padding: 0.2rem 0 0; min-width: 0; }
+          .nav2026-more-menu li { padding: 0.45rem 0 0 1.2rem; }
+          .nav2026-more-menu a { padding: 0; }
         }
       `}</style>
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none', color: INK, fontFamily: sans }}>
@@ -77,6 +102,36 @@ export const Nav2026 = ({ active }) => {
             </Link>
           </li>
         ))}
+        <li className="nav2026-more">
+          <button onClick={() => setMoreOpen(!moreOpen)} aria-expanded={moreOpen} style={{
+            background: 'none', border: 'none', cursor: 'pointer', padding: 0,
+            fontFamily: sans, fontSize: '14px',
+            color: moreActive ? ACCENT_DARK : MUTED,
+            fontWeight: moreActive ? 500 : 400,
+            display: 'flex', alignItems: 'center', gap: '4px',
+          }}>
+            More
+            <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"
+              style={{ transform: moreOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }}>
+              <path d="M2 3.5 L5 6.5 L8 3.5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+          </button>
+          {moreOpen && (
+            <ul className="nav2026-more-menu">
+              {moreLinks.map(l => (
+                <li key={l.text}>
+                  <Link to={l.to} style={{
+                    textDecoration: 'none', fontSize: '14px',
+                    color: l.to === active ? ACCENT_DARK : MUTED,
+                    fontWeight: l.to === active ? 500 : 400,
+                  }}>
+                    {l.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
         <li>
           <Link to="/get-involved" style={{
             background: ACCENT, color: '#fff', padding: '0.5rem 1.2rem', borderRadius: '4px',

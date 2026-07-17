@@ -43,7 +43,7 @@ const NamedDefault = () => (
   <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
 
     <Grain2026 />
-    <Nav2026 />
+    <Nav2026 active="/news" />
 
     {/* ======== Header band ======== */}
     <header style={{
