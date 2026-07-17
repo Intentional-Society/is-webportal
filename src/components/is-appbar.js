@@ -67,7 +67,7 @@ const NamedDefault = () => {
           style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexGrow: 1 }}
         >
           <img
-            src="/images/design2026/logo.jpg"
+            src="/design2026/logo.jpg"
             alt=""
             width={36}
             height={36}

@@ -22,7 +22,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("/images/design2026/grain.png");
+  background-image: url("/design2026/grain.png");
   background-size: 500px 500px;
   background-repeat: repeat;
   mix-blend-mode: multiply;

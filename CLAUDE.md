@@ -89,10 +89,19 @@ Deploys automatically to Netlify on push to master. Configuration in `netlify.to
 
 ## Current Status Notes
 
+### 2026 redesign pages — shared chrome (`src/components/design2026/chrome.js`)
+The redesigned pages (index, about, community, dojo, iv) are self-contained
+(do NOT use `<Layout>`/MUI theme) and share one module for design tokens
+(serif/sans/color constants), `Grain2026`, `Nav2026` (pass `active="/path"`),
+`Footer2026`, and `Head2026` (fonts + title/description). Edit chrome.js to
+change nav links or the footer everywhere at once. The remaining pages
+(get-involved, web, friends, questions, news, practices, …) still use the old
+MUI `<Layout>`, whose AppBar/Layout was restyled toward the 2026 look (same
+logo + grain, at `/design2026/…` paths).
+
 ### Home page (`src/pages/index.js`) — 2026 redesign (branch `2026-design`)
-Self-contained page ported from a Claude Design mockup: own fixed nav and footer
-(does NOT use `<Layout>`/MUI theme), Cormorant Garamond + DM Sans via Google Fonts
-in the `Head` export, images in `static/design2026/`. Section rhythm alternates
+Self-contained page ported from a Claude Design mockup, using the shared
+2026 chrome above, images in `static/design2026/`. Section rhythm alternates
 main content (light, informational) with interstitials (darker, atmospheric):
 Hero → three moves → About (links to /about) → mission → nav-to-spaces cards
 (3, not 4) → testimonials → call to action → footer. Torn-paper edges are now
