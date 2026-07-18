@@ -53,26 +53,22 @@ const NamedDefault = () => (
       background: 'radial-gradient(ellipse at 50% 80%, rgba(46,107,79,0.25) 0%, transparent 60%), linear-gradient(175deg,#1e2822 0%,#1a2420 50%,#1e2420 100%)',
     }}>
       <style>{`#connection-calls-hero a { color: #7A9E8A; }`}</style>
-      <div style={{ position: 'relative', zIndex: 2, maxWidth: '560px' }}>
+      <div style={{ position: 'relative', zIndex: 2, maxWidth: '900px', width: '100%' }}>
         <div style={{
-          fontFamily: sans, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-          fontWeight: 500, color: '#7A9E8A', marginBottom: '1rem', opacity: 0.85,
-        }}>Start here</div>
-        <h1 style={{
-          fontFamily: serif, fontWeight: 300, fontStyle: 'italic', lineHeight: 1.2,
-          fontSize: 'clamp(1.9rem,3.6vw,2.7rem)', color: '#FAF8F3', margin: '0 0 1rem',
+          display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center',
+          gap: '0.7rem', marginBottom: '1.6rem', fontFamily: sans, fontSize: '15px',
+          fontWeight: 500, textTransform: 'uppercase', color: '#FAF8F3', letterSpacing: '0.1em',
         }}>
-          Come to a Connection Call
-        </h1>
-        <p style={{ color: 'rgba(232,223,208,0.7)', fontSize: '15px', margin: '0 0 0.5rem', lineHeight: 1.7 }}>
-          Joining the IS Web requires a referral from an existing member — and the easiest way
-          to meet one is right here. It's a low-key, no-commitment hour to meet real people in
-          the community.
-        </p>
-        <p style={{ color: 'rgba(232,223,208,0.6)', fontSize: '14px', marginTop: '1.2rem', lineHeight: 1.7 }}>
-          Come as you are — whether it's your first call or your fiftieth, you're welcome.
-          Free · No preparation needed — just your video camera (phone is okay), microphone,
-          and curiosity.
+          {pillars.map((p, i) => (
+            <React.Fragment key={p}>
+              {i > 0 && <span style={{ color: 'rgba(250,248,243,0.4)' }}>·</span>}
+              <span>{p}</span>
+            </React.Fragment>
+          ))}
+        </div>
+        <p style={{ color: 'rgba(232,223,208,0.7)', fontSize: '24px', margin: '0 auto 0.5rem', lineHeight: 1.7, textAlign: 'center' }}>
+          <b>Meet real people in the community to see if it's right for you</b><br />
+          <b>Tell us about yourself, ask questions, get to know what this is about</b>
         </p>
         <a href={CONNECTION_CALL_URL} style={{
           display: 'inline-block', marginTop: '1.6rem', padding: '0.9rem 2.2rem',
@@ -92,22 +88,13 @@ const NamedDefault = () => (
       <article style={{ maxWidth: '720px', margin: '0 auto' }}>
 
         <h2 style={sectionHeading}>What is the IS Web?</h2>
-        <p style={bodyP}>
+        <p style={{ ...bodyP, marginBottom: '2.5rem' }}>
           A relational web of trust and collaboration — the full network of humans associated
           with Intentional Society, aligned around inner development, wise action, and human
           connection. Membership is lightweight and non-exclusive; it asks for intentionality
           more than any fixed commitment. Read more about how it
           works <Link to="/web" style={linkStyle}>on the Web page</Link>.
         </p>
-
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginBottom: '2.5rem' }}>
-          {pillars.map(p => (
-            <span key={p} style={{
-              display: 'inline-block', padding: '0.4rem 0.9rem', border: '1px solid rgba(42,42,36,0.12)',
-              borderRadius: '20px', fontFamily: sans, fontSize: '13px', color: MUTED,
-            }}>{p}</span>
-          ))}
-        </div>
 
         {divider}
 
