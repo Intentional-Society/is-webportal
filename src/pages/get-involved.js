@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import ButtondownSignup from '../components/buttondownsignup';
-import BlurbConnectionCall from '../components/blurb-connectioncall';
+import BlurbConnectionCall, { CONNECTION_CALL_URL } from '../components/blurb-connectioncall';
 import {
   serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026,
@@ -9,12 +9,11 @@ import {
 
 // 2026 redesign of the Get Involved page — ported from the Claude Design
 // "Sign Up" mockup, using the shared 2026 chrome (components/design2026/).
-// Keeps the working pieces: the Zoom Connection Call registration link (via
-// BlurbConnectionCall, which carries the next call's date), the Buttondown
+// Keeps the working pieces: the Zoom Connection Call registration link and
+// next-call date (both sourced from blurb-connectioncall.js — see that file
+// for the one place to update when a new call is scheduled), the Buttondown
 // newsletter form, and the #connection-calls / #newsletter anchors that other
 // pages deep-link to.
-
-const CONNECTION_CALL_REG = 'https://us02web.zoom.us/meeting/register/AwB68wZAT0WtW2xrYqWMUw';
 
 const linkStyle = { color: ACCENT_DARK };
 
@@ -72,7 +71,7 @@ const NamedDefault = () => (
           <BlurbConnectionCall /> Free · No preparation needed — just your video camera
           (phone is okay), microphone, and curiosity.
         </p>
-        <a href={CONNECTION_CALL_REG} style={{
+        <a href={CONNECTION_CALL_URL} style={{
           display: 'inline-block', marginTop: '1.6rem', padding: '0.9rem 2.2rem',
           background: '#7A9E8A', textDecoration: 'none',
           fontFamily: sans, fontSize: '15px', fontWeight: 500, borderRadius: '3px',
