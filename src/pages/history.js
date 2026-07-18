@@ -387,7 +387,7 @@ const HistoryPage = () => (
         function and grow, while looking for meaning, truth, and the “why?”s of life for a few decades before
         that. I'd had some transformational experiences in my personal development, and I wanted to keep
         growing, make friends on that same journey, and be of service to humanity. I wrote
-         a <Link to="/thecall"> calling manifesto</Link> of 
+         a <Link to="/news#the-call"> calling manifesto</Link> of
         sorts in December 2020, and began weekly meetings of Intentional Society in January 2021.
       </p>
       <p>What followed has been a patient unfolding with many stories embedded in the journey. 

@@ -16,3 +16,7 @@
 [[redirects]]
   from = "/what-we-do"
   to = "/about"
+
+[[redirects]]
+  from = "/thecall"
+  to = "/news#the-call"
