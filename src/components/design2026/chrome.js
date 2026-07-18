@@ -150,8 +150,7 @@ export const Footer2026 = () => (
         <img src="/design2026/logo.png" alt="" style={{ width: '52px', height: '52px', objectFit: 'contain', display: 'block', marginBottom: '0.9rem' }} />
         <h3 style={{ fontFamily: serif, fontWeight: 300, fontSize: '1.1rem', color: INK, margin: '0 0 0.8rem' }}>Intentional Society</h3>
         <p style={{ fontSize: '13px', color: MUTED, lineHeight: 1.7, margin: 0 }}>
-          An online community for inner development, wise action, and human connection.
-          Peer-led, free, and always becoming.
+          A community for inner development, wise action, and human connection
         </p>
       </div>
       <div>
