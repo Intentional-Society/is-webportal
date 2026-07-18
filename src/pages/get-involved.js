@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import ButtondownSignup from '../components/buttondownsignup';
-import BlurbConnectionCall, { CONNECTION_CALL_URL } from '../components/blurb-connectioncall';
 import {
   serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026,
@@ -9,11 +8,14 @@ import {
 
 // 2026 redesign of the Get Involved page — ported from the Claude Design
 // "Sign Up" mockup, using the shared 2026 chrome (components/design2026/).
-// Keeps the working pieces: the Zoom Connection Call registration link and
-// next-call date (both sourced from blurb-connectioncall.js — see that file
-// for the one place to update when a new call is scheduled), the Buttondown
-// newsletter form, and the #connection-calls / #newsletter anchors that other
-// pages deep-link to.
+// Keeps the working pieces: the Zoom Connection Call registration link, the
+// Buttondown newsletter form, and the #connection-calls / #newsletter
+// anchors that other pages deep-link to.
+
+// Update this whenever a new Connection Call is scheduled — no date is shown
+// on the page itself (it was going stale faster than anyone updated it), so
+// this is the only place a change is needed.
+const CONNECTION_CALL_URL = 'https://us02web.zoom.us/meeting/register/oidEr1pEQM6izJUD-HsUrw';
 
 const linkStyle = { color: ACCENT_DARK };
 
@@ -68,8 +70,9 @@ const NamedDefault = () => (
           the community.
         </p>
         <p style={{ color: 'rgba(232,223,208,0.6)', fontSize: '14px', marginTop: '1.2rem', lineHeight: 1.7 }}>
-          <BlurbConnectionCall /> Free · No preparation needed — just your video camera
-          (phone is okay), microphone, and curiosity.
+          Come as you are — whether it's your first call or your fiftieth, you're welcome.
+          Free · No preparation needed — just your video camera (phone is okay), microphone,
+          and curiosity.
         </p>
         <a href={CONNECTION_CALL_URL} style={{
           display: 'inline-block', marginTop: '1.6rem', padding: '0.9rem 2.2rem',

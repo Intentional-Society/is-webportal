@@ -103,8 +103,11 @@ AppBar/Layout was restyled toward the 2026 look (same logo + grain).
 Header photos are one-per-page: hero-path (home), crystals-header (about),
 macro crystal (community), dojo garden (dojo), willow (iv), moss (friends),
 rockfield (questions), driftwood (news). get-involved keeps the working
-Buttondown form, BlurbConnectionCall (next-call date + Zoom link), and the
-`#newsletter` / `#connection-calls` anchors.
+Buttondown form and the `#newsletter` / `#connection-calls` anchors; its
+Connection Call button URL is a `CONNECTION_CALL_URL` constant at the top of
+get-involved.js — the only place to update when a new call is scheduled, no
+date shown on the page since it always went stale faster than anyone updated
+it.
 
 ### Home page (`src/pages/index.js`) — 2026 redesign (branch `2026-design`)
 Self-contained page ported from a Claude Design mockup, using the shared
