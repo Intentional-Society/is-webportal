@@ -145,47 +145,51 @@ export const Nav2026 = ({ active }) => {
 
 export const Footer2026 = () => (
   <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans }}>
-    <div style={{ maxWidth: '720px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr 1.6fr', gap: '2.5rem' }}>
-      <div>
-        <img src="/design2026/logo.png" alt="" style={{ width: '52px', height: '52px', objectFit: 'contain', display: 'block', marginBottom: '0.9rem' }} />
-        <h3 style={{ fontFamily: serif, fontWeight: 300, fontSize: '1.1rem', color: INK, margin: '0 0 0.8rem' }}>Intentional Society</h3>
-        <p style={{ fontSize: '13px', color: MUTED, lineHeight: 1.7, margin: 0 }}>
-          Inner Development · Wise Action · Human Connection
-        </p>
+    <div style={{ maxWidth: '720px', margin: '0 auto' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.9rem', marginBottom: '2rem' }}>
+        <img src="/design2026/logo.png" alt="" style={{ width: '44px', height: '44px', objectFit: 'contain', display: 'block', flexShrink: 0 }} />
+        <div>
+          <h3 style={{ fontFamily: serif, fontWeight: 300, fontSize: '1.1rem', color: INK, margin: '0 0 0.2rem' }}>Intentional Society</h3>
+          <p style={{ fontSize: '13px', color: MUTED, margin: 0, whiteSpace: 'nowrap' }}>
+            Inner Development · Wise Action · Human Connection
+          </p>
+        </div>
       </div>
-      <div>
-        <h4 style={{ fontFamily: serif, fontSize: '11px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>Our values</h4>
-        <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-          {['Awareness', 'Acceptance', 'Integrity'].map(v => (
-            <li key={v} style={{ fontSize: '13px', color: MUTED, marginBottom: '0.5rem' }}>{v}</li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <h4 style={{ fontFamily: serif, fontSize: '11px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>Explore</h4>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 1.2rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '2.5rem' }}>
+        <div>
+          <h4 style={{ fontFamily: serif, fontSize: '11px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>Our values</h4>
           <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-            {[
-              { text: 'Community', to: '/community' },
-              { text: 'Practice Dojo', to: '/dojo' },
-              { text: 'Ventures', to: '/iv' },
-            ].map(l => (
-              <li key={l.text} style={{ fontSize: '13px', marginBottom: '0.5rem', whiteSpace: 'nowrap' }}>
-                <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
-              </li>
+            {['Awareness', 'Acceptance', 'Integrity'].map(v => (
+              <li key={v} style={{ fontSize: '13px', color: MUTED, marginBottom: '0.5rem' }}>{v}</li>
             ))}
           </ul>
-          <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-            {[
-              { text: 'Friends', to: '/friends' },
-              { text: 'Resources', to: '/resources' },
-              { text: 'News', to: '/news' },
-            ].map(l => (
-              <li key={l.text} style={{ fontSize: '13px', marginBottom: '0.5rem', whiteSpace: 'nowrap' }}>
-                <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
-              </li>
-            ))}
-          </ul>
+        </div>
+        <div>
+          <h4 style={{ fontFamily: serif, fontSize: '11px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>Explore</h4>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 1.2rem' }}>
+            <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+              {[
+                { text: 'Community', to: '/community' },
+                { text: 'Practice Dojo', to: '/dojo' },
+                { text: 'Ventures', to: '/iv' },
+              ].map(l => (
+                <li key={l.text} style={{ fontSize: '13px', marginBottom: '0.5rem', whiteSpace: 'nowrap' }}>
+                  <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
+                </li>
+              ))}
+            </ul>
+            <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+              {[
+                { text: 'Friends', to: '/friends' },
+                { text: 'Resources', to: '/resources' },
+                { text: 'News', to: '/news' },
+              ].map(l => (
+                <li key={l.text} style={{ fontSize: '13px', marginBottom: '0.5rem', whiteSpace: 'nowrap' }}>
+                  <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
