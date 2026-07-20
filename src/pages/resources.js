@@ -340,8 +340,6 @@ const NamedDefault = () => {
             <a href="#relational-practices" style={linkStyle}>Relational Practices List</a>
             <span style={{ color: MUTED }}> · </span>
             <a href="#faq" style={linkStyle}>FAQ</a>
-            <span style={{ color: MUTED }}> · </span>
-            <Link to="/friends" style={linkStyle}>Friends of Intentional Society</Link>
           </p>
 
           <h2 id="relational-practices" style={{ ...sectionHeading, scrollMarginTop: '90px' }}>Relational Practices List</h2>
