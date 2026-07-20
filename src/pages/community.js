@@ -121,9 +121,8 @@ const NamedDefault = () => (
 
         <h2 style={sectionHeading}>How to join</h2>
         <p style={{ ...bodyP, marginBottom: '2rem' }}>
-          Community membership signup has become a component inside
-          our <Link to="/web" style={linkStyle}>relational web</Link> signup form — joining at the
-          (larger) network level grants access to Community Hub Calls as well as other programs.
+          Community membership signup happens through the relational web form below — joining at
+          the (larger) network level grants access to Community Hub Calls as well as other programs.
         </p>
 
         <Link to="/get-involved" style={{
