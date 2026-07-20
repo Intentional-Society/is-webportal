@@ -185,8 +185,8 @@ export const Footer2026 = () => (
       maxWidth: '720px', margin: '2rem auto 0', paddingTop: '1.5rem',
       borderTop: '1px solid rgba(42,42,36,0.06)', fontSize: '12px', color: MUTED, opacity: 0.6,
     }}>
-      © 2020–2026 Intentional Society. All rights reserved. &nbsp;·&nbsp; Photography by
-      community members Bill (nature &amp; macro) and Karla (ice).
+      © 2020–2026 Intentional Society. All rights reserved. &nbsp;·&nbsp; Nature and macro
+      photography by community member Bill; ice photography by community member Karla.
     </div>
   </footer>
 );

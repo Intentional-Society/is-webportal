@@ -26,8 +26,8 @@ const NamedDefault = () => {
       </div>
     </div>
     <div className={styles.bottom}>
-      &copy; 2020&ndash;{year} Intentional Society &nbsp;·&nbsp; Photography by
-      community members Bill (nature &amp; macro) and Karla (ice).
+      &copy; 2020&ndash;{year} Intentional Society &nbsp;·&nbsp; Nature and macro photography by
+      community member Bill; ice photography by community member Karla.
     </div>
   </footer>
   )
