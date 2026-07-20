@@ -145,12 +145,12 @@ export const Nav2026 = ({ active }) => {
 
 export const Footer2026 = () => (
   <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans }}>
-    <div style={{ maxWidth: '720px', margin: '0 auto', display: 'grid', gridTemplateColumns: '3fr 1fr 1fr', gap: '2.5rem' }}>
+    <div style={{ maxWidth: '720px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr 1.6fr', gap: '2.5rem' }}>
       <div>
         <img src="/design2026/logo.png" alt="" style={{ width: '52px', height: '52px', objectFit: 'contain', display: 'block', marginBottom: '0.9rem' }} />
         <h3 style={{ fontFamily: serif, fontWeight: 300, fontSize: '1.1rem', color: INK, margin: '0 0 0.8rem' }}>Intentional Society</h3>
         <p style={{ fontSize: '13px', color: MUTED, lineHeight: 1.7, margin: 0 }}>
-          A community for inner development, wise action, and human connection
+          Inner Development · Wise Action · Human Connection
         </p>
       </div>
       <div>
@@ -170,7 +170,7 @@ export const Footer2026 = () => (
               { text: 'Practice Dojo', to: '/dojo' },
               { text: 'Ventures', to: '/iv' },
             ].map(l => (
-              <li key={l.text} style={{ fontSize: '13px', marginBottom: '0.5rem' }}>
+              <li key={l.text} style={{ fontSize: '13px', marginBottom: '0.5rem', whiteSpace: 'nowrap' }}>
                 <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
               </li>
             ))}
@@ -178,10 +178,10 @@ export const Footer2026 = () => (
           <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
             {[
               { text: 'Friends', to: '/friends' },
-              { text: 'FAQ', to: '/questions' },
+              { text: 'Resources', to: '/resources' },
               { text: 'News', to: '/news' },
             ].map(l => (
-              <li key={l.text} style={{ fontSize: '13px', marginBottom: '0.5rem' }}>
+              <li key={l.text} style={{ fontSize: '13px', marginBottom: '0.5rem', whiteSpace: 'nowrap' }}>
                 <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
               </li>
             ))}
