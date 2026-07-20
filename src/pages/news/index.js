@@ -39,6 +39,13 @@ const posts = [
   },
 ];
 
+const mediaAppearances = [
+  { title: 'How to Handle Anything', href: 'https://www.youtube.com/watch?v=gVx8mAzcMDA', with: 'Life Itself', withHref: 'https://lifeitself.org/blog/how-to-handle-anything-in-life-and-community', date: '2023-11-23' },
+  { title: 'Intentional Society @ The Stoa', href: 'https://www.youtube.com/watch?v=xaieyI-4TPo', date: '2022-02-28' },
+  { title: 'Reach Truth (video) podcast w/ Tasshin Fogleman', href: 'https://www.youtube.com/watch?v=XWYgyjX3lZE', date: '2021-12-18' },
+  { title: 'Microsolidarity YouTube channel w/ Richard Bartlett', href: 'https://www.youtube.com/watch?v=O5boJc88M9g', date: '2021-11-21' },
+];
+
 const NamedDefault = () => (
   <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
 
@@ -86,6 +93,20 @@ const NamedDefault = () => (
             borderBottom: '1px solid rgba(26,66,50,0.3)', whiteSpace: 'nowrap',
           }}>Weekly updates archive →</a>
         </div>
+
+        <h2 style={{
+          fontFamily: serif, fontWeight: 300, lineHeight: 1.25, fontSize: 'clamp(1.5rem,2.6vw,2rem)',
+          color: '#5C4A3A', margin: '0 0 1.2rem',
+        }}>Media Appearances</h2>
+        <ul style={{ listStyle: 'none', margin: '0 0 3.5rem', padding: 0 }}>
+          {mediaAppearances.map(m => (
+            <li key={m.href} style={{ fontSize: '15px', color: BODY_TEXT, marginBottom: '0.6rem', lineHeight: 1.6 }}>
+              <a href={m.href} target="_blank" rel="noopener noreferrer" style={{ color: ACCENT_DARK }}>{m.title}</a>
+              {m.with && <> w/ <a href={m.withHref} target="_blank" rel="noopener noreferrer" style={{ color: ACCENT_DARK }}>{m.with}</a></>}
+              <span style={{ color: '#6B6860', opacity: 0.7 }}> — {m.date}</span>
+            </li>
+          ))}
+        </ul>
 
         {/* Post list */}
         <div style={{ marginBottom: '3.5rem' }}>

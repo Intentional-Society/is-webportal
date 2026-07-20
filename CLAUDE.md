@@ -90,24 +90,36 @@ Deploys automatically to Netlify on push to master. Configuration in `netlify.to
 ## Current Status Notes
 
 ### 2026 redesign pages — shared chrome (`src/components/design2026/chrome.js`)
-The redesigned pages (index, about, community, dojo, iv, questions/FAQ,
-friends, news, get-involved) are self-contained (do NOT use `<Layout>`/MUI
-theme) and share one module for design tokens (serif/sans/color constants),
-`Grain2026`, `Nav2026` (pass `active="/path"`; collapses to a hamburger below
-820px), `Footer2026`, and `Head2026` (fonts + title/description). Edit
-chrome.js to change nav links or the footer everywhere at once. The logo is a
-transparent `static/design2026/logo.png` (no mix-blend-mode hacks). Remaining
-old-theme pages (web, practices, resources, contact, history, orientation,
-programs, thecall, series pages, …) still use the MUI `<Layout>`, whose
-AppBar/Layout was restyled toward the 2026 look (same logo + grain).
-Header photos are one-per-page: hero-path (home), crystals-header (about),
-macro crystal (community), dojo garden (dojo), willow (iv), moss (friends),
-rockfield (questions), driftwood (news). get-involved keeps the working
-Buttondown form and the `#newsletter` / `#connection-calls` anchors; its
-Connection Call button URL is a `CONNECTION_CALL_URL` constant at the top of
-get-involved.js — the only place to update when a new call is scheduled, no
-date shown on the page since it always went stale faster than anyone updated
-it.
+The redesigned pages (index, about, community, dojo, iv, resources, friends,
+news, get-involved) are self-contained (do NOT use `<Layout>`/MUI theme) and
+share one module for design tokens (serif/sans/color constants), `Grain2026`,
+`Nav2026` (pass `active="/path"`; collapses to a hamburger below 820px, "More"
+opens a dropdown for Resources/Friends/News), `Footer2026`, and `Head2026`
+(fonts + title/description). Edit chrome.js to change nav links or the footer
+everywhere at once. The logo is a transparent `static/design2026/logo.png`
+(no mix-blend-mode hacks). Remaining old-theme pages (web, practices,
+contact, history, orientation, programs, series pages, …) still use the MUI
+`<Layout>`, whose AppBar/Layout was restyled toward the 2026 look (same logo
++ grain). Header photos are one-per-page: hero-path (home), crystals-header
+(about), macro crystal (community), dojo garden (dojo), willow (iv), moss
+(friends), rockfield (resources), driftwood (news). get-involved keeps the
+working Buttondown form and the `#newsletter` / `#connection-calls` anchors;
+its Connection Call button URL is a `CONNECTION_CALL_URL` constant at the top
+of get-involved.js — the only place to update when a new call is scheduled,
+no date shown on the page since it always went stale faster than anyone
+updated it.
+
+### `/resources` page — 2026 redesign, merged with the old FAQ page
+`src/pages/questions.js` (FAQ) was retired and folded into `resources.js`
+(`/questions` now redirects to `/resources#faq` — see netlify.toml); the old
+Media Appearances list moved to `/news` instead. Both the practices list and
+the FAQ render as collapsed `<details>` (class `rsc-item`, styled via a
+scoped `<style>` block in the page) for compactness — a "Jump to" list at
+the top links to `#relational-practices` and `#faq`, and each practice kept
+its original anchor id so old newsletter links (e.g.
+`resources#empathy-circling`) still resolve; browsers auto-open a closed
+`<details>` when navigating to a fragment inside it, so no extra JS is
+needed for that. A small effect redirects the stale `#media` hash to `/news`.
 
 ### Home page (`src/pages/index.js`) — 2026 redesign (branch `2026-design`)
 Self-contained page ported from a Claude Design mockup, using the shared

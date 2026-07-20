@@ -1,182 +1,396 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import Typography from '@mui/material/Typography';
-import Layout from '../components/layout';
-import CenteredColumn from '../components/centered-column';
-import * as GlobalCSS from '../styles/global.module.css';
+import { Link, navigate } from 'gatsby';
+import {
+  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
+  Grain2026, Nav2026, Footer2026, Head2026,
+} from '../components/design2026/chrome';
 
-const NamedDefault = ({ data }) => (
-  <Layout>
-    <div style={{ height: '30px' }}></div>
-    <CenteredColumn>
-      <Typography variant="h2">Resources</Typography>
-      <p>Jump to:</p>
-      <ul>
-        <li><Link to="#relational-practices">Relational Practices List</Link></li>
-        {/* <ul>
-          <li><Link to="#empathy-circling">Empathy Circling</Link></li>
-          <li><Link to="#authentic-relating">Authentic Relating</Link></li>
-        </ul> */}
-        <li><Link to="#media">Media Appearances</Link></li>
-        <li><Link to="/friends">Friends of Intentional Society</Link></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="relational-practices"></a>
-      <Typography variant="h3">Relational Practices List</Typography>
-      <p>We have tried and enjoyed the following practices:</p>
-      <a className={GlobalCSS.anchorOffset} id="empathy-circling"></a>
-      <Typography variant="h4">Empathy Circling</Typography>
-      <ul>
-        <li>This practice is, very simply, listening to someone and reflecting back their thoughts. 
-          The sweet spot is a balance of maintaining accuracy and fidelity to their original expression 
-          while also using one's own representations (rather than parroting back word-for-word).
-        </li>
-        <li><a href="http://www.empathycircle.com/">Website
-          </a> <a href="http://bit.ly/EmpathyCirclePDFv2">How-To</a></li>
-        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-reflecting-and-empathy/">
-          Our experience report</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="authentic-relating"></a>
-      <Typography variant="h4">Authentic Relating</Typography>
-      <ul>
-        <li>This is a large collection of games/practices, best represented by the manual assembled 
-          by Sara Ness. We've used the Noticing game, Hotseat, and others 
-          as building blocks of culture and communication.</li>
-        <li><a href="https://www.authrev.org/what-is-authentic-relating">Authentic Revolution's</a> <a 
-          href="https://authrev.gumroad.com/l/AR-Games">Games Manual</a></li>
-        <li><a href="https://authenticrelating.co/">ART International's</a> <a 
-          href="https://authenticrelating.co/five-practices/">Five Practices of Authentic Relating</a></li>
-        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-i-notice-you-seem/">
-          Our experience report</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="circling"></a>
-      <Typography variant="h4">Circling</Typography>
-      <ul>
-        <li>Circling is a present-moment practice of noticing our sensations in relationship with one another
-          and being curious about another's experience. It has grown rather popular and 
-          has <a href="https://integralcentered.com/3-schools-circling/">three major schools</a> of practice, 
-          plus stylistic variations that fix (birthday) or flow (organic) the focus of attention.
-        </li>
-        <li><a href="https://tasshin.com/blog/what-is-circling/">What is Circling?</a></li>
-        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-circling-experience-report/">
-          Our experience report</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="collective-presencing"></a>
-      <Typography variant="h4">Collective Presencing</Typography>
-      <ul>
-        <li>A circle practice of group sense-making, developed by Ria Baeck. Exploring the space of 
-          a preselected open question, participants bring their observations “to the center” of the 
-          circle, where deep listening weaves reflections together in a super-mind-ish phenomenon.
+// 2026 redesign of the Resources page — merges the old standalone FAQ page
+// (src/pages/questions.js, now retired — see netlify.toml redirect) into this
+// one, and drops the Media Appearances list (moved to /news). Both the
+// practices list and the FAQ render as collapsed <details> for compactness;
+// each practice keeps its original anchor id so old newsletter links
+// (resources#empathy-circling etc.) keep working — browsers auto-open a
+// closed <details> when navigating to a fragment inside it.
 
-        </li>
-        <li><a href="https://www.collectivepresencing.org/">Website (with full book)</a></li>
-        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-unfolding-the-collective/">
-          Our experience report</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="inquiry-spiraling"></a>
-      <Typography variant="h4">Inquiry Spiraling</Typography>
-      <ul>
-        <li>Closely related to Collective Presencing, this practice circles around exploring the 
-          question space itself, weaving together a simultaneous mix of diverging and converging questions 
-          while staying in curiosity. Designed as question-finding, it can be paired with another 
-          question-answering/exploring practice.
-        </li>
-        <li><a href="https://www.intentionalsociety.org/files/Inquiry_Spiraling.pdf">Instructions</a></li>
-        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-staying-in-curiosity-with-inquiry-spiraling/">
-          Our experience report</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="case-work"></a>
-      <Typography variant="h4">Case Work</Typography>
-      <ul>
-        <li>By case work, we mean the examination of developmental challenges that are working us. A case giver 
-          shares the story of their situation, and is supported by a small group in taking perspective on that 
-          thing and their relationship to it. The word “case” comes from Presencing Institute‘s (a.k.a. Theory U) 
-          Case Clinic practice, and we have developed our own combination practice called Edge Case.
-        </li>
-        <li><a href="https://www.intentionalsociety.org/practices/EdgeCasePractice.pdf">Edge Case Instructions</a></li>
-        <li><a href="https://irp.cdn-website.com/53007095/files/uploaded/pi_tool_caseclinic.pdf">Case Clinic Instructions</a></li>
-        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/">
-          Our experience report</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="peer-coaching"></a>
-      <Typography variant="h4">Peer Coaching</Typography>
-      <ul>
-        <li>Taken as a general concept, this practice is “pure” coaching, defined by the stance that 
-          the coachee already holds in themselves everything that's necessary to resolve their own challenge(s). 
-          The act of coaching, rather than advising or consulting, is to ask questions that merely help 
-          direct the coachee's awareness to notice possible blind spots or unrealized connections - sparking 
-          the click of insight or integration that's waiting there for them. This can be done with a 
-          question bank of “clean” questions, or we've used a fixed script of a question sequence.
-        </li>
-        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-looking-towards-what-we-avoid/">
-          Our experience report</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="t-group"></a>
-      <Typography variant="h4">T-group</Typography>
-      <ul>
-        <li>Adopted via our friends 
-          at <a href="https://www.startercultures.us/creative-offerings/communication-dojo">Communication Dojo</a>, 
-          this is the granddaddy (dating back to the 1950s) practice of expressing one's present moment 
-          experience in a group setting.</li>
-        <li><a href="https://en.wikipedia.org/wiki/T-groups">
-          reference</a> <a href="https://infed.org/kurt-lewin-groups-experiential-learning-and-action-research/#tgroups">
-          links</a> (TODO: can instructions doc be publicly posted?)</li>
-        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-t-group-practice/">
-          Our experience report</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="glass-bead-game"></a>
-      <Typography variant="h4">Glass Bead Game</Typography>
-      <ul>
-        <li>Inspired by <a href="https://en.wikipedia.org/wiki/The_Glass_Bead_Game">a novel</a>, this is a 
-        (usually) two-player game in which players take turns riffing off a concept and each other in a 
-        kind of improv philosophy jam.</li>
-        <li>(glassbeadgames.com currently offline as of Feb 2022, since July 2021)</li>
-        <li><a href="https://buttondown.email/intentionalsociety/archive/intentional-society-improv-philosophy/">
-          Our experience report</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="agile-retrospectives"></a>
-      <Typography variant="h4">Agile Retrospectives</Typography>
-      <ul>
-        <li>Widespread in agile software development and elsewhere, literally “learning from looking 
-          back” as a group. This can take many forms, from simple rubrics like “start stop continue” 
-          or "rose thorn bud” to timeline reconstruction to structural tension analysis. It's a 
-          fundamental learning move to "go meta" and many books and guides have been written 
-          exploring the domain.
-        </li>
-        <li><a href="https://pragprog.com/titles/dlret/agile-retrospectives/">Book by Esther Derby and Diana Larsen</a></li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="ifs"></a>
-      <Typography variant="h4">Internal Family Systems (IFS)</Typography>
-      <ul>
-        <li>
-          Internal Family Systems (commonly abbreviated as IFS) is a (self-)theraputic model that 
-          embraces looking at the "parts" of ourselves, listening to them, welcoming them, and working
-          with them. Opinions can vary on how neurologically accurate the correspondence is, but even as
-          imaginal-oracular exercises, attempting "parts work" can bring us interesting perspectives on 
-          what motivations are driving our feelings and behaviors.
-        </li>
-        <li><a href="https://ifs-institute.com/">IFS Institute</a></li>
-        <li>Our <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-parts-introduction/">
-          intro</a> and <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-why-ifs-works/">
-          analysis</a>
-        </li>
-      </ul>
-      <a className={GlobalCSS.anchorOffset} id="media"></a>
-      <Typography variant="h3">Media Appearances</Typography>
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=gVx8mAzcMDA">How to Handle 
-        Anything</a> w/ <a href="https://lifeitself.org/blog/how-to-handle-anything-in-life-and-community">Life 
-        Itself</a> 2023-11-23</li>
-        <li><a href="https://www.youtube.com/watch?v=xaieyI-4TPo">Intentional Society @ The
-          Stoa</a> 2022-02-28</li>
-        <li><a href="https://www.youtube.com/watch?v=XWYgyjX3lZE">Reach 
-          Truth (video) podcast w/ Tasshin Fogleman</a> 2021-12-18</li>
-        <li><a href="https://www.youtube.com/watch?v=O5boJc88M9g">Microsolidarity 
-          Youtube channel w/ Richard Bartlett</a> 2021-11-21</li>
-      </ul>
-      <div style={{textAlign: 'right', marginBottom: '-25px'}}>
-        Next page: <Link to="/about">About</Link>
-      </div>
-    </CenteredColumn>
-  </Layout>
-);
+const linkStyle = { color: ACCENT_DARK };
+
+const sectionHeading = {
+  fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
+  fontSize: 'clamp(1.5rem,2.6vw,2rem)', color: '#5C4A3A', margin: '0 0 1.4rem',
+};
+
+const bodyP = { fontSize: '16px', color: BODY_TEXT, margin: '0 0 0.6rem', lineHeight: 1.7 };
+const linksLine = { fontSize: '14px', color: MUTED, margin: 0, lineHeight: 1.7 };
+
+const divider = <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '3rem auto', width: '120px' }} />;
+
+const practiceSummary = { fontFamily: serif, fontWeight: 500, fontSize: '1.05rem', color: INK };
+const faqSummary = { fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.05rem', color: '#5C4A3A' };
+
+const practices = [
+  {
+    id: 'empathy-circling',
+    title: 'Empathy Circling',
+    body: <>
+      <p style={bodyP}>This practice is, very simply, listening to someone and reflecting back their
+        thoughts. The sweet spot is a balance of maintaining accuracy and fidelity to their original
+        expression while also using one's own representations (rather than parroting back word-for-word).</p>
+      <p style={linksLine}>
+        <a href="http://www.empathycircle.com/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Website</a> · <a href="http://bit.ly/EmpathyCirclePDFv2" target="_blank" rel="noopener noreferrer" style={linkStyle}>How-To</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-reflecting-and-empathy/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+      </p>
+    </>,
+  },
+  {
+    id: 'authentic-relating',
+    title: 'Authentic Relating',
+    body: <>
+      <p style={bodyP}>This is a large collection of games/practices, best represented by the manual
+        assembled by Sara Ness. We've used the Noticing game, Hotseat, and others as building blocks
+        of culture and communication.</p>
+      <p style={linksLine}>
+        <a href="https://www.authrev.org/what-is-authentic-relating" target="_blank" rel="noopener noreferrer" style={linkStyle}>Authentic Revolution's</a> <a href="https://authrev.gumroad.com/l/AR-Games" target="_blank" rel="noopener noreferrer" style={linkStyle}>Games Manual</a> · <a href="https://authenticrelating.co/" target="_blank" rel="noopener noreferrer" style={linkStyle}>ART International's</a> <a href="https://authenticrelating.co/five-practices/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Five Practices of Authentic Relating</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-i-notice-you-seem/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+      </p>
+    </>,
+  },
+  {
+    id: 'circling',
+    title: 'Circling',
+    body: <>
+      <p style={bodyP}>Circling is a present-moment practice of noticing our sensations in relationship
+        with one another and being curious about another's experience. It has grown rather popular and
+        has <a href="https://integralcentered.com/3-schools-circling/" target="_blank" rel="noopener noreferrer" style={linkStyle}>three major schools</a> of
+        practice, plus stylistic variations that fix (birthday) or flow (organic) the focus of attention.</p>
+      <p style={linksLine}>
+        <a href="https://tasshin.com/blog/what-is-circling/" target="_blank" rel="noopener noreferrer" style={linkStyle}>What is Circling?</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-circling-experience-report/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+      </p>
+    </>,
+  },
+  {
+    id: 'collective-presencing',
+    title: 'Collective Presencing',
+    body: <>
+      <p style={bodyP}>A circle practice of group sense-making, developed by Ria Baeck. Exploring the
+        space of a preselected open question, participants bring their observations "to the center" of
+        the circle, where deep listening weaves reflections together in a super-mind-ish phenomenon.</p>
+      <p style={linksLine}>
+        <a href="https://www.collectivepresencing.org/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Website (with full book)</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-unfolding-the-collective/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+      </p>
+    </>,
+  },
+  {
+    id: 'inquiry-spiraling',
+    title: 'Inquiry Spiraling',
+    body: <>
+      <p style={bodyP}>Closely related to Collective Presencing, this practice circles around exploring
+        the question space itself, weaving together a simultaneous mix of diverging and converging
+        questions while staying in curiosity. Designed as question-finding, it can be paired with
+        another question-answering/exploring practice.</p>
+      <p style={linksLine}>
+        <a href="https://www.intentionalsociety.org/files/Inquiry_Spiraling.pdf" target="_blank" rel="noopener noreferrer" style={linkStyle}>Instructions</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-staying-in-curiosity-with-inquiry-spiraling/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+      </p>
+    </>,
+  },
+  {
+    id: 'case-work',
+    title: 'Case Work',
+    body: <>
+      <p style={bodyP}>By case work, we mean the examination of developmental challenges that are
+        working us. A case giver shares the story of their situation, and is supported by a small group
+        in taking perspective on that thing and their relationship to it. The word "case" comes from
+        Presencing Institute's (a.k.a. Theory U) Case Clinic practice, and we have developed our own
+        combination practice called Edge Case.</p>
+      <p style={linksLine}>
+        <a href="https://www.intentionalsociety.org/practices/EdgeCasePractice.pdf" target="_blank" rel="noopener noreferrer" style={linkStyle}>Edge Case Instructions</a> · <a href="https://irp.cdn-website.com/53007095/files/uploaded/pi_tool_caseclinic.pdf" target="_blank" rel="noopener noreferrer" style={linkStyle}>Case Clinic Instructions</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+      </p>
+    </>,
+  },
+  {
+    id: 'peer-coaching',
+    title: 'Peer Coaching',
+    body: <>
+      <p style={bodyP}>Taken as a general concept, this practice is "pure" coaching, defined by the
+        stance that the coachee already holds in themselves everything that's necessary to resolve
+        their own challenge(s). The act of coaching, rather than advising or consulting, is to ask
+        questions that merely help direct the coachee's awareness to notice possible blind spots or
+        unrealized connections — sparking the click of insight or integration that's waiting there for
+        them. This can be done with a question bank of "clean" questions, or we've used a fixed script
+        of a question sequence.</p>
+      <p style={linksLine}>
+        <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-looking-towards-what-we-avoid/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+      </p>
+    </>,
+  },
+  {
+    id: 't-group',
+    title: 'T-group',
+    body: <>
+      <p style={bodyP}>Adopted via our friends at <a href="https://www.startercultures.us/creative-offerings/communication-dojo" target="_blank" rel="noopener noreferrer" style={linkStyle}>Communication
+        Dojo</a>, this is the granddaddy (dating back to the 1950s) practice of expressing one's
+        present moment experience in a group setting.</p>
+      <p style={linksLine}>
+        <a href="https://en.wikipedia.org/wiki/T-groups" target="_blank" rel="noopener noreferrer" style={linkStyle}>Reference</a> · <a href="https://infed.org/kurt-lewin-groups-experiential-learning-and-action-research/#tgroups" target="_blank" rel="noopener noreferrer" style={linkStyle}>Links</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-t-group-practice/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+      </p>
+    </>,
+  },
+  {
+    id: 'glass-bead-game',
+    title: 'Glass Bead Game',
+    body: <>
+      <p style={bodyP}>Inspired by <a href="https://en.wikipedia.org/wiki/The_Glass_Bead_Game" target="_blank" rel="noopener noreferrer" style={linkStyle}>a
+        novel</a>, this is a (usually) two-player game in which players take turns riffing off a
+        concept and each other in a kind of improv philosophy jam.</p>
+      <p style={linksLine}>
+        <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-improv-philosophy/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+      </p>
+    </>,
+  },
+  {
+    id: 'agile-retrospectives',
+    title: 'Agile Retrospectives',
+    body: <>
+      <p style={bodyP}>Widespread in agile software development and elsewhere, literally "learning
+        from looking back" as a group. This can take many forms, from simple rubrics like "start stop
+        continue" or "rose thorn bud" to timeline reconstruction to structural tension analysis. It's a
+        fundamental learning move to "go meta" and many books and guides have been written exploring
+        the domain.</p>
+      <p style={linksLine}>
+        <a href="https://pragprog.com/titles/dlret/agile-retrospectives/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Book by Esther Derby and Diana Larsen</a>
+      </p>
+    </>,
+  },
+  {
+    id: 'ifs',
+    title: 'Internal Family Systems (IFS)',
+    body: <>
+      <p style={bodyP}>Internal Family Systems (commonly abbreviated as IFS) is a (self-)therapeutic
+        model that embraces looking at the "parts" of ourselves, listening to them, welcoming them, and
+        working with them. Opinions can vary on how neurologically accurate the correspondence is, but
+        even as imaginal-oracular exercises, attempting "parts work" can bring us interesting
+        perspectives on what motivations are driving our feelings and behaviors.</p>
+      <p style={linksLine}>
+        <a href="https://ifs-institute.com/" target="_blank" rel="noopener noreferrer" style={linkStyle}>IFS Institute</a> · Our <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-parts-introduction/" target="_blank" rel="noopener noreferrer" style={linkStyle}>intro</a> and <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-why-ifs-works/" target="_blank" rel="noopener noreferrer" style={linkStyle}>analysis</a>
+      </p>
+    </>,
+  },
+];
+
+const faqGroups = [
+  {
+    label: 'Curious newcomer',
+    qas: [
+      {
+        q: 'What would you say that you actually do here?',
+        a: `Mostly we get on video calls with each other, face-to-face, and spend very little time writing at each other. We make friends, support each other, and weave bits of our hearts and lives together. A lot of it is "inner work," in contrast to a conventional culture so focused on external accomplishments.`,
+      },
+      {
+        q: "I'm unsure, nervous, or introverted — is this relational stuff a fit for me?",
+        a: <>Only you really know. Try one <Link to="/get-involved#connection-calls" style={linkStyle}>Connection Call</Link> and see how it feels. Some of us are highly adept in relational attunement, others come to improve their interpersonal skills — really we're all relating all the time already, to ourselves, others, and the world around us.</>,
+      },
+      {
+        q: "Will I offend anyone if I join, don't like it, and then leave?",
+        a: `On the contrary, we'll count that as a success — you learned something and navigated tension. We celebrate arrivals, departures, and boundary-setting with equanimity.`,
+      },
+    ],
+  },
+  {
+    label: 'Practical logistics',
+    qas: [
+      {
+        q: 'Is there one best way to get started?',
+        a: <>A <Link to="/get-involved#connection-calls" style={linkStyle}>Connection Call</Link>. From there we can point you to anything we know about inside and outside the IS web.</>,
+      },
+      {
+        q: "My life is pretty busy already — what if I can't keep up?",
+        a: `Only a problem if it feels like one to you. Be clear with yourself and others about your capacity and energy as it changes; we support people doing as they feel called.`,
+      },
+      {
+        q: 'Do I need any tech savvy to fit in here?',
+        a: `Managing your mute button is the most crucial tech skill of the 2020s. Besides Zoom and email, we require very little.`,
+      },
+      {
+        q: 'What time zones does IS cater to?',
+        a: 'Traditional "IS Time" is 4pm Eastern, reachable by early-bird Aussies & Kiwis and night-owl Africans and Europeans. Small-group activities can happen at any convenient time.',
+      },
+      {
+        q: 'Is IS virtual only? Any physical meetups?',
+        a: 'Yes, a distributed virtual village — our biggest meetup to date was 8 people. We know people in a remarkable number of cities and are interested in facilitating local connections as they arise.',
+      },
+      {
+        q: 'How many people are in IS?',
+        a: 'Total active membership is under 100; synchronous spaces fit a few dozen each, and most conversation happens in crew-sized breakouts of 3–6.',
+      },
+      {
+        q: 'Does membership cost any money?',
+        a: `No, membership is free. We never want a financial barrier in front of participation in our relational web. Our norm is mostly gift culture.`,
+      },
+      {
+        q: 'Who pays the bills, then?',
+        a: 'IS has a sustainable funding commitment through 2035 from a small family foundation, which we use to operate lean internal infrastructure and support other field-builders.',
+      },
+      {
+        q: 'Is this therapy, or a substitute for it?',
+        a: `No. No one in IS is your therapist. If you're experiencing something that needs professional care, we encourage you to seek it — every individual holds ultimate responsibility for their own safety and needs.`,
+      },
+      {
+        q: 'Does IS promote any religion or spirituality?',
+        a: 'No. IS maintains neutrality on whether "woo" exists in-the-world or in-the-observer, and holds space for both mystic and materialist lenses.',
+      },
+    ],
+  },
+  {
+    label: 'Governance & structure',
+    qas: [
+      {
+        q: 'Who founded this?',
+        a: <>James — who wrote <Link to="/news#the-call" style={linkStyle}>"the call"</Link> that started Intentional Society after a developmental crisis following a conventionally successful early career.</>,
+      },
+      {
+        q: 'Who holds the power? What happens in conflict?',
+        a: `We strive for natural, contextual, fluid power dynamics rather than rigid hierarchy or "everyone has equal power" egalitarianism. James, as founder, still holds significant source-keeper influence and the legal "keys" (domains, assets, LLC), with a stated aim to keep distributing leadership.`,
+      },
+      {
+        q: "Can I trust power won't be hoarded or abused down the road?",
+        a: `No system replaces the need for virtue in humans. We draw on Sociocratic decision-making, Teal/Deliberately Developmental culture, Metasystematic mindset, and Agile feedback loops to help us evolve responsibly.`,
+      },
+      {
+        q: 'What is the legal structure behind IS?',
+        a: 'An unincorporated association for about five years; an LLC was created in late 2025 to administer contractor agreements as the Workteam formed.',
+      },
+      {
+        q: 'Is this yet another playground for privileged people?',
+        a: `We have a fairly broad range of socioeconomic experience among members, though having the time and slack to dedicate to this kind of work isn't available to everyone.`,
+      },
+    ],
+  },
+  {
+    label: 'Vision & philosophy',
+    qas: [
+      {
+        q: 'What makes IS unique?',
+        a: `Integrating adult development with relational practices plus cultural evolution is a useful tuning fork — but also, "we're just these particular people."`,
+      },
+      {
+        q: "Are y'all utopians who think you'll save the world?",
+        a: `"Saving the world" is explicitly a non-goal. We long for a wiser, weller world and want to play our part — while staying connected to our bodies, families, and daily lives rather than chasing a savior complex.`,
+      },
+      {
+        q: 'What does success look like?',
+        a: 'Personal transformation rippling into high-trust communities, a network of cooperating virtual communities, member-owned co-ops, and rising developmental norms globally — but everything has to be worth it for its own sake along the way.',
+      },
+      {
+        q: 'What does failure look like?',
+        a: 'Turning away from connection out of discomfort, collapsing into despair, fooling ourselves collectively, or staying small out of fear — each a failure to stay in contact with reality and wield our power wisely.',
+      },
+    ],
+  },
+];
+
+const NamedDefault = () => {
+  // Media Appearances moved to /news — send anyone with the old #media
+  // bookmark there instead of leaving them stranded at the top of this page.
+  React.useEffect(() => {
+    if (window.location.hash === '#media') navigate('/news');
+  }, []);
+
+  return (
+    <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
+
+      <Grain2026 />
+      <Nav2026 active="/resources" />
+
+      <style>{`
+        .rsc-item summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; gap: 0.6rem; }
+        .rsc-item summary::-webkit-details-marker { display: none; }
+        .rsc-item summary::before { content: '›'; display: inline-block; color: #2E6B4F; font-size: 1.1em; line-height: 1.4; transition: transform 0.15s; flex-shrink: 0; }
+        .rsc-item[open] summary::before { transform: rotate(90deg); }
+        .rsc-item { border-bottom: 1px solid rgba(42,42,36,0.08); padding: 0.9rem 0; scroll-margin-top: 90px; }
+      `}</style>
+
+      {/* ======== Header band ======== */}
+      <header style={{
+        position: 'relative', marginTop: '77px', minHeight: '300px', display: 'flex',
+        alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
+        background: 'url(/design2026/rockfield.jpg) center 65%/cover, #1c2730',
+      }}>
+        <div style={{
+          position: 'absolute', inset: 0, pointerEvents: 'none',
+          background: 'linear-gradient(180deg, rgba(14,18,22,0.62) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
+        }} />
+        <div style={{ position: 'relative', zIndex: 2, maxWidth: '640px', padding: '4rem 2rem' }}>
+          <div style={{
+            fontFamily: sans, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
+            fontWeight: 500, color: '#E8DFD0', opacity: 0.9, marginBottom: '1.2rem',
+          }}>Resources</div>
+          <h1 style={{
+            fontFamily: serif, fontWeight: 400, lineHeight: 1.25, fontSize: 'clamp(2rem,4vw,3rem)',
+            color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)', margin: 0,
+          }}>
+            Practices we use, and answers to common questions
+          </h1>
+        </div>
+      </header>
+
+      {/* ======== Article body ======== */}
+      <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
+        <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+
+          <p style={{ fontSize: '15px', color: MUTED, margin: '0 0 1.5rem' }}>Jump to:</p>
+          <p style={{ fontSize: '15px', margin: '0 0 2.5rem' }}>
+            <a href="#relational-practices" style={linkStyle}>Relational Practices List</a>
+            <span style={{ color: MUTED }}> · </span>
+            <a href="#faq" style={linkStyle}>FAQ</a>
+            <span style={{ color: MUTED }}> · </span>
+            <Link to="/friends" style={linkStyle}>Friends of Intentional Society</Link>
+          </p>
+
+          <h2 id="relational-practices" style={{ ...sectionHeading, scrollMarginTop: '90px' }}>Relational Practices List</h2>
+          <p style={{ ...bodyP, marginBottom: '0.5rem' }}>We have tried and enjoyed the following practices:</p>
+          {practices.map(p => (
+            <details key={p.id} id={p.id} className="rsc-item">
+              <summary style={practiceSummary}>{p.title}</summary>
+              <div style={{ marginTop: '0.7rem', paddingLeft: '1.5rem' }}>{p.body}</div>
+            </details>
+          ))}
+
+          {divider}
+
+          <h2 id="faq" style={{ ...sectionHeading, scrollMarginTop: '90px' }}>FAQ</h2>
+          {faqGroups.map(group => (
+            <div key={group.label} style={{ marginBottom: '1.6rem' }}>
+              <div style={{
+                fontFamily: sans, fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase',
+                fontWeight: 500, color: '#7A9E8A', margin: '0 0 0.4rem',
+              }}>{group.label}</div>
+              {group.qas.map(qa => (
+                <details key={qa.q} className="rsc-item">
+                  <summary style={faqSummary}>{qa.q}</summary>
+                  <p style={{ fontSize: '15px', color: BODY_TEXT, margin: '0.7rem 0 0 1.5rem', lineHeight: 1.7 }}>{qa.a}</p>
+                </details>
+              ))}
+            </div>
+          ))}
+
+          <div style={{ textAlign: 'right', marginTop: '2rem' }}>
+            <Link to="/about" style={{
+              fontFamily: sans, fontSize: '13px', color: ACCENT_DARK, textDecoration: 'none',
+              borderBottom: '1px solid rgba(26,66,50,0.3)',
+            }}>Next page: About →</Link>
+          </div>
+
+        </article>
+      </main>
+
+      <Footer2026 />
+    </div>
+  );
+};
+
 export default NamedDefault;
+
+export const Head = () => (
+  <Head2026
+    title="Resources — Intentional Society"
+    description="Relational practices we use, and answers to common questions about Intentional Society."
+  />
+);

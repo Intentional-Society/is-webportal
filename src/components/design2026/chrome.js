@@ -22,7 +22,7 @@ const navLinks = [
 ];
 
 const moreLinks = [
-  { text: 'FAQ', to: '/questions' },
+  { text: 'Resources', to: '/resources' },
   { text: 'Friends', to: '/friends' },
   { text: 'News', to: '/news' },
 ];

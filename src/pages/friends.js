@@ -99,10 +99,10 @@ const NamedDefault = () => (
         ))}
 
         <div style={{ textAlign: 'right', marginTop: '2rem' }}>
-          <Link to="/questions" style={{
+          <Link to="/resources" style={{
             fontFamily: sans, fontSize: '13px', color: ACCENT_DARK, textDecoration: 'none',
             borderBottom: '1px solid rgba(26,66,50,0.3)',
-          }}>Next page: FAQ →</Link>
+          }}>Next page: Resources →</Link>
         </div>
 
       </article>

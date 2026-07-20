@@ -112,13 +112,6 @@ const NamedDefault = () => {
         </Button>
         <Button
           component={Link}
-          to="/questions"
-          sx={{ ...linkSx('/questions'), display: { xs: 'none', lg: 'inline-flex' } }}
-        >
-          Questions?
-        </Button>
-        <Button
-          component={Link}
           to="/news"
           sx={{ ...linkSx('/news'), display: { xs: 'none', lg: 'inline-flex' } }}
         >
@@ -199,14 +192,6 @@ const NamedDefault = () => {
             sx={{ display: { lg: 'none' } }}
           >
             Friends
-          </MenuItem>
-          <MenuItem
-            component={Link}
-            to="/questions"
-            onClick={handleClose}
-            sx={{ display: { lg: 'none' } }}
-          >
-            Questions?
           </MenuItem>
           <MenuItem
             component={Link}
