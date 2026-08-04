@@ -68,7 +68,7 @@ const NamedDefault = () => (
     <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
       <article style={{ maxWidth: '720px', margin: '0 auto' }}>
 
-        <p style={{ fontSize: '16px', color: BODY_TEXT, margin: '0 0 2.5rem', lineHeight: 1.7 }}>
+        <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 2.5rem', lineHeight: 1.7 }}>
           We are one node in a much larger, loosely-connected web of communities, practices,
           and projects working on inner development, relational culture, and collective wisdom.
           Here are some of the friends whose thinking and practice we've borrowed from,

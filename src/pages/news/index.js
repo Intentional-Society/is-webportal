@@ -136,7 +136,7 @@ const NamedDefault = () => (
               color: '#5C4A3A', margin: '0 0 1.4rem',
             }}>{post.title}</h2>
             {post.paragraphs.map((p, i) => (
-              <p key={i} style={{ fontSize: '16px', color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 }}>{p}</p>
+              <p key={i} style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 }}>{p}</p>
             ))}
           </div>
         ))}

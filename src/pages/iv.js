@@ -15,7 +15,7 @@ const sectionHeading = {
   fontSize: 'clamp(1.5rem,2.6vw,2rem)', color: '#5C4A3A', margin: '0 0 1.4rem',
 };
 
-const bodyP = { fontSize: '16px', color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
+const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
 
 const divider = <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '0 auto 3rem', width: '120px' }} />;
 
@@ -93,7 +93,7 @@ const NamedDefault = () => (
           Inside Limicon 2025 (throughout March), some IV "exploration space" activities were
           shared in a four-part "Build-a-thon" series:
         </p>
-        <ul style={{ fontSize: '16px', color: BODY_TEXT, margin: '0 0 1.4rem 1.4rem', padding: 0 }}>
+        <ul style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.4rem 1.4rem', padding: 0 }}>
           <li style={{ marginBottom: '0.4rem' }}>Generative ideation</li>
           <li style={{ marginBottom: '0.4rem' }}>Collaborative chemistry</li>
           <li style={{ marginBottom: '0.4rem' }}>Venture assembly</li>
@@ -113,7 +113,7 @@ const NamedDefault = () => (
         <p style={{ ...bodyP, marginBottom: '0.8rem' }}>
           Those "three skills" held as a baseline of Intentional Ventures participants are:
         </p>
-        <ul style={{ fontSize: '16px', color: BODY_TEXT, margin: '0 0 1.4rem 1.4rem', padding: 0 }}>
+        <ul style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.4rem 1.4rem', padding: 0 }}>
           <li style={{ marginBottom: '0.4rem' }}><strong style={{ fontWeight: 500 }}>Rational-professional skill</strong>: systematic thought, self-management, conventional professional skills</li>
           <li style={{ marginBottom: '0.4rem' }}><strong style={{ fontWeight: 500 }}>Interpersonal skill</strong>: self-awareness, communication, robust emotional capacity and relational agility</li>
           <li style={{ marginBottom: '0.4rem' }}><strong style={{ fontWeight: 500 }}>Perspectival-developmental skill</strong>: fluid perspective-taking, complexity lens, metasystematicity</li>

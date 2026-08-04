@@ -15,7 +15,7 @@ const sectionHeading = {
   fontSize: 'clamp(1.5rem,2.6vw,2rem)', color: '#5C4A3A', margin: '0 0 1.4rem',
 };
 
-const bodyP = { fontSize: '16px', color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
+const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
 const smallP = { fontSize: '15px', color: MUTED, margin: '0 0 0.5rem' };
 
 const divider = <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '3rem auto', width: '120px' }} />;
@@ -96,7 +96,7 @@ const NamedDefault = () => (
           The Practice Dojo is a skill-building space welcoming novices and experts alike to
           train in a variety of <em>developmental-relational practices</em>.
         </p>
-        <ul style={{ fontSize: '16px', color: BODY_TEXT, margin: '0 0 1.2rem 1.4rem', padding: 0 }}>
+        <ul style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem 1.4rem', padding: 0 }}>
           <li style={{ marginBottom: '0.4rem' }}><strong style={{ fontWeight: 500 }}>developmental</strong> grows and shifts your perspective-taking capacity</li>
           <li style={{ marginBottom: '0.4rem' }}><strong style={{ fontWeight: 500 }}>relational</strong> is caring interactive presence with joint attention and reflection</li>
           <li style={{ marginBottom: '0.4rem' }}><strong style={{ fontWeight: 500 }}>practice</strong> is participatory enactment of a way-of-being, shifting how/who we are</li>
@@ -119,7 +119,7 @@ const NamedDefault = () => (
 
         <p style={{ ...bodyP, marginBottom: '0.6rem' }}>What counts as a developmental-relational practice?</p>
         <p style={smallP}>Category-anchoring practice examples:</p>
-        <ul style={{ fontSize: '16px', color: BODY_TEXT, margin: '0 0 1.2rem 1.4rem', padding: 0 }}>
+        <ul style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem 1.4rem', padding: 0 }}>
           <li style={{ marginBottom: '0.4rem' }}>T-Group (focus on me)</li>
           <li style={{ marginBottom: '0.4rem' }}>Circling (focus on relating me-and-you)</li>
           <li style={{ marginBottom: '0.4rem' }}>Collective Presencing (focus on we)</li>

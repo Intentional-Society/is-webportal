@@ -109,6 +109,15 @@ of get-involved.js — the only place to update when a new call is scheduled,
 no date shown on the page since it always went stale faster than anyone
 updated it.
 
+**Body copy sizing**: article-style prose colored `BODY_TEXT` (#4A473F) — the
+`bodyP` const on each page, plus any `<ul>`/`<p>` styled the same way — is
+20px/weight 500 (19px/500 for FAQ answers on `/resources` specifically), per
+2026-08 member feedback that the original 15–16px/weight-300 body text read
+too light and small. This does not apply to `MUTED` (#6B6860) secondary text
+(asides, small-print, list descriptions), which stays at its smaller,
+lighter default. Apply the same 20px/500 rule to any new page's body
+paragraphs, not just where it's already been changed.
+
 ### `/resources` page — 2026 redesign, merged with the old FAQ page
 `src/pages/questions.js` (FAQ) was retired and folded into `resources.js`
 (`/questions` now redirects to `/resources#faq` — see netlify.toml); the old

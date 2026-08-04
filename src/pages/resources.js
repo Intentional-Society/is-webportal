@@ -20,7 +20,7 @@ const sectionHeading = {
   fontSize: 'clamp(1.5rem,2.6vw,2rem)', color: '#5C4A3A', margin: '0 0 1.4rem',
 };
 
-const bodyP = { fontSize: '16px', color: BODY_TEXT, margin: '0 0 0.6rem', lineHeight: 1.7 };
+const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 0.6rem', lineHeight: 1.7 };
 const linksLine = { fontSize: '14px', color: MUTED, margin: 0, lineHeight: 1.7 };
 
 const divider = <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '3rem auto', width: '120px' }} />;
@@ -363,7 +363,7 @@ const NamedDefault = () => {
               {group.qas.map(qa => (
                 <details key={qa.q} className="rsc-item">
                   <summary style={faqSummary}>{qa.q}</summary>
-                  <p style={{ fontSize: '15px', color: BODY_TEXT, margin: '0.7rem 0 0 1.5rem', lineHeight: 1.7 }}>{qa.a}</p>
+                  <p style={{ fontSize: '19px', fontWeight: 500, color: BODY_TEXT, margin: '0.7rem 0 0 1.5rem', lineHeight: 1.7 }}>{qa.a}</p>
                 </details>
               ))}
             </div>
