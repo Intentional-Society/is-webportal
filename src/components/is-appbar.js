@@ -27,12 +27,12 @@ const NamedDefault = () => {
   const linkSx = path => ({
     textTransform: 'none',
     color: 'text.secondary',
-    fontWeight: 400,
-    fontSize: '14px',
+    fontWeight: 500,
+    fontSize: '16px',
     borderRadius: 0,
     minWidth: 'auto',
     '&:hover': { backgroundColor: 'transparent', color: 'primary.main' },
-    ...(pathname.startsWith(path) && { color: 'primary.main' }),
+    ...(pathname.startsWith(path) && { color: 'primary.main', fontWeight: 600 }),
   })
 
   // Filled teal call-to-action (prototype .nav-cta).
@@ -40,8 +40,8 @@ const NamedDefault = () => {
     textTransform: 'none',
     color: '#fff',
     backgroundColor: 'primary.main',
-    fontSize: '13px',
-    fontWeight: 500,
+    fontSize: '15px',
+    fontWeight: 600,
     borderRadius: '4px',
     px: 1.6,
     py: 0.6,

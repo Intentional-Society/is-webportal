@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, PAPER,
+  serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026,
 } from '../components/design2026/chrome';
 
@@ -44,14 +44,14 @@ const spaces = [
 ]
 
 const kicker = {
-  fontFamily: serif, fontSize: '11px', letterSpacing: '0.2em',
-  textTransform: 'uppercase', fontWeight: 500,
+  fontFamily: serif, fontSize: '13px', letterSpacing: '0.18em',
+  textTransform: 'uppercase', fontWeight: 600,
 };
 
 const ctaButton = {
   display: 'inline-block', padding: '0.8rem 2rem', background: ACCENT,
-  color: '#fff', textDecoration: 'none', fontFamily: sans, fontSize: '14px',
-  letterSpacing: '0.05em', borderRadius: '3px',
+  color: '#fff', textDecoration: 'none', fontFamily: sans, fontSize: '16px',
+  fontWeight: 500, letterSpacing: '0.03em', borderRadius: '3px',
 };
 
 const NamedDefault = () => (
@@ -71,7 +71,7 @@ const NamedDefault = () => (
         background: 'radial-gradient(ellipse at 50% 42%, rgba(248,245,239,0.55) 0%, rgba(248,245,239,0.15) 45%, transparent 70%), linear-gradient(180deg, rgba(248,245,239,0.1) 0%, transparent 35%, rgba(38,50,61,0.12) 100%)',
       }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '680px', padding: '2rem' }}>
-        <div style={{ ...kicker, color: ACCENT_DARK, opacity: 0.85, marginBottom: '1.5rem' }}>
+        <div style={{ ...kicker, color: ACCENT_DARK, marginBottom: '1.5rem' }}>
           An experiment in becoming together
         </div>
         <h1 style={{
@@ -81,8 +81,8 @@ const NamedDefault = () => (
           Something is <em style={{ color: ACCENT }}>already growing</em> here
         </h1>
         <p style={{
-          color: INK, fontSize: '1.1rem', lineHeight: 1.8, margin: '0 auto 2.5rem',
-          maxWidth: '520px', textShadow: '0 1px 12px rgba(248,245,239,0.85)',
+          color: INK, fontSize: '1.10rem', fontWeight: 500, lineHeight: 1.7, margin: '0 auto 2.5rem',
+          maxWidth: '560px', textShadow: '0 1px 12px rgba(248,245,239,0.85)',
         }}>
           An online community for inner development, wise action, and human connection
           — peer-led, free, and five years into the work.
@@ -134,42 +134,42 @@ const NamedDefault = () => (
           <figure style={{ margin: 0 }}>
             <img src="/design2026/waterfall.jpg" alt="A small waterfall over dark rock in a quiet forest"
               style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', borderRadius: '7px 4px 8px 3px', display: 'block' }} />
-            <figcaption style={{ fontSize: '12px', fontStyle: 'italic', color: MUTED, marginTop: '0.6rem', opacity: 0.8 }}>
+            <figcaption style={{ fontSize: '14px', fontStyle: 'italic', color: MUTED, marginTop: '0.6rem' }}>
               By Bill — community member and avid photographer.
             </figcaption>
           </figure>
           <div style={{ display: 'grid', gap: '2rem' }}>
             <div>
-              <h3 style={{ fontFamily: serif, fontWeight: 300, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
+              <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
                 How it started
               </h3>
-              <p style={{ fontSize: '15px', color: MUTED, margin: '0 0 1rem', lineHeight: 1.7 }}>
+              <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1rem', lineHeight: 1.7 }}>
                 In early 2020, a small group began meeting weekly on an intuition: that genuine
                 human development — becoming more aware, more honest, more capable of real
                 contact — was possible in a virtual circle, and that doing it together was
                 better than alone.
               </p>
-              <p style={{ fontSize: '15px', color: MUTED, margin: 0, lineHeight: 1.7 }}>
+              <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: 0, lineHeight: 1.7 }}>
                 Five years and hundreds of gatherings later, something real has accumulated.
                 The circle has grown to include people from thirty countries who share a pull
                 toward a more spacious way of being.
               </p>
             </div>
             <div>
-              <h3 style={{ fontFamily: serif, fontWeight: 300, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
+              <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
                 What we actually do
               </h3>
-              <p style={{ fontSize: '15px', color: MUTED, margin: '0 0 1rem', lineHeight: 1.7 }}>
+              <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1rem', lineHeight: 1.7 }}>
                 Every Sunday we gather — not for a lecture, but for something closer to a
                 living room with intention. Relational practices, peer-supported inner work,
                 noticing exercises. Between calls, small pods of four meet to go deeper.
               </p>
-              <p style={{ fontSize: '15px', color: MUTED, margin: '0 0 1.2rem', lineHeight: 1.7 }}>
+              <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 }}>
                 There is no teacher at the front of the room. We are peer-led, not
                 expert-delivered. What makes it work is the regularity — depth requires
                 continuity.
               </p>
-              <Link to="/about" style={{ fontFamily: serif, fontStyle: 'italic', fontSize: '15px', color: ACCENT, textDecoration: 'none' }}>
+              <Link to="/about" style={{ fontFamily: serif, fontStyle: 'italic', fontWeight: 500, fontSize: '17px', color: ACCENT, textDecoration: 'none' }}>
                 More about who we are and where we came from →
               </Link>
             </div>
@@ -190,9 +190,9 @@ const NamedDefault = () => (
         background: 'radial-gradient(ellipse at 50% 50%, rgba(12,18,24,0.62) 0%, rgba(12,18,24,0.42) 55%, transparent 80%), linear-gradient(180deg, rgba(12,18,24,0.55) 0%, rgba(12,18,24,0.45) 50%, rgba(12,18,24,0.62) 100%)',
       }} />
       <div style={{ textAlign: 'center', padding: '4rem 2rem', position: 'relative', zIndex: 2 }}>
-        <div style={{ ...kicker, color: '#E8DFD0', marginBottom: '0.5rem', opacity: 0.9 }}>Our mission</div>
+        <div style={{ ...kicker, color: '#E8DFD0', marginBottom: '0.5rem' }}>Our mission</div>
         <p style={{
-          fontFamily: serif, fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontStyle: 'italic', fontWeight: 300,
+          fontFamily: serif, fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontStyle: 'italic', fontWeight: 400,
           color: '#FAF8F3', maxWidth: '600px', margin: '0 auto', lineHeight: 1.5,
           textShadow: '0 2px 22px rgba(8,12,16,0.9), 0 1px 4px rgba(8,12,16,0.8)',
         }}>
@@ -221,10 +221,10 @@ const NamedDefault = () => (
                 height: '130px', marginBottom: '1.3rem', overflow: 'hidden',
                 background: `url(${s.img}) center/cover, ${s.fallback}`,
               }} />
-              <h3 style={{ fontFamily: serif, fontWeight: 400, fontSize: '1.3rem', margin: '0 0 0.8rem', padding: '0 1.5rem' }}>
+              <h3 style={{ fontFamily: serif, fontWeight: 500, fontSize: '1.3rem', margin: '0 0 0.8rem', padding: '0 1.5rem' }}>
                 {s.title}
               </h3>
-              <p style={{ fontSize: '14px', color: MUTED, lineHeight: 1.6, padding: '0 1.5rem', margin: 0 }}>
+              <p style={{ fontSize: '18px', fontWeight: 500, color: BODY_TEXT, lineHeight: 1.6, padding: '0 1.5rem', margin: 0 }}>
                 {s.text}
               </p>
             </Link>
@@ -246,28 +246,28 @@ const NamedDefault = () => (
             top: '-0.5rem', left: '50%', transform: 'translateX(-50%)', lineHeight: 1,
           }}>“</div>
           <blockquote style={{
-            fontFamily: serif, fontSize: 'clamp(1.3rem,2.5vw,1.8rem)', fontStyle: 'italic', fontWeight: 300,
+            fontFamily: serif, fontSize: 'clamp(1.3rem,2.5vw,1.8rem)', fontStyle: 'italic', fontWeight: 400,
             color: INK, lineHeight: 1.6, maxWidth: '650px', margin: '0 auto 1rem',
           }}>
             People are joining to be challenged beyond that fabric of the regular relationship…
             experimentation of relating differently and growing into a version of myself I want to be.
           </blockquote>
-          <div style={{ fontSize: '13px', color: MUTED }}>— Renee</div>
+          <div style={{ fontSize: '15px', color: MUTED }}>— Renee</div>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
           <div style={{ padding: '1.5rem', background: '#FAF8F3', borderLeft: '2px solid #7A9E8A' }}>
-            <blockquote style={{ fontSize: '17px', color: INK, fontStyle: 'italic', margin: '0 0 0.8rem', lineHeight: 1.7 }}>
+            <blockquote style={{ fontSize: '18px', fontWeight: 500, color: INK, fontStyle: 'italic', margin: '0 0 0.8rem', lineHeight: 1.7 }}>
               "There is often a sense of 'relaxation towards experimentation.' It is OK to express
               myself freely… a 'familiar frame' that does create a sense of intimacy and openness."
             </blockquote>
-            <div style={{ fontSize: '13px', color: MUTED }}>— Jochen</div>
+            <div style={{ fontSize: '15px', color: MUTED }}>— Jochen</div>
           </div>
           <div style={{ padding: '1.5rem', background: '#FAF8F3', borderLeft: '2px solid #7A9E8A' }}>
-            <blockquote style={{ fontSize: '17px', color: INK, fontStyle: 'italic', margin: '0 0 0.8rem', lineHeight: 1.7 }}>
+            <blockquote style={{ fontSize: '18px', fontWeight: 500, color: INK, fontStyle: 'italic', margin: '0 0 0.8rem', lineHeight: 1.7 }}>
               "This space reminds me that there are other people living unconventional lives…
               it reminds me to not give up on aspiring to live fully."
             </blockquote>
-            <div style={{ fontSize: '13px', color: MUTED }}>— fig</div>
+            <div style={{ fontSize: '15px', color: MUTED }}>— fig</div>
           </div>
         </div>
       </div>
@@ -279,21 +279,21 @@ const NamedDefault = () => (
       background: 'radial-gradient(ellipse at 50% 80%, rgba(46,107,79,0.25) 0%, transparent 60%), linear-gradient(175deg,#1e2822 0%,#1a2420 50%,#1e2420 100%)',
     }}>
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '550px', margin: '0 auto' }}>
-        <div style={{ ...kicker, color: '#7A9E8A', marginBottom: '1rem', opacity: 0.7 }}>The next step</div>
+        <div style={{ ...kicker, color: '#7A9E8A', marginBottom: '1rem' }}>The next step</div>
         <h2 style={{
-          fontFamily: serif, fontWeight: 300, fontStyle: 'italic', lineHeight: 1.2,
+          fontFamily: serif, fontWeight: 400, fontStyle: 'italic', lineHeight: 1.2,
           fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', color: '#FAF8F3', margin: '0 0 1rem',
         }}>
           Come find your place here
         </h2>
-        <p style={{ color: 'rgba(232,223,208,0.65)', fontSize: '15px', margin: '0 0 0.5rem', lineHeight: 1.7 }}>
+        <p style={{ color: 'rgba(250,248,243,0.85)', fontSize: '17px', margin: '0 0 0.5rem', lineHeight: 1.7 }}>
           Follow along with our newsletter, drop into a Connection Call, or step into the
           relational web — there's a doorway for every level of curiosity.
         </p>
         <Link to="/get-involved" style={{
           display: 'inline-block', marginTop: '1.5rem', padding: '0.8rem 2rem',
           border: '1px solid rgba(122,158,138,0.4)', color: '#7A9E8A', textDecoration: 'none',
-          fontSize: '14px', borderRadius: '3px',
+          fontSize: '15px', fontWeight: 500, borderRadius: '3px',
         }}>Get involved</Link>
       </div>
     </section>

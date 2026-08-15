@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, navigate } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
+  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerKicker,
   Grain2026, Nav2026, Footer2026, Head2026,
 } from '../components/design2026/chrome';
 
@@ -21,12 +21,12 @@ const sectionHeading = {
 };
 
 const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 0.6rem', lineHeight: 1.7 };
-const linksLine = { fontSize: '14px', color: MUTED, margin: 0, lineHeight: 1.7 };
+const linksLine = { fontSize: '16px', fontWeight: 500, color: MUTED, margin: 0, lineHeight: 1.7 };
 
 const divider = <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '3rem auto', width: '120px' }} />;
 
-const practiceSummary = { fontFamily: serif, fontWeight: 500, fontSize: '1.05rem', color: INK };
-const faqSummary = { fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.05rem', color: '#5C4A3A' };
+const practiceSummary = { fontFamily: serif, fontWeight: 500, fontSize: '1.4rem', color: INK };
+const faqSummary = { fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.4rem', color: '#5C4A3A' };
 
 const practices = [
   {
@@ -318,12 +318,9 @@ const NamedDefault = () => {
           background: 'linear-gradient(180deg, rgba(14,18,22,0.62) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
         }} />
         <div style={{ position: 'relative', zIndex: 2, maxWidth: '640px', padding: '4rem 2rem' }}>
-          <div style={{
-            fontFamily: sans, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-            fontWeight: 500, color: '#E8DFD0', opacity: 0.9, marginBottom: '1.2rem',
-          }}>Resources</div>
+          <div style={headerKicker}>Resources</div>
           <h1 style={{
-            fontFamily: serif, fontWeight: 400, lineHeight: 1.25, fontSize: 'clamp(2rem,4vw,3rem)',
+            fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(2rem,4vw,3rem)',
             color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)', margin: 0,
           }}>
             Practices we use, and answers to common questions
@@ -334,13 +331,6 @@ const NamedDefault = () => {
       {/* ======== Article body ======== */}
       <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
         <article style={{ maxWidth: '720px', margin: '0 auto' }}>
-
-          <p style={{ fontSize: '15px', color: MUTED, margin: '0 0 1.5rem' }}>Jump to:</p>
-          <p style={{ fontSize: '15px', margin: '0 0 2.5rem' }}>
-            <a href="#relational-practices" style={linkStyle}>Relational Practices List</a>
-            <span style={{ color: MUTED }}> · </span>
-            <a href="#faq" style={linkStyle}>FAQ</a>
-          </p>
 
           <h2 id="relational-practices" style={{ ...sectionHeading, scrollMarginTop: '90px' }}>Relational Practices List</h2>
           <p style={{ ...bodyP, marginBottom: '0.5rem' }}>We have tried and enjoyed the following practices:</p>
@@ -357,8 +347,8 @@ const NamedDefault = () => {
           {faqGroups.map(group => (
             <div key={group.label} style={{ marginBottom: '1.6rem' }}>
               <div style={{
-                fontFamily: sans, fontSize: '12px', letterSpacing: '0.14em', textTransform: 'uppercase',
-                fontWeight: 500, color: '#7A9E8A', margin: '0 0 0.4rem',
+                fontFamily: sans, fontSize: '13px', letterSpacing: '0.14em', textTransform: 'uppercase',
+                fontWeight: 600, color: '#5C8770', margin: '0 0 0.4rem',
               }}>{group.label}</div>
               {group.qas.map(qa => (
                 <details key={qa.q} className="rsc-item">
@@ -371,7 +361,7 @@ const NamedDefault = () => {
 
           <div style={{ textAlign: 'right', marginTop: '2rem' }}>
             <Link to="/about" style={{
-              fontFamily: sans, fontSize: '13px', color: ACCENT_DARK, textDecoration: 'none',
+              fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
               borderBottom: '1px solid rgba(26,66,50,0.3)',
             }}>Next page: About →</Link>
           </div>

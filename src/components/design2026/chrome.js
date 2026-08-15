@@ -27,6 +27,15 @@ const moreLinks = [
   { text: 'News', to: '/news' },
 ];
 
+// Shared "eyebrow" / kicker label used above header-band titles across the
+// 2026 pages (About, Community, Dojo, etc.) — solid color, no opacity, so it
+// stays legible against photo headers on both desktop and mobile.
+export const headerKicker = {
+  fontFamily: sans, fontSize: '14px', letterSpacing: '0.18em',
+  textTransform: 'uppercase', fontWeight: 600, color: '#E8DFD0',
+  marginBottom: '1.2rem',
+};
+
 // Paper-grain overlay, applied once per page above all content.
 export const Grain2026 = () => (
   <div style={{
@@ -51,7 +60,8 @@ export const Nav2026 = ({ active }) => {
   const moreActive = moreLinks.some(l => l.to === active);
   return (
     <nav style={{
-      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, padding: '0.8rem 2rem',
+      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, height: '77px',
+      boxSizing: 'border-box', padding: '0 2rem',
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       background: PAPER, borderBottom: '1px solid rgba(42,42,36,0.06)',
     }}>
@@ -66,7 +76,7 @@ export const Nav2026 = ({ active }) => {
         .nav2026-more-menu li { padding: 0; }
         .nav2026-more-menu a { display: block; padding: 0.45rem 1.1rem; }
         @media (max-width: 820px) {
-          .nav2026-links { display: none; position: fixed; top: 57px; left: 0; right: 0;
+          .nav2026-links { display: none; position: fixed; top: 77px; left: 0; right: 0;
             flex-direction: column; align-items: flex-start; gap: 0; background: #F8F5EF;
             border-bottom: 1px solid rgba(42,42,36,0.12); padding: 0.4rem 0 1rem; }
           .nav2026-links.nav2026-open { display: flex; }
@@ -94,9 +104,9 @@ export const Nav2026 = ({ active }) => {
         {navLinks.map(l => (
           <li key={l.text}>
             <Link to={l.to} style={{
-              textDecoration: 'none', fontSize: '14px',
+              textDecoration: 'none', fontSize: '16px',
               color: l.to === active ? ACCENT_DARK : MUTED,
-              fontWeight: l.to === active ? 500 : 400,
+              fontWeight: l.to === active ? 600 : 500,
             }}>
               {l.text}
             </Link>
@@ -105,9 +115,9 @@ export const Nav2026 = ({ active }) => {
         <li className="nav2026-more">
           <button onClick={() => setMoreOpen(!moreOpen)} aria-expanded={moreOpen} style={{
             background: 'none', border: 'none', cursor: 'pointer', padding: 0,
-            fontFamily: sans, fontSize: '14px',
+            fontFamily: sans, fontSize: '16px',
             color: moreActive ? ACCENT_DARK : MUTED,
-            fontWeight: moreActive ? 500 : 400,
+            fontWeight: moreActive ? 600 : 500,
             display: 'flex', alignItems: 'center', gap: '4px',
           }}>
             More
@@ -121,9 +131,9 @@ export const Nav2026 = ({ active }) => {
               {moreLinks.map(l => (
                 <li key={l.text}>
                   <Link to={l.to} style={{
-                    textDecoration: 'none', fontSize: '14px',
+                    textDecoration: 'none', fontSize: '16px',
                     color: l.to === active ? ACCENT_DARK : MUTED,
-                    fontWeight: l.to === active ? 500 : 400,
+                    fontWeight: l.to === active ? 600 : 500,
                   }}>
                     {l.text}
                   </Link>
@@ -134,8 +144,8 @@ export const Nav2026 = ({ active }) => {
         </li>
         <li>
           <Link to="/get-involved" style={{
-            background: ACCENT, color: '#fff', padding: '0.5rem 1.2rem', borderRadius: '4px',
-            fontSize: '13px', fontWeight: 500, textDecoration: 'none',
+            background: ACCENT, color: '#fff', padding: '0.55rem 1.3rem', borderRadius: '4px',
+            fontSize: '15px', fontWeight: 600, textDecoration: 'none',
           }}>Get involved</Link>
         </li>
       </ul>
@@ -148,13 +158,13 @@ export const Footer2026 = () => (
     <div style={{ maxWidth: '720px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1.35fr 1fr', gap: '2.5rem' }}>
       <div>
         <img src="/design2026/logo.png" alt="" style={{ width: '44px', height: '44px', objectFit: 'contain', display: 'block', marginBottom: '0.7rem' }} />
-        <h3 style={{ fontFamily: serif, fontWeight: 300, fontSize: '1.1rem', color: INK, margin: '0 0 0.3rem' }}>Intentional Society</h3>
-        <p style={{ fontSize: '13px', color: MUTED, margin: 0, whiteSpace: 'nowrap' }}>
+        <h3 style={{ fontFamily: serif, fontWeight: 500, fontSize: '1.15rem', color: INK, margin: '0 0 0.3rem' }}>Intentional Society</h3>
+        <p style={{ fontSize: '16px', fontWeight: 500, color: MUTED, margin: 0, whiteSpace: 'nowrap' }}>
           Inner Development · Wise Action · Human Connection
         </p>
       </div>
       <div>
-        <h4 style={{ fontFamily: serif, fontSize: '11px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>Explore</h4>
+        <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>Explore</h4>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 1.2rem' }}>
           <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
             {[
@@ -162,7 +172,7 @@ export const Footer2026 = () => (
               { text: 'Practice Dojo', to: '/dojo' },
               { text: 'Ventures', to: '/iv' },
             ].map(l => (
-              <li key={l.text} style={{ fontSize: '13px', marginBottom: '0.5rem', whiteSpace: 'nowrap' }}>
+              <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem', whiteSpace: 'nowrap' }}>
                 <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
               </li>
             ))}
@@ -173,7 +183,7 @@ export const Footer2026 = () => (
               { text: 'Resources', to: '/resources' },
               { text: 'News', to: '/news' },
             ].map(l => (
-              <li key={l.text} style={{ fontSize: '13px', marginBottom: '0.5rem', whiteSpace: 'nowrap' }}>
+              <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem', whiteSpace: 'nowrap' }}>
                 <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
               </li>
             ))}
@@ -183,7 +193,7 @@ export const Footer2026 = () => (
     </div>
     <div style={{
       maxWidth: '720px', margin: '2rem auto 0', paddingTop: '1.5rem',
-      borderTop: '1px solid rgba(42,42,36,0.06)', fontSize: '12px', color: MUTED, opacity: 0.6,
+      borderTop: '1px solid rgba(42,42,36,0.06)', fontSize: '14px', fontWeight: 500, color: MUTED,
     }}>
       © 2020–2026 Intentional Society. All rights reserved. &nbsp;·&nbsp; Photos by
       community members Bill and Karla.
@@ -192,12 +202,19 @@ export const Footer2026 = () => (
 );
 
 // Gatsby Head contents shared by all 2026 pages: fonts + per-page title/description.
+// These pages don't use MUI's <CssBaseline/>, so nothing else resets the
+// browser's default 8px body margin or bumps the base font-size — do that
+// here since Head2026 renders into <head> on every 2026 page.
 export const Head2026 = ({ title, description }) => (
   <>
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>{`
+      * { box-sizing: border-box; }
+      body { margin: 0; -webkit-font-smoothing: antialiased; }
+    `}</style>
   </>
 );

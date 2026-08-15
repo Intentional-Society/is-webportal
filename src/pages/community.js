@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
+  serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerKicker,
   Grain2026, Nav2026, Footer2026, Head2026,
 } from '../components/design2026/chrome';
 
@@ -36,12 +36,9 @@ const NamedDefault = () => (
         background: 'linear-gradient(180deg, rgba(14,18,22,0.62) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
       }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '640px', padding: '4rem 2rem' }}>
-        <div style={{
-          fontFamily: sans, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-          fontWeight: 500, color: '#E8DFD0', opacity: 0.9, marginBottom: '1.2rem',
-        }}>Community</div>
+        <div style={headerKicker}>Community</div>
         <h1 style={{
-          fontFamily: serif, fontWeight: 400, lineHeight: 1.25, fontSize: 'clamp(2.2rem,4.2vw,3.2rem)',
+          fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(2.2rem,4.2vw,3.2rem)',
           color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)', margin: 0,
         }}>
           A space full of relationships that matter
@@ -54,11 +51,11 @@ const NamedDefault = () => (
       <article style={{ maxWidth: '720px', margin: '0 auto' }}>
 
         <blockquote style={{
-          fontFamily: serif, fontSize: 'clamp(1.2rem,2.2vw,1.5rem)', fontStyle: 'italic', fontWeight: 300,
+          fontFamily: serif, fontSize: 'clamp(1.2rem,2.2vw,1.5rem)', fontStyle: 'italic', fontWeight: 400,
           color: '#5C4A3A', borderLeft: '2px solid #7A9E8A', paddingLeft: '1.5rem', margin: '0 0 2.5rem', lineHeight: 1.6,
         }}>
           "Home is where somebody notices when you are no longer there."
-          <div style={{ fontSize: '14px', fontStyle: 'normal', color: MUTED, marginTop: '0.6rem' }}>
+          <div style={{ fontSize: '18px', fontStyle: 'normal', color: MUTED, marginTop: '0.6rem' }}>
             — <a href="https://www.goodreads.com/quotes/220390-home-is-where-somebody-notices-when-you-are-no-longer" target="_blank" rel="noopener noreferrer" style={{ color: MUTED }}>Aleksandar Hemon</a>
           </div>
         </blockquote>
@@ -66,7 +63,7 @@ const NamedDefault = () => (
         <figure style={{ margin: '0 0 2.5rem', textAlign: 'center' }}>
           <img src="/design2026/community-tree.png" alt="A tree of community members' faces, each rooted in Intentional Society"
             style={{ width: '100%', maxWidth: '340px', height: 'auto', display: 'inline-block' }} />
-          <figcaption style={{ fontSize: '12px', fontStyle: 'italic', color: MUTED, marginTop: '0.6rem', opacity: 0.8 }}>
+          <figcaption style={{ fontSize: '16px', fontStyle: 'italic', color: MUTED, marginTop: '0.6rem' }}>
             Some of the faces that make up this community.
           </figcaption>
         </figure>
@@ -80,9 +77,9 @@ const NamedDefault = () => (
           five years now.
         </p>
 
-        <p style={{ fontSize: '15px', color: MUTED, margin: '0 0 0.6rem' }}>Our purpose statement has been:</p>
+        <p style={{ fontSize: '16px', fontWeight: 500, color: MUTED, margin: '0 0 0.6rem' }}>Our purpose statement has been:</p>
         <blockquote style={{
-          fontFamily: serif, fontSize: '1.15rem', fontStyle: 'italic', fontWeight: 300, color: INK,
+          fontFamily: serif, fontSize: '1.15rem', fontStyle: 'italic', fontWeight: 400, color: INK,
           borderLeft: '2px solid #7A9E8A', paddingLeft: '1.5rem', margin: '0 0 1.5rem', lineHeight: 1.7,
         }}>
           Those who together are becoming<br />
@@ -127,8 +124,8 @@ const NamedDefault = () => (
 
         <Link to="/get-involved" style={{
           display: 'inline-block', padding: '0.8rem 2rem', background: ACCENT, color: '#fff',
-          textDecoration: 'none', fontFamily: sans, fontSize: '14px', fontWeight: 400,
-          letterSpacing: '0.05em', borderRadius: '3px',
+          textDecoration: 'none', fontFamily: sans, fontSize: '16px', fontWeight: 500,
+          letterSpacing: '0.03em', borderRadius: '3px',
         }}>Get involved</Link>
 
       </article>

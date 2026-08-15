@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
+  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerKicker,
   Grain2026, Nav2026, Footer2026, Head2026,
 } from '../components/design2026/chrome';
 
@@ -51,12 +51,9 @@ const NamedDefault = () => (
         background: 'linear-gradient(180deg, rgba(14,18,22,0.62) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
       }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '640px', padding: '4rem 2rem' }}>
-        <div style={{
-          fontFamily: sans, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-          fontWeight: 500, color: '#E8DFD0', opacity: 0.9, marginBottom: '1.2rem',
-        }}>Friends</div>
+        <div style={headerKicker}>Friends</div>
         <h1 style={{
-          fontFamily: serif, fontWeight: 400, lineHeight: 1.25, fontSize: 'clamp(2rem,4vw,3rem)',
+          fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(2rem,4vw,3rem)',
           color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)', margin: 0,
         }}>
           Fellow travelers in the wider ecosystem
@@ -93,14 +90,14 @@ const NamedDefault = () => (
               <h4 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.15rem', margin: '0 0 0.4rem' }}>
                 <a href={f.website} target="_blank" rel="noopener noreferrer" style={{ color: ACCENT_DARK }}>{f.name}</a>
               </h4>
-              <p style={{ fontSize: '15px', color: MUTED, margin: 0, lineHeight: 1.7 }}>{f.description}</p>
+              <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: 0, lineHeight: 1.7 }}>{f.description}</p>
             </div>
           </div>
         ))}
 
         <div style={{ textAlign: 'right', marginTop: '2rem' }}>
           <Link to="/resources" style={{
-            fontFamily: sans, fontSize: '13px', color: ACCENT_DARK, textDecoration: 'none',
+            fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
             borderBottom: '1px solid rgba(26,66,50,0.3)',
           }}>Next page: Resources →</Link>
         </div>

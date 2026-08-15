@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
+  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerKicker,
   Grain2026, Nav2026, Footer2026, Head2026,
 } from '../components/design2026/chrome';
 
@@ -16,7 +16,7 @@ const sectionHeading = {
 };
 
 const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
-const smallP = { fontSize: '15px', color: MUTED, margin: '0 0 0.5rem' };
+const smallP = { fontSize: '16px', fontWeight: 500, color: MUTED, margin: '0 0 0.5rem' };
 
 const divider = <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '3rem auto', width: '120px' }} />;
 
@@ -37,12 +37,9 @@ const NamedDefault = () => (
         background: 'linear-gradient(180deg, rgba(14,18,22,0.62) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
       }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '640px', padding: '4rem 2rem' }}>
-        <div style={{
-          fontFamily: sans, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-          fontWeight: 500, color: '#E8DFD0', opacity: 0.9, marginBottom: '1.2rem',
-        }}>Relational Dojo</div>
+        <div style={headerKicker}>Relational Dojo</div>
         <h1 style={{
-          fontFamily: serif, fontWeight: 400, lineHeight: 1.25, fontSize: 'clamp(1.5rem,3vw,2.2rem)',
+          fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(1.5rem,3vw,2.2rem)',
           color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)', margin: 0,
         }}>
           A skill-building space for developmental-relational practice
@@ -50,9 +47,9 @@ const NamedDefault = () => (
       </div>
       <div style={{
         position: 'absolute', bottom: '0.5rem', right: '0.9rem', zIndex: 2,
-        fontFamily: sans, fontSize: '10px', color: 'rgba(232,223,208,0.55)',
+        fontFamily: sans, fontSize: '12px', color: 'rgba(232,223,208,0.75)',
       }}>
-        Image: <a href="https://photodojodsi.fandom.com/wiki/Dojo_Background" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(232,223,208,0.7)' }}>Photo Dojo DSI Wiki</a>
+        Image: <a href="https://photodojodsi.fandom.com/wiki/Dojo_Background" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(232,223,208,0.9)' }}>Photo Dojo DSI Wiki</a>
       </div>
     </header>
 
@@ -126,16 +123,16 @@ const NamedDefault = () => (
           <li style={{ marginBottom: '0.4rem' }}>Case Clinic (focus on relating me-and-world)</li>
         </ul>
 
-        <p style={smallP}>More practices that easily belong:</p>
-        <p style={{ fontSize: '15px', color: MUTED, marginBottom: '1.2rem' }}>
+        <p style={{ ...bodyP, marginBottom: '0.5rem' }}>More practices that easily belong:</p>
+        <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, marginBottom: '1.2rem', lineHeight: 1.7 }}>
           Empathy Circling, Dialogos (Vervaeke–Sengstock), Bohm Dialogue, CP-adjacent forms such
           as Communal Reverie, Ephemeral Group Process, and Inquiry Spiraling, Authentic Relating
           Games, some Liberating Structures such as Nine Whys and Troika Consulting, Sacred
           Ground Experience, Uncertainment, Grief Circles, Glass Bead Game.
         </p>
 
-        <p style={smallP}>More practices that can/could sometimes belong with appropriate relational holding:</p>
-        <p style={{ fontSize: '15px', color: MUTED, marginBottom: '2rem' }}>
+        <p style={{ ...bodyP, marginBottom: '0.5rem' }}>More practices that can/could sometimes belong with appropriate relational holding:</p>
+        <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, marginBottom: '2rem', lineHeight: 1.7 }}>
           Clean/Pure Coaching, Parts Work (IFS), Ideal Parent Figure Protocol, Appreciative
           Inquiry, Death Cafe, Imaginal work, Shadow work, Open Stance circles, OANMarket/Gifting
           practice.
@@ -143,7 +140,7 @@ const NamedDefault = () => (
 
         <div style={{ textAlign: 'right' }}>
           <Link to="/iv" style={{
-            fontFamily: sans, fontSize: '13px', color: ACCENT_DARK, textDecoration: 'none',
+            fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
             borderBottom: '1px solid rgba(26,66,50,0.3)',
           }}>Next page: Ventures →</Link>
         </div>
