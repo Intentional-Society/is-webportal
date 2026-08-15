@@ -37,18 +37,18 @@ yarn clean
 **Layout pattern**: All pages wrap content in `<Layout>` (header/footer) and typically `<CenteredColumn>` for consistent width.
 
 **Styling stack**:
-- MUI v5 components for UI (AppBar, Typography, Button, etc.)
+- MUI v7 components for UI (AppBar, Typography, Button, etc.)
 - Emotion for CSS-in-JS (via `gatsby-plugin-emotion`)
 - CSS Modules (`.module.css`) for scoped styles
-- Custom MUI theme in `src/gatsby-theme-material-ui-top-layout/theme.js` (primary: teal #24818E, background: #E8F0EC)
+- Custom MUI theme in `src/gatsby-theme-material-ui-top-layout/theme.js` — 2026 design palette (primary: greener teal `#2E6B4F`, background: warm-white `#F8F5EF`). See "Readability pass" below for `body`/link/heading weight conventions.
 
 **Heading scale** (defined in `theme.js`, single source of truth for both MUI Typography and raw HTML):
-- h1: 5rem (reserved, not currently used)
-- h2: 3.5rem (page titles)
-- h3: 2.125rem (section headings)
-- h4: 1.5rem (sub-section headings)
-- h5/h6: 1.25rem/1rem (minor headings)
-- All headings use Gudea font; CssBaseline applies these styles to raw HTML elements (for markdown content)
+- h1: `clamp(2.5rem, 5vw, 4rem)`, weight 300, serif (Cormorant Garamond)
+- h2: `clamp(2rem, 4vw, 2.8rem)`, weight 300, serif
+- h3: `clamp(1.5rem, 2.5vw, 2.125rem)`, weight 400, serif
+- h4: `1.5rem`, weight 500, sans (DM Sans)
+- h5/h6: `1.25rem`/`1rem`, weight 500, sans
+- h1–h3 use Cormorant Garamond (display serif); h4–h6 use DM Sans so sub-section labels stay crisp. `CssBaseline` applies these styles to raw HTML elements (for markdown content).
 
 **Markdown content pattern**: Pages can render content from `src/md/*.md` files via `gatsby-transformer-remark`. The page component queries the markdown file via GraphQL and renders with `dangerouslySetInnerHTML`. See `src/pages/web.js` for an example. When converting an HTML page to markdown, do it in two commits: first the mechanical conversion (new `.md` file + rewired `.js`), then a separate commit for any copy rewrite, so content changes get a clean diff.
 
@@ -89,14 +89,58 @@ Deploys automatically to Netlify on push to master. Configuration in `netlify.to
 
 ## Current Status Notes
 
+### Readability pass (branch `2026-design-ui-improvements`, 2026-08)
+Member feedback was that body copy and links across the site read too small
+and too light on both desktop and mobile. Conventions established in this
+pass — apply them to any new page/section, not just where they're already
+in place:
+- **Body copy**: article-style prose colored `BODY_TEXT` (`#4A473F`) — the
+  `bodyP` const on each page, plus any `<ul>`/`<p>` styled the same way — is
+  20px/weight 500 (19px/500 for FAQ answers on `/resources` specifically).
+  This does not apply to `MUTED` (`#6B6860`) secondary text (asides,
+  small-print, list descriptions, photo captions), which stays smaller —
+  but give it an *explicit* `fontWeight` (500 for anything that isn't purely
+  decorative) rather than leaving it unset. Several bugs in this pass came
+  from a `<p>`/`<span>` with a `color` but no `fontWeight`, which silently
+  inherited the page wrapper's `fontWeight: 300` and rendered lighter than
+  intended.
+- **Header-band hero `<h1>`** (the pattern used on about/community/dojo/iv/
+  friends/news/resources — serif, photo background, `textShadow`): weight
+  500, not 400.
+- **Links and nav**: nav links 16px/weight 500 (600 when active), footer
+  links 17px/weight 500, "Next page: X →" footer links 16px/weight 500.
+  No `opacity` on eyebrow/kicker text or footer copy — use a solid color
+  instead (opacity read as too faint against both light and dark
+  backgrounds).
+- **Body margin**: both the MUI `CssBaseline` override and `Head2026`'s
+  inline `<style>` explicitly zero the browser's default 8px `body`
+  margin — don't remove either without re-checking layout at the page edges.
+- **Old MUI theme** (`theme.js`): `body1`/`body2` typography variants were
+  previously undefined (falling back to MUI's small defaults) — now set to
+  1.15rem/weight 500 and 1rem/weight 500. The `MuiCssBaseline` override sets
+  raw `<p>`/`<a>` styles too (weight 500 body text, underlined links with a
+  hover-darken state), so markdown-rendered content picks these up
+  automatically.
+
 ### 2026 redesign pages — shared chrome (`src/components/design2026/chrome.js`)
 The redesigned pages (index, about, community, dojo, iv, resources, friends,
 news, get-involved) are self-contained (do NOT use `<Layout>`/MUI theme) and
 share one module for design tokens (serif/sans/color constants), `Grain2026`,
-`Nav2026` (pass `active="/path"`; collapses to a hamburger below 820px, "More"
-opens a dropdown for Resources/Friends/News), `Footer2026`, and `Head2026`
-(fonts + title/description). Edit chrome.js to change nav links or the footer
-everywhere at once. The logo is a transparent `static/design2026/logo.png`
+`Nav2026` (pass `active="/path"`; collapses to a hamburger below 820px),
+`Footer2026`, `Head2026` (meta + title/description), and `headerKicker` (the
+shared eyebrow style for header-band titles). Edit chrome.js to change nav
+links or the footer everywhere at once. Fonts (Cormorant Garamond, DM Sans)
+are self-hosted via `@fontsource` imports at the top of chrome.js — not
+loaded from Google Fonts. Self-hosting avoids an async CDN fetch that
+previously caused a layout-jitter bug: as different font weights arrived at
+different times, the fixed-position nav's rendered height nudged slightly on
+each swap-in, which showed up as visible jumping since the nav never
+reflows now (`Nav2026` has a fixed `height: 77px`). Below 820px, `Nav2026`
+collapses to a hamburger menu; on mobile all links — including
+Resources/Friends/News — render as plain top-level items (no nested "More"
+toggle, since the menu already has vertical room to spare there). Above
+820px, Resources/Friends/News stay tucked behind a "More" dropdown to save
+horizontal space. The logo is a transparent `static/design2026/logo.png`
 (no mix-blend-mode hacks). Remaining old-theme pages (web, practices,
 contact, history, orientation, programs, series pages, …) still use the MUI
 `<Layout>`, whose AppBar/Layout was restyled toward the 2026 look (same logo
@@ -109,26 +153,17 @@ of get-involved.js — the only place to update when a new call is scheduled,
 no date shown on the page since it always went stale faster than anyone
 updated it.
 
-**Body copy sizing**: article-style prose colored `BODY_TEXT` (#4A473F) — the
-`bodyP` const on each page, plus any `<ul>`/`<p>` styled the same way — is
-20px/weight 500 (19px/500 for FAQ answers on `/resources` specifically), per
-2026-08 member feedback that the original 15–16px/weight-300 body text read
-too light and small. This does not apply to `MUTED` (#6B6860) secondary text
-(asides, small-print, list descriptions), which stays at its smaller,
-lighter default. Apply the same 20px/500 rule to any new page's body
-paragraphs, not just where it's already been changed.
-
 ### `/resources` page — 2026 redesign, merged with the old FAQ page
 `src/pages/questions.js` (FAQ) was retired and folded into `resources.js`
 (`/questions` now redirects to `/resources#faq` — see netlify.toml); the old
 Media Appearances list moved to `/news` instead. Both the practices list and
 the FAQ render as collapsed `<details>` (class `rsc-item`, styled via a
-scoped `<style>` block in the page) for compactness — a "Jump to" list at
-the top links to `#relational-practices` and `#faq`, and each practice kept
+scoped `<style>` block in the page) for compactness — each practice kept
 its original anchor id so old newsletter links (e.g.
 `resources#empathy-circling`) still resolve; browsers auto-open a closed
 `<details>` when navigating to a fragment inside it, so no extra JS is
 needed for that. A small effect redirects the stale `#media` hash to `/news`.
+Practice/FAQ `<summary>` text (`practiceSummary`/`faqSummary`) is 1.4rem.
 
 ### Home page (`src/pages/index.js`) — 2026 redesign (branch `2026-design`)
 Self-contained page ported from a Claude Design mockup, using the shared

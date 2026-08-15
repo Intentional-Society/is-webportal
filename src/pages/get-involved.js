@@ -66,9 +66,12 @@ const NamedDefault = () => (
             </React.Fragment>
           ))}
         </div>
-        <p style={{ color: 'rgba(232,223,208,0.7)', fontSize: '24px', margin: '0 auto 0.5rem', lineHeight: 1.7, textAlign: 'center' }}>
-          <b>Meet real people in the community to see if it's right for you</b><br />
-          <b>Tell us about yourself, ask questions, get to know what this is about</b>
+        <p style={{
+          color: 'rgba(232,223,208,0.92)', fontWeight: 500,
+          fontSize: 'clamp(1rem,4vw,1.5rem)', margin: '0 auto 0.5rem', lineHeight: 1.5, textAlign: 'center',
+        }}>
+          <span style={{ display: 'block', textWrap: 'balance' }}>Meet real people in the community to see if it's right for you</span>
+          <span style={{ display: 'block', textWrap: 'balance' }}>Tell us about yourself, ask questions, get to know what this is about</span>
         </p>
         <a href={CONNECTION_CALL_URL} style={{
           display: 'inline-block', marginTop: '1.6rem', padding: '0.9rem 2.2rem',

@@ -1,5 +1,20 @@
 import React from 'react';
 import { Link } from 'gatsby';
+// Self-hosted fonts (matches the weights previously loaded from Google
+// Fonts: Cormorant Garamond 300/400/500 + 300/400 italic, DM Sans
+// 300/400/500/600). Self-hosting avoids the async CDN fetch entirely, so
+// weights are available immediately instead of swapping in mid-render —
+// that swap-in was the cause of the nav-jitter bug (the fixed-position
+// nav's box would nudge in height as each font weight arrived).
+import '@fontsource/cormorant-garamond/300.css';
+import '@fontsource/cormorant-garamond/400.css';
+import '@fontsource/cormorant-garamond/500.css';
+import '@fontsource/cormorant-garamond/300-italic.css';
+import '@fontsource/cormorant-garamond/400-italic.css';
+import '@fontsource/dm-sans/300.css';
+import '@fontsource/dm-sans/400.css';
+import '@fontsource/dm-sans/500.css';
+import '@fontsource/dm-sans/600.css';
 
 // Shared chrome for the 2026-redesign pages (index, about, community, dojo, iv):
 // design tokens, fixed nav, footer, and the Head font/meta boilerplate.
@@ -75,6 +90,7 @@ export const Nav2026 = ({ active }) => {
           padding: 0.4rem 0; min-width: 130px; }
         .nav2026-more-menu li { padding: 0; }
         .nav2026-more-menu a { display: block; padding: 0.45rem 1.1rem; }
+        .nav2026-more-mobile-item { display: none; }
         @media (max-width: 820px) {
           .nav2026-links { display: none; position: fixed; top: 77px; left: 0; right: 0;
             flex-direction: column; align-items: flex-start; gap: 0; background: #F8F5EF;
@@ -82,10 +98,11 @@ export const Nav2026 = ({ active }) => {
           .nav2026-links.nav2026-open { display: flex; }
           .nav2026-links li { padding: 0.55rem 2rem; }
           .nav2026-burger { display: block; }
-          .nav2026-more-menu { position: static; border: none; box-shadow: none;
-            background: transparent; padding: 0.2rem 0 0; min-width: 0; }
-          .nav2026-more-menu li { padding: 0.45rem 0 0 1.2rem; }
-          .nav2026-more-menu a { padding: 0; }
+          /* On mobile the hamburger menu already has plenty of vertical room,
+             so "More" collapses away: hide the desktop dropdown trigger and
+             show Resources/Friends/News as plain links in the main list. */
+          .nav2026-more-desktop { display: none; }
+          .nav2026-more-mobile-item { display: block; }
         }
       `}</style>
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none', color: INK, fontFamily: sans }}>
@@ -112,7 +129,7 @@ export const Nav2026 = ({ active }) => {
             </Link>
           </li>
         ))}
-        <li className="nav2026-more">
+        <li className="nav2026-more nav2026-more-desktop">
           <button onClick={() => setMoreOpen(!moreOpen)} aria-expanded={moreOpen} style={{
             background: 'none', border: 'none', cursor: 'pointer', padding: 0,
             fontFamily: sans, fontSize: '16px',
@@ -142,6 +159,19 @@ export const Nav2026 = ({ active }) => {
             </ul>
           )}
         </li>
+        {/* Mobile only: Resources/Friends/News as plain links in the main list,
+            rather than tucked behind a "More" toggle (see .nav2026-more-mobile-item). */}
+        {moreLinks.map(l => (
+          <li key={l.text} className="nav2026-more-mobile-item">
+            <Link to={l.to} style={{
+              textDecoration: 'none', fontSize: '16px',
+              color: l.to === active ? ACCENT_DARK : MUTED,
+              fontWeight: l.to === active ? 600 : 500,
+            }}>
+              {l.text}
+            </Link>
+          </li>
+        ))}
         <li>
           <Link to="/get-involved" style={{
             background: ACCENT, color: '#fff', padding: '0.55rem 1.3rem', borderRadius: '4px',
@@ -154,12 +184,18 @@ export const Nav2026 = ({ active }) => {
 };
 
 export const Footer2026 = () => (
-  <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans }}>
-    <div style={{ maxWidth: '720px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1.35fr 1fr', gap: '2.5rem' }}>
+  <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans, overflowX: 'hidden' }}>
+    <style>{`
+      .footer2026-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 2.5rem; }
+      @media (max-width: 560px) {
+        .footer2026-grid { grid-template-columns: 1fr; gap: 2rem; }
+      }
+    `}</style>
+    <div className="footer2026-grid" style={{ maxWidth: '720px', margin: '0 auto' }}>
       <div>
         <img src="/design2026/logo.png" alt="" style={{ width: '44px', height: '44px', objectFit: 'contain', display: 'block', marginBottom: '0.7rem' }} />
         <h3 style={{ fontFamily: serif, fontWeight: 500, fontSize: '1.15rem', color: INK, margin: '0 0 0.3rem' }}>Intentional Society</h3>
-        <p style={{ fontSize: '16px', fontWeight: 500, color: MUTED, margin: 0, whiteSpace: 'nowrap' }}>
+        <p style={{ fontSize: '16px', fontWeight: 500, color: MUTED, margin: 0 }}>
           Inner Development · Wise Action · Human Connection
         </p>
       </div>
@@ -172,7 +208,7 @@ export const Footer2026 = () => (
               { text: 'Practice Dojo', to: '/dojo' },
               { text: 'Ventures', to: '/iv' },
             ].map(l => (
-              <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem', whiteSpace: 'nowrap' }}>
+              <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem' }}>
                 <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
               </li>
             ))}
@@ -183,7 +219,7 @@ export const Footer2026 = () => (
               { text: 'Resources', to: '/resources' },
               { text: 'News', to: '/news' },
             ].map(l => (
-              <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem', whiteSpace: 'nowrap' }}>
+              <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem' }}>
                 <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
               </li>
             ))}
@@ -201,17 +237,15 @@ export const Footer2026 = () => (
   </footer>
 );
 
-// Gatsby Head contents shared by all 2026 pages: fonts + per-page title/description.
-// These pages don't use MUI's <CssBaseline/>, so nothing else resets the
-// browser's default 8px body margin or bumps the base font-size — do that
-// here since Head2026 renders into <head> on every 2026 page.
+// Gatsby Head contents shared by all 2026 pages: meta + per-page title/description.
+// Fonts are self-hosted via the @fontsource imports above (bundled with the
+// page's JS, not fetched from a CDN). These pages don't use MUI's
+// <CssBaseline/>, so nothing else resets the browser's default 8px body
+// margin — do that here since Head2026 renders into <head> on every 2026 page.
 export const Head2026 = ({ title, description }) => (
   <>
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <style>{`
       * { box-sizing: border-box; }
       body { margin: 0; -webkit-font-smoothing: antialiased; }
