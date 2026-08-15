@@ -187,8 +187,10 @@ export const Footer2026 = () => (
   <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans, overflowX: 'hidden' }}>
     <style>{`
       .footer2026-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 2.5rem; }
+      .footer2026-links { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.2rem; }
       @media (max-width: 560px) {
         .footer2026-grid { grid-template-columns: 1fr; gap: 2rem; }
+        .footer2026-links { grid-template-columns: 1fr; }
       }
     `}</style>
     <div className="footer2026-grid" style={{ maxWidth: '720px', margin: '0 auto' }}>
@@ -201,7 +203,7 @@ export const Footer2026 = () => (
       </div>
       <div>
         <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>Explore</h4>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 1.2rem' }}>
+        <div className="footer2026-links">
           <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
             {[
               { text: 'Community', to: '/community' },
