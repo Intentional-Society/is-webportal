@@ -42,7 +42,7 @@
 }
 
 .about p {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--is-text-muted);
   line-height: 1.7;
   margin: 0;
@@ -50,8 +50,8 @@
 
 .colHeading {
   font-family: 'DM Sans', sans-serif;
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: var(--is-text-muted);
@@ -65,9 +65,10 @@
 }
 
 .list li {
-  font-size: 13px;
+  font-size: 17px;
+  font-weight: 500;
   color: var(--is-text-muted);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 
 .list a {
@@ -85,9 +86,8 @@
   margin: 1rem auto 0;
   padding-top: 1rem;
   border-top: 1px solid rgba(42, 42, 36, 0.06);
-  font-size: 12px;
+  font-size: 14px;
   color: var(--is-text-muted);
-  opacity: 0.7;
 }
 
 @media (max-width: 700px) {

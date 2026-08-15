@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import ButtondownSignup from '../components/buttondownsignup';
 import {
   serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026,
+  Grain2026, Nav2026, Footer2026, Head2026, headerKicker,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the Get Involved page — ported from the Claude Design
@@ -66,9 +66,12 @@ const NamedDefault = () => (
             </React.Fragment>
           ))}
         </div>
-        <p style={{ color: 'rgba(232,223,208,0.7)', fontSize: '24px', margin: '0 auto 0.5rem', lineHeight: 1.7, textAlign: 'center' }}>
-          <b>Meet real people in the community to see if it's right for you</b><br />
-          <b>Tell us about yourself, ask questions, get to know what this is about</b>
+        <p style={{
+          color: 'rgba(232,223,208,0.92)', fontWeight: 500,
+          fontSize: 'clamp(1rem,4vw,1.5rem)', margin: '0 auto 0.5rem', lineHeight: 1.5, textAlign: 'center',
+        }}>
+          <span style={{ display: 'block', textWrap: 'balance' }}>Meet real people in the community to see if it's right for you</span>
+          <span style={{ display: 'block', textWrap: 'balance' }}>Tell us about yourself, ask questions, get to know what this is about</span>
         </p>
         <a href={CONNECTION_CALL_URL} style={{
           display: 'inline-block', marginTop: '1.6rem', padding: '0.9rem 2.2rem',
@@ -77,7 +80,7 @@ const NamedDefault = () => (
         }}>
           <span style={{ color: '#1a2420' }}>Join a Connection Call</span>
         </a>
-        <p style={{ color: 'rgba(232,223,208,0.5)', fontSize: '13px', marginTop: '1rem' }}>
+        <p style={{ color: 'rgba(232,223,208,0.8)', fontSize: '15px', marginTop: '1rem' }}>
           Already have a referral? <a href="https://app.intentionalsociety.org" target="_blank" rel="noopener noreferrer">Sign in at app.intentionalsociety.org</a>
         </p>
       </div>
@@ -101,8 +104,8 @@ const NamedDefault = () => (
         <h2 style={sectionHeading}>What's inside</h2>
         {features.map(f => (
           <div key={f.title} style={{ marginBottom: '1.2rem' }}>
-            <h4 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.05rem', color: INK, margin: '0 0 0.3rem' }}>{f.title}</h4>
-            <p style={{ fontSize: '15px', color: MUTED, margin: 0, lineHeight: 1.7 }}>{f.desc}</p>
+            <h4 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.1rem', color: INK, margin: '0 0 0.3rem' }}>{f.title}</h4>
+            <p style={{ fontSize: '18px', fontWeight: 500, color: BODY_TEXT, margin: 0, lineHeight: 1.7 }}>{f.desc}</p>
           </div>
         ))}
 
@@ -130,7 +133,7 @@ const NamedDefault = () => (
 
         <div style={{ textAlign: 'right', marginTop: '2rem' }}>
           <Link to="/community" style={{
-            fontFamily: sans, fontSize: '13px', color: ACCENT_DARK, textDecoration: 'none',
+            fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
             borderBottom: '1px solid rgba(26,66,50,0.3)',
           }}>Next page: Community →</Link>
         </div>

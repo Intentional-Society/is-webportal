@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
+  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerKicker,
   Grain2026, Nav2026, Footer2026, Head2026,
 } from '../components/design2026/chrome';
 
@@ -36,20 +36,17 @@ const NamedDefault = () => (
         position: 'absolute', inset: 0, pointerEvents: 'none',
         background: 'linear-gradient(180deg, rgba(14,18,22,0.6) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
       }} />
-      <div style={{ position: 'relative', zIndex: 2, maxWidth: '700px', padding: '4rem 2rem' }}>
-        <div style={{
-          fontFamily: sans, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-          fontWeight: 500, color: '#E8DFD0', opacity: 0.9, marginBottom: '1.2rem',
-        }}>About Intentional Society</div>
+      <div style={{ position: 'relative', zIndex: 2, maxWidth: '820px', padding: '4rem 2rem' }}>
+        <div style={headerKicker}>About Intentional Society</div>
         <h1 style={{
-          fontFamily: serif, fontWeight: 400, lineHeight: 1.25, fontSize: 'clamp(2.2rem,4.2vw,3.4rem)',
+          fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(2.2rem,3.8vw,3.4rem)',
           color: '#FAF8F3', margin: '0 0 1.2rem', textShadow: '0 2px 24px rgba(8,12,16,0.8)',
         }}>
           A society we are creating <em style={{ fontStyle: 'italic' }}>on purpose</em>
         </h1>
         <p style={{
-          color: 'rgba(250,248,243,0.88)', fontSize: '1.05rem', lineHeight: 1.8, margin: '0 auto',
-          maxWidth: '560px', textShadow: '0 1px 12px rgba(8,12,16,0.8)',
+          color: '#FAF8F3', fontSize: '1.3rem', fontWeight: 500, lineHeight: 1.6, margin: '0 auto',
+          maxWidth: '600px', textShadow: '0 1px 12px rgba(8,12,16,0.8)',
         }}>
           Intentional Society is a community authoring itself as it goes — a developmental
           culture built week by week since 2020, by the people inside it. Not finished, and
@@ -85,7 +82,7 @@ const NamedDefault = () => (
           layers of body-mind-self, our personal relationships, and our interfaces with the larger
           systems we're a part of.
         </p>
-        <p style={{ fontSize: '15px', color: MUTED, margin: '0 0 1.2rem', fontStyle: 'italic' }}>
+        <p style={{ fontSize: '18px', fontWeight: 500, color: MUTED, margin: '0 0 1.2rem', fontStyle: 'italic' }}>
           Other values we've named are: authenticity, honesty, adventure, perspective-taking,
           reflection, learning, seeking, earnestness, paradox, connection, friendliness, play,
           kindness, curiosity, goodwill, inclusion, drive, balance, desire.

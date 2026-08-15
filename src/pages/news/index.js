@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, BODY_TEXT, PAPER,
+  serif, sans, ACCENT_DARK, INK, BODY_TEXT, PAPER, headerKicker,
   Grain2026, Nav2026, Footer2026, Head2026,
 } from '../../components/design2026/chrome';
 
@@ -63,12 +63,9 @@ const NamedDefault = () => (
         background: 'linear-gradient(180deg, rgba(14,18,22,0.6) 0%, rgba(14,18,22,0.5) 50%, rgba(14,18,22,0.66) 100%)',
       }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '640px', padding: '3.5rem 2rem' }}>
-        <div style={{
-          fontFamily: sans, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-          fontWeight: 500, color: '#E8DFD0', opacity: 0.9, marginBottom: '1.2rem',
-        }}>News</div>
+        <div style={headerKicker}>News</div>
         <h1 style={{
-          fontFamily: serif, fontWeight: 400, lineHeight: 1.25, fontSize: 'clamp(2rem,4vw,2.8rem)',
+          fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(2rem,4vw,2.8rem)',
           color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)', margin: 0,
         }}>
           Announcements and articles
@@ -85,11 +82,11 @@ const NamedDefault = () => (
           flexWrap: 'wrap', padding: '1.2rem 1.5rem', marginBottom: '3rem',
           background: '#FAF8F3', borderLeft: '2px solid #7A9E8A',
         }}>
-          <p style={{ fontSize: '14px', color: BODY_TEXT, margin: 0 }}>
+          <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: 0 }}>
             Looking for our weekly community updates? Those live on our newsletter archive.
           </p>
           <a href="https://buttondown.com/intentionalsociety/archive/" target="_blank" rel="noopener noreferrer" style={{
-            fontFamily: sans, fontSize: '13px', color: ACCENT_DARK, textDecoration: 'none',
+            fontFamily: sans, fontSize: '17px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
             borderBottom: '1px solid rgba(26,66,50,0.3)', whiteSpace: 'nowrap',
           }}>Weekly updates archive →</a>
         </div>
@@ -100,10 +97,10 @@ const NamedDefault = () => (
         }}>Media Appearances</h2>
         <ul style={{ listStyle: 'none', margin: '0 0 3.5rem', padding: 0 }}>
           {mediaAppearances.map(m => (
-            <li key={m.href} style={{ fontSize: '15px', color: BODY_TEXT, marginBottom: '0.6rem', lineHeight: 1.6 }}>
+            <li key={m.href} style={{ fontSize: '16px', fontWeight: 500, color: BODY_TEXT, marginBottom: '0.6rem', lineHeight: 1.6 }}>
               <a href={m.href} target="_blank" rel="noopener noreferrer" style={{ color: ACCENT_DARK }}>{m.title}</a>
               {m.with && <> w/ <a href={m.withHref} target="_blank" rel="noopener noreferrer" style={{ color: ACCENT_DARK }}>{m.with}</a></>}
-              <span style={{ color: '#6B6860', opacity: 0.7 }}> — {m.date}</span>
+              <span style={{ color: '#6B6860' }}> — {m.date}</span>
             </li>
           ))}
         </ul>
@@ -116,10 +113,10 @@ const NamedDefault = () => (
               display: 'flex', alignItems: 'baseline', gap: '1rem', flexWrap: 'wrap',
             }}>
               <a href={`#${post.slug}`} style={{
-                fontFamily: serif, fontWeight: 400, fontStyle: 'italic', fontSize: '1.15rem',
+                fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.3rem',
                 color: ACCENT_DARK, textDecoration: 'none',
               }}>{post.title}</a>
-              <span style={{ fontFamily: sans, fontSize: '12px', color: '#6B6860', opacity: 0.7 }}>{post.date}</span>
+              <span style={{ fontFamily: sans, fontSize: '14px', color: '#6B6860' }}>{post.date}</span>
             </div>
           ))}
         </div>
@@ -128,8 +125,8 @@ const NamedDefault = () => (
         {posts.map(post => (
           <div key={post.slug} id={post.slug} style={{ marginBottom: '4rem', paddingTop: '1rem', scrollMarginTop: '6rem' }}>
             <div style={{
-              fontFamily: sans, fontSize: '12px', letterSpacing: '0.1em', textTransform: 'uppercase',
-              fontWeight: 500, color: '#7A9E8A', marginBottom: '0.6rem',
+              fontFamily: sans, fontSize: '13px', letterSpacing: '0.1em', textTransform: 'uppercase',
+              fontWeight: 600, color: '#5C8770', marginBottom: '0.6rem',
             }}>{post.date}</div>
             <h2 style={{
               fontFamily: serif, fontWeight: 300, lineHeight: 1.25, fontSize: 'clamp(1.5rem,2.6vw,2rem)',
@@ -143,7 +140,7 @@ const NamedDefault = () => (
 
         <div style={{ textAlign: 'right', marginTop: '1rem' }}>
           <Link to="/history" style={{
-            fontFamily: sans, fontSize: '13px', color: ACCENT_DARK, textDecoration: 'none',
+            fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
             borderBottom: '1px solid rgba(26,66,50,0.3)',
           }}>Next page: History →</Link>
         </div>

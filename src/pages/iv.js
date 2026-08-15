@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, BODY_TEXT, PAPER,
+  serif, sans, ACCENT_DARK, INK, BODY_TEXT, PAPER, headerKicker,
   Grain2026, Nav2026, Footer2026, Head2026,
 } from '../components/design2026/chrome';
 
@@ -36,12 +36,9 @@ const NamedDefault = () => (
         background: 'linear-gradient(180deg, rgba(14,18,22,0.62) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
       }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '640px', padding: '4rem 2rem' }}>
-        <div style={{
-          fontFamily: sans, fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-          fontWeight: 500, color: '#E8DFD0', opacity: 0.9, marginBottom: '1.2rem',
-        }}>Intentional Ventures</div>
+        <div style={headerKicker}>Intentional Ventures</div>
         <h1 style={{
-          fontFamily: serif, fontWeight: 400, lineHeight: 1.25, fontSize: 'clamp(2rem,4vw,3rem)',
+          fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(2rem,4vw,3rem)',
           color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)', margin: 0,
         }}>
           Aligned livelihoods, woven into a relational economic web
@@ -127,7 +124,7 @@ const NamedDefault = () => (
 
         <div style={{ textAlign: 'right' }}>
           <Link to="/friends" style={{
-            fontFamily: sans, fontSize: '13px', color: ACCENT_DARK, textDecoration: 'none',
+            fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
             borderBottom: '1px solid rgba(26,66,50,0.3)',
           }}>Next page: Friends →</Link>
         </div>
