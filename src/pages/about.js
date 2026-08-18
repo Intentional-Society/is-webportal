@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import {
   serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerKicker,
-  Grain2026, Nav2026, Footer2026, Head2026,
+  Grain2026, Nav2026, Footer2026, Head2026, PhotoCredit,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the About page — self-contained page ported from the
@@ -27,11 +27,12 @@ const NamedDefault = () => (
     <Nav2026 active="/about" />
 
     {/* ======== Header band ======== */}
-    <header style={{
-      position: 'relative', marginTop: '77px', minHeight: '380px', display: 'flex',
+    <header className="credit-host" style={{
+      position: 'relative', marginTop: '77px', minHeight: '340px', display: 'flex',
       alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
       background: 'url(/design2026/crystals-header.jpg) center/cover, #1c2730',
     }}>
+      <PhotoCredit name="Bill" />
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         background: 'linear-gradient(180deg, rgba(14,18,22,0.6) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
@@ -145,6 +146,12 @@ const NamedDefault = () => (
           and experimental explorations, practice omni-leadership, and support each other in
           perspective-taking, projects, and more.
         </p>
+
+        <figure className="credit-host" style={{ margin: '2.5rem 0 0', position: 'relative' }}>
+          <PhotoCredit name="Bill" />
+          <img src="/design2026/bee-spirea.jpg" alt="A honeybee approaching a cluster of spirea blossoms"
+            style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', borderRadius: '6px 3px 7px 4px', display: 'block' }} />
+        </figure>
 
         {divider}
 

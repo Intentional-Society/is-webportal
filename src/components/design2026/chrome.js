@@ -60,6 +60,23 @@ export const Grain2026 = () => (
   }} />
 );
 
+// Photo-credit hover tooltip: put className="credit-host" (plus
+// position:'relative') on the photo's wrapper — a header, section, figure,
+// or card div — and render <PhotoCredit name="Bill" /> as its last child.
+// On touch devices (no hover) the tooltip stays visible, via the
+// `@media (hover: none)` rule below (defined once, in Nav2026's stylesheet,
+// since every 2026 page already renders <Nav2026 />).
+export const PhotoCredit = ({ name, inset = 16 }) => (
+  <div style={{ position: 'absolute', right: inset, bottom: inset, zIndex: 4 }}>
+    <div className="credit-tip" style={{
+      position: 'absolute', right: 0, bottom: 0, whiteSpace: 'nowrap',
+      background: '#FAF8F3', color: '#2A2A24', fontFamily: sans, fontSize: '12px',
+      fontWeight: 500, padding: '0.4rem 0.65rem', borderRadius: '3px',
+      boxShadow: '0 6px 22px rgba(8,12,16,0.3)',
+    }}>Photograph by {name}, community member</div>
+  </div>
+);
+
 // Fixed top nav. `active` is the path of the current page ('/about', '/dojo', …);
 // omit it on the homepage. Collapses to a hamburger below 820px. "More" opens
 // a dropdown with the secondary pages (FAQ, Friends, News).
@@ -104,6 +121,10 @@ export const Nav2026 = ({ active }) => {
           .nav2026-more-desktop { display: none; }
           .nav2026-more-mobile-item { display: block; }
         }
+        .credit-host { position: relative; }
+        .credit-tip { opacity: 0; transform: translateY(3px); transition: opacity 180ms ease, transform 180ms ease; pointer-events: none; }
+        .credit-host:hover .credit-tip, .credit-host:focus-within .credit-tip { opacity: 1; transform: translateY(0); }
+        @media (hover: none) { .credit-tip { opacity: 1; transform: none; } }
       `}</style>
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none', color: INK, fontFamily: sans }}>
         <img src="/design2026/logo.png" alt="" style={{ width: '40px', height: '40px', objectFit: 'contain', display: 'block' }} />
@@ -233,8 +254,7 @@ export const Footer2026 = () => (
       maxWidth: '720px', margin: '2rem auto 0', paddingTop: '1.5rem',
       borderTop: '1px solid rgba(42,42,36,0.06)', fontSize: '14px', fontWeight: 500, color: MUTED,
     }}>
-      © 2020–2026 Intentional Society. All rights reserved. &nbsp;·&nbsp; Photos by
-      community members Bill and Karla.
+      © 2020–2026 Intentional Society. All rights reserved.
     </div>
   </footer>
 );

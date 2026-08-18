@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import {
   serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerKicker,
-  Grain2026, Nav2026, Footer2026, Head2026,
+  Grain2026, Nav2026, Footer2026, Head2026, PhotoCredit,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the Community page — self-contained page ported from the
@@ -26,11 +26,12 @@ const NamedDefault = () => (
     <Nav2026 active="/community" />
 
     {/* ======== Header band ======== */}
-    <header style={{
+    <header className="credit-host" style={{
       position: 'relative', marginTop: '77px', minHeight: '340px', display: 'flex',
       alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-      background: 'url(/design2026/crystals.jpg) center/cover, #1c2730',
+      background: 'url(/design2026/turkeytail-log.jpg) center/cover, #1c2730',
     }}>
+      <PhotoCredit name="Bill" />
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         background: 'linear-gradient(180deg, rgba(14,18,22,0.62) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',

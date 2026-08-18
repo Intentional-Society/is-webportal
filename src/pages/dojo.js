@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import {
   serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerKicker,
-  Grain2026, Nav2026, Footer2026, Head2026,
+  Grain2026, Nav2026, Footer2026, Head2026, PhotoCredit,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the Dojo page — self-contained page ported from the
@@ -27,11 +27,12 @@ const NamedDefault = () => (
     <Nav2026 active="/dojo" />
 
     {/* ======== Header band ======== */}
-    <header style={{
+    <header className="credit-host" style={{
       position: 'relative', marginTop: '77px', minHeight: '340px', display: 'flex',
       alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-      background: 'url(/design2026/dojo-header.webp) center/cover, #1c2730',
+      background: 'url(/design2026/luminaria-row.jpg) center/cover, #1c2730',
     }}>
+      <PhotoCredit name="Bill" />
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         background: 'linear-gradient(180deg, rgba(14,18,22,0.62) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
@@ -44,12 +45,6 @@ const NamedDefault = () => (
         }}>
           A skill-building space for developmental-relational practice
         </h1>
-      </div>
-      <div style={{
-        position: 'absolute', bottom: '0.5rem', right: '0.9rem', zIndex: 2,
-        fontFamily: sans, fontSize: '12px', color: 'rgba(232,223,208,0.75)',
-      }}>
-        Image: <a href="https://photodojodsi.fandom.com/wiki/Dojo_Background" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(232,223,208,0.9)' }}>Photo Dojo DSI Wiki</a>
       </div>
     </header>
 

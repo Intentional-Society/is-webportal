@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import {
   serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026,
+  Grain2026, Nav2026, Footer2026, Head2026, PhotoCredit,
 } from '../components/design2026/chrome';
 
 // 2026 homepage redesign — self-contained page ported from the Claude Design
@@ -17,8 +17,8 @@ const spaces = [
   {
     title: 'Find others',
     to: '/community',
-    img: '/design2026/card-practice.jpg',
-    alt: 'Hibiscus anthers gathered around a stigma',
+    img: '/design2026/flame-azalea.jpg',
+    alt: 'A cluster of orange flame azalea blossoms',
     fallback: 'linear-gradient(135deg,#D4A88C 0%,#b9617a 100%)',
     text: "You're drawn to inner development — awareness, acceptance, integrity — and want a community to grow alongside.",
     radius: '8px 4px 6px 3px',
@@ -26,18 +26,18 @@ const spaces = [
   {
     title: 'Intentional practice',
     to: '/dojo',
-    img: '/design2026/card-find-others.jpg',
-    alt: 'A blue salvia bud beginning to open',
-    fallback: 'linear-gradient(135deg,#3A5A8A 0%,#1E3550 100%)',
+    img: '/design2026/cosmos.jpg',
+    alt: 'A magenta cosmos flower against soft green',
+    fallback: 'linear-gradient(135deg,#7A9E8A 0%,#b9617a 100%)',
     text: 'You are interested in relational practices. Learn and practice with others in a peer-led developmental space.',
     radius: '3px 7px 4px 6px',
   },
   {
     title: 'Work with purpose',
     to: '/iv',
-    img: '/design2026/card-work.jpg',
-    alt: 'A frost-covered stamen against deep blue',
-    fallback: 'linear-gradient(135deg,#cdd9e2 0%,#3A5A8A 100%)',
+    img: '/design2026/monarch-goldenrod.jpg',
+    alt: 'A monarch butterfly feeding on goldenrod',
+    fallback: 'linear-gradient(135deg,#D4A88C 0%,#7A9E8A 100%)',
     text: 'You have a project or venture idea and want to develop it within a values-aligned community.',
     radius: '6px 3px 7px 4px',
   },
@@ -61,11 +61,12 @@ const NamedDefault = () => (
     <Nav2026 />
 
     {/* ======== Hero ======== */}
-    <section style={{
+    <section className="credit-host" style={{
       position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center',
       justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
       background: 'url(/design2026/hero.jpg) center 60%/cover, linear-gradient(165deg,#F8F5EF 0%,#E8DFD0 46%,#cdd9cf 100%)',
     }}>
+      <PhotoCredit name="Bill" />
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         background: 'radial-gradient(ellipse at 50% 42%, rgba(248,245,239,0.55) 0%, rgba(248,245,239,0.15) 45%, transparent 70%), linear-gradient(180deg, rgba(248,245,239,0.1) 0%, transparent 35%, rgba(38,50,61,0.12) 100%)',
@@ -131,60 +132,67 @@ const NamedDefault = () => (
           display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           gap: '3rem', marginTop: '2.5rem', alignItems: 'center',
         }}>
-          <figure style={{ margin: 0 }}>
+          <figure className="credit-host" style={{ margin: 0, position: 'relative' }}>
+            <PhotoCredit name="Bill" />
             <img src="/design2026/waterfall.jpg" alt="A small waterfall over dark rock in a quiet forest"
               style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', borderRadius: '7px 4px 8px 3px', display: 'block' }} />
-            <figcaption style={{ fontSize: '14px', fontStyle: 'italic', color: MUTED, marginTop: '0.6rem' }}>
-              By Bill — community member and avid photographer.
-            </figcaption>
           </figure>
-          <div style={{ display: 'grid', gap: '2rem' }}>
-            <div>
-              <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
-                How it started
-              </h3>
-              <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1rem', lineHeight: 1.7 }}>
-                In early 2020, a small group began meeting weekly on an intuition: that genuine
-                human development — becoming more aware, more honest, more capable of real
-                contact — was possible in a virtual circle, and that doing it together was
-                better than alone.
-              </p>
-              <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: 0, lineHeight: 1.7 }}>
-                Five years and hundreds of gatherings later, something real has accumulated.
-                The circle has grown to include people from thirty countries who share a pull
-                toward a more spacious way of being.
-              </p>
-            </div>
-            <div>
-              <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
-                What we actually do
-              </h3>
-              <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1rem', lineHeight: 1.7 }}>
-                Every Sunday we gather — not for a lecture, but for something closer to a
-                living room with intention. Relational practices, peer-supported inner work,
-                noticing exercises. Between calls, small pods of four meet to go deeper.
-              </p>
-              <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 }}>
-                There is no teacher at the front of the room. We are peer-led, not
-                expert-delivered. What makes it work is the regularity — depth requires
-                continuity.
-              </p>
-              <Link to="/about" style={{ fontFamily: serif, fontStyle: 'italic', fontWeight: 500, fontSize: '17px', color: ACCENT, textDecoration: 'none' }}>
-                More about who we are and where we came from →
-              </Link>
-            </div>
+          <div>
+            <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
+              How it started
+            </h3>
+            <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1rem', lineHeight: 1.7 }}>
+              In early 2020, a small group began meeting weekly on an intuition: that genuine
+              human development — becoming more aware, more honest, more capable of real
+              contact — was possible in a virtual circle, and that doing it together was
+              better than alone.
+            </p>
+            <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: 0, lineHeight: 1.7 }}>
+              Five years and hundreds of gatherings later, something real has accumulated.
+              The circle has grown to include people from thirty countries who share a pull
+              toward a more spacious way of being.
+            </p>
           </div>
+        </div>
+        <div style={{
+          display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '3rem', marginTop: '3rem', alignItems: 'center',
+        }}>
+          <div>
+            <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
+              What we actually do
+            </h3>
+            <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1rem', lineHeight: 1.7 }}>
+              Every Sunday we gather — not for a lecture, but for something closer to a
+              living room with intention. Relational practices, peer-supported inner work,
+              noticing exercises. Between calls, small pods of four meet to go deeper.
+            </p>
+            <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 }}>
+              There is no teacher at the front of the room. We are peer-led, not
+              expert-delivered. What makes it work is the regularity — depth requires
+              continuity.
+            </p>
+            <Link to="/about" style={{ fontFamily: serif, fontStyle: 'italic', fontWeight: 500, fontSize: '17px', color: ACCENT, textDecoration: 'none' }}>
+              More about who we are and where we came from →
+            </Link>
+          </div>
+          <figure className="credit-host" style={{ margin: 0, position: 'relative' }}>
+            <PhotoCredit name="Bill" />
+            <img src="/design2026/fungus-trunk.jpg" alt="Layers of turkey-tail fungus climbing a mossy trunk"
+              style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', borderRadius: '4px 8px 3px 7px', display: 'block' }} />
+          </figure>
         </div>
       </div>
     </section>
 
     {/* ======== Interstitial: the mission ======== */}
     {/* ice-torn.png already carries transparent, ragged top/bottom edges — no CSS mask needed. */}
-    <section style={{
+    <section className="credit-host" style={{
       position: 'relative', zIndex: 3,
       background: 'url(/design2026/ice-torn.png) center/cover',
       minHeight: '460px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden',
     }}>
+      <PhotoCredit name="Karla" />
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         background: 'radial-gradient(ellipse at 50% 50%, rgba(12,18,24,0.62) 0%, rgba(12,18,24,0.42) 55%, transparent 80%), linear-gradient(180deg, rgba(12,18,24,0.55) 0%, rgba(12,18,24,0.45) 50%, rgba(12,18,24,0.62) 100%)',
@@ -217,10 +225,12 @@ const NamedDefault = () => (
               textDecoration: 'none', color: INK, position: 'relative', overflow: 'hidden',
               borderRadius: s.radius, display: 'block',
             }}>
-              <div role="img" aria-label={s.alt} style={{
-                height: '130px', marginBottom: '1.3rem', overflow: 'hidden',
+              <div className="credit-host" role="img" aria-label={s.alt} style={{
+                position: 'relative', height: '130px', marginBottom: '1.3rem', overflow: 'hidden',
                 background: `url(${s.img}) center/cover, ${s.fallback}`,
-              }} />
+              }}>
+                <PhotoCredit name="Bill" inset={8} />
+              </div>
               <h3 style={{ fontFamily: serif, fontWeight: 500, fontSize: '1.3rem', margin: '0 0 0.8rem', padding: '0 1.5rem' }}>
                 {s.title}
               </h3>

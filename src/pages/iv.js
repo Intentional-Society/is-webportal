@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import {
   serif, sans, ACCENT_DARK, INK, BODY_TEXT, PAPER, headerKicker,
-  Grain2026, Nav2026, Footer2026, Head2026,
+  Grain2026, Nav2026, Footer2026, Head2026, PhotoCredit,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the Ventures page — self-contained page ported from the
@@ -26,11 +26,12 @@ const NamedDefault = () => (
     <Nav2026 active="/iv" />
 
     {/* ======== Header band ======== */}
-    <header style={{
+    <header className="credit-host" style={{
       position: 'relative', marginTop: '77px', minHeight: '340px', display: 'flex',
       alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
       background: 'url(/design2026/willow.jpg) center 40%/cover, #1c2730',
     }}>
+      <PhotoCredit name="Bill" />
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         background: 'linear-gradient(180deg, rgba(14,18,22,0.62) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
@@ -73,6 +74,12 @@ const NamedDefault = () => (
         <p style={{ ...bodyP, marginBottom: '2rem' }}>
           The capital pool for IV investments intends to open to external donors in 2026.
         </p>
+
+        <figure className="credit-host" style={{ margin: '0 0 3rem', position: 'relative' }}>
+          <PhotoCredit name="Bill" />
+          <img src="/design2026/monarch-goldenrod.jpg" alt="A monarch butterfly feeding on goldenrod"
+            style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', borderRadius: '3px 7px 4px 6px', display: 'block' }} />
+        </figure>
 
         {divider}
 
