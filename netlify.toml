@@ -18,9 +18,5 @@
   to = "/about"
 
 [[redirects]]
-  from = "/thecall"
-  to = "/news#the-call"
-
-[[redirects]]
   from = "/questions"
   to = "/resources#faq"
