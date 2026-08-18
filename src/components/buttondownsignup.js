@@ -7,7 +7,7 @@ const NamedDefault = () => <>
       <form
         action="https://buttondown.email/api/emails/embed-subscribe/intentionalsociety"
         method="post" target="popupwindow"
-        onSubmit={() => (window.open('https://buttondown.email/intentionalsociety', 'popupwindow'))}
+        onSubmit={() => (window.open('https://buttondown.com/intentionalsociety', 'popupwindow', 'width=520,height=520'))}
         className={`embeddable-buttondown-form ${styles.formRow}`}
       >
         <input type="email" name="email" id="bd-email" className={styles.textarea} placeholder="Email address"></input>
