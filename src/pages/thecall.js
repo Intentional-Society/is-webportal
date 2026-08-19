@@ -22,7 +22,7 @@ const NamedDefault = () => (
     <HeaderBand
       image="/design2026/willow.jpg" focus="center 35%" credit="Bill" veil="news"
       kicker="News · December 2020" width="720px"
-      titleSize="clamp(1.8rem,3.4vw,2.6rem)" title="The Call"
+      title="The Call"
     />
 
     {/* ======== Article body ======== */}

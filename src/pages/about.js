@@ -30,7 +30,7 @@ const NamedDefault = () => (
     <HeaderBand
       image="/design2026/crystals-header.jpg" credit="Bill"
       kicker="About Intentional Society" width="820px"
-      titleSize="clamp(2.2rem,3.8vw,3.4rem)"
+      titleSize="large"
       title={<>A society we are creating <em style={{ fontStyle: 'italic' }}>on purpose</em></>}
     >
       <p style={headerLead}>

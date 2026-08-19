@@ -28,7 +28,7 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="/design2026/turkeytail-log.jpg" credit="Bill"
-      kicker="Community" titleSize="clamp(2.2rem,4.2vw,3.2rem)"
+      kicker="Community"
       title="A space full of relationships that matter"
     />
 

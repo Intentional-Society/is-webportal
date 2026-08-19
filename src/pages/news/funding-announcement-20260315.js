@@ -23,7 +23,7 @@ const NamedDefault = () => (
     <HeaderBand
       image="/design2026/luminaria-field.jpg" focus="center 40%" credit="Bill" veil="news"
       kicker="News · March 15, 2026" width="720px"
-      titleSize="clamp(1.8rem,3.4vw,2.6rem)"
+      titleSize="compact"
       title="Intentional Society Announces $1.8 Million, 10-Year Funding Commitment"
     />
 

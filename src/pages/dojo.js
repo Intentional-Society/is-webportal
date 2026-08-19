@@ -29,7 +29,7 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="/design2026/luminaria-row.jpg" credit="Bill"
-      kicker="Relational Dojo" titleSize="clamp(1.5rem,3vw,2.2rem)"
+      kicker="Relational Dojo" titleSize="compact"
       title="A skill-building space for developmental-relational practice"
     />
 

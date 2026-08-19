@@ -41,7 +41,7 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="/design2026/pond-leaves.jpg" focus="center 45%" credit="Bill" veil="news"
-      kicker="News" titleSize="clamp(2rem,4vw,2.8rem)"
+      kicker="News"
       title="Announcements and articles"
     />
 

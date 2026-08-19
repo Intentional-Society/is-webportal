@@ -94,6 +94,17 @@ const VEILS = {
   news: 'linear-gradient(180deg, rgba(14,18,22,0.6) 0%, rgba(14,18,22,0.5) 50%, rgba(14,18,22,0.66) 100%)',
 };
 
+// Three title sizes rather than a bespoke clamp per page — pages had drifted
+// into nine different clamps, several by copy-paste rather than intent.
+// `standard` is the default. `large` is for About, which carries the most
+// editorial weight. `compact` keeps titles past ~50 characters (Dojo, the
+// funding announcement) from swallowing the band.
+const TITLE_SIZES = {
+  large: 'clamp(2.2rem,3.8vw,3.4rem)',
+  standard: 'clamp(2rem,4vw,3rem)',
+  compact: 'clamp(1.8rem,3.4vw,2.6rem)',
+};
+
 // The header band every interior 2026 page opens with: full-bleed photo under
 // a dark veil, kicker over a serif h1, optionally a lead paragraph passed as
 // children. Props cover what genuinely differs page to page; everything else
@@ -102,12 +113,13 @@ const VEILS = {
 //   <HeaderBand image="/design2026/moss-roots.jpg" credit="Bill"
 //     kicker="Friends" title="Fellow travelers in the wider ecosystem" />
 //
-// `focus` is the CSS background-position ('center 40%'); `titleSize` a font-size
-// or clamp(); `width` the text column's max width; `veil` a key of VEILS above.
-// Omit `credit` for a header whose photo isn't a community member's.
+// `focus` is the CSS background-position ('center 40%'); `titleSize` a key of
+// TITLE_SIZES, or a raw font-size/clamp() string for a genuine one-off; `width`
+// the text column's max width; `veil` a key of VEILS above. Omit `credit` for a
+// header whose photo isn't a community member's.
 export const HeaderBand = ({
   image, focus = 'center', credit, kicker, title,
-  titleSize = 'clamp(2rem,4vw,3rem)', width = '640px', veil = 'deep', children,
+  titleSize = 'standard', width = '640px', veil = 'deep', children,
 }) => (
   <header className="credit-host" style={{
     position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
@@ -121,7 +133,8 @@ export const HeaderBand = ({
     <div style={{ position: 'relative', zIndex: 2, maxWidth: width, padding: '4rem 2rem' }}>
       {kicker && <div style={headerKicker}>{kicker}</div>}
       <h1 style={{
-        fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: titleSize,
+        fontFamily: serif, fontWeight: 500, lineHeight: 1.25,
+        fontSize: TITLE_SIZES[titleSize] || titleSize,
         color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)',
         margin: children ? '0 0 1.2rem' : 0,
       }}>{title}</h1>
