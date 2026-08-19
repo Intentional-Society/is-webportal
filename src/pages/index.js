@@ -48,10 +48,45 @@ const kicker = {
   textTransform: 'uppercase', fontWeight: 600,
 };
 
+// Teal CTA button — currently unused (the hero's "Enter the community" button
+// became a scroll cue); kept for future CTAs, like .big-button in global.module.css.
 const ctaButton = {
   display: 'inline-block', padding: '0.8rem 2rem', background: ACCENT,
   color: '#fff', textDecoration: 'none', fontFamily: sans, fontSize: '16px',
   fontWeight: 500, letterSpacing: '0.03em', borderRadius: '3px',
+};
+
+// How long the hero arrow's glide takes, in ms. CSS `scroll-behavior: smooth`
+// has no duration knob — Chrome picks its own, which reads as hurried here — so
+// the scroll is animated by hand. This is the only number to touch to retune it.
+const SCROLL_CUE_MS = 1100;
+const NAV_HEIGHT = 77;
+
+const easeInOutCubic = t => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+
+const glideToThreeMoves = event => {
+  const target = document.getElementById('three-moves');
+  if (!target) return; // let the browser follow the href as a fallback
+  event.preventDefault();
+
+  const startY = window.scrollY;
+  const endY = startY + target.getBoundingClientRect().top - NAV_HEIGHT;
+  const settle = () => window.history.replaceState(null, '', '#three-moves');
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.scrollTo(0, endY);
+    settle();
+    return;
+  }
+
+  const started = performance.now();
+  const step = now => {
+    const t = Math.min(1, (now - started) / SCROLL_CUE_MS);
+    window.scrollTo(0, startY + (endY - startY) * easeInOutCubic(t));
+    if (t < 1) window.requestAnimationFrame(step);
+    else settle();
+  };
+  window.requestAnimationFrame(step);
 };
 
 const NamedDefault = () => (
@@ -72,30 +107,61 @@ const NamedDefault = () => (
         background: 'radial-gradient(ellipse at 50% 42%, rgba(248,245,239,0.55) 0%, rgba(248,245,239,0.15) 45%, transparent 70%), linear-gradient(180deg, rgba(248,245,239,0.1) 0%, transparent 35%, rgba(38,50,61,0.12) 100%)',
       }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '680px', padding: '2rem' }}>
-        <div style={{ ...kicker, color: ACCENT_DARK, marginBottom: '1.5rem' }}>
-          An experiment in becoming together
-        </div>
         <h1 style={{
           fontFamily: serif, fontWeight: 400, lineHeight: 1.2, fontSize: 'clamp(2.5rem,5vw,4rem)',
           color: INK, margin: '0 0 1.5rem', textShadow: '0 1px 18px rgba(248,245,239,0.7)',
         }}>
-          Something is <em style={{ color: ACCENT }}>already growing</em> here
+          {/* Connectives borrow the shared `kicker` style (serif, 13px, uppercase,
+              tracked) so the three accented phrases read as the headline and the
+              joining words step back out of the way. */}
+          <em style={{ color: ACCENT, display: 'block' }}>inner development</em>
+          <span style={{ ...kicker, color: ACCENT_DARK, display: 'block', margin: '0.7rem 0' }}>leading to</span>
+          <em style={{ color: ACCENT, display: 'block' }}>wise action</em>
+          <span style={{ ...kicker, color: ACCENT_DARK, display: 'block', margin: '0.7rem 0' }}>catalyzed by</span>
+          <em style={{ color: ACCENT, display: 'block' }}>human connection</em>
         </h1>
         <p style={{
           color: INK, fontSize: '1.10rem', fontWeight: 500, lineHeight: 1.7, margin: '0 auto 2.5rem',
           maxWidth: '560px', textShadow: '0 1px 12px rgba(248,245,239,0.85)',
         }}>
-          An online community for inner development, wise action, and human connection
-          — peer-led, free, and five years into the work.
+          A micro-society for becoming who we want to be, individually and collectively,
+          in order to face an uncertain world with capacity, joy, and integrity.
         </p>
-        <Link to="/get-involved" style={ctaButton}>Enter the community</Link>
+        {/* Scroll cue — jumps to the interstitial below. The <a> carries the
+            accessible name; the SVG itself is decorative. */}
+        <a href="#three-moves" aria-label="Scroll down to the next section"
+          onClick={glideToThreeMoves}
+          className="hero-scroll-cue" style={{ color: ACCENT_DARK, display: 'inline-block', lineHeight: 0 }}>
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+            <path d="M12 4.5v14" />
+            <path d="M5.5 12.5 12 19l6.5-6.5" />
+          </svg>
+        </a>
+        <style>{`
+          .hero-scroll-cue { animation: heroScrollCue 1.8s ease-in-out infinite; border-radius: 50%; }
+          .hero-scroll-cue:hover { opacity: 1; }
+          .hero-scroll-cue:focus-visible { outline: 2px solid ${ACCENT_DARK}; outline-offset: 6px; }
+          @keyframes heroScrollCue {
+            0%, 100% { transform: translateY(0);     opacity: 0.7; }
+            50%      { transform: translateY(14px); opacity: 1; }
+          }
+          /* No scroll-behavior: smooth here — glideToThreeMoves() drives the
+             scroll itself, and a smooth html would fight its per-frame scrollTo. */
+          @media (prefers-reduced-motion: reduce) {
+            .hero-scroll-cue { animation: none; opacity: 0.9; }
+          }
+        `}</style>
       </div>
     </section>
 
     {/* ======== Interstitial: the three moves ======== */}
     {/* wood-band.png carries its own ragged top/bottom edges (transparent PNG); the
         negative margin pulls it up to tear into the hero above. */}
-    <section style={{ position: 'relative', zIndex: 3, marginTop: '-150px', textAlign: 'center' }}>
+    <section id="three-moves" style={{
+      position: 'relative', zIndex: 3, marginTop: '-150px', textAlign: 'center',
+      scrollMarginTop: '77px', /* clears the fixed nav */
+    }}>
       <img src="/design2026/wood-band.png" alt="" aria-hidden="true"
         style={{ display: 'block', width: '100%', height: 'auto', pointerEvents: 'none' }} />
       <div style={{
