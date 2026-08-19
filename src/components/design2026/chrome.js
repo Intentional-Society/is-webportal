@@ -86,6 +86,56 @@ export const PhotoCredit = ({ name, inset = 16 }) => (
   </div>
 );
 
+// The two dark veils that sit over a header photo so white type stays legible.
+// `deep` is the interior-page default; `news` is a touch lighter, used by the
+// News family (news index, articles) where the photos are already darker.
+const VEILS = {
+  deep: 'linear-gradient(180deg, rgba(14,18,22,0.62) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
+  news: 'linear-gradient(180deg, rgba(14,18,22,0.6) 0%, rgba(14,18,22,0.5) 50%, rgba(14,18,22,0.66) 100%)',
+};
+
+// The header band every interior 2026 page opens with: full-bleed photo under
+// a dark veil, kicker over a serif h1, optionally a lead paragraph passed as
+// children. Props cover what genuinely differs page to page; everything else
+// is fixed here on purpose, so the bands stay a family.
+//
+//   <HeaderBand image="/design2026/moss-roots.jpg" credit="Bill"
+//     kicker="Friends" title="Fellow travelers in the wider ecosystem" />
+//
+// `focus` is the CSS background-position ('center 40%'); `titleSize` a font-size
+// or clamp(); `width` the text column's max width; `veil` a key of VEILS above.
+// Omit `credit` for a header whose photo isn't a community member's.
+export const HeaderBand = ({
+  image, focus = 'center', credit, kicker, title,
+  titleSize = 'clamp(2rem,4vw,3rem)', width = '640px', veil = 'deep', children,
+}) => (
+  <header className="credit-host" style={{
+    position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
+    alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
+    background: `url(${image}) ${focus}/cover, #1c2730`,
+  }}>
+    {credit && <PhotoCredit name={credit} />}
+    <div style={{
+      position: 'absolute', inset: 0, pointerEvents: 'none', background: VEILS[veil],
+    }} />
+    <div style={{ position: 'relative', zIndex: 2, maxWidth: width, padding: '4rem 2rem' }}>
+      {kicker && <div style={headerKicker}>{kicker}</div>}
+      <h1 style={{
+        fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: titleSize,
+        color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)',
+        margin: children ? '0 0 1.2rem' : 0,
+      }}>{title}</h1>
+      {children}
+    </div>
+  </header>
+);
+
+// Lead paragraph style for a HeaderBand's children, on the pages that have one.
+export const headerLead = {
+  color: '#FAF8F3', fontSize: '1.3rem', fontWeight: 500, lineHeight: 1.6,
+  margin: '0 auto', maxWidth: '600px', textShadow: '0 1px 12px rgba(8,12,16,0.8)',
+};
+
 // Fixed top nav. `active` is the path of the current page ('/about', '/dojo', …);
 // omit it on the homepage. Collapses to a hamburger below 820px. "More" opens
 // a dropdown with the secondary pages (FAQ, Friends, News).

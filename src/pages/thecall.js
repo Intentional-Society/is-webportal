@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, BODY_TEXT, PAPER, headerKicker,
-  Grain2026, Nav2026, Footer2026, Head2026, PhotoCredit,
-  NAV_OFFSET,
+  serif, sans, ACCENT_DARK, INK, BODY_TEXT, PAPER,
+  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of "The Call" — the founding letter, December 2020. Split
@@ -20,24 +19,11 @@ const NamedDefault = () => (
     <Nav2026 active="/news" />
 
     {/* ======== Header band ======== */}
-    <header className="credit-host" style={{
-      position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
-      alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-      background: 'url(/design2026/willow.jpg) center 35%/cover, #1c2730',
-    }}>
-      <PhotoCredit name="Bill" />
-      <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none',
-        background: 'linear-gradient(180deg, rgba(14,18,22,0.6) 0%, rgba(14,18,22,0.5) 50%, rgba(14,18,22,0.66) 100%)',
-      }} />
-      <div style={{ position: 'relative', zIndex: 2, maxWidth: '720px', padding: '3.5rem 2rem' }}>
-        <div style={headerKicker}>News · December 2020</div>
-        <h1 style={{
-          fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(1.8rem,3.4vw,2.6rem)',
-          color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)', margin: 0,
-        }}>The Call</h1>
-      </div>
-    </header>
+    <HeaderBand
+      image="/design2026/willow.jpg" focus="center 35%" credit="Bill" veil="news"
+      kicker="News · December 2020" width="720px"
+      titleSize="clamp(1.8rem,3.4vw,2.6rem)" title="The Call"
+    />
 
     {/* ======== Article body ======== */}
     <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>

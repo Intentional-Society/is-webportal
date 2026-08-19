@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerKicker,
-  Grain2026, Nav2026, Footer2026, Head2026, PhotoCredit,
-  NAV_OFFSET,
+  serif, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerLead,
+  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand, PhotoCredit,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the About page — self-contained page ported from the
@@ -28,34 +27,18 @@ const NamedDefault = () => (
     <Nav2026 active="/about" />
 
     {/* ======== Header band ======== */}
-    <header className="credit-host" style={{
-      position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
-      alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-      background: 'url(/design2026/crystals-header.jpg) center/cover, #1c2730',
-    }}>
-      <PhotoCredit name="Bill" />
-      <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none',
-        background: 'linear-gradient(180deg, rgba(14,18,22,0.6) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
-      }} />
-      <div style={{ position: 'relative', zIndex: 2, maxWidth: '820px', padding: '4rem 2rem' }}>
-        <div style={headerKicker}>About Intentional Society</div>
-        <h1 style={{
-          fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(2.2rem,3.8vw,3.4rem)',
-          color: '#FAF8F3', margin: '0 0 1.2rem', textShadow: '0 2px 24px rgba(8,12,16,0.8)',
-        }}>
-          A society we are creating <em style={{ fontStyle: 'italic' }}>on purpose</em>
-        </h1>
-        <p style={{
-          color: '#FAF8F3', fontSize: '1.3rem', fontWeight: 500, lineHeight: 1.6, margin: '0 auto',
-          maxWidth: '600px', textShadow: '0 1px 12px rgba(8,12,16,0.8)',
-        }}>
-          Intentional Society is a community authoring itself as it goes — a developmental
-          culture built week by week since 2020, by the people inside it. Not finished, and
-          not meant to be.
-        </p>
-      </div>
-    </header>
+    <HeaderBand
+      image="/design2026/crystals-header.jpg" credit="Bill"
+      kicker="About Intentional Society" width="820px"
+      titleSize="clamp(2.2rem,3.8vw,3.4rem)"
+      title={<>A society we are creating <em style={{ fontStyle: 'italic' }}>on purpose</em></>}
+    >
+      <p style={headerLead}>
+        Intentional Society is a community authoring itself as it goes — a developmental
+        culture built week by week since 2020, by the people inside it. Not finished, and
+        not meant to be.
+      </p>
+    </HeaderBand>
 
     {/* ======== Article body ======== */}
     <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>

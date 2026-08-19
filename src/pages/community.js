@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerKicker,
-  Grain2026, Nav2026, Footer2026, Head2026, PhotoCredit,
-  NAV_OFFSET,
+  serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
+  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the Community page — self-contained page ported from the
@@ -27,26 +26,11 @@ const NamedDefault = () => (
     <Nav2026 active="/community" />
 
     {/* ======== Header band ======== */}
-    <header className="credit-host" style={{
-      position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
-      alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-      background: 'url(/design2026/turkeytail-log.jpg) center/cover, #1c2730',
-    }}>
-      <PhotoCredit name="Bill" />
-      <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none',
-        background: 'linear-gradient(180deg, rgba(14,18,22,0.62) 0%, rgba(14,18,22,0.55) 50%, rgba(14,18,22,0.68) 100%)',
-      }} />
-      <div style={{ position: 'relative', zIndex: 2, maxWidth: '640px', padding: '4rem 2rem' }}>
-        <div style={headerKicker}>Community</div>
-        <h1 style={{
-          fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(2.2rem,4.2vw,3.2rem)',
-          color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)', margin: 0,
-        }}>
-          A space full of relationships that matter
-        </h1>
-      </div>
-    </header>
+    <HeaderBand
+      image="/design2026/turkeytail-log.jpg" credit="Bill"
+      kicker="Community" titleSize="clamp(2.2rem,4.2vw,3.2rem)"
+      title="A space full of relationships that matter"
+    />
 
     {/* ======== Article body ======== */}
     <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
