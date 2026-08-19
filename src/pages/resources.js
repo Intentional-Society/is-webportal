@@ -243,7 +243,7 @@ const faqGroups = [
     qas: [
       {
         q: 'Who founded this?',
-        a: <>James — who wrote <Link to="/news#the-call" style={linkStyle}>"the call"</Link> that started Intentional Society after a developmental crisis following a conventionally successful early career.</>,
+        a: <>James — who wrote <Link to="/thecall" style={linkStyle}>"the call"</Link> that started Intentional Society after a developmental crisis following a conventionally successful early career.</>,
       },
       {
         q: 'Who holds the power? What happens in conflict?',
