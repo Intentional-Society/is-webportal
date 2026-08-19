@@ -29,6 +29,15 @@ export const MUTED = '#6B6860';
 export const BODY_TEXT = '#4A473F';
 export const PAPER = '#F8F5EF';
 
+// Height of the fixed Nav2026 bar. Anything that has to sit below the nav or
+// scroll clear of it derives from this — page header bands (marginTop), the
+// mobile menu's top edge, scrollMarginTop on anchor targets. Don't hardcode
+// the number anywhere else; change it here and the whole site follows.
+// Unrelated to .anchorOffset in global.module.css, which clears the *MUI*
+// AppBar on the remaining old-theme pages.
+export const NAV_HEIGHT = 66;
+export const NAV_OFFSET = `${NAV_HEIGHT}px`;
+
 const navLinks = [
   { text: 'About', to: '/about' },
   { text: 'Community', to: '/community' },
@@ -92,7 +101,7 @@ export const Nav2026 = ({ active }) => {
   const moreActive = moreLinks.some(l => l.to === active);
   return (
     <nav style={{
-      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, height: '77px',
+      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, height: NAV_OFFSET,
       boxSizing: 'border-box', padding: '0 2rem',
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       background: PAPER, borderBottom: '1px solid rgba(42,42,36,0.06)',
@@ -109,7 +118,7 @@ export const Nav2026 = ({ active }) => {
         .nav2026-more-menu a { display: block; padding: 0.45rem 1.1rem; }
         .nav2026-more-mobile-item { display: none; }
         @media (max-width: 820px) {
-          .nav2026-links { display: none; position: fixed; top: 77px; left: 0; right: 0;
+          .nav2026-links { display: none; position: fixed; top: ${NAV_OFFSET}; left: 0; right: 0;
             flex-direction: column; align-items: flex-start; gap: 0; background: #F8F5EF;
             border-bottom: 1px solid rgba(42,42,36,0.12); padding: 0.4rem 0 1rem; }
           .nav2026-links.nav2026-open { display: flex; }

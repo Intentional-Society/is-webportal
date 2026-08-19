@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import {
   serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, PAPER, headerKicker,
   Grain2026, Nav2026, Footer2026, Head2026,
+  NAV_OFFSET,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the 404 page — brought onto the shared chrome so it
@@ -22,7 +23,7 @@ const NamedDefault = () => (
     <Nav2026 />
 
     <main style={{
-      position: 'relative', zIndex: 3, marginTop: '77px', minHeight: 'calc(100vh - 77px)',
+      position: 'relative', zIndex: 3, marginTop: NAV_OFFSET, minHeight: `calc(100vh - ${NAV_OFFSET})`,
       display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
       padding: '4rem 2rem',
     }}>

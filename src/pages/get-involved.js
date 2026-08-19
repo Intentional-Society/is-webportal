@@ -4,6 +4,7 @@ import ButtondownSignup from '../components/buttondownsignup';
 import {
   serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026, headerKicker,
+  NAV_OFFSET,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the Get Involved page — ported from the Claude Design
@@ -47,7 +48,7 @@ const NamedDefault = () => (
     {/* ======== Hero: Connection Call primary CTA ======== */}
     <a id="connection-calls" style={{ display: 'block', position: 'relative', top: '-20px', visibility: 'hidden' }}></a>
     <header id="connection-calls-hero" style={{
-      position: 'relative', marginTop: '77px', minHeight: '460px', display: 'flex',
+      position: 'relative', marginTop: NAV_OFFSET, minHeight: '460px', display: 'flex',
       alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
       padding: '4rem 2rem',
       background: 'radial-gradient(ellipse at 50% 80%, rgba(46,107,79,0.25) 0%, transparent 60%), linear-gradient(175deg,#1e2822 0%,#1a2420 50%,#1e2420 100%)',

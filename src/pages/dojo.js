@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import {
   serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerKicker,
   Grain2026, Nav2026, Footer2026, Head2026, PhotoCredit,
+  NAV_OFFSET,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the Dojo page — self-contained page ported from the
@@ -28,7 +29,7 @@ const NamedDefault = () => (
 
     {/* ======== Header band ======== */}
     <header className="credit-host" style={{
-      position: 'relative', marginTop: '77px', minHeight: '340px', display: 'flex',
+      position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
       alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
       background: 'url(/design2026/luminaria-row.jpg) center/cover, #1c2730',
     }}>

@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import {
   serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026, PhotoCredit,
+  NAV_HEIGHT, NAV_OFFSET,
 } from '../components/design2026/chrome';
 
 // 2026 homepage redesign — self-contained page ported from the Claude Design
@@ -60,7 +61,6 @@ const ctaButton = {
 // has no duration knob — Chrome picks its own, which reads as hurried here — so
 // the scroll is animated by hand. This is the only number to touch to retune it.
 const SCROLL_CUE_MS = 1100;
-const NAV_HEIGHT = 77;
 
 const easeInOutCubic = t => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
@@ -160,7 +160,7 @@ const NamedDefault = () => (
         negative margin pulls it up to tear into the hero above. */}
     <section id="three-moves" style={{
       position: 'relative', zIndex: 3, marginTop: '-150px', textAlign: 'center',
-      scrollMarginTop: '77px', /* clears the fixed nav */
+      scrollMarginTop: NAV_OFFSET, /* clears the fixed nav */
     }}>
       <img src="/design2026/wood-band.png" alt="" aria-hidden="true"
         style={{ display: 'block', width: '100%', height: 'auto', pointerEvents: 'none' }} />

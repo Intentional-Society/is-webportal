@@ -135,7 +135,11 @@ loaded from Google Fonts. Self-hosting avoids an async CDN fetch that
 previously caused a layout-jitter bug: as different font weights arrived at
 different times, the fixed-position nav's rendered height nudged slightly on
 each swap-in, which showed up as visible jumping since the nav never
-reflows now (`Nav2026` has a fixed `height: 77px`). Below 820px, `Nav2026`
+reflows now (`Nav2026` has a fixed `height: 66px`; that number is repeated as
+`marginTop` on every 2026 page's header band, as the mobile menu's `top`, and
+as `NAV_HEIGHT` in index.js — move them together. It is unrelated to
+`.anchorOffset`/`top:-74px`, which clear the *MUI* AppBar on old-theme pages).
+Below 820px, `Nav2026`
 collapses to a hamburger menu; on mobile all links — including
 Resources/Friends/News — render as plain top-level items (no nested "More"
 toggle, since the menu already has vertical room to spare there). Above
