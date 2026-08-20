@@ -41,6 +41,7 @@ export const NAV_OFFSET = `${NAV_HEIGHT}px`;
 const navLinks = [
   { text: 'About', to: '/about' },
   { text: 'Community', to: '/community' },
+  { text: 'Web', to: '/web' },
   { text: 'Dojo', to: '/dojo' },
   { text: 'Ventures', to: '/iv' },
 ];
@@ -150,7 +151,10 @@ export const headerLead = {
 };
 
 // Fixed top nav. `active` is the path of the current page ('/about', '/dojo', …);
-// omit it on the homepage. Collapses to a hamburger below 820px. "More" opens
+// omit it on the homepage. Collapses to a hamburger below 920px — the desktop
+// row needs ~890px for six links plus the logo, More and CTA, so the
+// breakpoint carries only ~30px of slack: adding or renaming a nav link means
+// re-checking it. "More" opens
 // a dropdown with the secondary pages (FAQ, Friends, News).
 export const Nav2026 = ({ active }) => {
   const [open, setOpen] = React.useState(false);
@@ -180,7 +184,7 @@ export const Nav2026 = ({ active }) => {
         .nav2026-more-menu li { padding: 0; }
         .nav2026-more-menu a { display: block; padding: 0.45rem 1.1rem; }
         .nav2026-more-mobile-item { display: none; }
-        @media (max-width: 820px) {
+        @media (max-width: 920px) {
           .nav2026-links { display: none; position: fixed; top: ${NAV_OFFSET}; left: 0; right: 0;
             flex-direction: column; align-items: flex-start; gap: 0; background: #F8F5EF;
             border-bottom: 1px solid rgba(42,42,36,0.12); padding: 0.4rem 0 1rem; }

@@ -123,13 +123,19 @@ in place:
   automatically.
 
 ### 2026 redesign pages — shared chrome (`src/components/design2026/chrome.js`)
-The redesigned pages (index, about, community, dojo, iv, resources, friends,
-news, get-involved) are self-contained (do NOT use `<Layout>`/MUI theme) and
-share one module for design tokens (serif/sans/color constants), `Grain2026`,
-`Nav2026` (pass `active="/path"`; collapses to a hamburger below 820px),
-`Footer2026`, `Head2026` (meta + title/description), and `headerKicker` (the
-shared eyebrow style for header-band titles). Edit chrome.js to change nav
-links or the footer everywhere at once. Fonts (Cormorant Garamond, DM Sans)
+The redesigned pages (index, about, community, web, dojo, iv, resources,
+friends, news, thecall, get-involved) are self-contained (do NOT use
+`<Layout>`/MUI theme) and share one module for design tokens
+(serif/sans/color constants), `Grain2026`, `Nav2026` (pass `active="/path"`;
+collapses to a hamburger below 920px), `Footer2026`, `Head2026` (meta +
+title/description), `PhotoCredit` (hover tooltip), `headerKicker` (the shared
+eyebrow style), and `HeaderBand` — the photo/veil/kicker/h1 band every
+interior page opens with. Prefer `HeaderBand` over hand-rolling a header:
+props are `image`, `focus`, `credit`, `kicker`, `title`, `titleSize`
+(`large`/`standard`/`compact`, or a raw clamp), `width`, `veil`
+(`deep`/`news`), plus children for a lead paragraph (style with
+`headerLead`). Edit chrome.js to change nav links or the footer everywhere
+at once. Fonts (Cormorant Garamond, DM Sans)
 are self-hosted via `@fontsource` imports at the top of chrome.js — not
 loaded from Google Fonts. Self-hosting avoids an async CDN fetch that
 previously caused a layout-jitter bug: as different font weights arrived at
@@ -139,18 +145,21 @@ reflows now (`Nav2026` has a fixed `height: 66px`; that number is repeated as
 `marginTop` on every 2026 page's header band, as the mobile menu's `top`, and
 as `NAV_HEIGHT` in index.js — move them together. It is unrelated to
 `.anchorOffset`/`top:-74px`, which clear the *MUI* AppBar on old-theme pages).
-Below 820px, `Nav2026`
+Below 920px, `Nav2026`
 collapses to a hamburger menu; on mobile all links — including
 Resources/Friends/News — render as plain top-level items (no nested "More"
 toggle, since the menu already has vertical room to spare there). Above
-820px, Resources/Friends/News stay tucked behind a "More" dropdown to save
+920px, Resources/Friends/News stay tucked behind a "More" dropdown to save
 horizontal space. The logo is a transparent `static/design2026/logo.png`
-(no mix-blend-mode hacks). Remaining old-theme pages (web, practices,
-contact, history, orientation, programs, series pages, …) still use the MUI
+(no mix-blend-mode hacks). Remaining old-theme pages (practices, contact,
+history, orientation, programs, branding, series pages) still use the MUI
 `<Layout>`, whose AppBar/Layout was restyled toward the 2026 look (same logo
-+ grain). Header photos are one-per-page: hero-path (home), crystals-header
-(about), macro crystal (community), dojo garden (dojo), willow (iv), moss
-(friends), rockfield (resources), driftwood (news). get-involved keeps the
++ grain); of those only practices and the series pages are linked from a
+2026 page, the rest are orphans. Header photos are one per page: hero (home),
+crystals-header (about), turkeytail-log (community), fungus-trunk (web),
+luminaria-row (dojo), willow (iv and thecall), moss-roots (friends),
+rockfield (resources), pond-leaves (news), luminaria-field (funding
+announcement). get-involved keeps the
 working Buttondown form and the `#newsletter` / `#connection-calls` anchors;
 its Connection Call button URL is a `CONNECTION_CALL_URL` constant at the top
 of get-involved.js — the only place to update when a new call is scheduled,
