@@ -49,6 +49,23 @@ const kicker = {
   textTransform: 'uppercase', fontWeight: 600,
 };
 
+// "leading to" / "catalyzed by", the small tracked lines between the hero's
+// three accented phrases. The margins are deliberately unequal: these words are
+// all-caps, so they carry no descenders and sit high inside their line box,
+// while the lowercase serif line above drops descenders ("inner development")
+// toward them. Equal margins therefore read as too close to the line above —
+// the extra top margin centers them optically. lineHeight 1 keeps the line box
+// tight to the caps so the margins are doing the work, not inherited leading.
+const heroConnective = {
+  ...kicker, color: ACCENT_DARK, display: 'block',
+  lineHeight: 1, margin: '1.2rem 0 0.55rem',
+};
+
+// The load-bearing words in the mission verse. 700 is a real self-hosted
+// Cormorant italic face (see the @fontsource imports in chrome.js), not a
+// browser-synthesised bold.
+const missionKey = { fontWeight: 700 };
+
 // Teal CTA button — currently unused (the hero's "Enter the community" button
 // became a scroll cue); kept for future CTAs, like .big-button in global.module.css.
 const ctaButton = {
@@ -96,12 +113,13 @@ const NamedDefault = () => (
     <Nav2026 />
 
     {/* ======== Hero ======== */}
-    <section className="credit-host" style={{
+    {/* No PhotoCredit here — the hero photo is licensed stock, not a community
+        member's, so it carries no credit and needs no credit-host wrapper. */}
+    <section style={{
       position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center',
       justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
       background: 'url(/design2026/hero.jpg) center 60%/cover, linear-gradient(165deg,#F8F5EF 0%,#E8DFD0 46%,#cdd9cf 100%)',
     }}>
-      <PhotoCredit name="Bill" />
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none',
         background: 'radial-gradient(ellipse at 50% 42%, rgba(248,245,239,0.55) 0%, rgba(248,245,239,0.15) 45%, transparent 70%), linear-gradient(180deg, rgba(248,245,239,0.1) 0%, transparent 35%, rgba(38,50,61,0.12) 100%)',
@@ -115,9 +133,9 @@ const NamedDefault = () => (
               tracked) so the three accented phrases read as the headline and the
               joining words step back out of the way. */}
           <em style={{ color: ACCENT, display: 'block' }}>inner development</em>
-          <span style={{ ...kicker, color: ACCENT_DARK, display: 'block', margin: '0.7rem 0' }}>leading to</span>
+          <span style={heroConnective}>leading to</span>
           <em style={{ color: ACCENT, display: 'block' }}>wise action</em>
-          <span style={{ ...kicker, color: ACCENT_DARK, display: 'block', margin: '0.7rem 0' }}>catalyzed by</span>
+          <span style={heroConnective}>catalyzed by</span>
           <em style={{ color: ACCENT, display: 'block' }}>human connection</em>
         </h1>
         <p style={{
@@ -179,7 +197,7 @@ const NamedDefault = () => (
             fontFamily: serif, fontStyle: 'italic', color: 'rgba(232,223,208,0.75)',
             fontSize: '1.05rem', lineHeight: 1.7, marginTop: '1.2rem', marginBottom: 0,
           }}>
-            Three moves, practiced together, that add up to growing — as people and as a people.
+            the three basic moves of perspectival growth
           </p>
         </div>
       </div>
@@ -192,7 +210,7 @@ const NamedDefault = () => (
           fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
           fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', color: '#5C4A3A', margin: '0 0 2rem',
         }}>
-          We began with a hunch about what people could become together
+          We began with a quest for integration
         </h2>
         <div style={{
           display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -205,18 +223,19 @@ const NamedDefault = () => (
           </figure>
           <div>
             <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
-              How it started
+              How Intentional Society began
             </h3>
             <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1rem', lineHeight: 1.7 }}>
-              In early 2020, a small group began meeting weekly on an intuition: that genuine
-              human development — becoming more aware, more honest, more capable of real
-              contact — was possible in a virtual circle, and that doing it together was
-              better than alone.
+              In early 2021, a small group began weekly online calls exploring the
+              intersection of relational practices with adult development psychology,
+              seeking to marry theory with practice and understand <em>how</em> we can grow
+              big enough to handle anything life throws at us.
             </p>
             <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: 0, lineHeight: 1.7 }}>
-              Five years and hundreds of gatherings later, something real has accumulated.
-              The circle has grown to include people from thirty countries who share a pull
-              toward a more spacious way of being.
+              Five+ years and hundreds of gatherings later, we now make up a network of
+              relationships and an ecosystem of affiliated spaces, integrating developmental
+              (perspective-taking) expansion to more parts of our lives as we "be the change"
+              and embody "the more beautiful world our hearts know is possible".
             </p>
           </div>
         </div>
@@ -226,20 +245,20 @@ const NamedDefault = () => (
         }}>
           <div>
             <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
-              What we actually do
+              What that means for you
             </h3>
-            <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1rem', lineHeight: 1.7 }}>
-              Every Sunday we gather — not for a lecture, but for something closer to a
-              living room with intention. Relational practices, peer-supported inner work,
-              noticing exercises. Between calls, small pods of four meet to go deeper.
-            </p>
             <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 }}>
-              There is no teacher at the front of the room. We are peer-led, not
-              expert-delivered. What makes it work is the regularity — depth requires
-              continuity.
+              Intentional Society isn't one place or one thing you do. It's a stance, a way
+              of being — with your evolving self, with others, and with the world around you.
+              We offer spaces for practice in small groups, in a school (training/learning)
+              context, in a congregational setting, and/or in a workshop (livelihood support)
+              model, all linked across a networked relational web which connects and
+              celebrates a multiplicity of journeys. The chaotic complexity of this world is
+              calling each of us to source and lead as best we can, and so we choose to grow
+              our capacity for wise and loving responsiveness.
             </p>
             <Link to="/about" style={{ fontFamily: serif, fontStyle: 'italic', fontWeight: 500, fontSize: '17px', color: ACCENT, textDecoration: 'none' }}>
-              More about who we are and where we came from →
+              More about us →
             </Link>
           </div>
           <figure className="credit-host" style={{ margin: 0, position: 'relative' }}>
@@ -265,13 +284,19 @@ const NamedDefault = () => (
       }} />
       <div style={{ textAlign: 'center', padding: '4rem 2rem', position: 'relative', zIndex: 2 }}>
         <div style={{ ...kicker, color: '#E8DFD0', marginBottom: '0.5rem' }}>Our mission</div>
+        {/* The mission is set as verse — each line is its own block so the
+            authored line breaks hold. A line only wraps if the viewport is
+            narrower than the line itself. */}
         <p style={{
           fontFamily: serif, fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontStyle: 'italic', fontWeight: 400,
           color: '#FAF8F3', maxWidth: '600px', margin: '0 auto', lineHeight: 1.5,
           textShadow: '0 2px 22px rgba(8,12,16,0.9), 0 1px 4px rgba(8,12,16,0.8)',
         }}>
-          Noticing and welcoming what is actually present — in ourselves and in each
-          other — rather than what we think should be there.
+          <span style={{ display: 'block' }}>Those who together are <strong style={missionKey}>becoming</strong></span>
+          <span style={{ display: 'block' }}>the people we <strong style={missionKey}>want</strong> to <strong style={missionKey}>be</strong></span>
+          <span style={{ display: 'block' }}>and <strong style={missionKey}>doing</strong> what we <strong style={missionKey}>value</strong></span>
+          <span style={{ display: 'block' }}>in growing <strong style={missionKey}>integrity</strong> relating to</span>
+          <span style={{ display: 'block' }}>each other, ourselves, and the world</span>
         </p>
       </div>
     </section>

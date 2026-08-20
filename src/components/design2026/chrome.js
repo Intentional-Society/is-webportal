@@ -11,6 +11,10 @@ import '@fontsource/cormorant-garamond/400.css';
 import '@fontsource/cormorant-garamond/500.css';
 import '@fontsource/cormorant-garamond/300-italic.css';
 import '@fontsource/cormorant-garamond/400-italic.css';
+// 700-italic backs the emphasised words in the homepage mission verse. Without
+// a real bold-italic face the browser synthesises one by slanting and smearing
+// the 400 weight, which looks noticeably worse at display size.
+import '@fontsource/cormorant-garamond/700-italic.css';
 import '@fontsource/dm-sans/300.css';
 import '@fontsource/dm-sans/400.css';
 import '@fontsource/dm-sans/500.css';
