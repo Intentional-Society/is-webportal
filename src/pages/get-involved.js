@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import ButtondownSignup from '../components/buttondownsignup';
+import BlurbConnectionCall, { CONNECTION_CALL_URL } from '../components/blurb-connectioncall';
 import {
   serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026, headerKicker,
@@ -9,14 +10,11 @@ import {
 
 // 2026 redesign of the Get Involved page — ported from the Claude Design
 // "Sign Up" mockup, using the shared 2026 chrome (components/design2026/).
-// Keeps the working pieces: the Zoom Connection Call registration link, the
-// Buttondown newsletter form, and the #connection-calls / #newsletter
-// anchors that other pages deep-link to.
-
-// Update this whenever a new Connection Call is scheduled — no date is shown
-// on the page itself (it was going stale faster than anyone updated it), so
-// this is the only place a change is needed.
-const CONNECTION_CALL_URL = 'https://us02web.zoom.us/meeting/register/oidEr1pEQM6izJUD-HsUrw';
+// Keeps the working pieces: the Zoom Connection Call registration link and
+// next-call date (both sourced from blurb-connectioncall.js — see that file
+// for the one place to update when a new call is scheduled), the Buttondown
+// newsletter form, and the #connection-calls / #newsletter anchors that other
+// pages deep-link to.
 
 const linkStyle = { color: ACCENT_DARK };
 
@@ -74,8 +72,14 @@ const NamedDefault = () => (
           <span style={{ display: 'block', textWrap: 'balance' }}>Meet real people in the community to see if it's right for you</span>
           <span style={{ display: 'block', textWrap: 'balance' }}>Tell us about yourself, ask questions, get to know what this is about</span>
         </p>
+        <p style={{
+          color: '#E8DFD0', fontWeight: 500, fontSize: '17px',
+          margin: '1.5rem auto 0', maxWidth: '640px', lineHeight: 1.6,
+        }}>
+          <BlurbConnectionCall />
+        </p>
         <a href={CONNECTION_CALL_URL} style={{
-          display: 'inline-block', marginTop: '1.6rem', padding: '0.9rem 2.2rem',
+          display: 'inline-block', marginTop: '1.4rem', padding: '0.9rem 2.2rem',
           background: '#7A9E8A', textDecoration: 'none',
           fontFamily: sans, fontSize: '15px', fontWeight: 500, borderRadius: '3px',
         }}>

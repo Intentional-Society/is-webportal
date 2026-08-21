@@ -161,10 +161,13 @@ luminaria-row (dojo), willow (iv and thecall), moss-roots (friends),
 rockfield (resources), pond-leaves (news), luminaria-field (funding
 announcement). get-involved keeps the
 working Buttondown form and the `#newsletter` / `#connection-calls` anchors;
-its Connection Call button URL is a `CONNECTION_CALL_URL` constant at the top
-of get-involved.js — the only place to update when a new call is scheduled,
-no date shown on the page since it always went stale faster than anyone
-updated it.
+the Connection Call date and registration URL both live in
+`src/components/blurb-connectioncall.js` (`<BlurbConnectionCall />` renders the
+"Our next IS Connection Call is on ..." sentence in the hero, and the "Join a
+Connection Call" button imports `CONNECTION_CALL_URL` from the same file) —
+that file is the only place to edit when a new call is scheduled, and keeping
+both there is what stops the button link from drifting out of sync with the
+date. Master uses the same component, so the two branches stay in step.
 
 ### `/resources` page — 2026 redesign, merged with the old FAQ page
 `src/pages/questions.js` (FAQ) was retired and folded into `resources.js`
