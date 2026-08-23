@@ -22,9 +22,10 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="/design2026/luminaria-field.jpg" focus="center 40%" credit="Bill" veil="news"
-      kicker="News · March 15, 2026" width="720px"
+      width="720px"
       titleSize="compact"
       title="Intentional Society Announces $1.8 Million, 10-Year Funding Commitment"
+      dateLabel="March 15, 2026"
     />
 
     {/* ======== Article body ======== */}

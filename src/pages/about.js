@@ -28,8 +28,8 @@ const NamedDefault = () => (
 
     {/* ======== Header band ======== */}
     <HeaderBand
-      image="/design2026/crystals-header.jpg" credit="Bill"
-      kicker="About Intentional Society" width="820px"
+      image="/design2026/crescent-butterflyweed.jpg" credit="Bill"
+      width="820px"
       titleSize="large"
       title={<>A society we are creating <em style={{ fontStyle: 'italic' }}>on purpose</em></>}
     >
@@ -74,6 +74,12 @@ const NamedDefault = () => (
         </p>
 
         {divider}
+
+        <figure className="credit-host" style={{ margin: '0 0 2.5rem', position: 'relative' }}>
+          <PhotoCredit name="Bill" />
+          <img src="/design2026/sand-dunes.jpg" alt="Beach grass planted in rows across open dunes behind a weathered sand fence"
+            style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', borderRadius: '5px 3px 6px 4px', display: 'block' }} />
+        </figure>
 
         {/* Regarding membership */}
         <h2 style={sectionHeading}>Regarding membership</h2>

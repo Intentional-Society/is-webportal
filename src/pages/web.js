@@ -84,20 +84,13 @@ const NamedDefault = () => (
 
     {/* ======== Header band ======== */}
     <HeaderBand
-      image="/design2026/fungus-trunk.jpg" focus="center 45%" credit="Bill"
-      kicker="The IS Web" title="Join the IS Web"
+      image="/design2026/crystals-header.jpg" focus="center 45%" credit="Bill"
+      title="A distributed village, held by trust"
     />
 
     {/* ======== Article body ======== */}
     <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
       <article style={{ maxWidth: '720px', margin: '0 auto' }}>
-
-        <p style={{
-          fontFamily: serif, fontSize: 'clamp(1.2rem,2.2vw,1.5rem)', fontStyle: 'italic', fontWeight: 400,
-          color: '#5C4A3A', margin: '0 0 2.5rem', lineHeight: 1.6,
-        }}>
-          This is a relational web of trust and collaboration.
-        </p>
 
         <p style={bodyP}>
           This is the network of humans associated with Intentional Society — a distributed

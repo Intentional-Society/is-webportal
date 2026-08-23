@@ -28,7 +28,6 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="/design2026/willow.jpg" focus="center 40%" credit="Bill"
-      kicker="Intentional Ventures"
       title="Aligned livelihoods, woven into a relational economic web"
     />
 

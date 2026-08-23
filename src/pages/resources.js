@@ -310,7 +310,7 @@ const NamedDefault = () => {
       {/* ======== Header band ======== */}
       <HeaderBand
         image="/design2026/rockfield.jpg" focus="center 65%" credit="Bill"
-        kicker="Resources" title="Practices we use, and answers to common questions"
+        title="Practices we use, and answers to common questions"
       />
 
       {/* ======== Article body ======== */}

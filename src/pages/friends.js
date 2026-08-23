@@ -43,7 +43,7 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="/design2026/moss-roots.jpg" credit="Bill"
-      kicker="Friends" title="Fellow travelers in the wider ecosystem"
+      title="Fellow travelers in the wider ecosystem"
     />
 
     {/* ======== Article body ======== */}

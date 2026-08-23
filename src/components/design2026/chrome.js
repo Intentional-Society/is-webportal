@@ -44,8 +44,8 @@ export const NAV_OFFSET = `${NAV_HEIGHT}px`;
 
 const navLinks = [
   { text: 'About', to: '/about' },
-  { text: 'Community', to: '/community' },
   { text: 'Web', to: '/web' },
+  { text: 'Community', to: '/community' },
   { text: 'Dojo', to: '/dojo' },
   { text: 'Ventures', to: '/iv' },
 ];
@@ -124,7 +124,7 @@ const TITLE_SIZES = {
 // header whose photo isn't a community member's.
 export const HeaderBand = ({
   image, focus = 'center', credit, kicker, title,
-  titleSize = 'standard', width = '640px', veil = 'deep', children,
+  titleSize = 'standard', width = '640px', veil = 'deep', dateLabel, children,
 }) => (
   <header className="credit-host" style={{
     position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
@@ -143,6 +143,15 @@ export const HeaderBand = ({
         color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)',
         margin: children ? '0 0 1.2rem' : 0,
       }}>{title}</h1>
+      {/* Small caps date line under the title, used by the two News article
+          pages instead of a kicker above it — doesn't affect the h1's margin
+          the way a headerLead paragraph (passed as children) does. */}
+      {dateLabel && (
+        <div style={{
+          fontFamily: sans, fontSize: '14px', letterSpacing: '0.16em', textTransform: 'uppercase',
+          fontWeight: 600, color: '#E8DFD0', marginTop: '1.1rem',
+        }}>{dateLabel}</div>
+      )}
       {children}
     </div>
   </header>

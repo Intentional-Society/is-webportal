@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import {
   serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
+  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand, PhotoCredit,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the Dojo page — self-contained page ported from the
@@ -29,7 +29,7 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="/design2026/luminaria-row.jpg" credit="Bill"
-      kicker="Relational Dojo" titleSize="compact"
+      titleSize="compact"
       title="A skill-building space for developmental-relational practice"
     />
 
@@ -43,9 +43,19 @@ const NamedDefault = () => (
           check out the Dojo website for current practice group offerings.
         </p>
 
-        <h3 style={{ fontFamily: serif, fontWeight: 400, fontStyle: 'italic', lineHeight: 1.2, fontSize: '1.3rem', margin: '2rem 0 2.5rem' }}>
-          <a href="https://relationaldojo.org" target="_blank" rel="noopener noreferrer" style={linkStyle}>Relational Dojo →</a>
+        <h3 style={{
+          fontFamily: serif, fontWeight: 500, fontStyle: 'italic', lineHeight: 1.2,
+          fontSize: 'clamp(1.9rem,3.6vw,2.6rem)', margin: '2.5rem 0 2rem', textAlign: 'center',
+        }}>
+          <a href="https://relationaldojo.org" target="_blank" rel="noopener noreferrer"
+            style={{ ...linkStyle, borderBottom: '1px solid rgba(26,66,50,0.28)' }}>Relational Dojo →</a>
         </h3>
+
+        <figure className="credit-host" style={{ margin: '0 0 3rem', position: 'relative' }}>
+          <PhotoCredit name="Bill" />
+          <img src="/design2026/lighted-path.jpg" alt="A paper lantern glowing on a woodland trail lined with strings of lights"
+            style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', borderRadius: '4px 7px 3px 6px', display: 'block' }} />
+        </figure>
 
         <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '0 auto 3rem', width: '120px' }} />
 
