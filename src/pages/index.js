@@ -6,13 +6,10 @@ import {
   NAV_HEIGHT, NAV_OFFSET,
 } from '../components/design2026/chrome';
 
-// 2026 homepage redesign — self-contained page ported from the Claude Design
-// mockup, using the shared 2026 chrome (components/design2026/). Section
-// rhythm: main content sections (light, informational) alternating with
-// interstitials (darker, atmospheric): Hero / three moves / About / mission /
-// spaces / testimonials / call to action. Torn-edge transitions are baked
-// into the section images themselves (wood-band.png, ice-torn.png) rather
-// than a generic CSS mask.
+// 2026 homepage redesign — self-contained, using the shared 2026 chrome
+// (components/design2026/). Light content sections alternate with darker
+// atmospheric interstitials. Torn edges are baked into the section images
+// (wood-band.png, ice-torn.png), not a CSS mask.
 
 const spaces = [
   {
@@ -49,21 +46,26 @@ const kicker = {
   textTransform: 'uppercase', fontWeight: 600,
 };
 
-// "leading to" / "catalyzed by", the small tracked lines between the hero's
-// three accented phrases. The margins are deliberately unequal: these words are
-// all-caps, so they carry no descenders and sit high inside their line box,
-// while the lowercase serif line above drops descenders ("inner development")
-// toward them. Equal margins therefore read as too close to the line above —
-// the extra top margin centers them optically. lineHeight 1 keeps the line box
-// tight to the caps so the margins are doing the work, not inherited leading.
-const heroConnective = {
-  ...kicker, color: ACCENT_DARK, display: 'block',
-  lineHeight: 1, margin: '1.2rem 0 0.55rem',
+// Theory-of-change line: three accented phrases joined by two smaller plain
+// verbs, as a flex row that folds to a stack when it runs out of room.
+// The clamp's floor is the load-bearing number, not its ceiling — 2.2rem is the
+// largest that still folds to three lines on a 360px phone. nowrap on both, so
+// wrapping only ever happens between items.
+const tocPhrase = { fontSize: 'clamp(2.2rem,3vw,4rem)', whiteSpace: 'nowrap' };
+const tocLabelSize = '0.92rem';
+// Plain serif rather than the tracked small caps used for labels elsewhere:
+// these are part of the sentence, not a label on it. Sized in em so the
+// contrast with the phrase stays constant at any phrase size.
+const tocJoin = {
+  fontFamily: serif, fontSize: '0.53em', fontWeight: 400,
+  color: ACCENT_DARK, whiteSpace: 'nowrap',
 };
 
-// The load-bearing words in the mission verse. 700 is a real self-hosted
-// Cormorant italic face (see the @fontsource imports in chrome.js), not a
-// browser-synthesised bold.
+// The "·" between the three moves. Padding rather than &nbsp; keeps the line's
+// wrap points, so it can break on a phone instead of overflowing the band.
+const moveSeparator = { padding: '0 0.32em' };
+
+// 700 is a real self-hosted Cormorant italic face, not a synthesised bold.
 const missionKey = { fontWeight: 700 };
 
 // Teal CTA button — currently unused (the hero's "Enter the community" button
@@ -74,9 +76,8 @@ const ctaButton = {
   fontWeight: 500, letterSpacing: '0.03em', borderRadius: '3px',
 };
 
-// How long the hero arrow's glide takes, in ms. CSS `scroll-behavior: smooth`
-// has no duration knob — Chrome picks its own, which reads as hurried here — so
-// the scroll is animated by hand. This is the only number to touch to retune it.
+// `scroll-behavior: smooth` has no duration knob and Chrome's own reads as
+// hurried, so the glide is animated by hand. Only number to touch to retune it.
 const SCROLL_CUE_MS = 1100;
 
 const easeInOutCubic = t => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
@@ -113,8 +114,7 @@ const NamedDefault = () => (
     <Nav2026 />
 
     {/* ======== Hero ======== */}
-    {/* No PhotoCredit here — the hero photo is licensed stock, not a community
-        member's, so it carries no credit and needs no credit-host wrapper. */}
+    {/* Hero photo is licensed stock, not a member's — so no PhotoCredit. */}
     <section style={{
       position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center',
       justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
@@ -125,28 +125,32 @@ const NamedDefault = () => (
         background: 'radial-gradient(ellipse at 50% 42%, rgba(248,245,239,0.55) 0%, rgba(248,245,239,0.15) 45%, transparent 70%), linear-gradient(180deg, rgba(248,245,239,0.1) 0%, transparent 35%, rgba(38,50,61,0.12) 100%)',
       }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '680px', padding: '2rem' }}>
+        {/* lineHeight 1.7, not a display line's usual 1.2: three separate
+            statements, not one wrapped sentence. */}
         <h1 style={{
-          fontFamily: serif, fontWeight: 400, lineHeight: 1.2, fontSize: 'clamp(2.5rem,5vw,4rem)',
+          fontFamily: serif, fontWeight: 400, lineHeight: 1.7, fontSize: 'clamp(2.5rem,5vw,4rem)',
           color: INK, margin: '0 0 1.5rem', textShadow: '0 1px 18px rgba(248,245,239,0.7)',
         }}>
-          {/* Connectives borrow the shared `kicker` style (serif, 13px, uppercase,
-              tracked) so the three accented phrases read as the headline and the
-              joining words step back out of the way. */}
-          <em style={{ color: ACCENT, display: 'block' }}>inner development</em>
-          <span style={heroConnective}>leading to</span>
-          <em style={{ color: ACCENT, display: 'block' }}>wise action</em>
-          <span style={heroConnective}>catalyzed by</span>
-          <em style={{ color: ACCENT, display: 'block' }}>human connection</em>
+          {/* A premise, a question, the response. First word alternates — see
+              .hero-swap below. */}
+          <em className="hero-swap-line" style={{ color: ACCENT, display: 'block' }}>
+            <span className="hero-swap">
+              <span className="hero-swap-word hero-swap-a">collapse</span>
+              <span className="hero-swap-word hero-swap-b">abundance</span>
+            </span> is arriving.
+          </em>
+          <em style={{ color: ACCENT, display: 'block' }}>what now?</em>
+          <em style={{ color: ACCENT, display: 'block' }}>be more intentional.</em>
         </h1>
         <p style={{
           color: INK, fontSize: '1.10rem', fontWeight: 500, lineHeight: 1.7, margin: '0 auto 2.5rem',
           maxWidth: '560px', textShadow: '0 1px 12px rgba(248,245,239,0.85)',
         }}>
-          A micro-society for becoming who we want to be, individually and collectively,
-          in order to face an uncertain world with capacity, joy, and integrity.
+          Intentional Society is a micro-society organizing around becoming who we want
+          to be, individually and collectively, in order to face an uncertain world with
+          capacity, joy, and integrity.
         </p>
-        {/* Scroll cue — jumps to the interstitial below. The <a> carries the
-            accessible name; the SVG itself is decorative. */}
+        {/* Scroll cue. The <a> carries the accessible name; the SVG is decorative. */}
         <a href="#three-moves" aria-label="Scroll down to the next section"
           onClick={glideToThreeMoves}
           className="hero-scroll-cue" style={{ color: ACCENT_DARK, display: 'inline-block', lineHeight: 0 }}>
@@ -157,27 +161,61 @@ const NamedDefault = () => (
           </svg>
         </a>
         <style>{`
+          /* Both words share one grid cell, so the slot is as wide as the wider
+             of them and the rest of the line never shifts. justify-items: end
+             keeps the space before "is arriving." a single space in both
+             states — a gap inside the sentence reads as a typo. */
+          .hero-swap { display: inline-grid; justify-items: end; vertical-align: baseline; }
+          /* A quarter of the two words' width difference, pulled left. A fixed
+             slot can't centre both states, so this splits the error (~12px each
+             way) instead of centring one. Re-measure if either word changes. */
+          .hero-swap-line { position: relative; left: -0.283em; }
+          .hero-swap-word { grid-area: 1 / 1; }
+          /* 7s: 2s hold, 1.5s cross-fade, twice (percentages are those seconds
+             over 7). Both words sit at 0.4 mid-fade rather than 0.5, so the pair
+             sums to 0.8 and the line dips as it turns over instead of stacking
+             into a jumble. linear, or the easing hitches at that midpoint. */
+          .hero-swap-a { animation: heroSwapA 7s linear infinite; }
+          .hero-swap-b { animation: heroSwapB 7s linear infinite; }
+          @keyframes heroSwapA {
+            0%, 28.57% { opacity: 1; }   39.29% { opacity: 0.4; }
+            50%, 78.57% { opacity: 0; }  89.29% { opacity: 0.4; }
+            100% { opacity: 1; }
+          }
+          @keyframes heroSwapB {
+            0%, 28.57% { opacity: 0; }   39.29% { opacity: 0.4; }
+            50%, 78.57% { opacity: 1; }  89.29% { opacity: 0.4; }
+            100% { opacity: 0; }
+          }
           .hero-scroll-cue { animation: heroScrollCue 1.8s ease-in-out infinite; border-radius: 50%; }
           .hero-scroll-cue:hover { opacity: 1; }
           .hero-scroll-cue:focus-visible { outline: 2px solid ${ACCENT_DARK}; outline-offset: 6px; }
           @keyframes heroScrollCue {
             0%, 100% { transform: translateY(0);     opacity: 0.7; }
-            50%      { transform: translateY(14px); opacity: 1; }
+            50%      { transform: translateY(5px); opacity: 1; }
           }
           /* No scroll-behavior: smooth here — glideToThreeMoves() drives the
              scroll itself, and a smooth html would fight its per-frame scrollTo. */
           @media (prefers-reduced-motion: reduce) {
             .hero-scroll-cue { animation: none; opacity: 0.9; }
+            /* Both words at once, slashed — no motion, meaning intact. */
+            .hero-swap { display: inline; }
+            .hero-swap-word { animation: none; opacity: 1; }
+            .hero-swap-a::after { content: '/'; }
           }
         `}</style>
       </div>
     </section>
 
     {/* ======== Interstitial: the three moves ======== */}
-    {/* wood-band.png carries its own ragged top/bottom edges (transparent PNG); the
-        negative margin pulls it up to tear into the hero above. */}
+    {/* wood-band.png carries its own ragged edges; the negative margin pulls it
+        up to tear into the hero. The overlap needs both axes — the band's height
+        tracks viewport width (1600x600 at width:100%), the hero it covers tracks
+        height — so max() splits the range at their crossover, aspect 13/9 ≈ 1.44.
+        vh governs phones and tablets, vw every landscape desktop; dial the vw
+        term for big displays, the vh term for phones. */}
     <section id="three-moves" style={{
-      position: 'relative', zIndex: 3, marginTop: '-150px', textAlign: 'center',
+      position: 'relative', zIndex: 3, marginTop: 'calc(-1 * max(13vh, 9vw))', textAlign: 'center',
       scrollMarginTop: NAV_OFFSET, /* clears the fixed nav */
     }}>
       <img src="/design2026/wood-band.png" alt="" aria-hidden="true"
@@ -187,34 +225,50 @@ const NamedDefault = () => (
         display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2,
       }}>
         <div style={{ maxWidth: '900px', padding: '0 2rem', textAlign: 'center' }}>
+          {/* Padded separator spans with real spaces, not &nbsp; inside one
+              unbreakable string: the line needs a ~470px viewport to fit, so on
+              a phone it has to be able to wrap. */}
           <div style={{
-            fontFamily: serif, fontSize: 'clamp(1.3rem,2.6vw,2.2rem)', fontWeight: 300,
-            letterSpacing: '0.08em', color: '#E8DFD0', whiteSpace: 'nowrap',
+            fontFamily: serif, fontSize: 'clamp(1.35rem,3.6vw,3rem)', fontWeight: 300,
+            letterSpacing: '0.08em', color: '#E8DFD0', lineHeight: 1.4,
           }}>
-            Awareness&nbsp;&nbsp;·&nbsp;&nbsp;Acceptance&nbsp;&nbsp;·&nbsp;&nbsp;Integrity
+            Awareness <span style={moveSeparator}>·</span> Acceptance <span style={moveSeparator}>·</span> Integrity
           </div>
-          <p style={{
-            fontFamily: serif, fontStyle: 'italic', color: 'rgba(232,223,208,0.75)',
-            fontSize: '1.05rem', lineHeight: 1.7, marginTop: '1.2rem', marginBottom: 0,
-          }}>
-            the three basic moves of perspectival growth
-          </p>
         </div>
       </div>
+    </section>
+
+    {/* ======== Theory of change ======== */}
+    {/* The band above names the moves; this names what they add up to. A flex
+        row so it reads as one chain and folds to a stack on a phone with no
+        breakpoint to maintain. The label is a kicker rather than an inline
+        "...:" lead-in, matching "Our mission" below. 1rem of side padding, not
+        2rem — those 32px are what hold the fold to three lines at 360px. */}
+    <section style={{ background: PAPER, padding: '3.5rem 1rem 1.5rem', textAlign: 'center' }}>
+      <div style={{ ...kicker, fontSize: tocLabelSize, color: '#5C4A3A', marginBottom: '1.2rem' }}>
+        Our theory of change
+      </div>
+      <h2 style={{
+        display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', justifyContent: 'center',
+        columnGap: '0.7em', rowGap: '0.3em', maxWidth: '1750px', margin: '0 auto',
+        fontFamily: serif, fontWeight: 400, lineHeight: 1.25, color: INK,
+        ...tocPhrase,
+      }}>
+        <em style={{ color: ACCENT }}>human connection</em>
+        <span style={tocJoin}>catalyzes</span>
+        <em style={{ color: ACCENT }}>inner development</em>
+        <span style={tocJoin}>leading to</span>
+        <em style={{ color: ACCENT }}>wise action</em>
+      </h2>
     </section>
 
     {/* ======== About ======== */}
     <section style={{ background: PAPER, padding: '2rem 2rem 8.5rem' }}>
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-        <h2 style={{
-          fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
-          fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', color: '#5C4A3A', margin: '0 0 2rem',
-        }}>
-          We began with a quest for integration
-        </h2>
+        {/* No section heading — the theory-of-change line above does that job. */}
         <div style={{
           display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '3rem', marginTop: '2.5rem', alignItems: 'center',
+          gap: '3rem', alignItems: 'center',
         }}>
           <figure className="credit-host" style={{ margin: 0, position: 'relative' }}>
             <PhotoCredit name="Bill" />
@@ -284,9 +338,7 @@ const NamedDefault = () => (
       }} />
       <div style={{ textAlign: 'center', padding: '4rem 2rem', position: 'relative', zIndex: 2 }}>
         <div style={{ ...kicker, color: '#E8DFD0', marginBottom: '0.5rem' }}>Our mission</div>
-        {/* The mission is set as verse — each line is its own block so the
-            authored line breaks hold. A line only wraps if the viewport is
-            narrower than the line itself. */}
+        {/* Set as verse — each line its own block, so the authored breaks hold. */}
         <p style={{
           fontFamily: serif, fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontStyle: 'italic', fontWeight: 400,
           color: '#FAF8F3', maxWidth: '600px', margin: '0 auto', lineHeight: 1.5,
