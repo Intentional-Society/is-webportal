@@ -49,18 +49,6 @@ blockquote {
   background-color: var(--is-teal-light);
 }
 
-/* Eyebrow / kicker label — DM Sans, uppercase, tracked. Used above
-   section headings throughout the 2026 design. Solid color (no opacity)
-   and a slightly larger size/weight so it stays legible on mobile. */
-.label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 600;
-  display: block;
-}
-
 .appbar-wordmark {
   font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: 1.4rem;

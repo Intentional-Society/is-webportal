@@ -4,7 +4,7 @@ import ButtondownSignup from '../components/buttondownsignup';
 import BlurbConnectionCall, { CONNECTION_CALL_URL } from '../components/blurb-connectioncall';
 import {
   serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026, headerKicker,
+  Grain2026, Nav2026, Footer2026, Head2026,
   NAV_OFFSET,
 } from '../components/design2026/chrome';
 

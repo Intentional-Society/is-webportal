@@ -56,9 +56,10 @@ const moreLinks = [
   { text: 'News', to: '/news' },
 ];
 
-// Shared "eyebrow" / kicker label used above header-band titles across the
-// 2026 pages (About, Community, Dojo, etc.) — solid color, no opacity, so it
-// stays legible against photo headers on both desktop and mobile.
+// Shared "eyebrow" / kicker label — solid color, no opacity, so it stays
+// legible against photo headers on both desktop and mobile. Used by
+// HeaderBand's optional `kicker` prop and by the 404 page's label; the
+// interior pages that once carried kickers above their titles no longer do.
 export const headerKicker = {
   fontFamily: sans, fontSize: '14px', letterSpacing: '0.18em',
   textTransform: 'uppercase', fontWeight: 600, color: '#E8DFD0',
@@ -111,13 +112,16 @@ const TITLE_SIZES = {
 };
 
 // The header band every interior 2026 page opens with: full-bleed photo under
-// a dark veil, kicker over a serif h1, optionally a lead paragraph passed as
-// children. Props cover what genuinely differs page to page; everything else
-// is fixed here on purpose, so the bands stay a family.
+// a dark veil, a serif h1, optionally a lead paragraph passed as children.
+// Props cover what genuinely differs page to page; everything else is fixed
+// here on purpose, so the bands stay a family.
 //
 //   <HeaderBand image="/design2026/moss-roots.jpg" credit="Bill"
-//     kicker="Friends" title="Fellow travelers in the wider ecosystem" />
+//     title="Fellow travelers in the wider ecosystem" />
 //
+// `kicker` renders an eyebrow label above the h1. No page passes one now — the
+// subpage kickers were dropped as redundant with the nav — but the prop still
+// works if a band ever needs one again.
 // `focus` is the CSS background-position ('center 40%'); `titleSize` a key of
 // TITLE_SIZES, or a raw font-size/clamp() string for a genuine one-off; `width`
 // the text column's max width; `veil` a key of VEILS above. Omit `credit` for a
