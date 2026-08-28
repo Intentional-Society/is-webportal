@@ -171,20 +171,20 @@ const NamedDefault = () => (
              way) instead of centring one. Re-measure if either word changes. */
           .hero-swap-line { position: relative; left: -0.283em; }
           .hero-swap-word { grid-area: 1 / 1; }
-          /* 7s: 2s hold, 1.5s cross-fade, twice (percentages are those seconds
-             over 7). Both words sit at 0.4 mid-fade rather than 0.5, so the pair
+          /* 6s: 1.5s hold, 1.5s cross-fade, twice (percentages are those seconds
+             over 6). Both words sit at 0.4 mid-fade rather than 0.5, so the pair
              sums to 0.8 and the line dips as it turns over instead of stacking
              into a jumble. linear, or the easing hitches at that midpoint. */
-          .hero-swap-a { animation: heroSwapA 7s linear infinite; }
-          .hero-swap-b { animation: heroSwapB 7s linear infinite; }
+          .hero-swap-a { animation: heroSwapA 6s linear infinite; }
+          .hero-swap-b { animation: heroSwapB 6s linear infinite; }
           @keyframes heroSwapA {
-            0%, 28.57% { opacity: 1; }   39.29% { opacity: 0.4; }
-            50%, 78.57% { opacity: 0; }  89.29% { opacity: 0.4; }
+            0%, 25% { opacity: 1; }   37.5% { opacity: 0.4; }
+            50%, 75% { opacity: 0; }  87.5% { opacity: 0.4; }
             100% { opacity: 1; }
           }
           @keyframes heroSwapB {
-            0%, 28.57% { opacity: 0; }   39.29% { opacity: 0.4; }
-            50%, 78.57% { opacity: 1; }  89.29% { opacity: 0.4; }
+            0%, 25% { opacity: 0; }   37.5% { opacity: 0.4; }
+            50%, 75% { opacity: 1; }  87.5% { opacity: 0.4; }
             100% { opacity: 0; }
           }
           .hero-scroll-cue { animation: heroScrollCue 1.8s ease-in-out infinite; border-radius: 50%; }
