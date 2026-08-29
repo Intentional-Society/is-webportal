@@ -181,7 +181,7 @@ const faqGroups = [
     qas: [
       {
         q: 'What would you say that you actually do here?',
-        a: `Mostly we get on video calls with each other, face-to-face, and spend very little time writing at each other. We make friends, support each other, and weave bits of our hearts and lives together. A lot of it is "inner work," in contrast to a conventional culture so focused on external accomplishments.`,
+        a: 'Mostly we get on video calls with each other, face-to-face, and spend very little time writing at each other. We make friends, support each other, and weave bits of our hearts and lives together. A lot of it is "inner work," in contrast to a conventional culture so focused on external accomplishments.',
       },
       {
         q: "I'm unsure, nervous, or introverted — is this relational stuff a fit for me?",
@@ -189,7 +189,7 @@ const faqGroups = [
       },
       {
         q: "Will I offend anyone if I join, don't like it, and then leave?",
-        a: `On the contrary, we'll count that as a success — you learned something and navigated tension. We celebrate arrivals, departures, and boundary-setting with equanimity.`,
+        a: 'On the contrary, we\'ll count that as a success — you learned something and navigated tension. We celebrate arrivals, departures, and boundary-setting with equanimity.',
       },
     ],
   },
@@ -202,11 +202,11 @@ const faqGroups = [
       },
       {
         q: "My life is pretty busy already — what if I can't keep up?",
-        a: `Only a problem if it feels like one to you. Be clear with yourself and others about your capacity and energy as it changes; we support people doing as they feel called.`,
+        a: 'Only a problem if it feels like one to you. Be clear with yourself and others about your capacity and energy as it changes; we support people doing as they feel called.',
       },
       {
         q: 'Do I need any tech savvy to fit in here?',
-        a: `Managing your mute button is the most crucial tech skill of the 2020s. Besides Zoom and email, we require very little.`,
+        a: 'Managing your mute button is the most crucial tech skill of the 2020s. Besides Zoom and email, we require very little.',
       },
       {
         q: 'What time zones does IS cater to?',
@@ -222,7 +222,7 @@ const faqGroups = [
       },
       {
         q: 'Does membership cost any money?',
-        a: `No, membership is free. We never want a financial barrier in front of participation in our relational web. Our norm is mostly gift culture.`,
+        a: 'No, membership is free. We never want a financial barrier in front of participation in our relational web. Our norm is mostly gift culture.',
       },
       {
         q: 'Who pays the bills, then?',
@@ -230,7 +230,7 @@ const faqGroups = [
       },
       {
         q: 'Is this therapy, or a substitute for it?',
-        a: `No. No one in IS is your therapist. If you're experiencing something that needs professional care, we encourage you to seek it — every individual holds ultimate responsibility for their own safety and needs.`,
+        a: 'No. No one in IS is your therapist. If you\'re experiencing something that needs professional care, we encourage you to seek it — every individual holds ultimate responsibility for their own safety and needs.',
       },
       {
         q: 'Does IS promote any religion or spirituality?',
@@ -247,11 +247,11 @@ const faqGroups = [
       },
       {
         q: 'Who holds the power? What happens in conflict?',
-        a: `We strive for natural, contextual, fluid power dynamics rather than rigid hierarchy or "everyone has equal power" egalitarianism. James, as founder, still holds significant source-keeper influence and the legal "keys" (domains, assets, LLC), with a stated aim to keep distributing leadership.`,
+        a: 'We strive for natural, contextual, fluid power dynamics rather than rigid hierarchy or "everyone has equal power" egalitarianism. James, as founder, still holds significant source-keeper influence and the legal "keys" (domains, assets, LLC), with a stated aim to keep distributing leadership.',
       },
       {
         q: "Can I trust power won't be hoarded or abused down the road?",
-        a: `No system replaces the need for virtue in humans. We draw on Sociocratic decision-making, Teal/Deliberately Developmental culture, Metasystematic mindset, and Agile feedback loops to help us evolve responsibly.`,
+        a: 'No system replaces the need for virtue in humans. We draw on Sociocratic decision-making, Teal/Deliberately Developmental culture, Metasystematic mindset, and Agile feedback loops to help us evolve responsibly.',
       },
       {
         q: 'What is the legal structure behind IS?',
@@ -259,7 +259,7 @@ const faqGroups = [
       },
       {
         q: 'Is this yet another playground for privileged people?',
-        a: `We have a fairly broad range of socioeconomic experience among members, though having the time and slack to dedicate to this kind of work isn't available to everyone.`,
+        a: 'We have a fairly broad range of socioeconomic experience among members, though having the time and slack to dedicate to this kind of work isn\'t available to everyone.',
       },
     ],
   },
@@ -268,11 +268,11 @@ const faqGroups = [
     qas: [
       {
         q: 'What makes IS unique?',
-        a: `Integrating adult development with relational practices plus cultural evolution is a useful tuning fork — but also, "we're just these particular people."`,
+        a: 'Integrating adult development with relational practices plus cultural evolution is a useful tuning fork — but also, "we\'re just these particular people."',
       },
       {
         q: "Are y'all utopians who think you'll save the world?",
-        a: `"Saving the world" is explicitly a non-goal. We long for a wiser, weller world and want to play our part — while staying connected to our bodies, families, and daily lives rather than chasing a savior complex.`,
+        a: '"Saving the world" is explicitly a non-goal. We long for a wiser, weller world and want to play our part — while staying connected to our bodies, families, and daily lives rather than chasing a savior complex.',
       },
       {
         q: 'What does success look like?',

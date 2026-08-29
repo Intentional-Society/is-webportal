@@ -1,27 +1,27 @@
-import React, { useState } from 'react'
-import { Link } from 'gatsby'
-import { useLocation } from '@reach/router'
-import * as GlobalCSS from '../styles/global.module.css'
-import AppBar from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
-import IconButton from '@mui/material/IconButton'
-import Button from '@mui/material/Button'
-import Menu from '@mui/material/Menu'
-import MenuItem from '@mui/material/MenuItem'
-import MenuIcon from '@mui/icons-material/Menu'
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
+import { useLocation } from '@reach/router';
+import * as GlobalCSS from '../styles/global.module.css';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const NamedDefault = () => {
-  const [anchorEl, setAnchorEl] = useState(null)
+  const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = event => {
-    setAnchorEl(event.currentTarget)
-  }
+    setAnchorEl(event.currentTarget);
+  };
 
   const handleClose = () => {
-    setAnchorEl(null)
-  }
+    setAnchorEl(null);
+  };
 
-  const { pathname } = useLocation()
+  const { pathname } = useLocation();
 
   // Prototype nav links: muted, turn teal on hover / when active. No pill wash.
   const linkSx = path => ({
@@ -33,7 +33,7 @@ const NamedDefault = () => {
     minWidth: 'auto',
     '&:hover': { backgroundColor: 'transparent', color: 'primary.main' },
     ...(pathname.startsWith(path) && { color: 'primary.main', fontWeight: 600 }),
-  })
+  });
 
   // Filled teal call-to-action (prototype .nav-cta).
   const ctaSx = {
@@ -46,7 +46,7 @@ const NamedDefault = () => {
     px: 1.6,
     py: 0.6,
     '&:hover': { backgroundColor: 'primary.dark' },
-  }
+  };
 
   return (
     <AppBar
@@ -216,6 +216,6 @@ const NamedDefault = () => {
         </Menu>
       </Toolbar>
     </AppBar>
-  )
-}
-export default NamedDefault
+  );
+};
+export default NamedDefault;

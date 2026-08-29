@@ -39,7 +39,7 @@ const spaces = [
     text: 'You have a project or venture idea and want to develop it within a values-aligned community.',
     radius: '6px 3px 7px 4px',
   },
-]
+];
 
 const kicker = {
   fontFamily: serif, fontSize: '13px', letterSpacing: '0.18em',

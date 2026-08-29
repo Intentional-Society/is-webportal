@@ -1,10 +1,10 @@
-import React from 'react'
-import * as styles from './is-footer.module.css'
+import React from 'react';
+import * as styles from './is-footer.module.css';
 
 // Three-column site footer (about / values / explore), ported from the 2026
 // prototype and wired to the real internal routes.
 const NamedDefault = () => {
-  const year = new Date().getFullYear() // IS began in 2020; range ends at the build year
+  const year = new Date().getFullYear(); // IS began in 2020; range ends at the build year
   return (
   <footer className={styles.footer}>
     <div className={styles.inner}>
@@ -30,6 +30,6 @@ const NamedDefault = () => {
       community members Bill and Karla.
     </div>
   </footer>
-  )
-}
-export default NamedDefault
+  );
+};
+export default NamedDefault;

@@ -51,7 +51,7 @@ const NamedDefault = () => (
       padding: '4rem 2rem',
       background: 'radial-gradient(ellipse at 50% 80%, rgba(46,107,79,0.25) 0%, transparent 60%), linear-gradient(175deg,#1e2822 0%,#1a2420 50%,#1e2420 100%)',
     }}>
-      <style>{`#connection-calls-hero a { color: #7A9E8A; }`}</style>
+      <style>{'#connection-calls-hero a { color: #7A9E8A; }'}</style>
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '900px', width: '100%' }}>
         <div style={{
           display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center',

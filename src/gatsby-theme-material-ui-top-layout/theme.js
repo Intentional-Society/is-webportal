@@ -7,10 +7,10 @@
 //   - The full extended palette lives as CSS variables in global.module.css
 //     (--is-teal, --is-sage, --is-tan, etc.) for use in CSS modules.
 
-import { createTheme } from '@mui/material/styles'
+import { createTheme } from '@mui/material/styles';
 
-const serifFont = ['Cormorant Garamond', 'Georgia', 'Times New Roman', 'serif'].join(',')
-const sansFont = ['DM Sans', 'Helvetica', 'Arial', 'sans-serif'].join(',')
+const serifFont = ['Cormorant Garamond', 'Georgia', 'Times New Roman', 'serif'].join(',');
+const sansFont = ['DM Sans', 'Helvetica', 'Arial', 'sans-serif'].join(',');
 
 const theme = createTheme({
   typography: {
@@ -152,6 +152,6 @@ const theme = createTheme({
       paper: '#FAF8F3', // cream
     },
   },
-})
+});
 
-export default theme
+export default theme;

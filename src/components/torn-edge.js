@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 // Ragged "torn paper" edge dividers, lifted verbatim from Shaun's prototype.
 // Each variant is one specific transition between two coloured sections:
@@ -37,10 +37,10 @@ const VARIANTS = {
     viewBox: '0 0 1440 70',
     d: 'M0,0 L0,41 L8,41 L21,36 L33,41 L44,55 L50,37 L57,41 L68,45 L73,35 L84,35 L91,32 L98,37 L111,32 L118,42 L129,19 L135,40 L150,43 L163,39 L172,38 L183,43 L196,57 L199,43 L214,36 L222,35 L238,39 L249,38 L260,59 L265,40 L272,44 L280,40 L286,40 L294,43 L309,44 L327,56 L330,43 L343,42 L356,40 L369,39 L384,41 L395,38 L403,36 L418,40 L427,35 L438,33 L448,35 L464,29 L472,33 L487,36 L494,36 L505,34 L516,40 L529,38 L539,42 L551,42 L557,39 L569,40 L581,46 L588,42 L601,43 L608,45 L621,39 L634,37 L645,40 L655,46 L670,42 L683,44 L695,45 L702,43 L709,43 L717,42 L724,46 L732,40 L744,60 L748,44 L763,48 L779,44 L790,45 L796,42 L803,42 L811,36 L817,37 L824,36 L832,39 L840,39 L856,36 L863,36 L871,40 L884,33 L896,40 L903,35 L910,42 L921,58 L923,41 L934,41 L945,41 L959,40 L969,35 L979,33 L989,31 L1004,36 L1014,35 L1023,35 L1031,38 L1044,37 L1059,35 L1067,41 L1081,61 L1086,39 L1095,38 L1104,37 L1110,40 L1122,40 L1129,36 L1141,42 L1155,41 L1170,39 L1185,41 L1197,46 L1205,43 L1218,38 L1231,41 L1244,41 L1254,40 L1261,40 L1274,46 L1282,43 L1298,48 L1311,49 L1324,49 L1336,50 L1346,50 L1355,45 L1361,46 L1381,26 L1383,53 L1390,45 L1396,45 L1409,45 L1417,49 L1424,46 L1432,47 L1440,48 L1440,0 Z',
   },
-}
+};
 
 const TornEdge = ({ variant = 'a' }) => {
-  const v = VARIANTS[variant] || VARIANTS.a
+  const v = VARIANTS[variant] || VARIANTS.a;
   return (
     <div style={{ background: v.background, lineHeight: 0, position: 'relative', zIndex: 3 }}>
       <svg
@@ -54,7 +54,7 @@ const TornEdge = ({ variant = 'a' }) => {
         <path d={v.d} fill={v.fill} />
       </svg>
     </div>
-  )
-}
+  );
+};
 
-export default TornEdge
+export default TornEdge;
