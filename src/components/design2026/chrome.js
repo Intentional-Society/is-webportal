@@ -320,6 +320,7 @@ export const Footer2026 = () => (
         <div className="footer2026-links">
           <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
             {[
+              { text: 'About', to: '/about' },
               { text: 'Community', to: '/community' },
               { text: 'Practice Dojo', to: '/dojo' },
               { text: 'Ventures', to: '/iv' },
@@ -331,6 +332,7 @@ export const Footer2026 = () => (
           </ul>
           <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
             {[
+              { text: 'Web', to: '/web' },
               { text: 'Friends', to: '/friends' },
               { text: 'Resources', to: '/resources' },
               { text: 'News', to: '/news' },
