@@ -28,10 +28,16 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 const useBandImages = () => {
   const data = useStaticQuery(graphql`
     query BandImages {
+      # JPEGs only. FullBleedPhoto lays a blur-up placeholder behind the
+      # image, which shows through any transparency — fine for opaque photos,
+      # wrong for a PNG with an alpha channel. The one transparent band asset
+      # (ice-torn.png) is rendered separately via StaticImage with
+      # placeholder="none", so it's deliberately excluded here; that also
+      # avoids generating an unused FULL_WIDTH derivative set for it.
       allFile(
         filter: {
           relativeDirectory: { eq: "images/bands" }
-          extension: { in: ["jpg", "jpeg", "png"] }
+          extension: { in: ["jpg", "jpeg"] }
         }
       ) {
         nodes {
