@@ -4,6 +4,7 @@ import {
   Grain2026, Nav2026, Footer2026, Head2026,
   NAV_OFFSET,
 } from '../components/design2026/chrome';
+import { FullBleedPhoto } from '../components/design2026/photo';
 
 // The Intentional Society Podcast — a new page. Its header is a custom h2
 // (not the shared HeaderBand, which always renders an h1) so the page's one
@@ -30,10 +31,11 @@ const NamedDefault = () => (
     <header style={{
       position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
       alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-      background: 'url(/design2026/pond-leaves.jpg) center 45%/cover, #1c2730',
+      background: '#1c2730',
     }}>
+      <FullBleedPhoto image="pond-leaves.jpg" focus="center 45%" />
       <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none',
+        position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1,
         background: 'linear-gradient(180deg, rgba(14,18,22,0.55) 0%, rgba(14,18,22,0.45) 50%, rgba(14,18,22,0.62) 100%)',
       }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '720px', padding: '4rem 2rem' }}>
