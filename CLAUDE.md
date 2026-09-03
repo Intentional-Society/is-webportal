@@ -78,10 +78,21 @@ yarn clean
 
 ## Code Style
 
-Prettier is configured with:
-- No semicolons
-- No arrow function parens when possible
-BUT Prettier also adds a lot of unwanted linebreaks into HTML, so we're currently not using it.
+Prettier (`.prettierrc`) is configured with:
+- Semicolons (`semi: true`)
+- Single quotes (`singleQuote: true`, `avoidEscape`)
+- No arrow function parens when possible (`arrowParens: avoid`)
+- `printWidth: 9999` and `htmlWhitespaceSensitivity: strict`
+
+BUT we don't run `yarn format` across the tree — Prettier adds a lot of
+unwanted linebreaks into HTML/JSX. Write new code to match the config by hand:
+**semicolons and single quotes**. `.eslintrc.json` enforces `semi: always` and
+`quotes: single` as errors, so those two are the ones that actually matter.
+
+Note that the codebase is mixed: an `eslint --fix` pass (commit `998042e`)
+brought some files into line while others still have semicolon-less imports.
+Don't reformat a file wholesale just to normalize it — that buries real changes
+in noise.
 
 ## Deployment
 
