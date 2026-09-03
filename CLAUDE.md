@@ -131,11 +131,11 @@ only read under a title. Where the title works for both, omit `metaTitle`.
 a title that already contains it (home, podcast, the funding announcement).
 Do not hand-type the suffix.
 
-There is no `gatsby-ssr.js`. One used to inject a site-wide title and
-description from `siteMetadata` via `onRenderBody`, which duplicated every
-page's own tags — two `<title>` elements per page, the generic one first, which
-is the copy a crawler takes. Every page owns its head now; don't reintroduce a
-global default.
+`gatsby-ssr.js` sets exactly one thing: `<html lang="en">`, which only
+`onRenderBody` can reach. Don't add title or meta tags there. An earlier
+version injected a site-wide title and description from `siteMetadata`, which
+gave every page two `<title>` elements with the generic one first — the copy a
+crawler takes. Every page owns its head, through `Head2026`.
 
 **Practices catalog** (`src/pages/practices.js`): Assembles multiple md files from `src/md/practices/` into a single page. The `tocStructure` array in the JS file controls TOC grouping and body ordering. When pulling practice content from the Google Doc (published link), apply these formatting rules:
 - Google Doc "Heading 2" → h3 (`###`) for the practice title
@@ -247,13 +247,23 @@ horizontal space. The logo is a transparent `static/design2026/logo.png`
 (no mix-blend-mode hacks). Header photos live in `src/images/bands/` — that
 directory is what `FullBleedPhoto`'s static query reads, so a new header photo
 has to go there and nowhere else. There are more pages than photos now, so
-several are reused: hero (home), crystals-header (about, contact),
-turkeytail-log (community, programs), fungus-trunk (web), luminaria-row (dojo,
-developmental-practice-series), willow (iv, thecall), moss-roots (friends,
-history), rockfield (resources, practices), pond-leaves (news,
-being-with-it-all), luminaria-field (funding announcement,
-exploratory-practice-series), moss (orientation), crescent-butterflyweed
-(branding). Worth commissioning more so the reuse can be unwound.
+several are reused:
+
+| Photo | Pages |
+| --- | --- |
+| `hero` | home |
+| `moss` | home (testimonials), orientation |
+| `crescent-butterflyweed` | about, branding |
+| `crystals-header` | contact, web |
+| `turkeytail-log` | community, programs |
+| `luminaria-row` | dojo, developmental-practice-series, get-involved |
+| `luminaria-field` | news, funding announcement, exploratory-practice-series |
+| `willow` | iv, thecall |
+| `moss-roots` | friends, history |
+| `rockfield` | resources, practices |
+| `pond-leaves` | being-with-it-all, podcast |
+
+Worth commissioning more so the reuse can be unwound.
 get-involved keeps the
 working Buttondown form and the `#newsletter` / `#connection-calls` anchors;
 the Connection Call date and registration URL both live in
@@ -292,7 +302,11 @@ Newsletter signup and Connection Call sections were moved to `/get-involved`
 (styled blocks with anchors `#newsletter` and `#connection-calls`).
 
 ### `/web` page
-`src/pages/web.js` renders content from `src/md/web.md` — "Join the IS Web" page describing the IS relational web, programs, and membership requirements. No signup button; the member app at `https://app.intentionalsociety.org` is linked as a reference for existing members in the "IS Web App" section.
+`src/pages/web.js` — the IS Web page, describing the relational web, its
+programs, and membership requirements. The five things membership gets you live
+in the `inside` array. No signup button; the member app at
+`https://app.intentionalsociety.org` is linked as a reference for existing
+members in the "IS Web App" entry.
 
 ### `/community` page — 2026 redesign
 Same self-contained pattern as `index.js`/`about.js` (own nav/footer): dark
@@ -303,11 +317,8 @@ footer. No longer markdown-driven — `src/md/community.md` was removed and
 its copy ported directly into JSX.
 
 ### `/dojo` and `/iv` pages — 2026 redesign
-Same self-contained pattern (own nav/footer). `dojo.js` drops the old
-strikethrough-"Practice" title in favor of a header-band kicker + blurb
-("A skill-building space for developmental-relational practice") over
-`dojo-header.webp` (a Japanese garden/dojo photo, credited in a small
-caption bottom-right of the header — keep the credit if the image
-changes). `iv.js` reuses `waterfall.jpg` as its header image. Both keep
-their existing copy and internal links (Developmental Practice Series,
-Being With It All, Connection Call, etc.).
+`dojo.js` drops the old strikethrough-"Practice" title for a header band whose
+description reads "A skill-building space for developmental-relational
+practice", over `luminaria-row.jpg`. `iv.js` uses `willow.jpg`. Both keep their
+existing copy and internal links (Developmental Practice Series, Being With It
+All, Connection Call, etc.).
