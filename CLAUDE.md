@@ -133,8 +133,23 @@ Prettier (`.prettierrc`) is configured with:
 
 BUT we don't run `yarn format` across the tree — Prettier adds a lot of
 unwanted linebreaks into HTML/JSX. Write new code to match the config by hand:
-**semicolons and single quotes**. `.eslintrc.json` enforces `semi: always` and
-`quotes: single` as errors, so those two are the ones that actually matter.
+**semicolons and single quotes**, which `.eslintrc.json` enforces as errors.
+
+`yarn lint` is expected to pass clean. It extends `eslint:recommended` and
+`plugin:react/recommended`, so `no-undef` and `no-unused-vars` are live —
+they catch an import that's been dropped while still in use, which the
+build otherwise catches only at the end. Four rules are deliberately off,
+and it's worth knowing why before turning any back on:
+- `react/no-unescaped-entities` — this is a prose site; it would want
+  `&apos;` and `&quot;` through every sentence of copy.
+- `react/prop-types` — no PropTypes anywhere, by choice.
+- `react/react-in-jsx-scope` — Gatsby 5's JSX transform handles it.
+- `react/no-danger` — `practices.js` renders markdown through
+  `dangerouslySetInnerHTML` on purpose.
+
+`process` is declared as a global rather than switching on `env.node`: the
+only use is webpack's build-time `process.env.NODE_ENV` in `photo.js`, in
+code that otherwise runs in the browser.
 
 Note that the codebase is mixed: an `eslint --fix` pass (commit `998042e`)
 brought some files into line while others still have semicolon-less imports.

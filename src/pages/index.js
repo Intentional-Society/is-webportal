@@ -79,14 +79,6 @@ const moveSeparator = { padding: '0 0.32em' };
 // 700 is a real self-hosted Cormorant italic face, not a synthesised bold.
 const missionKey = { fontWeight: 700 };
 
-// Teal CTA button — currently unused (the hero's "Enter the community" button
-// became a scroll cue); kept for future CTAs.
-const ctaButton = {
-  display: 'inline-block', padding: '0.8rem 2rem', background: ACCENT,
-  color: '#fff', textDecoration: 'none', fontFamily: sans, fontSize: '16px',
-  fontWeight: 500, letterSpacing: '0.03em', borderRadius: '3px',
-};
-
 // `scroll-behavior: smooth` has no duration knob and Chrome's own reads as
 // hurried, so the glide is animated by hand. Only number to touch to retune it.
 const SCROLL_CUE_MS = 1100;
