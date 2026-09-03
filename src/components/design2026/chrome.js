@@ -387,6 +387,10 @@ export const Footer2026 = () => (
 // page's JS, not fetched from a CDN). These pages don't use MUI's
 // <CssBaseline/>, so nothing else resets the browser's default 8px body
 // margin — do that here since Head2026 renders into <head> on every 2026 page.
+//
+// This is also where NAV_HEIGHT crosses into CSS. Inline styles can import the
+// constant directly; a .module.css file can't, so it reads --is-nav-height
+// instead of hardcoding a number that then drifts from the nav it's clearing.
 export const Head2026 = ({ title, description, metaTitle, metaDescription, siteName = true }) => {
   const tabTitle = metaTitle || title;
   return (
@@ -394,6 +398,7 @@ export const Head2026 = ({ title, description, metaTitle, metaDescription, siteN
       <title>{siteName ? `${tabTitle} — Intentional Society` : tabTitle}</title>
       <meta name="description" content={metaDescription || description} />
       <style>{`
+        :root { --is-nav-height: ${NAV_HEIGHT}px; }
         * { box-sizing: border-box; }
         body { margin: 0; -webkit-font-smoothing: antialiased; }
       `}</style>

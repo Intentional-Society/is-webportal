@@ -99,8 +99,10 @@ const PracticesPage = ({ data }) => {
 
             {sections.map((s, i) => (
               <React.Fragment key={s.name}>
-                {/* The id sits on the section wrapper; practices.module.css
-                    gives its headings scroll-margin-top to clear the nav. */}
+                {/* The id sits on the section wrapper, which is what every TOC
+                    link targets — so `.bookLayout section` in
+                    practices.module.css is where the scroll-margin-top that
+                    clears the nav has to live. */}
                 <section id={s.name}
                   dangerouslySetInnerHTML={{ __html: s.node.childMarkdownRemark.html }}
                 />

@@ -63,9 +63,19 @@
   margin-bottom: 0;
 }
 
+/* Every TOC link targets a <section id="...">, not a heading — practices.js
+   puts the id on the section wrapper and the markdown's headings carry no ids
+   at all. So the scroll offset that clears the fixed nav has to sit here, on
+   the element the browser actually scrolls to; on the headings it did nothing.
+   --is-nav-height comes from Head2026, which interpolates NAV_HEIGHT, so this
+   tracks the nav instead of being a hand-tuned number that drifts from it. The
+   extra 1.5rem is breathing room between the nav's edge and the title. */
+.bookLayout section {
+  scroll-margin-top: calc(var(--is-nav-height, 66px) + 1.5rem);
+}
+
 /* h3 opens a practice, h4 its sub-sections — the heading levels the markdown
-   uses (see the practices formatting rules in CLAUDE.md). scroll-margin-top
-   clears the fixed 66px nav when an #anchor is followed. */
+   uses (see the practices formatting rules in CLAUDE.md). */
 .bookLayout h3 {
   font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-size: clamp(1.5rem, 2.5vw, 2.125rem);
@@ -74,11 +84,10 @@
   margin: 2.5em 0 0.8em;
   padding-bottom: 0.3em;
   border-bottom: 1px solid #ccc;
-  scroll-margin-top: 86px;
 }
 
-/* No leading gap when the heading opens a section, so anchor offsets land on
-   the heading itself. */
+/* No leading gap when the heading opens a section, so the section's scroll
+   offset lands on the heading itself rather than above it. */
 .bookLayout h3:first-child {
   margin-top: 0;
 }
@@ -90,7 +99,6 @@
   line-height: 1.4;
   color: #24818e;
   margin: 2em 0 0.5em;
-  scroll-margin-top: 86px;
 }
 
 .bookLayout ul,
