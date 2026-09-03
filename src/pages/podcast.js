@@ -32,7 +32,15 @@ const episodeLinks = [
 const NamedDefault = () => (
   <Page2026 active="/podcast">
 
-    <style>{'a:hover { opacity: 0.8; }'}</style>
+    {/* The hover state for the Listen cards below — they're the only links on
+        the page without one of their own. Scoped to those cards: as a bare
+        `a:hover` this also faded the nav and all sixteen footer links, which
+        then behaved differently here than on every other page. The 180ms
+        matches the credit tooltip's fade in chrome.js. */}
+    <style>{`
+      .podcast-listen { transition: opacity 180ms ease; }
+      .podcast-listen:hover { opacity: 0.8; }
+    `}</style>
 
     {/* ======== Header band ======== */}
     <header style={{
@@ -75,7 +83,7 @@ const NamedDefault = () => (
       <h2 style={listenHeading}>Listen</h2>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem', marginBottom: '1rem' }}>
         {episodeLinks.map(l => (
-          <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" style={{
+          <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="podcast-listen" style={{
             display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem',
             background: '#FAF8F3', border: '1px solid rgba(42,42,36,0.1)', borderRadius: '6px',
             padding: '1.1rem 1.4rem', fontFamily: sans,
