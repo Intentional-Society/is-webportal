@@ -1,27 +1,22 @@
 import React from 'react';
 import {
-  serif, sans, ACCENT_DARK, bodyP, sectionHeading,
-  Head2026, Page2026, Article2026, Divider,
-  NAV_OFFSET,
+  sans, ACCENT_DARK, bodyP, sectionHeading,
+  Head2026, HeaderBand, Page2026, Article2026, Divider,
 } from '../components/design2026/chrome';
-import { FullBleedPhoto } from '../components/design2026/photo';
 
-// The Intentional Society Podcast — a new page. Its header is a custom h2
-// (not the shared HeaderBand, which always renders an h1) so the page's one
-// h1 stays the actual article title in the body. No PhotoCredit on the
-// header photo — it isn't a HeaderBand credit-host, so add one the usual way
-// (className="credit-host" + <PhotoCredit>) if this photo needs attribution.
+// The Intentional Society Podcast.
 
-// This page's own words. No header band here (see above), so only the document
-// head reads them. siteName: false — the title already names the society.
+// This page's own words, read by both the header band and the document head.
+// siteName: false — the title already names the society.
 const PAGE = {
   title: 'The Intentional Society Podcast',
+  description: 'Conversations from inside the community',
   metaDescription: 'Listen to the Intentional Society Podcast — conversations from inside the community.',
   siteName: false,
 };
 
 // A touch smaller than the shared section heading — this page has only the
-// one section, under an h1 that is already doing the announcing.
+// one section, under a band that is already doing the announcing.
 const listenHeading = { ...sectionHeading, fontSize: 'clamp(1.5rem,2.6vw,1.9rem)' };
 
 const episodeLinks = [
@@ -43,30 +38,15 @@ const NamedDefault = () => (
     `}</style>
 
     {/* ======== Header band ======== */}
-    <header style={{
-      position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
-      alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-      background: '#1c2730',
-    }}>
-      <FullBleedPhoto image="pond-leaves.jpg" focus="center 45%" />
-      <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1,
-        background: 'linear-gradient(180deg, rgba(14,18,22,0.55) 0%, rgba(14,18,22,0.45) 50%, rgba(14,18,22,0.62) 100%)',
-      }} />
-      <div style={{ position: 'relative', zIndex: 2, maxWidth: '720px', padding: '4rem 2rem' }}>
-        <h2 style={{
-          fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(2.2rem,4.2vw,3.2rem)',
-          color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)', margin: 0,
-        }}>Conversations from inside the community</h2>
-      </div>
-    </header>
+    <HeaderBand
+      image="pond-leaves.jpg" focus="center 45%" credit="Bill" veil="news"
+      width="720px"
+      title={PAGE.title}
+      description={PAGE.description}
+    />
 
     {/* ======== Article body ======== */}
     <Article2026>
-
-      <h1 style={{ fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(1.9rem,3.4vw,2.6rem)', color: ACCENT_DARK, margin: '0 0 1.4rem' }}>
-        The Intentional Society Podcast
-      </h1>
 
       <p style={bodyP}>
         Friends of Intentional Society tell their stories of entering the liminal web. From
