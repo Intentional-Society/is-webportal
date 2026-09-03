@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import {
   serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026, PhotoCredit,
   NAV_HEIGHT, NAV_OFFSET,
 } from '../components/design2026/chrome';
+import { FullBleedPhoto } from '../components/design2026/photo';
 
 // 2026 homepage redesign — self-contained, using the shared 2026 chrome
 // (components/design2026/). Light content sections alternate with darker
@@ -15,7 +17,7 @@ const spaces = [
   {
     title: 'Find others',
     to: '/community',
-    img: '/design2026/flame-azalea.jpg',
+    key: 'flame-azalea',
     alt: 'A cluster of orange flame azalea blossoms',
     fallback: 'linear-gradient(135deg,#D4A88C 0%,#b9617a 100%)',
     text: "You're drawn to inner development — awareness, acceptance, integrity — and want a community to grow alongside.",
@@ -24,7 +26,7 @@ const spaces = [
   {
     title: 'Intentional practice',
     to: '/dojo',
-    img: '/design2026/cosmos.jpg',
+    key: 'cosmos',
     alt: 'A magenta cosmos flower against soft green',
     fallback: 'linear-gradient(135deg,#7A9E8A 0%,#b9617a 100%)',
     text: 'You are interested in relational practices. Learn and practice with others in a peer-led developmental space.',
@@ -33,7 +35,7 @@ const spaces = [
   {
     title: 'Work with purpose',
     to: '/iv',
-    img: '/design2026/monarch-goldenrod.jpg',
+    key: 'monarch-goldenrod',
     alt: 'A monarch butterfly feeding on goldenrod',
     fallback: 'linear-gradient(135deg,#D4A88C 0%,#7A9E8A 100%)',
     text: 'You have a project or venture idea and want to develop it within a values-aligned community.',
@@ -107,7 +109,37 @@ const glideToThreeMoves = event => {
   window.requestAnimationFrame(step);
 };
 
-const NamedDefault = () => (
+const NamedDefault = () => {
+  // Constrained card thumbnails (~130px tall, up to ~3-up). Small on purpose —
+  // the full-bleed band/hero images are the ones that carry weight, handled by
+  // FullBleedPhoto. aspectRatio just bounds the generated height; the card box
+  // is a fixed 130px and the image cover-fills it.
+  const cardData = useStaticQuery(graphql`
+    query HomeCardImages {
+      flameAzalea: file(relativePath: { eq: "images/photos/flame-azalea.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 520, aspectRatio: 2.1, placeholder: BLURRED, quality: 78, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+      cosmos: file(relativePath: { eq: "images/photos/cosmos.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 520, aspectRatio: 2.1, placeholder: BLURRED, quality: 78, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+      monarchGoldenrod: file(relativePath: { eq: "images/photos/monarch-goldenrod.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 520, aspectRatio: 2.1, placeholder: BLURRED, quality: 78, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+    }
+  `);
+  const cardImages = {
+    'flame-azalea': getImage(cardData.flameAzalea),
+    cosmos: getImage(cardData.cosmos),
+    'monarch-goldenrod': getImage(cardData.monarchGoldenrod),
+  };
+
+  return (
   <div style={{ fontFamily: sans, background: PAPER, color: INK }}>
 
     <Grain2026 />
@@ -118,10 +150,11 @@ const NamedDefault = () => (
     <section style={{
       position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center',
       justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-      background: 'url(/design2026/hero.jpg) center 60%/cover, linear-gradient(165deg,#F8F5EF 0%,#E8DFD0 46%,#cdd9cf 100%)',
+      background: 'linear-gradient(165deg,#F8F5EF 0%,#E8DFD0 46%,#cdd9cf 100%)',
     }}>
+      <FullBleedPhoto image="hero.jpg" focus="center 60%" />
       <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none',
+        position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1,
         background: 'radial-gradient(ellipse at 50% 42%, rgba(248,245,239,0.55) 0%, rgba(248,245,239,0.15) 45%, transparent 70%), linear-gradient(180deg, rgba(248,245,239,0.1) 0%, transparent 35%, rgba(38,50,61,0.12) 100%)',
       }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '680px', padding: '2rem' }}>
@@ -218,8 +251,9 @@ const NamedDefault = () => (
       position: 'relative', zIndex: 3, marginTop: 'calc(-1 * max(13vh, 9vw))', textAlign: 'center',
       scrollMarginTop: NAV_OFFSET, /* clears the fixed nav */
     }}>
-      <img src="/design2026/wood-band.png" alt="" aria-hidden="true"
-        style={{ display: 'block', width: '100%', height: 'auto', pointerEvents: 'none' }} />
+      <StaticImage src="../images/photos/wood-band.png" alt="" layout="fullWidth"
+        placeholder="none" formats={['auto', 'webp']}
+        style={{ display: 'block', width: '100%', pointerEvents: 'none' }} />
       <div style={{
         position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
         display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2,
@@ -272,8 +306,9 @@ const NamedDefault = () => (
         }}>
           <figure className="credit-host" style={{ margin: 0, position: 'relative' }}>
             <PhotoCredit name="Bill" />
-            <img src="/design2026/waterfall.jpg" alt="A small waterfall over dark rock in a quiet forest"
-              style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', borderRadius: '7px 4px 8px 3px', display: 'block' }} />
+            <StaticImage src="../images/photos/waterfall.jpg" alt="A small waterfall over dark rock in a quiet forest"
+              layout="constrained" width={640} aspectRatio={0.8} placeholder="blurred" formats={['auto', 'webp', 'avif']}
+              style={{ width: '100%', borderRadius: '7px 4px 8px 3px', display: 'block' }} />
           </figure>
           <div>
             <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
@@ -317,8 +352,9 @@ const NamedDefault = () => (
           </div>
           <figure className="credit-host" style={{ margin: 0, position: 'relative' }}>
             <PhotoCredit name="Bill" />
-            <img src="/design2026/fungus-trunk.jpg" alt="Layers of turkey-tail fungus climbing a mossy trunk"
-              style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', borderRadius: '4px 8px 3px 7px', display: 'block' }} />
+            <StaticImage src="../images/photos/fungus-trunk.jpg" alt="Layers of turkey-tail fungus climbing a mossy trunk"
+              layout="constrained" width={640} aspectRatio={0.8} placeholder="blurred" formats={['auto', 'webp', 'avif']}
+              style={{ width: '100%', borderRadius: '4px 8px 3px 7px', display: 'block' }} />
           </figure>
         </div>
       </div>
@@ -328,12 +364,17 @@ const NamedDefault = () => (
     {/* ice-torn.png already carries transparent, ragged top/bottom edges — no CSS mask needed. */}
     <section className="credit-host" style={{
       position: 'relative', zIndex: 3,
-      background: 'url(/design2026/ice-torn.png) center/cover',
       minHeight: '460px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden',
     }}>
+      {/* Transparent ragged top/bottom edges must show the PAPER sections
+          through them, so placeholder="none" — a blur-up layer would fill the
+          torn edges with a colored rectangle. */}
+      <StaticImage src="../images/bands/ice-torn.png" alt="" layout="fullWidth"
+        placeholder="none" formats={['auto', 'webp']} objectFit="cover" objectPosition="center"
+        style={{ position: 'absolute', inset: 0, height: '100%', zIndex: 0 }} />
       <PhotoCredit name="Karla" />
       <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none',
+        position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1,
         background: 'radial-gradient(ellipse at 50% 50%, rgba(12,18,24,0.62) 0%, rgba(12,18,24,0.42) 55%, transparent 80%), linear-gradient(180deg, rgba(12,18,24,0.55) 0%, rgba(12,18,24,0.45) 50%, rgba(12,18,24,0.62) 100%)',
       }} />
       <div style={{ textAlign: 'center', padding: '4rem 2rem', position: 'relative', zIndex: 2 }}>
@@ -368,10 +409,12 @@ const NamedDefault = () => (
               textDecoration: 'none', color: INK, position: 'relative', overflow: 'hidden',
               borderRadius: s.radius, display: 'block',
             }}>
-              <div className="credit-host" role="img" aria-label={s.alt} style={{
+              <div className="credit-host" style={{
                 position: 'relative', height: '130px', marginBottom: '1.3rem', overflow: 'hidden',
-                background: `url(${s.img}) center/cover, ${s.fallback}`,
+                background: s.fallback,
               }}>
+                <GatsbyImage image={cardImages[s.key]} alt={s.alt} objectFit="cover"
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0 }} />
                 <PhotoCredit name="Bill" inset={8} />
               </div>
               <h3 style={{ fontFamily: serif, fontWeight: 500, fontSize: '1.3rem', margin: '0 0 0.8rem', padding: '0 1.5rem' }}>
@@ -388,10 +431,11 @@ const NamedDefault = () => (
 
     {/* ======== Interstitial: testimonials ======== */}
     <section style={{
-      position: 'relative', background: 'url(/design2026/moss.jpg) center/cover',
+      position: 'relative', background: '#EDF1E9',
       padding: '4rem 2rem 5rem', overflow: 'hidden',
     }}>
-      <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'rgba(237,241,233,0.92)' }} />
+      <FullBleedPhoto image="moss.jpg" focus="center" />
+      <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1, background: 'rgba(237,241,233,0.92)' }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '900px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', padding: '3rem 2rem', marginBottom: '2rem', position: 'relative' }}>
           <div style={{
@@ -453,7 +497,8 @@ const NamedDefault = () => (
 
     <Footer2026 />
   </div>
-);
+  );
+};
 
 export default NamedDefault;
 

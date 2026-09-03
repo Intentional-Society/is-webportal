@@ -4,6 +4,7 @@ import {
   serif, sans, ACCENT_DARK, INK, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026, HeaderBand, PhotoCredit,
 } from '../components/design2026/chrome';
+import { StaticImage } from 'gatsby-plugin-image';
 
 // 2026 redesign of the Ventures page — self-contained page ported from the
 // Claude Design mockup, using the shared 2026 chrome (components/design2026/).
@@ -61,8 +62,9 @@ const NamedDefault = () => (
 
         <figure className="credit-host" style={{ margin: '0 0 3rem', position: 'relative' }}>
           <PhotoCredit name="Bill" />
-          <img src="/design2026/monarch-goldenrod.jpg" alt="A monarch butterfly feeding on goldenrod"
-            style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', borderRadius: '3px 7px 4px 6px', display: 'block' }} />
+          <StaticImage src="../images/photos/monarch-goldenrod.jpg" alt="A monarch butterfly feeding on goldenrod"
+            layout="constrained" width={820} aspectRatio={1.7778} placeholder="blurred" formats={['auto', 'webp', 'avif']}
+            style={{ width: '100%', borderRadius: '3px 7px 4px 6px', display: 'block' }} />
         </figure>
 
         {divider}

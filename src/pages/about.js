@@ -4,6 +4,7 @@ import {
   serif, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerLead,
   Grain2026, Nav2026, Footer2026, Head2026, HeaderBand, PhotoCredit,
 } from '../components/design2026/chrome';
+import { StaticImage } from 'gatsby-plugin-image';
 
 // 2026 redesign of the About page — self-contained page ported from the
 // "About v2" Claude Design mockup: no <Layout>/MUI theme, shared 2026
@@ -77,8 +78,9 @@ const NamedDefault = () => (
 
         <figure className="credit-host" style={{ margin: '0 0 2.5rem', position: 'relative' }}>
           <PhotoCredit name="Bill" />
-          <img src="/design2026/sand-dunes.jpg" alt="Beach grass planted in rows across open dunes behind a weathered sand fence"
-            style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', borderRadius: '5px 3px 6px 4px', display: 'block' }} />
+          <StaticImage src="../images/photos/sand-dunes.jpg" alt="Beach grass planted in rows across open dunes behind a weathered sand fence"
+            layout="constrained" width={820} aspectRatio={1.7778} placeholder="blurred" formats={['auto', 'webp', 'avif']}
+            style={{ width: '100%', borderRadius: '5px 3px 6px 4px', display: 'block' }} />
         </figure>
 
         {/* Regarding membership */}
@@ -139,8 +141,9 @@ const NamedDefault = () => (
 
         <figure className="credit-host" style={{ margin: '2.5rem 0 0', position: 'relative' }}>
           <PhotoCredit name="Bill" />
-          <img src="/design2026/bee-spirea.jpg" alt="A honeybee approaching a cluster of spirea blossoms"
-            style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', borderRadius: '6px 3px 7px 4px', display: 'block' }} />
+          <StaticImage src="../images/photos/bee-spirea.jpg" alt="A honeybee approaching a cluster of spirea blossoms"
+            layout="constrained" width={820} aspectRatio={1.7778} placeholder="blurred" formats={['auto', 'webp', 'avif']}
+            style={{ width: '100%', borderRadius: '6px 3px 7px 4px', display: 'block' }} />
         </figure>
 
         {divider}

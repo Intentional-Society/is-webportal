@@ -4,6 +4,7 @@ import {
   serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
 } from '../components/design2026/chrome';
+import { StaticImage } from 'gatsby-plugin-image';
 
 // 2026 redesign of the Community page — self-contained page ported from the
 // Claude Design mockup, using the shared 2026 chrome (components/design2026/).
@@ -47,8 +48,9 @@ const NamedDefault = () => (
         </blockquote>
 
         <figure style={{ margin: '0 0 2.5rem', textAlign: 'center' }}>
-          <img src="/design2026/community-tree.png" alt="A tree of community members' faces, each rooted in Intentional Society"
-            style={{ width: '100%', maxWidth: '340px', height: 'auto', display: 'inline-block' }} />
+          <StaticImage src="../images/photos/community-tree.png" alt="A tree of community members' faces, each rooted in Intentional Society"
+            layout="constrained" width={340} placeholder="none" formats={['auto', 'webp']}
+            style={{ width: '100%', maxWidth: '340px', display: 'inline-block' }} />
           <figcaption style={{ fontSize: '16px', fontStyle: 'italic', color: MUTED, marginTop: '0.6rem' }}>
             Some of the faces that make up this community.
           </figcaption>

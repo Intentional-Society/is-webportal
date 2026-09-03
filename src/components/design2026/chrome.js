@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { FullBleedPhoto } from './photo';
 // Self-hosted fonts (matches the weights previously loaded from Google
 // Fonts: Cormorant Garamond 300/400/500 + 300/400 italic, DM Sans
 // 300/400/500/600). Self-hosting avoids the async CDN fetch entirely, so
@@ -134,11 +135,12 @@ export const HeaderBand = ({
   <header className="credit-host" style={{
     position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
     alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-    background: `url(${image}) ${focus}/cover, #1c2730`,
+    background: '#1c2730', // fallback behind the photo while it loads
   }}>
+    <FullBleedPhoto image={image} focus={focus} />
     {credit && <PhotoCredit name={credit} />}
     <div style={{
-      position: 'absolute', inset: 0, pointerEvents: 'none', background: VEILS[veil],
+      position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1, background: VEILS[veil],
     }} />
     <div style={{ position: 'relative', zIndex: 2, maxWidth: width, padding: '4rem 2rem' }}>
       {kicker && <div style={headerKicker}>{kicker}</div>}

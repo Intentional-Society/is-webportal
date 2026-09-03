@@ -4,6 +4,7 @@ import {
   serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026, HeaderBand, PhotoCredit,
 } from '../components/design2026/chrome';
+import { StaticImage } from 'gatsby-plugin-image';
 
 // 2026 redesign of the Dojo page — self-contained page ported from the
 // Claude Design mockup, using the shared 2026 chrome (components/design2026/).
@@ -52,8 +53,9 @@ const NamedDefault = () => (
 
         <figure className="credit-host" style={{ margin: '0 0 3rem', position: 'relative' }}>
           <PhotoCredit name="Bill" />
-          <img src="/design2026/lighted-path.jpg" alt="A paper lantern glowing on a woodland trail lined with strings of lights"
-            style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', borderRadius: '4px 7px 3px 6px', display: 'block' }} />
+          <StaticImage src="../images/photos/lighted-path.jpg" alt="A paper lantern glowing on a woodland trail lined with strings of lights"
+            layout="constrained" width={820} aspectRatio={1.7778} placeholder="blurred" formats={['auto', 'webp', 'avif']}
+            style={{ width: '100%', borderRadius: '4px 7px 3px 6px', display: 'block' }} />
         </figure>
 
         <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '0 auto 3rem', width: '120px' }} />
