@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  BODY_TEXT, bodyP, sectionHeading, linkStyle,
+  bodyP, bodyUl, bodyLi, sectionHeading, linkStyle,
   Head2026, HeaderBand, PhotoCredit, Page2026, Article2026, Divider,
 } from '../components/design2026/chrome';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -15,9 +15,6 @@ const PAGE = {
   description: 'catalyzing aligned livelihoods into a relational economic web',
   metaDescription: 'Aligned livelihoods, woven into a relational economic web.',
 };
-
-const bodyUl = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.4rem 1.4rem', padding: 0 };
-const bodyLi = { marginBottom: '0.4rem' };
 
 const NamedDefault = () => (
   <Page2026 active="/iv">

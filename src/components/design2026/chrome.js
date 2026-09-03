@@ -85,6 +85,11 @@ export const headerKicker = {
 // explicit fontWeight too, or it inherits the page wrapper's 300.
 export const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
 
+// A bulleted list in body copy: bodyP's type, indented, with air between
+// items. `margin`'s bottom value is the one that varies between pages.
+export const bodyUl = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.4rem 1.4rem', padding: 0 };
+export const bodyLi = { marginBottom: '0.4rem' };
+
 // The h2 that opens a section of an article body.
 export const sectionHeading = {
   fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
