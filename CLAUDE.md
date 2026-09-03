@@ -115,6 +115,14 @@ Twitter card tags built from the same title and description, plus a canonical
 card (`static/design2026/share-hero.jpg`, the homepage hero), and `ogType`,
 which is `'article'` on the two news posts and `'website'` everywhere else.
 
+**Sitemap**: `gatsby-plugin-sitemap` writes `/sitemap-index.xml` from
+`siteMetadata.siteUrl`, and `static/robots.txt` points crawlers at it. Its
+`excludes` list in `gatsby-config.js` is a deliberate list, not a stale one —
+error pages, the unpublished practices catalog, and the three pages that are
+both unlinked and out of date. `/contact` and `/branding` are unlinked too but
+stay in, since a sitemap is how anyone is meant to find them. A new page is
+included by default; add it to `excludes` if it shouldn't be.
+
 `metaTitle` and `metaDescription` override `title`/`description` only where the
 head genuinely needs different words — a tab wants a short label, a search
 result wants a whole sentence, and several band descriptions are fragments that
