@@ -158,30 +158,31 @@ const NamedDefault = () => {
         background: 'radial-gradient(ellipse at 50% 42%, rgba(248,245,239,0.55) 0%, rgba(248,245,239,0.15) 45%, transparent 70%), linear-gradient(180deg, rgba(248,245,239,0.1) 0%, transparent 35%, rgba(38,50,61,0.12) 100%)',
       }} />
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '680px', padding: '2rem' }}>
-        {/* lineHeight 1.7, not a display line's usual 1.2: three separate
-            statements, not one wrapped sentence. */}
-        <h1 style={{
-          fontFamily: serif, fontWeight: 400, lineHeight: 1.7, fontSize: 'clamp(2.5rem,5vw,4rem)',
+        {/* 1.4 is only a fallback — .hero-h1 > em splits it into leading within
+            a statement plus margin between them. */}
+        <h1 className="hero-h1" style={{
+          fontFamily: serif, fontWeight: 400, lineHeight: 1.4, fontSize: 'clamp(2.5rem,5vw,4rem)',
           color: INK, margin: '0 0 1.5rem', textShadow: '0 1px 18px rgba(248,245,239,0.7)',
         }}>
           {/* A premise, a question, the response. First word alternates — see
               .hero-swap below. */}
-          <em className="hero-swap-line" style={{ color: ACCENT, display: 'block' }}>
+          <em style={{ color: ACCENT, display: 'block' }}>
             <span className="hero-swap">
               <span className="hero-swap-word hero-swap-a">collapse</span>
               <span className="hero-swap-word hero-swap-b">abundance</span>
+              <span className="hero-swap-word hero-swap-c">change</span>
             </span> is arriving.
           </em>
           <em style={{ color: ACCENT, display: 'block' }}>what now?</em>
-          <em style={{ color: ACCENT, display: 'block' }}>be more intentional.</em>
+          <em style={{ color: ACCENT, display: 'block' }}>live more intentionally.</em>
         </h1>
         <p style={{
           color: INK, fontSize: '1.10rem', fontWeight: 500, lineHeight: 1.7, margin: '0 auto 2.5rem',
           maxWidth: '560px', textShadow: '0 1px 12px rgba(248,245,239,0.85)',
         }}>
-          Intentional Society is a micro-society organizing around becoming who we want
-          to be, individually and collectively, in order to face an uncertain world with
-          capacity, joy, and integrity.
+          The world is moving fast. How shall we meet each moment? Intentional Society
+          is a micro-society for becoming who we want to be, to face an uncertain world
+          with capacity, joy, and integrity.
         </p>
         {/* Scroll cue. The <a> carries the accessible name; the SVG is decorative. */}
         <a href="#three-moves" aria-label="Scroll down to the next section"
@@ -194,30 +195,44 @@ const NamedDefault = () => {
           </svg>
         </a>
         <style>{`
-          /* Both words share one grid cell, so the slot is as wide as the wider
-             of them and the rest of the line never shifts. justify-items: end
-             keeps the space before "is arriving." a single space in both
-             states — a gap inside the sentence reads as a typo. */
-          .hero-swap { display: inline-grid; justify-items: end; vertical-align: baseline; }
-          /* A quarter of the two words' width difference, pulled left. A fixed
-             slot can't centre both states, so this splits the error (~12px each
-             way) instead of centring one. Re-measure if either word changes. */
-          .hero-swap-line { position: relative; left: -0.283em; }
+          /* Lines inside a statement hug at 1.1 so a wrapped one reads as a
+             single thought; the 1.4 between statements is margin instead
+             (1.1 + 0.3 = 1.4). */
+          .hero-h1 > em { line-height: 1.1; margin-bottom: 0.3em; }
+          .hero-h1 > em:last-child { margin-bottom: 0; }
+          /* All three words share one grid cell, so the slot is as wide as the
+             widest and the line never shifts; justify-items: end keeps the space
+             before "is arriving." a single space — a gap there reads as a typo.
+             The margin re-centres that fixed slot, splitting the error ~23px
+             each way at 63px: (3.835em - 2.393em) / 2, doubled because margin
+             also shrinks the line's measured width. It belongs on the slot, not
+             the <em>: on the <em> it shifts every line, including a wrapped
+             " is arriving." that has no slot to compensate for. */
+          .hero-swap {
+            display: inline-grid; justify-items: end; vertical-align: baseline;
+            margin-left: -0.721em;
+          }
           .hero-swap-word { grid-area: 1 / 1; }
-          /* 6s: 1.5s hold, 1.5s cross-fade, twice (percentages are those seconds
-             over 6). Both words sit at 0.4 mid-fade rather than 0.5, so the pair
+          /* 9s: 1.5s hold, 1.5s cross-fade, three times, each word leading the
+             last by 3s. The two words mid-fade sit at 0.4, not 0.5, so the pair
              sums to 0.8 and the line dips as it turns over instead of stacking
              into a jumble. linear, or the easing hitches at that midpoint. */
-          .hero-swap-a { animation: heroSwapA 6s linear infinite; }
-          .hero-swap-b { animation: heroSwapB 6s linear infinite; }
+          .hero-swap-a { animation: heroSwapA 9s linear infinite; }
+          .hero-swap-b { animation: heroSwapB 9s linear infinite; }
+          .hero-swap-c { animation: heroSwapC 9s linear infinite; }
           @keyframes heroSwapA {
-            0%, 25% { opacity: 1; }   37.5% { opacity: 0.4; }
-            50%, 75% { opacity: 0; }  87.5% { opacity: 0.4; }
+            0%, 16.667% { opacity: 1; }        25% { opacity: 0.4; }
+            33.333%, 83.333% { opacity: 0; }   91.667% { opacity: 0.4; }
             100% { opacity: 1; }
           }
           @keyframes heroSwapB {
-            0%, 25% { opacity: 0; }   37.5% { opacity: 0.4; }
-            50%, 75% { opacity: 1; }  87.5% { opacity: 0.4; }
+            0%, 16.667% { opacity: 0; }        25% { opacity: 0.4; }
+            33.333%, 50% { opacity: 1; }       58.333% { opacity: 0.4; }
+            66.667%, 100% { opacity: 0; }
+          }
+          @keyframes heroSwapC {
+            0%, 50% { opacity: 0; }            58.333% { opacity: 0.4; }
+            66.667%, 83.333% { opacity: 1; }   91.667% { opacity: 0.4; }
             100% { opacity: 0; }
           }
           .hero-scroll-cue { animation: heroScrollCue 1.8s ease-in-out infinite; border-radius: 50%; }
@@ -231,10 +246,10 @@ const NamedDefault = () => {
              scroll itself, and a smooth html would fight its per-frame scrollTo. */
           @media (prefers-reduced-motion: reduce) {
             .hero-scroll-cue { animation: none; opacity: 0.9; }
-            /* Both words at once, slashed — no motion, meaning intact. */
+            /* All three words at once, slashed — no motion, meaning intact. */
             .hero-swap { display: inline; }
             .hero-swap-word { animation: none; opacity: 1; }
-            .hero-swap-a::after { content: '/'; }
+            .hero-swap-a::after, .hero-swap-b::after { content: '/'; }
           }
         `}</style>
       </div>
