@@ -6,9 +6,9 @@ import {
 } from '../components/design2026/chrome';
 import { StaticImage } from 'gatsby-plugin-image';
 
-// 2026 redesign of the About page — self-contained page ported from the
-// "About v2" Claude Design mockup: no <Layout>/MUI theme, shared 2026
-// chrome from components/design2026/chrome.js, images in static/design2026/.
+// 2026 redesign of the About page, ported from the "About v2" Claude Design
+// mockup. Band photo from src/images/bands/, inline figures from
+// src/images/photos/ — both through the image pipeline, neither from static/.
 
 // This page's own words, read by both the header band and the document head.
 // The head shortens the title to a tab label and carries its own sentence,

@@ -14,8 +14,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 // <FullBleedPhoto image="moss-roots.jpg" focus="center 40%" /> as its first
 // child, then the veil/overlay and content above it (higher zIndex).
 //
-//   image  base filename in src/images/bands (a leading path is tolerated and
-//          stripped, so "/design2026/moss-roots.jpg" also resolves)
+//   image  bare filename in src/images/bands — "moss-roots.jpg", not a path
 //   focus  object-position for the cover crop, same syntax as the old CSS
 //          background-position ('center', 'center 40%', …)
 //   alt    almost always '' — these are decorative; the section's heading
@@ -65,14 +64,17 @@ const useBandImages = () => {
 
 export const FullBleedPhoto = ({ image, focus = 'center', alt = '', className }) => {
   const images = useBandImages();
-  const key = image.split('/').pop();
-  const gatsbyImage = images[key];
+  const gatsbyImage = images[image];
   if (!gatsbyImage) {
-    // A missing key almost always means a filename typo or an image that
-    // wasn't placed in src/images/bands. Fail loud in dev, quiet in prod.
+    // A miss means a filename typo, an image that wasn't placed in
+    // src/images/bands, or a path where a bare filename belongs. Fail loud in
+    // dev, quiet in prod.
     if (process.env.NODE_ENV !== 'production') {
       // eslint-disable-next-line no-console
-      console.warn(`FullBleedPhoto: no image found for "${image}" (looked up "${key}") in src/images/bands`);
+      console.warn(
+        `FullBleedPhoto: no image named "${image}" in src/images/bands.` +
+        (image.includes('/') ? ' Pass a bare filename, not a path.' : '')
+      );
     }
     return null;
   }
