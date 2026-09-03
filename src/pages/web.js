@@ -163,13 +163,6 @@ const NamedDefault = () => (
           variety of depths.
         </p>
 
-        <div style={{ textAlign: 'right' }}>
-          <Link to="/dojo" style={{
-            fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
-            borderBottom: '1px solid rgba(26,66,50,0.3)',
-          }}>Next page: Dojo →</Link>
-        </div>
-
       </article>
     </main>
 

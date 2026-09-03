@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 import {
   serif, sans, ACCENT_DARK, INK, BODY_TEXT, MUTED, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
@@ -99,13 +98,6 @@ const NamedDefault = () => {
               </div>
             </figcaption>
           </figure>
-
-          <div style={{ marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(42,42,36,0.08)' }}>
-            <Link to="/get-involved" style={{
-              fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
-              borderBottom: '1px solid rgba(26,66,50,0.3)',
-            }}>Next page: Get Involved →</Link>
-          </div>
 
         </article>
       </main>

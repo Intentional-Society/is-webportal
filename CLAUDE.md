@@ -148,7 +148,7 @@ in place:
   friends/news/resources — serif, photo background, `textShadow`): weight
   500, not 400.
 - **Links and nav**: nav links 16px/weight 500 (600 when active), footer
-  links 17px/weight 500, "Next page: X →" footer links 16px/weight 500.
+  links 17px/weight 500, "← Back to X" article links 16px/weight 500.
   No `opacity` on eyebrow/kicker text or footer copy — use a solid color
   instead (opacity read as too faint against both light and dark
   backgrounds).
@@ -251,5 +251,4 @@ strikethrough-"Practice" title in favor of a header-band kicker + blurb
 caption bottom-right of the header — keep the credit if the image
 changes). `iv.js` reuses `waterfall.jpg` as its header image. Both keep
 their existing copy and internal links (Developmental Practice Series,
-Being With It All, Connection Call, etc.) and end with a "Next page →"
-link, matching the old pages' structure.
+Being With It All, Connection Call, etc.).

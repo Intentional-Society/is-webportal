@@ -85,13 +85,6 @@ const NamedDefault = () => (
           </section>
         ))}
 
-        <div style={{ marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(42,42,36,0.08)' }}>
-          <Link to="/web" style={{
-            fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
-            borderBottom: '1px solid rgba(26,66,50,0.3)',
-          }}>Next page: The IS Web →</Link>
-        </div>
-
       </article>
     </main>
 

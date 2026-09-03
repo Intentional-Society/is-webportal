@@ -444,13 +444,6 @@ const HistoryPage = () => (
           </details>
         ))}
 
-        <div style={{ marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(42,42,36,0.08)' }}>
-          <Link to="/resources" style={{
-            fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
-            borderBottom: '1px solid rgba(26,66,50,0.3)',
-          }}>Next page: Resources →</Link>
-        </div>
-
         {/* Collapsed season rows. Scoped here rather than in chrome.js since
             /resources styles its own <details> the same way locally. */}
         <style>{`

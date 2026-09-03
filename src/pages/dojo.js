@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
+  serif, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026, HeaderBand, PhotoCredit,
 } from '../components/design2026/chrome';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -138,13 +138,6 @@ const NamedDefault = () => (
           Inquiry, Death Cafe, Imaginal work, Shadow work, Open Stance circles, OANMarket/Gifting
           practice.
         </p>
-
-        <div style={{ textAlign: 'right' }}>
-          <Link to="/iv" style={{
-            fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
-            borderBottom: '1px solid rgba(26,66,50,0.3)',
-          }}>Next page: Ventures →</Link>
-        </div>
 
       </article>
     </main>

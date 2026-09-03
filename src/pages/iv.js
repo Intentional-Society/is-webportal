@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, BODY_TEXT, PAPER,
+  serif, ACCENT_DARK, INK, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026, HeaderBand, PhotoCredit,
 } from '../components/design2026/chrome';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -122,13 +122,6 @@ const NamedDefault = () => (
           the hypothetical <a href="https://laymanpascal.substack.com/p/the-metamodern-business-bureau-mmbb" target="_blank" rel="noopener noreferrer" style={linkStyle}>Metamodern
           Business Bureau</a>.
         </p>
-
-        <div style={{ textAlign: 'right' }}>
-          <Link to="/friends" style={{
-            fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
-            borderBottom: '1px solid rgba(26,66,50,0.3)',
-          }}>Next page: Friends →</Link>
-        </div>
 
       </article>
     </main>

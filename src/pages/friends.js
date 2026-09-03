@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, BODY_TEXT, PAPER,
+  serif, ACCENT_DARK, INK, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
 } from '../components/design2026/chrome';
 
@@ -87,13 +86,6 @@ const NamedDefault = () => (
             </div>
           </div>
         ))}
-
-        <div style={{ textAlign: 'right', marginTop: '2rem' }}>
-          <Link to="/resources" style={{
-            fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
-            borderBottom: '1px solid rgba(26,66,50,0.3)',
-          }}>Next page: Resources →</Link>
-        </div>
 
       </article>
     </main>

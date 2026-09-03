@@ -351,13 +351,6 @@ const NamedDefault = () => {
             </div>
           ))}
 
-          <div style={{ textAlign: 'right', marginTop: '2rem' }}>
-            <Link to="/about" style={{
-              fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
-              borderBottom: '1px solid rgba(26,66,50,0.3)',
-            }}>Next page: About →</Link>
-          </div>
-
         </article>
       </main>
 
