@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
+  serif,
+  Head2026, HeaderBand, Page2026, Article2026, BackLink,
 } from '../components/design2026/chrome';
 import * as PracticesStyles from '../styles/practices.module.css';
 
@@ -57,72 +57,60 @@ const PracticesPage = ({ data }) => {
     .filter(s => s.node);
 
   return (
-    <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
-
-      <Grain2026 />
-      <Nav2026 active="/resources" />
+    <Page2026 active="/resources">
 
       {/* ======== Header band ======== */}
       <HeaderBand
-        image="/design2026/rockfield.jpg" focus="center 65%" credit="Bill"
+        image="rockfield.jpg" focus="center 65%" credit="Bill"
         title={PAGE.title}
         description={PAGE.description}
       />
 
       {/* ======== Article body ======== */}
-      <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
-        <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+      <Article2026>
 
-          <h2 style={{
-            fontFamily: serif, fontSize: 'clamp(1.5rem,2.5vw,2.125rem)', fontWeight: 400,
-            lineHeight: 1.25, color: '#cc0000', textAlign: 'center', margin: '0 0 1.5rem',
-          }}>🚧 Under Construction — Not Yet Published 🚧</h2>
+        <h2 style={{
+          fontFamily: serif, fontSize: 'clamp(1.5rem,2.5vw,2.125rem)', fontWeight: 400,
+          lineHeight: 1.25, color: '#cc0000', textAlign: 'center', margin: '0 0 1.5rem',
+        }}>🚧 Under Construction — Not Yet Published 🚧</h2>
 
-          <div className={PracticesStyles.bookLayout}>
-            <nav className={PracticesStyles.toc} aria-label="Catalog contents">
-              <ul>
-                {tocStructure.map(entry =>
-                  entry.heading ? (
-                    <li key={entry.name}><a href={`#${entry.name}`}>{entry.heading}</a>
-                      <ul>
-                        {entry.practices.map(p => (
-                          <li key={p.name}><a href={`#${p.name}`}>{p.tocTitle}</a></li>
-                        ))}
-                      </ul>
-                    </li>
-                  ) : (
-                    <li key={entry.name}><a href={`#${entry.name}`}>{entry.tocTitle}</a></li>
-                  )
-                )}
-              </ul>
-            </nav>
+        <div className={PracticesStyles.bookLayout}>
+          <nav className={PracticesStyles.toc} aria-label="Catalog contents">
+            <ul>
+              {tocStructure.map(entry =>
+                entry.heading ? (
+                  <li key={entry.name}><a href={`#${entry.name}`}>{entry.heading}</a>
+                    <ul>
+                      {entry.practices.map(p => (
+                        <li key={p.name}><a href={`#${p.name}`}>{p.tocTitle}</a></li>
+                      ))}
+                    </ul>
+                  </li>
+                ) : (
+                  <li key={entry.name}><a href={`#${entry.name}`}>{entry.tocTitle}</a></li>
+                )
+              )}
+            </ul>
+          </nav>
 
-            {sections.map((s, i) => (
-              <React.Fragment key={s.name}>
-                {/* The id sits on the section wrapper, which is what every TOC
-                    link targets — so `.bookLayout section` in
-                    practices.module.css is where the scroll-margin-top that
-                    clears the nav has to live. */}
-                <section id={s.name}
-                  dangerouslySetInnerHTML={{ __html: s.node.childMarkdownRemark.html }}
-                />
-                {i < sections.length - 1 && divider}
-              </React.Fragment>
-            ))}
-          </div>
+          {sections.map((s, i) => (
+            <React.Fragment key={s.name}>
+              {/* The id sits on the section wrapper, which is what every TOC
+                  link targets — so `.bookLayout section` in
+                  practices.module.css is where the scroll-margin-top that
+                  clears the nav has to live. */}
+              <section id={s.name}
+                dangerouslySetInnerHTML={{ __html: s.node.childMarkdownRemark.html }}
+              />
+              {i < sections.length - 1 && divider}
+            </React.Fragment>
+          ))}
+        </div>
 
-          <div style={{ marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(42,42,36,0.08)' }}>
-            <Link to="/resources" style={{
-              fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
-              borderBottom: '1px solid rgba(26,66,50,0.3)',
-            }}>← Back to Resources</Link>
-          </div>
+        <BackLink to="/resources">← Back to Resources</BackLink>
 
-        </article>
-      </main>
-
-      <Footer2026 />
-    </div>
+      </Article2026>
+    </Page2026>
   );
 };
 

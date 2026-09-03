@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-  serif, sans, ACCENT_DARK, INK, BODY_TEXT, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026,
+  serif, sans, ACCENT_DARK, bodyP, sectionHeading,
+  Head2026, Page2026, Article2026, Divider,
   NAV_OFFSET,
 } from '../components/design2026/chrome';
 import { FullBleedPhoto } from '../components/design2026/photo';
@@ -20,7 +20,9 @@ const PAGE = {
   siteName: false,
 };
 
-const bodyP ={ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
+// A touch smaller than the shared section heading — this page has only the
+// one section, under an h1 that is already doing the announcing.
+const listenHeading = { ...sectionHeading, fontSize: 'clamp(1.5rem,2.6vw,1.9rem)' };
 
 const episodeLinks = [
   { text: 'Listen on Spotify', href: 'https://open.spotify.com/show/6VObFjAmDWinl9c8fxLDZw' },
@@ -28,10 +30,7 @@ const episodeLinks = [
 ];
 
 const NamedDefault = () => (
-  <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
-
-    <Grain2026 />
-    <Nav2026 active="/podcast" />
+  <Page2026 active="/podcast">
 
     <style>{'a:hover { opacity: 0.8; }'}</style>
 
@@ -55,47 +54,40 @@ const NamedDefault = () => (
     </header>
 
     {/* ======== Article body ======== */}
-    <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
-      <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+    <Article2026>
 
-        <h1 style={{ fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(1.9rem,3.4vw,2.6rem)', color: ACCENT_DARK, margin: '0 0 1.4rem' }}>
-          The Intentional Society Podcast
-        </h1>
+      <h1 style={{ fontFamily: serif, fontWeight: 500, lineHeight: 1.25, fontSize: 'clamp(1.9rem,3.4vw,2.6rem)', color: ACCENT_DARK, margin: '0 0 1.4rem' }}>
+        The Intentional Society Podcast
+      </h1>
 
-        <p style={bodyP}>
-          Friends of Intentional Society tell their stories of entering the liminal web. From
-          hearing the call, to making the leap, and finding new ways. Discover how others
-          arrived and the impact of relationality.
-        </p>
-        <p style={bodyP}>
-          Shaun Button interviews guests to reveal the depth behind the individuals we
-          encounter in the network.
-        </p>
+      <p style={bodyP}>
+        Friends of Intentional Society tell their stories of entering the liminal web. From
+        hearing the call, to making the leap, and finding new ways. Discover how others
+        arrived and the impact of relationality.
+      </p>
+      <p style={bodyP}>
+        Shaun Button interviews guests to reveal the depth behind the individuals we
+        encounter in the network.
+      </p>
 
-        <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '3rem auto', width: '120px' }} />
+      <Divider />
 
-        <h2 style={{
-          fontFamily: serif, fontWeight: 300, lineHeight: 1.2, fontSize: 'clamp(1.5rem,2.6vw,1.9rem)',
-          color: '#5C4A3A', margin: '0 0 1.4rem',
-        }}>Listen</h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem', marginBottom: '1rem' }}>
-          {episodeLinks.map(l => (
-            <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" style={{
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem',
-              background: '#FAF8F3', border: '1px solid rgba(42,42,36,0.1)', borderRadius: '6px',
-              padding: '1.1rem 1.4rem', fontFamily: sans,
-            }}>
-              <span style={{ fontSize: '18px', fontWeight: 600, color: ACCENT_DARK }}>{l.text}</span>
-              <span style={{ fontSize: '18px', color: ACCENT_DARK }}>→</span>
-            </a>
-          ))}
-        </div>
+      <h2 style={listenHeading}>Listen</h2>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem', marginBottom: '1rem' }}>
+        {episodeLinks.map(l => (
+          <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem',
+            background: '#FAF8F3', border: '1px solid rgba(42,42,36,0.1)', borderRadius: '6px',
+            padding: '1.1rem 1.4rem', fontFamily: sans,
+          }}>
+            <span style={{ fontSize: '18px', fontWeight: 600, color: ACCENT_DARK }}>{l.text}</span>
+            <span style={{ fontSize: '18px', color: ACCENT_DARK }}>→</span>
+          </a>
+        ))}
+      </div>
 
-      </article>
-    </main>
-
-    <Footer2026 />
-  </div>
+    </Article2026>
+  </Page2026>
 );
 
 export default NamedDefault;

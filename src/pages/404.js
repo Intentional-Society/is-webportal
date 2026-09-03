@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, PAPER, headerKicker,
-  Grain2026, Nav2026, Footer2026, Head2026,
+  serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, headerKicker,
+  Head2026, Page2026,
   NAV_OFFSET,
 } from '../components/design2026/chrome';
 
@@ -24,11 +24,10 @@ const quickLinks = [
 ];
 
 const NamedDefault = () => (
-  <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
+  <Page2026>
 
-    <Grain2026 />
-    <Nav2026 />
-
+    {/* Not an Article2026: this body is a single centred block filling the
+        viewport, not a reading column. */}
     <main style={{
       position: 'relative', zIndex: 3, marginTop: NAV_OFFSET, minHeight: `calc(100vh - ${NAV_OFFSET})`,
       display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center',
@@ -66,8 +65,7 @@ const NamedDefault = () => (
       </div>
     </main>
 
-    <Footer2026 />
-  </div>
+  </Page2026>
 );
 
 export default NamedDefault;

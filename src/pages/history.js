@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, BODY_TEXT, MUTED, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
+  serif, sans, INK, MUTED, bodyP, sectionHeading, linkStyle,
+  Head2026, HeaderBand, Page2026, Article2026,
 } from '../components/design2026/chrome';
 
 // The weekly-session event log, going back to the first meeting. Each season
@@ -384,98 +384,86 @@ const seasons = [
   }
 ];
 
-const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
-
-const linkStyle = { color: ACCENT_DARK };
-
-const sectionHeading = {
-  fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
-  fontSize: 'clamp(1.5rem,2.6vw,2rem)', color: '#5C4A3A', margin: '3rem 0 1.4rem',
-};
+// The log opens under the intro paragraphs rather than a divider, so it
+// carries its own leading gap.
+const logHeading = { ...sectionHeading, margin: '3rem 0 1.4rem' };
 
 const HistoryPage = () => (
-  <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
-
-    <Grain2026 />
-    <Nav2026 />
+  <Page2026>
 
     {/* ======== Header band ======== */}
     <HeaderBand
-      image="/design2026/moss-roots.jpg" focus="center 40%" credit="Bill"
+      image="moss-roots.jpg" focus="center 40%" credit="Bill"
       title={PAGE.title}
       description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}
-    <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
-      <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+    <Article2026>
 
-        <p style={bodyP}>
-          Hi, James here. I'm the founder/
-          <a href="https://workwithsource.com/what-is-source/how-initiatives-start/"
-            target="_blank" rel="noopener noreferrer" style={linkStyle}>source</a>/
-          <a href="https://www.microsolidarity.cc/articles/2-update-2020#1-initiators"
-            target="_blank" rel="noopener noreferrer" style={linkStyle}>caller</a> of
-          Intentional Society. When I retired from my corporate career at the onset of the
-          pandemic, I'd been collecting thoughts and ideas for a decade about how
-          organizations function and grow, while looking for meaning, truth, and the
-          “why?”s of life for a few decades before that. I'd had some transformational
-          experiences in my personal development, and I wanted to keep growing, make friends
-          on that same journey, and be of service to humanity. I wrote
-          a <Link to="/thecall" style={linkStyle}>calling manifesto</Link> of sorts in
-          December 2020, and began weekly meetings of Intentional Society in January 2021.
-        </p>
-        <p style={bodyP}>
-          What followed has been a patient unfolding with many stories embedded in the
-          journey. Below you can find title-based records of weekly sessions going all the
-          way back to the beginning.
-        </p>
+      <p style={bodyP}>
+        Hi, James here. I'm the founder/
+        <a href="https://workwithsource.com/what-is-source/how-initiatives-start/"
+          target="_blank" rel="noopener noreferrer" style={linkStyle}>source</a>/
+        <a href="https://www.microsolidarity.cc/articles/2-update-2020#1-initiators"
+          target="_blank" rel="noopener noreferrer" style={linkStyle}>caller</a> of
+        Intentional Society. When I retired from my corporate career at the onset of the
+        pandemic, I'd been collecting thoughts and ideas for a decade about how
+        organizations function and grow, while looking for meaning, truth, and the
+        “why?”s of life for a few decades before that. I'd had some transformational
+        experiences in my personal development, and I wanted to keep growing, make friends
+        on that same journey, and be of service to humanity. I wrote
+        a <Link to="/thecall" style={linkStyle}>calling manifesto</Link> of sorts in
+        December 2020, and began weekly meetings of Intentional Society in January 2021.
+      </p>
+      <p style={bodyP}>
+        What followed has been a patient unfolding with many stories embedded in the
+        journey. Below you can find title-based records of weekly sessions going all the
+        way back to the beginning.
+      </p>
 
-        <h2 style={sectionHeading}>Historical event log</h2>
+      <h2 style={logHeading}>Historical event log</h2>
 
-        {seasons.map(season => (
-          <details key={season.title} className="season-item">
-            <summary>{season.title}</summary>
-            <ul style={{ ...bodyP, paddingLeft: '1.2rem', margin: '0.6rem 0 0' }}>
-              {season.events.map((event, i) => (
-                <li key={i} style={{ marginBottom: '0.25rem' }}>{event}</li>
-              ))}
-            </ul>
-          </details>
-        ))}
+      {seasons.map(season => (
+        <details key={season.title} className="season-item">
+          <summary>{season.title}</summary>
+          <ul style={{ ...bodyP, paddingLeft: '1.2rem', margin: '0.6rem 0 0' }}>
+            {season.events.map((event, i) => (
+              <li key={i} style={{ marginBottom: '0.25rem' }}>{event}</li>
+            ))}
+          </ul>
+        </details>
+      ))}
 
-        {/* Collapsed season rows. Scoped here rather than in chrome.js since
-            /resources styles its own <details> the same way locally. */}
-        <style>{`
-          .season-item {
-            border-bottom: 1px solid rgba(42,42,36,0.12);
-            padding: 0.9rem 0;
-          }
-          .season-item > summary {
-            cursor: pointer;
-            list-style: none;
-            font-family: ${serif};
-            font-size: 1.4rem;
-            font-weight: 400;
-            color: ${INK};
-          }
-          .season-item > summary::-webkit-details-marker { display: none; }
-          .season-item > summary::before {
-            content: '+';
-            display: inline-block;
-            width: 1.2em;
-            color: ${MUTED};
-            font-family: ${sans};
-            font-weight: 500;
-          }
-          .season-item[open] > summary::before { content: '−'; }
-        `}</style>
+      {/* Collapsed season rows. Scoped here rather than in chrome.js since
+          /resources styles its own <details> the same way locally. */}
+      <style>{`
+        .season-item {
+          border-bottom: 1px solid rgba(42,42,36,0.12);
+          padding: 0.9rem 0;
+        }
+        .season-item > summary {
+          cursor: pointer;
+          list-style: none;
+          font-family: ${serif};
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: ${INK};
+        }
+        .season-item > summary::-webkit-details-marker { display: none; }
+        .season-item > summary::before {
+          content: '+';
+          display: inline-block;
+          width: 1.2em;
+          color: ${MUTED};
+          font-family: ${sans};
+          font-weight: 500;
+        }
+        .season-item[open] > summary::before { content: '−'; }
+      `}</style>
 
-      </article>
-    </main>
-
-    <Footer2026 />
-  </div>
+    </Article2026>
+  </Page2026>
 );
 
 export default HistoryPage;

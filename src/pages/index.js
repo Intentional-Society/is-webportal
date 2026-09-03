@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import {
   serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026, PhotoCredit,
+  Head2026, PhotoCredit, Page2026,
   NAV_HEIGHT, NAV_OFFSET,
 } from '../components/design2026/chrome';
 import { FullBleedPhoto } from '../components/design2026/photo';
@@ -148,11 +148,11 @@ const NamedDefault = () => {
     'monarch-goldenrod': getImage(cardData.monarchGoldenrod),
   };
 
+  // The homepage body is sans, not the serif every article page is set in,
+  // and its sections are full-bleed rather than a reading column — so it
+  // overrides the shell's type and renders no Article2026.
   return (
-  <div style={{ fontFamily: sans, background: PAPER, color: INK }}>
-
-    <Grain2026 />
-    <Nav2026 />
+  <Page2026 style={{ fontFamily: sans, fontWeight: 400, lineHeight: 'normal', overflowX: 'visible' }}>
 
     {/* ======== Hero ======== */}
     {/* Hero photo is licensed stock, not a member's — so no PhotoCredit. */}
@@ -519,8 +519,7 @@ const NamedDefault = () => {
       </div>
     </section>
 
-    <Footer2026 />
-  </div>
+  </Page2026>
   );
 };
 

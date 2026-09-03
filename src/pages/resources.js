@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, navigate } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
+  serif, sans, ACCENT, INK, MUTED, BODY_TEXT, HEADING, NAV_OFFSET,
+  bodyP as baseBodyP, sectionHeading, linkStyle,
+  Head2026, HeaderBand, Page2026, Article2026, Divider,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the Resources page — merges the old standalone FAQ page
@@ -20,20 +21,18 @@ const PAGE = {
   metaDescription: 'Relational practices we use, and answers to common questions about Intentional Society.',
 };
 
-const linkStyle = { color: ACCENT_DARK };
+// Deep-link targets have to clear the fixed nav — old newsletter links point
+// at individual practice ids. Derived from NAV_OFFSET rather than hand-tuned.
+const anchorTarget = { scrollMarginTop: `calc(${NAV_OFFSET} + 1.5rem)` };
 
-const sectionHeading = {
-  fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
-  fontSize: 'clamp(1.5rem,2.6vw,2rem)', color: '#5C4A3A', margin: '0 0 1.4rem',
-};
-
-const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 0.6rem', lineHeight: 1.7 };
+// Body copy inside a collapsed <details> sits tighter than an article
+// paragraph: the links line follows it immediately, and the disclosure's own
+// padding supplies the rest of the gap.
+const bodyP = { ...baseBodyP, margin: '0 0 0.6rem' };
 const linksLine = { fontSize: '16px', fontWeight: 500, color: MUTED, margin: 0, lineHeight: 1.7 };
 
-const divider = <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '3rem auto', width: '120px' }} />;
-
 const practiceSummary = { fontFamily: serif, fontWeight: 500, fontSize: '1.4rem', color: INK };
-const faqSummary = { fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.4rem', color: '#5C4A3A' };
+const faqSummary = { fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.4rem', color: HEADING };
 
 const practices = [
   {
@@ -301,61 +300,54 @@ const NamedDefault = () => {
   }, []);
 
   return (
-    <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
-
-      <Grain2026 />
-      <Nav2026 active="/resources" />
+    <Page2026 active="/resources">
 
       <style>{`
         .rsc-item summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; gap: 0.6rem; }
         .rsc-item summary::-webkit-details-marker { display: none; }
-        .rsc-item summary::before { content: '›'; display: inline-block; color: #2E6B4F; font-size: 1.1em; line-height: 1.4; transition: transform 0.15s; flex-shrink: 0; }
+        .rsc-item summary::before { content: '›'; display: inline-block; color: ${ACCENT}; font-size: 1.1em; line-height: 1.4; transition: transform 0.15s; flex-shrink: 0; }
         .rsc-item[open] summary::before { transform: rotate(90deg); }
-        .rsc-item { border-bottom: 1px solid rgba(42,42,36,0.08); padding: 0.9rem 0; scroll-margin-top: 90px; }
+        .rsc-item { border-bottom: 1px solid rgba(42,42,36,0.08); padding: 0.9rem 0; scroll-margin-top: calc(${NAV_OFFSET} + 1.5rem); }
       `}</style>
 
       {/* ======== Header band ======== */}
       <HeaderBand
-        image="/design2026/rockfield.jpg" focus="center 65%" credit="Bill"
+        image="rockfield.jpg" focus="center 65%" credit="Bill"
         title={PAGE.title}
       />
 
       {/* ======== Article body ======== */}
-      <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
-        <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+      <Article2026>
 
-          <h2 id="relational-practices" style={{ ...sectionHeading, scrollMarginTop: '90px' }}>Relational Practices List</h2>
-          <p style={{ ...bodyP, marginBottom: '0.5rem' }}>We have tried and enjoyed the following practices:</p>
-          {practices.map(p => (
-            <details key={p.id} id={p.id} className="rsc-item">
-              <summary style={practiceSummary}>{p.title}</summary>
-              <div style={{ marginTop: '0.7rem', paddingLeft: '1.5rem' }}>{p.body}</div>
-            </details>
-          ))}
+        <h2 id="relational-practices" style={{ ...sectionHeading, ...anchorTarget }}>Relational Practices List</h2>
+        <p style={{ ...bodyP, marginBottom: '0.5rem' }}>We have tried and enjoyed the following practices:</p>
+        {practices.map(p => (
+          <details key={p.id} id={p.id} className="rsc-item">
+            <summary style={practiceSummary}>{p.title}</summary>
+            <div style={{ marginTop: '0.7rem', paddingLeft: '1.5rem' }}>{p.body}</div>
+          </details>
+        ))}
 
-          {divider}
+        <Divider />
 
-          <h2 id="faq" style={{ ...sectionHeading, scrollMarginTop: '90px' }}>FAQ</h2>
-          {faqGroups.map(group => (
-            <div key={group.label} style={{ marginBottom: '1.6rem' }}>
-              <div style={{
-                fontFamily: sans, fontSize: '13px', letterSpacing: '0.14em', textTransform: 'uppercase',
-                fontWeight: 600, color: '#5C8770', margin: '0 0 0.4rem',
-              }}>{group.label}</div>
-              {group.qas.map(qa => (
-                <details key={qa.q} className="rsc-item">
-                  <summary style={faqSummary}>{qa.q}</summary>
-                  <p style={{ fontSize: '19px', fontWeight: 500, color: BODY_TEXT, margin: '0.7rem 0 0 1.5rem', lineHeight: 1.7 }}>{qa.a}</p>
-                </details>
-              ))}
-            </div>
-          ))}
+        <h2 id="faq" style={{ ...sectionHeading, ...anchorTarget }}>FAQ</h2>
+        {faqGroups.map(group => (
+          <div key={group.label} style={{ marginBottom: '1.6rem' }}>
+            <div style={{
+              fontFamily: sans, fontSize: '13px', letterSpacing: '0.14em', textTransform: 'uppercase',
+              fontWeight: 600, color: '#5C8770', margin: '0 0 0.4rem',
+            }}>{group.label}</div>
+            {group.qas.map(qa => (
+              <details key={qa.q} className="rsc-item">
+                <summary style={faqSummary}>{qa.q}</summary>
+                <p style={{ fontSize: '19px', fontWeight: 500, color: BODY_TEXT, margin: '0.7rem 0 0 1.5rem', lineHeight: 1.7 }}>{qa.a}</p>
+              </details>
+            ))}
+          </div>
+        ))}
 
-        </article>
-      </main>
-
-      <Footer2026 />
-    </div>
+      </Article2026>
+    </Page2026>
   );
 };
 
