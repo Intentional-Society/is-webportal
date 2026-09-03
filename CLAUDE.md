@@ -318,7 +318,7 @@ its copy ported directly into JSX.
 
 ### `/dojo` and `/iv` pages — 2026 redesign
 `dojo.js` drops the old strikethrough-"Practice" title for a header band whose
-description reads "A skill-building space for developmental-relational
+description reads "a skill-building space for developmental-relational
 practice", over `luminaria-row.jpg`. `iv.js` uses `willow.jpg`. Both keep their
 existing copy and internal links (Developmental Practice Series, Being With It
 All, Connection Call, etc.).

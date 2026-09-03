@@ -14,7 +14,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 // the description reads as a whole thought on its own.
 const PAGE = {
   title: 'Relational Dojo',
-  description: 'A skill-building space for developmental-relational practice',
+  description: 'a skill-building space for developmental-relational practice',
 };
 
 const smallP = { fontSize: '16px', fontWeight: 500, color: MUTED, margin: '0 0 0.5rem' };

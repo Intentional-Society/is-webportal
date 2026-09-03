@@ -17,7 +17,7 @@ import {
 // This page's own words, read by both the header band and the document head.
 const PAGE = {
   title: 'Resources',
-  description: 'Practices we use, and answers to common questions',
+  description: 'practices we use, and answers to common questions',
   metaDescription: 'Relational practices we use, and answers to common questions about Intentional Society.',
 };
 
