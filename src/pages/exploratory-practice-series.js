@@ -4,7 +4,7 @@ import {
   Head2026, HeaderBand, Page2026, Article2026, BackLink,
 } from '../components/design2026/chrome';
 
-// A Practice Dojo season, kept for its inbound links.
+// A Practice Dojo season from 2024, kept for its inbound links.
 
 // This page's own words, read by both the header band and the document head.
 const PAGE = {
@@ -13,7 +13,7 @@ const PAGE = {
   metaDescription: 'A Practice Dojo season with six guest teachers exploring awareness, relating, and embodiment practices.',
 };
 
-// The season's lineup. Dates ran the 2nd and 4th Saturdays of April-June.
+// The season's lineup. Dates ran the 2nd and 4th Saturdays of April-June 2024.
 const lineup = [
   { date: 'April 13', practice: 'Growth as Object', teacher: 'James Baker' },
   { date: 'April 27', practice: 'Dia-Logos', teacher: 'Romeck van Zeijl', note: '2 hours' },
@@ -55,7 +55,7 @@ const NamedDefault = () => (
           target="_blank" rel="noopener noreferrer" style={linkStyle}>Sign up for access here.</a>
       </p>
 
-      <h2 style={lineupHeading}>The lineup</h2>
+      <h2 style={lineupHeading}>The 2024 lineup</h2>
 
       <ul style={{ ...bodyP, paddingLeft: '1.2rem' }}>
         {lineup.map(item => (

@@ -5,7 +5,8 @@ import {
 } from '../components/design2026/chrome';
 
 // The Developmental Practice Series — a nine-week course, run in three units
-// of three weeks. Editing the schedule means editing `units` below.
+// of three weeks over July-September 2025. Editing the schedule means editing
+// `units` below.
 
 // This page's own words, read by both the header band and the document head.
 const PAGE = {
@@ -20,7 +21,7 @@ const SIGNUP_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfTKFx1wlprZ3dLVWdc
 const units = [
   {
     unit: 'Unit 1 — Awareness',
-    dates: 'July 10, July 17, July 24',
+    dates: 'July 10, July 17, July 24, 2025',
     practices: [
       ['Empathy Circle', 'receptive listening and reflection'],
       ['Parts Work (IFS)', 'listening to and being with parts-of-self'],
@@ -29,7 +30,7 @@ const units = [
   },
   {
     unit: 'Unit 2 — Acceptance',
-    dates: 'July 31, Aug 7, Aug 14',
+    dates: 'July 31, Aug 7, Aug 14, 2025',
     practices: [
       ['T-Group', 'noticing and naming our experiences'],
       ['Circling', 'welcoming everything in connection'],
@@ -38,7 +39,7 @@ const units = [
   },
   {
     unit: 'Unit 3 — Integrity',
-    dates: 'Aug 21, Aug 28, Sept 4',
+    dates: 'Aug 21, Aug 28, Sept 4, 2025',
     practices: [
       ['Nine Whys', '(re)connecting to desire, motivations, and purpose'],
       ['Pure coaching + Clean language', 'clean (space-holding, not self-injecting) coaching basics'],
@@ -112,7 +113,7 @@ const NamedDefault = () => (
       <p style={bodyP}>
         In plain words, we're building a bridge to "being who we want to be" beyond what
         society typically offers us. This series is being run as a nine-week course on
-        Thursdays starting July 10<sup>th</sup>, 9:00am to 10:30am Pacific (Noon Eastern,
+        Thursdays starting July 10<sup>th</sup>, 2025, 9:00am to 10:30am Pacific (Noon Eastern,
         4pm UTC, 6pm CEST).
       </p>
 
@@ -137,7 +138,7 @@ const NamedDefault = () => (
       ))}
 
       <p style={{ ...bodyP, fontStyle: 'italic' }}>
-        Optional bonus session Sept 11 — wrap-up and retrospective.
+        Optional bonus session Sept 11, 2025 — wrap-up and retrospective.
       </p>
 
       <p style={bodyP}>
