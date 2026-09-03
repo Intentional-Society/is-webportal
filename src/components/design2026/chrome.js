@@ -153,9 +153,9 @@ const VEILS = {
 // Two title sizes rather than a bespoke clamp per page — pages had drifted
 // into nine different clamps, several by copy-paste rather than intent.
 // `standard` is the default, sized to read as confidently as About's `large`
-// without quite matching it. Community and Friends pass an explicit smaller
-// raw clamp() instead of a named size — their headers carry extra content
-// (a blockquote, a long list) that a bigger title crowded.
+// without quite matching it. Community passes an explicit smaller raw clamp()
+// instead of a named size — its title runs long enough that a bigger size
+// crowded the band.
 const TITLE_SIZES = {
   large: 'clamp(2.2rem,3.8vw,3.4rem)',
   standard: 'clamp(2.2rem,4.2vw,3.2rem)',
