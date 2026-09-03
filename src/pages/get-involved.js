@@ -4,7 +4,7 @@ import ButtondownSignup from '../components/buttondownsignup';
 import BlurbConnectionCall, { CONNECTION_CALL_URL } from '../components/blurb-connectioncall';
 import {
   serif, sans, ACCENT, INK, BODY_TEXT, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026,
+  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
   NAV_OFFSET,
 } from '../components/design2026/chrome';
 
@@ -17,16 +17,25 @@ import {
 // next-call date (both sourced from blurb-connectioncall.js — see that file
 // for the one place to update when a new call is scheduled), the Buttondown
 // newsletter form, and the #connection-calls / #newsletter anchors that other
-// pages deep-link to.
+// pages deep-link to — those ids now sit on the option headings themselves
+// rather than on offset empty <a>s above them.
 
-// This page's own words. No header band here, so only the document head reads
-// them.
+// This page's own words, read by both the header band and the document head.
+// The band gets to be playful; the head keeps the plain label people actually
+// search for and the sentence that reads as a result.
 const PAGE = {
-  title: 'Get Involved',
+  title: 'Want more?',
+  description: 'Oh, do you have some options',
+  metaTitle: 'Get Involved',
   metaDescription: 'Come to a Connection Call — the easiest first step into the Intentional Society web of trust and collaboration.',
 };
 
 const linkStyle = { color: ACCENT };
+
+// Deep-link targets have to clear the fixed nav. Derived from NAV_OFFSET for
+// the same reason practices.module.css reads --is-nav-height: so the clearance
+// tracks the nav instead of being a hand-tuned number beside it.
+const anchorTarget = { scrollMarginTop: `calc(${NAV_OFFSET} + 1.5rem)` };
 
 const sectionHeading = {
   fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
@@ -50,34 +59,27 @@ const NamedDefault = () => (
     <Grain2026 />
     <Nav2026 active="/get-involved" />
 
-    {/* ======== Header ======== */}
-    <a id="connection-calls" style={{ display: 'block', position: 'relative', top: '-20px', visibility: 'hidden' }}></a>
-    <header id="connection-calls-hero" style={{
-      position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
-      alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-      padding: '4rem 2rem',
-      background: 'radial-gradient(ellipse at 50% 80%, rgba(46,107,79,0.25) 0%, transparent 60%), linear-gradient(175deg,#1e2822 0%,#1a2420 50%,#1e2420 100%)',
-    }}>
-      <style>{'#connection-calls-hero a { color: #7A9E8A; }'}</style>
-      <div style={{ position: 'relative', zIndex: 2, maxWidth: '900px', width: '100%' }}>
-        <p style={{
-          color: 'rgba(232,223,208,0.92)', fontWeight: 500,
-          fontSize: 'clamp(1rem,4vw,1.5rem)', margin: '0 auto', lineHeight: 1.5, textAlign: 'center',
-        }}>
-          <span style={{ display: 'block', textWrap: 'balance' }}>Meet real people in the community to see if it's right for you</span>
-          <span style={{ display: 'block', textWrap: 'balance' }}>Tell us about yourself, ask questions, get to know what this is about</span>
-        </p>
-      </div>
-    </header>
+    {/* ======== Header band ======== */}
+    <HeaderBand
+      image="luminaria-row.jpg" focus="center 55%" credit="Bill"
+      title={PAGE.title}
+      description={PAGE.description}
+    />
 
     {/* ======== Details ======== */}
     <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
       <article style={{ maxWidth: '720px', margin: '0 auto' }}>
 
+        {/* The pitch the old dark hero carried, now that the band above says
+            the page's name instead. */}
+        <p style={bodyP}>
+          Meet real people in the community to see if it's right for you. Tell us about
+          yourself, ask questions, get to know what this is about.
+        </p>
+
         <h2 style={sectionHeading}>Intrigued? Here are your options</h2>
 
-        <a id="newsletter" style={{ display: 'block', position: 'relative', top: '-90px', visibility: 'hidden' }}></a>
-        <h4 style={optionHeading}>Subscribe for updates</h4>
+        <h3 id="newsletter" style={{ ...optionHeading, ...anchorTarget }}>Subscribe for updates</h3>
         <p style={bodyP}>
           Every Thursday, a friendly update with public events and reflections. Browse
           the <a href="https://buttondown.email/intentionalsociety/archive/" target="_blank" rel="noopener noreferrer" style={linkStyle}>archive</a> for
@@ -87,7 +89,7 @@ const NamedDefault = () => (
           <ButtondownSignup />
         </div>
 
-        <h4 style={optionHeading}>Attend a Connection Call</h4>
+        <h3 id="connection-calls" style={{ ...optionHeading, ...anchorTarget }}>Attend a Connection Call</h3>
         <p style={{ ...bodyP, marginBottom: '1rem' }}>
           This call is like a picnic table out on our front lawn. Open to all, new and
           familiar, with no agenda other than your curiosity!
@@ -98,7 +100,7 @@ const NamedDefault = () => (
         </p>
         <a href={CONNECTION_CALL_URL} style={{ ...ctaButton, margin: '0 0 2.5rem' }}>Join a Connection Call</a>
 
-        <h4 style={optionHeading}>Find relational practice groups</h4>
+        <h3 style={optionHeading}>Find relational practice groups</h3>
         <p style={{ ...bodyP, marginBottom: '2.5rem' }}>
           We love relational practices for personal development! You can find several at our
           sister site <a href="https://relationaldojo.org" target="_blank" rel="noopener noreferrer" style={linkStyle}>Relational Dojo</a>, or
