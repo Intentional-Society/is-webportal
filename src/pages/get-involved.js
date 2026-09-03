@@ -3,8 +3,8 @@ import { Link } from 'gatsby';
 import ButtondownSignup from '../components/buttondownsignup';
 import BlurbConnectionCall, { CONNECTION_CALL_URL } from '../components/blurb-connectioncall';
 import {
-  serif, sans, ACCENT, INK, BODY_TEXT, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
+  serif, sans, ACCENT, INK, bodyP, sectionHeading,
+  Head2026, HeaderBand, Page2026, Article2026,
   NAV_OFFSET,
 } from '../components/design2026/chrome';
 
@@ -37,16 +37,9 @@ const linkStyle = { color: ACCENT };
 // tracks the nav instead of being a hand-tuned number beside it.
 const anchorTarget = { scrollMarginTop: `calc(${NAV_OFFSET} + 1.5rem)` };
 
-const sectionHeading = {
-  fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
-  fontSize: 'clamp(1.5rem,2.6vw,2rem)', color: '#5C4A3A', margin: '0 0 1.4rem',
-};
-
 const optionHeading = {
   fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.2rem', color: INK, margin: '0 0 0.4rem',
 };
-
-const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
 
 const ctaButton = {
   display: 'inline-block', padding: '0.9rem 2.2rem', background: ACCENT, color: '#fff',
@@ -54,10 +47,7 @@ const ctaButton = {
 };
 
 const NamedDefault = () => (
-  <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
-
-    <Grain2026 />
-    <Nav2026 active="/get-involved" />
+  <Page2026 active="/get-involved">
 
     {/* ======== Header band ======== */}
     <HeaderBand
@@ -67,51 +57,47 @@ const NamedDefault = () => (
     />
 
     {/* ======== Details ======== */}
-    <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
-      <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+    <Article2026>
 
-        {/* The pitch the old dark hero carried, now that the band above says
-            the page's name instead. */}
-        <p style={bodyP}>
-          Meet real people in the community to see if it's right for you. Tell us about
-          yourself, ask questions, get to know what this is about.
-        </p>
+      {/* The pitch the old dark hero carried, now that the band above says
+          the page's name instead. */}
+      <p style={bodyP}>
+        Meet real people in the community to see if it's right for you. Tell us about
+        yourself, ask questions, get to know what this is about.
+      </p>
 
-        <h2 style={sectionHeading}>Intrigued? Here are your options</h2>
+      <h2 style={sectionHeading}>Intrigued? Here are your options</h2>
 
-        <h3 id="newsletter" style={{ ...optionHeading, ...anchorTarget }}>Subscribe for updates</h3>
-        <p style={bodyP}>
-          Every Thursday, a friendly update with public events and reflections. Browse
-          the <a href="https://buttondown.email/intentionalsociety/archive/" target="_blank" rel="noopener noreferrer" style={linkStyle}>archive</a> for
-          samples. Watch for a confirmation email to finish signing up.
-        </p>
-        <div style={{ marginBottom: '2.5rem' }}>
-          <ButtondownSignup />
-        </div>
+      <h3 id="newsletter" style={{ ...optionHeading, ...anchorTarget }}>Subscribe for updates</h3>
+      <p style={bodyP}>
+        Every Thursday, a friendly update with public events and reflections. Browse
+        the <a href="https://buttondown.email/intentionalsociety/archive/" target="_blank" rel="noopener noreferrer" style={linkStyle}>archive</a> for
+        samples. Watch for a confirmation email to finish signing up.
+      </p>
+      <div style={{ marginBottom: '2.5rem' }}>
+        <ButtondownSignup />
+      </div>
 
-        <h3 id="connection-calls" style={{ ...optionHeading, ...anchorTarget }}>Attend a Connection Call</h3>
-        <p style={{ ...bodyP, marginBottom: '1rem' }}>
-          This call is like a picnic table out on our front lawn. Open to all, new and
-          familiar, with no agenda other than your curiosity!
-        </p>
-        <p style={{ ...bodyP, marginBottom: '2.5rem' }}>
-          <BlurbConnectionCall /> Already have a
-          referral? <a href="https://app.intentionalsociety.org" target="_blank" rel="noopener noreferrer" style={linkStyle}>Sign in at app.intentionalsociety.org</a>.
-        </p>
-        <a href={CONNECTION_CALL_URL} style={{ ...ctaButton, margin: '0 0 2.5rem' }}>Join a Connection Call</a>
+      <h3 id="connection-calls" style={{ ...optionHeading, ...anchorTarget }}>Attend a Connection Call</h3>
+      <p style={{ ...bodyP, marginBottom: '1rem' }}>
+        This call is like a picnic table out on our front lawn. Open to all, new and
+        familiar, with no agenda other than your curiosity!
+      </p>
+      <p style={{ ...bodyP, marginBottom: '2.5rem' }}>
+        <BlurbConnectionCall /> Already have a
+        referral? <a href="https://app.intentionalsociety.org" target="_blank" rel="noopener noreferrer" style={linkStyle}>Sign in at app.intentionalsociety.org</a>.
+      </p>
+      <a href={CONNECTION_CALL_URL} style={{ ...ctaButton, margin: '0 0 2.5rem' }}>Join a Connection Call</a>
 
-        <h3 style={optionHeading}>Find relational practice groups</h3>
-        <p style={{ ...bodyP, marginBottom: '2.5rem' }}>
-          We love relational practices for personal development! You can find several at our
-          sister site <a href="https://relationaldojo.org" target="_blank" rel="noopener noreferrer" style={linkStyle}>Relational Dojo</a>, or
-          read more <Link to="/dojo" style={linkStyle}>on the Dojo page</Link>.
-        </p>
+      <h3 style={optionHeading}>Find relational practice groups</h3>
+      <p style={{ ...bodyP, marginBottom: '2.5rem' }}>
+        We love relational practices for personal development! You can find several at our
+        sister site <a href="https://relationaldojo.org" target="_blank" rel="noopener noreferrer" style={linkStyle}>Relational Dojo</a>, or
+        read more <Link to="/dojo" style={linkStyle}>on the Dojo page</Link>.
+      </p>
 
-      </article>
-    </main>
-
-    <Footer2026 />
-  </div>
+    </Article2026>
+  </Page2026>
 );
 
 export default NamedDefault;

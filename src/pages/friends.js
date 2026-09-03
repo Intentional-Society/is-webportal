@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-  serif, ACCENT_DARK, INK, BODY_TEXT, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
+  serif, ACCENT_DARK, bodyP,
+  Head2026, HeaderBand, Page2026, Article2026,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the Friends page — self-contained page ported from the
@@ -41,57 +41,50 @@ const friendsList = [
 ];
 
 const NamedDefault = () => (
-  <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
-
-    <Grain2026 />
-    <Nav2026 active="/friends" />
+  <Page2026 active="/friends">
 
     {/* ======== Header band ======== */}
     <HeaderBand
-      image="/design2026/moss-roots.jpg" credit="Bill"
+      image="moss-roots.jpg" credit="Bill"
       titleSize="clamp(2rem,4vw,3rem)"
       title={PAGE.title}
     />
 
     {/* ======== Article body ======== */}
-    <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
-      <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+    <Article2026>
 
-        <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 2.5rem', lineHeight: 1.7 }}>
-          We are one node in a much larger, loosely-connected web of communities, practices,
-          and projects working on inner development, relational culture, and collective wisdom.
-          Here are some of the friends whose thinking and practice we've borrowed from,
-          co-hosted with, or simply admire.
-        </p>
+      <p style={{ ...bodyP, margin: '0 0 2.5rem' }}>
+        We are one node in a much larger, loosely-connected web of communities, practices,
+        and projects working on inner development, relational culture, and collective wisdom.
+        Here are some of the friends whose thinking and practice we've borrowed from,
+        co-hosted with, or simply admire.
+      </p>
 
-        {friendsList.map(f => (
-          <div key={f.name} style={{
-            display: 'flex', alignItems: 'flex-start', gap: '1.2rem',
-            paddingBottom: '1.4rem', marginBottom: '1.4rem', borderBottom: '1px solid rgba(42,42,36,0.08)',
-          }}>
-            {f.image ? (
-              <img src={f.image} alt={f.name} style={{ width: '64px', height: '64px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0, background: '#F2EDE4' }} />
-            ) : (
-              <div style={{
-                width: '64px', height: '64px', borderRadius: '50%', flexShrink: 0, background: '#E5EDE6',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontFamily: serif, fontStyle: 'italic', color: '#7A9E8A', fontSize: '22px',
-              }}>{f.initial}</div>
-            )}
-            <div>
-              <h4 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.15rem', margin: '0 0 0.4rem' }}>
-                <a href={f.website} target="_blank" rel="noopener noreferrer" style={{ color: ACCENT_DARK }}>{f.name}</a>
-              </h4>
-              <p style={{ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: 0, lineHeight: 1.7 }}>{f.description}</p>
-            </div>
+      {friendsList.map(f => (
+        <div key={f.name} style={{
+          display: 'flex', alignItems: 'flex-start', gap: '1.2rem',
+          paddingBottom: '1.4rem', marginBottom: '1.4rem', borderBottom: '1px solid rgba(42,42,36,0.08)',
+        }}>
+          {f.image ? (
+            <img src={f.image} alt={f.name} style={{ width: '64px', height: '64px', borderRadius: '50%', objectFit: 'cover', flexShrink: 0, background: '#F2EDE4' }} />
+          ) : (
+            <div style={{
+              width: '64px', height: '64px', borderRadius: '50%', flexShrink: 0, background: '#E5EDE6',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontFamily: serif, fontStyle: 'italic', color: '#7A9E8A', fontSize: '22px',
+            }}>{f.initial}</div>
+          )}
+          <div>
+            <h4 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.15rem', margin: '0 0 0.4rem' }}>
+              <a href={f.website} target="_blank" rel="noopener noreferrer" style={{ color: ACCENT_DARK }}>{f.name}</a>
+            </h4>
+            <p style={{ ...bodyP, margin: 0 }}>{f.description}</p>
           </div>
-        ))}
+        </div>
+      ))}
 
-      </article>
-    </main>
-
-    <Footer2026 />
-  </div>
+    </Article2026>
+  </Page2026>
 );
 
 export default NamedDefault;

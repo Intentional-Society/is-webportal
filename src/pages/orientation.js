@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
-  serif, sans, ACCENT_DARK, INK, BODY_TEXT, MUTED, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
+  sans, ACCENT_DARK, MUTED, bodyP,
+  Head2026, HeaderBand, Page2026, Article2026,
 } from '../components/design2026/chrome';
 
 // A 19-slide orientation deck, walked through in place. Slides are numbered
@@ -21,8 +21,6 @@ const slideTexts = [
   'Welcome to the Orientation!',
   "Intentional Society's core purpose.",
 ];
-
-const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
 
 // Round arrow buttons flanking the slide. Disabled at each end rather than
 // wrapping, matching the original.
@@ -47,63 +45,56 @@ const NamedDefault = () => {
   const atEnd = slide === TOTAL_SLIDES - 1;
 
   return (
-    <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
-
-      <Grain2026 />
-      <Nav2026 />
+    <Page2026>
 
       {/* ======== Header band ======== */}
       <HeaderBand
-        image="/design2026/moss.jpg" focus="center 45%" credit="Bill"
+        image="moss.jpg" focus="center 45%" credit="Bill"
         title={PAGE.title}
         description={PAGE.description}
       />
 
       {/* ======== Article body ======== */}
-      <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
-        <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+      <Article2026>
 
-          <p style={bodyP}>
-            Welcome! These slides walk you through the Intentional Society orientation.
-            They're meant to give you a visual and contextual intro to our purpose, vibe,
-            and how to get involved.
-          </p>
+        <p style={bodyP}>
+          Welcome! These slides walk you through the Intentional Society orientation.
+          They're meant to give you a visual and contextual intro to our purpose, vibe,
+          and how to get involved.
+        </p>
 
-          <figure style={{ margin: '2.5rem 0 0', position: 'relative' }}>
-            <img
-              src={`/images/orientation/${slide + 1}.png`}
-              alt={`Orientation slide ${slide + 1} of ${TOTAL_SLIDES}`}
-              style={{ width: '100%', display: 'block', borderRadius: '4px 7px 3px 6px' }}
-            />
+        <figure style={{ margin: '2.5rem 0 0', position: 'relative' }}>
+          <img
+            src={`/images/orientation/${slide + 1}.png`}
+            alt={`Orientation slide ${slide + 1} of ${TOTAL_SLIDES}`}
+            style={{ width: '100%', display: 'block', borderRadius: '4px 7px 3px 6px' }}
+          />
 
-            <div style={{ position: 'absolute', top: '50%', left: '10px', transform: 'translateY(-50%)' }}>
-              <button type="button" onClick={() => setSlide(s => Math.max(s - 1, 0))}
-                disabled={atStart} aria-label="Previous slide" style={arrowButton(atStart)}>
-                <Chevron dir="left" />
-              </button>
+          <div style={{ position: 'absolute', top: '50%', left: '10px', transform: 'translateY(-50%)' }}>
+            <button type="button" onClick={() => setSlide(s => Math.max(s - 1, 0))}
+              disabled={atStart} aria-label="Previous slide" style={arrowButton(atStart)}>
+              <Chevron dir="left" />
+            </button>
+          </div>
+          <div style={{ position: 'absolute', top: '50%', right: '10px', transform: 'translateY(-50%)' }}>
+            <button type="button" onClick={() => setSlide(s => Math.min(s + 1, TOTAL_SLIDES - 1))}
+              disabled={atEnd} aria-label="Next slide" style={arrowButton(atEnd)}>
+              <Chevron dir="right" />
+            </button>
+          </div>
+
+          <figcaption style={{ textAlign: 'center', marginTop: '1rem' }}>
+            {slideTexts[slide] && (
+              <div style={{ ...bodyP, margin: '0 0 0.4rem' }}>{slideTexts[slide]}</div>
+            )}
+            <div style={{ fontFamily: sans, fontSize: '14px', fontWeight: 500, color: MUTED }}>
+              {slide + 1} / {TOTAL_SLIDES}
             </div>
-            <div style={{ position: 'absolute', top: '50%', right: '10px', transform: 'translateY(-50%)' }}>
-              <button type="button" onClick={() => setSlide(s => Math.min(s + 1, TOTAL_SLIDES - 1))}
-                disabled={atEnd} aria-label="Next slide" style={arrowButton(atEnd)}>
-                <Chevron dir="right" />
-              </button>
-            </div>
+          </figcaption>
+        </figure>
 
-            <figcaption style={{ textAlign: 'center', marginTop: '1rem' }}>
-              {slideTexts[slide] && (
-                <div style={{ ...bodyP, margin: '0 0 0.4rem' }}>{slideTexts[slide]}</div>
-              )}
-              <div style={{ fontFamily: sans, fontSize: '14px', fontWeight: 500, color: MUTED }}>
-                {slide + 1} / {TOTAL_SLIDES}
-              </div>
-            </figcaption>
-          </figure>
-
-        </article>
-      </main>
-
-      <Footer2026 />
-    </div>
+      </Article2026>
+    </Page2026>
   );
 };
 
