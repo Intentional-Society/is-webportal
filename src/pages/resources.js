@@ -16,8 +16,8 @@ import {
 
 // This page's own words, read by both the header band and the document head.
 const PAGE = {
-  title: 'Practices we use, and answers to common questions',
-  metaTitle: 'Resources',
+  title: 'Resources',
+  description: 'Practices we use, and answers to common questions',
   metaDescription: 'Relational practices we use, and answers to common questions about Intentional Society.',
 };
 
@@ -314,6 +314,7 @@ const NamedDefault = () => {
       <HeaderBand
         image="rockfield.jpg" focus="center 65%" credit="Bill"
         title={PAGE.title}
+        description={PAGE.description}
       />
 
       {/* ======== Article body ======== */}
