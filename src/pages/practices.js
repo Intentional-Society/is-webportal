@@ -47,7 +47,7 @@ const chapters = tocStructure.flatMap(entry =>
   entry.practices ? [{ name: entry.name }, ...entry.practices] : [entry]
 );
 
-const divider = <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '3rem auto', width: '120px' }} />;
+const divider = <hr className={PracticesStyles.sectionRule} />;
 
 const PracticesPage = ({ data }) => {
   const nodesByName = {};
@@ -73,10 +73,10 @@ const PracticesPage = ({ data }) => {
       <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
         <article style={{ maxWidth: '720px', margin: '0 auto' }}>
 
-          <p style={{
-            fontFamily: sans, fontSize: '14px', letterSpacing: '0.14em', textTransform: 'uppercase',
-            fontWeight: 600, color: '#9A5B3D', textAlign: 'center', margin: '0 0 2.5rem',
-          }}>Under construction — not yet published</p>
+          <h2 style={{
+            fontFamily: serif, fontSize: 'clamp(1.5rem,2.5vw,2.125rem)', fontWeight: 400,
+            lineHeight: 1.25, color: '#cc0000', textAlign: 'center', margin: '0 0 1.5rem',
+          }}>🚧 Under Construction — Not Yet Published 🚧</h2>
 
           <div className={PracticesStyles.bookLayout}>
             <nav className={PracticesStyles.toc} aria-label="Catalog contents">
