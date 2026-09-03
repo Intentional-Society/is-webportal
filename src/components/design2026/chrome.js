@@ -175,8 +175,8 @@ const headerDescription = {
 // cover what genuinely differs page to page; everything else is fixed here on
 // purpose, so the bands stay a family.
 //
-//   <HeaderBand image="/design2026/moss-roots.jpg" credit="Bill"
-//     title="Fellow travelers in the wider ecosystem" />
+//   <HeaderBand image="moss-roots.jpg" credit="Bill"
+//     title="Friends and Allies" description="fellow travelers in the wider ecosystem" />
 //
 // `description` is the italic line under the title — a string, or any node when
 // it needs a link inside. `kicker` renders an eyebrow label above the h1. No

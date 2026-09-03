@@ -10,7 +10,7 @@ import {
 // siteName: false — the title already names the society.
 const PAGE = {
   title: 'The Intentional Society Podcast',
-  description: 'Conversations from inside the community',
+  description: 'conversations from inside the community',
   metaDescription: 'Listen to the Intentional Society Podcast — conversations from inside the community.',
   siteName: false,
 };

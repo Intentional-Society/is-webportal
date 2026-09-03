@@ -12,8 +12,8 @@ import {
 
 // This page's own words, read by both the header band and the document head.
 const PAGE = {
-  title: 'Announcements and articles',
-  metaTitle: 'News',
+  title: 'News and Media',
+  description: 'a list of helpful information sources',
   metaDescription: 'Announcements and articles from Intentional Society.',
 };
 
@@ -49,6 +49,7 @@ const NamedDefault = () => (
     <HeaderBand
       image="luminaria-field.jpg" focus="center 45%" credit="Bill" veil="news"
       title={PAGE.title}
+      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}

@@ -25,7 +25,7 @@ import {
 // search for and the sentence that reads as a result.
 const PAGE = {
   title: 'Want more?',
-  description: 'Oh, do you have some options',
+  description: "hey, we've got some options for you...",
   metaTitle: 'Get Involved',
   metaDescription: 'Come to a Connection Call — the easiest first step into the Intentional Society web of trust and collaboration.',
 };

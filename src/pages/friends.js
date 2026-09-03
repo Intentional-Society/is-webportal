@@ -12,7 +12,7 @@ import {
 // This page's own words, read by both the header band and the document head.
 const PAGE = {
   title: 'Friends and Allies',
-  description: 'Fellow travelers in the wider ecosystem',
+  description: 'fellow travelers in the wider ecosystem',
   metaDescription: 'Fellow travelers in the wider ecosystem of inner development, relational culture, and collective wisdom.',
 };
 
