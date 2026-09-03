@@ -1,69 +1,124 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import Layout from '../components/layout';
-import CenteredColumn from '../components/centered-column';
+import {
+  serif, sans, ACCENT_DARK, INK, BODY_TEXT, MUTED, PAPER,
+  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
+} from '../components/design2026/chrome';
 
+// A 19-slide orientation deck, walked through in place. Slides are numbered
+// images in static/images/orientation/ — adding one means bumping TOTAL_SLIDES.
+
+// This page's own words, read by both the header band and the document head.
+const PAGE = {
+  title: 'Orientation',
+  description: 'a walk through who we are and how to take part',
+  metaDescription: "An introduction to Intentional Society's purpose, vibe, and how to get involved, in nineteen slides.",
+};
+
+const TOTAL_SLIDES = 19;
+
+// Captions for the slides that have one; the rest show none.
 const slideTexts = [
   'Welcome to the Orientation!',
   "Intentional Society's core purpose.",
 ];
 
-const NamedDefault = ({ data }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const totalImageSlides = 19;
+const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
 
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => Math.min(prevSlide + 1, totalImageSlides - 1));
-  };
+// Round arrow buttons flanking the slide. Disabled at each end rather than
+// wrapping, matching the original.
+const arrowButton = disabled => ({
+  width: '44px', height: '44px', borderRadius: '50%', border: '1px solid rgba(42,42,36,0.15)',
+  background: 'rgba(250,248,243,0.92)', color: disabled ? 'rgba(42,42,36,0.25)' : ACCENT_DARK,
+  cursor: disabled ? 'default' : 'pointer', display: 'flex', alignItems: 'center',
+  justifyContent: 'center', padding: 0,
+});
 
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) => Math.max(prevSlide - 1, 0));
-  };
+const Chevron = ({ dir }) => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
+    style={{ transform: dir === 'left' ? 'rotate(180deg)' : 'none' }}>
+    <path d="M9 18l6-6-6-6" />
+  </svg>
+);
+
+const NamedDefault = () => {
+  const [slide, setSlide] = useState(0);
+  const atStart = slide === 0;
+  const atEnd = slide === TOTAL_SLIDES - 1;
 
   return (
-    <Layout>
-      <div style={{ height: '30px' }}></div>
-      <CenteredColumn>
-        <Typography variant="h2" style={{ textAlign: 'center', marginBottom: '20px' }}>Orientation</Typography>
+    <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
 
-        {/* Image Carousel */}
-        <div style={{ marginBottom: '40px', textAlign: 'center', position: 'relative' }}>
-          <img
-            src={`/images/orientation/${currentSlide + 1}.png`}
-            alt={`Slide ${currentSlide + 1}`}
-            style={{ width: '100%', maxWidth: '720px', borderRadius: '10px' }}
-          />
-          <p style={{ fontSize: '1.2em', marginTop: '15px' }}>
-            {slideTexts[currentSlide] || ''}
+      <Grain2026 />
+      <Nav2026 />
+
+      {/* ======== Header band ======== */}
+      <HeaderBand
+        image="/design2026/moss.jpg" focus="center 45%" credit="Bill"
+        title={PAGE.title}
+        description={PAGE.description}
+      />
+
+      {/* ======== Article body ======== */}
+      <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
+        <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+
+          <p style={bodyP}>
+            Welcome! These slides walk you through the Intentional Society orientation.
+            They're meant to give you a visual and contextual intro to our purpose, vibe,
+            and how to get involved.
           </p>
 
-          {/* Navigation Buttons for Image Carousel */}
-          <div style={{ position: 'absolute', top: '50%', left: '10px', transform: 'translateY(-50%)' }}>
-            <IconButton onClick={prevSlide} disabled={currentSlide === 0}>
-              <ArrowBackIosIcon />
-            </IconButton>
-          </div>
-          <div style={{ position: 'absolute', top: '50%', right: '10px', transform: 'translateY(-50%)' }}>
-            <IconButton onClick={nextSlide} disabled={currentSlide === totalImageSlides - 1}>
-              <ArrowForwardIosIcon />
-            </IconButton>
-          </div>
-          <Typography variant="body2" style={{ position: 'absolute', bottom: '-20px', left: '50%', transform: 'translateX(-50%)' }}>
-            {currentSlide + 1} / {totalImageSlides}
-          </Typography>
-        </div>
+          <figure style={{ margin: '2.5rem 0 0', position: 'relative' }}>
+            <img
+              src={`/images/orientation/${slide + 1}.png`}
+              alt={`Orientation slide ${slide + 1} of ${TOTAL_SLIDES}`}
+              style={{ width: '100%', display: 'block', borderRadius: '4px 7px 3px 6px' }}
+            />
 
-        {/* Static Content Below Carousel */}
-        <p>
-          Welcome! These slides walk you through the Intentional Society orientation. They're meant to give you a visual and contextual intro to our purpose, vibe, and how to get involved.
-        </p>
-      </CenteredColumn>
-    </Layout>
+            <div style={{ position: 'absolute', top: '50%', left: '10px', transform: 'translateY(-50%)' }}>
+              <button type="button" onClick={() => setSlide(s => Math.max(s - 1, 0))}
+                disabled={atStart} aria-label="Previous slide" style={arrowButton(atStart)}>
+                <Chevron dir="left" />
+              </button>
+            </div>
+            <div style={{ position: 'absolute', top: '50%', right: '10px', transform: 'translateY(-50%)' }}>
+              <button type="button" onClick={() => setSlide(s => Math.min(s + 1, TOTAL_SLIDES - 1))}
+                disabled={atEnd} aria-label="Next slide" style={arrowButton(atEnd)}>
+                <Chevron dir="right" />
+              </button>
+            </div>
+
+            <figcaption style={{ textAlign: 'center', marginTop: '1rem' }}>
+              {slideTexts[slide] && (
+                <div style={{ ...bodyP, margin: '0 0 0.4rem' }}>{slideTexts[slide]}</div>
+              )}
+              <div style={{ fontFamily: sans, fontSize: '14px', fontWeight: 500, color: MUTED }}>
+                {slide + 1} / {TOTAL_SLIDES}
+              </div>
+            </figcaption>
+          </figure>
+
+          <div style={{ marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(42,42,36,0.08)' }}>
+            <Link to="/get-involved" style={{
+              fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
+              borderBottom: '1px solid rgba(26,66,50,0.3)',
+            }}>Next page: Get Involved →</Link>
+          </div>
+
+        </article>
+      </main>
+
+      <Footer2026 />
+    </div>
   );
 };
 
 export default NamedDefault;
+
+export const Head = () => (
+  <Head2026
+    {...PAGE}
+  />
+);

@@ -5,11 +5,17 @@ import {
   Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
 } from '../components/design2026/chrome';
 
-// 2026 redesign of the IS Web page — previously an old-theme, markdown-driven
-// page (src/md/web.md) rendered inside <Layout>. Now self-contained in the
-// shared 2026 chrome (components/design2026/), matching the other interior
-// pages. Absolute self-links in the old markdown (intentionalsociety.org/...)
-// are internal <Link>s here.
+// The IS Web page — the relational web, its programs, and what membership
+// asks. Self-links stay internal <Link>s, not intentionalsociety.org URLs.
+
+// This page's own words, read by both the header band and the document head.
+// The band's description is a fragment that only reads under the title, so the
+// head carries its own sentence.
+const PAGE = {
+  title: 'The IS Web',
+  description: 'our extended network across the liminal landscape',
+  metaDescription: "The relational web of trust and collaboration around Intentional Society: what's inside it, and what membership asks of you.",
+};
 
 const linkStyle = { color: ACCENT_DARK };
 
@@ -85,7 +91,8 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="/design2026/crystals-header.jpg" focus="center 45%" credit="Bill"
-      title="A distributed village, held by trust"
+      title={PAGE.title}
+      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}
@@ -173,8 +180,5 @@ const NamedDefault = () => (
 export default NamedDefault;
 
 export const Head = () => (
-  <Head2026
-    title="Join the IS Web — Intentional Society"
-    description="The relational web of trust and collaboration around Intentional Society: what's inside it, and what membership asks of you."
-  />
+  <Head2026 {...PAGE} />
 );

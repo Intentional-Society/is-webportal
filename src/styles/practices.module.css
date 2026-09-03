@@ -1,80 +1,144 @@
-/* Book-like styling for the practices catalog */
+/* Styling for the practices catalog's markdown-rendered content.
+   This page is the last one that renders markdown through
+   gatsby-transformer-remark (its entries are edited as .md files in
+   src/md/practices/), so the 2026 look has to be reproduced here in CSS
+   rather than inherited from the shared chrome's inline styles.
+
+   Colors mirror the tokens in components/design2026/chrome.js — keep them in
+   step by hand: ACCENT #2E6B4F, ACCENT_DARK #1A4232, INK #2A2A24,
+   BODY_TEXT #4A473F, MUTED #6B6860, PAPER #F8F5EF. */
 
 .bookLayout {
   max-width: 720px;
   margin: 0 auto;
-  line-height: 1.7;
-  font-size: 1.05em;
 }
 
 .bookLayout p {
-  margin-bottom: 1.2em;
-  text-align: justify;
-  hyphens: auto;
+  font-size: 20px;
+  font-weight: 500;
+  color: #4a473f;
+  line-height: 1.7;
+  margin: 0 0 1.2rem;
+}
+
+.bookLayout a {
+  color: #1a4232;
 }
 
 .bookLayout blockquote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
-  margin: 1.5em 2em;
-  padding: 0.5em 1.5em;
-  border-left: 3px solid #24818E;
-  background-color: #f4f8f6;
+  font-size: 19px;
+  font-weight: 500;
+  color: #2a2a24;
+  line-height: 1.6;
+  margin: 1.6rem 0;
+  padding: 0.9rem 1.4rem;
+  border-left: 3px solid #2e6b4f;
+  background: rgba(46, 107, 79, 0.05);
 }
 
+.bookLayout blockquote p {
+  font-size: inherit;
+  color: inherit;
+  margin-bottom: 0.6em;
+}
+
+.bookLayout blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* h3 opens a practice, h4 its sub-sections — matching the heading levels the
+   markdown uses (see the practices formatting rules in CLAUDE.md).
+   scroll-margin-top clears the fixed 66px nav when a #anchor is followed. */
 .bookLayout h3 {
-  margin-top: 2.5em;
-  margin-bottom: 0.8em;
-  padding-bottom: 0.3em;
-  border-bottom: 1px solid #ccc;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  color: #5c4a3a;
+  line-height: 1.2;
+  margin: 3rem 0 1.2rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid rgba(42, 42, 36, 0.12);
+  scroll-margin-top: 86px;
 }
 
-/* Remove top margin when h3 is the first element in a section div,
-   so anchor link offsets align correctly with the heading */
 .bookLayout h3:first-child {
   margin-top: 0;
 }
 
 .bookLayout h4 {
-  margin-top: 2em;
-  margin-bottom: 0.5em;
-  color: #24818E;
+  font-family: 'DM Sans', 'Gudea', sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+  color: #2e6b4f;
+  margin: 2rem 0 0.6rem;
+  scroll-margin-top: 86px;
 }
 
-.bookLayout ul, .bookLayout ol {
-  margin-bottom: 1.2em;
+.bookLayout ul,
+.bookLayout ol {
+  font-size: 20px;
+  font-weight: 500;
+  color: #4a473f;
+  line-height: 1.7;
+  margin: 0 0 1.2rem;
+  padding-left: 1.4rem;
 }
 
 .bookLayout li {
-  margin-bottom: 0.4em;
+  margin-bottom: 0.4rem;
+}
+
+.bookLayout hr {
+  border: none;
+  border-top: 1px solid rgba(42, 42, 36, 0.12);
+  width: 120px;
+  margin: 3rem auto;
 }
 
 /* Table of contents */
 .toc {
-  margin: 1.5em 0;
-  padding: 2em 3.5em;
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #f4f8f6;
+  margin: 0 auto 3rem;
+  padding: 1.8rem 2.2rem;
+  background: rgba(46, 107, 79, 0.05);
+  border: 1px solid rgba(46, 107, 79, 0.14);
   border-radius: 4px;
-}
-
-.toc h4 {
-  margin-top: 0;
-  color: inherit;
 }
 
 .toc ul {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .toc ul ul {
-  padding-left: 1.5em;
+  padding-left: 1.4rem;
+  margin-top: 0.3rem;
 }
 
 .toc li {
-  margin-bottom: 0.3em;
+  font-family: 'DM Sans', 'Gudea', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
+  margin-bottom: 0.45rem;
+}
+
+.toc a {
+  color: #1a4232;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(26, 66, 50, 0.25);
+}
+
+.toc a:hover {
+  border-bottom-color: rgba(26, 66, 50, 0.6);
+}
+
+/* The three part headings sit a step up from the practices beneath them. */
+.toc > ul > li > a {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 19px;
+  font-weight: 500;
 }

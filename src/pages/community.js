@@ -9,6 +9,13 @@ import { StaticImage } from 'gatsby-plugin-image';
 // 2026 redesign of the Community page — self-contained page ported from the
 // Claude Design mockup, using the shared 2026 chrome (components/design2026/).
 
+// This page's own words, read by both the header band and the document head.
+const PAGE = {
+  title: 'IS Community Calls',
+  description: 'relationships that matter as we craft an intentional culture together',
+  metaDescription: "A space full of relationships that matter — how Intentional Society's weekly community gathers, and how to join.",
+};
+
 const linkStyle = { color: ACCENT_DARK };
 
 const sectionHeading = {
@@ -30,7 +37,8 @@ const NamedDefault = () => (
     <HeaderBand
       image="/design2026/turkeytail-log.jpg" credit="Bill"
       titleSize="clamp(2rem,4vw,3rem)"
-      title="A space full of relationships that matter"
+      title={PAGE.title}
+      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}
@@ -127,7 +135,6 @@ export default NamedDefault;
 
 export const Head = () => (
   <Head2026
-    title="Community — Intentional Society"
-    description="A space full of relationships that matter — how Intentional Society's weekly community gathers, and how to join."
+    {...PAGE}
   />
 );

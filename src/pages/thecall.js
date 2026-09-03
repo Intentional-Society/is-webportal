@@ -10,7 +10,13 @@ import {
 // 20260315.js) so the existing #the-call inbound links keep working, via
 // the shared 2026 chrome (components/design2026/).
 
-const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
+// This page's own words, read by both the header band and the document head.
+const PAGE = {
+  title: 'The Call',
+  metaDescription: 'The letter that started Intentional Society, December 2020.',
+};
+
+const bodyP ={ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
 
 const NamedDefault = () => (
   <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
@@ -22,7 +28,7 @@ const NamedDefault = () => (
     <HeaderBand
       image="/design2026/willow.jpg" focus="center 35%" credit="Bill" veil="news"
       width="720px"
-      title="The Call" dateLabel="December 2020"
+      title={PAGE.title} dateLabel="December 2020"
     />
 
     {/* ======== Article body ======== */}
@@ -102,7 +108,6 @@ export default NamedDefault;
 
 export const Head = () => (
   <Head2026
-    title="The Call — Intentional Society"
-    description="The letter that started Intentional Society, December 2020."
+    {...PAGE}
   />
 );

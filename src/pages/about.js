@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, headerLead,
+  serif, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
   Grain2026, Nav2026, Footer2026, Head2026, HeaderBand, PhotoCredit,
 } from '../components/design2026/chrome';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -9,6 +9,16 @@ import { StaticImage } from 'gatsby-plugin-image';
 // 2026 redesign of the About page — self-contained page ported from the
 // "About v2" Claude Design mockup: no <Layout>/MUI theme, shared 2026
 // chrome from components/design2026/chrome.js, images in static/design2026/.
+
+// This page's own words, read by both the header band and the document head.
+// The head shortens the title to a tab label and carries its own sentence,
+// since the band's description is a fragment that only reads under the title.
+const PAGE = {
+  title: 'About Intentional Society',
+  description: 'and our journey of unfolding into what we are today',
+  metaTitle: 'About',
+  metaDescription: 'Who we are, what we do, and how membership works at Intentional Society.',
+};
 
 const linkStyle = { color: ACCENT_DARK };
 
@@ -32,14 +42,9 @@ const NamedDefault = () => (
       image="/design2026/crescent-butterflyweed.jpg" credit="Bill"
       width="820px"
       titleSize="large"
-      title={<>A society we are creating <em style={{ fontStyle: 'italic' }}>on purpose</em></>}
-    >
-      <p style={headerLead}>
-        Intentional Society is a community authoring itself as it goes — a developmental
-        culture built week by week since 2020, by the people inside it. Not finished, and
-        not meant to be.
-      </p>
-    </HeaderBand>
+      title={PAGE.title}
+      description={PAGE.description}
+    />
 
     {/* ======== Article body ======== */}
     <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
@@ -218,8 +223,5 @@ const NamedDefault = () => (
 export default NamedDefault;
 
 export const Head = () => (
-  <Head2026
-    title="About — Intentional Society"
-    description="A society we are creating on purpose — who we are, what we do, and how membership works at Intentional Society."
-  />
+  <Head2026 {...PAGE} />
 );

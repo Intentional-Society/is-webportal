@@ -13,6 +13,15 @@ import { FullBleedPhoto } from '../components/design2026/photo';
 // atmospheric interstitials. Torn edges are baked into the section images
 // (wood-band.png, ice-torn.png), not a CSS mask.
 
+// This page's own words. The homepage has no header band and its title is the
+// bare site name, so siteName: false rather than "Intentional Society —
+// Intentional Society".
+const PAGE = {
+  title: 'Intentional Society',
+  metaDescription: 'An online community for inner development, wise action, and human connection — peer-led, free, and five years into the work.',
+  siteName: false,
+};
+
 const spaces = [
   {
     title: 'Find others',
@@ -71,7 +80,7 @@ const moveSeparator = { padding: '0 0.32em' };
 const missionKey = { fontWeight: 700 };
 
 // Teal CTA button — currently unused (the hero's "Enter the community" button
-// became a scroll cue); kept for future CTAs, like .big-button in global.module.css.
+// became a scroll cue); kept for future CTAs.
 const ctaButton = {
   display: 'inline-block', padding: '0.8rem 2rem', background: ACCENT,
   color: '#fff', textDecoration: 'none', fontFamily: sans, fontSize: '16px',
@@ -519,7 +528,6 @@ export default NamedDefault;
 
 export const Head = () => (
   <Head2026
-    title="Intentional Society"
-    description="An online community for inner development, wise action, and human connection — peer-led, free, and five years into the work."
+    {...PAGE}
   />
 );

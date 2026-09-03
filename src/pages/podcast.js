@@ -12,7 +12,15 @@ import { FullBleedPhoto } from '../components/design2026/photo';
 // header photo — it isn't a HeaderBand credit-host, so add one the usual way
 // (className="credit-host" + <PhotoCredit>) if this photo needs attribution.
 
-const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
+// This page's own words. No header band here (see above), so only the document
+// head reads them. siteName: false — the title already names the society.
+const PAGE = {
+  title: 'The Intentional Society Podcast',
+  metaDescription: 'Listen to the Intentional Society Podcast — conversations from inside the community.',
+  siteName: false,
+};
+
+const bodyP ={ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
 
 const episodeLinks = [
   { text: 'Listen on Spotify', href: 'https://open.spotify.com/show/6VObFjAmDWinl9c8fxLDZw' },
@@ -94,7 +102,6 @@ export default NamedDefault;
 
 export const Head = () => (
   <Head2026
-    title="The Intentional Society Podcast"
-    description="Listen to the Intentional Society Podcast — conversations from inside the community."
+    {...PAGE}
   />
 );

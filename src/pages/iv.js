@@ -9,6 +9,13 @@ import { StaticImage } from 'gatsby-plugin-image';
 // 2026 redesign of the Ventures page — self-contained page ported from the
 // Claude Design mockup, using the shared 2026 chrome (components/design2026/).
 
+// This page's own words, read by both the header band and the document head.
+const PAGE = {
+  title: 'Intentional Ventures',
+  description: 'catalyzing aligned livelihoods into a relational economic web',
+  metaDescription: 'Aligned livelihoods, woven into a relational economic web.',
+};
+
 const linkStyle = { color: ACCENT_DARK };
 
 const sectionHeading = {
@@ -29,7 +36,8 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="/design2026/willow.jpg" focus="center 40%" credit="Bill"
-      title="Aligned livelihoods, woven into a relational economic web"
+      title={PAGE.title}
+      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}
@@ -133,7 +141,6 @@ export default NamedDefault;
 
 export const Head = () => (
   <Head2026
-    title="Intentional Ventures — Intentional Society"
-    description="Aligned livelihoods, woven into a relational economic web."
+    {...PAGE}
   />
 );

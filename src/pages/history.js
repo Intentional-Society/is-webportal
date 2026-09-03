@@ -1,9 +1,20 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Accordion, AccordionSummary, AccordionDetails, Typography, Grid, Button } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Layout from '../components/layout';
-import CenteredColumn from '../components/centered-column';
+import {
+  serif, sans, ACCENT_DARK, INK, BODY_TEXT, MUTED, PAPER,
+  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
+} from '../components/design2026/chrome';
+
+// The weekly-session event log, going back to the first meeting. Each season
+// is a collapsed <details>, the same pattern /resources uses. New seasons go
+// at the top of `seasons`.
+
+// This page's own words, read by both the header band and the document head.
+const PAGE = {
+  title: 'History',
+  description: 'a patient unfolding, week by week since 2021',
+  metaDescription: "Intentional Society's history — a title-based record of weekly sessions going back to the first meeting in January 2021.",
+};
 
 const seasons = [
   {
@@ -373,52 +384,112 @@ const seasons = [
   }
 ];
 
+const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
+
+const linkStyle = { color: ACCENT_DARK };
+
+const sectionHeading = {
+  fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
+  fontSize: 'clamp(1.5rem,2.6vw,2rem)', color: '#5C4A3A', margin: '3rem 0 1.4rem',
+};
+
 const HistoryPage = () => (
-  <Layout>
-    <div style={{ height: '30px' }}></div>
-    <CenteredColumn>
-      <Typography variant="h2">History</Typography>
-      <p>
-        Hi, James here. I'm the founder/
-        <a href="https://workwithsource.com/what-is-source/how-initiatives-start/">source</a>/
-        <a href="https://www.microsolidarity.cc/articles/2-update-2020#1-initiators">caller</a> of
-        Intentional Society. When I retired from my corporate career at the
-        onset of the pandemic, I'd been collecting thoughts and ideas for a decade about how organizations
-        function and grow, while looking for meaning, truth, and the “why?”s of life for a few decades before
-        that. I'd had some transformational experiences in my personal development, and I wanted to keep
-        growing, make friends on that same journey, and be of service to humanity. I wrote
-         a <Link to="/thecall"> calling manifesto</Link> of
-        sorts in December 2020, and began weekly meetings of Intentional Society in January 2021.
-      </p>
-      <p>What followed has been a patient unfolding with many stories embedded in the journey. 
-        Below you can find title-based records of weekly sessions going all the way back to the beginning.</p>
-      <Typography variant="h3">Historical Event Log</Typography>
-      <Grid container spacing={1} direction="column" style={{ maxWidth: '800px', margin: '0 auto' }}>
-      {seasons.map((season, index) => (
-        <Grid item xs={12} sm={12} md={12} lg={12} key={index} style={{ paddingBottom: '8px' }}>
-        <Accordion>
-              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Typography variant="h4">{season.title}</Typography>
-                </AccordionSummary>
-              <AccordionDetails>
-                <div style={{ width: '100%' }}>
-                  <ul>
-                    {season.events.map((event, i) => (
-                      <li key={i}>{event}</li>
-                    ))}
-                  </ul>
-                </div>
-              </AccordionDetails>
-            </Accordion>
-          </Grid>
+  <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
+
+    <Grain2026 />
+    <Nav2026 />
+
+    {/* ======== Header band ======== */}
+    <HeaderBand
+      image="/design2026/moss-roots.jpg" focus="center 40%" credit="Bill"
+      title={PAGE.title}
+      description={PAGE.description}
+    />
+
+    {/* ======== Article body ======== */}
+    <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
+      <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+
+        <p style={bodyP}>
+          Hi, James here. I'm the founder/
+          <a href="https://workwithsource.com/what-is-source/how-initiatives-start/"
+            target="_blank" rel="noopener noreferrer" style={linkStyle}>source</a>/
+          <a href="https://www.microsolidarity.cc/articles/2-update-2020#1-initiators"
+            target="_blank" rel="noopener noreferrer" style={linkStyle}>caller</a> of
+          Intentional Society. When I retired from my corporate career at the onset of the
+          pandemic, I'd been collecting thoughts and ideas for a decade about how
+          organizations function and grow, while looking for meaning, truth, and the
+          “why?”s of life for a few decades before that. I'd had some transformational
+          experiences in my personal development, and I wanted to keep growing, make friends
+          on that same journey, and be of service to humanity. I wrote
+          a <Link to="/thecall" style={linkStyle}>calling manifesto</Link> of sorts in
+          December 2020, and began weekly meetings of Intentional Society in January 2021.
+        </p>
+        <p style={bodyP}>
+          What followed has been a patient unfolding with many stories embedded in the
+          journey. Below you can find title-based records of weekly sessions going all the
+          way back to the beginning.
+        </p>
+
+        <h2 style={sectionHeading}>Historical event log</h2>
+
+        {seasons.map(season => (
+          <details key={season.title} className="season-item">
+            <summary>{season.title}</summary>
+            <ul style={{ ...bodyP, paddingLeft: '1.2rem', margin: '0.6rem 0 0' }}>
+              {season.events.map((event, i) => (
+                <li key={i} style={{ marginBottom: '0.25rem' }}>{event}</li>
+              ))}
+            </ul>
+          </details>
         ))}
-      </Grid>
-      <div style={{textAlign: 'right', marginBottom: '-25px'}}>
-        Next page: <Link to="/resources">Resources</Link>
-      </div>
-    </CenteredColumn>
-  </Layout>
+
+        <div style={{ marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(42,42,36,0.08)' }}>
+          <Link to="/resources" style={{
+            fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
+            borderBottom: '1px solid rgba(26,66,50,0.3)',
+          }}>Next page: Resources →</Link>
+        </div>
+
+        {/* Collapsed season rows. Scoped here rather than in chrome.js since
+            /resources styles its own <details> the same way locally. */}
+        <style>{`
+          .season-item {
+            border-bottom: 1px solid rgba(42,42,36,0.12);
+            padding: 0.9rem 0;
+          }
+          .season-item > summary {
+            cursor: pointer;
+            list-style: none;
+            font-family: ${serif};
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: ${INK};
+          }
+          .season-item > summary::-webkit-details-marker { display: none; }
+          .season-item > summary::before {
+            content: '+';
+            display: inline-block;
+            width: 1.2em;
+            color: ${MUTED};
+            font-family: ${sans};
+            font-weight: 500;
+          }
+          .season-item[open] > summary::before { content: '−'; }
+        `}</style>
+
+      </article>
+    </main>
+
+    <Footer2026 />
+  </div>
 );
 
 export default HistoryPage;
+
+export const Head = () => (
+  <Head2026
+    {...PAGE}
+  />
+);
 

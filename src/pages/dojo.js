@@ -9,6 +9,14 @@ import { StaticImage } from 'gatsby-plugin-image';
 // 2026 redesign of the Dojo page — self-contained page ported from the
 // Claude Design mockup, using the shared 2026 chrome (components/design2026/).
 
+// This page's own words, read by both the header band and the document head.
+// No meta overrides needed: the title works as a tab label as it stands, and
+// the description reads as a whole thought on its own.
+const PAGE = {
+  title: 'Relational Dojo',
+  description: 'A skill-building space for developmental-relational practice',
+};
+
 const linkStyle = { color: ACCENT_DARK };
 
 const sectionHeading = {
@@ -30,7 +38,9 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="/design2026/luminaria-row.jpg" credit="Bill"
-      title="A skill-building space for developmental-relational practice"
+      titleSize="large"
+      title={PAGE.title}
+      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}
@@ -146,8 +156,5 @@ const NamedDefault = () => (
 export default NamedDefault;
 
 export const Head = () => (
-  <Head2026
-    title="Relational Dojo — Intentional Society"
-    description="A skill-building space for developmental-relational practice."
-  />
+  <Head2026 {...PAGE} />
 );

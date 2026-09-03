@@ -19,6 +19,13 @@ import {
 // newsletter form, and the #connection-calls / #newsletter anchors that other
 // pages deep-link to.
 
+// This page's own words. No header band here, so only the document head reads
+// them.
+const PAGE = {
+  title: 'Get Involved',
+  metaDescription: 'Come to a Connection Call — the easiest first step into the Intentional Society web of trust and collaboration.',
+};
+
 const linkStyle = { color: ACCENT };
 
 const sectionHeading = {
@@ -109,7 +116,6 @@ export default NamedDefault;
 
 export const Head = () => (
   <Head2026
-    title="Get Involved — Intentional Society"
-    description="Come to a Connection Call — the easiest first step into the Intentional Society web of trust and collaboration."
+    {...PAGE}
   />
 );

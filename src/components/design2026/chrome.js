@@ -12,6 +12,10 @@ import '@fontsource/cormorant-garamond/400.css';
 import '@fontsource/cormorant-garamond/500.css';
 import '@fontsource/cormorant-garamond/300-italic.css';
 import '@fontsource/cormorant-garamond/400-italic.css';
+// 500-italic backs headerDescription, which is weight 500. Without it the
+// browser matches down to 400-italic and the description line renders lighter
+// than the weight it asks for.
+import '@fontsource/cormorant-garamond/500-italic.css';
 // 700-italic backs the emphasised words in the homepage mission verse. Without
 // a real bold-italic face the browser synthesises one by slanting and smearing
 // the 400 weight, which looks noticeably worse at display size.
@@ -38,8 +42,6 @@ export const PAPER = '#F8F5EF';
 // scroll clear of it derives from this — page header bands (marginTop), the
 // mobile menu's top edge, scrollMarginTop on anchor targets. Don't hardcode
 // the number anywhere else; change it here and the whole site follows.
-// Unrelated to .anchorOffset in global.module.css, which clears the *MUI*
-// AppBar on the remaining old-theme pages.
 export const NAV_HEIGHT = 66;
 export const NAV_OFFSET = `${NAV_HEIGHT}px`;
 
@@ -113,24 +115,34 @@ const TITLE_SIZES = {
   standard: 'clamp(2.2rem,4.2vw,3.2rem)',
 };
 
+// Italic description line under a band's title. Deliberately not exported:
+// pass the text as the band's `description` prop instead of styling a <p> at
+// the call site.
+const headerDescription = {
+  color: '#FAF8F3', fontSize: '1.3rem', fontWeight: 500, fontStyle: 'italic',
+  lineHeight: 1.6, margin: '0 auto', maxWidth: '600px',
+  textShadow: '0 1px 12px rgba(8,12,16,0.8)',
+};
+
 // The header band every interior 2026 page opens with: full-bleed photo under
-// a dark veil, a serif h1, optionally a lead paragraph passed as children.
-// Props cover what genuinely differs page to page; everything else is fixed
-// here on purpose, so the bands stay a family.
+// a dark veil, a serif h1, optionally a description line beneath it. Props
+// cover what genuinely differs page to page; everything else is fixed here on
+// purpose, so the bands stay a family.
 //
 //   <HeaderBand image="/design2026/moss-roots.jpg" credit="Bill"
 //     title="Fellow travelers in the wider ecosystem" />
 //
-// `kicker` renders an eyebrow label above the h1. No page passes one now — the
-// subpage kickers were dropped as redundant with the nav — but the prop still
-// works if a band ever needs one again.
+// `description` is the italic line under the title — a string, or any node when
+// it needs a link inside. `kicker` renders an eyebrow label above the h1. No
+// page passes one now — the subpage kickers were dropped as redundant with the
+// nav — but the prop still works if a band ever needs one again.
 // `focus` is the CSS background-position ('center 40%'); `titleSize` a key of
 // TITLE_SIZES, or a raw font-size/clamp() string for a genuine one-off; `width`
 // the text column's max width; `veil` a key of VEILS above. Omit `credit` for a
 // header whose photo isn't a community member's.
 export const HeaderBand = ({
-  image, focus = 'center', credit, kicker, title,
-  titleSize = 'standard', width = '640px', veil = 'deep', dateLabel, children,
+  image, focus = 'center', credit, kicker, title, description,
+  titleSize = 'standard', width = '640px', veil = 'deep', dateLabel,
 }) => (
   <header className="credit-host" style={{
     position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
@@ -148,27 +160,21 @@ export const HeaderBand = ({
         fontFamily: serif, fontWeight: 500, lineHeight: 1.25,
         fontSize: TITLE_SIZES[titleSize] || titleSize,
         color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)',
-        margin: children ? '0 0 1.2rem' : 0,
+        margin: description ? '0 0 1.2rem' : 0,
       }}>{title}</h1>
       {/* Small caps date line under the title, used by the two News article
           pages instead of a kicker above it — doesn't affect the h1's margin
-          the way a headerLead paragraph (passed as children) does. */}
+          the way a `description` does. */}
       {dateLabel && (
         <div style={{
           fontFamily: sans, fontSize: '14px', letterSpacing: '0.16em', textTransform: 'uppercase',
           fontWeight: 600, color: '#E8DFD0', marginTop: '1.1rem',
         }}>{dateLabel}</div>
       )}
-      {children}
+      {description && <p style={headerDescription}>{description}</p>}
     </div>
   </header>
 );
-
-// Lead paragraph style for a HeaderBand's children, on the pages that have one.
-export const headerLead = {
-  color: '#FAF8F3', fontSize: '1.3rem', fontWeight: 500, lineHeight: 1.6,
-  margin: '0 auto', maxWidth: '600px', textShadow: '0 1px 12px rgba(8,12,16,0.8)',
-};
 
 // Fixed top nav. `active` is the path of the current page ('/about', '/dojo', …);
 // omit it on the homepage. Collapses to a hamburger below 920px — the desktop
@@ -368,17 +374,29 @@ export const Footer2026 = () => (
 );
 
 // Gatsby Head contents shared by all 2026 pages: meta + per-page title/description.
+//
+// Takes the same PAGE object each page hands its HeaderBand, so the tab and the
+// header band can't drift apart: `title` and `description` are the page's own
+// words, and `metaTitle`/`metaDescription` override them only where the head
+// genuinely needs different ones — a tab and a search result want a short label
+// and a whole sentence, where a band can carry a phrase that only reads under
+// its photo. The site name is appended here rather than typed into every page;
+// pass `siteName: false` for a title that already contains it.
+//
 // Fonts are self-hosted via the @fontsource imports above (bundled with the
 // page's JS, not fetched from a CDN). These pages don't use MUI's
 // <CssBaseline/>, so nothing else resets the browser's default 8px body
 // margin — do that here since Head2026 renders into <head> on every 2026 page.
-export const Head2026 = ({ title, description }) => (
-  <>
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <style>{`
-      * { box-sizing: border-box; }
-      body { margin: 0; -webkit-font-smoothing: antialiased; }
-    `}</style>
-  </>
-);
+export const Head2026 = ({ title, description, metaTitle, metaDescription, siteName = true }) => {
+  const tabTitle = metaTitle || title;
+  return (
+    <>
+      <title>{siteName ? `${tabTitle} — Intentional Society` : tabTitle}</title>
+      <meta name="description" content={metaDescription || description} />
+      <style>{`
+        * { box-sizing: border-box; }
+        body { margin: 0; -webkit-font-smoothing: antialiased; }
+      `}</style>
+    </>
+  );
+};

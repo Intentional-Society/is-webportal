@@ -34,35 +34,64 @@ yarn clean
 
 **Gatsby file-based routing**: Pages in `src/pages/` map directly to URLs (e.g., `about.js` → `/about`).
 
-**Layout pattern**: All pages wrap content in `<Layout>` (header/footer) and typically `<CenteredColumn>` for consistent width.
+**One theme.** Every page is a self-contained 2026-design page: it renders its
+own `<Grain2026 />`, `<Nav2026 />`, `<HeaderBand />` and `<Footer2026 />` from
+`src/components/design2026/chrome.js` and styles its body with inline styles.
+There is no `<Layout>`, no `<CenteredColumn>`, no MUI, and no shared page
+wrapper — the chrome module *is* the shared layer. Copy an existing page
+(`thecall.js` is the smallest complete example) rather than inventing a shape.
 
 **Styling stack**:
-- MUI v7 components for UI (AppBar, Typography, Button, etc.)
-- Emotion for CSS-in-JS (via `gatsby-plugin-emotion`)
-- CSS Modules (`.module.css`) for scoped styles
-- Custom MUI theme in `src/gatsby-theme-material-ui-top-layout/theme.js` — 2026 design palette (primary: greener teal `#2E6B4F`, background: warm-white `#F8F5EF`). See "Readability pass" below for `body`/link/heading weight conventions.
+- Inline styles for page bodies, driven by the tokens exported from `chrome.js`
+  (`serif`, `sans`, `ACCENT`, `ACCENT_DARK`, `INK`, `MUTED`, `BODY_TEXT`, `PAPER`)
+- CSS Modules (`.module.css`) where a page needs real CSS — currently only
+  `practices.module.css`, which styles markdown the page can't reach inline
+- Scoped `<style>` blocks inside a page for pseudo-elements, `:hover`, media
+  queries, and `<details>` markers (see `resources.js`, `history.js`)
 
-**Heading scale** (defined in `theme.js`, single source of truth for both MUI Typography and raw HTML):
-- h1: `clamp(2.5rem, 5vw, 4rem)`, weight 300, serif (Cormorant Garamond)
-- h2: `clamp(2rem, 4vw, 2.8rem)`, weight 300, serif
-- h3: `clamp(1.5rem, 2.5vw, 2.125rem)`, weight 400, serif
-- h4: `1.5rem`, weight 500, sans (DM Sans)
-- h5/h6: `1.25rem`/`1rem`, weight 500, sans
-- h1–h3 use Cormorant Garamond (display serif); h4–h6 use DM Sans so sub-section labels stay crisp. `CssBaseline` applies these styles to raw HTML elements (for markdown content).
+There is no global stylesheet. `Head2026` emits the only site-wide CSS: a
+`box-sizing` reset and the `body { margin: 0 }` that replaces the browser
+default.
 
-**Markdown content pattern**: Pages can render content from `src/md/*.md` files via `gatsby-transformer-remark`. The page component queries the markdown file via GraphQL and renders with `dangerouslySetInnerHTML`. See `src/pages/web.js` for an example. When converting an HTML page to markdown, do it in two commits: first the mechanical conversion (new `.md` file + rewired `.js`), then a separate commit for any copy rewrite, so content changes get a clean diff.
+**Page identity**: every page declares one `PAGE` const near the top and hands
+it to both its `HeaderBand` and its `Head2026`, so the header and the metadata
+can't drift. See "Page metadata" below.
 
-**Markdown anchors**: CSS Module classes can't be used inside markdown content (they get scoped/mangled). For deep-link anchor offsets that clear the AppBar, use inline styles in the markdown:
-```html
-<a id="section-name" style="display:block;position:relative;top:-74px;visibility:hidden"></a>
+**Markdown content pattern**: `src/pages/practices.js` is the only page that
+still renders markdown (`src/md/practices/*.md` through
+`gatsby-transformer-remark` and `dangerouslySetInnerHTML`), because its catalog
+entries are maintained as documents rather than as JSX. Its type and color live
+in `src/styles/practices.module.css`, which mirrors the `chrome.js` tokens by
+hand — change one and update the other. Every other page's copy is JSX.
+
+**Page metadata**: each page declares a single `PAGE` const near the top and
+feeds it to both its `HeaderBand` and its `Head2026`, so the visible header and
+the document head can't drift apart:
+
+```js
+const PAGE = {
+  title: 'The IS Web',
+  description: 'our extended network across the liminal landscape',
+  metaDescription: 'The relational web of trust and collaboration around ...',
+};
+// ...
+<HeaderBand title={PAGE.title} description={PAGE.description} ... />
+export const Head = () => <Head2026 {...PAGE} />;
 ```
 
-**Shared styles in `global.module.css`**: Includes `.big-button` (teal CTA button, currently unused — kept for future CTAs), `.anchorOffset` (AppBar-clearing anchors for use in JSX pages), and other utility classes.
+`metaTitle` and `metaDescription` override `title`/`description` only where the
+head genuinely needs different words — a tab wants a short label, a search
+result wants a whole sentence, and several band descriptions are fragments that
+only read under a title. Where the title works for both, omit `metaTitle`.
+`Head2026` appends `" — Intentional Society"` itself; pass `siteName: false` for
+a title that already contains it (home, podcast, the funding announcement).
+Do not hand-type the suffix.
 
-**Key components**:
-- `src/components/layout.js` - Root layout with navigation
-- `src/components/is-appbar.js` - Responsive navigation bar (wordmark uses custom CSS class, not Typography)
-- `src/components/centered-column.js` - Content width wrapper
+There is no `gatsby-ssr.js`. One used to inject a site-wide title and
+description from `siteMetadata` via `onRenderBody`, which duplicated every
+page's own tags — two `<title>` elements per page, the generic one first, which
+is the copy a crawler takes. Every page owns its head now; don't reintroduce a
+global default.
 
 **Practices catalog** (`src/pages/practices.js`): Assembles multiple md files from `src/md/practices/` into a single page. The `tocStructure` array in the JS file controls TOC grouping and body ordering. When pulling practice content from the Google Doc (published link), apply these formatting rules:
 - Google Doc "Heading 2" → h3 (`###`) for the practice title
@@ -123,29 +152,24 @@ in place:
   No `opacity` on eyebrow/kicker text or footer copy — use a solid color
   instead (opacity read as too faint against both light and dark
   backgrounds).
-- **Body margin**: both the MUI `CssBaseline` override and `Head2026`'s
-  inline `<style>` explicitly zero the browser's default 8px `body`
-  margin — don't remove either without re-checking layout at the page edges.
-- **Old MUI theme** (`theme.js`): `body1`/`body2` typography variants were
-  previously undefined (falling back to MUI's small defaults) — now set to
-  1.15rem/weight 500 and 1rem/weight 500. The `MuiCssBaseline` override sets
-  raw `<p>`/`<a>` styles too (weight 500 body text, underlined links with a
-  hover-darken state), so markdown-rendered content picks these up
-  automatically.
+- **Body margin**: `Head2026`'s inline `<style>` zeroes the browser's default
+  8px `body` margin for the whole site — don't remove it without re-checking
+  layout at the page edges.
 
-### 2026 redesign pages — shared chrome (`src/components/design2026/chrome.js`)
-The redesigned pages (index, about, community, web, dojo, iv, resources,
-friends, news, thecall, get-involved) are self-contained (do NOT use
-`<Layout>`/MUI theme) and share one module for design tokens
+### Shared chrome (`src/components/design2026/chrome.js`)
+Every page is self-contained and shares one module for design tokens
 (serif/sans/color constants), `Grain2026`, `Nav2026` (pass `active="/path"`;
 collapses to a hamburger below 920px), `Footer2026`, `Head2026` (meta +
 title/description), `PhotoCredit` (hover tooltip), `headerKicker` (the shared
 eyebrow style), and `HeaderBand` — the photo/veil/kicker/h1 band every
 interior page opens with. Prefer `HeaderBand` over hand-rolling a header:
-props are `image`, `focus`, `credit`, `kicker`, `title`, `titleSize`
-(`large`/`standard`/`compact`, or a raw clamp), `width`, `veil`
-(`deep`/`news`), plus children for a lead paragraph (style with
-`headerLead`). Edit chrome.js to change nav links or the footer everywhere
+props are `image`, `focus`, `credit`, `kicker`, `title`, `description` (the
+italic line under the title — a string, or a node when it needs a link
+inside), `titleSize` (`large`/`standard`/`compact`, or a raw clamp), `width`,
+and `veil` (`deep`/`news`). The band renders and styles the description
+itself, so don't reach for the (private) `headerDescription` style at a call
+site. `HeaderBand` takes no children — every band is title + optional
+description. Edit chrome.js to change nav links or the footer everywhere
 at once. Fonts (Cormorant Garamond, DM Sans)
 are self-hosted via `@fontsource` imports at the top of chrome.js — not
 loaded from Google Fonts. Self-hosting avoids an async CDN fetch that
@@ -154,23 +178,24 @@ different times, the fixed-position nav's rendered height nudged slightly on
 each swap-in, which showed up as visible jumping since the nav never
 reflows now (`Nav2026` has a fixed `height: 66px`; that number is repeated as
 `marginTop` on every 2026 page's header band, as the mobile menu's `top`, and
-as `NAV_HEIGHT` in index.js — move them together. It is unrelated to
-`.anchorOffset`/`top:-74px`, which clear the *MUI* AppBar on old-theme pages).
+as `NAV_HEIGHT` in index.js — move them together).
 Below 920px, `Nav2026`
 collapses to a hamburger menu; on mobile all links — including
 Resources/Friends/News — render as plain top-level items (no nested "More"
 toggle, since the menu already has vertical room to spare there). Above
 920px, Resources/Friends/News stay tucked behind a "More" dropdown to save
 horizontal space. The logo is a transparent `static/design2026/logo.png`
-(no mix-blend-mode hacks). Remaining old-theme pages (practices, contact,
-history, orientation, programs, branding, series pages) still use the MUI
-`<Layout>`, whose AppBar/Layout was restyled toward the 2026 look (same logo
-+ grain); of those only practices and the series pages are linked from a
-2026 page, the rest are orphans. Header photos are one per page: hero (home),
-crystals-header (about), turkeytail-log (community), fungus-trunk (web),
-luminaria-row (dojo), willow (iv and thecall), moss-roots (friends),
-rockfield (resources), pond-leaves (news), luminaria-field (funding
-announcement). get-involved keeps the
+(no mix-blend-mode hacks). Header photos live in `src/images/bands/` — that
+directory is what `FullBleedPhoto`'s static query reads, so a new header photo
+has to go there and nowhere else. There are more pages than photos now, so
+several are reused: hero (home), crystals-header (about, contact),
+turkeytail-log (community, programs), fungus-trunk (web), luminaria-row (dojo,
+developmental-practice-series), willow (iv, thecall), moss-roots (friends,
+history), rockfield (resources, practices), pond-leaves (news,
+being-with-it-all), luminaria-field (funding announcement,
+exploratory-practice-series), moss (orientation), crescent-butterflyweed
+(branding). Worth commissioning more so the reuse can be unwound.
+get-involved keeps the
 working Buttondown form and the `#newsletter` / `#connection-calls` anchors;
 the Connection Call date and registration URL both live in
 `src/components/blurb-connectioncall.js` (`<BlurbConnectionCall />` renders the
@@ -211,9 +236,8 @@ Newsletter signup and Connection Call sections were moved to `/get-involved`
 `src/pages/web.js` renders content from `src/md/web.md` — "Join the IS Web" page describing the IS relational web, programs, and membership requirements. No signup button; the member app at `https://app.intentionalsociety.org` is linked as a reference for existing members in the "IS Web App" section.
 
 ### `/community` page — 2026 redesign
-Same self-contained pattern as `index.js`/`about.js` (own nav/footer, no
-Layout/MUI theme): dark crystals-photo header band ("A space full of
-relationships that matter"), then an article body with the purpose-statement
+Same self-contained pattern as `index.js`/`about.js` (own nav/footer): dark
+crystals-photo header band, then an article body with the purpose-statement
 blockquote, the community-members "tree" illustration, and How to Join /
 Belonging sections, closing with a "Get involved" button and the shared
 footer. No longer markdown-driven — `src/md/community.md` was removed and

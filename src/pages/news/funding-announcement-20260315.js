@@ -5,13 +5,18 @@ import {
   Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
 } from '../../components/design2026/chrome';
 
-// 2026 redesign of the funding announcement — previously an old-theme
-// markdown-driven page (src/md/funding-announcement-20260315.md) whose
-// content was also duplicated inline on /news. Now a standalone page in the
-// shared 2026 chrome (components/design2026/), matching thecall.js; /news
-// just links here.
+// The funding announcement, as a standalone article page matching thecall.js.
+// /news links here rather than carrying the content itself.
 
-const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
+// This page's own words, read by both the header band and the document head.
+// siteName: false — the headline already names Intentional Society.
+const PAGE = {
+  title: 'Intentional Society Announces $1.8 Million, 10-Year Funding Commitment',
+  metaDescription: 'A ten-year, $1.8 million commitment to keep Intentional Society free and peer-led.',
+  siteName: false,
+};
+
+const bodyP ={ fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
 
 const NamedDefault = () => (
   <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
@@ -23,7 +28,7 @@ const NamedDefault = () => (
     <HeaderBand
       image="/design2026/luminaria-field.jpg" focus="center 40%" credit="Bill" veil="news"
       width="720px"
-      title="Intentional Society Announces $1.8 Million, 10-Year Funding Commitment"
+      title={PAGE.title}
       dateLabel="March 15, 2026"
     />
 
@@ -77,7 +82,6 @@ export default NamedDefault;
 
 export const Head = () => (
   <Head2026
-    title="Intentional Society Announces $1.8 Million, 10-Year Funding Commitment"
-    description="A ten-year, $1.8 million commitment to keep Intentional Society free and peer-led."
+    {...PAGE}
   />
 );

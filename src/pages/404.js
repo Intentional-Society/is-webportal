@@ -9,6 +9,13 @@ import {
 // 2026 redesign of the 404 page — brought onto the shared chrome so it
 // doesn't look like a leftover from the old design when someone lands here.
 
+// This page's own words. No header band here, so only the document head reads
+// them.
+const PAGE = {
+  title: 'Page not found',
+  metaDescription: "The page you're looking for doesn't exist.",
+};
+
 const quickLinks = [
   { text: 'About', to: '/about' },
   { text: 'Community', to: '/community' },
@@ -67,7 +74,6 @@ export default NamedDefault;
 
 export const Head = () => (
   <Head2026
-    title="Page not found — Intentional Society"
-    description="The page you're looking for doesn't exist."
+    {...PAGE}
   />
 );

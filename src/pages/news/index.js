@@ -10,6 +10,13 @@ import {
 // Each post is now its own standalone page (so existing inbound links keep
 // working) — this page just lists them. Add new posts to the top of `posts`.
 
+// This page's own words, read by both the header band and the document head.
+const PAGE = {
+  title: 'Announcements and articles',
+  metaTitle: 'News',
+  metaDescription: 'Announcements and articles from Intentional Society.',
+};
+
 const posts = [
   {
     slug: 'funding-announcement-20260315',
@@ -41,7 +48,7 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="/design2026/luminaria-field.jpg" focus="center 45%" credit="Bill" veil="news"
-      title="Announcements and articles"
+      title={PAGE.title}
     />
 
     {/* ======== Article body ======== */}
@@ -103,7 +110,6 @@ export default NamedDefault;
 
 export const Head = () => (
   <Head2026
-    title="News — Intentional Society"
-    description="Announcements and articles from Intentional Society."
+    {...PAGE}
   />
 );

@@ -13,6 +13,13 @@ import {
 // (resources#empathy-circling etc.) keep working — browsers auto-open a
 // closed <details> when navigating to a fragment inside it.
 
+// This page's own words, read by both the header band and the document head.
+const PAGE = {
+  title: 'Practices we use, and answers to common questions',
+  metaTitle: 'Resources',
+  metaDescription: 'Relational practices we use, and answers to common questions about Intentional Society.',
+};
+
 const linkStyle = { color: ACCENT_DARK };
 
 const sectionHeading = {
@@ -310,7 +317,7 @@ const NamedDefault = () => {
       {/* ======== Header band ======== */}
       <HeaderBand
         image="/design2026/rockfield.jpg" focus="center 65%" credit="Bill"
-        title="Practices we use, and answers to common questions"
+        title={PAGE.title}
       />
 
       {/* ======== Article body ======== */}
@@ -363,7 +370,6 @@ export default NamedDefault;
 
 export const Head = () => (
   <Head2026
-    title="Resources — Intentional Society"
-    description="Relational practices we use, and answers to common questions about Intentional Society."
+    {...PAGE}
   />
 );

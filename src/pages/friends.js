@@ -10,6 +10,13 @@ import {
 // Logos live in static/images/logos/; entries without a logo render an
 // initials circle.
 
+// This page's own words, read by both the header band and the document head.
+const PAGE = {
+  title: 'Fellow travelers in the wider ecosystem',
+  metaTitle: 'Friends',
+  metaDescription: 'Fellow travelers in the wider ecosystem of inner development, relational culture, and collective wisdom.',
+};
+
 const friendsList = [
   { name: 'Beyond Goals', website: 'https://gobeyondgoals.com/', image: '/images/logos/beyond-goals.png', description: 'A coaching and development initiative helping individuals and organizations move beyond traditional goal-setting through intensive online workshops.' },
   { name: 'Building Belonging', website: 'https://www.buildingbelonging.us/', image: '/images/logos/building-belonging.png', description: 'A home for people committed to building a world where everyone belongs, sourced by Brian Stout.' },
@@ -44,7 +51,7 @@ const NamedDefault = () => (
     <HeaderBand
       image="/design2026/moss-roots.jpg" credit="Bill"
       titleSize="clamp(2rem,4vw,3rem)"
-      title="Fellow travelers in the wider ecosystem"
+      title={PAGE.title}
     />
 
     {/* ======== Article body ======== */}
@@ -99,7 +106,6 @@ export default NamedDefault;
 
 export const Head = () => (
   <Head2026
-    title="Friends — Intentional Society"
-    description="Fellow travelers in the wider ecosystem of inner development, relational culture, and collective wisdom."
+    {...PAGE}
   />
 );

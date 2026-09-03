@@ -1,12 +1,25 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Layout from '../components/layout';
-import CenteredColumn from '../components/centered-column';
-import IsHr from '../components/is-hr';
-import * as MarkdownStyles from '../styles/markdown-content.module.css';
+import {
+  serif, sans, ACCENT_DARK, INK, PAPER,
+  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
+} from '../components/design2026/chrome';
 import * as PracticesStyles from '../styles/practices.module.css';
 
-// Table of contents structure — drives both TOC rendering and body ordering
+// The Relational Practices Catalog. This is the one page whose copy is
+// markdown (src/md/practices/*.md, rendered through gatsby-transformer-remark)
+// rather than JSX, because the entries are maintained as documents; its type
+// and color therefore live in practices.module.css instead of inline styles.
+// See CLAUDE.md for the formatting rules the .md files follow.
+
+// This page's own words, read by both the header band and the document head.
+const PAGE = {
+  title: 'Relational Practices Catalog',
+  description: 'a recipe book for practicing together',
+  metaDescription: 'A catalog of the relational practices used at Intentional Society, with facilitator notes and references.',
+};
+
+// Table of contents structure — drives both TOC rendering and body ordering.
 const tocStructure = [
   { name: 'introduction', tocTitle: 'Introduction' },
   { name: 'part-one', heading: "Part One: Inner-Shaded — The 'I'", practices: [
@@ -29,10 +42,12 @@ const tocStructure = [
   { name: 'conclusion', tocTitle: 'Conclusion' },
 ];
 
-// Flatten tocStructure into ordered chapter list for body rendering
+// Flatten tocStructure into ordered chapter list for body rendering.
 const chapters = tocStructure.flatMap(entry =>
   entry.practices ? [{ name: entry.name }, ...entry.practices] : [entry]
 );
+
+const divider = <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin: '3rem auto', width: '120px' }} />;
 
 const PracticesPage = ({ data }) => {
   const nodesByName = {};
@@ -42,50 +57,80 @@ const PracticesPage = ({ data }) => {
     .filter(s => s.node);
 
   return (
-    <Layout>
-      <div style={{ height: '30px' }}></div>
-      <CenteredColumn>
-        <h2 style={{textAlign: 'center'}}>Relational Practices Catalog</h2>
-        <h3 style={{textAlign: 'center', color: '#cc0000'}}>🚧 Under Construction — Not Yet Published 🚧</h3>
-        <div className={PracticesStyles.bookLayout}>
-        <nav className={PracticesStyles.toc}>
-          <ul>
-            {tocStructure.map((entry, i) =>
-              entry.heading ? (
-                <li key={entry.name}><a href={`#${entry.name}`}>{entry.heading}</a>
-                  <ul>
-                    {entry.practices.map(p => (
-                      <li key={p.name}><a href={`#${p.name}`}>{p.tocTitle}</a></li>
-                    ))}
-                  </ul>
-                </li>
-              ) : (
-                <li key={entry.name}><a href={`#${entry.name}`}>{entry.tocTitle}</a></li>
-              )
-            )}
-          </ul>
-        </nav>
-        <IsHr />
-        {sections.map((s, i) => (
-          <React.Fragment key={s.name}>
-            <a id={s.name} style={{display:'block',position:'relative',top:'-74px',visibility:'hidden'}}></a>
-            <div
-              className={`${MarkdownStyles.markdownContent}`}
-              dangerouslySetInnerHTML={{__html: s.node.childMarkdownRemark.html}}
-            />
-            {i < sections.length - 1 && <IsHr />}
-          </React.Fragment>
-        ))}
-        </div>
-        <div style={{textAlign: 'right', marginBottom: '-25px'}}>
-          <Link to="/">Back to home page</Link>
-        </div>
-      </CenteredColumn>
-    </Layout>
+    <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
+
+      <Grain2026 />
+      <Nav2026 active="/resources" />
+
+      {/* ======== Header band ======== */}
+      <HeaderBand
+        image="/design2026/rockfield.jpg" focus="center 65%" credit="Bill"
+        title={PAGE.title}
+        description={PAGE.description}
+      />
+
+      {/* ======== Article body ======== */}
+      <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
+        <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+
+          <p style={{
+            fontFamily: sans, fontSize: '14px', letterSpacing: '0.14em', textTransform: 'uppercase',
+            fontWeight: 600, color: '#9A5B3D', textAlign: 'center', margin: '0 0 2.5rem',
+          }}>Under construction — not yet published</p>
+
+          <div className={PracticesStyles.bookLayout}>
+            <nav className={PracticesStyles.toc} aria-label="Catalog contents">
+              <ul>
+                {tocStructure.map(entry =>
+                  entry.heading ? (
+                    <li key={entry.name}><a href={`#${entry.name}`}>{entry.heading}</a>
+                      <ul>
+                        {entry.practices.map(p => (
+                          <li key={p.name}><a href={`#${p.name}`}>{p.tocTitle}</a></li>
+                        ))}
+                      </ul>
+                    </li>
+                  ) : (
+                    <li key={entry.name}><a href={`#${entry.name}`}>{entry.tocTitle}</a></li>
+                  )
+                )}
+              </ul>
+            </nav>
+
+            {sections.map((s, i) => (
+              <React.Fragment key={s.name}>
+                {/* The id sits on the section wrapper; practices.module.css
+                    gives its headings scroll-margin-top to clear the nav. */}
+                <section id={s.name}
+                  dangerouslySetInnerHTML={{ __html: s.node.childMarkdownRemark.html }}
+                />
+                {i < sections.length - 1 && divider}
+              </React.Fragment>
+            ))}
+          </div>
+
+          <div style={{ marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(42,42,36,0.08)' }}>
+            <Link to="/resources" style={{
+              fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK, textDecoration: 'none',
+              borderBottom: '1px solid rgba(26,66,50,0.3)',
+            }}>← Back to Resources</Link>
+          </div>
+
+        </article>
+      </main>
+
+      <Footer2026 />
+    </div>
   );
 };
 
 export default PracticesPage;
+
+export const Head = () => (
+  <Head2026
+    {...PAGE}
+  />
+);
 
 export const query = graphql`
   query {
