@@ -13,6 +13,7 @@ import {
 const PAGE = {
   title: 'The Call',
   metaDescription: 'The letter that started Intentional Society, December 2020.',
+  ogType: 'article',
 };
 
 const NamedDefault = () => (
@@ -91,8 +92,6 @@ const NamedDefault = () => (
 
 export default NamedDefault;
 
-export const Head = () => (
-  <Head2026
-    {...PAGE}
-  />
+export const Head = ({ location }) => (
+  <Head2026 {...PAGE} pathname={location.pathname} />
 );

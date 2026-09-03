@@ -116,10 +116,8 @@ const PracticesPage = ({ data }) => {
 
 export default PracticesPage;
 
-export const Head = () => (
-  <Head2026
-    {...PAGE}
-  />
+export const Head = ({ location }) => (
+  <Head2026 {...PAGE} pathname={location.pathname} />
 );
 
 export const query = graphql`

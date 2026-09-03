@@ -13,6 +13,7 @@ const PAGE = {
   title: 'Intentional Society Announces $1.8 Million, 10-Year Funding Commitment',
   metaDescription: 'A ten-year, $1.8 million commitment to keep Intentional Society free and peer-led.',
   siteName: false,
+  ogType: 'article',
 };
 
 const NamedDefault = () => (
@@ -65,8 +66,6 @@ const NamedDefault = () => (
 
 export default NamedDefault;
 
-export const Head = () => (
-  <Head2026
-    {...PAGE}
-  />
+export const Head = ({ location }) => (
+  <Head2026 {...PAGE} pathname={location.pathname} />
 );

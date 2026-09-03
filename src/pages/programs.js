@@ -83,8 +83,6 @@ const NamedDefault = () => (
 
 export default NamedDefault;
 
-export const Head = () => (
-  <Head2026
-    {...PAGE}
-  />
+export const Head = ({ location }) => (
+  <Head2026 {...PAGE} pathname={location.pathname} />
 );

@@ -97,6 +97,24 @@ const PAGE = {
 export const Head = () => <Head2026 {...PAGE} />;
 ```
 
+`Head2026` also emits the share metadata every page needs: Open Graph and
+Twitter card tags built from the same title and description, plus a canonical
+`<link>`. Two things follow from that:
+
+- **Pass `location` through.** The Head export is
+  `({ location }) => <Head2026 {...PAGE} pathname={location.pathname} />`.
+  Gatsby's Head API renders outside the page's React context, so a Head
+  component can't call `useLocation` — the path has to be threaded from the
+  prop Gatsby supplies. Without it the canonical and `og:url` tags are simply
+  omitted, so a new page that forgets it fails quietly.
+- **`SITE_URL` and `SHARE_IMAGE` live in `chrome.js`**, not in
+  `gatsby-config`'s `siteMetadata`, for the same reason: `useStaticQuery`
+  isn't available in a Head component. Share URLs must be absolute.
+
+`PAGE` takes two optional keys for this: `image` to override the default share
+card (`static/design2026/share-hero.jpg`, the homepage hero), and `ogType`,
+which is `'article'` on the two news posts and `'website'` everywhere else.
+
 `metaTitle` and `metaDescription` override `title`/`description` only where the
 head genuinely needs different words — a tab wants a short label, a search
 result wants a whole sentence, and several band descriptions are fragments that

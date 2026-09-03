@@ -48,6 +48,16 @@ export const HEADING = '#5C4A3A';
 export const NAV_HEIGHT = 66;
 export const NAV_OFFSET = `${NAV_HEIGHT}px`;
 
+// Canonical origin, no trailing slash. Head2026 builds absolute canonical and
+// og:url values from it — share metadata can't use relative paths. It lives
+// here rather than in gatsby-config's siteMetadata because Gatsby's Head API
+// runs outside the page's React context, so a Head component can't run
+// useStaticQuery to read that.
+export const SITE_URL = 'https://www.intentionalsociety.org';
+
+// Default share card: the homepage hero, the trail over the hill.
+export const SHARE_IMAGE = '/design2026/share-hero.jpg';
+
 const navLinks = [
   { text: 'About', to: '/about' },
   { text: 'Web', to: '/web' },
@@ -482,12 +492,47 @@ export const BackLink = ({ to, href, children }) => {
 // This is also where NAV_HEIGHT crosses into CSS. Inline styles can import the
 // constant directly; a .module.css file can't, so it reads --is-nav-height
 // instead of hardcoding a number that then drifts from the nav it's clearing.
-export const Head2026 = ({ title, description, metaTitle, metaDescription, siteName = true }) => {
+// `pathname` comes from the `location` prop Gatsby hands every Head export —
+// `export const Head = ({ location }) => <Head2026 {...PAGE} pathname={location.pathname} />`.
+// It's threaded rather than read from a hook because the Head API renders
+// outside the page's React context, so useLocation isn't available there.
+// Omitting it just drops the canonical and og:url tags.
+//
+// `image` overrides the default share card for a page that wants its own;
+// `ogType` is 'article' on the news posts and 'website' everywhere else.
+export const Head2026 = ({
+  title, description, metaTitle, metaDescription, siteName = true,
+  pathname, image = SHARE_IMAGE, ogType = 'website',
+}) => {
   const tabTitle = metaTitle || title;
+  const fullTitle = siteName ? `${tabTitle} — Intentional Society` : tabTitle;
+  const summary = metaDescription || description;
+  // trailingSlash is "never" in gatsby-config, so match that here — except at
+  // the root, where the canonical form keeps its slash.
+  const url = pathname
+    ? `${SITE_URL}${pathname === '/' ? '/' : pathname.replace(/\/$/, '')}`
+    : null;
+  const imageUrl = `${SITE_URL}${image}`;
   return (
     <>
-      <title>{siteName ? `${tabTitle} — Intentional Society` : tabTitle}</title>
-      <meta name="description" content={metaDescription || description} />
+      <title>{fullTitle}</title>
+      <meta name="description" content={summary} />
+      {url && <link rel="canonical" href={url} />}
+
+      {/* Open Graph — Slack, Discord, LinkedIn, iMessage, Facebook */}
+      <meta property="og:type" content={ogType} />
+      <meta property="og:site_name" content="Intentional Society" />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={summary} />
+      <meta property="og:image" content={imageUrl} />
+      {url && <meta property="og:url" content={url} />}
+
+      {/* Twitter/X reads its own namespace and falls back to og: for the rest */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={summary} />
+      <meta name="twitter:image" content={imageUrl} />
+
       <style>{`
         :root { --is-nav-height: ${NAV_HEIGHT}px; }
         * { box-sizing: border-box; }

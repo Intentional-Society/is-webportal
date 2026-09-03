@@ -468,9 +468,7 @@ const HistoryPage = () => (
 
 export default HistoryPage;
 
-export const Head = () => (
-  <Head2026
-    {...PAGE}
-  />
+export const Head = ({ location }) => (
+  <Head2026 {...PAGE} pathname={location.pathname} />
 );
 
