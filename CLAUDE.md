@@ -34,12 +34,30 @@ yarn clean
 
 **Gatsby file-based routing**: Pages in `src/pages/` map directly to URLs (e.g., `about.js` → `/about`).
 
-**One theme.** Every page is a self-contained 2026-design page: it renders its
-own `<Grain2026 />`, `<Nav2026 />`, `<HeaderBand />` and `<Footer2026 />` from
-`src/components/design2026/chrome.js` and styles its body with inline styles.
-There is no `<Layout>`, no `<CenteredColumn>`, no MUI, and no shared page
-wrapper — the chrome module *is* the shared layer. Copy an existing page
-(`thecall.js` is the smallest complete example) rather than inventing a shape.
+**One theme.** Every page is a 2026-design page built from
+`src/components/design2026/chrome.js`. There is no `<Layout>`, no
+`<CenteredColumn>` and no MUI — the chrome module is the shared layer, and
+`<Page2026>` is the shell:
+
+```jsx
+<Page2026 active="/dojo">
+  <HeaderBand image="willow.jpg" credit="Bill" title={PAGE.title} />
+  <Article2026>
+    <p style={bodyP}>…</p>
+    <BackLink to="/dojo">← Back to the Dojo</BackLink>
+  </Article2026>
+</Page2026>
+```
+
+`Page2026` owns the wrapper, `<Grain2026 />`, `<Nav2026 />` and
+`<Footer2026 />`; `Article2026` owns the `<main>`/`<article>` reading column.
+A page that isn't an article (the homepage's full-bleed sections, 404's
+centred block) renders its own `<main>` inside `Page2026` instead. Body copy
+uses the tokens `chrome.js` exports — `bodyP`, `sectionHeading`, `linkStyle`,
+`<Divider />` — spreading to vary one value (`{...sectionHeading, margin:
+'2.5rem 0 1.4rem'}`) rather than redeclaring the whole object. Copy an
+existing page (`thecall.js` is the smallest complete example) rather than
+inventing a shape.
 
 **Styling stack**:
 - Inline styles for page bodies, driven by the tokens exported from `chrome.js`

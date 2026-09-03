@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT_DARK, INK, BODY_TEXT, MUTED, PAPER,
-  Grain2026, Nav2026, Footer2026, Head2026, HeaderBand,
+  serif, sans, INK, MUTED, bodyP, linkStyle,
+  Head2026, HeaderBand, Page2026, Article2026,
 } from '../components/design2026/chrome';
 
 // The relational programs open to members of the IS web.
@@ -40,56 +40,45 @@ const programs = [
   },
 ];
 
-const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
-
-const linkStyle = { color: ACCENT_DARK };
-
 const programName = {
   fontFamily: serif, fontWeight: 500, fontSize: '1.5rem', color: INK,
   margin: '0 0 0.4rem', lineHeight: 1.3,
 };
 
 const NamedDefault = () => (
-  <div style={{ fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7, background: PAPER, position: 'relative', overflowX: 'hidden' }}>
-
-    <Grain2026 />
-    <Nav2026 active="/web" />
+  <Page2026 active="/web">
 
     {/* ======== Header band ======== */}
     <HeaderBand
-      image="/design2026/turkeytail-log.jpg" focus="center 45%" credit="Bill"
+      image="turkeytail-log.jpg" focus="center 45%" credit="Bill"
       title={PAGE.title}
       description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}
-    <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
-      <article style={{ maxWidth: '720px', margin: '0 auto' }}>
+    <Article2026>
 
-        <p style={bodyP}>
-          These programs are available to members of
-          the <Link to="/web" style={linkStyle}>IS web</Link>.
-        </p>
+      <p style={bodyP}>
+        These programs are available to members of
+        the <Link to="/web" style={linkStyle}>IS web</Link>.
+      </p>
 
-        {programs.map(p => (
-          <section key={p.name} style={{ margin: '2.5rem 0' }}>
-            <h2 style={programName}>{p.name}</h2>
-            {p.when && (
-              <div style={{
-                fontFamily: sans, fontSize: '13px', letterSpacing: '0.16em',
-                textTransform: 'uppercase', fontWeight: 600, color: MUTED,
-                margin: '0 0 0.6rem',
-              }}>{p.when}</div>
-            )}
-            <p style={{ ...bodyP, margin: 0 }}>{p.text}</p>
-          </section>
-        ))}
+      {programs.map(p => (
+        <section key={p.name} style={{ margin: '2.5rem 0' }}>
+          <h2 style={programName}>{p.name}</h2>
+          {p.when && (
+            <div style={{
+              fontFamily: sans, fontSize: '13px', letterSpacing: '0.16em',
+              textTransform: 'uppercase', fontWeight: 600, color: MUTED,
+              margin: '0 0 0.6rem',
+            }}>{p.when}</div>
+          )}
+          <p style={{ ...bodyP, margin: 0 }}>{p.text}</p>
+        </section>
+      ))}
 
-      </article>
-    </main>
-
-    <Footer2026 />
-  </div>
+    </Article2026>
+  </Page2026>
 );
 
 export default NamedDefault;

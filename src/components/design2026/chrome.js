@@ -37,6 +37,9 @@ export const INK = '#2A2A24';
 export const MUTED = '#6B6860';
 export const BODY_TEXT = '#4A473F';
 export const PAPER = '#F8F5EF';
+// Warm brown for section headings — the one voice above body copy that isn't
+// ink or accent.
+export const HEADING = '#5C4A3A';
 
 // Height of the fixed Nav2026 bar. Anything that has to sit below the nav or
 // scroll clear of it derives from this — page header bands (marginTop), the
@@ -69,6 +72,34 @@ export const headerKicker = {
   textTransform: 'uppercase', fontWeight: 600, color: '#E8DFD0',
   marginBottom: '1.2rem',
 };
+
+// ── Article text tokens ───────────────────────────────────────────────────
+// The styles an article body is written in. Each of these was declared
+// separately at the top of a dozen-odd pages, which is how /resources ended up
+// with a body paragraph 0.6rem apart from everyone else's. Spread to vary one
+// value at a call site — `{...sectionHeading, margin: '2.5rem 0 1.4rem'}` — so
+// the deviation is visible as a deviation.
+
+// Article-style prose: 20px/500 over BODY_TEXT. Not for MUTED secondary text
+// (asides, captions, small print), which stays smaller — but give that an
+// explicit fontWeight too, or it inherits the page wrapper's 300.
+export const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
+
+// The h2 that opens a section of an article body.
+export const sectionHeading = {
+  fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
+  fontSize: 'clamp(1.5rem,2.6vw,2rem)', color: HEADING, margin: '0 0 1.4rem',
+};
+
+// Inline links inside body copy. ACCENT_DARK rather than ACCENT: at body size
+// the lighter green doesn't hold up against BODY_TEXT.
+export const linkStyle = { color: ACCENT_DARK };
+
+// The short centred rule between sections. `margin` is the one thing that
+// varies (a section that opens with a figure wants no leading gap).
+export const Divider = ({ margin = '3rem auto' }) => (
+  <hr style={{ border: 'none', borderTop: '1px solid rgba(42,42,36,0.12)', margin, width: '120px' }} />
+);
 
 // Paper-grain overlay, applied once per page above all content.
 export const Grain2026 = () => (
@@ -372,6 +403,61 @@ export const Footer2026 = () => (
     </div>
   </footer>
 );
+
+// ── Page shell ────────────────────────────────────────────────────────────
+// Everything an interior page has in common outside its own words: the
+// wrapper, the grain overlay, the nav, and the footer. Twenty pages carried
+// byte-identical copies of this before, so "self-contained page" meant
+// re-typing the same four lines and one long style object every time.
+//
+//   <Page2026 active="/dojo">
+//     <HeaderBand … />
+//     <Article2026>…the page's actual copy…</Article2026>
+//   </Page2026>
+//
+// `active` is the nav path to mark ('/about', '/dojo', …); omit it where no
+// nav item matches. `style` merges over the wrapper for a page whose body is
+// set differently — the homepage is sans-based, not serif — rather than
+// forcing every page through one type default.
+const pageShell = {
+  fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7,
+  background: PAPER, position: 'relative', overflowX: 'hidden',
+};
+
+export const Page2026 = ({ active, style, children }) => (
+  <div style={{ ...pageShell, ...style }}>
+    <Grain2026 />
+    <Nav2026 active={active} />
+    {children}
+    <Footer2026 />
+  </div>
+);
+
+// The centred reading column an article page's copy sits in. Pages that aren't
+// articles (the homepage's full-bleed sections, 404's centred block) render
+// their own <main> inside Page2026 instead of using this.
+export const Article2026 = ({ width = '720px', children }) => (
+  <main style={{ position: 'relative', zIndex: 3, background: PAPER, padding: '4rem 2rem 5rem' }}>
+    <article style={{ maxWidth: width, margin: '0 auto' }}>{children}</article>
+  </main>
+);
+
+// The rule-and-link that closes an article page, returning the reader to a
+// parent the nav can't express (a news post to /news, a practice series to
+// /dojo). Pass `href` instead of `to` for a destination off the site.
+export const BackLink = ({ to, href, children }) => {
+  const style = {
+    fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK,
+    textDecoration: 'none', borderBottom: '1px solid rgba(26,66,50,0.3)',
+  };
+  return (
+    <div style={{ marginTop: '3rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(42,42,36,0.08)' }}>
+      {href
+        ? <a href={href} style={style}>{children}</a>
+        : <Link to={to} style={style}>{children}</Link>}
+    </div>
+  );
+};
 
 // Gatsby Head contents shared by all 2026 pages: meta + per-page title/description.
 //
