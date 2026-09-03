@@ -72,8 +72,8 @@ const NamedDefault = () => (
       <p style={bodyP}>
         The Practice Dojo became its own space in 2024 with the debut of the
         IS <Link to="/developmental-practice-series" style={linkStyle}>Developmental Practice Series</Link>, followed
-        by an <Link to="/exploratory-practice-series" style={linkStyle}>Exploratory Practice Series</Link> tour and
-        the heartfelt <Link to="/being-with-it-all" style={linkStyle}>Being With It All</Link> series.
+        by an Exploratory Practice Series tour and the
+        heartfelt <Link to="/being-with-it-all" style={linkStyle}>Being With It All</Link> series.
       </p>
 
       <p style={bodyP}>
