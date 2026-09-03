@@ -29,7 +29,6 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="/design2026/luminaria-row.jpg" credit="Bill"
-      titleSize="compact"
       title="A skill-building space for developmental-relational practice"
     />
 

@@ -54,6 +54,7 @@ const moreLinks = [
   { text: 'Resources', to: '/resources' },
   { text: 'Friends', to: '/friends' },
   { text: 'News', to: '/news' },
+  { text: 'Podcast', to: '/podcast' },
 ];
 
 // Shared "eyebrow" / kicker label — solid color, no opacity, so it stays
@@ -100,15 +101,15 @@ const VEILS = {
   news: 'linear-gradient(180deg, rgba(14,18,22,0.6) 0%, rgba(14,18,22,0.5) 50%, rgba(14,18,22,0.66) 100%)',
 };
 
-// Three title sizes rather than a bespoke clamp per page — pages had drifted
+// Two title sizes rather than a bespoke clamp per page — pages had drifted
 // into nine different clamps, several by copy-paste rather than intent.
-// `standard` is the default. `large` is for About, which carries the most
-// editorial weight. `compact` keeps titles past ~50 characters (Dojo, the
-// funding announcement) from swallowing the band.
+// `standard` is the default, sized to read as confidently as About's `large`
+// without quite matching it. Community and Friends pass an explicit smaller
+// raw clamp() instead of a named size — their headers carry extra content
+// (a blockquote, a long list) that a bigger title crowded.
 const TITLE_SIZES = {
   large: 'clamp(2.2rem,3.8vw,3.4rem)',
-  standard: 'clamp(2rem,4vw,3rem)',
-  compact: 'clamp(1.8rem,3.4vw,2.6rem)',
+  standard: 'clamp(2.2rem,4.2vw,3.2rem)',
 };
 
 // The header band every interior 2026 page opens with: full-bleed photo under
@@ -171,8 +172,8 @@ export const headerLead = {
 // omit it on the homepage. Collapses to a hamburger below 920px — the desktop
 // row needs ~890px for six links plus the logo, More and CTA, so the
 // breakpoint carries only ~30px of slack: adding or renaming a nav link means
-// re-checking it. "More" opens
-// a dropdown with the secondary pages (FAQ, Friends, News).
+// re-checking it. "More" opens a dropdown with the secondary pages
+// (Resources, Friends, News, Podcast).
 export const Nav2026 = ({ active }) => {
   const [open, setOpen] = React.useState(false);
   const [moreOpen, setMoreOpen] = React.useState(false);
@@ -297,51 +298,61 @@ export const Nav2026 = ({ active }) => {
   );
 };
 
+// Three columns of four links each, in reading order — see Footer2026.
+const footerColumns = [
+  [
+    { text: 'About', to: '/about' },
+    { text: 'Web', to: '/web' },
+    { text: 'Community', to: '/community' },
+    { text: 'Practice Dojo', to: '/dojo' },
+  ],
+  [
+    { text: 'Ventures', to: '/iv' },
+    { text: 'Practices', to: '/resources#relational-practices' },
+    { text: 'FAQ', to: '/resources#faq' },
+    { text: 'Friends', to: '/friends' },
+  ],
+  [
+    { text: 'News', to: '/news' },
+    { text: 'Podcast', to: '/podcast' },
+    { text: 'Get Involved', to: '/get-involved' },
+    { text: 'Updates', to: '/get-involved#newsletter' },
+  ],
+];
+
 export const Footer2026 = () => (
   <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans, overflowX: 'hidden' }}>
     <style>{`
-      .footer2026-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 2.5rem; }
-      .footer2026-links { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.2rem; }
+      .footer2026-grid { display: grid; grid-template-columns: 1fr 1.7fr; gap: 2.5rem; }
+      .footer2026-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 1.2rem; }
+      @media (max-width: 760px) { .footer2026-links { grid-template-columns: repeat(2, 1fr); } }
       @media (max-width: 560px) {
         .footer2026-grid { grid-template-columns: 1fr; gap: 2rem; }
         .footer2026-links { grid-template-columns: 1fr; }
       }
     `}</style>
-    <div className="footer2026-grid" style={{ maxWidth: '720px', margin: '0 auto' }}>
+    <div className="footer2026-grid" style={{ maxWidth: '860px', margin: '0 auto' }}>
       <div>
         <img src="/design2026/logo.png" alt="" style={{ width: '44px', height: '44px', objectFit: 'contain', display: 'block', marginBottom: '0.7rem' }} />
         <h3 style={{ fontFamily: serif, fontWeight: 500, fontSize: '1.15rem', color: INK, margin: '0 0 0.3rem' }}>Intentional Society</h3>
         <p style={{ fontSize: '16px', fontWeight: 500, color: MUTED, margin: 0 }}>
-          Inner Development · Wise Action · Human Connection
+          <span style={{ display: 'block' }}>Inner Development</span>
+          <span style={{ display: 'block' }}>Wise Action</span>
+          <span style={{ display: 'block' }}>Human Connection</span>
         </p>
       </div>
       <div>
         <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>Explore</h4>
         <div className="footer2026-links">
-          <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-            {[
-              { text: 'About', to: '/about' },
-              { text: 'Community', to: '/community' },
-              { text: 'Practice Dojo', to: '/dojo' },
-              { text: 'Ventures', to: '/iv' },
-            ].map(l => (
-              <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem' }}>
-                <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
-              </li>
-            ))}
-          </ul>
-          <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-            {[
-              { text: 'Web', to: '/web' },
-              { text: 'Friends', to: '/friends' },
-              { text: 'Resources', to: '/resources' },
-              { text: 'News', to: '/news' },
-            ].map(l => (
-              <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem' }}>
-                <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
-              </li>
-            ))}
-          </ul>
+          {footerColumns.map((col, i) => (
+            <ul key={i} style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+              {col.map(l => (
+                <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem' }}>
+                  <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
+                </li>
+              ))}
+            </ul>
+          ))}
         </div>
       </div>
     </div>
