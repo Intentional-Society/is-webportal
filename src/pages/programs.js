@@ -50,7 +50,7 @@ const NamedDefault = () => (
 
     {/* ======== Header band ======== */}
     <HeaderBand
-      image="turkeytail-log.jpg" focus="center 45%" credit="Bill"
+      image="turkeytail-log.jpg" focus="center 45%"
       title={PAGE.title}
       description={PAGE.description}
     />

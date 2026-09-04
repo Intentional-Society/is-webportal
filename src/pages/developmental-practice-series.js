@@ -42,7 +42,7 @@ const units = [
     dates: 'Aug 21, Aug 28, Sept 4, 2025',
     practices: [
       ['Nine Whys', '(re)connecting to desire, motivations, and purpose'],
-      ['Pure coaching + Clean language', 'clean (space-holding, not self-injecting) coaching basics'],
+      ['Pure coaching + Clean language', 'clean coaching basics'],
       ['Case Clinic', 'developmental coaching in action'],
     ],
   },
@@ -83,7 +83,7 @@ const NamedDefault = () => (
 
     {/* ======== Header band ======== */}
     <HeaderBand
-      image="luminaria-row.jpg" credit="Bill"
+      image="luminaria-row.jpg"
       title={PAGE.title}
       description={PAGE.description}
     />
