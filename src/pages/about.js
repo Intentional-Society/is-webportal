@@ -11,11 +11,10 @@ import { StaticImage } from 'gatsby-plugin-image';
 // src/images/photos/ — both through the image pipeline, neither from static/.
 
 // This page's own words, read by both the header band and the document head.
-// The head shortens the title to a tab label and carries its own sentence,
-// since the band's description is a fragment that only reads under the title.
+// The head keeps the short "About" tab label and its own full sentence,
+// since the band's title is a fragment that only reads under the photo.
 const PAGE = {
-  title: 'About Intentional Society',
-  description: 'and our journey of unfolding into what we are today',
+  title: <>A society we are creating <em>on purpose</em></>,
   metaTitle: 'About',
   metaDescription: 'Who we are, what we do, and how membership works at Intentional Society.',
 };
@@ -29,11 +28,10 @@ const NamedDefault = () => (
 
     {/* ======== Header band ======== */}
     <HeaderBand
-      image="crescent-butterflyweed.jpg" credit="Bill"
+      image="crescent-butterflyweed.jpg" credit="Bill Claff"
       width="820px"
       titleSize="large"
       title={PAGE.title}
-      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}
@@ -71,7 +69,7 @@ const NamedDefault = () => (
       <Divider />
 
       <figure className="credit-host" style={{ margin: '0 0 2.5rem', position: 'relative' }}>
-        <PhotoCredit name="Bill" />
+        <PhotoCredit name="Bill Claff" variant="corner" />
         <StaticImage src="../images/photos/sand-dunes.jpg" alt="Beach grass planted in rows across open dunes behind a weathered sand fence"
           layout="constrained" width={820} aspectRatio={1.7778} placeholder="blurred" formats={['auto', 'webp', 'avif']}
           style={{ width: '100%', borderRadius: '5px 3px 6px 4px', display: 'block' }} />
@@ -134,7 +132,7 @@ const NamedDefault = () => (
       </p>
 
       <figure className="credit-host" style={{ margin: '2.5rem 0 0', position: 'relative' }}>
-        <PhotoCredit name="Bill" />
+        <PhotoCredit name="Bill Claff" variant="corner" />
         <StaticImage src="../images/photos/bee-spirea.jpg" alt="A honeybee approaching a cluster of spirea blossoms"
           layout="constrained" width={820} aspectRatio={1.7778} placeholder="blurred" formats={['auto', 'webp', 'avif']}
           style={{ width: '100%', borderRadius: '6px 3px 7px 4px', display: 'block' }} />

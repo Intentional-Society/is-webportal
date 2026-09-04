@@ -11,8 +11,8 @@ import {
 // siteName: false — the headline already names Intentional Society.
 const PAGE = {
   title: 'Intentional Society Announces $1.8 Million, 10-Year Funding Commitment',
+  metaTitle: 'Funding Announcement',
   metaDescription: 'A ten-year, $1.8 million commitment to keep Intentional Society free and peer-led.',
-  siteName: false,
   ogType: 'article',
 };
 
@@ -21,7 +21,7 @@ const NamedDefault = () => (
 
     {/* ======== Header band ======== */}
     <HeaderBand
-      image="luminaria-field.jpg" focus="center 40%" credit="Bill" veil="news"
+      image="luminaria-field.jpg" focus="center 40%" credit="Bill Claff" veil="news"
       width="720px"
       title={PAGE.title}
       dateLabel="March 15, 2026"

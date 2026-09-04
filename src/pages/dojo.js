@@ -10,11 +10,12 @@ import { StaticImage } from 'gatsby-plugin-image';
 // Claude Design mockup, using the shared 2026 chrome (components/design2026/).
 
 // This page's own words, read by both the header band and the document head.
-// No meta overrides needed: the title works as a tab label as it stands, and
-// the description reads as a whole thought on its own.
+// The tab keeps the plain "Practice Dojo" label people actually search for,
+// while the band's title carries the fuller descriptive phrase.
 const PAGE = {
-  title: 'Relational Dojo',
-  description: 'a skill-building space for developmental-relational practice',
+  title: 'A skill-building space for developmental-relational practice',
+  metaTitle: 'Practice Dojo',
+  metaDescription: 'A skill-building space for developmental-relational practice at Intentional Society.',
 };
 
 const smallP = { fontSize: '16px', fontWeight: 500, color: MUTED, margin: '0 0 0.5rem' };
@@ -34,10 +35,8 @@ const NamedDefault = () => (
 
     {/* ======== Header band ======== */}
     <HeaderBand
-      image="luminaria-row.jpg" credit="Bill"
-      titleSize="large"
+      image="luminaria-row.jpg" credit="Bill Claff"
       title={PAGE.title}
-      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}
@@ -58,7 +57,7 @@ const NamedDefault = () => (
       </h3>
 
       <figure className="credit-host" style={{ margin: '0 0 3rem', position: 'relative' }}>
-        <PhotoCredit name="Bill" />
+        <PhotoCredit name="Bill Claff" variant="corner" />
         <StaticImage src="../images/photos/lighted-path.jpg" alt="A paper lantern glowing on a woodland trail lined with strings of lights"
           layout="constrained" width={820} aspectRatio={1.7778} placeholder="blurred" formats={['auto', 'webp', 'avif']}
           style={{ width: '100%', borderRadius: '4px 7px 3px 6px', display: 'block' }} />

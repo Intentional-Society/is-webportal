@@ -11,8 +11,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 // This page's own words, read by both the header band and the document head.
 const PAGE = {
-  title: 'Intentional Ventures',
-  description: 'catalyzing aligned livelihoods into a relational economic web',
+  title: 'Aligned livelihoods, woven into a relational economic web',
+  metaTitle: 'Intentional Ventures',
   metaDescription: 'Aligned livelihoods, woven into a relational economic web.',
 };
 
@@ -21,9 +21,8 @@ const NamedDefault = () => (
 
     {/* ======== Header band ======== */}
     <HeaderBand
-      image="willow.jpg" focus="center 40%" credit="Bill"
+      image="willow.jpg" focus="center 40%" credit="Bill Claff"
       title={PAGE.title}
-      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}
@@ -54,7 +53,7 @@ const NamedDefault = () => (
       </p>
 
       <figure className="credit-host" style={{ margin: '0 0 3rem', position: 'relative' }}>
-        <PhotoCredit name="Bill" />
+        <PhotoCredit name="Bill Claff" variant="corner" />
         <StaticImage src="../images/photos/monarch-goldenrod.jpg" alt="A monarch butterfly feeding on goldenrod"
           layout="constrained" width={820} aspectRatio={1.7778} placeholder="blurred" formats={['auto', 'webp', 'avif']}
           style={{ width: '100%', borderRadius: '3px 7px 4px 6px', display: 'block' }} />

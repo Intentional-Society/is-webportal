@@ -10,7 +10,7 @@ import {
 
 // This page's own words, read by both the header band and the document head.
 const PAGE = {
-  title: 'Contact Us',
+  title: 'Contact us',
   description: 'questions, introductions, anything else',
   metaDescription: 'Get in touch with Intentional Society — ask a question, say hello, or start a conversation.',
 };
@@ -69,7 +69,7 @@ const NamedDefault = () => {
 
       {/* ======== Header band ======== */}
       <HeaderBand
-        image="crystals-header.jpg" focus="center 45%" credit="Bill"
+        image="crystals-header.jpg" focus="center 45%" credit="Bill Claff"
         title={PAGE.title}
         description={PAGE.description}
       />
