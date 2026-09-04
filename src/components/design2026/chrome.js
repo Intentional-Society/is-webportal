@@ -125,22 +125,49 @@ export const Grain2026 = () => (
   }} />
 );
 
-// Photo-credit hover tooltip: put className="credit-host" (plus
+// Photo-credit hover caption: put className="credit-host" (plus
 // position:'relative') on the photo's wrapper — a header, section, figure,
-// or card div — and render <PhotoCredit name="Bill" /> as its last child.
-// On touch devices (no hover) the tooltip stays visible, via the
+// or card div — and render <PhotoCredit name="Bill Claff" /> as its last
+// child. On touch devices (no hover) the caption stays visible, via the
 // `@media (hover: none)` rule below (defined once, in Nav2026's stylesheet,
 // since every 2026 page already renders <Nav2026 />).
-export const PhotoCredit = ({ name, inset = 16 }) => (
-  <div style={{ position: 'absolute', right: inset, bottom: inset, zIndex: 4 }}>
+//
+// Three variants, chosen by context:
+//   'below'   (default) a header band: sits in normal flow just under the
+//             photo, once it's closed — see HeaderBand, which wraps the
+//             <header> and this in one credit-host div.
+//   'corner'  a boxed inline figure (about.js, dojo.js, …): absolute,
+//             right-aligned, just below the image.
+//   'overlay' a full-bleed section or small thumbnail with no room below it
+//             (the homepage's mission interstitial and "what brings you
+//             here" cards): absolute over the photo, bottom-centered, light
+//             text with a shadow so it reads against the image itself.
+export const PhotoCredit = ({ name, variant = 'below', inset = 14 }) => {
+  const text = `Copyright ${name} used by permission`;
+  const base = { fontFamily: sans, fontWeight: 400, whiteSpace: 'nowrap' };
+  if (variant === 'corner') {
+    return (
+      <div className="credit-tip" style={{
+        ...base, position: 'absolute', right: 0, top: '100%', marginTop: '0.35rem',
+        color: '#8A8578', fontSize: '11px',
+      }}>{text}</div>
+    );
+  }
+  if (variant === 'overlay') {
+    return (
+      <div className="credit-tip" style={{
+        ...base, position: 'absolute', left: 0, right: 0, bottom: inset, zIndex: 4,
+        textAlign: 'center', color: '#FAF8F3', fontSize: '10px',
+        textShadow: '0 1px 3px rgba(0,0,0,0.55)',
+      }}>{text}</div>
+    );
+  }
+  return (
     <div className="credit-tip" style={{
-      position: 'absolute', right: 0, bottom: 0, whiteSpace: 'nowrap',
-      background: '#FAF8F3', color: '#2A2A24', fontFamily: sans, fontSize: '12px',
-      fontWeight: 500, padding: '0.4rem 0.65rem', borderRadius: '3px',
-      boxShadow: '0 6px 22px rgba(8,12,16,0.3)',
-    }}>Photograph by {name}, community member</div>
-  </div>
-);
+      ...base, textAlign: 'center', paddingTop: '0.45rem', color: '#8A8578', fontSize: '11px',
+    }}>{text}</div>
+  );
+};
 
 // The two dark veils that sit over a header photo so white type stays legible.
 // `deep` is the interior-page default; `news` is a touch lighter, used by the
@@ -175,7 +202,7 @@ const headerDescription = {
 // cover what genuinely differs page to page; everything else is fixed here on
 // purpose, so the bands stay a family.
 //
-//   <HeaderBand image="moss-roots.jpg" credit="Bill"
+//   <HeaderBand image="moss-roots.jpg" credit="Bill Claff"
 //     title="Friends and Allies" description="fellow travelers in the wider ecosystem" />
 //
 // `description` is the italic line under the title — a string, or any node when
@@ -190,36 +217,38 @@ export const HeaderBand = ({
   image, focus = 'center', credit, kicker, title, description,
   titleSize = 'standard', width = '640px', veil = 'deep', dateLabel,
 }) => (
-  <header className="credit-host" style={{
-    position: 'relative', marginTop: NAV_OFFSET, minHeight: '340px', display: 'flex',
-    alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-    background: '#1c2730', // fallback behind the photo while it loads
-  }}>
-    <FullBleedPhoto image={image} focus={focus} />
+  <div className="credit-host" style={{ position: 'relative', marginTop: NAV_OFFSET }}>
+    <header style={{
+      position: 'relative', minHeight: '340px', display: 'flex',
+      alignItems: 'center', justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
+      background: '#1c2730', // fallback behind the photo while it loads
+    }}>
+      <FullBleedPhoto image={image} focus={focus} />
+      <div style={{
+        position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1, background: VEILS[veil],
+      }} />
+      <div style={{ position: 'relative', zIndex: 2, maxWidth: width, padding: '4rem 2rem' }}>
+        {kicker && <div style={headerKicker}>{kicker}</div>}
+        <h1 style={{
+          fontFamily: serif, fontWeight: 500, fontStyle: 'italic', lineHeight: 1.25,
+          fontSize: TITLE_SIZES[titleSize] || titleSize,
+          color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)',
+          margin: description ? '0 0 1.2rem' : 0,
+        }}>{title}</h1>
+        {/* Small caps date line under the title, used by the two News article
+            pages instead of a kicker above it — doesn't affect the h1's margin
+            the way a `description` does. */}
+        {dateLabel && (
+          <div style={{
+            fontFamily: sans, fontSize: '14px', letterSpacing: '0.16em', textTransform: 'uppercase',
+            fontWeight: 600, color: '#E8DFD0', marginTop: '1.1rem',
+          }}>{dateLabel}</div>
+        )}
+        {description && <p style={headerDescription}>{description}</p>}
+      </div>
+    </header>
     {credit && <PhotoCredit name={credit} />}
-    <div style={{
-      position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1, background: VEILS[veil],
-    }} />
-    <div style={{ position: 'relative', zIndex: 2, maxWidth: width, padding: '4rem 2rem' }}>
-      {kicker && <div style={headerKicker}>{kicker}</div>}
-      <h1 style={{
-        fontFamily: serif, fontWeight: 500, lineHeight: 1.25,
-        fontSize: TITLE_SIZES[titleSize] || titleSize,
-        color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)',
-        margin: description ? '0 0 1.2rem' : 0,
-      }}>{title}</h1>
-      {/* Small caps date line under the title, used by the two News article
-          pages instead of a kicker above it — doesn't affect the h1's margin
-          the way a `description` does. */}
-      {dateLabel && (
-        <div style={{
-          fontFamily: sans, fontSize: '14px', letterSpacing: '0.16em', textTransform: 'uppercase',
-          fontWeight: 600, color: '#E8DFD0', marginTop: '1.1rem',
-        }}>{dateLabel}</div>
-      )}
-      {description && <p style={headerDescription}>{description}</p>}
-    </div>
-  </header>
+  </div>
 );
 
 // Fixed top nav. `active` is the path of the current page ('/about', '/dojo', …);
@@ -270,7 +299,7 @@ export const Nav2026 = ({ active }) => {
           .nav2026-more-mobile-item { display: block; }
         }
         .credit-host { position: relative; }
-        .credit-tip { opacity: 0; transform: translateY(3px); transition: opacity 180ms ease, transform 180ms ease; pointer-events: none; }
+        .credit-tip { opacity: 0; transform: translateY(2px); transition: opacity 320ms ease, transform 320ms ease; pointer-events: none; }
         .credit-host:hover .credit-tip, .credit-host:focus-within .credit-tip { opacity: 1; transform: translateY(0); }
         @media (hover: none) { .credit-tip { opacity: 1; transform: none; } }
       `}</style>
@@ -352,16 +381,21 @@ export const Nav2026 = ({ active }) => {
   );
 };
 
-// Three columns of four links each, in reading order — see Footer2026.
+// Four columns of links, in reading order — see Footer2026. The logo/name/
+// tagline column that used to sit beside these was dropped when the list grew
+// past a dozen links (Contact, Being With It All, and Practice Series joined
+// once those pages stopped being nav-only-reachable-by-URL orphans); the
+// "Explore" heading now carries the section on its own.
 const footerColumns = [
   [
     { text: 'About', to: '/about' },
     { text: 'Web', to: '/web' },
     { text: 'Community', to: '/community' },
-    { text: 'Practice Dojo', to: '/dojo' },
+    { text: 'Relational Dojo', to: '/dojo' },
+    { text: 'Ventures', to: '/iv' },
   ],
   [
-    { text: 'Ventures', to: '/iv' },
+    { text: 'Resources', to: '/resources' },
     { text: 'Practices', to: '/resources#relational-practices' },
     { text: 'FAQ', to: '/resources#faq' },
     { text: 'Friends', to: '/friends' },
@@ -370,44 +404,34 @@ const footerColumns = [
     { text: 'News', to: '/news' },
     { text: 'Podcast', to: '/podcast' },
     { text: 'Get Involved', to: '/get-involved' },
-    { text: 'Updates', to: '/get-involved#newsletter' },
+    { text: 'Contact', to: '/contact' },
+  ],
+  [
+    { text: 'Being With It All', to: '/being-with-it-all' },
+    { text: 'Practice Series', to: '/developmental-practice-series' },
+    { text: 'Programs', to: '/programs' },
   ],
 ];
 
 export const Footer2026 = () => (
   <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans, overflowX: 'hidden' }}>
     <style>{`
-      .footer2026-grid { display: grid; grid-template-columns: 1fr 1.7fr; gap: 2.5rem; }
-      .footer2026-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 1.2rem; }
-      @media (max-width: 760px) { .footer2026-links { grid-template-columns: repeat(2, 1fr); } }
-      @media (max-width: 560px) {
-        .footer2026-grid { grid-template-columns: 1fr; gap: 2rem; }
-        .footer2026-links { grid-template-columns: 1fr; }
-      }
+      .footer2026-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 1.2rem; }
+      @media (max-width: 760px) { .footer2026-links { grid-template-columns: repeat(2, 1fr); gap: 0 1.5rem; } }
+      @media (max-width: 480px) { .footer2026-links { grid-template-columns: 1fr; } }
     `}</style>
-    <div className="footer2026-grid" style={{ maxWidth: '860px', margin: '0 auto' }}>
-      <div>
-        <img src="/design2026/logo.png" alt="" style={{ width: '44px', height: '44px', objectFit: 'contain', display: 'block', marginBottom: '0.7rem' }} />
-        <h3 style={{ fontFamily: serif, fontWeight: 500, fontSize: '1.15rem', color: INK, margin: '0 0 0.3rem' }}>Intentional Society</h3>
-        <p style={{ fontSize: '16px', fontWeight: 500, color: MUTED, margin: 0 }}>
-          <span style={{ display: 'block' }}>Inner Development</span>
-          <span style={{ display: 'block' }}>Wise Action</span>
-          <span style={{ display: 'block' }}>Human Connection</span>
-        </p>
-      </div>
-      <div>
-        <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>Explore</h4>
-        <div className="footer2026-links">
-          {footerColumns.map((col, i) => (
-            <ul key={i} style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-              {col.map(l => (
-                <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem' }}>
-                  <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
-                </li>
-              ))}
-            </ul>
-          ))}
-        </div>
+    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+      <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>Explore</h4>
+      <div className="footer2026-links">
+        {footerColumns.map((col, i) => (
+          <ul key={i} style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+            {col.map(l => (
+              <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem' }}>
+                <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
+              </li>
+            ))}
+          </ul>
+        ))}
       </div>
     </div>
     <div style={{
