@@ -65,7 +65,8 @@ inventing a shape.
 - CSS Modules (`.module.css`) where a page needs real CSS — currently only
   `practices.module.css`, which styles markdown the page can't reach inline
 - Scoped `<style>` blocks inside a page for pseudo-elements, `:hover`, media
-  queries, and `<details>` markers (see `resources.js`, `history.js`)
+  queries, and `<details>` markers (see `resources.js`, `community.js`'s
+  history-log section)
 
 There is no global stylesheet. `Head2026` emits the only site-wide CSS: a
 `box-sizing` reset and the `body { margin: 0 }` that replaces the browser
@@ -256,14 +257,18 @@ several are reused:
 | `crescent-butterflyweed` | about, branding |
 | `crystals-header` | contact, web |
 | `turkeytail-log` | community, programs |
-| `luminaria-row` | dojo, developmental-practice-series, get-involved |
+| `luminaria-row` | dojo, developmental-practice-series |
 | `luminaria-field` | news, funding announcement, exploratory-practice-series |
 | `willow` | iv, thecall |
-| `moss-roots` | friends, history |
+| `moss-roots` | friends |
 | `rockfield` | resources, practices |
 | `pond-leaves` | being-with-it-all, podcast |
 
-Worth commissioning more so the reuse can be unwound.
+Worth commissioning more so the reuse can be unwound. get-involved is the one
+exception to the `src/images/bands/` rule: its hero isn't a `HeaderBand` (it
+carries its own pitch text over a dark gradient, not a title), so its photo —
+`wing-scales-macro.jpg` — is a plain CSS `background:` image from
+`static/design2026/` instead of going through `FullBleedPhoto`.
 get-involved keeps the
 working Buttondown form and the `#newsletter` / `#connection-calls` anchors;
 the Connection Call date and registration URL both live in
@@ -309,16 +314,24 @@ in the `inside` array. No signup button; the member app at
 members in the "IS Web App" entry.
 
 ### `/community` page — 2026 redesign
-Same self-contained pattern as `index.js`/`about.js` (own nav/footer): dark
-crystals-photo header band, then an article body with the purpose-statement
-blockquote, the community-members "tree" illustration, and How to Join /
-Belonging sections, closing with a "Get involved" button and the shared
-footer. No longer markdown-driven — `src/md/community.md` was removed and
-its copy ported directly into JSX.
+Same self-contained pattern as `index.js`/`about.js` (own nav/footer): a
+`turkeytail-log.jpg` header band, then an article body with the
+purpose-statement blockquote, the community-members "tree" illustration, and
+How to Join / Belonging sections, then a "Get involved" button. No longer
+markdown-driven — `src/md/community.md` was removed and its copy ported
+directly into JSX.
+
+The old standalone `/history` page (a title-based log of every weekly session
+back to January 2021) was retired and folded onto the bottom of this page,
+after a `<Divider />` following "Get involved" — same community, its present
+and its past, and `/history` now 301s here (see `netlify.toml`). The `seasons`
+array and the collapsed-`<details>` `.season-item` styling live in
+`community.js` now; there's no separate history.js.
 
 ### `/dojo` and `/iv` pages — 2026 redesign
 `dojo.js` drops the old strikethrough-"Practice" title for a header band whose
-description reads "a skill-building space for developmental-relational
-practice", over `luminaria-row.jpg`. `iv.js` uses `willow.jpg`. Both keep their
-existing copy and internal links (Developmental Practice Series, Being With It
-All, Connection Call, etc.).
+title reads "A skill-building space for developmental-relational practice"
+(tab label kept short via `metaTitle: 'Practice Dojo'`), over
+`luminaria-row.jpg`. `iv.js` uses `willow.jpg`. Both keep their existing copy
+and internal links (Developmental Practice Series, Being With It All,
+Connection Call, etc.).
