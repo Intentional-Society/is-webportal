@@ -167,23 +167,22 @@ const NamedDefault = () => {
         }}>
           {/* A premise, a question, the response. First word alternates — see
               .hero-swap below. */}
-          <em style={{ color: ACCENT, display: 'block' }}>
+          <em className="hero-swap-line" style={{ color: ACCENT, display: 'block' }}>
             <span className="hero-swap">
               <span className="hero-swap-word hero-swap-a">collapse</span>
               <span className="hero-swap-word hero-swap-b">abundance</span>
-              <span className="hero-swap-word hero-swap-c">change</span>
             </span> is arriving.
           </em>
           <em style={{ color: ACCENT, display: 'block' }}>what now?</em>
-          <em style={{ color: ACCENT, display: 'block' }}>live more intentionally.</em>
+          <em style={{ color: ACCENT, display: 'block' }}>be more intentional.</em>
         </h1>
         <p style={{
           color: INK, fontSize: '1.10rem', fontWeight: 500, lineHeight: 1.7, margin: '0 auto 2.5rem',
           maxWidth: '560px', textShadow: '0 1px 12px rgba(248,245,239,0.85)',
         }}>
-          The world is moving fast. How shall we meet each moment? Intentional Society
-          is a micro-society for becoming who we want to be, to face an uncertain world
-          with capacity, joy, and integrity.
+          Intentional Society is a micro-society organizing around becoming who we want
+          to be, individually and collectively, in order to face an uncertain world with
+          capacity, joy, and integrity.
         </p>
         {/* Scroll cue. The <a> carries the accessible name; the SVG is decorative. */}
         <a href="#three-moves" aria-label="Scroll down to the next section"
@@ -201,39 +200,33 @@ const NamedDefault = () => {
              (1.1 + 0.3 = 1.4). */
           .hero-h1 > em { line-height: 1.1; margin-bottom: 0.3em; }
           .hero-h1 > em:last-child { margin-bottom: 0; }
-          /* All three words share one grid cell, so the slot is as wide as the
-             widest and the line never shifts; justify-items: end keeps the space
-             before "is arriving." a single space — a gap there reads as a typo.
-             The margin re-centres that fixed slot, splitting the error ~23px
-             each way at 63px: (3.835em - 2.393em) / 2, doubled because margin
-             also shrinks the line's measured width. It belongs on the slot, not
-             the <em>: on the <em> it shifts every line, including a wrapped
-             " is arriving." that has no slot to compensate for. */
+          /* Both words share one grid cell, so the slot is as wide as the
+             widest and the line never shifts; justify-items: end keeps the
+             space before "is arriving." a single space — a gap there reads as
+             a typo. The line-level shift (not the slot's own margin) re-centres
+             the fixed-width slot against the shorter word it's showing; it
+             lives on .hero-swap-line rather than .hero-swap so it only touches
+             this one line, not a wrapped " is arriving." with no slot to
+             compensate for. */
+          .hero-swap-line { position: relative; left: -0.283em; }
           .hero-swap {
             display: inline-grid; justify-items: end; vertical-align: baseline;
-            margin-left: -0.721em;
           }
           .hero-swap-word { grid-area: 1 / 1; }
-          /* 9s: 1.5s hold, 1.5s cross-fade, three times, each word leading the
-             last by 3s. The two words mid-fade sit at 0.4, not 0.5, so the pair
-             sums to 0.8 and the line dips as it turns over instead of stacking
-             into a jumble. linear, or the easing hitches at that midpoint. */
-          .hero-swap-a { animation: heroSwapA 9s linear infinite; }
-          .hero-swap-b { animation: heroSwapB 9s linear infinite; }
-          .hero-swap-c { animation: heroSwapC 9s linear infinite; }
+          /* 6s: 1.5s hold, 1.5s cross-fade, twice. The two words mid-fade sit at
+             0.4, not 0.5, so the pair sums to 0.8 and the line dips as it turns
+             over instead of stacking into a jumble. linear, or the easing
+             hitches at that midpoint. */
+          .hero-swap-a { animation: heroSwapA 6s linear infinite; }
+          .hero-swap-b { animation: heroSwapB 6s linear infinite; }
           @keyframes heroSwapA {
-            0%, 16.667% { opacity: 1; }        25% { opacity: 0.4; }
-            33.333%, 83.333% { opacity: 0; }   91.667% { opacity: 0.4; }
+            0%, 25% { opacity: 1; }   37.5% { opacity: 0.4; }
+            50%, 75% { opacity: 0; }  87.5% { opacity: 0.4; }
             100% { opacity: 1; }
           }
           @keyframes heroSwapB {
-            0%, 16.667% { opacity: 0; }        25% { opacity: 0.4; }
-            33.333%, 50% { opacity: 1; }       58.333% { opacity: 0.4; }
-            66.667%, 100% { opacity: 0; }
-          }
-          @keyframes heroSwapC {
-            0%, 50% { opacity: 0; }            58.333% { opacity: 0.4; }
-            66.667%, 83.333% { opacity: 1; }   91.667% { opacity: 0.4; }
+            0%, 25% { opacity: 0; }   37.5% { opacity: 0.4; }
+            50%, 75% { opacity: 1; }  87.5% { opacity: 0.4; }
             100% { opacity: 0; }
           }
           .hero-scroll-cue { animation: heroScrollCue 1.8s ease-in-out infinite; border-radius: 50%; }
@@ -247,10 +240,10 @@ const NamedDefault = () => {
              scroll itself, and a smooth html would fight its per-frame scrollTo. */
           @media (prefers-reduced-motion: reduce) {
             .hero-scroll-cue { animation: none; opacity: 0.9; }
-            /* All three words at once, slashed — no motion, meaning intact. */
+            /* Both words at once, slashed — no motion, meaning intact. */
             .hero-swap { display: inline; }
             .hero-swap-word { animation: none; opacity: 1; }
-            .hero-swap-a::after, .hero-swap-b::after { content: '/'; }
+            .hero-swap-a::after { content: '/'; }
           }
         `}</style>
       </div>
@@ -321,7 +314,7 @@ const NamedDefault = () => {
           gap: '3rem', alignItems: 'center',
         }}>
           <figure className="credit-host" style={{ margin: 0, position: 'relative' }}>
-            <PhotoCredit name="Bill" />
+            <PhotoCredit name="Bill Claff" variant="corner" />
             <StaticImage src="../images/photos/waterfall.jpg" alt="A small waterfall over dark rock in a quiet forest"
               layout="constrained" width={640} aspectRatio={0.8} placeholder="blurred" formats={['auto', 'webp', 'avif']}
               style={{ width: '100%', borderRadius: '7px 4px 8px 3px', display: 'block' }} />
@@ -367,7 +360,7 @@ const NamedDefault = () => {
             </Link>
           </div>
           <figure className="credit-host" style={{ margin: 0, position: 'relative' }}>
-            <PhotoCredit name="Bill" />
+            <PhotoCredit name="Bill Claff" variant="corner" />
             <StaticImage src="../images/photos/fungus-trunk.jpg" alt="Layers of turkey-tail fungus climbing a mossy trunk"
               layout="constrained" width={640} aspectRatio={0.8} placeholder="blurred" formats={['auto', 'webp', 'avif']}
               style={{ width: '100%', borderRadius: '4px 8px 3px 7px', display: 'block' }} />
@@ -388,7 +381,7 @@ const NamedDefault = () => {
       <StaticImage src="../images/bands/ice-torn.png" alt="" layout="fullWidth"
         placeholder="none" formats={['auto', 'webp']} objectFit="cover" objectPosition="center"
         style={{ position: 'absolute', inset: 0, height: '100%', zIndex: 0 }} />
-      <PhotoCredit name="Karla" />
+      <PhotoCredit name="Karla" variant="overlay" />
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1,
         background: 'radial-gradient(ellipse at 50% 50%, rgba(12,18,24,0.62) 0%, rgba(12,18,24,0.42) 55%, transparent 80%), linear-gradient(180deg, rgba(12,18,24,0.55) 0%, rgba(12,18,24,0.45) 50%, rgba(12,18,24,0.62) 100%)',
@@ -431,7 +424,7 @@ const NamedDefault = () => {
               }}>
                 <GatsbyImage image={cardImages[s.key]} alt={s.alt} objectFit="cover"
                   style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0 }} />
-                <PhotoCredit name="Bill" inset={8} />
+                <PhotoCredit name="Bill Claff" variant="overlay" inset={8} />
               </div>
               <h3 style={{ fontFamily: serif, fontWeight: 500, fontSize: '1.3rem', margin: '0 0 0.8rem', padding: '0 1.5rem' }}>
                 {s.title}
