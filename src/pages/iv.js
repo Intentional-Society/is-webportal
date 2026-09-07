@@ -11,8 +11,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 // This page's own words, read by both the header band and the document head.
 const PAGE = {
-  title: 'Aligned livelihoods, woven into a relational economic web',
-  metaTitle: 'Intentional Ventures',
+  title: 'Intentional Ventures',
+  description: 'catalyzing aligned livelihoods into a relational economic web',
   metaDescription: 'Aligned livelihoods, woven into a relational economic web.',
 };
 
@@ -23,6 +23,7 @@ const NamedDefault = () => (
     <HeaderBand
       image="willow.jpg" focus="center 40%" credit="Bill Claff"
       title={PAGE.title}
+      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}

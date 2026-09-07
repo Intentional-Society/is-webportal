@@ -11,8 +11,8 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 // This page's own words, read by both the header band and the document head.
 const PAGE = {
-  title: 'A space full of relationships that matter',
-  metaTitle: 'Community',
+  title: 'IS Community Calls',
+  description: 'relationships that matter as we craft an intentional culture together',
   metaDescription: "A space full of relationships that matter — how Intentional Society's weekly community gathers, and how to join.",
 };
 
@@ -403,6 +403,7 @@ const NamedDefault = () => (
       image="turkeytail-log.jpg" credit="Bill Claff"
       titleSize="clamp(2rem,4vw,3rem)"
       title={PAGE.title}
+      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}

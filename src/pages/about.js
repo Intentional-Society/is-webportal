@@ -11,10 +11,11 @@ import { StaticImage } from 'gatsby-plugin-image';
 // src/images/photos/ — both through the image pipeline, neither from static/.
 
 // This page's own words, read by both the header band and the document head.
-// The head keeps the short "About" tab label and its own full sentence,
-// since the band's title is a fragment that only reads under the photo.
+// The head shortens the title to a tab label and carries its own sentence,
+// since the band's description is a fragment that only reads under the title.
 const PAGE = {
-  title: <>A society we are creating <em>on purpose</em></>,
+  title: 'About Intentional Society',
+  description: 'and our journey of unfolding into what we are today',
   metaTitle: 'About',
   metaDescription: 'Who we are, what we do, and how membership works at Intentional Society.',
 };
@@ -32,6 +33,7 @@ const NamedDefault = () => (
       width="820px"
       titleSize="large"
       title={PAGE.title}
+      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}

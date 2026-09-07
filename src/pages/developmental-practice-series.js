@@ -42,7 +42,7 @@ const units = [
     dates: 'Aug 21, Aug 28, Sept 4, 2025',
     practices: [
       ['Nine Whys', '(re)connecting to desire, motivations, and purpose'],
-      ['Pure coaching + Clean language', 'clean coaching basics'],
+      ['Pure coaching + Clean language', 'clean (space-holding, not self-injecting) coaching basics'],
       ['Case Clinic', 'developmental coaching in action'],
     ],
   },

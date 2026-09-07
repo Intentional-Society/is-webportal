@@ -10,7 +10,7 @@ import {
 
 // This page's own words, read by both the header band and the document head.
 const PAGE = {
-  title: 'Contact us',
+  title: 'Contact Us',
   description: 'questions, introductions, anything else',
   metaDescription: 'Get in touch with Intentional Society — ask a question, say hello, or start a conversation.',
 };

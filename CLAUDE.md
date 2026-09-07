@@ -330,8 +330,7 @@ array and the collapsed-`<details>` `.season-item` styling live in
 
 ### `/dojo` and `/iv` pages — 2026 redesign
 `dojo.js` drops the old strikethrough-"Practice" title for a header band whose
-title reads "A skill-building space for developmental-relational practice"
-(tab label kept short via `metaTitle: 'Practice Dojo'`), over
-`luminaria-row.jpg`. `iv.js` uses `willow.jpg`. Both keep their existing copy
-and internal links (Developmental Practice Series, Being With It All,
-Connection Call, etc.).
+description reads "a skill-building space for developmental-relational
+practice", over `luminaria-row.jpg`. `iv.js` uses `willow.jpg`. Both keep their
+existing copy and internal links (Developmental Practice Series, Being With It
+All, Connection Call, etc.).

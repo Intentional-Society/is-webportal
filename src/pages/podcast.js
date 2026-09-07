@@ -11,8 +11,8 @@ import {
 const PAGE = {
   title: 'The Intentional Society Podcast',
   description: 'conversations from inside the community',
-  metaTitle: 'Podcast',
   metaDescription: 'Listen to the Intentional Society Podcast — conversations from inside the community.',
+  siteName: false,
 };
 
 // A touch smaller than the shared section heading — this page has only the

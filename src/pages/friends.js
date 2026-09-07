@@ -11,8 +11,8 @@ import {
 
 // This page's own words, read by both the header band and the document head.
 const PAGE = {
-  title: 'Fellow travelers in the wider ecosystem',
-  metaTitle: 'Friends',
+  title: 'Friends and Allies',
+  description: 'fellow travelers in the wider ecosystem',
   metaDescription: 'Fellow travelers in the wider ecosystem of inner development, relational culture, and collective wisdom.',
 };
 
@@ -47,6 +47,7 @@ const NamedDefault = () => (
     <HeaderBand
       image="moss-roots.jpg" credit="Bill Claff"
       title={PAGE.title}
+      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}

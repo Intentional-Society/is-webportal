@@ -9,11 +9,11 @@ import {
 // asks. Self-links stay internal <Link>s, not intentionalsociety.org URLs.
 
 // This page's own words, read by both the header band and the document head.
-// The tab keeps the plain "The IS Web" label people actually search for,
-// while the band's title carries the fuller descriptive phrase.
+// The band's description is a fragment that only reads under the title, so the
+// head carries its own sentence.
 const PAGE = {
-  title: 'A distributed village, held by trust',
-  metaTitle: 'The IS Web',
+  title: 'The IS Web',
+  description: 'our extended network across the liminal landscape',
   metaDescription: "The relational web of trust and collaboration around Intentional Society: what's inside it, and what membership asks of you.",
 };
 
@@ -49,6 +49,7 @@ const inside = [
     title: 'Relational Programs',
     body: <>
       Gumball Machine, Presence Pods, Casework Pods, Thematic Crews, Arts in IS, and more.
+      See the full <Link to="/programs" style={linkStyle}>Relational Programs</Link> page.
     </>,
   },
   {
@@ -79,6 +80,7 @@ const NamedDefault = () => (
     <HeaderBand
       image="crystals-header.jpg" focus="center 45%" credit="Bill Claff"
       title={PAGE.title}
+      description={PAGE.description}
     />
 
     {/* ======== Article body ======== */}
