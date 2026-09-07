@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  MUTED, bodyP, sectionHeading, linkStyle,
+  bodyP, bodyUl, bodyLi, sectionHeading, linkStyle,
   Head2026, HeaderBand, PhotoCredit, Page2026, Article2026, Divider,
 } from '../components/design2026/chrome';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -37,36 +37,60 @@ const NamedDefault = () => (
     {/* ======== Article body ======== */}
     <Article2026>
 
-      {/* Who we are */}
-      <h2 style={aboutHeading}>Who we are</h2>
+      <h2 style={aboutHeading}>Why we're here</h2>
       <p style={bodyP}>
-        We are a geographically distributed community of seekers and friends, connecting
-        face-to-face via video calls. We connect and reflect together in relationship as a
-        catalyst to self-development, increased awareness, greater integrity. We relish our
-        diversity across gender, generation, nation, ethnicity, religious (or non-) background,
-        socioeconomic status, and other perspectives. Some of us bring backgrounds in related
-        fields or scenes: adult development psychology, relational practices (e.g. Authentic
-        Relating, Circling, Collective Presencing), and the "sensemaking web" (e.g. Game B,
-        Integral, Metamodernism). Regardless, all of us are united in one thing above all else:
-        seeking to grow.
+        Why? The complexity of the evolving world calls us to be wise enough to handle our
+        power. As humans and humanity, our technological evolution is racing our cultural
+        evolution, and the impact of our power-held-foolishly is growing large enough to
+        threaten the whole infinite game. The world is changing fast and continues to
+        accelerate, creating a huge amount of unintentional suffering and impact already. We
+        seek a future where we and our descendants can both survive and thrive, which requires
+        the capacity to hold the complexity and wisely choose paths of goodness and love.
       </p>
+
+      <h2 style={aboutHeading}>About the name</h2>
       <p style={bodyP}>
-        Our values orient around <em>awareness</em>, <em>acceptance</em>, and <em>integrity</em> as
-        big themes. Awareness means consciousness and attention: taking the "balcony view"
-        perspective on ourselves and on the people and systems we're interacting with. Acceptance
-        means facing reality — being able to be with what is, as it is, without deceiving
-        ourselves. From awareness and acceptance flow greater capacity for compassion, empathy,
-        and our ability to hold our intentions as objects of reflection, in integrity with our
-        layers of body-mind-self, our personal relationships, and our interfaces with the larger
-        systems we're a part of.
-      </p>
-      <p style={{ fontSize: '18px', fontWeight: 500, color: MUTED, margin: '0 0 1.2rem', fontStyle: 'italic' }}>
-        Other values we've named are: authenticity, honesty, adventure, perspective-taking,
-        reflection, learning, seeking, earnestness, paradox, connection, friendliness, play,
-        kindness, curiosity, goodwill, inclusion, drive, balance, desire.
+        The name "Intentional Society" is a pointer. It's a finger pointing to the moon,
+        pointing to a future of human flourishing. To be intentional is to see clearly, move
+        freely, and choose wisely. IS (we say the letters aloud, like "eye ess") is thus an
+        idea, a set of people who share a story, and an ecosystem of groups and activities. We
+        are both "the society for intentionality" and "those intentionally evolving society"
+        — the inner and outer dimensions of unfolding into more beautiful futures.
       </p>
 
       <Divider />
+      <h2 style={aboutHeading}>About how</h2>
+
+      <h2 style={aboutHeading}>The three mental moves of growth</h2>
+      <p style={bodyP}>Our big claim: We know how to grow.</p>
+      <ul style={bodyUl}>
+        <li style={bodyLi}><strong>Awareness (noun) / Noticing (verb)</strong></li>
+        <li style={bodyLi}><strong>Acceptance (noun) / Welcoming (verb)</strong></li>
+        <li style={bodyLi}><strong>Integrity (noun) / Cohering (verb)</strong></li>
+      </ul>
+      <p style={bodyP}>
+        We start with inner development (aka Adult Development), and have realized a "three
+        moves" mantra for the mechanics of personal growth. First, we become aware of the shape
+        of something we were formerly lost inside of. Then, we accept the truth of what already
+        is, and welcome it to be as it already is, freeing us to choose how we relate to it.
+        Finally, we are free to choose how we show up in the world as our best and biggest self.
+      </p>
+
+      <h2 style={aboutHeading}>Three scopes and strategies for flourishing</h2>
+      <ul style={bodyUl}>
+        <li style={bodyLi}><strong>I — Inner development</strong></li>
+        <li style={bodyLi}><strong>We — Relational culture</strong></li>
+        <li style={bodyLi}><strong>World — Wise action</strong></li>
+      </ul>
+      <p style={bodyP}>
+        Zooming out, we see three scopes in which we are growing: an "I, We, World" fractal
+        that starts inside ourselves, spreads between us, and out into contact with systems and
+        the world at large. These are co-equal and interdependent components of flourishing.
+        Relational culture is our primary "theory of change", the catalyst for both inner and
+        outer work. Yet inner development is our primary equipping focus, as everything we do
+        flows from who and how we are. And action in the world is where we connect with meaning
+        and purpose, as well as where we are called into new challenges and further growth.
+      </p>
 
       <figure className="credit-host" style={{ margin: '0 0 2.5rem', position: 'relative' }}>
         <PhotoCredit name="Bill Claff" variant="corner" />
@@ -75,60 +99,76 @@ const NamedDefault = () => (
           style={{ width: '100%', borderRadius: '5px 3px 6px 4px', display: 'block' }} />
       </figure>
 
-      {/* Regarding membership */}
-      <h2 style={aboutHeading}>Regarding membership</h2>
+
+      <h2 style={aboutHeading}>About the spaces</h2>
       <p style={bodyP}>
-        Who and what makes a good "fit" within Intentional Society? The cornerstone of our
-        culture is first and foremost a desire to grow. It also takes an attitude of openness,
-        humility, and of respect toward every human and the things that we can learn from
-        interacting with them. We don't teach each other as instructors or lecturers, but rather
-        reflect our experience of being with each other. When reflected in an honest and
-        compassionate way, we are able to self-teach with socially-expanded insight.
+        Intentional Society is an ecosystem of capacity-building spaces, not a single place,
+        practice, or people. These spaces range from public to friends to by-application, and
+        all of them are free of charge to participate.
       </p>
       <p style={bodyP}>
-        Many new members thus far have come in with a high degree of emotional self-awareness
-        and "cognitive de-fusion," having been on their own developmental journeys for some time
-        already. This seems helpful but not essential, and we haven't established a concrete
-        minimum age or maturity level for membership yet. If someone is looking for a bandwagon
-        to just jump on, this isn't it. Some level of "self-authorship" — defining one's self
-        and values independently of the social context in which one grew up — seems necessary to
-        get traction on further development. We generally have a fairly high degree of tolerance
-        for nebulosity and uncertainty, as we're making up our norms and structures as we go.
+        If you're interested in training through developmental-relational practices, we
+        recommend <Link to="/dojo" style={linkStyle}>Relational Dojo</Link>, an open learning
+        space with multiple practice groups.
       </p>
       <p style={bodyP}>
-        Inside the members-only spaces of Intentional Society, you'll find more focus on
-        collective development (vs the individual focus of the practice program), on real
-        relationship building, mutual support, and doing from the integrity of "post-achiever
-        ambition."
+        The path to entry is through our open <Link to="/get-involved#connection-calls" style={linkStyle}>Connection
+        Calls</Link>, and/or existing relationships.
       </p>
       <p style={bodyP}>
-        If you're feeling any <a href="https://en.wikipedia.org/wiki/Impostor_syndrome" target="_blank" rel="noopener noreferrer" style={linkStyle}>imposter syndrome</a> or
+        As of 2026, you can be a member of the <Link to="/web" style={linkStyle}>IS Web
+        network</Link> to be intentionally connected and affiliated with the IS ecosystem —
+        there's an app for that, and we gather the web together once per season.
+      </p>
+
+      <p style={bodyP}>
+        Within the Web, you have access to our <Link to="/programs" style={linkStyle}>Relational
+        Programs</Link> and <Link to="/community" style={linkStyle}>Community Calls</Link>, a
+        neighborhood of kind adventurers engaging in practices and projects across an ecosystem
+        of activity.
+      </p>
+
+      <p style={bodyP}>
+        Intentional Ventures is a high-trust system of relational and financial support for livelihood
+        generation and economic interweaving.
+      </p>
+
+      <h2 style={aboutHeading}>About the people</h2>
+      <p style={bodyP}>
+        We are a globally distributed constellation of friends with a penchant for connecting
+        predominantly through face-to-face video calls. We generally identify as
+        "post-conventional" in a developmental or perspectival sense, not feeling strong
+        identification with conventional cultural tribes such as political parties or
+        traditional religious groups. We relish our diversity across gender, generation, nation,
+        ethnicity, religious (or non-) background, socioeconomic status, and other perspectives.
+      </p>
+
+      <h2 style={aboutHeading}>About the vibe</h2>
+      <p style={bodyP}>
+        The cornerstone of our culture is first and foremost that we are each
+        on a path of growing and becoming, and that we value that for ourselves and each other.
+        It also takes an attitude of openness, humility, and of respect toward every human and
+        the things that we can learn from interacting with them. We don't teach each other as
+        instructors or lecturers, but rather reflect our experience of being with each other.
+        When reflected in an honest and compassionate way, we are able to self-teach with
+        relationally-expanded perspective and insight. We generally have a fairly high degree
+        of tolerance for nebulosity and uncertainty, and we're making up structures that serve
+        us as we go. We love building and "builders", yet we resonate most with a
+        "post-achiever" kind of ambition that isn't saving the world as a way to save themselves.
+      </p>
+      <p style={bodyP}>
+        Having read that, if you're feeling any <a href="https://en.wikipedia.org/wiki/Impostor_syndrome" target="_blank" rel="noopener noreferrer" style={linkStyle}>imposter syndrome</a> or
         are worried about whether you're "enough"… please notice that fear, and know that we
-        hope you can move past it! You <Link to="/get-involved" style={linkStyle}>get involved</Link> with
-        Intentional Society through our practice program and/or informational calls.
+        hope you can move past it! We care about where we're going, not what you've already
+        achieved.
       </p>
 
-      <Divider />
-
-      {/* What we do */}
-      <h2 style={aboutHeading}>What we do</h2>
+      <h2 style={aboutHeading}>About time(s)</h2>
       <p style={bodyP}>
-        On the surface, the simple story is that we talk with one another on video calls. Most
-        of these take the form of our publicly-accessible <strong style={{ fontWeight: 500 }}>practice program</strong>. These
-        practice sessions are facilitated, structured calls that run 90 minutes (plus any casual
-        hangout time afterwards). There is an ordered progression week-to-week, but every week is
-        open to newcomers as new practices and skills are introduced each week.
-      </p>
-      <p style={bodyP}>
-        These sessions start at "IS prime time": anchored to US time zones, 1pm Pacific and 4pm
-        Eastern, mapping to 8 or 9pm UTC depending on Daylight Savings time shifts, or even
-        two-hour shifts (e.g. 6am to 8am) for folks in AU and NZ.
-      </p>
-      <p style={bodyP}>
-        There's a bunch more to Intentional Society beyond the practice program, inside the
-        membership membrane. We form crews of various kinds, explore more collective-oriented
-        and experimental explorations, practice omni-leadership, and support each other in
-        perspective-taking, projects, and more.
+        "IS Time" for globally-targeted events is 1pm Pacific, which is 8pm or 9pm UTC
+        depending on DST. This serves our primary time zones in the Americas, and secondarily
+        includes Europe and Africa slightly more than AU+NZ. Small groups can of course meet
+        whenever they prefer.
       </p>
 
       <figure className="credit-host" style={{ margin: '2.5rem 0 0', position: 'relative' }}>
@@ -145,7 +185,7 @@ const NamedDefault = () => (
         Deliberately developmental details for geeks
       </h2>
       <p style={bodyP}>
-        At the deeper conceptual layer, what we're doing together is <strong style={{ fontWeight: 500 }}>authoring
+        To use more precise but technical language, what we're doing together is <strong>authoring
         a developmental community of practice with a culture of expanded awareness</strong>. There's
         a conventional script for "becoming an adult" that goes something like "finish school,
         get a job, get married and have 2.5 kids, buy a house and then acquire more toys while
@@ -181,15 +221,6 @@ const NamedDefault = () => (
         is <a href="https://en.wikipedia.org/wiki/Spiral_Dynamics" target="_blank" rel="noopener noreferrer" style={linkStyle}>Spiral Dynamics</a>, in
         a lineage from Graves to Beck and Cowan to Wilber, which helps us to see and make sense
         of the values of various political groups and social tribes in this polarized age.
-      </p>
-      <p style={bodyP}>
-        In the spirit of "chop wood, carry water," the deepest summary of what we do is
-        perhaps "<strong style={{ fontWeight: 500 }}>we practice being, together</strong>" — which does
-        correspond with "talk with one another on video calls" and is also something quite
-        profound. Being and doing are a polarity which, at least in the West, has been culturally
-        tilted towards doing since the dominance of modernity. Intentional Society assumes an
-        adult level of doing-competence, starts with the inner work of being, and expands into
-        the interdependent learning spiral of being-and-doing at multiple levels of scale.
       </p>
       <p style={bodyP}>
         A lot of theory and thought has gone into what we do together. But it's also what people
