@@ -287,10 +287,10 @@ export const Nav2026 = ({ active }) => {
         .nav2026-more-mobile-item { display: none; }
         @media (max-width: 920px) {
           .nav2026-links { display: none; position: fixed; top: ${NAV_OFFSET}; left: 0; right: 0;
-            flex-direction: column; align-items: flex-start; gap: 0; background: #F8F5EF;
+            flex-direction: column; align-items: flex-end; gap: 0; background: #F8F5EF;
             border-bottom: 1px solid rgba(42,42,36,0.12); padding: 0.4rem 0 1rem; }
           .nav2026-links.nav2026-open { display: flex; }
-          .nav2026-links li { padding: 0.55rem 2rem; }
+          .nav2026-links li { padding: 0.55rem 2rem; text-align: right; }
           .nav2026-burger { display: block; }
           /* On mobile the hamburger menu already has plenty of vertical room,
              so "More" collapses away: hide the desktop dropdown trigger and
