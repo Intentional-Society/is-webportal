@@ -41,7 +41,7 @@ yarn clean
 
 ```jsx
 <Page2026 active="/dojo">
-  <HeaderBand image="willow.jpg" credit="Bill" title={PAGE.title} />
+  <HeaderBand image="willow.jpg" credit="Bill Claff" title={PAGE.title} />
   <Article2026>
     <p style={bodyP}>…</p>
     <BackLink to="/dojo">← Back to the Dojo</BackLink>
@@ -248,18 +248,20 @@ horizontal space. The logo is a transparent `static/design2026/logo.png`
 (no mix-blend-mode hacks). Header photos live in `src/images/bands/` — that
 directory is what `FullBleedPhoto`'s static query reads, so a new header photo
 has to go there and nowhere else. There are more pages than photos now, so
-several are reused:
+several are reused — including by the home page's four "What brings you here?"
+cards, which deliberately carry the band photo of the page each one links to:
 
 | Photo | Pages |
 | --- | --- |
 | `hero` | home |
 | `moss` | home (testimonials), orientation |
 | `crescent-butterflyweed` | about, branding |
-| `crystals-header` | contact, web |
-| `turkeytail-log` | community, programs |
-| `luminaria-row` | dojo, developmental-practice-series |
+| `crystals-header` | contact, web, home (card) |
+| `turkeytail-log` | community, programs, home (card) |
+| `luminaria-row` | dojo, developmental-practice-series, home (card) |
 | `luminaria-field` | news, funding announcement, exploratory-practice-series |
-| `willow` | iv, thecall |
+| `willow` | iv, home (card) |
+| `cosmos` | thecall |
 | `moss-roots` | friends |
 | `rockfield` | resources, practices |
 | `pond-leaves` | being-with-it-all, podcast |

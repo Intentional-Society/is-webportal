@@ -73,45 +73,49 @@ const cardText = {
 };
 
 // `photo` names a query alias in HomeCardImages below; `fallback` shows while
-// that image loads.
+// that image loads. Each card carries the header-band photo of the page it
+// links to, so the card and its destination read as the same place.
 const spaces = [
   {
     title: 'Find the others',
     to: '/community',
-    photo: 'flameAzalea',
-    alt: 'A cluster of orange flame azalea blossoms',
-    fallback: 'linear-gradient(135deg,#D4A88C 0%,#b9617a 100%)',
+    photo: 'turkeytailLog',
+    alt: 'Layers of turkey-tail fungus fanning along a mossy fallen log',
+    credit: 'Bill Claff',
+    fallback: 'linear-gradient(135deg,#C99A72 0%,#4A5240 100%)',
     text: "I'm looking for deep connection with inner development and caring culture",
     cta: 'Community',
   },
   {
     title: 'Grow myself',
     to: '/dojo',
-    photo: 'cosmos',
-    alt: 'A magenta cosmos flower against soft green',
-    fallback: `linear-gradient(135deg,${SAGE} 0%,#b9617a 100%)`,
+    photo: 'luminariaRow',
+    alt: 'A line of paper luminaria glowing along a path at night',
+    credit: 'Bill Claff',
+    fallback: 'linear-gradient(135deg,#E0B57E 0%,#241F1A 100%)',
     text: "I'm interested in friendly low-stakes developmental-relational practice space",
     cta: 'Relational Dojo',
   },
   {
     title: 'Align my work',
     to: '/iv',
-    photo: 'monarchGoldenrod',
-    alt: 'A monarch butterfly feeding on goldenrod',
-    fallback: `linear-gradient(135deg,#D4A88C 0%,${SAGE} 100%)`,
+    photo: 'willow',
+    alt: 'Looking up through the branches of a willow into a bright cloudy sky',
+    credit: 'Karla',
+    fallback: `linear-gradient(135deg,${SAGE} 0%,#9BB7CE 100%)`,
     text: "I'm looking for support to find integrity and meaning in my livelihood.",
     cta: 'Intentional Ventures',
   },
 ];
 
-// The wide fourth card, below the grid rather than in it. Photo is the middle
-// card's, standing in until this one has its own.
+// The wide fourth card, below the grid rather than in it.
 const webCard = {
   title: 'Be a part of the extended web',
   to: '/web',
-  photo: 'cosmos',
-  alt: 'A magenta cosmos flower against soft green',
-  fallback: `linear-gradient(135deg,${SAGE} 0%,#b9617a 100%)`,
+  photo: 'crystals',
+  alt: 'Interlocking crystals in vivid colour under a polarizing microscope',
+  credit: 'Bill Claff',
+  fallback: 'linear-gradient(135deg,#E8B24A 0%,#8A6FA8 100%)',
   text: "I'm already a friend and ally to this ethos and the people who are living it. I want to be connected and weave across the ecosystem as opportunities arise.",
   cta: 'The IS Web',
 };
@@ -122,7 +126,7 @@ const SpaceCard = ({ card, image, wide }) => (
   <Link className={`space-card${wide ? ' space-card-wide' : ''}`} to={card.to} style={cardBox}>
     <div className="credit-host space-card-photo" style={{ ...cardPhoto, background: card.fallback }}>
       <GatsbyImage image={image} alt={card.alt} objectFit="cover" style={cardPhotoImage} />
-      <PhotoCredit name="Bill Claff" variant="overlay" inset={8} />
+      <PhotoCredit name={card.credit} variant="overlay" inset={8} />
     </div>
     <h3 style={cardHeading}>{card.title}</h3>
     <p style={cardText}>{card.text}</p>
@@ -224,23 +228,29 @@ const glideToThreeMoves = event => {
 };
 
 const NamedDefault = () => {
-  // Constrained card thumbnails. Query aliases here are what a card's `photo`
-  // field names. aspectRatio just bounds the generated height; every card box
-  // is a fixed 130px and the image cover-fills it. width: 520 with CONSTRAINED
-  // also emits a 2x file, which is what the wide fourth card draws from.
+  // Constrained card thumbnails, cut from the same band photos the four linked
+  // pages open with. Query aliases here are what a card's `photo` field names.
+  // aspectRatio just bounds the generated height; every card box is a fixed
+  // 130px and the image cover-fills it. width: 520 with CONSTRAINED also emits
+  // a 2x file, which is what the wide fourth card draws from.
   const cardData = useStaticQuery(graphql`
     query HomeCardImages {
-      flameAzalea: file(relativePath: { eq: "images/photos/flame-azalea.jpg" }) {
+      turkeytailLog: file(relativePath: { eq: "images/bands/turkeytail-log.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: CONSTRAINED, width: 520, aspectRatio: 2.1, placeholder: BLURRED, quality: 78, formats: [AUTO, WEBP, AVIF])
         }
       }
-      cosmos: file(relativePath: { eq: "images/photos/cosmos.jpg" }) {
+      luminariaRow: file(relativePath: { eq: "images/bands/luminaria-row.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: CONSTRAINED, width: 520, aspectRatio: 2.1, placeholder: BLURRED, quality: 78, formats: [AUTO, WEBP, AVIF])
         }
       }
-      monarchGoldenrod: file(relativePath: { eq: "images/photos/monarch-goldenrod.jpg" }) {
+      willow: file(relativePath: { eq: "images/bands/willow.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: CONSTRAINED, width: 520, aspectRatio: 2.1, placeholder: BLURRED, quality: 78, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+      crystals: file(relativePath: { eq: "images/bands/crystals-header.jpg" }) {
         childImageSharp {
           gatsbyImageData(layout: CONSTRAINED, width: 520, aspectRatio: 2.1, placeholder: BLURRED, quality: 78, formats: [AUTO, WEBP, AVIF])
         }

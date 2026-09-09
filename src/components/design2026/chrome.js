@@ -143,7 +143,7 @@ export const Grain2026 = () => (
 //             here" cards): absolute over the photo, bottom-centered, light
 //             text with a shadow so it reads against the image itself.
 export const PhotoCredit = ({ name, variant = 'below', inset = 14 }) => {
-  const text = `Copyright ${name} used by permission`;
+  const text = `Photo by ${name}`;
   const base = { fontFamily: sans, fontWeight: 400, whiteSpace: 'nowrap' };
   if (variant === 'corner') {
     return (
@@ -453,7 +453,8 @@ export const Footer2026 = () => (
       maxWidth: '720px', margin: '2rem auto 0', paddingTop: '1.5rem',
       borderTop: '1px solid rgba(42,42,36,0.06)', fontSize: '14px', fontWeight: 500, color: MUTED,
     }}>
-      © 2020–2026 Intentional Society. All rights reserved.
+      © 2020–{new Date().getFullYear()} Intentional Society. Photographs remain
+      the property of their respective creators.
     </div>
   </footer>
 );

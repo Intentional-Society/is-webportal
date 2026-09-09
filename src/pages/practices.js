@@ -61,7 +61,7 @@ const PracticesPage = ({ data }) => {
 
       {/* ======== Header band ======== */}
       <HeaderBand
-        image="rockfield.jpg" focus="center 65%" credit="Bill"
+        image="rockfield.jpg" focus="center 65%" credit="Bill Claff"
         title={PAGE.title}
         description={PAGE.description}
       />
