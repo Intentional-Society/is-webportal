@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import {
-  serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER,
+  serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, HEADING,
   Head2026, PhotoCredit, Page2026,
   NAV_HEIGHT, NAV_OFFSET,
 } from '../components/design2026/chrome';
@@ -13,24 +13,55 @@ import { FullBleedPhoto } from '../components/design2026/photo';
 // atmospheric interstitials. Torn edges are baked into the section images
 // (wood-band.png, ice-torn.png), not a CSS mask.
 
-// This page's own words. The homepage has no header band and its title is the
-// bare site name, so siteName: false rather than "Intentional Society —
-// Intentional Society".
+// ======== Page metadata ========
+// The homepage has no header band and its title is the bare site name, so
+// siteName: false rather than "Intentional Society — Intentional Society".
 const PAGE = {
   title: 'Intentional Society',
   metaDescription: 'An online community for inner development, wise action, and human connection — peer-led, free, and five years into the work.',
   siteName: false,
 };
 
-// One major radius and one minor, alternating axes: TL/BR are 38 across by 20
-// down, TR/BL the reverse. Shared by every card.
-const CARD_RADIUS = '38px 20px / 20px 38px';
+// ======== Palette ========
+// Shades this page uses beyond the chrome.js tokens.
+const SAGE = '#7A9E8A';       // quote rule and mark, card fallbacks, CTA border
+const SAND = '#E8DFD0';       // light type and hero wash over dark grounds
+const CREAM = '#FAF8F3';      // light type on the dark interstitials
+const CARD_PAPER = '#FDFCF9'; // card fill, a shade lighter than PAPER
+const MOSS_TINT = '#EDF1E9';  // quotes section ground; its veil is this at 0.78
+// Darker than HEADING and ACCENT, because that veil lets enough of the moss
+// through that the standard pair goes soft.
+const QUOTES_LABEL = '#4A3B2E';
+const QUOTES_ACCENT = '#245741';
 
-// Shared by the three grid cards and the wide fourth one below them.
+// ======== Shared type ========
+// The page's two big serif statements — the Awareness · Acceptance · Integrity
+// band and the theory-of-change line — are set at one size.
+const STATEMENT_SIZE = 'clamp(1.35rem,3.6vw,3rem)';
+
+// The page's small-cap section labels.
+const smallcap = {
+  fontFamily: serif, fontSize: '0.92rem', letterSpacing: '0.18em',
+  textTransform: 'uppercase', fontWeight: 600,
+};
+
+// ======== "What brings you here?" cards ========
+// One major radius and one minor, alternating axes: TL/BR are 38 across by 20
+// down, TR/BL the reverse.
+const CARD_RADIUS = '38px 20px / 20px 38px';
+const cardGrid = {
+  display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem',
+};
 const cardBox = {
-  background: '#FDFCF9', border: '1px solid rgba(42,42,36,0.14)', padding: '0 0 1.6rem',
+  background: CARD_PAPER, border: '1px solid rgba(42,42,36,0.14)', padding: '0 0 1.6rem',
   textDecoration: 'none', color: INK, position: 'relative', overflow: 'hidden',
   borderRadius: CARD_RADIUS, display: 'flex', flexDirection: 'column',
+};
+const cardPhoto = {
+  position: 'relative', height: '130px', marginBottom: '1.3rem', overflow: 'hidden',
+};
+const cardPhotoImage = {
+  position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0,
 };
 const cardHeading = {
   fontFamily: serif, fontWeight: 500, fontSize: '1.3rem',
@@ -41,11 +72,13 @@ const cardText = {
   padding: '0 1.5rem', margin: '0 0 1.5rem',
 };
 
+// `photo` names a query alias in HomeCardImages below; `fallback` shows while
+// that image loads.
 const spaces = [
   {
     title: 'Find the others',
     to: '/community',
-    key: 'flame-azalea',
+    photo: 'flameAzalea',
     alt: 'A cluster of orange flame azalea blossoms',
     fallback: 'linear-gradient(135deg,#D4A88C 0%,#b9617a 100%)',
     text: "I'm looking for deep connection with inner development and caring culture",
@@ -54,37 +87,61 @@ const spaces = [
   {
     title: 'Grow myself',
     to: '/dojo',
-    key: 'cosmos',
+    photo: 'cosmos',
     alt: 'A magenta cosmos flower against soft green',
-    fallback: 'linear-gradient(135deg,#7A9E8A 0%,#b9617a 100%)',
+    fallback: `linear-gradient(135deg,${SAGE} 0%,#b9617a 100%)`,
     text: "I'm interested in friendly low-stakes developmental-relational practice space",
     cta: 'Relational Dojo',
   },
   {
     title: 'Align my work',
     to: '/iv',
-    key: 'monarch-goldenrod',
+    photo: 'monarchGoldenrod',
     alt: 'A monarch butterfly feeding on goldenrod',
-    fallback: 'linear-gradient(135deg,#D4A88C 0%,#7A9E8A 100%)',
+    fallback: `linear-gradient(135deg,#D4A88C 0%,${SAGE} 100%)`,
     text: "I'm looking for support to find integrity and meaning in my livelihood.",
     cta: 'Intentional Ventures',
   },
 ];
 
-// The page's small-cap section labels.
-const smallcap = {
-  fontFamily: serif, fontSize: '0.92rem', letterSpacing: '0.18em',
-  textTransform: 'uppercase', fontWeight: 600,
+// The wide fourth card, below the grid rather than in it. Photo is the middle
+// card's, standing in until this one has its own.
+const webCard = {
+  title: 'Be a part of the extended web',
+  to: '/web',
+  photo: 'cosmos',
+  alt: 'A magenta cosmos flower against soft green',
+  fallback: `linear-gradient(135deg,${SAGE} 0%,#b9617a 100%)`,
+  text: "I'm already a friend and ally to this ethos and the people who are living it. I want to be connected and weave across the ecosystem as opportunities arise.",
+  cta: 'The IS Web',
 };
 
-// One quote style for all three: the big “ from the feature quote over the
-// pair's green rule and fill, the fill translucent so the moss reads through.
+// Every card is one <a>; .space-card in the section's <style> block carries the
+// border, shadow, hover lift and CTA type that make it read as a target.
+const SpaceCard = ({ card, image, wide }) => (
+  <Link className={`space-card${wide ? ' space-card-wide' : ''}`} to={card.to} style={cardBox}>
+    <div className="credit-host space-card-photo" style={{ ...cardPhoto, background: card.fallback }}>
+      <GatsbyImage image={image} alt={card.alt} objectFit="cover" style={cardPhotoImage} />
+      <PhotoCredit name="Bill Claff" variant="overlay" inset={8} />
+    </div>
+    <h3 style={cardHeading}>{card.title}</h3>
+    <p style={cardText}>{card.text}</p>
+    <span className="space-card-cta">
+      <span className="space-card-arrow" aria-hidden="true">→</span>
+      <span className="space-card-cta-text">{card.cta}</span>
+    </span>
+  </Link>
+);
+
+// ======== Quotes ========
+// One style for all three: the big “ from the feature quote over the pair's
+// green rule and fill, the fill translucent so the moss reads through.
 const quoteBox = {
   position: 'relative', padding: '2.9rem 1.6rem 1.4rem',
-  background: 'rgba(250,248,243,0.62)', borderLeft: '2px solid #7A9E8A',
+  background: 'rgba(250,248,243,0.62)', borderLeft: `2px solid ${SAGE}`,
 };
 const quoteMark = {
-  fontFamily: serif, fontSize: '5rem', color: '#7A9E8A', opacity: 0.3,
+  fontFamily: serif, fontSize: '5rem', color: SAGE, opacity: 0.3,
   position: 'absolute', top: '0.5rem', left: '1.3rem', lineHeight: 1,
 };
 const quoteText = {
@@ -92,6 +149,10 @@ const quoteText = {
   fontWeight: 400, color: INK, lineHeight: 1.6, margin: '0 0 0.8rem',
 };
 const quoteAttrib = { fontSize: '15px', fontWeight: 500, color: MUTED };
+const quotePair = {
+  display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+  gap: '2rem', marginTop: '2rem',
+};
 
 const Quote = ({ who, children }) => (
   <div style={quoteBox}>
@@ -101,12 +162,16 @@ const Quote = ({ who, children }) => (
   </div>
 );
 
-// Theory-of-change line: three accented phrases joined by two smaller plain
-// verbs, as a flex row that folds to a stack when it runs out of room. Same
-// clamp as the Awareness · Acceptance · Integrity band, so the page's two big
-// serif statements are set at one size. nowrap on both, so wrapping only ever
-// happens between items.
-const tocPhrase = { fontSize: 'clamp(1.35rem,3.6vw,3rem)', whiteSpace: 'nowrap' };
+// ======== Theory of change ========
+// Three accented phrases joined by two smaller plain verbs, as a flex row that
+// folds to a stack when it runs out of room. nowrap here and on tocJoin, so
+// wrapping only ever happens between items, never inside a phrase.
+const tocLine = {
+  display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', justifyContent: 'center',
+  columnGap: '0.7em', rowGap: '0.3em', maxWidth: '1750px', margin: '0 auto',
+  fontFamily: serif, fontWeight: 400, lineHeight: 1.25, color: INK,
+  fontSize: STATEMENT_SIZE, whiteSpace: 'nowrap',
+};
 // Plain serif rather than the tracked small caps used for labels elsewhere:
 // these are part of the sentence, not a label on it. Sized in em so the
 // contrast with the phrase stays constant at any phrase size.
@@ -114,16 +179,11 @@ const tocJoin = {
   fontFamily: serif, fontSize: '0.53em', fontWeight: 400,
   color: ACCENT_DARK, whiteSpace: 'nowrap',
 };
-
-// Darker than the page-wide HEADING brown and ACCENT green: this section's
-// veil lets enough of the moss through that the standard pair goes soft.
-const QUOTES_LABEL = '#4A3B2E';
-const QUOTES_ACCENT = '#245741';
-
-// The three accented phrases. <em> for the emphasis, upright for the look —
-// colour and scale carry it, so the italic would be a third signal.
+// <em> for the emphasis, upright for the look — colour and scale carry it, so
+// the italic would be a third signal.
 const tocKey = { color: QUOTES_ACCENT, fontStyle: 'normal' };
 
+// ======== Mission and the three moves ========
 // The "·" between the three moves. Padding rather than &nbsp; keeps the line's
 // wrap points, so it can break on a phone instead of overflowing the band.
 const moveSeparator = { padding: '0 0.32em' };
@@ -131,6 +191,7 @@ const moveSeparator = { padding: '0 0.32em' };
 // 700 is a real self-hosted Cormorant italic face, not a synthesised bold.
 const missionKey = { fontWeight: 700 };
 
+// ======== Hero scroll cue ========
 // `scroll-behavior: smooth` has no duration knob and Chrome's own reads as
 // hurried, so the glide is animated by hand. Only number to touch to retune it.
 const SCROLL_CUE_MS = 1100;
@@ -163,10 +224,10 @@ const glideToThreeMoves = event => {
 };
 
 const NamedDefault = () => {
-  // Constrained card thumbnails (~130px tall, up to ~3-up). Small on purpose —
-  // the full-bleed band/hero images are the ones that carry weight, handled by
-  // FullBleedPhoto. aspectRatio just bounds the generated height; the card box
-  // is a fixed 130px and the image cover-fills it.
+  // Constrained card thumbnails. Query aliases here are what a card's `photo`
+  // field names. aspectRatio just bounds the generated height; every card box
+  // is a fixed 130px and the image cover-fills it. width: 520 with CONSTRAINED
+  // also emits a 2x file, which is what the wide fourth card draws from.
   const cardData = useStaticQuery(graphql`
     query HomeCardImages {
       flameAzalea: file(relativePath: { eq: "images/photos/flame-azalea.jpg" }) {
@@ -186,11 +247,6 @@ const NamedDefault = () => {
       }
     }
   `);
-  const cardImages = {
-    'flame-azalea': getImage(cardData.flameAzalea),
-    cosmos: getImage(cardData.cosmos),
-    'monarch-goldenrod': getImage(cardData.monarchGoldenrod),
-  };
 
   // The homepage body is sans, not the serif every article page is set in,
   // and its sections are full-bleed rather than a reading column — so it
@@ -203,7 +259,7 @@ const NamedDefault = () => {
     <section style={{
       position: 'relative', minHeight: '100vh', display: 'flex', alignItems: 'center',
       justifyContent: 'center', textAlign: 'center', overflow: 'hidden',
-      background: 'linear-gradient(165deg,#F8F5EF 0%,#E8DFD0 46%,#cdd9cf 100%)',
+      background: `linear-gradient(165deg,${PAPER} 0%,${SAND} 46%,#cdd9cf 100%)`,
     }}>
       <FullBleedPhoto image="hero.jpg" focus="center 60%" />
       <div style={{
@@ -331,8 +387,8 @@ const NamedDefault = () => {
               unbreakable string: the line needs a ~470px viewport to fit, so on
               a phone it has to be able to wrap. */}
           <div style={{
-            fontFamily: serif, fontSize: 'clamp(1.35rem,3.6vw,3rem)', fontWeight: 300,
-            letterSpacing: '0.08em', color: '#E8DFD0', lineHeight: 1.4,
+            fontFamily: serif, fontSize: STATEMENT_SIZE, fontWeight: 300,
+            letterSpacing: '0.08em', color: SAND, lineHeight: 1.4,
           }}>
             Awareness <span style={moveSeparator}>·</span> Acceptance <span style={moveSeparator}>·</span> Integrity
           </div>
@@ -422,11 +478,11 @@ const NamedDefault = () => {
         background: 'radial-gradient(ellipse at 50% 50%, rgba(12,18,24,0.62) 0%, rgba(12,18,24,0.42) 55%, transparent 80%), linear-gradient(180deg, rgba(12,18,24,0.55) 0%, rgba(12,18,24,0.45) 50%, rgba(12,18,24,0.62) 100%)',
       }} />
       <div style={{ textAlign: 'center', padding: '4rem 2rem', position: 'relative', zIndex: 2 }}>
-        <div style={{ ...smallcap, color: '#E8DFD0', marginBottom: '0.5rem' }}>Our mission:</div>
+        <div style={{ ...smallcap, color: SAND, marginBottom: '0.5rem' }}>Our mission:</div>
         {/* Set as verse — each line its own block, so the authored breaks hold. */}
         <p style={{
           fontFamily: serif, fontSize: 'clamp(1.4rem,2.5vw,2rem)', fontStyle: 'italic', fontWeight: 400,
-          color: '#FAF8F3', maxWidth: '600px', margin: '0 auto', lineHeight: 1.5,
+          color: CREAM, maxWidth: '600px', margin: '0 auto', lineHeight: 1.5,
           textShadow: '0 2px 22px rgba(8,12,16,0.9), 0 1px 4px rgba(8,12,16,0.8)',
         }}>
           <span style={{ display: 'block' }}>Those who together are <strong style={missionKey}>becoming</strong></span>
@@ -441,59 +497,18 @@ const NamedDefault = () => {
     {/* ======== Nav to spaces ======== */}
     <section style={{ background: PAPER, padding: '4rem 2rem 5rem' }}>
       <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <div style={{ fontFamily: serif, fontSize: '1.6rem', fontWeight: 400, color: '#5C4A3A' }}>
-            What brings you here?
-          </div>
+        <div style={{
+          fontFamily: serif, fontSize: '1.6rem', fontWeight: 400, color: HEADING,
+          textAlign: 'center', marginBottom: '2.5rem',
+        }}>
+          What brings you here?
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
+        <div style={cardGrid}>
           {spaces.map(s => (
-            <Link key={s.title} className="space-card" to={s.to} style={cardBox}>
-              <div className="credit-host space-card-photo" style={{
-                position: 'relative', height: '130px', marginBottom: '1.3rem', overflow: 'hidden',
-                background: s.fallback,
-              }}>
-                <GatsbyImage image={cardImages[s.key]} alt={s.alt} objectFit="cover"
-                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0 }} />
-                <PhotoCredit name="Bill Claff" variant="overlay" inset={8} />
-              </div>
-              <h3 style={cardHeading}>
-                {s.title}
-              </h3>
-              <p style={cardText}>
-                {s.text}
-              </p>
-              <span className="space-card-cta">
-                <span className="space-card-arrow" aria-hidden="true">→</span>
-                <span className="space-card-cta-text">{s.cta}</span>
-              </span>
-            </Link>
+            <SpaceCard key={s.title} card={s} image={getImage(cardData[s.photo])} />
           ))}
         </div>
-        {/* Two card-widths across, centred under the three. Photo is the middle
-            card's, standing in until this one has its own. */}
-        <Link className="space-card space-card-wide" to="/web" style={cardBox}>
-          <div className="credit-host space-card-photo" style={{
-            position: 'relative', height: '130px', marginBottom: '1.3rem', overflow: 'hidden',
-            background: 'linear-gradient(135deg,#7A9E8A 0%,#b9617a 100%)',
-          }}>
-            <GatsbyImage image={cardImages.cosmos} alt="A magenta cosmos flower against soft green"
-              objectFit="cover"
-              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 0 }} />
-            <PhotoCredit name="Bill Claff" variant="overlay" inset={8} />
-          </div>
-          <h3 style={cardHeading}>
-            Be a part of the extended web
-          </h3>
-          <p style={cardText}>
-            I'm already a friend and ally to this ethos and the people who are living it. I want
-            to be connected and weave across the ecosystem as opportunities arise.
-          </p>
-          <span className="space-card-cta">
-            <span className="space-card-arrow" aria-hidden="true">→</span>
-            <span className="space-card-cta-text">The IS Web</span>
-          </span>
-        </Link>
+        <SpaceCard card={webCard} image={getImage(cardData[webCard.photo])} wide />
         <style>{`
           /* The whole card is one <a>, so it has to look like a target. */
           .space-card {
@@ -542,7 +557,7 @@ const NamedDefault = () => {
 
     {/* ======== Interstitial: testimonials ======== */}
     <section style={{
-      position: 'relative', background: '#EDF1E9',
+      position: 'relative', background: MOSS_TINT,
       padding: '4rem 2rem 5rem', overflow: 'hidden',
     }}>
       <FullBleedPhoto image="moss.jpg" focus="center" />
@@ -556,12 +571,7 @@ const NamedDefault = () => {
         <div style={{ ...smallcap, color: QUOTES_LABEL, marginBottom: '1.2rem' }}>
           Our theory of change:
         </div>
-        <h2 style={{
-          display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', justifyContent: 'center',
-          columnGap: '0.7em', rowGap: '0.3em', maxWidth: '1750px', margin: '0 auto',
-          fontFamily: serif, fontWeight: 400, lineHeight: 1.25, color: INK,
-          ...tocPhrase,
-        }}>
+        <h2 style={tocLine}>
           <em style={tocKey}>human connection</em>
           <span style={tocJoin}>catalyzes</span>
           <em style={tocKey}>inner development</em>
@@ -577,10 +587,7 @@ const NamedDefault = () => {
           People are joining to be challenged beyond that fabric of the regular relationship…
           experimentation of relating differently and growing into a version of myself I want to be.
         </Quote>
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '2rem', marginTop: '2rem',
-        }}>
+        <div style={quotePair}>
           <Quote who="Jochen">
             There is often a sense of &lsquo;relaxation towards experimentation.&rsquo; It is OK to
             express myself freely… a &lsquo;familiar frame&rsquo; that does create a sense of
@@ -602,7 +609,7 @@ const NamedDefault = () => {
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '550px', margin: '0 auto' }}>
         <h2 style={{
           fontFamily: serif, fontWeight: 400, fontStyle: 'italic', lineHeight: 1.2,
-          fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', color: '#FAF8F3', margin: '0 0 1rem',
+          fontSize: 'clamp(1.8rem,3.5vw,2.8rem)', color: CREAM, margin: '0 0 1rem',
         }}>
           Follow your curiosity one step closer
         </h2>
@@ -612,7 +619,7 @@ const NamedDefault = () => {
         </p>
         <Link to="/get-involved" style={{
           display: 'inline-block', marginTop: '1.5rem', padding: '0.8rem 2rem',
-          border: '1px solid rgba(122,158,138,0.4)', color: '#7A9E8A', textDecoration: 'none',
+          border: '1px solid rgba(122,158,138,0.4)', color: SAGE, textDecoration: 'none',
           fontSize: '15px', fontWeight: 500, borderRadius: '3px',
         }}>Get involved</Link>
       </div>
