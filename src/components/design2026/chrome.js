@@ -384,53 +384,68 @@ export const Nav2026 = ({ active }) => {
 // Four columns of links, in reading order — see Footer2026. The logo/name/
 // tagline column that used to sit beside these was dropped when the list grew
 // past a dozen links (Contact, Being With It All, and Practice Series joined
-// once those pages stopped being nav-only-reachable-by-URL orphans); the
-// "Explore" heading now carries the section on its own.
+// once those pages stopped being nav-only-reachable-by-URL orphans). Each
+// column now carries its own heading instead of one "Explore" umbrella,
+// since sixteen links under a single label read as an undifferentiated mass.
 const footerColumns = [
-  [
-    { text: 'About', to: '/about' },
-    { text: 'Web', to: '/web' },
-    { text: 'Community', to: '/community' },
-    { text: 'Relational Dojo', to: '/dojo' },
-    { text: 'Ventures', to: '/iv' },
-  ],
-  [
-    { text: 'Resources', to: '/resources' },
-    { text: 'Practices', to: '/resources#relational-practices' },
-    { text: 'FAQ', to: '/resources#faq' },
-    { text: 'Friends', to: '/friends' },
-  ],
-  [
-    { text: 'News', to: '/news' },
-    { text: 'Podcast', to: '/podcast' },
-    { text: 'Get Involved', to: '/get-involved' },
-    { text: 'Contact', to: '/contact' },
-  ],
-  [
-    { text: 'Being With It All', to: '/being-with-it-all' },
-    { text: 'Practice Series', to: '/developmental-practice-series' },
-    { text: 'Programs', to: '/programs' },
-  ],
+  {
+    heading: 'About Us',
+    links: [
+      { text: 'About', to: '/about' },
+      { text: 'Web', to: '/web' },
+      { text: 'Community', to: '/community' },
+      { text: 'Relational Dojo', to: '/dojo' },
+      { text: 'Ventures', to: '/iv' },
+    ],
+  },
+  {
+    heading: 'Learn More',
+    links: [
+      { text: 'Resources', to: '/resources' },
+      { text: 'Practices', to: '/resources#relational-practices' },
+      { text: 'FAQ', to: '/resources#faq' },
+      { text: 'Friends', to: '/friends' },
+    ],
+  },
+  {
+    heading: 'Connect',
+    links: [
+      { text: 'News', to: '/news' },
+      { text: 'Podcast', to: '/podcast' },
+      { text: 'Get Involved', to: '/get-involved' },
+      { text: 'Contact', to: '/contact' },
+    ],
+  },
+  {
+    heading: 'Programs',
+    links: [
+      { text: 'Being With It All', to: '/being-with-it-all' },
+      { text: 'Practice Series', to: '/developmental-practice-series' },
+      { text: 'All Programs', to: '/programs' },
+    ],
+  },
 ];
 
 export const Footer2026 = () => (
   <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans, overflowX: 'hidden' }}>
     <style>{`
       .footer2026-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 1.2rem; }
-      @media (max-width: 760px) { .footer2026-links { grid-template-columns: repeat(2, 1fr); gap: 0 1.5rem; } }
-      @media (max-width: 480px) { .footer2026-links { grid-template-columns: 1fr; } }
+      @media (max-width: 760px) { .footer2026-links { grid-template-columns: repeat(2, 1fr); gap: 1.8rem 1.5rem; } }
+      @media (max-width: 480px) { .footer2026-links { grid-template-columns: 1fr; gap: 1.8rem; } }
     `}</style>
     <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-      <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>Explore</h4>
       <div className="footer2026-links">
-        {footerColumns.map((col, i) => (
-          <ul key={i} style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-            {col.map(l => (
-              <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem' }}>
-                <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
-              </li>
-            ))}
-          </ul>
+        {footerColumns.map(col => (
+          <div key={col.heading}>
+            <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>{col.heading}</h4>
+            <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+              {col.links.map(l => (
+                <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem' }}>
+                  <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         ))}
       </div>
     </div>
