@@ -328,15 +328,9 @@ export const Nav2026 = ({ active }) => {
         @media (hover: none) { .credit-tip { opacity: 1; transform: none; } }
       `}</style>
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none', color: INK, fontFamily: sans }}>
-        {/* Temporary logo: the "IS" monogram taken from the member app's icon
-            (app.intentionalsociety.org/apple-icon.png), used unmodified so the
-            two properties match while the real logo is being designed.
-            static/favicon.ico is the same monogram. Its off-white disc reads as
-            invisible on PAPER, and the disc's padding is what sizes the letters
-            against the wordmark — cropping to the bare monogram makes it
-            overpower "Intentional Society". Swap both files when the real logo
-            lands; no code changes needed. */}
-        <img src="/design2026/logo.png" alt="" style={{ width: '40px', height: '40px', objectFit: 'contain', display: 'block' }} />
+        {/* Hidden until there's a real logo. Restore this line and swap
+            static/design2026/logo.png. */}
+        {/* <img src="/design2026/logo.png" alt="" style={{ width: '40px', height: '40px', objectFit: 'contain', display: 'block' }} /> */}
         <span style={{ fontFamily: wordmark, fontSize: '24px', fontWeight: 400 }}>Intentional Society</span>
       </Link>
       <button className="nav2026-burger" aria-label={open ? 'Close menu' : 'Open menu'}
