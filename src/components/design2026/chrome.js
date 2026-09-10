@@ -84,6 +84,7 @@ const moreLinks = [
   { text: 'Friends', to: '/friends' },
   { text: 'News', to: '/news' },
   { text: 'Podcast', to: '/podcast' },
+  { text: 'Contact', to: '/contact' },
 ];
 
 // Shared "eyebrow" / kicker label — solid color, no opacity, so it stays
@@ -383,8 +384,8 @@ export const Nav2026 = ({ active }) => {
             </ul>
           )}
         </li>
-        {/* Mobile only: Resources/Friends/News as plain links in the main list,
-            rather than tucked behind a "More" toggle (see .nav2026-more-mobile-item). */}
+        {/* Mobile only: the More links as plain items in the main list, rather
+            than tucked behind a "More" toggle (see .nav2026-more-mobile-item). */}
         {moreLinks.map(l => (
           <li key={l.text} className="nav2026-more-mobile-item">
             <Link to={l.to} style={{

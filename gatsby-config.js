@@ -47,8 +47,8 @@ module.exports = {
         //                    — reachable from nowhere in the nav, and the
         //                      series page describes a 2024 season in the
         //                      present tense
-        // /contact and /branding are deliberately included: nothing links to
-        // them either, but a sitemap is how someone is meant to find them.
+        // /branding is deliberately included: nothing links to it either, but
+        // a sitemap is how someone is meant to find it.
         // /history was retired (folded into /community, see community.js) —
         // /history now 301s there via netlify.toml.
         excludes: [

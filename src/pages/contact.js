@@ -65,7 +65,7 @@ const NamedDefault = () => {
   };
 
   return (
-    <Page2026>
+    <Page2026 active="/contact">
 
       {/* ======== Header band ======== */}
       <HeaderBand

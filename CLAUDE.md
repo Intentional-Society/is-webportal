@@ -120,9 +120,9 @@ which is `'article'` on the two news posts and `'website'` everywhere else.
 `siteMetadata.siteUrl`, and `static/robots.txt` points crawlers at it. Its
 `excludes` list in `gatsby-config.js` is a deliberate list, not a stale one —
 error pages, the unpublished practices catalog, and the three pages that are
-both unlinked and out of date. `/contact` and `/branding` are unlinked too but
-stay in, since a sitemap is how anyone is meant to find them. A new page is
-included by default; add it to `excludes` if it shouldn't be.
+both unlinked and out of date. `/branding` is unlinked too but stays in, since a
+sitemap is how anyone is meant to find it. A new page is included by default;
+add it to `excludes` if it shouldn't be.
 
 `metaTitle` and `metaDescription` override `title`/`description` only where the
 head genuinely needs different words — a tab wants a short label, a search
@@ -264,10 +264,10 @@ reflows now (`Nav2026` has a fixed `height: 66px`; that number is repeated as
 `marginTop` on every 2026 page's header band, as the mobile menu's `top`, and
 as `NAV_HEIGHT` in index.js — move them together).
 Below 900px, `Nav2026`
-collapses to a hamburger menu; on mobile all links — including
-Resources/Friends/News — render as plain top-level items (no nested "More"
-toggle, since the menu already has vertical room to spare there). Above
-900px, Resources/Friends/News stay tucked behind a "More" dropdown to save
+collapses to a hamburger menu; on mobile all links — including the `moreLinks`
+(Resources, Friends, News, Podcast, Contact) — render as plain top-level items
+(no nested "More" toggle, since the menu already has vertical room to spare
+there). Above 900px those five stay tucked behind a "More" dropdown to save
 horizontal space. **The nav shows no logo** — `Nav2026`'s `<img>` is commented
 out until there's a real one, so the bar is the wordmark alone. A real logo
 means swapping `static/design2026/logo.png` and `static/favicon.ico` (both
