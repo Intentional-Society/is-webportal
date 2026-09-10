@@ -290,12 +290,8 @@ export const Nav2026 = ({ active }) => {
   return (
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, height: NAV_OFFSET,
-      // Side padding equals each end's own vertical margin, so the logo and the
-      // CTA sit in an even frame rather than a wide-sided one. They differ
-      // because the two aren't the same height in the 66px bar: the logo is
-      // 40px ((66-40)/2 = 13) and the CTA 37.6px ((66-37.6)/2 ≈ 14). Re-derive
-      // both if NAV_OFFSET, the logo box, or the CTA's padding changes.
-      boxSizing: 'border-box', padding: '0 14px 0 15px',
+      // Side padding matches the gap above and below what it frames.
+      boxSizing: 'border-box', padding: '0 14px 0 25px',
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       background: PAPER, borderBottom: '1px solid rgba(42,42,36,0.06)',
     }}>
