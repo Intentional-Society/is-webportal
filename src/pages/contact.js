@@ -20,11 +20,11 @@ const thanksHeading = { ...sectionHeading, fontSize: 'clamp(1.7rem,3vw,2.3rem)' 
 
 const fieldLabel = {
   display: 'block', fontFamily: sans, fontSize: '14px', letterSpacing: '0.08em',
-  textTransform: 'uppercase', fontWeight: 600, color: INK, marginBottom: '0.45rem',
+  textTransform: 'uppercase', fontWeight: 700, color: INK, marginBottom: '0.45rem',
 };
 
 const fieldInput = {
-  width: '100%', fontFamily: sans, fontSize: '17px', fontWeight: 500, color: INK,
+  width: '100%', fontFamily: sans, fontSize: '17px', fontWeight: 400, color: INK,
   padding: '0.75rem 0.9rem', background: '#FAF8F3',
   border: '1px solid rgba(42,42,36,0.2)', borderRadius: '3px',
 };
@@ -32,7 +32,7 @@ const fieldInput = {
 const submitButton = {
   display: 'inline-block', padding: '0.8rem 2rem', background: ACCENT,
   color: '#fff', border: 'none', fontFamily: sans, fontSize: '16px',
-  fontWeight: 500, letterSpacing: '0.03em', borderRadius: '3px', cursor: 'pointer',
+  fontWeight: 400, letterSpacing: '0.03em', borderRadius: '3px', cursor: 'pointer',
 };
 
 // The one place on the site that needs to say something went wrong. A warm

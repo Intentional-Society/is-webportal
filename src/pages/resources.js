@@ -29,7 +29,7 @@ const anchorTarget = { scrollMarginTop: `calc(${NAV_OFFSET} + 1.5rem)` };
 // paragraph: the links line follows it immediately, and the disclosure's own
 // padding supplies the rest of the gap.
 const bodyP = { ...baseBodyP, margin: '0 0 0.6rem' };
-const linksLine = { fontSize: '16px', fontWeight: 500, color: MUTED, margin: 0, lineHeight: 1.7 };
+const linksLine = { fontSize: '16px', fontWeight: 400, color: MUTED, margin: 0, lineHeight: 1.7 };
 
 const practiceSummary = { fontFamily: serif, fontWeight: 500, fontSize: '1.4rem', color: INK };
 const faqSummary = { fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.4rem', color: HEADING };
@@ -336,12 +336,12 @@ const NamedDefault = () => {
           <div key={group.label} style={{ marginBottom: '1.6rem' }}>
             <div style={{
               fontFamily: sans, fontSize: '13px', letterSpacing: '0.14em', textTransform: 'uppercase',
-              fontWeight: 600, color: '#5C8770', margin: '0 0 0.4rem',
+              fontWeight: 700, color: '#5C8770', margin: '0 0 0.4rem',
             }}>{group.label}</div>
             {group.qas.map(qa => (
               <details key={qa.q} className="rsc-item">
                 <summary style={faqSummary}>{qa.q}</summary>
-                <p style={{ fontSize: '19px', fontWeight: 500, color: BODY_TEXT, margin: '0.7rem 0 0 1.5rem', lineHeight: 1.7 }}>{qa.a}</p>
+                <p style={{ fontSize: '19px', fontWeight: 400, color: BODY_TEXT, margin: '0.7rem 0 0 1.5rem', lineHeight: 1.7 }}>{qa.a}</p>
               </details>
             ))}
           </div>

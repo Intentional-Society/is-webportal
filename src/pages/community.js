@@ -432,12 +432,12 @@ const NamedDefault = () => (
         Community is such an overused and abused word, but we use it to signify a space full
         of relationships that matter. The kind where, if they're gone, you miss them. We do
         this by spending face-to-face time with each other, deepening our connections and care
-        over time. We gather by videocall weekly on <strong style={{ fontWeight: 500 }}>Sundays</strong> at
+        over time. We gather by videocall weekly on <strong style={{ fontWeight: 400 }}>Sundays</strong> at
         1pm Pacific: a clear consistent heartbeat of connection that's been beating for over
         five years now.
       </p>
 
-      <p style={{ fontSize: '16px', fontWeight: 500, color: MUTED, margin: '0 0 0.6rem' }}>Our purpose statement has been:</p>
+      <p style={{ fontSize: '16px', fontWeight: 400, color: MUTED, margin: '0 0 0.6rem' }}>Our purpose statement has been:</p>
       <blockquote style={{
         fontFamily: serif, fontSize: '1.15rem', fontStyle: 'italic', fontWeight: 400, color: INK,
         borderLeft: '2px solid #7A9E8A', paddingLeft: '1.5rem', margin: '0 0 1.5rem', lineHeight: 1.7,
@@ -484,7 +484,7 @@ const NamedDefault = () => (
 
       <Link to="/get-involved" style={{
         display: 'inline-block', padding: '0.8rem 2rem', background: ACCENT, color: '#fff',
-        textDecoration: 'none', fontFamily: sans, fontSize: '16px', fontWeight: 500,
+        textDecoration: 'none', fontFamily: sans, fontSize: '16px', fontWeight: 400,
         letterSpacing: '0.03em', borderRadius: '3px',
       }}>Get involved</Link>
 

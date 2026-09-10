@@ -62,14 +62,14 @@ const dpsHeading = { ...sectionHeading, margin: '3rem 0 1.4rem' };
 
 const unitHeading = {
   fontFamily: sans, fontSize: '15px', letterSpacing: '0.1em', textTransform: 'uppercase',
-  fontWeight: 600, color: INK, margin: '0 0 0.2rem',
+  fontWeight: 700, color: INK, margin: '0 0 0.2rem',
 };
 
 // Teal CTA, replacing the markdown's inline-styled blue button.
 const signUpButton = {
   display: 'inline-block', padding: '0.8rem 2rem', background: ACCENT,
   color: '#fff', textDecoration: 'none', fontFamily: sans, fontSize: '16px',
-  fontWeight: 500, letterSpacing: '0.03em', borderRadius: '3px',
+  fontWeight: 400, letterSpacing: '0.03em', borderRadius: '3px',
 };
 
 const SignUp = () => (
@@ -126,7 +126,7 @@ const NamedDefault = () => (
       {units.map(u => (
         <section key={u.unit} style={{ margin: '0 0 2rem' }}>
           <div style={unitHeading}>{u.unit}</div>
-          <div style={{ fontFamily: sans, fontSize: '15px', fontWeight: 500, color: MUTED, margin: '0 0 0.8rem' }}>{u.dates}</div>
+          <div style={{ fontFamily: sans, fontSize: '15px', fontWeight: 400, color: MUTED, margin: '0 0 0.8rem' }}>{u.dates}</div>
           <ul style={{ ...bodyP, paddingLeft: '1.2rem', margin: 0 }}>
             {u.practices.map(([name, gloss]) => (
               <li key={name} style={bodyLi}>

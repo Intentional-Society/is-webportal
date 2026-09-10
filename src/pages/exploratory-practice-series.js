@@ -62,7 +62,7 @@ const NamedDefault = () => (
           <li key={item.date} style={{ marginBottom: '0.5rem' }}>
             {item.date} — <strong style={{ fontWeight: 700 }}>{item.practice}</strong> with {item.teacher}
             {item.note && (
-              <span style={{ color: MUTED, fontWeight: 500 }}> ({item.note})</span>
+              <span style={{ color: MUTED, fontWeight: 400 }}> ({item.note})</span>
             )}
           </li>
         ))}

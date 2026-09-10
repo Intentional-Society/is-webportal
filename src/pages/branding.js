@@ -54,7 +54,7 @@ const NamedDefault = () => (
           style={{ width: '100%', display: 'block' }}
         />
       </figure>
-      <p style={{ fontSize: '16px', fontWeight: 500, color: MUTED, margin: '0 0 1.2rem' }}>
+      <p style={{ fontSize: '16px', fontWeight: 400, color: MUTED, margin: '0 0 1.2rem' }}>
         If higher-fidelity rendering is needed, the wordmark is set in Gudea.
       </p>
 
@@ -62,7 +62,7 @@ const NamedDefault = () => (
 
       <p style={bodyP}>
         <span style={swatch} />
-        <code style={{ fontFamily: sans, fontSize: '18px', fontWeight: 500 }}>#24818E</code>
+        <code style={{ fontFamily: sans, fontSize: '18px', fontWeight: 400 }}>#24818E</code>
       </p>
 
       <BackLink href="mailto:hello@intentionalsociety.org">

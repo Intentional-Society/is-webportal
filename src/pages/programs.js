@@ -69,7 +69,7 @@ const NamedDefault = () => (
           {p.when && (
             <div style={{
               fontFamily: sans, fontSize: '13px', letterSpacing: '0.16em',
-              textTransform: 'uppercase', fontWeight: 600, color: MUTED,
+              textTransform: 'uppercase', fontWeight: 700, color: MUTED,
               margin: '0 0 0.6rem',
             }}>{p.when}</div>
           )}

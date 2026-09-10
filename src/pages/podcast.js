@@ -68,7 +68,7 @@ const NamedDefault = () => (
             background: '#FAF8F3', border: '1px solid rgba(42,42,36,0.1)', borderRadius: '6px',
             padding: '1.1rem 1.4rem', fontFamily: sans,
           }}>
-            <span style={{ fontSize: '18px', fontWeight: 600, color: ACCENT_DARK }}>{l.text}</span>
+            <span style={{ fontSize: '18px', fontWeight: 700, color: ACCENT_DARK }}>{l.text}</span>
             <span style={{ fontSize: '18px', color: ACCENT_DARK }}>→</span>
           </a>
         ))}

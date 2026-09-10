@@ -189,32 +189,43 @@ Deploys automatically to Netlify on push to master. Configuration in `netlify.to
 
 ## Current Status Notes
 
-### Readability pass (branch `2026-design-ui-improvements`, 2026-08)
-Member feedback was that body copy and links across the site read too small
-and too light on both desktop and mobile. Conventions established in this
-pass — apply them to any new page/section, not just where they're already
-in place:
-- **Body copy**: article-style prose colored `BODY_TEXT` (`#4A473F`) — the
-  `bodyP` const on each page, plus any `<ul>`/`<p>` styled the same way — is
-  20px/weight 500 (19px/500 for FAQ answers on `/resources` specifically).
-  This does not apply to `MUTED` (`#6B6860`) secondary text (asides,
-  small-print, list descriptions, photo captions), which stays smaller —
-  but give it an *explicit* `fontWeight` (500 for anything that isn't purely
-  decorative) rather than leaving it unset. Several bugs in this pass came
-  from a `<p>`/`<span>` with a `color` but no `fontWeight`, which silently
-  inherited the page wrapper's `fontWeight: 300` and rendered lighter than
-  intended.
-- **Header-band hero `<h1>`** (the pattern used on about/community/dojo/iv/
-  friends/news/resources — serif, photo background, `textShadow`): weight
-  500, not 400.
-- **Links and nav**: nav links 16px/weight 500 (600 when active), footer
-  links 17px/weight 500, "← Back to X" article links 16px/weight 500.
-  No `opacity` on eyebrow/kicker text or footer copy — use a solid color
-  instead (opacity read as too faint against both light and dark
-  backgrounds).
-- **Body margin**: `Head2026`'s inline `<style>` zeroes the browser's default
-  8px `body` margin for the whole site — don't remove it without re-checking
-  layout at the page edges.
+### Type
+Two families, and a weight is only meaningful beside the family it is set in:
+
+- **Gudea** — body copy, UI, nav, footer, and the wordmark. It ships three
+  faces and no more: 400, 700, and 400 italic. Those are the only two weights
+  to write in a sans context. Anything else resolves silently — 300 and 500
+  land on 400, 600 lands on 700 — so a `fontWeight: 500` here is a declaration
+  that renders as 400.
+- **Cormorant Garamond** — display only: header-band titles and the italic
+  description line under them, section headings, pull quotes, the homepage's
+  large type. 300/400/500 upright and 300/400/500/700 italic are imported. 600
+  and 700 upright are **not**, so asking for either gets a synthetic smear of
+  the 500 — measurably worse than a real bold or no bold. `footerColumns`'
+  headings and the homepage `smallcap` both currently ask for 600.
+
+The page shell is the sans, so Cormorant is opt-in: anything that wants it
+says `fontFamily: serif` rather than relying on inheritance. `headerDescription`
+is the one display style that has to pin it explicitly, since it is styled
+apart from the `<h1>` it sits under.
+
+**Body copy** is `bodyP`/`bodyUl` — 20px/400 over `BODY_TEXT` (`#4A473F`), 19px
+for FAQ answers on `/resources`. That does not cover `MUTED` (`#6B6860`)
+secondary text — asides, small-print, list descriptions, photo captions —
+which stays smaller and needs an *explicit* `fontWeight`: a `<p>`/`<span>` with
+a colour but no weight inherits the shell's, which has caused several bugs.
+
+**Header-band hero `<h1>`** (about/community/dojo/iv/friends/news/resources —
+serif, photo background, `textShadow`): weight 500, not 400.
+
+**Links and nav**: nav links 16px/400, 700 when active; footer links 17px/400;
+"← Back to X" article links 16px/400. No `opacity` on eyebrow/kicker text or
+footer copy — use a solid colour, since opacity read as too faint against both
+light and dark backgrounds.
+
+**Body margin**: `Head2026`'s inline `<style>` zeroes the browser's default
+8px `body` margin for the whole site — don't remove it without re-checking
+layout at the page edges.
 
 ### Shared chrome (`src/components/design2026/chrome.js`)
 Every page is self-contained and shares one module for design tokens
@@ -230,7 +241,7 @@ and `veil` (`deep`/`news`). The band renders and styles the description
 itself, so don't reach for the (private) `headerDescription` style at a call
 site. `HeaderBand` takes no children — every band is title + optional
 description. Edit chrome.js to change nav links or the footer everywhere
-at once. Fonts (Cormorant Garamond, DM Sans)
+at once. Fonts (Cormorant Garamond, Gudea)
 are self-hosted via `@fontsource` imports at the top of chrome.js — not
 loaded from Google Fonts. Self-hosting avoids an async CDN fetch that
 previously caused a layout-jitter bug: as different font weights arrived at

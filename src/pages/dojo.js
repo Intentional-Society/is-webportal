@@ -17,7 +17,7 @@ const PAGE = {
   description: 'a skill-building space for developmental-relational practice',
 };
 
-const smallP = { fontSize: '16px', fontWeight: 500, color: MUTED, margin: '0 0 0.5rem' };
+const smallP = { fontSize: '16px', fontWeight: 400, color: MUTED, margin: '0 0 0.5rem' };
 
 // These lists sit tight under the line that introduces them.
 const tightUl = { ...bodyUl, margin: '0 0 1.2rem 1.4rem' };
@@ -27,7 +27,7 @@ const tightUl = { ...bodyUl, margin: '0 0 1.2rem 1.4rem' };
 // paragraphs set only a bottom margin, so the browser's default 1em top
 // margin holds them off the line that introduces them. Spreading bodyP here
 // would zero that and tighten both gaps.
-const namesP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, marginBottom: '1.2rem', lineHeight: 1.7 };
+const namesP = { fontSize: '20px', fontWeight: 400, color: BODY_TEXT, marginBottom: '1.2rem', lineHeight: 1.7 };
 
 const NamedDefault = () => (
   <Page2026 active="/dojo">
@@ -92,9 +92,9 @@ const NamedDefault = () => (
         train in a variety of <em>developmental-relational practices</em>.
       </p>
       <ul style={tightUl}>
-        <li style={bodyLi}><strong style={{ fontWeight: 500 }}>developmental</strong> grows and shifts your perspective-taking capacity</li>
-        <li style={bodyLi}><strong style={{ fontWeight: 500 }}>relational</strong> is caring interactive presence with joint attention and reflection</li>
-        <li style={bodyLi}><strong style={{ fontWeight: 500 }}>practice</strong> is participatory enactment of a way-of-being, shifting how/who we are</li>
+        <li style={bodyLi}><strong style={{ fontWeight: 400 }}>developmental</strong> grows and shifts your perspective-taking capacity</li>
+        <li style={bodyLi}><strong style={{ fontWeight: 400 }}>relational</strong> is caring interactive presence with joint attention and reflection</li>
+        <li style={bodyLi}><strong style={{ fontWeight: 400 }}>practice</strong> is participatory enactment of a way-of-being, shifting how/who we are</li>
       </ul>
 
       <Divider />

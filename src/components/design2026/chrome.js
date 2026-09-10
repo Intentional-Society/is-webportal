@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { FullBleedPhoto } from './photo';
-// Self-hosted fonts (matches the weights previously loaded from Google
-// Fonts: Cormorant Garamond 300/400/500 + 300/400 italic, DM Sans
-// 300/400/500/600). Self-hosting avoids the async CDN fetch entirely, so
+// Self-hosted fonts. Self-hosting avoids the async CDN fetch entirely, so
 // weights are available immediately instead of swapping in mid-render —
 // that swap-in was the cause of the nav-jitter bug (the fixed-position
 // nav's box would nudge in height as each font weight arrived).
+// Cormorant Garamond is display type only: titles, section headings, pull
+// quotes, band descriptions. Body copy and UI are Gudea, below.
 import '@fontsource/cormorant-garamond/300.css';
 import '@fontsource/cormorant-garamond/400.css';
 import '@fontsource/cormorant-garamond/500.css';
@@ -20,25 +20,26 @@ import '@fontsource/cormorant-garamond/500-italic.css';
 // a real bold-italic face the browser synthesises one by slanting and smearing
 // the 400 weight, which looks noticeably worse at display size.
 import '@fontsource/cormorant-garamond/700-italic.css';
-import '@fontsource/dm-sans/300.css';
-import '@fontsource/dm-sans/400.css';
-import '@fontsource/dm-sans/500.css';
-import '@fontsource/dm-sans/600.css';
-// Gudea backs the wordmark only — see the `wordmark` token below. 400 is the
-// weight the 2024 wordmark asset is drawn at; Gudea ships no 500 or 600, so
-// don't reach for this token for anything that needs a weight range.
+// Gudea is the whole sans: body copy, UI, and the wordmark. It ships three
+// faces and no more — 400, 700, and 400 italic — so those are the only two
+// weights to write in a sans context. Anything else silently resolves: 300 and
+// 500 land on 400, 600 lands on 700. Cormorant keeps 300/400/500 for display,
+// which is why a weight is only meaningful alongside the family it's set in.
 import '@fontsource/gudea/400.css';
+import '@fontsource/gudea/700.css';
+import '@fontsource/gudea/400-italic.css';
 
 // Shared chrome for the 2026-redesign pages (index, about, community, dojo, iv):
 // design tokens, fixed nav, footer, and the Head font/meta boilerplate.
 // These pages are self-contained (no Layout/MUI theme) — see CLAUDE.md.
 
 export const serif = "'Cormorant Garamond', Georgia, serif";
-export const sans = "'DM Sans', 'Gudea', sans-serif";
-// The brand face, for the wordmark and nothing else: /branding documents the
-// logotype as set in Gudea, and the nav's "Intentional Society" is the one
-// place the site renders that wordmark as live text rather than as the PNG.
-export const wordmark = "'Gudea', 'DM Sans', sans-serif";
+export const sans = "'Gudea', Helvetica, Arial, sans-serif";
+// Currently the same face as `sans`, and kept separate anyway: /branding
+// documents the logotype as set in Gudea, so the wordmark is Gudea for a brand
+// reason rather than a typographic one. Moving the body face off Gudea later
+// shouldn't drag the wordmark with it.
+export const wordmark = "'Gudea', Helvetica, Arial, sans-serif";
 export const ACCENT = '#2E6B4F';
 export const ACCENT_DARK = '#1A4232';
 export const INK = '#2A2A24';
@@ -87,7 +88,7 @@ const moreLinks = [
 // interior pages that once carried kickers above their titles no longer do.
 export const headerKicker = {
   fontFamily: sans, fontSize: '14px', letterSpacing: '0.18em',
-  textTransform: 'uppercase', fontWeight: 600, color: '#E8DFD0',
+  textTransform: 'uppercase', fontWeight: 700, color: '#E8DFD0',
   marginBottom: '1.2rem',
 };
 
@@ -98,14 +99,14 @@ export const headerKicker = {
 // value at a call site — `{...sectionHeading, margin: '2.5rem 0 1.4rem'}` — so
 // the deviation is visible as a deviation.
 
-// Article-style prose: 20px/500 over BODY_TEXT. Not for MUTED secondary text
-// (asides, captions, small print), which stays smaller — but give that an
-// explicit fontWeight too, or it inherits the page wrapper's 300.
-export const bodyP = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
+// Article-style prose: 20px/400 Gudea over BODY_TEXT. Not for MUTED secondary
+// text (asides, captions, small print), which stays smaller — but give that an
+// explicit fontWeight too rather than letting it inherit.
+export const bodyP = { fontSize: '20px', fontWeight: 400, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 };
 
 // A bulleted list in body copy: bodyP's type, indented, with air between
 // items. `margin`'s bottom value is the one that varies between pages.
-export const bodyUl = { fontSize: '20px', fontWeight: 500, color: BODY_TEXT, margin: '0 0 1.4rem 1.4rem', padding: 0 };
+export const bodyUl = { fontSize: '20px', fontWeight: 400, color: BODY_TEXT, margin: '0 0 1.4rem 1.4rem', padding: 0 };
 export const bodyLi = { marginBottom: '0.4rem' };
 
 // The h2 that opens a section of an article body.
@@ -200,8 +201,8 @@ const TITLE_SIZES = {
 // pass the text as the band's `description` prop instead of styling a <p> at
 // the call site.
 const headerDescription = {
-  color: '#FAF8F3', fontSize: '1.3rem', fontWeight: 500, fontStyle: 'italic',
-  lineHeight: 1.6, margin: '0 auto', maxWidth: '600px',
+  fontFamily: serif, color: '#FAF8F3', fontSize: '1.3rem', fontWeight: 500,
+  fontStyle: 'italic', lineHeight: 1.6, margin: '0 auto', maxWidth: '600px',
   textShadow: '0 1px 12px rgba(8,12,16,0.8)',
 };
 
@@ -249,7 +250,7 @@ export const HeaderBand = ({
         {dateLabel && (
           <div style={{
             fontFamily: sans, fontSize: '14px', letterSpacing: '0.16em', textTransform: 'uppercase',
-            fontWeight: 600, color: '#E8DFD0', marginTop: '1.1rem',
+            fontWeight: 700, color: '#E8DFD0', marginTop: '1.1rem',
           }}>{dateLabel}</div>
         )}
         {description && <p style={headerDescription}>{description}</p>}
@@ -348,7 +349,7 @@ export const Nav2026 = ({ active }) => {
             <Link to={l.to} style={{
               textDecoration: 'none', fontSize: '16px',
               color: l.to === active ? ACCENT_DARK : MUTED,
-              fontWeight: l.to === active ? 600 : 500,
+              fontWeight: l.to === active ? 700 : 400,
             }}>
               {l.text}
             </Link>
@@ -375,7 +376,7 @@ export const Nav2026 = ({ active }) => {
                   <Link to={l.to} style={{
                     textDecoration: 'none', fontSize: '16px',
                     color: l.to === active ? ACCENT_DARK : MUTED,
-                    fontWeight: l.to === active ? 600 : 500,
+                    fontWeight: l.to === active ? 700 : 400,
                   }}>
                     {l.text}
                   </Link>
@@ -391,7 +392,7 @@ export const Nav2026 = ({ active }) => {
             <Link to={l.to} style={{
               textDecoration: 'none', fontSize: '16px',
               color: l.to === active ? ACCENT_DARK : MUTED,
-              fontWeight: l.to === active ? 600 : 500,
+              fontWeight: l.to === active ? 700 : 400,
             }}>
               {l.text}
             </Link>
@@ -400,7 +401,7 @@ export const Nav2026 = ({ active }) => {
         <li>
           <Link to="/get-involved" style={{
             background: ACCENT, color: '#fff', padding: '0.55rem 1.3rem', borderRadius: '4px',
-            fontSize: '15px', fontWeight: 600, textDecoration: 'none',
+            fontSize: '15px', fontWeight: 700, textDecoration: 'none',
           }}>Get involved</Link>
         </li>
       </ul>
@@ -455,7 +456,7 @@ export const Footer2026 = () => (
             <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>{col.heading}</h4>
             <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
               {col.links.map(l => (
-                <li key={l.text} style={{ fontSize: '17px', fontWeight: 500, marginBottom: '0.65rem' }}>
+                <li key={l.text} style={{ fontSize: '17px', fontWeight: 400, marginBottom: '0.65rem' }}>
                   <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
                 </li>
               ))}
@@ -466,7 +467,7 @@ export const Footer2026 = () => (
     </div>
     <div style={{
       maxWidth: '720px', margin: '2rem auto 0', paddingTop: '1.5rem',
-      borderTop: '1px solid rgba(42,42,36,0.06)', fontSize: '14px', fontWeight: 500, color: MUTED,
+      borderTop: '1px solid rgba(42,42,36,0.06)', fontSize: '14px', fontWeight: 400, color: MUTED,
     }}>
       © 2020–{new Date().getFullYear()} Intentional Society. Photographs remain
       the property of their respective creators.
@@ -487,10 +488,13 @@ export const Footer2026 = () => (
 //
 // `active` is the nav path to mark ('/about', '/dojo', …); omit it where no
 // nav item matches. `style` merges over the wrapper for a page whose body is
-// set differently — the homepage is sans-based, not serif — rather than
-// forcing every page through one type default.
+// set differently, rather than forcing every page through one type default.
+//
+// The shell is the sans: Cormorant is display type and every element that
+// wants it says so. Anything relying on inheriting a serif from here instead
+// of declaring it would have quietly become Gudea.
 const pageShell = {
-  fontFamily: serif, fontWeight: 300, color: INK, lineHeight: 1.7,
+  fontFamily: sans, fontWeight: 400, color: INK, lineHeight: 1.7,
   background: PAPER, position: 'relative', overflowX: 'hidden',
 };
 
@@ -517,7 +521,7 @@ export const Article2026 = ({ width = '720px', children }) => (
 // /dojo). Pass `href` instead of `to` for a destination off the site.
 export const BackLink = ({ to, href, children }) => {
   const style = {
-    fontFamily: sans, fontSize: '16px', fontWeight: 500, color: ACCENT_DARK,
+    fontFamily: sans, fontSize: '16px', fontWeight: 400, color: ACCENT_DARK,
     textDecoration: 'none', borderBottom: '1px solid rgba(26,66,50,0.3)',
   };
   return (

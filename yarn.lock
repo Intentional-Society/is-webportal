@@ -1317,11 +1317,6 @@
   resolved "https://registry.yarnpkg.com/@fontsource/cormorant-garamond/-/cormorant-garamond-5.2.11.tgz#7e2f4580b56346f710f0dd016578688138feaf1d"
   integrity sha512-5JjpN023lhA5soijgVT0BdRGzmlijm402ppjccMd6h+vRE0mX2lJnE+41UPfnlidrkV9/rCo1mf58WZlHnB0CA==
 
-"@fontsource/dm-sans@^5.2.8":
-  version "5.2.8"
-  resolved "https://registry.yarnpkg.com/@fontsource/dm-sans/-/dm-sans-5.2.8.tgz#762968f3aa4408b7886ead18fb3e82b6ce02ef41"
-  integrity sha512-tlovG42m9ESG28WiHpLq3F5umAlm64rv0RkqTbYowRn70e9OlRr5a3yTJhrhrY+k5lftR/OFJjPzOLQzk8EfCA==
-
 "@fontsource/gudea@^5.2.8":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@fontsource/gudea/-/gudea-5.3.0.tgz#608d1dbe44e59d31f9b25c38c721a7959b4d2220"

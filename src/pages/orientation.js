@@ -87,7 +87,7 @@ const NamedDefault = () => {
             {slideTexts[slide] && (
               <div style={{ ...bodyP, margin: '0 0 0.4rem' }}>{slideTexts[slide]}</div>
             )}
-            <div style={{ fontFamily: sans, fontSize: '14px', fontWeight: 500, color: MUTED }}>
+            <div style={{ fontFamily: sans, fontSize: '14px', fontWeight: 400, color: MUTED }}>
               {slide + 1} / {TOTAL_SLIDES}
             </div>
           </figcaption>

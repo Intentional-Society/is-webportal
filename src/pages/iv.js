@@ -30,9 +30,9 @@ const NamedDefault = () => (
     <Article2026>
 
       <p style={bodyP}>
-        The first goal of IV is to <strong style={{ fontWeight: 500 }}>catalyze aligned livelihoods</strong> for
+        The first goal of IV is to <strong style={{ fontWeight: 400 }}>catalyze aligned livelihoods</strong> for
         individuals in service to human thriving. The second goal of IV is to create
-        a <strong style={{ fontWeight: 500 }}>relational economic web</strong> of abundance with
+        a <strong style={{ fontWeight: 400 }}>relational economic web</strong> of abundance with
         clan / tribe / village-like bonds of support. These two goals are interdependent and
         equal in value. Livelihood is the more tangible individualized task, around which the
         more nebulous relational web layer hopes to cohere.
@@ -99,9 +99,9 @@ const NamedDefault = () => (
         Those "three skills" held as a baseline of Intentional Ventures participants are:
       </p>
       <ul style={bodyUl}>
-        <li style={bodyLi}><strong style={{ fontWeight: 500 }}>Rational-professional skill</strong>: systematic thought, self-management, conventional professional skills</li>
-        <li style={bodyLi}><strong style={{ fontWeight: 500 }}>Interpersonal skill</strong>: self-awareness, communication, robust emotional capacity and relational agility</li>
-        <li style={bodyLi}><strong style={{ fontWeight: 500 }}>Perspectival-developmental skill</strong>: fluid perspective-taking, complexity lens, metasystematicity</li>
+        <li style={bodyLi}><strong style={{ fontWeight: 400 }}>Rational-professional skill</strong>: systematic thought, self-management, conventional professional skills</li>
+        <li style={bodyLi}><strong style={{ fontWeight: 400 }}>Interpersonal skill</strong>: self-awareness, communication, robust emotional capacity and relational agility</li>
+        <li style={bodyLi}><strong style={{ fontWeight: 400 }}>Perspectival-developmental skill</strong>: fluid perspective-taking, complexity lens, metasystematicity</li>
       </ul>
 
       <p style={{ ...bodyP, marginBottom: '2rem' }}>
