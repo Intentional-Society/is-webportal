@@ -437,7 +437,7 @@ const NamedDefault = () => (
         five years now.
       </p>
 
-      <p style={{ fontSize: '16px', fontWeight: 400, color: MUTED, margin: '0 0 0.6rem' }}>Our purpose statement has been:</p>
+      <p style={{ fontSize: '16px', color: MUTED, margin: '0 0 0.6rem' }}>Our purpose statement has been:</p>
       <blockquote style={{
         fontFamily: serif, fontSize: '1.15rem', fontStyle: 'italic', fontWeight: 400, color: INK,
         borderLeft: '2px solid #7A9E8A', paddingLeft: '1.5rem', margin: '0 0 1.5rem', lineHeight: 1.7,
@@ -484,7 +484,7 @@ const NamedDefault = () => (
 
       <Link to="/get-involved" style={{
         display: 'inline-block', padding: '0.8rem 2rem', background: ACCENT, color: '#fff',
-        textDecoration: 'none', fontFamily: sans, fontSize: '16px', fontWeight: 400,
+        textDecoration: 'none', fontFamily: sans, fontSize: '16px',
         letterSpacing: '0.03em', borderRadius: '3px',
       }}>Get involved</Link>
 

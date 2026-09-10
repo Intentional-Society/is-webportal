@@ -31,7 +31,7 @@ const optionHeading = {
 
 const ctaButton = {
   display: 'inline-block', padding: '0.9rem 2.2rem', background: ACCENT, color: '#fff',
-  textDecoration: 'none', fontFamily: sans, fontSize: '15px', fontWeight: 400, borderRadius: '3px',
+  textDecoration: 'none', fontFamily: sans, fontSize: '15px', borderRadius: '3px',
 };
 
 const NamedDefault = () => (
@@ -47,7 +47,7 @@ const NamedDefault = () => (
       }}>
         <style>{'#connection-calls-hero a { color: #7A9E8A; }'}</style>
         <div style={{ position: 'relative', zIndex: 2, maxWidth: '900px', width: '100%' }}>
-          <p style={{ color: 'rgba(232,223,208,0.92)', fontWeight: 400, fontSize: 'clamp(1rem,4vw,1.5rem)', margin: '0 auto', lineHeight: 1.5, textAlign: 'center' }}>
+          <p style={{ color: 'rgba(232,223,208,0.92)', fontSize: 'clamp(1rem,4vw,1.5rem)', margin: '0 auto', lineHeight: 1.5, textAlign: 'center' }}>
             <span style={{ display: 'block', textWrap: 'balance' }}>Meet real people in the community to see if it's right for you</span>
             <span style={{ display: 'block', textWrap: 'balance' }}>Tell us about yourself, ask questions, get to know what this is about</span>
           </p>

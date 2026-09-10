@@ -60,11 +60,11 @@ const NamedDefault = () => (
         flexWrap: 'wrap', padding: '1.2rem 1.5rem', marginBottom: '3rem',
         background: '#FAF8F3', borderLeft: '2px solid #7A9E8A',
       }}>
-        <p style={{ fontSize: '20px', fontWeight: 400, color: BODY_TEXT, margin: 0 }}>
+        <p style={{ fontSize: '20px', color: BODY_TEXT, margin: 0 }}>
           Looking for our weekly community updates? Those live on our newsletter archive.
         </p>
         <a href="https://buttondown.com/intentionalsociety/archive/" target="_blank" rel="noopener noreferrer" style={{
-          fontFamily: sans, fontSize: '17px', fontWeight: 400, color: ACCENT_DARK, textDecoration: 'none',
+          fontFamily: sans, fontSize: '17px', color: ACCENT_DARK, textDecoration: 'none',
           borderBottom: '1px solid rgba(26,66,50,0.3)', whiteSpace: 'nowrap',
         }}>Weekly updates archive →</a>
       </div>
@@ -72,10 +72,10 @@ const NamedDefault = () => (
       <h2 style={listHeading}>Media Appearances</h2>
       <ul style={{ listStyle: 'none', margin: '0 0 3.5rem', padding: 0 }}>
         {mediaAppearances.map(m => (
-          <li key={m.href} style={{ fontSize: '16px', fontWeight: 400, color: BODY_TEXT, marginBottom: '0.6rem', lineHeight: 1.6 }}>
+          <li key={m.href} style={{ fontSize: '16px', color: BODY_TEXT, marginBottom: '0.6rem', lineHeight: 1.6 }}>
             <a href={m.href} target="_blank" rel="noopener noreferrer" style={{ color: ACCENT_DARK }}>{m.title}</a>
             {m.with && <> w/ <a href={m.withHref} target="_blank" rel="noopener noreferrer" style={{ color: ACCENT_DARK }}>{m.with}</a></>}
-            <span style={{ color: MUTED, fontWeight: 400 }}> — {m.date}</span>
+            <span style={{ color: MUTED }}> — {m.date}</span>
           </li>
         ))}
       </ul>
@@ -91,7 +91,7 @@ const NamedDefault = () => (
               fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: '1.3rem',
               color: ACCENT_DARK, textDecoration: 'none',
             }}>{post.title}</Link>
-            <span style={{ fontFamily: sans, fontSize: '14px', fontWeight: 400, color: MUTED }}>{post.date}</span>
+            <span style={{ fontFamily: sans, fontSize: '14px', color: MUTED }}>{post.date}</span>
           </div>
         ))}
       </div>

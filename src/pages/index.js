@@ -68,7 +68,7 @@ const cardHeading = {
   margin: '0 0 0.8rem', padding: '0 1.5rem',
 };
 const cardText = {
-  fontSize: '18px', fontWeight: 400, color: BODY_TEXT, lineHeight: 1.6,
+  fontSize: '18px', color: BODY_TEXT, lineHeight: 1.6,
   padding: '0 1.5rem', margin: '0 0 1.5rem',
 };
 
@@ -150,7 +150,7 @@ const quoteMark = {
 };
 const quoteText = {
   fontFamily: serif, fontSize: 'clamp(1.15rem,1.7vw,1.4rem)', fontStyle: 'italic',
-  fontWeight: 400, color: INK, lineHeight: 1.6, margin: '0 0 0.8rem',
+  color: INK, lineHeight: 1.6, margin: '0 0 0.8rem',
 };
 const quoteAttrib = { fontSize: '15px', fontWeight: 500, color: MUTED };
 const quotePair = {
@@ -296,7 +296,7 @@ const NamedDefault = () => {
           <em style={{ color: ACCENT, display: 'block' }}>live more intentionally.</em>
         </h1>
         <p style={{
-          color: INK, fontSize: '1.10rem', fontWeight: 400, lineHeight: 1.7, margin: '0 auto 2.5rem',
+          color: INK, fontSize: '1.10rem', lineHeight: 1.7, margin: '0 auto 2.5rem',
           maxWidth: '560px', textShadow: '0 1px 12px rgba(248,245,239,0.85)',
         }}>
           The world is moving fast. How shall we meet each moment? Intentional Society
@@ -424,13 +424,13 @@ const NamedDefault = () => {
             <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
               How Intentional Society began
             </h3>
-            <p style={{ fontSize: '20px', fontWeight: 400, color: BODY_TEXT, margin: '0 0 1rem', lineHeight: 1.7 }}>
+            <p style={{ fontSize: '20px', color: BODY_TEXT, margin: '0 0 1rem', lineHeight: 1.7 }}>
               In early 2021, a small group began weekly online calls exploring the
               intersection of relational practices with adult development psychology,
               seeking to marry theory with practice and understand <em>how</em> we can grow
               big enough to handle anything life throws at us.
             </p>
-            <p style={{ fontSize: '20px', fontWeight: 400, color: BODY_TEXT, margin: 0, lineHeight: 1.7 }}>
+            <p style={{ fontSize: '20px', color: BODY_TEXT, margin: 0, lineHeight: 1.7 }}>
               Five+ years and hundreds of gatherings later, we now make up a network of
               relationships and an ecosystem of affiliated spaces, integrating developmental
               (perspective-taking) expansion to more parts of our lives as we "be the change"
@@ -446,7 +446,7 @@ const NamedDefault = () => {
             <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
               What it means
             </h3>
-            <p style={{ fontSize: '20px', fontWeight: 400, color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 }}>
+            <p style={{ fontSize: '20px', color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 }}>
               Intentional Society isn't one place or one thing you do. It's a stance, a way
               of being — with your evolving self, with others, and with the world around you.
               We offer spaces for increasing capacity: small group practice spaces, training 
@@ -630,7 +630,7 @@ const NamedDefault = () => {
         <Link to="/get-involved" style={{
           display: 'inline-block', marginTop: '1.5rem', padding: '0.8rem 2rem',
           border: '1px solid rgba(122,158,138,0.4)', color: SAGE, textDecoration: 'none',
-          fontSize: '15px', fontWeight: 400, borderRadius: '3px',
+          fontSize: '15px', borderRadius: '3px',
         }}>Get involved</Link>
       </div>
     </section>

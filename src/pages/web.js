@@ -17,8 +17,10 @@ const PAGE = {
   metaDescription: "The relational web of trust and collaboration around Intentional Society: what's inside it, and what membership asks of you.",
 };
 
+// Applied to <h3>, so the weight is load-bearing: without it the UA
+// stylesheet's bold comes through and these render at 700.
 const subHeading = {
-  fontFamily: sans, fontWeight: 400, fontSize: '1.5rem',
+  fontFamily: sans, fontSize: '1.5rem', fontWeight: 400,
   color: INK, margin: '0 0 0.7rem',
 };
 

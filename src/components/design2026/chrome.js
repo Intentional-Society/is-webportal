@@ -456,7 +456,7 @@ export const Footer2026 = () => (
             <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>{col.heading}</h4>
             <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
               {col.links.map(l => (
-                <li key={l.text} style={{ fontSize: '17px', fontWeight: 400, marginBottom: '0.65rem' }}>
+                <li key={l.text} style={{ fontSize: '17px', marginBottom: '0.65rem' }}>
                   <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
                 </li>
               ))}
@@ -467,7 +467,7 @@ export const Footer2026 = () => (
     </div>
     <div style={{
       maxWidth: '720px', margin: '2rem auto 0', paddingTop: '1.5rem',
-      borderTop: '1px solid rgba(42,42,36,0.06)', fontSize: '14px', fontWeight: 400, color: MUTED,
+      borderTop: '1px solid rgba(42,42,36,0.06)', fontSize: '14px', color: MUTED,
     }}>
       © 2020–{new Date().getFullYear()} Intentional Society. Photographs remain
       the property of their respective creators.
@@ -521,7 +521,7 @@ export const Article2026 = ({ width = '720px', children }) => (
 // /dojo). Pass `href` instead of `to` for a destination off the site.
 export const BackLink = ({ to, href, children }) => {
   const style = {
-    fontFamily: sans, fontSize: '16px', fontWeight: 400, color: ACCENT_DARK,
+    fontFamily: sans, fontSize: '16px', color: ACCENT_DARK,
     textDecoration: 'none', borderBottom: '1px solid rgba(26,66,50,0.3)',
   };
   return (

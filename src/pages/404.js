@@ -41,19 +41,19 @@ const NamedDefault = () => (
         }}>
           This path hasn't been <em style={{ color: ACCENT }}>walked yet</em>
         </h1>
-        <p style={{ fontSize: '20px', fontWeight: 400, color: MUTED, margin: '0 0 2rem', lineHeight: 1.7 }}>
+        <p style={{ fontSize: '20px', color: MUTED, margin: '0 0 2rem', lineHeight: 1.7 }}>
           The page you're looking for doesn't exist — maybe it moved, or the link was
           off. Let's get you back to solid ground.
         </p>
         <Link to="/" style={{
           display: 'inline-block', padding: '0.8rem 2rem', background: ACCENT,
           color: '#fff', textDecoration: 'none', fontFamily: sans, fontSize: '16px',
-          fontWeight: 400, letterSpacing: '0.03em', borderRadius: '3px', marginBottom: '2.5rem',
+          letterSpacing: '0.03em', borderRadius: '3px', marginBottom: '2.5rem',
         }}>Back to home</Link>
 
         <div style={{
           display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.5rem 1.5rem',
-          fontFamily: sans, fontSize: '15px', fontWeight: 400,
+          fontFamily: sans, fontSize: '15px',
         }}>
           {quickLinks.map((l, i) => (
             <React.Fragment key={l.text}>
