@@ -386,9 +386,10 @@ const NamedDefault = () => {
         tracks viewport width (1600x600 at width:100%), the hero it covers tracks
         height — so max() splits the range at their crossover, aspect 13/9 ≈ 1.44.
         vh governs phones and tablets, vw every landscape desktop; dial the vw
-        term for big displays, the vh term for phones. */}
+        term for big displays, the vh term for phones. The flat 20px on top is a
+        hand-tuned lift, the same at every size. */}
     <section id="three-moves" style={{
-      position: 'relative', zIndex: 3, marginTop: 'calc(-1 * max(13vh, 9vw))', textAlign: 'center',
+      position: 'relative', zIndex: 3, marginTop: 'calc(-1 * (max(13vh, 9vw) + 20px))', textAlign: 'center',
       scrollMarginTop: NAV_OFFSET, /* clears the fixed nav */
     }}>
       <StaticImage src="../images/photos/wood-band.png" alt="" layout="fullWidth"
