@@ -42,7 +42,7 @@ const STATEMENT_SIZE = 'clamp(1.35rem,3.6vw,3rem)';
 // The page's small-cap section labels.
 const smallcap = {
   fontFamily: serif, fontSize: '0.92rem', letterSpacing: '0.18em',
-  textTransform: 'uppercase', fontWeight: 600,
+  textTransform: 'uppercase', fontWeight: 700,
 };
 
 // ======== "What brings you here?" cards ========
@@ -296,7 +296,7 @@ const NamedDefault = () => {
           <em style={{ color: ACCENT, display: 'block' }}>live more intentionally.</em>
         </h1>
         <p style={{
-          color: INK, fontSize: '1.10rem', lineHeight: 1.7, margin: '0 auto 2.5rem',
+          color: INK, fontSize: '20px', lineHeight: 1.7, margin: '0 auto 2.5rem',
           maxWidth: '560px', textShadow: '0 1px 12px rgba(248,245,239,0.85)',
         }}>
           The world is moving fast. How shall we meet each moment? Intentional Society

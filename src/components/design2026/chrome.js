@@ -10,6 +10,10 @@ import { FullBleedPhoto } from './photo';
 import '@fontsource/cormorant-garamond/300.css';
 import '@fontsource/cormorant-garamond/400.css';
 import '@fontsource/cormorant-garamond/500.css';
+// 700 upright backs the small tracked-caps labels — the footer's column
+// headings and the homepage's section labels. Without it they ask for a bold
+// that has no face and get a synthesised smear of the 500 instead.
+import '@fontsource/cormorant-garamond/700.css';
 import '@fontsource/cormorant-garamond/300-italic.css';
 import '@fontsource/cormorant-garamond/400-italic.css';
 // 500-italic backs headerDescription, which is weight 500. Without it the
@@ -23,8 +27,8 @@ import '@fontsource/cormorant-garamond/700-italic.css';
 // Gudea is the whole sans: body copy, UI, and the wordmark. It ships three
 // faces and no more — 400, 700, and 400 italic — so those are the only two
 // weights to write in a sans context. Anything else silently resolves: 300 and
-// 500 land on 400, 600 lands on 700. Cormorant keeps 300/400/500 for display,
-// which is why a weight is only meaningful alongside the family it's set in.
+// 500 land on 400, 600 lands on 700. Cormorant carries 300/400/500/700 for
+// display, which is why a weight is only meaningful alongside its family.
 import '@fontsource/gudea/400.css';
 import '@fontsource/gudea/700.css';
 import '@fontsource/gudea/400-italic.css';
@@ -453,7 +457,7 @@ export const Footer2026 = () => (
       <div className="footer2026-links">
         {footerColumns.map(col => (
           <div key={col.heading}>
-            <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>{col.heading}</h4>
+            <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>{col.heading}</h4>
             <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
               {col.links.map(l => (
                 <li key={l.text} style={{ fontSize: '17px', marginBottom: '0.65rem' }}>
