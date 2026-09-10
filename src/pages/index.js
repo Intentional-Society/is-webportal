@@ -35,9 +35,12 @@ const QUOTES_LABEL = '#4A3B2E';
 // const QUOTES_ACCENT = '#245741'; // only the theory-of-change line used it
 
 // ======== Shared type ========
-// The size of the page's big serif statement, the Awareness · Acceptance ·
-// Integrity band.
-const STATEMENT_SIZE = 'clamp(1.35rem,3.6vw,3rem)';
+// The Awareness · Acceptance · Integrity band. Uncapped vw, so the line holds
+// its proportion to the wood band behind it — that photo is 8:3 at every width,
+// so its height is 37vw and the type has to track the same axis. The line
+// measures ~17.4x its font size, which at 4.2vw clears the 2rem gutters down to
+// a 236px viewport; re-measure that multiplier if the words change.
+const STATEMENT_SIZE = '4.2vw';
 
 // The page's small-cap section labels.
 const smallcap = {
@@ -192,8 +195,7 @@ const tocKey = { color: QUOTES_ACCENT, fontStyle: 'normal' };
 */
 
 // ======== Mission and the three moves ========
-// The "·" between the three moves. Padding rather than &nbsp; keeps the line's
-// wrap points, so it can break on a phone instead of overflowing the band.
+// The "·" between the three moves.
 const moveSeparator = { padding: '0 0.32em' };
 
 // 700 is a real self-hosted Cormorant italic face, not a synthesised bold.
@@ -396,10 +398,7 @@ const NamedDefault = () => {
         position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
         display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2,
       }}>
-        <div style={{ maxWidth: '900px', padding: '0 2rem', textAlign: 'center' }}>
-          {/* Padded separator spans with real spaces, not &nbsp; inside one
-              unbreakable string: the line needs a ~470px viewport to fit, so on
-              a phone it has to be able to wrap. */}
+        <div style={{ padding: '0 2rem', textAlign: 'center' }}>
           <div style={{
             fontFamily: serif, fontSize: STATEMENT_SIZE, fontWeight: 300,
             letterSpacing: '0.08em', color: SAND, lineHeight: 1.4,
