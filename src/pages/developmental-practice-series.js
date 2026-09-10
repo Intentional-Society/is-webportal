@@ -130,7 +130,7 @@ const NamedDefault = () => (
           <ul style={{ ...bodyP, paddingLeft: '1.2rem', margin: 0 }}>
             {u.practices.map(([name, gloss]) => (
               <li key={name} style={bodyLi}>
-                <strong style={{ fontWeight: 700 }}>{name}</strong> — {gloss}
+                <strong>{name}</strong> — {gloss}
               </li>
             ))}
           </ul>

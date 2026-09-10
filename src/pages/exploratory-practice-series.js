@@ -60,7 +60,7 @@ const NamedDefault = () => (
       <ul style={{ ...bodyP, paddingLeft: '1.2rem' }}>
         {lineup.map(item => (
           <li key={item.date} style={{ marginBottom: '0.5rem' }}>
-            {item.date} — <strong style={{ fontWeight: 700 }}>{item.practice}</strong> with {item.teacher}
+            {item.date} — <strong>{item.practice}</strong> with {item.teacher}
             {item.note && (
               <span style={{ color: MUTED, fontWeight: 400 }}> ({item.note})</span>
             )}

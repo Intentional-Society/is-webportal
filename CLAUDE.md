@@ -210,10 +210,23 @@ is the one display style that has to pin it explicitly, since it is styled
 apart from the `<h1>` it sits under.
 
 **Body copy** is `bodyP`/`bodyUl` — 20px/400 over `BODY_TEXT` (`#4A473F`), 19px
-for FAQ answers on `/resources`. That does not cover `MUTED` (`#6B6860`)
-secondary text — asides, small-print, list descriptions, photo captions —
-which stays smaller and needs an *explicit* `fontWeight`: a `<p>`/`<span>` with
-a colour but no weight inherits the shell's, which has caused several bugs.
+for FAQ answers on `/resources`. `MUTED` (`#6B6860`) secondary text — asides,
+small-print, list descriptions, photo captions — is the same weight, just
+smaller.
+
+**Don't write a weight for normal text.** The shell is 400, which is Gudea's
+normal weight, so ordinary copy inherits the right thing by saying nothing. A
+`fontWeight: 400` on a `<p>`, `<span>`, `<div>`, `<li>` or `<a>` restates the
+default and is worth deleting when you're in the file anyway. A weight earns
+its place only where it differs from what the element would do unaided:
+Cormorant's display weights, and 700 on something the browser wouldn't bold
+by itself.
+
+**`<strong>` takes no styling at all.** The UA stylesheet gives it
+`font-weight: bolder`, which against the inherited 400 resolves to 700 — the
+one weight Gudea has above normal. Writing `fontWeight: 700` on it duplicates
+that, and writing `fontWeight: 400` cancels the bold, which is how a dozen
+`<strong>` elements came to render at body weight.
 
 **Header-band hero `<h1>`** (about/community/dojo/iv/friends/news/resources —
 serif, photo background, `textShadow`): weight 500, not 400.

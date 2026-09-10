@@ -95,16 +95,16 @@ const NamedDefault = () => (
 
       <ul style={bodyUl}>
         <li style={wideLi}>
-          <strong style={{ fontWeight: 400 }}>Inner development:</strong> We are those who practice
+          <strong>Inner development:</strong> We are those who practice
           awareness, acceptance, and integrity in growing toward being who we want to be.
         </li>
         <li style={wideLi}>
-          <strong style={{ fontWeight: 400 }}>Wise action:</strong> We are those whose lives form a
+          <strong>Wise action:</strong> We are those whose lives form a
           living vow in service of what is good, true, and beautiful, integrated from
           personal to planetary.
         </li>
         <li style={wideLi}>
-          <strong style={{ fontWeight: 400 }}>Human connection:</strong> We are connected to, and
+          <strong>Human connection:</strong> We are connected to, and
           caring for, <em>these particular humans</em> in this web, an island of coherence
           and support.
         </li>

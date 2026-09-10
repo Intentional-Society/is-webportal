@@ -92,9 +92,9 @@ const NamedDefault = () => (
         train in a variety of <em>developmental-relational practices</em>.
       </p>
       <ul style={tightUl}>
-        <li style={bodyLi}><strong style={{ fontWeight: 400 }}>developmental</strong> grows and shifts your perspective-taking capacity</li>
-        <li style={bodyLi}><strong style={{ fontWeight: 400 }}>relational</strong> is caring interactive presence with joint attention and reflection</li>
-        <li style={bodyLi}><strong style={{ fontWeight: 400 }}>practice</strong> is participatory enactment of a way-of-being, shifting how/who we are</li>
+        <li style={bodyLi}><strong>developmental</strong> grows and shifts your perspective-taking capacity</li>
+        <li style={bodyLi}><strong>relational</strong> is caring interactive presence with joint attention and reflection</li>
+        <li style={bodyLi}><strong>practice</strong> is participatory enactment of a way-of-being, shifting how/who we are</li>
       </ul>
 
       <Divider />

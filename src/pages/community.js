@@ -432,7 +432,7 @@ const NamedDefault = () => (
         Community is such an overused and abused word, but we use it to signify a space full
         of relationships that matter. The kind where, if they're gone, you miss them. We do
         this by spending face-to-face time with each other, deepening our connections and care
-        over time. We gather by videocall weekly on <strong style={{ fontWeight: 400 }}>Sundays</strong> at
+        over time. We gather by videocall weekly on <strong>Sundays</strong> at
         1pm Pacific: a clear consistent heartbeat of connection that's been beating for over
         five years now.
       </p>

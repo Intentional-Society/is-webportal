@@ -34,9 +34,9 @@ const NamedDefault = () => (
 
       <div style={noticeBox}>
         <p style={{ ...bodyP, margin: 0 }}>
-          <strong style={{ fontWeight: 700 }}>January 2026:</strong> Relaunching
+          <strong>January 2026:</strong> Relaunching
           at <a href="https://relationaldojo.org" target="_blank" rel="noopener noreferrer" style={linkStyle}>Relational
-          Dojo</a>! Our next session is <strong style={{ fontWeight: 700 }}>Saturday, January 17<sup>th</sup> from
+          Dojo</a>! Our next session is <strong>Saturday, January 17<sup>th</sup> from
           1:00 to 2:30pm Pacific Time</strong> (4pm Eastern, 9pm UTC).{' '}
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsTSZGVw6vidkEieIbAzhjmmZuO8btB3g8Js4uYrkZKavkxQ/viewform"
             target="_blank" rel="noopener noreferrer" style={linkStyle}>Sign up for BWIA calendar invites.</a>
