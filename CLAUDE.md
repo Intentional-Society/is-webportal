@@ -219,7 +219,7 @@ in place:
 ### Shared chrome (`src/components/design2026/chrome.js`)
 Every page is self-contained and shares one module for design tokens
 (serif/sans/color constants), `Grain2026`, `Nav2026` (pass `active="/path"`;
-collapses to a hamburger below 920px), `Footer2026`, `Head2026` (meta +
+collapses to a hamburger below 900px), `Footer2026`, `Head2026` (meta +
 title/description), `PhotoCredit` (hover tooltip), `headerKicker` (the shared
 eyebrow style), and `HeaderBand` — the photo/veil/kicker/h1 band every
 interior page opens with. Prefer `HeaderBand` over hand-rolling a header:
@@ -239,11 +239,11 @@ each swap-in, which showed up as visible jumping since the nav never
 reflows now (`Nav2026` has a fixed `height: 66px`; that number is repeated as
 `marginTop` on every 2026 page's header band, as the mobile menu's `top`, and
 as `NAV_HEIGHT` in index.js — move them together).
-Below 920px, `Nav2026`
+Below 900px, `Nav2026`
 collapses to a hamburger menu; on mobile all links — including
 Resources/Friends/News — render as plain top-level items (no nested "More"
 toggle, since the menu already has vertical room to spare there). Above
-920px, Resources/Friends/News stay tucked behind a "More" dropdown to save
+900px, Resources/Friends/News stay tucked behind a "More" dropdown to save
 horizontal space. The logo is a transparent `static/design2026/logo.png`
 (no mix-blend-mode hacks) — currently a **temporary** "IS" monogram lifted
 unmodified from the member app's icon (`app.intentionalsociety.org/apple-icon.png`)

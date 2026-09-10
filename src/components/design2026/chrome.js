@@ -24,6 +24,10 @@ import '@fontsource/dm-sans/300.css';
 import '@fontsource/dm-sans/400.css';
 import '@fontsource/dm-sans/500.css';
 import '@fontsource/dm-sans/600.css';
+// Gudea backs the wordmark only — see the `wordmark` token below. 400 is the
+// weight the 2024 wordmark asset is drawn at; Gudea ships no 500 or 600, so
+// don't reach for this token for anything that needs a weight range.
+import '@fontsource/gudea/400.css';
 
 // Shared chrome for the 2026-redesign pages (index, about, community, dojo, iv):
 // design tokens, fixed nav, footer, and the Head font/meta boilerplate.
@@ -31,6 +35,10 @@ import '@fontsource/dm-sans/600.css';
 
 export const serif = "'Cormorant Garamond', Georgia, serif";
 export const sans = "'DM Sans', 'Gudea', sans-serif";
+// The brand face, for the wordmark and nothing else: /branding documents the
+// logotype as set in Gudea, and the nav's "Intentional Society" is the one
+// place the site renders that wordmark as live text rather than as the PNG.
+export const wordmark = "'Gudea', 'DM Sans', sans-serif";
 export const ACCENT = '#2E6B4F';
 export const ACCENT_DARK = '#1A4232';
 export const INK = '#2A2A24';
@@ -252,10 +260,16 @@ export const HeaderBand = ({
 );
 
 // Fixed top nav. `active` is the path of the current page ('/about', '/dojo', …);
-// omit it on the homepage. Collapses to a hamburger below 920px — the desktop
-// row needs ~890px for six links plus the logo, More and CTA, so the
-// breakpoint carries only ~30px of slack: adding or renaming a nav link means
-// re-checking it. "More" opens a dropdown with the secondary pages
+// omit it on the homepage. Collapses to a hamburger below 900px. The row's
+// content measures ~863px (logo, wordmark, six links, More, CTA), so the
+// narrowest desktop render leaves ~38px between the brand and the first link.
+// That gap's floor is the 1.44rem the links keep between themselves — a brand
+// pressed against the nav reads as broken well before anything actually
+// overlaps, so "fits without overlapping" is the wrong test — and 900 keeps a
+// cushion above the floor, since the 863 is one measurement and text metrics
+// move a little across platforms. Adding or renaming a link, resizing the
+// wordmark, or changing the side padding moves that number: re-measure rather
+// than nudging this one. "More" opens a dropdown with the secondary pages
 // (Resources, Friends, News, Podcast).
 export const Nav2026 = ({ active }) => {
   const [open, setOpen] = React.useState(false);
@@ -270,12 +284,17 @@ export const Nav2026 = ({ active }) => {
   return (
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100, height: NAV_OFFSET,
-      boxSizing: 'border-box', padding: '0 2rem',
+      // Side padding equals each end's own vertical margin, so the logo and the
+      // CTA sit in an even frame rather than a wide-sided one. They differ
+      // because the two aren't the same height in the 66px bar: the logo is
+      // 40px ((66-40)/2 = 13) and the CTA 37.6px ((66-37.6)/2 ≈ 14). Re-derive
+      // both if NAV_OFFSET, the logo box, or the CTA's padding changes.
+      boxSizing: 'border-box', padding: '0 14px 0 15px',
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       background: PAPER, borderBottom: '1px solid rgba(42,42,36,0.06)',
     }}>
       <style>{`
-        .nav2026-links { display: flex; align-items: center; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
+        .nav2026-links { display: flex; align-items: center; gap: 1.44rem; list-style: none; margin: 0; padding: 0; }
         .nav2026-burger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
         .nav2026-more { position: relative; }
         .nav2026-more-menu { position: absolute; top: calc(100% + 12px); right: -10px;
@@ -285,7 +304,7 @@ export const Nav2026 = ({ active }) => {
         .nav2026-more-menu li { padding: 0; }
         .nav2026-more-menu a { display: block; padding: 0.45rem 1.1rem; }
         .nav2026-more-mobile-item { display: none; }
-        @media (max-width: 920px) {
+        @media (max-width: 900px) {
           .nav2026-links { display: none; position: fixed; top: ${NAV_OFFSET}; left: 0; right: 0;
             flex-direction: column; align-items: flex-end; gap: 0; background: #F8F5EF;
             border-bottom: 1px solid rgba(42,42,36,0.12); padding: 0.4rem 0 1rem; }
@@ -313,7 +332,7 @@ export const Nav2026 = ({ active }) => {
             overpower "Intentional Society". Swap both files when the real logo
             lands; no code changes needed. */}
         <img src="/design2026/logo.png" alt="" style={{ width: '40px', height: '40px', objectFit: 'contain', display: 'block' }} />
-        <span style={{ fontFamily: serif, fontSize: '18px' }}>Intentional Society</span>
+        <span style={{ fontFamily: wordmark, fontSize: '24px', fontWeight: 400 }}>Intentional Society</span>
       </Link>
       <button className="nav2026-burger" aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open} onClick={() => setOpen(!open)}>
