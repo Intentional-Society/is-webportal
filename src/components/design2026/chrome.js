@@ -389,47 +389,34 @@ export const Nav2026 = ({ active }) => {
   );
 };
 
-// Four columns of links, in reading order — see Footer2026. The logo/name/
-// tagline column that used to sit beside these was dropped when the list grew
-// past a dozen links (Contact, Being With It All, and Practice Series joined
-// once those pages stopped being nav-only-reachable-by-URL orphans). Each
-// column now carries its own heading instead of one "Explore" umbrella,
-// since sixteen links under a single label read as an undifferentiated mass.
+// Three columns of links, in reading order — see Footer2026.
 const footerColumns = [
   {
-    heading: 'About Us',
+    heading: 'Spaces',
     links: [
-      { text: 'About', to: '/about' },
       { text: 'Web', to: '/web' },
       { text: 'Community', to: '/community' },
-      { text: 'Relational Dojo', to: '/dojo' },
+      { text: 'Dojo', to: '/dojo' },
       { text: 'Ventures', to: '/iv' },
     ],
   },
   {
-    heading: 'Learn More',
+    heading: 'Info',
     links: [
-      { text: 'Resources', to: '/resources' },
-      { text: 'Practices', to: '/resources#relational-practices' },
+      { text: 'About', to: '/about' },
+      { text: 'Programs', to: '/programs' },
+      { text: 'Practices', to: '/resources' },
       { text: 'FAQ', to: '/resources#faq' },
-      { text: 'Friends', to: '/friends' },
+      { text: 'News', to: '/news' },
     ],
   },
   {
     heading: 'Connect',
     links: [
-      { text: 'News', to: '/news' },
-      { text: 'Podcast', to: '/podcast' },
       { text: 'Get Involved', to: '/get-involved' },
+      { text: 'Podcast', to: '/podcast' },
+      { text: 'Friends', to: '/friends' },
       { text: 'Contact', to: '/contact' },
-    ],
-  },
-  {
-    heading: 'Programs',
-    links: [
-      { text: 'Being With It All', to: '/being-with-it-all' },
-      { text: 'Practice Series', to: '/developmental-practice-series' },
-      { text: 'All Programs', to: '/programs' },
     ],
   },
 ];
@@ -437,8 +424,9 @@ const footerColumns = [
 export const Footer2026 = () => (
   <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans, overflowX: 'hidden' }}>
     <style>{`
-      .footer2026-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 1.2rem; }
-      @media (max-width: 760px) { .footer2026-links { grid-template-columns: repeat(2, 1fr); gap: 1.8rem 1.5rem; } }
+      .footer2026-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 1.2rem; }
+      /* No intermediate 2-column tier: halving three columns strands one on a
+         row of its own, and all three fit down to the single-column break. */
       @media (max-width: 480px) { .footer2026-links { grid-template-columns: 1fr; gap: 1.8rem; } }
     `}</style>
     <div style={{ maxWidth: '900px', margin: '0 auto' }}>
