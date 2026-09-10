@@ -32,11 +32,11 @@ const MOSS_TINT = '#EDF1E9';  // quotes section ground; its veil is this at 0.78
 // Darker than HEADING and ACCENT, because that veil lets enough of the moss
 // through that the standard pair goes soft.
 const QUOTES_LABEL = '#4A3B2E';
-const QUOTES_ACCENT = '#245741';
+// const QUOTES_ACCENT = '#245741'; // only the theory-of-change line used it
 
 // ======== Shared type ========
-// The page's two big serif statements — the Awareness · Acceptance · Integrity
-// band and the theory-of-change line — are set at one size.
+// The size of the page's big serif statement, the Awareness · Acceptance ·
+// Integrity band.
 const STATEMENT_SIZE = 'clamp(1.35rem,3.6vw,3rem)';
 
 // The page's small-cap section labels.
@@ -167,6 +167,9 @@ const Quote = ({ who, children }) => (
 );
 
 // ======== Theory of change ========
+// Commented out for now, along with the block that used it in the testimonials
+// section.
+/*
 // Three accented phrases joined by two smaller plain verbs, as a flex row that
 // folds to a stack when it runs out of room. nowrap here and on tocJoin, so
 // wrapping only ever happens between items, never inside a phrase.
@@ -186,6 +189,7 @@ const tocJoin = {
 // <em> for the emphasis, upright for the look — colour and scale carry it, so
 // the italic would be a third signal.
 const tocKey = { color: QUOTES_ACCENT, fontStyle: 'normal' };
+*/
 
 // ======== Mission and the three moves ========
 // The "·" between the three moves. Padding rather than &nbsp; keeps the line's
@@ -572,11 +576,14 @@ const NamedDefault = () => {
     }}>
       <FullBleedPhoto image="moss.jpg" focus="center" />
       <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1, background: 'rgba(237,241,233,0.78)' }} />
-      {/* The band above names the moves; this names what they add up to. A flex
+      {/* Commented out for now; the tocLine/tocJoin/tocKey styles above are too.
+
+          The band above names the moves; this names what they add up to. A flex
           row so it reads as one chain and folds to a stack on a phone with no
           breakpoint to maintain. Outside the 900px quote column so the line has
           room to run; the -1rem margin pulls the section's gutter back to the
-          1rem this line needs to fold cleanly on a phone. */}
+          1rem this line needs to fold cleanly on a phone.
+
       <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', margin: '0 -1rem 6rem' }}>
         <div style={{ ...smallcap, color: QUOTES_LABEL, marginBottom: '1.2rem' }}>
           Our theory of change:
@@ -589,6 +596,7 @@ const NamedDefault = () => {
           <em style={tocKey}>wise action</em>
         </h2>
       </div>
+      */}
       <div style={{ position: 'relative', zIndex: 2, maxWidth: '900px', margin: '0 auto' }}>
         <div style={{ ...smallcap, color: QUOTES_LABEL, textAlign: 'center', marginBottom: '1.2rem' }}>
           What's our vibe? Quotes from Community:
