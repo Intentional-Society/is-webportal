@@ -50,7 +50,7 @@ const NamedDefault = () => (
 
     {/* ======== Header band ======== */}
     <HeaderBand
-      image="turkeytail-log.jpg" focus="center 45%"
+      image="flame-azalea.jpg" credit="Bill Claff"
       title={PAGE.title}
       description={PAGE.description}
     />
@@ -60,7 +60,7 @@ const NamedDefault = () => (
 
       <p style={bodyP}>
         These programs are available to members of
-        the <Link to="/web" style={linkStyle}>IS web</Link>.
+        the <Link to="/web" style={linkStyle}>IS Web</Link>.
       </p>
 
       {programs.map(p => (

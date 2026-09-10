@@ -262,7 +262,8 @@ cards, which deliberately carry the band photo of the page each one links to:
 | `moss` | home (testimonials), orientation |
 | `crescent-butterflyweed` | about, branding |
 | `crystals-header` | contact, web, home (card) |
-| `turkeytail-log` | community, programs, home (card) |
+| `turkeytail-log` | community, home (card) |
+| `flame-azalea` | programs |
 | `luminaria-row` | dojo, developmental-practice-series, home (card) |
 | `luminaria-field` | news, funding announcement, exploratory-practice-series |
 | `willow` | iv, home (card) |
