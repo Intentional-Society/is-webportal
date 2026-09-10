@@ -245,7 +245,12 @@ Resources/Friends/News — render as plain top-level items (no nested "More"
 toggle, since the menu already has vertical room to spare there). Above
 920px, Resources/Friends/News stay tucked behind a "More" dropdown to save
 horizontal space. The logo is a transparent `static/design2026/logo.png`
-(no mix-blend-mode hacks). Header photos live in `src/images/bands/` — that
+(no mix-blend-mode hacks) — currently a **temporary** "IS" monogram lifted
+unmodified from the member app's icon (`app.intentionalsociety.org/apple-icon.png`)
+so the site and the app match until the real logo is designed;
+`static/favicon.ico` is the same monogram. Replacing both files is the whole
+swap — nothing in the code names either one but `Nav2026`'s `<img>`.
+Header photos live in `src/images/bands/` — that
 directory is what `FullBleedPhoto`'s static query reads, so a new header photo
 has to go there and nowhere else. There are more pages than photos now, so
 several are reused — including by the home page's four "What brings you here?"
