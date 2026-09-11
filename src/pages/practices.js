@@ -70,7 +70,7 @@ const PracticesPage = ({ data }) => {
       <Article2026>
 
         <h2 style={{
-          fontFamily: serif, fontSize: 'clamp(1.5rem,2.5vw,2.125rem)', fontWeight: 400,
+          fontFamily: serif, fontSize: '28px', fontWeight: 400,
           lineHeight: 1.25, color: '#cc0000', textAlign: 'center', margin: '0 0 1.5rem',
         }}>🚧 Under Construction — Not Yet Published 🚧</h2>
 

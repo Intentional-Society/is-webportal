@@ -114,11 +114,20 @@ export const bodyP = { fontSize: '20px', fontWeight: 400, color: BODY_TEXT, marg
 export const bodyUl = { fontSize: '20px', fontWeight: 400, color: BODY_TEXT, margin: '0 0 1.4rem 1.4rem', padding: 0 };
 export const bodyLi = { marginBottom: '0.4rem' };
 
-// The h2 that opens a section of an article body.
+// The h2 that opens a section of an article body. Fixed, not vw-scaled: the
+// column is a fixed 720px and bodyP a fixed 20px, so a vw size swings the
+// heading-to-body ratio on window width alone.
 export const sectionHeading = {
   fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
-  fontSize: 'clamp(1.5rem,2.6vw,2rem)', color: HEADING, margin: '0 0 1.4rem',
+  fontSize: '28px', color: HEADING, margin: '0 0 1.4rem',
 };
+
+// One step up, for a page whose sections outrank an ordinary section (about's
+// nine, contact's confirmation).
+export const sectionHeadingLarge = { ...sectionHeading, fontSize: '32px' };
+
+// One step down, for a sub-topic within a section rather than a new one.
+export const sectionHeadingSmall = { ...sectionHeading, fontSize: '24px' };
 
 // Inline links inside body copy. ACCENT_DARK rather than ACCENT: at body size
 // the lighter green doesn't hold up against BODY_TEXT.

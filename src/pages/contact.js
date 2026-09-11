@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  sans, ACCENT, INK, bodyP, sectionHeading,
+  sans, ACCENT, INK, bodyP, sectionHeadingLarge,
   Head2026, HeaderBand, Page2026, Article2026, BackLink,
 } from '../components/design2026/chrome';
 
@@ -14,9 +14,6 @@ const PAGE = {
   description: 'questions, introductions, anything else',
   metaDescription: 'Get in touch with Intentional Society — ask a question, say hello, or start a conversation.',
 };
-
-// The confirmation heading, matching About's larger section type.
-const thanksHeading = { ...sectionHeading, fontSize: 'clamp(1.7rem,3vw,2.3rem)' };
 
 const fieldLabel = {
   display: 'block', fontFamily: sans, fontSize: '14px', letterSpacing: '0.08em',
@@ -79,7 +76,7 @@ const NamedDefault = () => {
 
         {status === 'sent' ? (
           <>
-            <h2 style={thanksHeading}>Thank you</h2>
+            <h2 style={sectionHeadingLarge}>Thank you</h2>
             <p style={bodyP}>Your message has been sent. We'll get back to you soon.</p>
           </>
         ) : (

@@ -15,10 +15,6 @@ const PAGE = {
   siteName: false,
 };
 
-// A touch smaller than the shared section heading — this page has only the
-// one section, under a band that is already doing the announcing.
-const listenHeading = { ...sectionHeading, fontSize: 'clamp(1.5rem,2.6vw,1.9rem)' };
-
 const episodeLinks = [
   { text: 'Listen on Spotify', href: 'https://open.spotify.com/show/6VObFjAmDWinl9c8fxLDZw' },
   { text: 'Listen on Apple Podcasts', href: 'https://podcasts.apple.com/us/podcast/the-intentional-society-podcast-liminal-stories/id6807853127' },
@@ -60,7 +56,7 @@ const NamedDefault = () => (
 
       <Divider />
 
-      <h2 style={listenHeading}>Listen</h2>
+      <h2 style={sectionHeading}>Listen</h2>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem', marginBottom: '1rem' }}>
         {episodeLinks.map(l => (
           <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="podcast-listen" style={{
