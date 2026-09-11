@@ -214,6 +214,14 @@ for FAQ answers on `/resources`. `MUTED` (`#6B6860`) secondary text — asides,
 small-print, list descriptions, photo captions — is the same weight, just
 smaller.
 
+**Article h2s are a fixed three-step scale**, not viewport-scaled:
+`sectionHeadingLarge` 32px, `sectionHeading` 28px, `sectionHeadingSmall` 24px.
+`Article2026`'s column is a fixed 720px and body copy a fixed 20px, so a `vw`
+size changes the heading-to-body ratio with window width and nothing else —
+which is what the old `clamp(1.5rem,2.6vw,2rem)` did between 923px and 1231px.
+Reach for a tier rather than a new size; `vw` belongs to the header bands and
+the homepage's full-bleed sections, where the container is viewport-sized too.
+
 **Don't write a weight for normal text.** The shell is 400, which is Gudea's
 normal weight, so ordinary copy inherits the right thing by saying nothing. A
 `fontWeight: 400` on a `<p>`, `<span>`, `<div>`, `<li>` or `<a>` restates the
