@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import {
   serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, HEADING,
-  Head2026, PhotoCredit, Page2026,
+  sectionHeading, Head2026, PhotoCredit, Page2026,
   NAV_HEIGHT, NAV_OFFSET,
 } from '../components/design2026/chrome';
 import { FullBleedPhoto } from '../components/design2026/photo';
@@ -425,9 +425,9 @@ const NamedDefault = () => {
               style={{ width: '100%', borderRadius: '7px 4px 8px 3px', display: 'block' }} />
           </figure>
           <div>
-            <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
+            <h2 style={{ ...sectionHeading, margin: '0 0 0.8rem' }}>
               How Intentional Society began
-            </h3>
+            </h2>
             <p style={{ fontSize: '20px', color: BODY_TEXT, margin: '0 0 1rem', lineHeight: 1.7 }}>
               In early 2021, a small group began weekly online calls exploring the
               intersection of relational practices with adult development psychology,
@@ -447,9 +447,9 @@ const NamedDefault = () => {
           gap: '3rem', marginTop: '3rem', alignItems: 'center',
         }}>
           <div>
-            <h3 style={{ fontFamily: serif, fontWeight: 500, fontStyle: 'italic', fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: ACCENT_DARK, margin: '0 0 0.8rem' }}>
+            <h2 style={{ ...sectionHeading, margin: '0 0 0.8rem' }}>
               What it means
-            </h3>
+            </h2>
             <p style={{ fontSize: '20px', color: BODY_TEXT, margin: '0 0 1.2rem', lineHeight: 1.7 }}>
               Intentional Society isn't one place or one thing you do. It's a stance, a way
               of being — with your evolving self, with others, and with the world around you.

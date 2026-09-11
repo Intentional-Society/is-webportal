@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  serif, sans, ACCENT, INK, MUTED, HEADING, bodyP, sectionHeading, linkStyle,
+  serif, sans, ACCENT, INK, MUTED, HEADING, bodyP, sectionHeading, subsectionHeading, linkStyle,
   Head2026, HeaderBand, Page2026, Article2026, Divider,
 } from '../components/design2026/chrome';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -390,10 +390,7 @@ const seasons = [
 // The history section's own heading tier — smaller and italic, distinct from
 // the shared sectionHeading used above it, since it introduces a sub-topic
 // (this page's past) rather than a new top-level section.
-const historyHeading = {
-  fontFamily: serif, fontWeight: 500, fontStyle: 'italic', lineHeight: 1.2,
-  fontSize: 'clamp(1.2rem,2vw,1.5rem)', color: INK, margin: '2rem 0 1.2rem',
-};
+const historyHeading = { ...subsectionHeading, margin: '2rem 0 1.2rem' };
 
 const NamedDefault = () => (
   <Page2026 active="/community">

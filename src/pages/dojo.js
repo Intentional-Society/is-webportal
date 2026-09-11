@@ -29,6 +29,14 @@ const tightUl = { ...bodyUl, margin: '0 0 1.2rem 1.4rem' };
 // would zero that and tighten both gaps.
 const namesP = { fontSize: '20px', color: BODY_TEXT, marginBottom: '1.2rem', lineHeight: 1.7 };
 
+// Where the Dojo went, and the point of the page. Display type rather than a
+// step of the heading scale: it's a destination, not a section, so it sits
+// outside the outline and is free to run larger than the h2s below it.
+const dojoCta = {
+  fontFamily: serif, fontWeight: 500, fontStyle: 'italic', lineHeight: 1.2,
+  fontSize: '40px', margin: '2.5rem 0 2rem', textAlign: 'center',
+};
+
 const NamedDefault = () => (
   <Page2026 active="/dojo">
 
@@ -49,13 +57,10 @@ const NamedDefault = () => (
         check out the Dojo website for current practice group offerings.
       </p>
 
-      <h3 style={{
-        fontFamily: serif, fontWeight: 500, fontStyle: 'italic', lineHeight: 1.2,
-        fontSize: 'clamp(1.9rem,3.6vw,2.6rem)', margin: '2.5rem 0 2rem', textAlign: 'center',
-      }}>
+      <div style={dojoCta}>
         <a href="https://relationaldojo.org" target="_blank" rel="noopener noreferrer"
           style={{ ...linkStyle, borderBottom: '1px solid rgba(26,66,50,0.28)' }}>Relational Dojo →</a>
-      </h3>
+      </div>
 
       <figure className="credit-host" style={{ margin: '0 0 3rem', position: 'relative' }}>
         <PhotoCredit name="Bill Claff" variant="corner" />

@@ -129,6 +129,15 @@ export const sectionHeadingLarge = { ...sectionHeading, fontSize: '32px' };
 // One step down, for a sub-topic within a section rather than a new one.
 export const sectionHeadingSmall = { ...sectionHeading, fontSize: '24px' };
 
+// The h3 under a sectionHeading. Serif so it reads as the next step of the
+// same scale rather than as heavier body copy — a sans h3 this close in size
+// outweighs the lighter serif h2 above it. The weight is explicit because the
+// UA stylesheet bolds an h3 otherwise.
+export const subsectionHeading = {
+  fontFamily: serif, fontWeight: 500, fontStyle: 'italic', lineHeight: 1.2,
+  fontSize: '22px', color: INK, margin: '0 0 0.7rem',
+};
+
 // Inline links inside body copy. ACCENT_DARK rather than ACCENT: at body size
 // the lighter green doesn't hold up against BODY_TEXT.
 export const linkStyle = { color: ACCENT_DARK };

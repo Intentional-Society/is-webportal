@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  sans, INK, bodyP, bodyUl, bodyLi, sectionHeading, linkStyle,
+  bodyP, bodyUl, bodyLi, sectionHeading, subsectionHeading, linkStyle,
   Head2026, HeaderBand, Page2026, Article2026, Divider,
 } from '../components/design2026/chrome';
 
@@ -15,13 +15,6 @@ const PAGE = {
   title: 'The IS Web',
   description: 'our extended network across the liminal landscape',
   metaDescription: "The relational web of trust and collaboration around Intentional Society: what's inside it, and what membership asks of you.",
-};
-
-// Applied to <h3>, so the weight is load-bearing: without it the UA
-// stylesheet's bold comes through and these render at 700.
-const subHeading = {
-  fontFamily: sans, fontSize: '1.5rem', fontWeight: 400,
-  color: INK, margin: '0 0 0.7rem',
 };
 
 // These three items each run to a couple of lines, so they want more air
@@ -127,7 +120,7 @@ const NamedDefault = () => (
 
       {inside.map(item => (
         <div key={item.title} style={{ marginBottom: '2rem' }}>
-          <h3 style={subHeading}>{item.title}</h3>
+          <h3 style={subsectionHeading}>{item.title}</h3>
           <p style={{ ...bodyP, margin: 0 }}>{item.body}</p>
         </div>
       ))}
