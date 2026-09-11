@@ -294,17 +294,14 @@ cards, which deliberately carry the band photo of the page each one links to:
 | `moss-roots` | friends |
 | `rockfield` | resources, practices |
 | `pond-leaves` | being-with-it-all, podcast |
+| `wing-scales-macro` | get-involved |
 
-Worth commissioning more so the reuse can be unwound. get-involved is the one
-exception to the `src/images/bands/` rule: its hero isn't a `HeaderBand` (it
-carries its own pitch text over a dark gradient, not a title), so its photo —
-`wing-scales-macro.jpg` — is a plain CSS `background:` image from
-`static/design2026/` instead of going through `FullBleedPhoto`.
-get-involved keeps the
+Worth commissioning more so the reuse can be unwound. get-involved keeps the
 working Buttondown form and the `#newsletter` / `#connection-calls` anchors;
 the Connection Call date and registration URL both live in
 `src/components/blurb-connectioncall.js` (`<BlurbConnectionCall />` renders the
-"Our next IS Connection Call is on ..." sentence in the hero, and the "Join a
+"Our next IS Connection Call is on ..." sentence in the Attend a Connection
+Call section, and the "Join a
 Connection Call" button imports `CONNECTION_CALL_URL` from the same file) —
 that file is the only place to edit when a new call is scheduled, and keeping
 both there is what stops the button link from drifting out of sync with the
