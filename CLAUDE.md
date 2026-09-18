@@ -187,7 +187,7 @@ in noise.
 
 Deploys automatically to Netlify on push to master. Configuration in `netlify.toml`.
 
-## Current Status Notes
+## Design Notes
 
 ### Type
 Two families, and a weight is only meaningful beside the family it is set in:
@@ -313,34 +313,33 @@ Call section, and the "Join a
 Connection Call" button imports `CONNECTION_CALL_URL` from the same file) —
 that file is the only place to edit when a new call is scheduled, and keeping
 both there is what stops the button link from drifting out of sync with the
-date. Master uses the same component, so the two branches stay in step.
+date — the Zoom registration URL is per-meeting, so it changes with it.
 
-### `/resources` page — 2026 redesign, merged with the old FAQ page
-`src/pages/questions.js` (FAQ) was retired and folded into `resources.js`
-(`/questions` now redirects to `/resources#faq` — see netlify.toml); the old
-Media Appearances list moved to `/news` instead. Both the practices list and
-the FAQ render as collapsed `<details>` (class `rsc-item`, styled via a
-scoped `<style>` block in the page) for compactness — each practice kept
-its original anchor id so old newsletter links (e.g.
-`resources#empathy-circling`) still resolve; browsers auto-open a closed
-`<details>` when navigating to a fragment inside it, so no extra JS is
-needed for that. A small effect redirects the stale `#media` hash to `/news`.
+### `/resources` page
+Holds the FAQ that used to be its own `/questions` page, which now redirects
+to `/resources#faq` (see netlify.toml); the Media Appearances list that was
+also on it lives on `/news`. Both the practices list and the FAQ render as
+collapsed `<details>` (class `rsc-item`, styled via a scoped `<style>` block
+in the page) for compactness — each practice kept its original anchor id so
+old newsletter links (e.g. `resources#empathy-circling`) still resolve;
+browsers auto-open a closed `<details>` when navigating to a fragment inside
+it, so no extra JS is needed for that. A small effect redirects the stale
+`#media` hash to `/news`.
 Practice/FAQ `<summary>` text (`practiceSummary`/`faqSummary`) is 1.4rem.
 
-### Home page (`src/pages/index.js`) — 2026 redesign (branch `2026-design`)
-Self-contained page ported from a Claude Design mockup, using the shared
-2026 chrome above, images in `static/design2026/`. Section rhythm alternates
-main content (light, informational) with interstitials (darker, atmospheric):
+### Home page (`src/pages/index.js`)
+Self-contained page on the shared 2026 chrome above, images in
+`static/design2026/`. Section rhythm alternates main content (light,
+informational) with interstitials (darker, atmospheric):
 Hero → three moves → About (links to /about) → mission → nav-to-spaces cards
-(3, not 4) → testimonials → call to action → footer. Torn-paper edges are now
-baked into the section images themselves rather than a generic CSS mask:
+(3, not 4) → testimonials → call to action → footer. Torn-paper edges are
+baked into the section images themselves rather than cut by a CSS mask:
 `wood-band.png` (three moves) and `ice-torn.png` (mission) carry transparent,
 ragged top/bottom edges in their own alpha channel — the wood band overlaps
 the hero via a negative margin, and ice-torn.png's edges just reveal the
-cream page background around it. No reusable torn-edge component exists
-anymore (the old SVG-mask `torn-section.js` was removed as unused).
-Newsletter signup and Connection Call sections were moved to `/get-involved`
-(styled blocks with anchors `#newsletter` and `#connection-calls`).
+cream page background around it. Newsletter signup and the Connection Call
+live on `/get-involved`, under the anchors `#newsletter` and
+`#connection-calls`.
 
 ### `/web` page
 `src/pages/web.js` — the IS Web page, describing the relational web, its
@@ -349,24 +348,20 @@ in the `inside` array. No signup button; the member app at
 `https://app.intentionalsociety.org` is linked as a reference for existing
 members in the "IS Web App" entry.
 
-### `/community` page — 2026 redesign
-Same self-contained pattern as `index.js`/`about.js` (own nav/footer): a
-`turkeytail-log.jpg` header band, then an article body with the
+### `/community` page
+A `turkeytail-log.jpg` header band, then an article body with the
 purpose-statement blockquote, the community-members "tree" illustration, and
-How to Join / Belonging sections, then a "Get involved" button. No longer
-markdown-driven — `src/md/community.md` was removed and its copy ported
-directly into JSX.
+How to Join / Belonging sections, then a "Get involved" button.
 
-The old standalone `/history` page (a title-based log of every weekly session
-back to January 2021) was retired and folded onto the bottom of this page,
-after a `<Divider />` following "Get involved" — same community, its present
-and its past, and `/history` now 301s here (see `netlify.toml`). The `seasons`
-array and the collapsed-`<details>` `.season-item` styling live in
-`community.js` now; there's no separate history.js.
+Below a `<Divider />` after "Get involved" sits the history log — a
+title-based record of every weekly session back to January 2021, which used
+to be a standalone `/history` page and is here because it's the same
+community, its present and its past. `/history` 301s here (see
+`netlify.toml`), and the `seasons` array and the collapsed-`<details>`
+`.season-item` styling live in `community.js`.
 
-### `/dojo` and `/iv` pages — 2026 redesign
-`dojo.js` drops the old strikethrough-"Practice" title for a header band whose
-description reads "a skill-building space for developmental-relational
-practice", over `luminaria-row.jpg`. `iv.js` uses `willow.jpg`. Both keep their
-existing copy and internal links (Developmental Practice Series, Being With It
-All, Connection Call, etc.).
+### `/dojo` and `/iv` pages
+`dojo.js` opens on a header band over `luminaria-row.jpg`, described as "a
+skill-building space for developmental-relational practice"; `iv.js` uses
+`willow.jpg`. Both link out to the Developmental Practice Series, Being With
+It All, the Connection Call and so on.
