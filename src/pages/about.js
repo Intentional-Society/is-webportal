@@ -127,7 +127,7 @@ const NamedDefault = () => (
       </p>
 
       <p style={bodyP}>
-        Intentional Ventures is a high-trust system of relational and financial support for livelihood
+        <Link to="/iv" style={linkStyle}>Intentional Ventures</Link> is a high-trust system of relational and financial support for livelihood
         generation and economic interweaving.
       </p>
 

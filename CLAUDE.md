@@ -273,7 +273,7 @@ reflows now (`Nav2026` has a fixed `height: 66px`; that number is repeated as
 as `NAV_HEIGHT` in index.js — move them together).
 Below 900px, `Nav2026`
 collapses to a hamburger menu; on mobile all links — including the `moreLinks`
-(Resources, Friends, News, Podcast, Contact) — render as plain top-level items
+(Podcast, Friends, Resources, News, Contact) — render as plain top-level items
 (no nested "More" toggle, since the menu already has vertical room to spare
 there). Above 900px those five stay tucked behind a "More" dropdown to save
 horizontal space. **The nav shows no logo** — `Nav2026`'s `<img>` is commented

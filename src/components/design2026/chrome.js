@@ -80,10 +80,10 @@ const navLinks = [
 ];
 
 const moreLinks = [
-  { text: 'Resources', to: '/resources' },
-  { text: 'Friends', to: '/friends' },
-  { text: 'News', to: '/news' },
   { text: 'Podcast', to: '/podcast' },
+  { text: 'Friends', to: '/friends' },
+  { text: 'Resources', to: '/resources' },
+  { text: 'News', to: '/news' },
   { text: 'Contact', to: '/contact' },
 ];
 
@@ -294,7 +294,7 @@ export const HeaderBand = ({
 // move a little across platforms. Adding or renaming a link, resizing the
 // wordmark, or changing the side padding moves that number: re-measure rather
 // than nudging this one. "More" opens a dropdown with the secondary pages
-// (Resources, Friends, News, Podcast).
+// (Podcast, Friends, Resources, News, Contact).
 export const Nav2026 = ({ active }) => {
   const [open, setOpen] = React.useState(false);
   const [moreOpen, setMoreOpen] = React.useState(false);
