@@ -5,10 +5,10 @@ import React from 'react';
 // get-involved.js) import CONNECTION_CALL_URL from here rather than hardcoding
 // their own copy, so the "Join a Connection Call" button can't drift out of
 // sync with this blurb's date the way it did before.
-export const CONNECTION_CALL_URL = 'https://us02web.zoom.us/meeting/register/KutMcrC2RhqppC3Usid1Og';
+export const CONNECTION_CALL_URL = 'https://us02web.zoom.us/meeting/register/5NL-RIrCQ7y0VWnAWql3NA';
 
 const NamedDefault = () => <>
   Our next <a href={CONNECTION_CALL_URL}>
-  IS Connection Call</a> is on <b>Friday, October 16<sup>th</sup> at 1:00-1:55pm Pacific Time (4pm Eastern, 8pm UTC)</b>.
+  IS Connection Call</a> is on <b>Friday, November 6<sup>th</sup> at 1:00-1:55pm Pacific Time (4pm Eastern, 9pm UTC)</b>.
 </>;
 export default NamedDefault;
