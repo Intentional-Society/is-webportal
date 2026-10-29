@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import {
   serif, sans, ACCENT, INK, MUTED, HEADING, bodyP, sectionHeading, subsectionHeading, linkStyle,
-  Head2026, HeaderBand, Page2026, Article2026, Divider,
+  Head2026, HeaderBand, Page2026, Article2026, Divider, RawStyle,
 } from '../components/design2026/chrome';
 import { StaticImage } from 'gatsby-plugin-image';
 
@@ -524,7 +524,7 @@ const NamedDefault = () => (
 
       {/* Collapsed season rows. Scoped here rather than in chrome.js since
           /resources styles its own <details> the same way locally. */}
-      <style>{`
+      <RawStyle>{`
         .season-item {
           border-bottom: 1px solid rgba(42,42,36,0.12);
           padding: 0.9rem 0;
@@ -547,7 +547,7 @@ const NamedDefault = () => (
           font-weight: 500;
         }
         .season-item[open] > summary::before { content: '−'; }
-      `}</style>
+      `}</RawStyle>
 
     </Article2026>
   </Page2026>

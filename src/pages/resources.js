@@ -3,7 +3,7 @@ import { Link, navigate } from 'gatsby';
 import {
   serif, sans, ACCENT, INK, MUTED, BODY_TEXT, HEADING, NAV_OFFSET,
   bodyP as baseBodyP, sectionHeading, linkStyle,
-  Head2026, HeaderBand, Page2026, Article2026, Divider,
+  Head2026, HeaderBand, Page2026, Article2026, Divider, RawStyle,
 } from '../components/design2026/chrome';
 
 // 2026 redesign of the Resources page — merges the old standalone FAQ page
@@ -302,13 +302,13 @@ const NamedDefault = () => {
   return (
     <Page2026 active="/resources">
 
-      <style>{`
+      <RawStyle>{`
         .rsc-item summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; gap: 0.6rem; }
         .rsc-item summary::-webkit-details-marker { display: none; }
         .rsc-item summary::before { content: '›'; display: inline-block; color: ${ACCENT}; font-size: 1.1em; line-height: 1.4; transition: transform 0.15s; flex-shrink: 0; }
         .rsc-item[open] summary::before { transform: rotate(90deg); }
         .rsc-item { border-bottom: 1px solid rgba(42,42,36,0.08); padding: 0.9rem 0; scroll-margin-top: calc(${NAV_OFFSET} + 1.5rem); }
-      `}</style>
+      `}</RawStyle>
 
       {/* ======== Header band ======== */}
       <HeaderBand

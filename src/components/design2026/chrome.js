@@ -157,6 +157,13 @@ export const Grain2026 = () => (
   }} />
 );
 
+// A scoped <style> block. React's server renderer HTML-escapes text children
+// (`>` → `&gt;`, `'` → `&#x27;`), which the browser leaves literal inside
+// <style>: the CSS breaks and hydration fails. __html is emitted verbatim.
+export const RawStyle = ({ children }) => (
+  <style dangerouslySetInnerHTML={{ __html: children }} />
+);
+
 // Photo-credit hover caption: put className="credit-host" (plus
 // position:'relative') on the photo's wrapper — a header, section, figure,
 // or card div — and render <PhotoCredit name="Bill Claff" /> as its last
@@ -313,7 +320,7 @@ export const Nav2026 = ({ active }) => {
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       background: PAPER, borderBottom: '1px solid rgba(42,42,36,0.06)',
     }}>
-      <style>{`
+      <RawStyle>{`
         .nav2026-links { display: flex; align-items: center; gap: 1.44rem; list-style: none; margin: 0; padding: 0; }
         .nav2026-burger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
         .nav2026-more { position: relative; }
@@ -341,7 +348,7 @@ export const Nav2026 = ({ active }) => {
         .credit-tip { opacity: 0; transform: translateY(2px); transition: opacity 320ms ease, transform 320ms ease; pointer-events: none; }
         .credit-host:hover .credit-tip, .credit-host:focus-within .credit-tip { opacity: 1; transform: translateY(0); }
         @media (hover: none) { .credit-tip { opacity: 1; transform: none; } }
-      `}</style>
+      `}</RawStyle>
       <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none', color: INK, fontFamily: sans }}>
         {/* Hidden until there's a real logo. Restore this line and swap
             static/design2026/logo.png. */}
@@ -456,12 +463,12 @@ const footerColumns = [
 
 export const Footer2026 = () => (
   <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans, overflowX: 'hidden' }}>
-    <style>{`
+    <RawStyle>{`
       .footer2026-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 1.2rem; }
       /* No intermediate 2-column tier: halving three columns strands one on a
          row of its own, and all three fit down to the single-column break. */
       @media (max-width: 480px) { .footer2026-links { grid-template-columns: 1fr; gap: 1.8rem; } }
-    `}</style>
+    `}</RawStyle>
     <div style={{ maxWidth: '900px', margin: '0 auto' }}>
       <div className="footer2026-links">
         {footerColumns.map(col => (
@@ -605,11 +612,11 @@ export const Head2026 = ({
       <meta name="twitter:description" content={summary} />
       <meta name="twitter:image" content={imageUrl} />
 
-      <style>{`
+      <RawStyle>{`
         :root { --is-nav-height: ${NAV_HEIGHT}px; }
         * { box-sizing: border-box; }
         body { margin: 0; -webkit-font-smoothing: antialiased; }
-      `}</style>
+      `}</RawStyle>
     </>
   );
 };

@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import {
   serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, HEADING,
-  sectionHeading, Head2026, PhotoCredit, Page2026,
+  sectionHeading, Head2026, PhotoCredit, Page2026, RawStyle,
   NAV_HEIGHT, NAV_OFFSET,
 } from '../components/design2026/chrome';
 import { FullBleedPhoto } from '../components/design2026/photo';
@@ -319,7 +319,7 @@ const NamedDefault = () => {
             <path d="M5.5 12.5 12 19l6.5-6.5" />
           </svg>
         </a>
-        <style>{`
+        <RawStyle>{`
           /* Lines inside a statement hug at 1.1 so a wrapped one reads as a
              single thought; the 1.4 between statements is margin instead
              (1.1 + 0.3 = 1.4). */
@@ -376,7 +376,7 @@ const NamedDefault = () => {
             .hero-swap-word { animation: none; opacity: 1; }
             .hero-swap-a::after, .hero-swap-b::after { content: '/'; }
           }
-        `}</style>
+        `}</RawStyle>
       </div>
     </section>
 
@@ -523,7 +523,7 @@ const NamedDefault = () => {
           ))}
         </div>
         <SpaceCard card={webCard} image={getImage(cardData[webCard.photo])} wide />
-        <style>{`
+        <RawStyle>{`
           /* The whole card is one <a>, so it has to look like a target. */
           .space-card {
             box-shadow: 0 1px 2px rgba(42,42,36,0.05), 0 8px 20px rgba(42,42,36,0.06);
@@ -565,7 +565,7 @@ const NamedDefault = () => {
             .space-card:hover, .space-card:focus-visible { transform: none; }
             .space-card:hover .space-card-arrow { transform: none; }
           }
-        `}</style>
+        `}</RawStyle>
       </div>
     </section>
 

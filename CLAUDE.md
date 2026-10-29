@@ -64,9 +64,11 @@ inventing a shape.
   (`serif`, `sans`, `ACCENT`, `ACCENT_DARK`, `INK`, `MUTED`, `BODY_TEXT`, `PAPER`)
 - CSS Modules (`.module.css`) where a page needs real CSS — currently only
   `practices.module.css`, which styles markdown the page can't reach inline
-- Scoped `<style>` blocks inside a page for pseudo-elements, `:hover`, media
+- Scoped `<RawStyle>` blocks inside a page for pseudo-elements, `:hover`, media
   queries, and `<details>` markers (see `resources.js`, `community.js`'s
-  history-log section)
+  history-log section). Never a bare `<style>{`…`}</style>`: React's server
+  render HTML-escapes its text, which breaks any CSS containing `>` or quotes
+  and fails hydration
 
 There is no global stylesheet. `Head2026` emits the only site-wide CSS: a
 `box-sizing` reset and the `body { margin: 0 }` that replaces the browser

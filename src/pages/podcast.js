@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   sans, ACCENT_DARK, bodyP, sectionHeading,
-  Head2026, HeaderBand, Page2026, Article2026, Divider,
+  Head2026, HeaderBand, Page2026, Article2026, Divider, RawStyle,
 } from '../components/design2026/chrome';
 
 // The Intentional Society Podcast.
@@ -28,10 +28,10 @@ const NamedDefault = () => (
         `a:hover` this also faded the nav and all sixteen footer links, which
         then behaved differently here than on every other page. The 180ms
         matches the credit tooltip's fade in chrome.js. */}
-    <style>{`
+    <RawStyle>{`
       .podcast-listen { transition: opacity 180ms ease; }
       .podcast-listen:hover { opacity: 0.8; }
-    `}</style>
+    `}</RawStyle>
 
     {/* ======== Header band ======== */}
     <HeaderBand
