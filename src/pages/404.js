@@ -20,7 +20,7 @@ const quickLinks = [
   { text: 'About', to: '/about' },
   { text: 'Community', to: '/community' },
   { text: 'Dojo', to: '/dojo' },
-  { text: 'Get involved', to: '/get-involved' },
+  { text: 'Connect', to: '/connect' },
 ];
 
 const NamedDefault = () => (

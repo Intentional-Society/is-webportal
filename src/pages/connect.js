@@ -3,25 +3,28 @@ import { Link } from 'gatsby';
 import ButtondownSignup from '../components/buttondownsignup';
 import BlurbConnectionCall, { CONNECTION_CALL_URL } from '../components/blurb-connectioncall';
 import {
-  sans, ACCENT, bodyP, sectionHeading,
+  sans, ACCENT, bodyP, sectionHeading, subsectionHeading,
   Head2026, HeaderBand, Page2026, Article2026,
 } from '../components/design2026/chrome';
 
-// 2026 redesign of the Get Involved page — ported from the Claude Design
+// 2026 redesign of the Connect page — ported from the Claude Design
 // "Sign Up" mockup, using the shared 2026 chrome (components/design2026/).
 // #newsletter and #connection-calls are floating offset anchors above their
 // sections rather than ids on the headings, so the fixed nav doesn't cover
 // the heading a deep link lands on.
 
+// siteName: false — the meta title already names the society.
 const PAGE = {
-  title: 'Get Involved',
-  description: 'meet real people, ask questions, find spaces that match your edges',
+  title: 'Connect',
+  metaTitle: 'Connect with Intentional Society',
+  siteName: false,
+  description: 'how to connect with the people and ideas of Intentional Society',
   metaDescription: 'Come to a Connection Call — the easiest first step into the Intentional Society web of trust and collaboration.',
 };
 
 const linkStyle = { color: ACCENT };
 
-// Each option's h2 — the leading gap separates it from the option above.
+// Each section's h2 — the leading gap separates it from the section above.
 const optionHeading = { ...sectionHeading, margin: '2.6rem 0 1rem' };
 
 // Floating offset anchor above a section, clearing the fixed nav.
@@ -33,28 +36,15 @@ const ctaButton = {
 };
 
 const NamedDefault = () => (
-  <Page2026 active="/get-involved">
+  <Page2026 active="/connect">
 
     <HeaderBand image="wing-scales-macro.jpg" credit="Bill Claff" title={PAGE.title} description={PAGE.description} />
 
     {/* ======== Details ======== */}
     <Article2026>
 
-      <p style={bodyP}>Want to make contact? Here are several options.</p>
-
-      <a id="newsletter" style={anchor}></a>
-      <h2 style={{ ...optionHeading, marginTop: 0 }}>Subscribe for updates</h2>
-      <div style={{ marginBottom: '1.2rem' }}>
-        <ButtondownSignup />
-      </div>
-      <p style={bodyP}>
-        Every Thursday, a friendly update with public events and reflections. Browse
-        the <a href="https://buttondown.email/intentionalsociety/archive/" target="_blank" rel="noopener noreferrer" style={linkStyle}>archive</a> for
-        samples. Watch for a confirmation email to finish signing up.
-      </p>
-
       <a id="connection-calls" style={anchor}></a>
-      <h2 style={optionHeading}>Attend a Connection Call</h2>
+      <h2 style={{ ...optionHeading, marginTop: 0 }}>Attend a Connection Call</h2>
       <p style={{ ...bodyP, marginBottom: '1rem' }}>
         This call is like a picnic table out on our front lawn. Open to all, new and
         familiar, with no agenda other than your curiosity!
@@ -67,14 +57,27 @@ const NamedDefault = () => (
           heading's, so the following h2 owns the gap. */}
       <a href={CONNECTION_CALL_URL} style={ctaButton}>Join a Connection Call</a>
 
-      <h2 style={optionHeading}>Find relational practice groups</h2>
-      <p style={{ ...bodyP, marginBottom: '2.5rem' }}>
+      <h2 style={optionHeading}>Other ways to connect</h2>
+
+      <a id="newsletter" style={anchor}></a>
+      <h3 style={subsectionHeading}>Subscribe for updates</h3>
+      <div style={{ marginBottom: '1.2rem' }}>
+        <ButtondownSignup />
+      </div>
+      <p style={{ ...bodyP, marginBottom: '2rem' }}>
+        Every Thursday, a friendly update with public events and reflections. Browse
+        the <a href="https://buttondown.email/intentionalsociety/archive/" target="_blank" rel="noopener noreferrer" style={linkStyle}>archive</a> for
+        samples. Watch for a confirmation email to finish signing up.
+      </p>
+
+      <h3 style={subsectionHeading}>Find relational practice groups</h3>
+      <p style={{ ...bodyP, marginBottom: '2rem' }}>
         We love relational practices for personal development! You can find several at our
         sister site <a href="https://relationaldojo.org" target="_blank" rel="noopener noreferrer" style={linkStyle}>Relational Dojo</a>, or
         read more <Link to="/dojo" style={linkStyle}>on the Dojo page</Link>.
       </p>
 
-      <h2 style={optionHeading}>Still have questions?</h2>
+      <h3 style={subsectionHeading}>Still have questions?</h3>
       <p style={{ ...bodyP, marginBottom: '1.5rem' }}>
         Reach out and we'll get back to you. <Link to="/contact" style={linkStyle}>Contact us →</Link>
       </p>

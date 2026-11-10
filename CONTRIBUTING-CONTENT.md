@@ -71,11 +71,11 @@ To link to another page on the site, use its path:
 ```
 [About us](/about)
 [Resources](/resources)
-[Get involved](/get-involved)
+[Connect](/connect)
 ```
 
 Available paths: `/about`, `/web`, `/community`, `/dojo`, `/iv`, `/programs`,
-`/resources`, `/friends`, `/news`, `/podcast`, `/get-involved`, `/contact`.
+`/resources`, `/friends`, `/news`, `/podcast`, `/connect`, `/contact`.
 
 Link to our own pages this way rather than writing out a full
 `https://www.intentionalsociety.org/...` address — a relative path works

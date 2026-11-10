@@ -419,10 +419,10 @@ export const Nav2026 = ({ active }) => {
           </li>
         ))}
         <li>
-          <Link to="/get-involved" style={{
+          <Link to="/connect" style={{
             background: ACCENT, color: '#fff', padding: '0.55rem 1.3rem', borderRadius: '4px',
             fontSize: '15px', fontWeight: 700, textDecoration: 'none',
-          }}>Get involved</Link>
+          }}>Connect</Link>
         </li>
       </ul>
     </nav>
@@ -453,7 +453,7 @@ const footerColumns = [
   {
     heading: 'Connect',
     links: [
-      { text: 'Get Involved', to: '/get-involved' },
+      { text: 'Get Involved', to: '/connect' },
       { text: 'Podcast', to: '/podcast' },
       { text: 'Friends', to: '/friends' },
       { text: 'Contact', to: '/contact' },

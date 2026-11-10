@@ -43,7 +43,7 @@ const NamedDefault = () => (
         and do not anticipate adding more participants for the near-to-medium-term future.
         However, we're still always interested in hearing from like-minded folks. You
         can <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWtrt_DBkpKHgujWzlxQJJiiW466NNU28s9dAe__ujVwS9_g/viewform?usp=sharing" target="_blank" rel="noopener noreferrer" style={linkStyle}>register
-        your interest</a> or bring questions to an <Link to="/get-involved#connection-calls" style={linkStyle}>IS
+        your interest</a> or bring questions to an <Link to="/connect#connection-calls" style={linkStyle}>IS
         Connection Call</Link>.
       </p>
 

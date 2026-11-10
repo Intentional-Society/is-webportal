@@ -191,7 +191,7 @@ const faqGroups = [
       },
       {
         q: "I'm unsure, nervous, or introverted — is this relational stuff a fit for me?",
-        a: <>Only you really know. Try one <Link to="/get-involved#connection-calls" style={linkStyle}>Connection Call</Link> and see how it feels. Some of us are highly adept in relational attunement, others come to improve their interpersonal skills — really we're all relating all the time already, to ourselves, others, and the world around us.</>,
+        a: <>Only you really know. Try one <Link to="/connect#connection-calls" style={linkStyle}>Connection Call</Link> and see how it feels. Some of us are highly adept in relational attunement, others come to improve their interpersonal skills — really we're all relating all the time already, to ourselves, others, and the world around us.</>,
       },
       {
         q: "Will I offend anyone if I join, don't like it, and then leave?",
@@ -204,7 +204,7 @@ const faqGroups = [
     qas: [
       {
         q: 'Is there one best way to get started?',
-        a: <>A <Link to="/get-involved#connection-calls" style={linkStyle}>Connection Call</Link>. From there we can point you to anything we know about inside and outside the IS web.</>,
+        a: <>A <Link to="/connect#connection-calls" style={linkStyle}>Connection Call</Link>. From there we can point you to anything we know about inside and outside the IS web.</>,
       },
       {
         q: "My life is pretty busy already — what if I can't keep up?",

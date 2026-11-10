@@ -107,7 +107,7 @@ const NamedDefault = () => (
 
       <p style={bodyP}>
         Joining requires a referral from one existing member. If you have no connection to
-        IS folks, come meet some at a <Link to="/get-involved#connection-calls" style={linkStyle}>Connection
+        IS folks, come meet some at a <Link to="/connect#connection-calls" style={linkStyle}>Connection
         Call</Link>. We're happy to continue diversifying our web and/or introduce you to our
         friends across the field. We're part of a developmental collaborative culture
         "scenius" spanning the globe — and this is our little part, our collection of

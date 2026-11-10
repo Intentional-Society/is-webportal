@@ -479,11 +479,11 @@ const NamedDefault = () => (
         the (larger) network level grants access to Community Hub Calls as well as other programs.
       </p>
 
-      <Link to="/get-involved" style={{
+      <Link to="/connect" style={{
         display: 'inline-block', padding: '0.8rem 2rem', background: ACCENT, color: '#fff',
         textDecoration: 'none', fontFamily: sans, fontSize: '16px',
         letterSpacing: '0.03em', borderRadius: '3px',
-      }}>Get involved</Link>
+      }}>Connect</Link>
 
       <Divider />
 

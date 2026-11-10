@@ -110,7 +110,7 @@ const NamedDefault = () => (
         space with multiple practice groups.
       </p>
       <p style={bodyP}>
-        The path to entry is through our open <Link to="/get-involved#connection-calls" style={linkStyle}>Connection
+        The path to entry is through our open <Link to="/connect#connection-calls" style={linkStyle}>Connection
         Calls</Link>, and/or existing relationships.
       </p>
       <p style={bodyP}>

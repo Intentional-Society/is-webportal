@@ -2,7 +2,7 @@ import React from 'react';
 
 // Update both of these together, every time a new Connection Call is scheduled —
 // this is the one place the registration link lives; other components (e.g.
-// get-involved.js) import CONNECTION_CALL_URL from here rather than hardcoding
+// connect.js) import CONNECTION_CALL_URL from here rather than hardcoding
 // their own copy, so the "Join a Connection Call" button can't drift out of
 // sync with this blurb's date the way it did before.
 export const CONNECTION_CALL_URL = 'https://us02web.zoom.us/meeting/register/5NL-RIrCQ7y0VWnAWql3NA';

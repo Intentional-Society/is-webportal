@@ -635,11 +635,11 @@ const NamedDefault = () => {
           Subscribe to our newsletter, drop into a Connection Call, or step into the
           relational web — whatever next step is right for you.
         </p>
-        <Link to="/get-involved" style={{
+        <Link to="/connect" style={{
           display: 'inline-block', marginTop: '1.5rem', padding: '0.8rem 2rem',
           border: '1px solid rgba(122,158,138,0.4)', color: SAGE, textDecoration: 'none',
           fontSize: '15px', borderRadius: '3px',
-        }}>Get involved</Link>
+        }}>Connect</Link>
       </div>
     </section>
 

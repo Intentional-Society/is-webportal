@@ -304,9 +304,9 @@ cards, which deliberately carry the band photo of the page each one links to:
 | `moss-roots` | friends |
 | `rockfield` | resources, practices |
 | `pond-leaves` | being-with-it-all, podcast |
-| `wing-scales-macro` | get-involved |
+| `wing-scales-macro` | connect |
 
-Worth commissioning more so the reuse can be unwound. get-involved keeps the
+Worth commissioning more so the reuse can be unwound. connect (formerly `/get-involved`, which 301s to it) keeps the
 working Buttondown form and the `#newsletter` / `#connection-calls` anchors;
 the Connection Call date and registration URL both live in
 `src/components/blurb-connectioncall.js` (`<BlurbConnectionCall />` renders the
@@ -340,7 +340,7 @@ baked into the section images themselves rather than cut by a CSS mask:
 ragged top/bottom edges in their own alpha channel — the wood band overlaps
 the hero via a negative margin, and ice-torn.png's edges just reveal the
 cream page background around it. Newsletter signup and the Connection Call
-live on `/get-involved`, under the anchors `#newsletter` and
+live on `/connect`, under the anchors `#newsletter` and
 `#connection-calls`.
 
 ### `/web` page
@@ -353,9 +353,9 @@ members in the "IS Web App" entry.
 ### `/community` page
 A `turkeytail-log.jpg` header band, then an article body with the
 purpose-statement blockquote, the community-members "tree" illustration, and
-How to Join / Belonging sections, then a "Get involved" button.
+How to Join / Belonging sections, then a "Connect" button.
 
-Below a `<Divider />` after "Get involved" sits the history log — a
+Below a `<Divider />` after "Connect" sits the history log — a
 title-based record of every weekly session back to January 2021, which used
 to be a standalone `/history` page and is here because it's the same
 community, its present and its past. `/history` 301s here (see

@@ -24,3 +24,7 @@
 [[redirects]]
   from = "/history"
   to = "/community"
+
+[[redirects]]
+  from = "/get-involved"
+  to = "/connect"
