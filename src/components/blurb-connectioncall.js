@@ -9,6 +9,6 @@ export const CONNECTION_CALL_URL = 'https://us02web.zoom.us/meeting/register/nhm
 
 const NamedDefault = () => <>
   Our next <a href={CONNECTION_CALL_URL}>
-  IS Connection Call</a> is on <b>Saturday, November 21<sup>st</sup> at 1:00-1:55pm Pacific Time (4pm Eastern, 9pm UTC)</b>.
+  IS Connection Call</a> is on <b>Saturday, November 21<sup>st</sup> at 11:00-11:55am Pacific Time (2pm Eastern, 7pm UTC)</b>.
 </>;
 export default NamedDefault;
