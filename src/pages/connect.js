@@ -19,7 +19,7 @@ const PAGE = {
   metaTitle: 'Connect with Intentional Society',
   siteName: false,
   description: 'how to connect with the people and ideas of Intentional Society',
-  metaDescription: 'Come to a Connection Call — the easiest first step into the Intentional Society web of trust and collaboration.',
+  metaDescription: 'Start at an open Connection Call — the best first step into Intentional Society — or find other ways to get in touch.',
 };
 
 const linkStyle = { color: ACCENT };
@@ -46,12 +46,14 @@ const NamedDefault = () => (
       <a id="connection-calls" style={anchor}></a>
       <h2 style={{ ...optionHeading, marginTop: 0 }}>Attend a Connection Call</h2>
       <p style={{ ...bodyP, marginBottom: '1rem' }}>
-        This call is like a picnic table out on our front lawn. Open to all, new and
-        familiar, with no agenda other than your curiosity!
+        Showing up to an IS Connection Call is almost always the best place to start!
+        Think of the setting as a picnic table on a sunny day, out on the front lawn in
+        front of the campus. Walk up, sit down, and discover who else is at the table and
+        what kind of conversation wants to emerge! Open to all, first-timers through
+        regulars, with no fixed agenda other than our collective curiosity.
       </p>
       <p style={{ ...bodyP, marginBottom: '2.5rem' }}>
-        <BlurbConnectionCall /> Already have a
-        referral? <a href="https://app.intentionalsociety.org" target="_blank" rel="noopener noreferrer" style={linkStyle}>Sign in at app.intentionalsociety.org</a>.
+        <BlurbConnectionCall />
       </p>
       {/* No bottom margin: an inline-block's won't collapse with the next
           heading's, so the following h2 owns the gap. */}
@@ -68,6 +70,11 @@ const NamedDefault = () => (
         Every Thursday, a friendly update with public events and reflections. Browse
         the <a href="https://buttondown.email/intentionalsociety/archive/" target="_blank" rel="noopener noreferrer" style={linkStyle}>archive</a> for
         samples. Watch for a confirmation email to finish signing up.
+      </p>
+
+      <h3 style={subsectionHeading}>Sign in to the Web</h3>
+      <p style={{ ...bodyP, marginBottom: '2rem' }}>
+        Already have an IS Web App account? <a href="https://app.intentionalsociety.org" target="_blank" rel="noopener noreferrer" style={linkStyle}>Sign in at app.intentionalsociety.org</a>.
       </p>
 
       <h3 style={subsectionHeading}>Find relational practice groups</h3>
