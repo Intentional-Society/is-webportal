@@ -398,7 +398,6 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="turkeytail-log.jpg" credit="Bill Claff"
-      titleSize="clamp(2rem,4vw,3rem)"
       title={PAGE.title}
       description={PAGE.description}
     />
@@ -407,7 +406,7 @@ const NamedDefault = () => (
     <Article2026>
 
       <blockquote style={{
-        fontFamily: serif, fontSize: 'clamp(1.2rem,2.2vw,1.5rem)', fontStyle: 'italic', fontWeight: 400,
+        fontFamily: serif, fontSize: '24px', fontStyle: 'italic', fontWeight: 400,
         color: HEADING, borderLeft: '2px solid #7A9E8A', paddingLeft: '1.5rem', margin: '0 0 2.5rem', lineHeight: 1.6,
       }}>
         "Home is where somebody notices when you are no longer there."

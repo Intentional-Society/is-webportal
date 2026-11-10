@@ -22,7 +22,6 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="cosmos.jpg" focus="center" credit="Bill Claff" veil="news"
-      width="720px"
       title={PAGE.title} dateLabel="December 2020"
     />
 

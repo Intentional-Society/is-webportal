@@ -119,15 +119,8 @@ export const bodyLi = { marginBottom: '0.4rem' };
 // heading-to-body ratio on window width alone.
 export const sectionHeading = {
   fontFamily: serif, fontWeight: 300, lineHeight: 1.2,
-  fontSize: '28px', color: HEADING, margin: '0 0 1.4rem',
+  fontSize: '32px', color: HEADING, margin: '0 0 1.4rem',
 };
-
-// One step up, for a page whose sections outrank an ordinary section (about's
-// nine, contact's confirmation).
-export const sectionHeadingLarge = { ...sectionHeading, fontSize: '32px' };
-
-// One step down, for a sub-topic within a section rather than a new one.
-export const sectionHeadingSmall = { ...sectionHeading, fontSize: '24px' };
 
 // The h3 under a sectionHeading. Serif so it reads as the next step of the
 // same scale rather than as heavier body copy — a sans h3 this close in size
@@ -135,7 +128,7 @@ export const sectionHeadingSmall = { ...sectionHeading, fontSize: '24px' };
 // UA stylesheet bolds an h3 otherwise.
 export const subsectionHeading = {
   fontFamily: serif, fontWeight: 500, fontStyle: 'italic', lineHeight: 1.2,
-  fontSize: '22px', color: INK, margin: '0 0 0.7rem',
+  fontSize: '26px', color: INK, margin: '0 0 0.7rem',
 };
 
 // Inline links inside body copy. ACCENT_DARK rather than ACCENT: at body size
@@ -216,23 +209,15 @@ const VEILS = {
   news: 'linear-gradient(180deg, rgba(14,18,22,0.6) 0%, rgba(14,18,22,0.5) 50%, rgba(14,18,22,0.66) 100%)',
 };
 
-// Two title sizes rather than a bespoke clamp per page — pages had drifted
-// into nine different clamps, several by copy-paste rather than intent.
-// `standard` is the default, sized to read as confidently as About's `large`
-// without quite matching it. Community passes an explicit smaller raw clamp()
-// instead of a named size — its title runs long enough that a bigger size
-// crowded the band.
-const TITLE_SIZES = {
-  large: 'clamp(2.2rem,3.8vw,3.4rem)',
-  standard: 'clamp(2.2rem,4.2vw,3.2rem)',
-};
+// One title size for every band.
+const TITLE_SIZE = 'clamp(2.2rem,4.6vw,3.5rem)';
 
 // Italic description line under a band's title. Deliberately not exported:
 // pass the text as the band's `description` prop instead of styling a <p> at
 // the call site.
 const headerDescription = {
-  fontFamily: serif, color: '#FAF8F3', fontSize: '1.3rem', fontWeight: 500,
-  fontStyle: 'italic', lineHeight: 1.6, margin: '0 auto', maxWidth: '600px',
+  fontFamily: serif, color: '#FAF8F3', fontSize: '26px', fontWeight: 500,
+  fontStyle: 'italic', lineHeight: 1.6, margin: '0 auto', maxWidth: '720px',
   textShadow: '0 1px 12px rgba(8,12,16,0.8)',
 };
 
@@ -248,13 +233,13 @@ const headerDescription = {
 // it needs a link inside. `kicker` renders an eyebrow label above the h1. No
 // page passes one now — the subpage kickers were dropped as redundant with the
 // nav — but the prop still works if a band ever needs one again.
-// `focus` is the CSS background-position ('center 40%'); `titleSize` a key of
-// TITLE_SIZES, or a raw font-size/clamp() string for a genuine one-off; `width`
-// the text column's max width; `veil` a key of VEILS above. Omit `credit` for a
+// `focus` is the CSS background-position ('center 40%'); `width` the text
+// column's max width inside its padding, by default the article column's 720px; `veil`
+// a key of VEILS above. Omit `credit` for a
 // header whose photo isn't a community member's.
 export const HeaderBand = ({
   image, focus = 'center', credit, kicker, title, description,
-  titleSize = 'standard', width = '640px', veil = 'deep', dateLabel,
+  width = '720px', veil = 'deep', dateLabel,
 }) => (
   <div className="credit-host" style={{ position: 'relative', marginTop: NAV_OFFSET }}>
     <header style={{
@@ -266,11 +251,11 @@ export const HeaderBand = ({
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1, background: VEILS[veil],
       }} />
-      <div style={{ position: 'relative', zIndex: 2, maxWidth: width, padding: '4rem 2rem' }}>
+      <div style={{ position: 'relative', zIndex: 2, maxWidth: `calc(${width} + 4rem)`, padding: '4rem 2rem' }}>
         {kicker && <div style={headerKicker}>{kicker}</div>}
         <h1 style={{
           fontFamily: serif, fontWeight: 500, fontStyle: 'italic', lineHeight: 1.25,
-          fontSize: TITLE_SIZES[titleSize] || titleSize,
+          fontSize: TITLE_SIZE,
           color: '#FAF8F3', textShadow: '0 2px 24px rgba(8,12,16,0.8)',
           margin: description ? '0 0 1.2rem' : 0,
         }}>{title}</h1>

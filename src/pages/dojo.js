@@ -43,7 +43,6 @@ const NamedDefault = () => (
     {/* ======== Header band ======== */}
     <HeaderBand
       image="luminaria-row.jpg" credit="Bill Claff"
-      titleSize="large"
       title={PAGE.title}
       description={PAGE.description}
     />

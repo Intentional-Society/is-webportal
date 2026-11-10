@@ -216,13 +216,12 @@ for FAQ answers on `/resources`. `MUTED` (`#6B6860`) secondary text — asides,
 small-print, list descriptions, photo captions — is the same weight, just
 smaller.
 
-**Article h2s are a fixed three-step scale**, not viewport-scaled:
-`sectionHeadingLarge` 32px, `sectionHeading` 28px, `sectionHeadingSmall` 24px.
-`Article2026`'s column is a fixed 720px and body copy a fixed 20px, so a `vw`
-size changes the heading-to-body ratio with window width and nothing else —
-which is what the old `clamp(1.5rem,2.6vw,2rem)` did between 923px and 1231px.
-Reach for a tier rather than a new size; `vw` belongs to the header bands and
-the homepage's full-bleed sections, where the container is viewport-sized too.
+**Article type is fixed-size**, not viewport-scaled: h2 `sectionHeading` 32px,
+h3 `subsectionHeading` 26px, body 20px. `Article2026`'s column is a fixed 720px,
+so a `vw` size changes the heading-to-body ratio with window width and nothing
+else. Reach for one of these rather than a new size; `vw` belongs to the
+header-band h1 and the homepage's full-bleed sections, where the container is
+viewport-sized too.
 
 **Don't write a weight for normal text.** The shell is 400, which is Gudea's
 normal weight, so ordinary copy inherits the right thing by saying nothing. A
@@ -259,7 +258,7 @@ eyebrow style), and `HeaderBand` — the photo/veil/kicker/h1 band every
 interior page opens with. Prefer `HeaderBand` over hand-rolling a header:
 props are `image`, `focus`, `credit`, `kicker`, `title`, `description` (the
 italic line under the title — a string, or a node when it needs a link
-inside), `titleSize` (`large`/`standard`/`compact`, or a raw clamp), `width`,
+inside), `width`,
 and `veil` (`deep`/`news`). The band renders and styles the description
 itself, so don't reach for the (private) `headerDescription` style at a call
 site. `HeaderBand` takes no children — every band is title + optional

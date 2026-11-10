@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import {
-  bodyP, bodyUl, bodyLi, sectionHeadingLarge, sectionHeadingSmall, linkStyle,
+  bodyP, bodyUl, bodyLi, sectionHeading, subsectionHeading, linkStyle,
   Head2026, HeaderBand, PhotoCredit, Page2026, Article2026, Divider,
 } from '../components/design2026/chrome';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -27,7 +27,6 @@ const NamedDefault = () => (
     <HeaderBand
       image="crescent-butterflyweed.jpg" credit="Bill Claff"
       width="820px"
-      titleSize="large"
       title={PAGE.title}
       description={PAGE.description}
     />
@@ -35,7 +34,7 @@ const NamedDefault = () => (
     {/* ======== Article body ======== */}
     <Article2026>
 
-      <h2 style={sectionHeadingLarge}>Why we're here</h2>
+      <h2 style={sectionHeading}>Why we're here</h2>
       <p style={bodyP}>
         Why? The complexity of the evolving world calls us to be wise enough to handle our
         power. As humans and humanity, our technological evolution is racing our cultural
@@ -46,7 +45,7 @@ const NamedDefault = () => (
         the capacity to hold the complexity and wisely choose paths of goodness and love.
       </p>
 
-      <h2 style={sectionHeadingLarge}>About the name</h2>
+      <h2 style={sectionHeading}>About the name</h2>
       <p style={bodyP}>
         The name "Intentional Society" is a pointer. It's a finger pointing to the moon,
         pointing to a future of human flourishing. To be intentional is to see clearly, move
@@ -57,9 +56,9 @@ const NamedDefault = () => (
       </p>
 
       <Divider />
-      <h2 style={sectionHeadingLarge}>About how</h2>
+      <h2 style={sectionHeading}>About how</h2>
 
-      <h2 style={sectionHeadingLarge}>The three mental moves of growth</h2>
+      <h2 style={sectionHeading}>The three mental moves of growth</h2>
       <p style={bodyP}>Our big claim: We know how to grow.</p>
       <ul style={bodyUl}>
         <li style={bodyLi}><strong>Awareness (noun) / Noticing (verb)</strong></li>
@@ -74,7 +73,7 @@ const NamedDefault = () => (
         Finally, we are free to choose how we show up in the world as our best and biggest self.
       </p>
 
-      <h2 style={sectionHeadingLarge}>Three scopes and strategies for flourishing</h2>
+      <h2 style={sectionHeading}>Three scopes and strategies for flourishing</h2>
       <ul style={bodyUl}>
         <li style={bodyLi}><strong>I — Inner development</strong></li>
         <li style={bodyLi}><strong>We — Relational culture</strong></li>
@@ -98,7 +97,7 @@ const NamedDefault = () => (
       </figure>
 
 
-      <h2 style={sectionHeadingLarge}>About the spaces</h2>
+      <h2 style={sectionHeading}>About the spaces</h2>
       <p style={bodyP}>
         Intentional Society is an ecosystem of capacity-building spaces, not a single place,
         practice, or people. These spaces range from public to friends to by-application, and
@@ -131,7 +130,7 @@ const NamedDefault = () => (
         generation and economic interweaving.
       </p>
 
-      <h2 style={sectionHeadingLarge}>About the people</h2>
+      <h2 style={sectionHeading}>About the people</h2>
       <p style={bodyP}>
         We are a globally distributed constellation of friends with a penchant for connecting
         predominantly through face-to-face video calls. We generally identify as
@@ -141,7 +140,7 @@ const NamedDefault = () => (
         ethnicity, religious (or non-) background, socioeconomic status, and other perspectives.
       </p>
 
-      <h2 style={sectionHeadingLarge}>About the vibe</h2>
+      <h2 style={sectionHeading}>About the vibe</h2>
       <p style={bodyP}>
         The cornerstone of our culture is first and foremost that we are each
         on a path of growing and becoming, and that we value that for ourselves and each other.
@@ -161,7 +160,7 @@ const NamedDefault = () => (
         achieved.
       </p>
 
-      <h2 style={sectionHeadingLarge}>About time(s)</h2>
+      <h2 style={sectionHeading}>About time(s)</h2>
       <p style={bodyP}>
         "IS Time" for globally-targeted events is 1pm Pacific, which is 8pm or 9pm UTC
         depending on DST. This serves our primary time zones in the Americas, and secondarily
@@ -179,9 +178,9 @@ const NamedDefault = () => (
       <Divider />
 
       {/* Deliberately developmental details for geeks */}
-      <h2 style={{ ...sectionHeadingSmall, fontStyle: 'italic' }}>
+      <h3 style={subsectionHeading}>
         Deliberately developmental details for geeks
-      </h2>
+      </h3>
       <p style={bodyP}>
         To use more precise but technical language, what we're doing together is <strong>authoring
         a developmental community of practice with a culture of expanded awareness</strong>. There's

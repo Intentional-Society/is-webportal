@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {
-  sans, ACCENT, INK, bodyP, sectionHeadingLarge,
+  sans, ACCENT, INK, bodyP, sectionHeading,
   Head2026, HeaderBand, Page2026, Article2026, BackLink,
 } from '../components/design2026/chrome';
 
@@ -76,7 +76,7 @@ const NamedDefault = () => {
 
         {status === 'sent' ? (
           <>
-            <h2 style={sectionHeadingLarge}>Thank you</h2>
+            <h2 style={sectionHeading}>Thank you</h2>
             <p style={bodyP}>Your message has been sent. We'll get back to you soon.</p>
           </>
         ) : (
