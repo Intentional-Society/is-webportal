@@ -474,27 +474,35 @@ const socialLinks = [
 export const Footer2026 = () => (
   <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans, overflowX: 'hidden' }}>
     <RawStyle>{`
-      .footer2026-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 1.2rem; }
-      /* No intermediate 2-column tier: halving three columns strands one on a
-         row of its own, and all three fit down to the single-column break. */
-      @media (max-width: 480px) { .footer2026-links { grid-template-columns: 1fr; gap: 1.8rem; } }
+      /* flex, not equal-width grid columns: three 1fr cells left the group
+         looking left-shifted, since the Connect column's short links don't
+         fill a third of the row — flex sizes each column to its own content
+         and centers the row as a whole instead. */
+      .footer2026-links { display: flex; justify-content: center; gap: 0 3.5rem; }
+      @media (max-width: 480px) {
+        .footer2026-links { flex-direction: column; align-items: center; gap: 1.8rem; }
+        .footer2026-links > div { text-align: center !important; }
+      }
       .footer2026-social a { color: ${MUTED}; }
       .footer2026-social a:hover { color: ${ACCENT_DARK}; }
     `}</RawStyle>
     <div style={{ maxWidth: '900px', margin: '0 auto' }}>
       <div className="footer2026-links">
-        {footerColumns.map(col => (
-          <div key={col.heading}>
-            <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>{col.heading}</h4>
-            <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-              {col.links.map(l => (
-                <li key={l.text} style={{ fontSize: '17px', marginBottom: '0.65rem' }}>
-                  <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        {footerColumns.map((col, i) => {
+          const align = i === 0 ? 'left' : i === footerColumns.length - 1 ? 'right' : 'center';
+          return (
+            <div key={col.heading} style={{ textAlign: align }}>
+              <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>{col.heading}</h4>
+              <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+                {col.links.map(l => (
+                  <li key={l.text} style={{ fontSize: '17px', marginBottom: '0.65rem' }}>
+                    <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
       </div>
     </div>
     <div className="footer2026-social" style={{
@@ -512,6 +520,7 @@ export const Footer2026 = () => (
     <div style={{
       maxWidth: '720px', margin: '1.2rem auto 0', paddingTop: '1.5rem',
       borderTop: '1px solid rgba(42,42,36,0.06)', fontSize: '14px', color: MUTED,
+      textAlign: 'center',
     }}>
       © 2020–{new Date().getFullYear()} Intentional Society. Photographs remain
       the property of their respective creators.
