@@ -106,6 +106,9 @@ const NamedDefault = ({ data }) => {
       .podcast-transcript p { margin: 0 0 1rem; }
       .podcast-transcript strong { color: ${INK}; }
       .podcast-transcript hr { border: none; border-top: 1px solid rgba(42,42,36,0.12); margin: 1.2rem 0; }
+      /* The transcript file's own h1 repeats the episode title already shown
+         above it in the card, so it's dropped rather than restyled down. */
+      .podcast-transcript h1 { display: none; }
     `}</RawStyle>
 
     {/* ======== Header band ======== */}

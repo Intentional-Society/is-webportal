@@ -76,9 +76,7 @@ I thought I could fundraise for it. I do a lot of fundraising, so I was pretty c
 
 Luckily I had some friends I could talk to. They helped me out, and the way forward was so beautiful and so unexpected for me.
 
-**Shaun:** Your fool.
-
-**Jason:** And it was crazy at the time. The idea was to live simply — if I need less, I don't need to raise as much. I didn't have a family; I'd gone through a divorce. So it ended up being this perfect place in my life where I had the ability, the privilege, to live more minimally. And it allowed me to focus a full-time amount of effort into a project.
+And it was crazy at the time. The idea was to live simply — if I need less, I don't need to raise as much. I didn't have a family; I'd gone through a divorce. So it ended up being this perfect place in my life where I had the ability, the privilege, to live more minimally. And it allowed me to focus a full-time amount of effort into a project.
 
 So I leaned into receiving public support. And because my needs were so minimal, the fundraising I had done could support other people too. We now have several volunteers who all receive what we call gifts — essentially stipends for people who can commit a certain number of hours a week to the organization.
 
