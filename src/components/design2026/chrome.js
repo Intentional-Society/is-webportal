@@ -446,33 +446,81 @@ const footerColumns = [
   },
 ];
 
+// Social icons for the footer — one 20×20 currentColor SVG path per
+// platform, so colour/hover is set once on the <a> rather than per-icon.
+const socialLinks = [
+  {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/intentional_society/',
+    path: 'M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4Zm5.3-3.1a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z',
+  },
+  {
+    name: 'YouTube',
+    href: 'https://www.youtube.com/channel/UC9qsoNftanVeSJ2VB54xyGg',
+    path: 'M21.6 7.2s-.21-1.49-.86-2.14c-.82-.86-1.74-.86-2.16-.91C15.6 4 12 4 12 4h-.01s-3.6 0-6.58.15c-.42.05-1.34.05-2.16.91-.65.65-.86 2.14-.86 2.14S2.18 8.95 2.18 10.7v1.6c0 1.75.21 3.5.21 3.5s.21 1.49.86 2.14c.82.86 1.9.83 2.38.92 1.72.17 7.33.22 7.37.22s3.61-.01 6.59-.15c.42-.05 1.34-.06 2.16-.92.65-.65.86-2.14.86-2.14s.21-1.75.21-3.5v-1.6c0-1.75-.21-3.5-.21-3.5ZM9.98 14.6V8.9l5.6 2.85-5.6 2.85Z',
+  },
+  {
+    name: 'TikTok',
+    href: 'https://www.tiktok.com/@intentional_society',
+    path: 'M14.5 2h2.1c.14 1.1.63 2.07 1.4 2.8.78.74 1.78 1.19 2.9 1.3v2.17a6.9 6.9 0 0 1-3.9-1.3v6.6a5.4 5.4 0 1 1-5.4-5.4c.19 0 .37.01.55.04v2.2a3.2 3.2 0 1 0 2.35 3.08V2Z',
+  },
+  {
+    name: 'X (Twitter)',
+    href: 'https://x.com/IntentionalSoc',
+    path: 'M3 3h4.4l4 5.4L16.1 3H19l-6 7.2L19.5 21h-4.4l-4.2-5.7L5.6 21H3l6.3-7.5L3 3Zm3.1 1.5 9.9 15h1.9l-9.9-15H6.1Z',
+  },
+];
+
 export const Footer2026 = () => (
   <footer style={{ background: '#F2EDE4', borderTop: '1px solid rgba(42,42,36,0.08)', padding: '3rem 2rem', fontFamily: sans, overflowX: 'hidden' }}>
     <RawStyle>{`
-      .footer2026-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 1.2rem; }
-      /* No intermediate 2-column tier: halving three columns strands one on a
-         row of its own, and all three fit down to the single-column break. */
-      @media (max-width: 480px) { .footer2026-links { grid-template-columns: 1fr; gap: 1.8rem; } }
+      /* flex, not equal-width grid columns: three 1fr cells left the group
+         looking left-shifted, since the Connect column's short links don't
+         fill a third of the row — flex sizes each column to its own content
+         and centers the row as a whole instead. */
+      .footer2026-links { display: flex; justify-content: center; gap: 0 3.5rem; }
+      @media (max-width: 480px) {
+        .footer2026-links { flex-direction: column; align-items: center; gap: 1.8rem; }
+        .footer2026-links > div { text-align: center !important; }
+      }
+      .footer2026-social a { color: ${MUTED}; }
+      .footer2026-social a:hover { color: ${ACCENT_DARK}; }
     `}</RawStyle>
     <div style={{ maxWidth: '900px', margin: '0 auto' }}>
       <div className="footer2026-links">
-        {footerColumns.map(col => (
-          <div key={col.heading}>
-            <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>{col.heading}</h4>
-            <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-              {col.links.map(l => (
-                <li key={l.text} style={{ fontSize: '17px', marginBottom: '0.65rem' }}>
-                  <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        {footerColumns.map((col, i) => {
+          const align = i === 0 ? 'left' : i === footerColumns.length - 1 ? 'right' : 'center';
+          return (
+            <div key={col.heading} style={{ textAlign: align }}>
+              <h4 style={{ fontFamily: serif, fontSize: '13px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', color: MUTED, margin: '0 0 1rem' }}>{col.heading}</h4>
+              <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
+                {col.links.map(l => (
+                  <li key={l.text} style={{ fontSize: '17px', marginBottom: '0.65rem' }}>
+                    <Link to={l.to} style={{ color: MUTED, textDecoration: 'none' }}>{l.text}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
       </div>
     </div>
+    <div className="footer2026-social" style={{
+      display: 'flex', justifyContent: 'center', gap: '1.4rem',
+      maxWidth: '720px', margin: '2rem auto 0',
+    }}>
+      {socialLinks.map(s => (
+        <a key={s.name} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.name}>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d={s.path} />
+          </svg>
+        </a>
+      ))}
+    </div>
     <div style={{
-      maxWidth: '720px', margin: '2rem auto 0', paddingTop: '1.5rem',
+      maxWidth: '720px', margin: '1.2rem auto 0', paddingTop: '1.5rem',
       borderTop: '1px solid rgba(42,42,36,0.06)', fontSize: '14px', color: MUTED,
+      textAlign: 'center',
     }}>
       © 2020–{new Date().getFullYear()} Intentional Society. Photographs remain
       the property of their respective creators.
