@@ -68,7 +68,7 @@ const NamedDefault = () => (
       </div>
       <p style={{ ...bodyP, marginBottom: '2rem' }}>
         Every Thursday, a friendly update with public events and reflections. Browse
-        the <a href="https://buttondown.email/intentionalsociety/archive/" target="_blank" rel="noopener noreferrer" style={linkStyle}>archive</a> for
+        the <a href="https://newsletter.intentionalsociety.org/archive/" target="_blank" rel="noopener noreferrer" style={linkStyle}>archive</a> for
         samples. Watch for a confirmation email to finish signing up.
       </p>
 

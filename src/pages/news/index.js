@@ -63,7 +63,7 @@ const NamedDefault = () => (
         <p style={{ fontSize: '20px', color: BODY_TEXT, margin: 0 }}>
           Looking for our weekly community updates? Those live on our newsletter archive.
         </p>
-        <a href="https://buttondown.com/intentionalsociety/archive/" target="_blank" rel="noopener noreferrer" style={{
+        <a href="https://newsletter.intentionalsociety.org/archive/" target="_blank" rel="noopener noreferrer" style={{
           fontFamily: sans, fontSize: '17px', color: ACCENT_DARK, textDecoration: 'none',
           borderBottom: '1px solid rgba(26,66,50,0.3)', whiteSpace: 'nowrap',
         }}>Weekly updates archive →</a>

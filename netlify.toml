@@ -9,6 +9,16 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# The site is also still reachable at its default Netlify subdomain, with
+# nothing yet sending it on to the real domain — a host-exact redirect, so
+# it only matches that one host and leaves deploy previews (a different
+# subdomain) alone.
+[[redirects]]
+  from = "https://is-webportal.netlify.app/*"
+  to = "https://www.intentionalsociety.org/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/who-we-are"
   to = "/about"

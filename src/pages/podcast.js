@@ -1,8 +1,8 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import {
-  sans, ACCENT, ACCENT_DARK, INK, MUTED, bodyP, sectionHeading, subsectionHeading,
-  Head2026, HeaderBand, Page2026, Article2026, Divider, RawStyle,
+  sans, ACCENT, ACCENT_DARK, INK, MUTED, linkStyle, bodyP, sectionHeading, subsectionHeading,
+  Head2026, HeaderBand, Page2026, Article2026, Divider, RawStyle, SITE_URL,
 } from '../components/design2026/chrome';
 
 // The Intentional Society Podcast. Episode synopses below are JSX (short,
@@ -73,7 +73,7 @@ const episodes = [
     body: [
       'Faith once had it all on the good track — high-flying career in San Francisco tech startups, at the pinnacle of her field. In 2016, she walked away into a long, dark night. What followed was years of serious mental illness, isolation, and searching, before she found her way into what she now calls soul work.',
       "Today she describes her life as blissful — not in an escapist way. For Faith, joy is what happens when all the emotions are allowed to be there. She talks about not feeling alone even when she's lonely, about treating even her most painful experiences as something to cherish, and about life as a composition of dark and light where nothing has to be thrown away.",
-      "In this conversation, Faith traces her journey from evangelical child to tech executive to spiritual guide — through Tantric Shaivism, bipolar disorder, the liminal web, and finally to soul logic: a way of navigating life that calls on intuition, beauty, and a relational partnership with the soul itself. She makes the case that beauty is a better guide than right and wrong.",
+      'In this conversation, Faith traces her journey from evangelical child to tech executive to spiritual guide — through Tantric Shaivism, bipolar disorder, the liminal web, and finally to soul logic: a way of navigating life that calls on intuition, beauty, and a relational partnership with the soul itself. She makes the case that beauty is a better guide than right and wrong.',
     ],
     themes: 'soul work, soul logic, dark night of the soul, beauty as guide, spiritual intelligence, imaginal practices, psychopomp work, meaning crisis, acceptance',
   },
@@ -121,6 +121,22 @@ const NamedDefault = ({ data }) => {
     {/* ======== Article body ======== */}
     <Article2026>
 
+      {/* DRAFT copy: confirm with James */}
+      <p style={bodyP}>
+        Liminal Stories is a podcast from Intentional Society, a free, online, peer-led
+        community for relational practice and personal growth. Each episode is a long-form
+        conversation with someone in our network about their path, what changed them, and
+        what they're building now.
+      </p>
+      <p style={{ ...bodyP, marginBottom: '2rem' }}>
+        Want to meet people like this?{' '}
+        <Link to="/connect#connection-calls" style={linkStyle}>Join a Connection Call</Link>
+        {' · '}
+        <Link to="/connect#newsletter" style={linkStyle}>Get the newsletter</Link>
+      </p>
+
+      <Divider />
+
       <p style={bodyP}>
         Something is shifting in how people understand work, community, and what a life is
         for. Some people feel it as restlessness. Some feel it as breakdown. Some follow a
@@ -166,7 +182,7 @@ const NamedDefault = ({ data }) => {
       {episodes.map(ep => {
         const node = transcriptsBySlug[ep.slug];
         return (
-          <div key={ep.slug} style={{ marginBottom: '2rem' }}>
+          <div key={ep.slug} id={ep.slug} style={{ marginBottom: '2rem' }}>
             <h3 style={subsectionHeading}>{ep.title}</h3>
             <p style={episodeMeta}>
               <strong>Guest:</strong> {ep.guest} <span style={{ margin: '0 0.5em' }}>·</span>
@@ -190,6 +206,16 @@ const NamedDefault = ({ data }) => {
         );
       })}
 
+      <Divider />
+
+      {/* DRAFT copy: confirm with James */}
+      <p style={bodyP}>
+        Want to meet people like this?{' '}
+        <Link to="/connect#connection-calls" style={linkStyle}>Join a Connection Call</Link>
+        {' · '}
+        <Link to="/connect#newsletter" style={linkStyle}>Get the newsletter</Link>
+      </p>
+
     </Article2026>
   </Page2026>
   );
@@ -197,8 +223,36 @@ const NamedDefault = ({ data }) => {
 
 export default NamedDefault;
 
+// PodcastSeries + one PodcastEpisode per published episode. `datePublished`
+// is left off each episode — the `recorded` field above is a recording date
+// (often just a bare year), not a reliable publish date, and episodes don't
+// have their own URL yet (see CLAUDE.md note on that planned later step), so
+// `url` points at this page's anchor for the episode instead.
+const podcastJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'PodcastSeries',
+      '@id': `${SITE_URL}/podcast#podcastseries`,
+      name: 'Liminal Stories',
+      url: `${SITE_URL}/podcast`,
+      description: 'Liminal Stories is a podcast from Intentional Society, a free, online, peer-led community for relational practice and personal growth.',
+      publisher: { '@id': `${SITE_URL}/#organization` },
+    },
+    ...episodes.map(ep => ({
+      '@type': 'PodcastEpisode',
+      name: ep.title,
+      url: `${SITE_URL}/podcast#${ep.slug}`,
+      partOfSeries: { '@id': `${SITE_URL}/podcast#podcastseries` },
+    })),
+  ],
+};
+
 export const Head = ({ location }) => (
-  <Head2026 {...PAGE} pathname={location.pathname} />
+  <>
+    <Head2026 {...PAGE} pathname={location.pathname} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(podcastJsonLd) }} />
+  </>
 );
 
 export const query = graphql`

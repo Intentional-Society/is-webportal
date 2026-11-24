@@ -4,7 +4,7 @@ import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import {
   serif, sans, ACCENT, ACCENT_DARK, INK, MUTED, BODY_TEXT, PAPER, HEADING,
   sectionHeading, Head2026, PhotoCredit, Page2026, RawStyle,
-  NAV_HEIGHT, NAV_OFFSET,
+  NAV_HEIGHT, NAV_OFFSET, SITE_URL,
 } from '../components/design2026/chrome';
 import { FullBleedPhoto } from '../components/design2026/photo';
 
@@ -649,6 +649,43 @@ const NamedDefault = () => {
 
 export default NamedDefault;
 
+// Organization + WebSite JSON-LD, so search engines and AI assistants know
+// what Intentional Society is without confusing it for a residential
+// "intentional community" — the name collision this exists to head off.
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'Intentional Society',
+      alternateName: 'IS',
+      url: `${SITE_URL}/`,
+      logo: `${SITE_URL}/design2026/logo.png`,
+      description: 'Intentional Society is a free, online, peer-led community for relational practice, personal growth, and wise action. Members meet on video calls; it is not a residential intentional community.',
+      foundingDate: '2021',
+      sameAs: [
+        'https://www.instagram.com/intentional_society/',
+        'https://www.tiktok.com/@intentional_society',
+        'https://www.youtube.com/channel/UC9qsoNftanVeSJ2VB54xyGg',
+        'https://x.com/IntentionalSoc',
+        'https://newsletter.intentionalsociety.org',
+        'https://ecosystem.secondrenaissance.net/cohere/profiles/Intentional_Society',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: `${SITE_URL}/`,
+      name: 'Intentional Society',
+      publisher: { '@id': `${SITE_URL}/#organization` },
+    },
+  ],
+};
+
 export const Head = ({ location }) => (
-  <Head2026 {...PAGE} pathname={location.pathname} />
+  <>
+    <Head2026 {...PAGE} pathname={location.pathname} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+  </>
 );

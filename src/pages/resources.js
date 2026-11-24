@@ -43,7 +43,7 @@ const practices = [
         thoughts. The sweet spot is a balance of maintaining accuracy and fidelity to their original
         expression while also using one's own representations (rather than parroting back word-for-word).</p>
       <p style={linksLine}>
-        <a href="http://www.empathycircle.com/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Website</a> · <a href="http://bit.ly/EmpathyCirclePDFv2" target="_blank" rel="noopener noreferrer" style={linkStyle}>How-To</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-reflecting-and-empathy/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+        <a href="http://www.empathycircle.com/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Website</a> · <a href="http://bit.ly/EmpathyCirclePDFv2" target="_blank" rel="noopener noreferrer" style={linkStyle}>How-To</a> · <a href="https://newsletter.intentionalsociety.org/archive/intentional-society-reflecting-and-empathy/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
       </p>
     </>,
   },
@@ -55,7 +55,7 @@ const practices = [
         assembled by Sara Ness. We've used the Noticing game, Hotseat, and others as building blocks
         of culture and communication.</p>
       <p style={linksLine}>
-        <a href="https://www.authrev.org/what-is-authentic-relating" target="_blank" rel="noopener noreferrer" style={linkStyle}>Authentic Revolution's</a> <a href="https://authrev.gumroad.com/l/AR-Games" target="_blank" rel="noopener noreferrer" style={linkStyle}>Games Manual</a> · <a href="https://authenticrelating.co/" target="_blank" rel="noopener noreferrer" style={linkStyle}>ART International's</a> <a href="https://authenticrelating.co/five-practices/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Five Practices of Authentic Relating</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-i-notice-you-seem/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+        <a href="https://www.authrev.org/what-is-authentic-relating" target="_blank" rel="noopener noreferrer" style={linkStyle}>Authentic Revolution's</a> <a href="https://authrev.gumroad.com/l/AR-Games" target="_blank" rel="noopener noreferrer" style={linkStyle}>Games Manual</a> · <a href="https://authenticrelating.co/" target="_blank" rel="noopener noreferrer" style={linkStyle}>ART International's</a> <a href="https://authenticrelating.co/five-practices/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Five Practices of Authentic Relating</a> · <a href="https://newsletter.intentionalsociety.org/archive/intentional-society-i-notice-you-seem/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
       </p>
     </>,
   },
@@ -68,7 +68,7 @@ const practices = [
         has <a href="https://integralcentered.com/3-schools-circling/" target="_blank" rel="noopener noreferrer" style={linkStyle}>three major schools</a> of
         practice, plus stylistic variations that fix (birthday) or flow (organic) the focus of attention.</p>
       <p style={linksLine}>
-        <a href="https://tasshin.com/blog/what-is-circling/" target="_blank" rel="noopener noreferrer" style={linkStyle}>What is Circling?</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-circling-experience-report/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+        <a href="https://tasshin.com/blog/what-is-circling/" target="_blank" rel="noopener noreferrer" style={linkStyle}>What is Circling?</a> · <a href="https://newsletter.intentionalsociety.org/archive/intentional-society-circling-experience-report/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
       </p>
     </>,
   },
@@ -80,7 +80,7 @@ const practices = [
         space of a preselected open question, participants bring their observations "to the center" of
         the circle, where deep listening weaves reflections together in a super-mind-ish phenomenon.</p>
       <p style={linksLine}>
-        <a href="https://www.collectivepresencing.org/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Website (with full book)</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-unfolding-the-collective/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+        <a href="https://www.collectivepresencing.org/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Website (with full book)</a> · <a href="https://newsletter.intentionalsociety.org/archive/intentional-society-unfolding-the-collective/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
       </p>
     </>,
   },
@@ -93,7 +93,7 @@ const practices = [
         questions while staying in curiosity. Designed as question-finding, it can be paired with
         another question-answering/exploring practice.</p>
       <p style={linksLine}>
-        <a href="https://www.intentionalsociety.org/files/Inquiry_Spiraling.pdf" target="_blank" rel="noopener noreferrer" style={linkStyle}>Instructions</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-staying-in-curiosity-with-inquiry-spiraling/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+        <a href="https://www.intentionalsociety.org/files/Inquiry_Spiraling.pdf" target="_blank" rel="noopener noreferrer" style={linkStyle}>Instructions</a> · <a href="https://newsletter.intentionalsociety.org/archive/intentional-society-staying-in-curiosity-with-inquiry-spiraling/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
       </p>
     </>,
   },
@@ -107,7 +107,7 @@ const practices = [
         Presencing Institute's (a.k.a. Theory U) Case Clinic practice, and we have developed our own
         combination practice called Edge Case.</p>
       <p style={linksLine}>
-        <a href="https://www.intentionalsociety.org/practices/EdgeCasePractice.pdf" target="_blank" rel="noopener noreferrer" style={linkStyle}>Edge Case Instructions</a> · <a href="https://irp.cdn-website.com/53007095/files/uploaded/pi_tool_caseclinic.pdf" target="_blank" rel="noopener noreferrer" style={linkStyle}>Case Clinic Instructions</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-new-practice-edge-case/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+        <a href="https://www.intentionalsociety.org/practices/EdgeCasePractice.pdf" target="_blank" rel="noopener noreferrer" style={linkStyle}>Edge Case Instructions</a> · <a href="https://irp.cdn-website.com/53007095/files/uploaded/pi_tool_caseclinic.pdf" target="_blank" rel="noopener noreferrer" style={linkStyle}>Case Clinic Instructions</a> · <a href="https://newsletter.intentionalsociety.org/archive/intentional-society-new-practice-edge-case/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
       </p>
     </>,
   },
@@ -123,7 +123,7 @@ const practices = [
         them. This can be done with a question bank of "clean" questions, or we've used a fixed script
         of a question sequence.</p>
       <p style={linksLine}>
-        <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-looking-towards-what-we-avoid/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+        <a href="https://newsletter.intentionalsociety.org/archive/intentional-society-looking-towards-what-we-avoid/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
       </p>
     </>,
   },
@@ -135,7 +135,7 @@ const practices = [
         Dojo</a>, this is the granddaddy (dating back to the 1950s) practice of expressing one's
         present moment experience in a group setting.</p>
       <p style={linksLine}>
-        <a href="https://en.wikipedia.org/wiki/T-groups" target="_blank" rel="noopener noreferrer" style={linkStyle}>Reference</a> · <a href="https://infed.org/kurt-lewin-groups-experiential-learning-and-action-research/#tgroups" target="_blank" rel="noopener noreferrer" style={linkStyle}>Links</a> · <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-t-group-practice/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+        <a href="https://en.wikipedia.org/wiki/T-groups" target="_blank" rel="noopener noreferrer" style={linkStyle}>Reference</a> · <a href="https://infed.org/kurt-lewin-groups-experiential-learning-and-action-research/#tgroups" target="_blank" rel="noopener noreferrer" style={linkStyle}>Links</a> · <a href="https://newsletter.intentionalsociety.org/archive/intentional-society-t-group-practice/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
       </p>
     </>,
   },
@@ -147,7 +147,7 @@ const practices = [
         novel</a>, this is a (usually) two-player game in which players take turns riffing off a
         concept and each other in a kind of improv philosophy jam.</p>
       <p style={linksLine}>
-        <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-improv-philosophy/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
+        <a href="https://newsletter.intentionalsociety.org/archive/intentional-society-improv-philosophy/" target="_blank" rel="noopener noreferrer" style={linkStyle}>Our experience report</a>
       </p>
     </>,
   },
@@ -175,7 +175,7 @@ const practices = [
         even as imaginal-oracular exercises, attempting "parts work" can bring us interesting
         perspectives on what motivations are driving our feelings and behaviors.</p>
       <p style={linksLine}>
-        <a href="https://ifs-institute.com/" target="_blank" rel="noopener noreferrer" style={linkStyle}>IFS Institute</a> · Our <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-parts-introduction/" target="_blank" rel="noopener noreferrer" style={linkStyle}>intro</a> and <a href="https://buttondown.email/intentionalsociety/archive/intentional-society-why-ifs-works/" target="_blank" rel="noopener noreferrer" style={linkStyle}>analysis</a>
+        <a href="https://ifs-institute.com/" target="_blank" rel="noopener noreferrer" style={linkStyle}>IFS Institute</a> · Our <a href="https://newsletter.intentionalsociety.org/archive/intentional-society-parts-introduction/" target="_blank" rel="noopener noreferrer" style={linkStyle}>intro</a> and <a href="https://newsletter.intentionalsociety.org/archive/intentional-society-why-ifs-works/" target="_blank" rel="noopener noreferrer" style={linkStyle}>analysis</a>
       </p>
     </>,
   },
